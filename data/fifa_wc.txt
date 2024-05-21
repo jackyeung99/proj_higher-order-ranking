@@ -1,0 +1,385 @@
+2022|Netherlands,Senegal,Ecuador,Qatar
+2022|England,United States,Iran,Wales
+2022|Argentina,Poland,Mexico,Saudi Arabia
+2022|France,Australia,Tunisia,Denmark
+2022|Japan,Spain,Germany,Costa Rica
+2022|Morocco,Croatia,Belgium,Canada
+2022|Brazil,Switzerland,Cameroon,Serbia
+2022|Portugal,South Korea,Uruguay,Ghana
+2022|Netherlands,United States
+2022|Argentina,Australia
+2022|France,Poland
+2022|England,Senegal
+2022|Croatia,Japan
+2022|Morocco,Spain
+2022|Portugal,Switzerland
+2022|Croatia,Brazil
+2022|Argentina,Netherlands
+2022|Morocco,Portugal
+2022|France,England
+2022|Argentina,Croatia
+2022|France,Morocco
+2022|Croatia,Morocco
+2022|Argentina,France
+----
+2018|Uruguay,Russia,Saudi Arabia,Egypt
+2018|Spain,Portugal,Iran,Morocco
+2018|France,Denmark,Peru,Australia
+2018|Croatia,Argentina,Nigeria,Iceland
+2018|Brazil,Switzerland,Serbia,Costa Rica
+2018|Sweden,Mexico,South Korea,Germany
+2018|Belgium,England,Tunisia,Panama
+2018|Colombia,Japan,Senegal,Poland
+2018|France,Argentina
+2018|Uruguay,Portugal
+2018|Russia,Spain
+2018|Croatia,Denmark
+2018|Brazil,Mexico
+2018|Belgium,Japan
+2018|Sweden,Switzerland
+2018|England,Colombia
+2018|France,Uruguay
+2018|Belgium,Brazil
+2018|England,Sweden
+2018|Croatia,Russia
+2018|France,Belgium
+2018|Croatia,England
+2018|Belgium,England
+2018|France,Croatia
+----
+2014|Brazil,Mexico,Croatia,Cameroon
+2014|Netherlands,Chile,Spain,Australia
+2014|Colombia,Greece,Ivory Coast,Japan
+2014|Costa Rica,Uruguay,Italy,England
+2014|France,Switzerland,Ecuador,Honduras
+2014|Argentina,Nigeria,Bosnia and Herzegovina,Iran
+2014|Germany,United States,Portugal,Ghana
+2014|Belgium,Algeria,Russia,South Korea
+2014|Brazil,Chile
+2014|Colombia,Uruguay
+2014|Netherlands,Mexico
+2014|Costa Rica,Greece
+2014|France,Nigeria
+2014|Germany,Algeria
+2014|Argentina,Switzerland
+2014|Belgium,United States
+2014|Germany,France
+2014|Brazil,Colombia
+2014|Argentina,Belgium
+2014|Netherlands,Costa Rica
+2014|Germany,Brazil
+2014|Argentina,Netherlands
+2014|Netherlands,Brazil
+2014|Germany,Argentina
+----
+2010|Uruguay,Mexico,South Africa,France
+2010|Argentina,South Korea,Greece,Nigeria
+2010|United States,England,Slovenia,Algeria
+2010|Germany,Ghana,Australia,Serbia
+2010|Netherlands,Japan,Denmark,Cameroon
+2010|Paraguay,Slovakia,New Zealand,Italy
+2010|Brazil,Portugal,Ivory Coast,North Korea
+2010|Spain,Chile,Switzerland,Honduras
+2010|Uruguay,South Korea
+2010|Ghana,United States
+2010|Germany,England
+2010|Argentina,Mexico
+2010|Netherlands,Slovakia
+2010|Brazil,Chile
+2010|Paraguay,Japan
+2010|Spain,Portugal
+2010|Netherlands,Brazil
+2010|Uruguay,Ghana
+2010|Germany,Argentina
+2010|Spain,Paraguay
+2010|Netherlands,Uruguay
+2010|Spain,Germany
+2010|Germany,Uruguay
+2010|Spain,Netherlands
+----
+2006|Germany,Ecuador,Poland,Costa Rica
+2006|England,Sweden,Paraguay,Trinidad and Tobago
+2006|Argentina,Netherlands,Ivory Coast,Serbia and Montenegro
+2006|Portugal,Mexico,Angola,Iran
+2006|Italy,Ghana,Czech Republic,United States
+2006|Brazil,Australia,Croatia,Japan
+2006|Switzerland,France,South Korea,Togo
+2006|Spain,Ukraine,Tunisia,Saudi Arabia
+2006|Germany,Sweden
+2006|Argentina,Mexico
+2006|England,Ecuador
+2006|Portugal,Netherlands
+2006|Italy,Australia
+2006|Ukraine,Switzerland
+2006|Brazil,Ghana
+2006|France,Spain
+2006|Germany,Argentina
+2006|Italy,Ukraine
+2006|Portugal,England
+2006|France,Brazil
+2006|Italy,Germany
+2006|France,Portugal
+2006|Germany,Portugal
+2006|Italy,France
+----
+2002|Denmark,Senegal,Uruguay,France
+2002|Spain,Paraguay,South Africa,Slovenia
+2002|Brazil,Turkey,Costa Rica,China
+2002|South Korea,United States,Portugal,Poland
+2002|Germany,Republic of Ireland,Cameroon,Saudi Arabia
+2002|Sweden,England,Argentina,Nigeria
+2002|Mexico,Italy,Croatia,Ecuador
+2002|Japan,Belgium,Russia,Tunisia
+2002|Germany,Paraguay
+2002|England,Denmark
+2002|Senegal,Sweden
+2002|Spain,Republic of Ireland
+2002|United States,Mexico
+2002|Brazil,Belgium
+2002|South Korea,Italy
+2002|Brazil,England
+2002|Germany,United States
+2002|South Korea,Spain
+2002|Turkey,Senegal
+2002|Germany,South Korea
+2002|Brazil,Turkey
+2002|Turkey,South Korea
+2002|Brazil,Germany
+----
+1998|Brazil,Norway,Morocco,Scotland
+1998|Italy,Chile,Austria,Cameroon
+1998|France,Denmark,South Africa,Saudi Arabia
+1998|Nigeria,Paraguay,Spain,Bulgaria
+1998|Netherlands,Mexico,Belgium,South Korea
+1998|Germany,Yugoslavia,Iran,United States
+1998|Romania,England,Colombia,Tunisia
+1998|Argentina,Croatia,Jamaica,Japan
+1998|Italy,Norway
+1998|Brazil,Chile
+1998|France,Paraguay
+1998|Denmark,Nigeria
+1998|Germany,Mexico
+1998|Netherlands,Yugoslavia
+1998|Croatia,Romania
+1998|Argentina,England
+1998|France,Italy
+1998|Brazil,Denmark
+1998|Netherlands,Argentina
+1998|Croatia,Germany
+1998|Brazil,Netherlands
+1998|France,Croatia
+1998|Croatia,Netherlands
+1998|France,Brazil
+----
+1994|Romania,Switzerland,United States,Colombia
+1994|Brazil,Sweden,Russia,Cameroon
+1994|Germany,Spain,South Korea,Bolivia
+1994|Nigeria,Bulgaria,Argentina,Greece
+1994|Mexico,Republic of Ireland,Italy,Norway
+1994|Netherlands,Saudi Arabia,Belgium,Morocco
+1994|Germany,Belgium
+1994|Spain,Switzerland
+1994|Sweden,Saudi Arabia
+1994|Romania,Argentina
+1994|Netherlands,Republic of Ireland
+1994|Italy,Nigeria
+1994|Bulgaria,Mexico
+1994|Italy,Spain
+1994|Brazil,Netherlands
+1994|Bulgaria,Germany
+1994|Sweden,Romania
+1994|Italy,Bulgaria
+1994|Brazil,Sweden
+1994|Sweden,Bulgaria
+1994|Brazil,Italy
+----
+1990|Italy,Czechoslovakia,Austria,United States
+1990|Cameroon,Romania,Argentina,Soviet Union
+1990|Brazil,Costa Rica,Scotland,Sweden
+1990|West Germany,Yugoslavia,Colombia,United Arab Emirates
+1990|Spain,Belgium,Uruguay,South Korea
+1990|England,Republic of Ireland,Netherlands,Egypt
+1990|Cameroon,Colombia
+1990|Czechoslovakia,Costa Rica
+1990|Argentina,Brazil
+1990|West Germany,Netherlands
+1990|Republic of Ireland,Romania
+1990|Italy,Uruguay
+1990|Yugoslavia,Spain
+1990|England,Belgium
+1990|Argentina,Yugoslavia
+1990|Italy,Republic of Ireland
+1990|West Germany,Czechoslovakia
+1990|England,Cameroon
+1990|Argentina,Italy
+1990|West Germany,England
+1990|Italy,England
+1990|West Germany,Argentina
+----
+1986|Argentina,Italy,Bulgaria,South Korea
+1986|Mexico,Paraguay,Belgium,Iraq
+1986|Soviet Union,France,Hungary,Canada
+1986|Brazil,Spain,Northern Ireland,Algeria
+1986|Denmark,West Germany,Uruguay,Scotland
+1986|Morocco,England,Poland,Portugal
+1986|Mexico,Bulgaria
+1986|Belgium,Soviet Union
+1986|Brazil,Poland
+1986|France,Italy
+1986|West Germany,Morocco
+1986|England,Paraguay
+1986|Spain,Denmark
+1986|France,Brazil
+1986|West Germany,Mexico
+1986|Argentina,England
+1986|Belgium,Spain
+1986|West Germany,France
+1986|Argentina,Belgium
+1986|France,Belgium
+1986|Argentina,West Germany
+----
+1982|Poland,Italy,Cameroon,Peru
+1982|West Germany,Austria,Algeria,Chile
+1982|Belgium,Argentina,Hungary,El Salvador
+1982|England,France,Czechoslovakia,Kuwait
+1982|Northern Ireland,Spain,Yugoslavia,Honduras
+1982|Brazil,Soviet Union,Scotland,New Zealand
+1982|Poland,Soviet Union,Belgium
+1982|West Germany,England,Spain
+1982|Italy,Brazil,Argentina
+1982|France,Austria,Northern Ireland
+1982|Italy,Poland
+1982|West Germany,France
+1982|Poland,France
+1982|Italy,West Germany
+----
+1978|Italy,Argentina,France,Hungary
+1978|Poland,West Germany,Tunisia,Mexico
+1978|Austria,Brazil,Spain,Sweden
+1978|Peru,Netherlands,Scotland,Iran
+1978|Netherlands,Italy,West Germany,Austria
+1978|Argentina,Brazil,Poland,Peru
+1978|Brazil,Italy
+1978|Argentina,Netherlands
+----
+1974|East Germany,West Germany,Chile,Australia
+1974|Yugoslavia,Brazil,Scotland,Zaire
+1974|Netherlands,Sweden,Bulgaria,Uruguay
+1974|Poland,Argentina,Italy,Haiti
+1974|Netherlands,Brazil,East Germany,Argentina
+1974|West Germany,Poland,Sweden,Yugoslavia
+1974|Poland,Brazil
+1974|West Germany,Netherlands
+----
+1970|Soviet Union,Mexico,Belgium,El Salvador
+1970|Italy,Uruguay,Sweden,Israel
+1970|Brazil,England,Romania,Czechoslovakia
+1970|West Germany,Peru,Bulgaria,Morocco
+1970|Uruguay,Soviet Union
+1970|Italy,Mexico
+1970|Brazil,Peru
+1970|West Germany,England
+1970|Brazil,Uruguay
+1970|Italy,West Germany
+1970|West Germany,Uruguay
+1970|Brazil,Italy
+----
+1966|England,Uruguay,Mexico,France
+1966|West Germany,Argentina,Spain,Switzerland
+1966|Portugal,Hungary,Brazil,Bulgaria
+1966|Soviet Union,North Korea,Italy,Chile
+1966|England,Argentina
+1966|West Germany,Uruguay
+1966|Soviet Union,Hungary
+1966|Portugal,North Korea
+1966|West Germany,Soviet Union
+1966|England,Portugal
+1966|Portugal,Soviet Union
+1966|England,West Germany
+----
+1962|Soviet Union,Yugoslavia,Uruguay,Colombia
+1962|West Germany,Chile,Italy,Switzerland
+1962|Brazil,Czechoslovakia,Mexico,Spain
+1962|Hungary,England,Argentina,Bulgaria
+1962|Chile,Soviet Union
+1962|Czechoslovakia,Hungary
+1962|Brazil,England
+1962|Yugoslavia,West Germany
+1962|Czechoslovakia,Yugoslavia
+1962|Brazil,Chile
+1962|Chile,Yugoslavia
+1962|Brazil,Czechoslovakia
+----
+1958|West Germany,Northern Ireland,Czechoslovakia,Argentina
+1958|France,Yugoslavia,Paraguay,Scotland
+1958|Sweden,Wales,Hungary,Mexico
+1958|Brazil,Soviet Union,England,Austria
+1958|Brazil,Wales
+1958|France,Northern Ireland
+1958|Sweden,Soviet Union
+1958|West Germany,Yugoslavia
+1958|Brazil,France
+1958|Sweden,West Germany
+1958|France,West Germany
+1958|Brazil,Sweden
+----
+1954|Brazil,Yugoslavia,France,Mexico
+1954|Hungary,West Germany,Turkey,South Korea
+1954|Uruguay,Austria,Czechoslovakia,Scotland
+1954|England,Switzerland,Italy,Belgium
+1954|Austria,Switzerland
+1954|Uruguay,England
+1954|West Germany,Yugoslavia
+1954|Hungary,Brazil
+1954|West Germany,Austria
+1954|Hungary,Uruguay
+1954|Austria,Uruguay
+1954|West Germany,Hungary
+----
+1950|Brazil,Yugoslavia,Switzerland,Mexico
+1950|Spain,England,Chile,United States
+1950|Sweden,Italy,Paraguay
+1950|Uruguay,Bolivia
+1950|Uruguay,Brazil,Sweden,Spain
+----
+1938|Switzerland,Germany
+1938|Hungary,Dutch East Indies
+1938|Sweden,Austria
+1938|Cuba,Romania
+1938|France,Belgium
+1938|Italy,Norway
+1938|Brazil,Poland
+1938|Czechoslovakia,Netherlands
+1938|Hungary,Switzerland
+1938|Sweden,Cuba
+1938|Italy,France
+1938|Brazil,Czechoslovakia
+1938|Hungary,Sweden
+1938|Italy,Brazil
+1938|Brazil,Sweden
+1938|Italy,Hungary
+----
+1934|Spain,Brazil
+1934|Hungary,Egypt
+1934|Switzerland,Netherlands
+1934|Italy,United States
+1934|Czechoslovakia,Romania
+1934|Sweden,Argentina
+1934|Austria,France
+1934|Germany,Belgium
+1934|Austria,Hungary
+1934|Italy,Spain
+1934|Germany,Sweden
+1934|Czechoslovakia,Switzerland
+1934|Italy,Austria
+1934|Czechoslovakia,Germany
+1934|Germany,Austria
+1934|Italy,Czechoslovakia
+----
+1930|Argentina,Chile,France,Mexico
+1930|Yugoslavia,Brazil,Bolivia
+1930|Uruguay,Romania,Peru
+1930|United States,Paraguay,Belgium
+1930|Argentina,United States
+1930|Uruguay,Yugoslavia
+1930|Uruguay,Argentina
