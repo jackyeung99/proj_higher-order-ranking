@@ -2,7 +2,7 @@ import random
 from scipy.stats import logistic 
 import numpy as np 
 
-
+''' Functions to test our ranking algorithm against a syntethic ground truth'''
 
 def normalize_scores (pi_values):
     norm = 0.0
@@ -66,3 +66,41 @@ def establish_order (tmp, pi_values):
         tmp = tmp1.copy()
 
     return order
+
+
+def binarize_data (data):
+
+    bin_data = []
+
+    for i in range(0, len(data)):
+
+        K = len(data[i])
+        for r in range(0, K-1):
+            for s in range (r+1, K):
+                bin_data.append([data[i][r],data[i][s]])
+
+
+    return bin_data
+
+def create_hypergraph_from_data (data):
+
+    bond_matrix = {}
+
+
+    for i in range(0, len(data)):
+
+        K = len(data[i])
+        for r in range(0, len(data[i])):
+
+            s = data[i][r]
+
+            if s not in bond_matrix:
+                bond_matrix[s] = {}
+            if K not in bond_matrix[s]:
+                bond_matrix[s][K] = {}
+            if r not in bond_matrix[s][K]:
+                bond_matrix[s][K][r] = []
+            bond_matrix[s][K][r].append(data[i])
+
+
+    return bond_matrix
