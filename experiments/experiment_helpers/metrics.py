@@ -43,8 +43,8 @@ def calculate_rho(predicted_scores, ground_truth_scores):
 
 def calculate_tau(predicted_scores, ground_truth_scores):
     # Sort both dictionaries by keys (players) to ensure alignment
-    sorted_predicted = [score for player, score in sorted(predicted_scores.items())]
-    sorted_true = [score for player, score in sorted(ground_truth_scores.items())]
+    sorted_predicted = get_rankings(predicted_scores)
+    sorted_true = get_rankings(ground_truth_scores)
 
     # Calculate Kendall's tau correlation coefficient
     correlation, p_val = kendalltau(sorted_predicted, sorted_true)
