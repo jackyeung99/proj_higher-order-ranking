@@ -1,0 +1,15 @@
+BASH/PYTHON:
+FOR REP
+    FOR M
+        FOR K1
+            FOR K2
+                FOR MODEL
+                    RUN SIM
+                    MOVE scores_bin.txt > scores-bin_N-N_M-M_....txt
+
+PYTHON:
+    LOAD SCORES FROM scores-bin_N-N_M-M_....txt
+    COMPUTE LIKELIHOOD
+    ADD LIKELIHOOD TO DATAFRAME WITH N=N FROM FILENAME, M=M, etc.
+    REPEAT FOR ALL .txt
+    SAVE DATAFRAME
