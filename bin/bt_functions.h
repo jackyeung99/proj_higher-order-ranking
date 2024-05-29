@@ -68,3 +68,6 @@ void binarize_leadership_model (struct hypergraph *G, struct  hypergraph *H);
 /* Added - DK - 20240528 */
 void print_scores(struct model_results *R);
 void print_scores_to_file(struct model_results *R, const char *filename);
+
+/* Added - DK - 20240529 */
+void print_true_scores_to_file(struct hypergraph *G, const char *filename);

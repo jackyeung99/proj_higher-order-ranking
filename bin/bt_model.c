@@ -54,7 +54,6 @@ int main (int argc, char **argv)
 	compute_probability_model (G);
 
  
-	//print_hypergraph(G);
 
 
 	iterative_algorithm_ho_model (G, R, 1.0/(double)N, N);
@@ -90,9 +89,11 @@ int main (int argc, char **argv)
 	     leader_R->log_error
 	);
 
+    const char filename_gt[] = "scores_gt.txt";
     const char filename_HO[] = "scores_HO.txt";
     const char filename_HOL[] = "scores_HOL.txt";
     const char filename_bin[] = "scores_bin.txt";
+    print_true_scores_to_file(G, filename_gt);
     print_scores_to_file(R, filename_HO);
     print_scores_to_file(leader_R, filename_HOL);
     print_scores_to_file(binR, filename_bin);

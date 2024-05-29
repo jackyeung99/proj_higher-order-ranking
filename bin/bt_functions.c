@@ -608,31 +608,6 @@ void print_results (struct model_results *R)
   
 }
 
-void print_scores(struct model_results *R)
-{
-  int i;
-  for(i=1;i<=R->N;i++) {
-        printf("%d %g\n",i,R->scores[i]);
-    }
-
-    fflush(stdout);
-}
-
-void print_scores_to_file(struct model_results *R, const char *filename) {
-    FILE *file = fopen(filename, "w");
-    if (file == NULL) {
-        printf("Error while opening file to dump scores!");
-        exit(1);
-    }
-
-    int i;
-    for(i=1;i<=R->N;i++) {
-        fprintf(file, "%d %g\n",i,R->scores[i]);
-    }
-
-    fclose(file);
-}
-
 void normalize_scores (struct model_results *R)
 {
   int i;
@@ -834,4 +809,47 @@ void single_iteration_leadership_model (struct hypergraph *G, struct model_resul
     }
   
 
+}
+
+
+
+/* Added - DK */
+void print_scores(struct model_results *R)
+{
+  int i;
+  for(i=1;i<=R->N;i++) {
+        printf("%d %g\n",i,R->scores[i]);
+    }
+
+    fflush(stdout);
+}
+
+void print_scores_to_file(struct model_results *R, const char *filename) {
+    FILE *file = fopen(filename, "w");
+    if (file == NULL) {
+        printf("Error while opening file to dump scores!");
+        exit(1);
+    }
+
+    int i;
+    for(i=1;i<=R->N;i++) {
+        fprintf(file, "%d %g\n",i,R->scores[i]);
+    }
+
+    fclose(file);
+}
+
+void print_true_scores_to_file(struct hypergraph *G, const char *filename) {
+    FILE *file = fopen(filename, "w");
+    if (file == NULL) {
+        printf("Error while opening file to dump scores!");
+        exit(1);
+    }
+
+    int i;
+    for(i=1; i<=G->N; i++) {
+        fprintf(file, "%d %g\n", i, G->pi_values[i]);
+    }
+
+    fclose(file);
 }
