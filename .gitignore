@@ -6,3 +6,4 @@ __pycache__/
 **/*.pyc
 experiments/.ipynb_checkpoints/training_size-checkpoint.ipynb
 experiments/experiment_helpers/__pycache__
+bin/*.txt
