@@ -1,47 +1,64 @@
+
+import sys
+import os
 import numpy 
 import random
+import matplotlib.pyplot as plt 
+
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(repo_root)
+
 from src.solvers import *
+from experiments.experiment_helpers.metrics import * 
+from src.syntetic import *
+from sklearn.model_selection import train_test_split
 
 
-def evaulate_training_sizes(N,M,K1,K2, loss_measurement ='rms'):
+def evaluate_model_likelihood(N,M,K1,K2):
 
     all_results = []
 
-    pi_values, data = generate_model_instance(N, M, K1, K2)
+    for _ in range(10):
 
-    for train_size in np.arange(0.1, 1.1, 0.1):
+        pi_values, data = generate_model_instance(N, M, K1, K2)
+
+        random.shuffle(data)
         
-        training_set, testing_set = split_games(data, train_size)
+        for train_size in np.logspace(-2, 0, endpoint=False, num=25):
 
-        hyper_graph_pred, graph_pred = compute_rankings(training_set=training_set, ground_truth_ratings=pi_values)
+            training_set, testing_set = split_games(data,train_size)
+            
+            hyper_graph_pred, graph_pred = compute_predicted_rankings(training_set=training_set, ground_truth_ratings=pi_values)
 
-        hyper_graph_likelihood = compute_likelihood(hyper_graph_pred, testing_set)
-        graph_likelihood = compute_likelihood(graph_pred, testing_set)
+            hyper_graph_likelihood = compute_likelihood(hyper_graph_pred, pi_values, testing_set)
+            graph_likelihood = compute_likelihood(graph_pred, pi_values, testing_set)
 
+            all_results.append({
+                'loss_measurement': 'Likelihood',
+                'train_size': train_size,
+                'N': N,
+                'M': M,
+                'K1': K1,
+                'K2': K2,
+                'std_bt_likelihood': graph_likelihood,
+               
+                'ho_bt_likelihood': hyper_graph_likelihood,
+               
+            })
 
-        all_results.append({
-            'loss_measurement': loss_measurement,
-            'train_size': train_size,
-            'N': N,
-            'M': M,
-            'K1': K1,
-            'K2': K2,
-            'graph_accuracy': graph_likelihood,
-            'hyper_graph_accuracy': hyper_graph_likelihood
-        })
 
     return all_results
 
 def split_games(games, train_size):
     
-    sampled_games = train_size * len(train_size)
+    sampled_games = int(train_size * len(games))
 
-    training_set = random.sample(games, sampled_games)
-    testing_set = [game for game in games if game not in training_set]
+    training_set = games[:sampled_games]
+    testing_set = games[sampled_games:]
 
     return training_set, testing_set
 
-def compute_rankings(training_set, ground_truth_ratings):
+def compute_predicted_rankings(training_set, ground_truth_ratings):
 
     # Create hypergraph
     bond_matrix = create_hypergraph_from_data(training_set)
@@ -51,33 +68,66 @@ def compute_rankings(training_set, ground_truth_ratings):
     bin_bond_matrix = create_hypergraph_from_data(bin_data)
     
     # predict ranks based on subset of games
-    predicted_hyper_graph_scores , _ = synch_solve_equations(bond_matrix, 500, ground_truth_ratings, 'newman', sens=1e-6)
+    predicted_hyper_graph_scores, _ = synch_solve_equations(bond_matrix, 500, ground_truth_ratings, 'newman', sens=1e-6)
     predicted_graph_scores, _ = synch_solve_equations(bin_bond_matrix, 500, ground_truth_ratings, 'newman', sens=1e-6)
-
 
     return predicted_hyper_graph_scores, predicted_graph_scores
 
 
+def compute_likelihood(pred_ranking, true_ranking, testing_set):
 
-def compute_likelihood(pred_ranking, true_ranking, test_set):
-    
     game_likelihood = []
-    for game in test_set:
-        likelihood = recursive_mle_estimation(pred_ranking, game)
-        expected_likelihood = recursive_mle_estimation(true_ranking, game)
-        game_likelihood.append(likelihood / expected_likelihood)
+    for game in testing_set:
+        likelihood = recursive_probability_estimation(pred_ranking, game)
+        null_likelihood = recursive_probability_estimation(true_ranking, game)
 
-    return np.mean(game_likelihood), np.std(game_likelihood)
+        game_likelihood.append(likelihood / null_likelihood)
+
+
+    return np.mean(game_likelihood)
+
+def compute_likelihood_shuffled(pred_ranking, true_ranking, testing_set):
+
+    game_likelihood = []
+    for game in testing_set:
+        shuffled_game = game.copy()
+        random.shuffle(shuffled_game)
         
-def recursive_mle_estimation(pred_ranking, game, total_mle_estimation=0):
-    
-    player_rankings = [pred_ranking[player] for player in game]
+        likelihood = recursive_probability_estimation(pred_ranking, game)
+        null_likelihood = recursive_probability_estimation(pred_ranking, shuffled_game)
+
+        game_likelihood.append(likelihood / null_likelihood)
+
+
+    return np.mean(game_likelihood)
+
+
+def recursive_probability_estimation(pred_rating, game, total_prob_estimation=1):
+
+    player_rankings = [pred_rating[player] for player in game]
     highest_rank = player_rankings[0]
     total_ratings = sum(player_rankings)
-    total_mle_estimation += highest_rank/total_ratings
+
+    total_prob_estimation *= highest_rank/total_ratings
 
     if len(player_rankings) > 2: 
-        recursive_mle_estimation(pred_ranking, game[1:], total_mle_estimation)
+        return recursive_probability_estimation(pred_rating, game[1:], total_prob_estimation)
     else:
-        return total_mle_estimation
+        return total_prob_estimation
 
+
+
+if __name__ == '__main__': 
+
+
+    N = 500 
+    M = 1000
+    K1 = 5 
+    K2 = 10
+
+ 
+
+    true_distribution, ho_distribution, std_distribution = evaulate_model_likelihood(N, M, K1, K2)
+    print(np.mean(true_distribution), np.std(true_distribution))
+    print(np.mean(ho_distribution), np.std(ho_distribution))
+    print(np.mean(std_distribution), np.std(std_distribution))

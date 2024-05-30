@@ -90,7 +90,6 @@ def measure_log_likelihood (data, pi_values, model = 'ho_bt'):
     
     
     return log_like, log_prior
-
     
 
 
