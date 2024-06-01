@@ -17,7 +17,7 @@ PATH_RES="../res/"  # location of processed output file(s)
 ## Parameters
 N=1000
 K_MAX=10
-GAME_PLAYER_RATIOS=(1 10 50 100 500 1000)
+GAME_PLAYER_RATIOS=(1 10 20 30 40 50 60 70 80 90 100)
 NUM_REPS=10
 
 ## Hyperparameters
@@ -65,6 +65,7 @@ function main() {
     # Factorial-design sweep over parameters
     for REP in $(seq $NUM_REPS); do
         for RATIO in "${GAME_PLAYER_RATIOS[@]}"; do
+            echo $RATIO
             for K1 in $(seq 2 $K_MAX); do
                 for K2 in $(seq $K1 $K_MAX); do
                     for MODEL in 0 1; do
@@ -74,7 +75,7 @@ function main() {
                 done
             done
         done
-        progressbar "ex01" $REP $NUM_REPS
+        # progressbar "ex01" $REP $NUM_REPS
     done
 
     clean_files
