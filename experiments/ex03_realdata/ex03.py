@@ -31,9 +31,9 @@ def evaluate_model_prediction(dataset, pi_values, data):
         # scores_hol, _ = synch_solve_equations (bond_matrix, 1000, pi_values, 'newman_leadership', sens=1e-6)
         scores_std, _ = synch_solve_equations (bin_bond_matrix, 1000, pi_values, 'newman', sens=1e-6)
 
-        hyper_graph_likelihood = compute_likelihood(scores_ho, pi_values, testing_set)
+        hyper_graph_likelihood = compute_likelihood(scores_ho, testing_set)
         # hol_likelihood = compute_likelihood(scores_hol, pi_values, testing_set)
-        graph_likelihood = compute_likelihood(scores_std, pi_values, testing_set)
+        graph_likelihood = compute_likelihood(scores_std, testing_set)
 
         
         all_results.append({

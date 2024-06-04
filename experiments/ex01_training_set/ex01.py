@@ -28,8 +28,8 @@ def evaluate_model_likelihood(tested_param, N, M, K1, K2):
             
             hyper_graph_pred, graph_pred = compute_predicted_rankings(training_set=training_set, ground_truth_ratings=pi_values)
 
-            hyper_graph_likelihood = compute_likelihood(hyper_graph_pred, pi_values, testing_set)
-            graph_likelihood = compute_likelihood(graph_pred, pi_values, testing_set)
+            hyper_graph_likelihood = compute_likelihood(hyper_graph_pred, testing_set)
+            graph_likelihood = compute_likelihood(graph_pred, testing_set)
 
             all_results.append({
                 'tested_parameter': tested_param,

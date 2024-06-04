@@ -38,31 +38,8 @@ def compute_predicted_rankings(training_set, ground_truth_ratings):
     return predicted_hyper_graph_scores, predicted_graph_scores
 
 
-def compute_likelihood(pred_ranking, true_ranking, testing_set):
-
-    game_likelihood = []
-    for game in testing_set:
-        likelihood = recursive_probability_estimation(pred_ranking, game)
-        null_likelihood = recursive_probability_estimation(true_ranking, game)
-
-        game_likelihood.append(likelihood / null_likelihood)
-
-
-    return np.mean(game_likelihood)
-
-def compute_likelihood_shuffled(pred_ranking, true_ranking, testing_set):
-
-    game_likelihood = []
-    for game in testing_set:
-        shuffled_game = game.copy()
-        random.shuffle(shuffled_game)
-        
-        likelihood = recursive_probability_estimation(pred_ranking, game)
-        null_likelihood = recursive_probability_estimation(pred_ranking, shuffled_game)
-
-        game_likelihood.append(likelihood / null_likelihood)
-
-
+def compute_likelihood(pred_ranking, testing_set):
+    game_likelihood = [recursive_probability_estimation(pred_ranking, game) for game in testing_set]
     return np.mean(game_likelihood)
 
 
