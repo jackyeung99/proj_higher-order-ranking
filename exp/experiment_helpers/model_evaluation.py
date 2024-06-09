@@ -106,7 +106,11 @@ def save_results_to_csv(filename, headers, results):
 
 def save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, base_dir, file_name): 
 
-    file_path = os.path.join(base_dir, 'results', file_name)
+
+    results_dir = os.path.join(base_dir, 'results')
+    file_path = os.path.join(results_dir, file_name)
+
+    os.makedirs(results_dir, exist_ok=True)
 
     with open(file_path, mode='w') as f:
         writer = csv.writer(f)
