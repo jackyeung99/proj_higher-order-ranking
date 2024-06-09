@@ -28,7 +28,6 @@ def calculate_rms(predicted_scores, ground_truth_scores):
     true_scores = [score for player, score in sorted(ground_truth_scores.items())]
 
 
-    # Calculate the root mean square error
     return np.sqrt(np.mean( (np.log(np.array(predicted_scores)) - np.log(np.array(true_scores))) ** 2) )
 
 
@@ -91,6 +90,37 @@ def measure_log_likelihood (data, pi_values, model = 'ho_bt'):
     
     return log_like, log_prior
     
+
+def compute_likelihood(pred_ranking, testing_set):
+    return [recursive_probability_estimation(pred_ranking, game) for game in testing_set]
+
+def compute_leadership_likelihood(pred_ranking, testing_set):
+    return [leadership_probability_estimation(pred_ranking, game) for game in testing_set]
+
+def compute_likelihood_ratio(pred_ranking, pi_values, testing_set):
+    likelihood_ratios = []
+    for game in testing_set:
+        pred_likelihood = recursive_probability_estimation(pred_ranking, game)
+        ground_truth_likelihood = recursive_probability_estimation(pi_values, game)
+        likelihood_ratios.append(pred_likelihood / ground_truth_likelihood)
+    return likelihood_ratios
+
+def leadership_probability_estimation(pred_rating, game):
+    player_rankings = [pred_rating[player] for player in game]
+    highest_rank = player_rankings[0]
+    total_ratings = sum(player_rankings[1:])
+    return np.log(highest_rank / total_ratings)
+
+def recursive_probability_estimation(pred_rating, game, total_prob_estimation=1):
+    player_rankings = [pred_rating[player] for player in game]
+    highest_rank = player_rankings[0]
+    total_ratings = sum(player_rankings[1:])
+    total_prob_estimation *= highest_rank / total_ratings
+
+    if len(player_rankings) > 2:
+        return recursive_probability_estimation(pred_rating, game[1:], total_prob_estimation)
+    else:
+        return np.log(total_prob_estimation)
 
 
 if __name__ == '__main__':

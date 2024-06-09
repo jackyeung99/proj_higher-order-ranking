@@ -326,21 +326,24 @@ def iterate_equation_newman (s, scores, bond_matrix):
 
 def iterate_equation_newman_leadership (s, scores, bond_matrix):
 
-
-
+    
+    
     ##prior
     a = b = 1.0 / (scores[s]+1.0)
-
-    if s in bond_matrix.keys():
+    if s in bond_matrix:
 
         for K in bond_matrix[s]:
-
+            
+    #         print (bond_matrix[s][K])
+            
 
             for r in bond_matrix[s][K]:
-
-
+                
+                
                 if r == 0:
-
+                    
+    #                 print (bond_matrix[s][K][r])
+                    
                     for t in range(0, len(bond_matrix[s][K][r])):
                         tmp1 = tmp2 =  0.0
                         for q in range(0, K):
@@ -348,63 +351,16 @@ def iterate_equation_newman_leadership (s, scores, bond_matrix):
                                 tmp1 += scores[bond_matrix[s][K][r][t][q]]
                             tmp2 += scores[bond_matrix[s][K][r][t][q]]
 
-                    a += tmp1/tmp2
+                        a += tmp1/tmp2
+                    
+                
 
                 else:
                     for t in range(0, len(bond_matrix[s][K][r])):
                         tmp = 0.0
-                        for q in range(0, K):
+                        for q in range(0, K): 
                             tmp += scores[bond_matrix[s][K][r][t][q]]
                         b += 1.0 / tmp
 
-
-
-
-    return a/b
-
-def iterate_equation_newman_leadership (s, scores, bond_matrix):
-
-    
-    
-    ##prior
-    a = b = 1.0 / (scores[s]+1.0)
-    
-    for K in bond_matrix[s]:
-        
-#         print (bond_matrix[s][K])
-        
-
-        for r in bond_matrix[s][K]:
-            
-            
-            if r == 0:
-                
-#                 print (bond_matrix[s][K][r])
-                
-                for t in range(0, len(bond_matrix[s][K][r])):
-                    tmp1 = tmp2 =  0.0
-                    for q in range(0, K):
-                        if q>0:
-                            tmp1 += scores[bond_matrix[s][K][r][t][q]]
-                        tmp2 += scores[bond_matrix[s][K][r][t][q]]
-
-                    a += tmp1/tmp2
-                
-            
-
-            else:
-                for t in range(0, len(bond_matrix[s][K][r])):
-                    tmp = 0.0
-                    for q in range(0, K): 
-                        tmp += scores[bond_matrix[s][K][r][t][q]]
-                    b += 1.0 / tmp
-
-            
-
-            
-
-           
-                    
-                
     return a/b
 
