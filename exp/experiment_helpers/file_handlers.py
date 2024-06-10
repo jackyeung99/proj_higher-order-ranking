@@ -33,15 +33,15 @@ def save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, base_di
 
 def read_file_parameters(file):
     file_parameters = {}    
+    file = file.replace('.csv', '')
     file_split = file.split('_')
     for param_value in file_split:
-        print(param_value)
+   
         param, value = param_value.split('-')
         file_parameters[param] = value
 
     return file_parameters
 
-    return file_parameters
 
 def calculate_percentages(df):
     total_rows = len(df)

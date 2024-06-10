@@ -32,7 +32,7 @@ def evaluate_model_prediction(N, M, K1, K2):
 
 if __name__ == '__main__':
 
-    # rsync -zaP burrow:multi-reactive_rankings/exp/ex02_predictive_newman/data ex02_data
+    # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex02_predictive_newman/data ~/senior_thesis/higher_order_ranking/exp/ex02_predictive_newman
     # parallel --jobs 24 python3 ex02.py {1} {2} {3} ::: 1000 ::: 64 141 312 689 1521 3360 7419 16384 ::: $(seq 2 10)
     N, M, K1 = map(int, sys.argv[1:])
     

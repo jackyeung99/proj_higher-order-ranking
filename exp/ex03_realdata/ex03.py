@@ -47,5 +47,5 @@ def run_experiments():
 
 if __name__ == '__main__':
     # Run From ex03_realdata directory
-    # rsync -zaP burrow:multi-reactive_rankings/exp/ex03_realdata/data ex03_data
+    # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex03_realdata/data ~/senior_thesis/higher_order_ranking/exp/ex03_realdata/data
     run_experiments() 
