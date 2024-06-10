@@ -8,3 +8,4 @@ experiments/.ipynb_checkpoints/training_size-checkpoint.ipynb
 experiments/experiment_helpers/__pycache__
 experiments/scores*
 bin/*.txt
+data

@@ -30,4 +30,12 @@ def save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, base_di
             writer.writerow([ho, hol, std])
 
 
-def read_files()
+def read_file_parameters(file):
+    file_parameters = {}    
+    file_split = file.split('_')
+    for param, value in file_split.split('-'):
+
+        file_parameters
+
+
+
