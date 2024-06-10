@@ -51,7 +51,7 @@ def experiment_train_size_hol(N, M, K1, K2, rep):
 
 
 if __name__ == "__main__":
-# rsync -zaP burrow:multi-reactive_components/exp/ex01_training_size/data ex01_data
+# rsync -zaP burrow:multi-reactive_rankings/exp/ex01_training_size/data ex01_data
 
 # parallel --jobs 24 python3 ex01.py {1} {2} {3} {4} ::: 1000 ::: 1000 1500 2000 ::: $(seq 2 10) ::: $(seq 2 10)
     N, M, K1, K2 = map(int, sys.argv[1:])

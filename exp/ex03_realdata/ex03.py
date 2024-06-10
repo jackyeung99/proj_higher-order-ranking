@@ -48,4 +48,5 @@ def run_experiments():
 
 if __name__ == '__main__':
 
+    # rsync -zaP burrow:multi-reactive_rankings/exp/ex03_realdata/data ex03_data
     run_experiments() 
