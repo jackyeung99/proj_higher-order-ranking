@@ -5,7 +5,6 @@ import csv
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-
 from src.solvers import *
 from src.syntetic import *
 from src.file_readers import * 
@@ -41,12 +40,12 @@ def run_experiments():
         evaluate_model_prediction(data_label, pi_values, data)
 
     
-    read_and_evaluate('data/fifa_wc.txt', read_data_fifa, 'fifa')
-    read_and_evaluate('data/authorships.txt', read_data_authors, 'authors')
-    read_and_evaluate('data/cl_data.txt', read_data_ucl, 'ucl')
+    read_and_evaluate(os.path.join(repo_root, 'data/fifa_wc.txt'), read_data_fifa, 'fifa')
+    read_and_evaluate(os.path.join(repo_root, 'data/authorships.txt'), read_data_authors, 'authors')
+    read_and_evaluate(os.path.join(repo_root, 'data/cl_data.txt'), read_data_ucl, 'ucl')
 
 
 if __name__ == '__main__':
-
+    # Run From ex03_realdata directory
     # rsync -zaP burrow:multi-reactive_rankings/exp/ex03_realdata/data ex03_data
     run_experiments() 

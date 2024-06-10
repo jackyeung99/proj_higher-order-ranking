@@ -32,7 +32,7 @@ def experiment_train_size_ho(N, M, K1, K2, rep):
         training_set, testing_set = split_games(data, train_size)
         ho_likelihood, hol_likelihood, std_likelihood = benchmark_ho(training_set, testing_set, pi_values)
 
-        file_name = f"N-{N}_M-{M}_K1-{K1}_K2-{K2}_train_size-{train_size}_rep-{rep}_model-ho.csv"
+        file_name = f"N-{N}_M-{M}_K1-{K1}_K2-{K2}_trainsize-{train_size}_rep-{rep}_model-ho.csv"
         save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, FILE_DIR, file_name)
         
         
@@ -45,7 +45,7 @@ def experiment_train_size_hol(N, M, K1, K2, rep):
 
         ho_likelihood, hol_likelihood, std_likelihood = benchmark_hol(training_set, testing_set, pi_values)
 
-        file_name = f"N-{N}_M-{M}_K1-{K1}_K2-{K2}_train_size-{train_size}_rep-{rep}_model-hol.csv"
+        file_name = f"N-{N}_M-{M}_K1-{K1}_K2-{K2}_trainsize-{train_size}_rep-{rep}_model-hol.csv"
         save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, FILE_DIR, file_name)
 
 

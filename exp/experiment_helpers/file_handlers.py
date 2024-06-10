@@ -1,6 +1,7 @@
 
 import os 
 import csv
+import pandas as pd 
 
 def save_results_to_csv(filename, headers, results):
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -33,9 +34,44 @@ def save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, base_di
 def read_file_parameters(file):
     file_parameters = {}    
     file_split = file.split('_')
-    for param, value in file_split.split('-'):
+    for param_value in file_split:
+        print(param_value)
+        param, value = param_value.split('-')
+        file_parameters[param] = value
 
-        file_parameters
+    return file_parameters
 
+    return file_parameters
+
+def calculate_percentages(df):
+    total_rows = len(df)
+    if total_rows == 0:
+        return 0, 0
+
+    prop_ho_greater_std = (df.iloc[:, 0] > df.iloc[:, 2]).sum() / total_rows
+    prop_hol_greater_std = (df.iloc[:, 1] > df.iloc[:, 2]).sum() / total_rows
+
+    return prop_ho_greater_std, prop_hol_greater_std
+
+def process_directory(directory, output_file):
+    results = []
+    for file in os.listdir(directory):
+        if file.endswith('.csv'):
+            file_path = os.path.join(directory, file)
+            df = pd.read_csv(file_path)
+
+            prop_ho_greater_std, prop_hol_greater_std = calculate_percentages(df)
+            file_parameters = read_file_parameters(file)
+
+            result = {
+                'prop_ho_greater_std': prop_ho_greater_std,
+                'prop_hol_greater_std': prop_hol_greater_std
+            }
+            result.update(file_parameters)
+            results.append(result)
+
+    results_df = pd.DataFrame(results)
+    
+    results_df.to_csv(output_file, index=False)
 
 
