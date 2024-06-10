@@ -108,13 +108,13 @@ def compute_likelihood_ratio(pred_ranking, pi_values, testing_set):
 def leadership_probability_estimation(pred_rating, game):
     player_rankings = [pred_rating[player] for player in game]
     highest_rank = player_rankings[0]
-    total_ratings = sum(player_rankings[1:])
+    total_ratings = sum(player_rankings)
     return np.log(highest_rank / total_ratings)
 
 def recursive_probability_estimation(pred_rating, game, total_prob_estimation=1):
     player_rankings = [pred_rating[player] for player in game]
     highest_rank = player_rankings[0]
-    total_ratings = sum(player_rankings[1:])
+    total_ratings = sum(player_rankings)
     total_prob_estimation *= highest_rank / total_ratings
 
     if len(player_rankings) > 2:

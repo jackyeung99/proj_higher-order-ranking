@@ -7,9 +7,10 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 from src.solvers import *
+from src.syntetic import *
 from exp.experiment_helpers.metrics import * 
 from exp.experiment_helpers.model_evaluation import * 
-from src.syntetic import *
+from exp.experiment_helpers.file_handlers import * 
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 

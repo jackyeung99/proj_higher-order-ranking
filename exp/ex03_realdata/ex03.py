@@ -5,11 +5,14 @@ import csv
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
+
 from src.solvers import *
-from exp.experiment_helpers.metrics import * 
-from exp.experiment_helpers.model_evaluation import * 
 from src.syntetic import *
 from src.file_readers import * 
+from exp.experiment_helpers.metrics import * 
+from exp.experiment_helpers.model_evaluation import * 
+from exp.experiment_helpers.file_handlers import * 
+
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -27,7 +30,7 @@ def evaluate_model_prediction(dataset, pi_values, data):
             else:
                 ho_likelihood, hol_likelihood, std_likelihood = benchmark_hol(training_set, testing_set, pi_values)
             
-            file_name = f"dataset{dataset}_rep-{rep}_model-{model}.csv"
+            file_name = f"dataset-{dataset}_rep-{rep}_model-{model}.csv"
             save_instance_results( ho_likelihood, hol_likelihood, std_likelihood, FILE_DIR, file_name)
 
 
