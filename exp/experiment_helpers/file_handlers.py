@@ -42,7 +42,6 @@ def read_file_parameters(file):
 
     return file_parameters
 
-
 def calculate_percentages(df):
     total_rows = len(df)
     if total_rows == 0:
@@ -53,7 +52,7 @@ def calculate_percentages(df):
 
     return prop_ho_greater_std, prop_hol_greater_std
 
-def process_directory(directory, output_file):
+def process_data_directory(directory, output_file):
     results = []
     for file in os.listdir(directory):
         if file.endswith('.csv'):

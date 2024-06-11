@@ -17,7 +17,7 @@ FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def evaluate_model_prediction(dataset, pi_values, data):
 
-    for rep in range(50):
+    for rep in range(1):
 
         random.shuffle(data)
         training_set, testing_set = split_games(data, .8)
