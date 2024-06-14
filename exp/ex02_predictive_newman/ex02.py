@@ -6,11 +6,14 @@ import logging
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.solvers import *
-from src.syntetic import *
-from exp.experiment_helpers.metrics import * 
-from exp.experiment_helpers.model_evaluation import * 
-from exp.experiment_helpers.file_handlers import * 
+
+from src.models.ho_hol_newman import *
+from src.synthetic import *
+from src.file_readers import * 
+from src.experiment_helpers.metrics import * 
+from src.experiment_helpers.model_evaluation import * 
+from src.experiment_helpers.file_handlers import * 
+
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
