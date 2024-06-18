@@ -1,6 +1,7 @@
 import os
 import sys
 import csv
+from sklearn.model_selection import KFold
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
@@ -24,7 +25,7 @@ def evaluate_model_prediction(dataset, pi_values, data):
 
         for model in ['ho', 'hol']:
                 
-            if model == 'ho':
+            if model == 'ho': 
                 ho_likelihood, hol_likelihood, std_likelihood = benchmark_ho(training_set, testing_set, pi_values)
             else:
                 ho_likelihood, hol_likelihood, std_likelihood = benchmark_hol(training_set, testing_set, pi_values)
@@ -43,7 +44,20 @@ def run_experiments():
     read_and_evaluate(os.path.join(repo_root, 'data/fifa_wc.txt'), read_data_fifa, 'fifa')
     read_and_evaluate(os.path.join(repo_root, 'data/authorships.txt'), read_data_authors, 'authors')
     read_and_evaluate(os.path.join(repo_root, 'data/cl_data.txt'), read_data_ucl, 'ucl')
+  
+def run_experiment(datasets, models, splits):
 
+    for dataset in datasets:
+        kf = KFold(n_splits=splits)
+        kf.get_n_splits(dataset)
+
+        for i, (train_index, test_index) in enumerate(kf.split(X)):
+            for model in models:
+                print(f"Fold {i}:")
+                print(f"  Train: index={train_index}")
+                print(f"  Test:  index={test_index}")
+
+            
 
 if __name__ == '__main__':
     # Run From ex03_realdata directory

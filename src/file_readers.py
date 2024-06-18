@@ -56,3 +56,22 @@ def read_data_authors (filename):
 
     return data, pi_values
 
+
+def read_data_files(filename): 
+
+    data = []
+    pi_values = {}
+
+
+    with open(filename, 'r') as file: 
+
+        for line in file:
+
+            line = line.strip()
+            tmp = line.split('|')
+
+            data.append(tmp)
+
+            for i in tmp:
+                if i not in data:
+                    data[i] = 1.0
