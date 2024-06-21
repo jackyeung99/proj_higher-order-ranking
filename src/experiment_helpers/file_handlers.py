@@ -1,7 +1,8 @@
 
 import os 
 import csv
-import pandas as pd 
+import pandas as pd
+import re 
 
 def save_results_to_csv(filename, headers, results):
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -74,80 +75,31 @@ def process_data_directory(directory, output_file):
     results_df.to_csv(output_file, index=False)
 
 
-def read_data_ucl (filename):
 
+def read_strict_ordered_dataset(filename):
     data = []
     pi_values = {}
+
+    pattern = re.compile(r"# ALTERNATIVE NAME (\d+): (.+)")
 
     with open(filename, 'r') as file:
         for line in file:
             line = line.strip()
-            tmp = line.split('|')
-            if len(tmp)>1:
-                teams = tmp[2].split(',')
-                for i in range(0, len(teams)):
-                    pi_values[teams[i]] = 1.0
-                data.append(teams)
 
+            # Match alternative names and populate pi_values with keys
+            match = pattern.match(line)
+            if match:
+                key = int(match.group(1))
+                pi_values[key] = 1.0
+                continue
 
-    return data, pi_values
-
-
-def read_data_fifa (filename):
-
-    data = []
-    pi_values = {}
-
-    with open(filename, 'r') as file:
-        for line in file:
-            line = line.strip()
-            tmp = line.split('|')
-            if len(tmp)>1:
-                teams = tmp[1].split(',')
-                for i in range(0, len(teams)):
-                    teams[i] = teams[i].replace('West Germany', 'Germany')
-                    teams[i] = teams[i].replace('East Germany', 'Germany')
-                    pi_values[teams[i]] = 1.0
-                data.append(teams)
-
+            # Extract votes and counts
+            if line and not line.startswith("#"):
+                count, order = line.split(": ")
+                count = int(count)
+                order = tuple(map(int, order.split(",")))
+                data.extend([order] * count)
 
     return data, pi_values
 
 
-def read_data_authors (filename):
-
-    data = []
-    pi_values = {}
-
-    with open(filename, 'r') as file:
-        for line in file:
-            line = line.strip()
-            tmp = line.split('|')
-            if len(tmp)>1:
-                teams = tmp[1].split(',')
-                for i in range(0, len(teams)):
-                    pi_values[teams[i]] = 1.0
-                data.append(teams)
-
-
-    return data, pi_values
-
-
-def read_data_files(filename): 
-
-    data = []
-    pi_values = {}
-
-
-    with open(filename, 'r') as file: 
-
-        for line in file:
-
-            line = line.strip()
-            tmp = line.split('|')
-
-            data.append(tmp)
-
-            for i in tmp:
-                if i not in data:
-                    data[i] = 1.0
