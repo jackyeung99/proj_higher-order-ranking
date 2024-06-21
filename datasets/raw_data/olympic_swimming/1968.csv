@@ -1,0 +1,233 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+City,1968,100m,Backstroke,0,Men,GDR,Roland Matthes,58.700,4
+City,1968,100m,Backstroke,0,Men,USA,Charlie Hickcox,00:01:00.200000,1
+City,1968,100m,Backstroke,0,Men,USA,Ronald P. Mills,00:01:00.500000,2
+City,1968,100m,Backstroke,0,Men,USA,Lawrence Edward Barbiere,00:01:01.100000,3
+City,1968,100m,Backstroke,0,Men,CAN,James Shaw,00:01:01.400000,4
+City,1968,100m,Backstroke,0,Men,NED,Robert (Bob) Schoutsen,00:01:01.800000,4
+City,1968,100m,Backstroke,0,Men,FRG,Reinhard Blechert,00:01:01.900000,4
+City,1968,100m,Backstroke,0,Men,ITA,Franco Del Campo,00:01:02.000000,4
+City,1968,100m,Backstroke,0,Women,USA,Kaye Marie Hall,00:01:06.200000,1
+City,1968,100m,Backstroke,0,Women,CAN,Elaine Tanner,00:01:06.700000,2
+City,1968,100m,Backstroke,0,Women,USA,Jane Ellen Swagerty,00:01:08.100000,3
+City,1968,100m,Backstroke,0,Women,USA,Kendis Marion Moore,00:01:08.300000,4
+City,1968,100m,Backstroke,0,Women,HUN,Andrea Gyarmati,00:01:09.100000,4
+City,1968,100m,Backstroke,0,Women,AUS,Lynette Watson,00:01:09.100000,4
+City,1968,100m,Backstroke,0,Women,FRA,Sylvie Canet-Le Noach,00:01:09.300000,4
+City,1968,100m,Backstroke,0,Women,NZL,Glenda Joy Stirling,00:01:10.600000,4
+City,1968,100m,Breaststroke,0,Men,USA,Donald Ward Jr. Mckenzie,00:01:07.700000,1
+City,1968,100m,Breaststroke,0,Men,URS,Vladimir Kosinsky,00:01:08.000000,2
+City,1968,100m,Breaststroke,0,Men,URS,Nikolai Pankin,00:01:08.000000,2
+City,1968,100m,Breaststroke,0,Men,BRA,Jose Sylvio Fiolo,00:01:08.100000,4
+City,1968,100m,Breaststroke,0,Men,URS,Yevhen Mykhailov,00:01:08.400000,4
+City,1968,100m,Breaststroke,0,Men,AUS,Lawrence Ian O'Brien,00:01:08.600000,4
+City,1968,100m,Breaststroke,0,Men,ARG,Alberto Forelli Lopez,00:01:08.700000,4
+City,1968,100m,Breaststroke,0,Men,GDR,Egon Henninger,00:01:09.700000,4
+City,1968,100m,Breaststroke,0,Women,YUG,Djurdjica Bjedov,00:01:15.800000,1
+City,1968,100m,Breaststroke,0,Women,URS,Halyna Prozumenshchykova-Stepanova,00:01:15.900000,2
+City,1968,100m,Breaststroke,0,Women,USA,Sharon Lynn Wichman,00:01:16.100000,3
+City,1968,100m,Breaststroke,0,Women,FRG,Uta Frommater,00:01:16.200000,4
+City,1968,100m,Breaststroke,0,Women,USA,Catherine Ball,00:01:16.700000,4
+City,1968,100m,Breaststroke,0,Women,JPN,Kiyoe Nakagawa,00:01:17.000000,4
+City,1968,100m,Breaststroke,0,Women,URS,Svetlana Babanina,00:01:17.200000,4
+City,1968,100m,Breaststroke,0,Women,URU,Ana-Maria Norbis,00:01:17.300000,4
+City,1968,100m,Butterfly,0,Men,USA,Douglas Albert Russell,55.900,1
+City,1968,100m,Butterfly,0,Men,USA,Mark Spitz,56.400,2
+City,1968,100m,Butterfly,0,Men,USA,Ross Elliott Wales,57.200,3
+City,1968,100m,Butterfly,0,Men,URS,Vladimir Nemshilov,58.100,4
+City,1968,100m,Butterfly,0,Men,JPN,Satoshi Maruya,58.600,4
+City,1968,100m,Butterfly,0,Men,URS,Yuri Suzdaltsev,58.800,4
+City,1968,100m,Butterfly,0,Men,FRG,Lutz Stocklasa,58.900,4
+City,1968,100m,Butterfly,0,Men,AUS,Robert Cusack,59.800,4
+City,1968,100m,Butterfly,0,Women,AUS,Lynette Mcclements,00:01:05.500000,1
+City,1968,100m,Butterfly,0,Women,USA,Eleanor Suzanne Daniel,00:01:05.800000,2
+City,1968,100m,Butterfly,0,Women,USA,Susanne Marie Shields,00:01:06.200000,3
+City,1968,100m,Butterfly,0,Women,NED,Aagje Ada Kok,00:01:06.200000,3
+City,1968,100m,Butterfly,0,Women,HUN,Andrea Gyarmati,00:01:06.800000,4
+City,1968,100m,Butterfly,0,Women,FRG,Heike Hustede-Nagel,00:01:06.900000,4
+City,1968,100m,Butterfly,0,Women,USA,Antonia (Toni) Hewitt,00:01:07.500000,4
+City,1968,100m,Butterfly,0,Women,GDR,Helga Lindner,00:01:07.600000,4
+City,1968,100m,Freestyle,0,Men,AUS,Michael Vincent Wenden,52.200,1
+City,1968,100m,Freestyle,0,Men,USA,Kenneth Marshall Walsh,52.800,2
+City,1968,100m,Freestyle,0,Men,USA,Mark Spitz,53.000,3
+City,1968,100m,Freestyle,0,Men,GBR,Robert Bilsland Mcgregor,53.500,4
+City,1968,100m,Freestyle,0,Men,URS,Leonid Ilyichev,53.800,4
+City,1968,100m,Freestyle,0,Men,URS,Georgijs Kuļikovs,53.800,4
+City,1968,100m,Freestyle,0,Men,ARG,Luis Alberto Nicolao Yanuzzi,53.900,4
+City,1968,100m,Freestyle,0,Men,USA,Zachary Zorn,53.900,4
+City,1968,100m,Freestyle,0,Women,USA,Jane Margo Henne,00:01:00.000000,1
+City,1968,100m,Freestyle,0,Women,USA,Susan Jane Pedersen,00:01:00.300000,2
+City,1968,100m,Freestyle,0,Women,USA,Linda Lee Gustavson,00:01:00.300000,2
+City,1968,100m,Freestyle,0,Women,CAN,Marion Beverly Lay,00:01:00.500000,4
+City,1968,100m,Freestyle,0,Women,GDR,Martina Grunert,00:01:01.000000,4
+City,1968,100m,Freestyle,0,Women,GBR,Alexandra Elizabeth Jackson,00:01:01.000000,4
+City,1968,100m,Freestyle,0,Women,YUG,Mirjana Šegrt,00:01:01.500000,4
+City,1968,100m,Freestyle,0,Women,HUN,Judit Turóczy,00:01:01.600000,4
+City,1968,1500m,Freestyle,0,Men,USA,Mike Burton,00:16:38.900000,1
+City,1968,1500m,Freestyle,0,Men,USA,John Pitann Kinsella,00:16:57.300000,2
+City,1968,1500m,Freestyle,0,Men,AUS,Gregory Brough,00:17:04.700000,3
+City,1968,1500m,Freestyle,0,Men,AUS,Graham Rose White,00:17:08.000000,4
+City,1968,1500m,Freestyle,0,Men,CAN,Ralph Hutton,00:17:15.600000,4
+City,1968,1500m,Freestyle,0,Men,MEX,Guillermo Echevarria Perez,00:17:36.400000,4
+City,1968,1500m,Freestyle,0,Men,MEX,Juan Carlos Alanis,00:17:46.600000,4
+City,1968,1500m,Freestyle,0,Men,USA,John Mauer Nelson,00:18:05.100000,4
+City,1968,200m,Backstroke,0,Men,GDR,Roland Matthes,00:02:09.600000,1
+City,1968,200m,Backstroke,0,Men,USA,Mitchell Ivey,00:02:10.600000,2
+City,1968,200m,Backstroke,0,Men,USA,Jack S. Horsley,00:02:10.900000,3
+City,1968,200m,Backstroke,0,Men,USA,Gary Jr. Hall,00:02:12.600000,4
+City,1968,200m,Backstroke,0,Men,ESP,Santiago Esteva Escoda,00:02:12.900000,4
+City,1968,200m,Backstroke,0,Men,URS,Leonid Dobroskokin,00:02:15.400000,4
+City,1968,200m,Backstroke,0,Men,GDR,Joachim Rother,00:02:15.800000,4
+City,1968,200m,Backstroke,0,Men,ITA,Franco Del Campo,00:02:16.500000,4
+City,1968,200m,Backstroke,0,Women,USA,Lillian Debra Watson,00:02:24.800000,1
+City,1968,200m,Backstroke,0,Women,CAN,Elaine Tanner,00:02:27.400000,2
+City,1968,200m,Backstroke,0,Women,USA,Kaye Marie Hall,00:02:28.900000,3
+City,1968,200m,Backstroke,0,Women,AUS,Lynette Watson,00:02:29.500000,4
+City,1968,200m,Backstroke,0,Women,GBR,Wendy Burrell,00:02:32.300000,4
+City,1968,200m,Backstroke,0,Women,YUG,Zdenka Gasparac,00:02:33.500000,4
+City,1968,200m,Backstroke,0,Women,ESP,Maria Paz Corominas Guerin,00:02:33.900000,4
+City,1968,200m,Backstroke,0,Women,FRA,Benedicte Duprez,00:02:36.600000,4
+City,1968,200m,Breaststroke,0,Men,MEX,Felipe Munoz,00:02:28.700000,1
+City,1968,200m,Breaststroke,0,Men,URS,Vladimir Kosinsky,00:02:29.200000,2
+City,1968,200m,Breaststroke,0,Men,USA,Brian Gregory Job,00:02:29.900000,3
+City,1968,200m,Breaststroke,0,Men,URS,Nikolai Pankin,00:02:30.300000,4
+City,1968,200m,Breaststroke,0,Men,URS,Yevhen Mykhailov,00:02:32.800000,4
+City,1968,200m,Breaststroke,0,Men,GDR,Egon Henninger,00:02:33.200000,4
+City,1968,200m,Breaststroke,0,Men,USA,Philip Edward Long,00:02:33.600000,4
+City,1968,200m,Breaststroke,0,Men,JPN,Osamu Tsurumine,00:02:34.900000,4
+City,1968,200m,Breaststroke,0,Women,USA,Sharon Lynn Wichman,00:02:44.400000,1
+City,1968,200m,Breaststroke,0,Women,YUG,Djurdjica Bjedov,00:02:46.400000,2
+City,1968,200m,Breaststroke,0,Women,URS,Halyna Prozumenshchykova-Stepanova,00:02:47.000000,3
+City,1968,200m,Breaststroke,0,Women,URS,Alla Grebennikova,00:02:47.100000,4
+City,1968,200m,Breaststroke,0,Women,USA,Catherine Jamison,00:02:48.400000,4
+City,1968,200m,Breaststroke,0,Women,URS,Svetlana Babanina,00:02:48.400000,4
+City,1968,200m,Breaststroke,0,Women,JPN,Chieno Shibata,00:02:51.500000,4
+City,1968,200m,Breaststroke,0,Women,URU,Ana-Maria Norbis,00:02:51.900000,4
+City,1968,200m,Butterfly,0,Men,USA,Carl Joseph Iii Robie,00:02:08.700000,1
+City,1968,200m,Butterfly,0,Men,GBR,Martyn John Woodroffe,00:02:09.000000,2
+City,1968,200m,Butterfly,0,Men,USA,John Edward Ferris,00:02:09.300000,3
+City,1968,200m,Butterfly,0,Men,URS,Valentin Kuzmin,00:02:10.600000,4
+City,1968,200m,Butterfly,0,Men,SWE,Lars Feil,00:02:10.900000,4
+City,1968,200m,Butterfly,0,Men,FRG,Volkert Meeuw,00:02:11.500000,4
+City,1968,200m,Butterfly,0,Men,URS,Viktor Sharygin,00:02:11.900000,4
+City,1968,200m,Butterfly,0,Men,USA,Mark Spitz,00:02:13.500000,4
+City,1968,200m,Butterfly,0,Women,NED,Aagje Ada Kok,00:02:24.700000,1
+City,1968,200m,Butterfly,0,Women,GDR,Helga Lindner,00:02:24.800000,2
+City,1968,200m,Butterfly,0,Women,USA,Eleanor Suzanne Daniel,00:02:25.900000,3
+City,1968,200m,Butterfly,0,Women,USA,Antonia (Toni) Hewitt,00:02:26.200000,4
+City,1968,200m,Butterfly,0,Women,FRG,Heike Hustede-Nagel,00:02:27.900000,4
+City,1968,200m,Butterfly,0,Women,USA,Diane Jean Giebel,00:02:31.700000,4
+City,1968,200m,Butterfly,0,Women,GBR,Margaret M. Auton,00:02:33.200000,4
+City,1968,200m,Butterfly,0,Women,JPN,Yasuko Fujii,00:02:34.300000,4
+City,1968,200m,Freestyle,0,Men,AUS,Michael Vincent Wenden,00:01:55.200000,1
+City,1968,200m,Freestyle,0,Men,USA,Donald Arthur Schollander,00:01:55.800000,2
+City,1968,200m,Freestyle,0,Men,USA,John Mauer Nelson,00:01:58.100000,3
+City,1968,200m,Freestyle,0,Men,CAN,Ralph Hutton,00:01:58.600000,4
+City,1968,200m,Freestyle,0,Men,FRA,Alain Mosconi,00:01:59.100000,4
+City,1968,200m,Freestyle,0,Men,AUS,Robert George Windle,00:02:00.900000,4
+City,1968,200m,Freestyle,0,Men,URS,Semyon Belits-Geiman,00:02:01.500000,4
+City,1968,200m,Freestyle,0,Men,ARG,Carlos Van Der Math,Did not start,0
+City,1968,200m,Freestyle,0,Women,USA,Debbie Meyer,00:02:10.500000,1
+City,1968,200m,Freestyle,0,Women,USA,Jane Margo Henne,00:02:11.000000,2
+City,1968,200m,Freestyle,0,Women,USA,Jane Louise Barkman,00:02:11.200000,3
+City,1968,200m,Freestyle,0,Women,GDR,Gabriele Wetzko,00:02:12.300000,4
+City,1968,200m,Freestyle,0,Women,YUG,Mirjana Šegrt,00:02:13.300000,4
+City,1968,200m,Freestyle,0,Women,FRA,Claude Mandonnaud,00:02:14.900000,4
+City,1968,200m,Freestyle,0,Women,AUS,Lynette Bell,00:02:15.100000,4
+City,1968,200m,Freestyle,0,Women,TCH,Oľga Kozičová,00:02:16.000000,4
+City,1968,200m,Individual medley,0,Men,USA,Charlie Hickcox,00:02:12.000000,1
+City,1968,200m,Individual medley,0,Men,USA,Gregory F. Buckingham,00:02:13.000000,2
+City,1968,200m,Individual medley,0,Men,USA,John Edward Ferris,00:02:13.300000,3
+City,1968,200m,Individual medley,0,Men,PER,Juan Carlos Bello,00:02:13.700000,4
+City,1968,200m,Individual medley,0,Men,CAN,George Smith,00:02:15.900000,4
+City,1968,200m,Individual medley,0,Men,CAN,John Alexander Gilchrist,00:02:16.600000,4
+City,1968,200m,Individual medley,0,Men,FRG,Michael Holthaus,00:02:16.800000,4
+City,1968,200m,Individual medley,0,Men,HUN,Peter Lazar,00:02:18.300000,4
+City,1968,200m,Individual medley,0,Women,USA,Claudia Anne Kolb,00:02:24.700000,1
+City,1968,200m,Individual medley,0,Women,USA,Susan Jane Pedersen,00:02:28.800000,2
+City,1968,200m,Individual medley,0,Women,USA,Jane Margo Henne,00:02:31.400000,3
+City,1968,200m,Individual medley,0,Women,GDR,Sabine Steinbach,00:02:31.400000,3
+City,1968,200m,Individual medley,0,Women,JPN,Yoshimi Nishigawa,00:02:33.700000,4
+City,1968,200m,Individual medley,0,Women,GDR,Marianne Seydel,00:02:33.700000,4
+City,1968,200m,Individual medley,0,Women,URS,Larisa Zakharova,00:02:37.000000,4
+City,1968,200m,Individual medley,0,Women,GBR,Shelagh Hudson Ratcliffe,Disqualified,0
+City,1968,400m,Freestyle,0,Men,USA,Mike Burton,00:04:09.000000,1
+City,1968,400m,Freestyle,0,Men,CAN,Ralph Hutton,00:04:11.700000,2
+City,1968,400m,Freestyle,0,Men,FRA,Alain Mosconi,00:04:13.300000,3
+City,1968,400m,Freestyle,0,Men,AUS,Gregory Brough,00:04:15.900000,4
+City,1968,400m,Freestyle,0,Men,AUS,Graham Rose White,00:04:16.700000,4
+City,1968,400m,Freestyle,0,Men,USA,John Mauer Nelson,00:04:17.200000,4
+City,1968,400m,Freestyle,0,Men,FRG,Hans Fassnacht,00:04:18.100000,4
+City,1968,400m,Freestyle,0,Men,USA,Brent Thales Berk,00:04:26.000000,4
+City,1968,400m,Freestyle,0,Women,USA,Debbie Meyer,00:04:31.800000,1
+City,1968,400m,Freestyle,0,Women,USA,Linda Lee Gustavson,00:04:35.500000,2
+City,1968,400m,Freestyle,0,Women,AUS,Karen Lynne Moras,00:04:37.000000,3
+City,1968,400m,Freestyle,0,Women,USA,Pamela Jean Kruse,00:04:37.200000,4
+City,1968,400m,Freestyle,0,Women,GDR,Gabriele Wetzko,00:04:40.200000,4
+City,1968,400m,Freestyle,0,Women,MEX,Maria Teresa Ramirez,00:04:42.200000,4
+City,1968,400m,Freestyle,0,Women,CAN,Angela Coughlaw,00:04:51.900000,4
+City,1968,400m,Freestyle,0,Women,SWE,Elisabeth Ljunggren-Morris,00:04:53.800000,4
+City,1968,400m,Individual medley,0,Men,USA,Charlie Hickcox,00:04:48.400000,1
+City,1968,400m,Individual medley,0,Men,USA,Gary Jr. Hall,00:04:48.700000,2
+City,1968,400m,Individual medley,0,Men,FRG,Michael Holthaus,00:04:51.400000,3
+City,1968,400m,Individual medley,0,Men,USA,Gregory F. Buckingham,00:04:51.400000,3
+City,1968,400m,Individual medley,0,Men,CAN,John Alexander Gilchrist,00:04:56.700000,4
+City,1968,400m,Individual medley,0,Men,FRG,Reinhard Merkel,00:04:59.800000,4
+City,1968,400m,Individual medley,0,Men,URS,Andrey Dunayev,00:05:00.300000,4
+City,1968,400m,Individual medley,0,Men,MEX,Rafael Hernandez Rojas,00:05:04.300000,4
+City,1968,400m,Individual medley,0,Women,USA,Claudia Anne Kolb,00:05:08.500000,1
+City,1968,400m,Individual medley,0,Women,USA,Lynn Marie Vidali,00:05:22.200000,2
+City,1968,400m,Individual medley,0,Women,GDR,Sabine Steinbach,00:05:25.300000,3
+City,1968,400m,Individual medley,0,Women,USA,Susan Jane Pedersen,00:05:25.800000,4
+City,1968,400m,Individual medley,0,Women,GBR,Shelagh Hudson Ratcliffe,00:05:30.500000,4
+City,1968,400m,Individual medley,0,Women,GDR,Marianne Seydel,00:05:32.000000,4
+City,1968,400m,Individual medley,0,Women,NZL,Kathleen Tui Shipston,00:05:34.600000,4
+City,1968,400m,Individual medley,0,Women,MEX,Laura Vaca,00:05:35.700000,4
+City,1968,4x100,Freestyle,1,Men,USA,"Mark Spitz, Kenneth Marshall Walsh, Stephen Karl Rerych, Zachary Zorn, William Roy Johnson, Donald Arthur Schollander, David Charles Johnson, Michael Allen Wall",00:03:31.700000,1
+City,1968,4x100,Freestyle,1,Men,SUN,"Semyon Belits-Geiman, Leonid Ilyichev, Sergei Gusev, Viktor Mazanov",00:03:34.200000,2
+City,1968,4x100,Freestyle,1,Men,AUS,"Robert Cusack, Robert George Windle, Gregory Rogers, Michael Vincent Wenden",00:03:34.700000,3
+City,1968,4x100,Freestyle,1,Men,GBR,"Robert Bilsland Mcgregor, David Hembrow",00:03:38.400000,4
+City,1968,4x100,Freestyle,1,Men,GER,"Frank Wiegand, Horst-Günther Gregor, Lothar Gericke, Udo Poser",00:03:38.800000,4
+City,1968,4x100,Freestyle,1,Men,GER,"Hans Fassnacht, Olaf Von Schilling, Peter Schornig, Wolfgang Kremer",00:03:39.000000,4
+City,1968,4x100,Freestyle,1,Men,CAN,"George Smith, John Alexander Gilchrist, Ralph Hutton, Glenn Finch",00:03:39.200000,4
+City,1968,4x100,Freestyle,1,Men,JPN,"Teruhiko Kitani, Masayuki Osawa, Satoru Nakano, Kunihiro Iwasaki",00:03:41.500000,4
+City,1968,4x100,Freestyle,1,Women,USA,"Linda Lee Gustavson, Jane Margo Henne, Jane Louise Barkman, Susan Jane Pedersen",00:04:02.500000,1
+City,1968,4x100,Freestyle,1,Women,GER,"Roswitha Krause, Martina Grunert, Gabriele Wetzko, Uta Schmuck, Gabriele Perthes",00:04:05.700000,2
+City,1968,4x100,Freestyle,1,Women,CAN,"Angela Coughlaw, Marion Beverly Lay, Elaine Tanner",00:04:07.200000,3
+City,1968,4x100,Freestyle,1,Women,AUS,"Janet Steinbeck, Julie Mcdonald, Lynette Bell, Susan Eddy, Lynette Watson",00:04:08.700000,4
+City,1968,4x100,Freestyle,1,Women,HUN,"Magdolna Patoh, Edit Kovacs, Andrea Gyarmati",00:04:11.000000,4
+City,1968,4x100,Freestyle,1,Women,JPN,"Yoshimi Nishigawa, Shigeko Kawanishi, Miwako Kobayashi, Yasuko Fujii, Yumiko Ono",00:04:13.600000,4
+City,1968,4x100,Freestyle,1,Women,GBR,"Shelagh Hudson Ratcliffe, Alexandra Elizabeth Jackson, Fiona J. Kellock, Susan Elizabeth Williams",00:04:18.000000,4
+City,1968,4x100,Freestyle,1,Women,FRA,"Marie Josephe Kersaudy, Daniele Dorleans, Simone Hanner, Claude Mandonnaud",Disqualified,0
+City,1968,4x100,Medley,1,Men,USA,"Douglas Albert Russell, Charlie Hickcox, Kenneth Marshall Walsh, Donald Arthur Schollander, Carl Joseph Iii Robie, Donald Ward Jr. Mckenzie, Ronald P. Mills, Chester Andrew Jastremski",00:03:54.900000,1
+City,1968,4x100,Medley,1,Men,GER,"Roland Matthes, Frank Wiegand, Egon Henninger, Horst-Günther Gregor",00:03:57.500000,2
+City,1968,4x100,Medley,1,Men,SUN,"Vladimir Kosinsky, Viktor Mazanov, Vladimir Nemshilov, Yuri Suzdaltsev, Sergei Gusev, Nikolai Pankin, Leonid Ilyichev",00:04:00.700000,3
+City,1968,4x100,Medley,1,Men,AUS,"Robert Cusack, Karl Byrom, Lawrence Ian O'Brien, Michael Vincent Wenden",00:04:00.800000,4
+City,1968,4x100,Medley,1,Men,JPN,"Kishio Tanaka, Satoshi Maruya, Kunihiro Iwasaki, Nobutaka Taguchi",00:04:01.800000,4
+City,1968,4x100,Medley,1,Men,GER,"Wolfgang Kremer, Gregor Betz, Reinhard Blechert, Lutz Stocklasa",00:04:05.400000,4
+City,1968,4x100,Medley,1,Men,CAN,"William Mahony, James Shaw, John Alexander Gilchrist, Toomas Arusoo",00:04:07.300000,4
+City,1968,4x100,Medley,1,Men,ESP,"Santiago Esteva Escoda, Jose Duran, Arturo Lang-Lenton Leon, Jose Antonio Chicoy Massa",00:04:08.800000,4
+City,1968,4x100,Medley,1,Women,USA,"Susan Jane Pedersen, Eleanor Suzanne Daniel, Jane Ellen Swagerty, Susanne Jean Jones, Catherine Ball, Jane Margo Henne, Kaye Marie Hall, Susanne Marie Shields",00:04:28.300000,1
+City,1968,4x100,Medley,1,Women,AUS,"Lynette Watson, Janet Steinbeck, Judith Playfair, Lynette Bell, Lynette Mcclements",00:04:30.000000,2
+City,1968,4x100,Medley,1,Women,GER,"Heike Hustede-Nagel, Angelika Kraus, Heidemarie Reineck, Uta Frommater",00:04:36.400000,3
+City,1968,4x100,Medley,1,Women,SUN,"Alla Grebennikova, Larisa Zakharova",00:04:37.000000,4
+City,1968,4x100,Medley,1,Women,GER,"Helga Lindner, Martina Grunert, Uta Schmuck, Eva Wittke",00:04:38.000000,4
+City,1968,4x100,Medley,1,Women,GBR,"Alexandra Elizabeth Jackson, Margaret M. Auton, Wendy Burrell, Dorothy Elizabeth Harrison",00:04:38.300000,4
+City,1968,4x100,Medley,1,Women,NLD,"Jacobje (Cobie) J. Buter, Petronella (Nelly) Bos, Aagje Ada Kok, Clena Geertje Bimolt",00:04:38.700000,4
+City,1968,4x100,Medley,1,Women,HUN,"Maria Balla-Lantos, Andrea Gyarmati, Edit Kovacs",00:04:42.900000,4
+City,1968,4x200,Freestyle,1,Men,USA,"Andrew Edward Strenk, Michael Allen Wall, Mark Spitz, David Charles Johnson, Donald Arthur Schollander, Stephen Karl Rerych, John Mauer Nelson, William Roy Johnson",00:07:52.300000,1
+City,1968,4x200,Freestyle,1,Men,AUS,"Gregory Rogers, Robert George Windle, Michael Vincent Wenden, Graham Rose White",00:07:53.700000,2
+City,1968,4x200,Freestyle,1,Men,SUN,"Semyon Belits-Geiman, Vladimir Bure, Leonid Ilyichev",00:08:01.600000,3
+City,1968,4x200,Freestyle,1,Men,CAN,"Ralph Hutton, George Smith, John Alexander Gilchrist, Ronald Brian Jacks",00:08:03.200000,4
+City,1968,4x200,Freestyle,1,Men,FRA,"Gerard Letast, Michel Rousseau, Alain Mosconi, Francis Luyce",00:08:03.700000,4
+City,1968,4x200,Freestyle,1,Men,GER,"Wolfgang Kremer, Hans Fassnacht, Volkert Meeuw, Olaf Von Schilling",00:08:04.300000,4
+City,1968,4x200,Freestyle,1,Men,GER,"Horst-Günther Gregor, Alfred Müller, Frank Wiegand, Jochen Herbst",00:08:06.000000,4
+City,1968,4x200,Freestyle,1,Men,SWE,"Lester Eriksson, Gunnar Larsson, Hans Ljungberg, Sven Ferm",00:08:12.100000,4
+City,1968,800m,Freestyle,0,Women,USA,Debbie Meyer,00:09:24.000000,1
+City,1968,800m,Freestyle,0,Women,USA,Pamela Jean Kruse,00:09:35.700000,2
+City,1968,800m,Freestyle,0,Women,MEX,Maria Teresa Ramirez,00:09:38.500000,3
+City,1968,800m,Freestyle,0,Women,AUS,Karen Lynne Moras,00:09:38.600000,4
+City,1968,800m,Freestyle,0,Women,USA,Patricia Caretto,00:09:51.300000,4
+City,1968,800m,Freestyle,0,Women,CAN,Angela Coughlaw,00:09:56.400000,4
+City,1968,800m,Freestyle,0,Women,AUS,Denise Langford,00:09:56.700000,4
+City,1968,800m,Freestyle,0,Women,MEX,Laura Vaca,00:10:02.500000,4

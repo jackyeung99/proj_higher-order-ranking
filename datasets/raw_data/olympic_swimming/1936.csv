@@ -1,0 +1,88 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+Berlin,1936,100m,Backstroke,0,Men,USA,Adolph Gustav Kiefer,00:01:05.900000,1
+Berlin,1936,100m,Backstroke,0,Men,USA,Al Vande Weghe,00:01:07.700000,2
+Berlin,1936,100m,Backstroke,0,Men,JPN,Masaji Kiyokawa,00:01:08.400000,3
+Berlin,1936,100m,Backstroke,0,Men,USA,Taylor Drysdale,00:01:09.400000,4
+Berlin,1936,100m,Backstroke,0,Men,JPN,Kiichi Yoshida,00:01:09.700000,4
+Berlin,1936,100m,Backstroke,0,Men,JPN,Yasuhiko Kojima,00:01:10.400000,4
+Berlin,1936,100m,Backstroke,0,Men,AUS,Percival Cole Oliver,00:01:10.700000,4
+Berlin,1936,100m,Backstroke,0,Men,AUT,Kurt Patuzzi,Did not start,0
+Berlin,1936,100m,Backstroke,0,Women,NED,Dina Willemina Jacoba Senff,00:01:18.900000,1
+Berlin,1936,100m,Backstroke,0,Women,NED,Hendrika Mastenbroek,00:01:19.200000,2
+Berlin,1936,100m,Backstroke,0,Women,USA,Alice W. Bridges,00:01:19.400000,3
+Berlin,1936,100m,Backstroke,0,Women,USA,Edith Motridge,00:01:19.600000,4
+Berlin,1936,100m,Backstroke,0,Women,DEN,Tove Brunnstrom Madsen,00:01:20.400000,4
+Berlin,1936,100m,Backstroke,0,Women,GBR,Lorna Frampton,00:01:20.600000,4
+Berlin,1936,100m,Backstroke,0,Women,GBR,Phyllis Harding,00:01:21.500000,4
+Berlin,1936,100m,Backstroke,0,Women,CAN,Irene Pirie-Milton,Did not start,0
+Berlin,1936,100m,Freestyle,0,Men,HUN,Ferenc Csik,57.600,1
+Berlin,1936,100m,Freestyle,0,Men,JPN,Masanori Yusa,57.900,2
+Berlin,1936,100m,Freestyle,0,Men,JPN,Shigeo Arai,58.000,3
+Berlin,1936,100m,Freestyle,0,Men,JPN,Masaharu Taguchi,58.100,4
+Berlin,1936,100m,Freestyle,0,Men,GER,Helmuth Fischer,59.300,4
+Berlin,1936,100m,Freestyle,0,Men,USA,Peter Joseph Fick,59.700,4
+Berlin,1936,100m,Freestyle,0,Men,USA,Arthur Lindegren,59.900,4
+Berlin,1936,100m,Freestyle,0,Men,BEL,Jan Guillini,Did not start,0
+Berlin,1936,100m,Freestyle,0,Women,NED,Hendrika Mastenbroek,00:01:05.900000,1
+Berlin,1936,100m,Freestyle,0,Women,ARG,Jeanette Morven Campbell,00:01:06.400000,2
+Berlin,1936,100m,Freestyle,0,Women,GER,Gisela Arendt-Jacobs,00:01:06.600000,3
+Berlin,1936,100m,Freestyle,0,Women,NED,Willemyntje (Willy) Den Ouden,00:01:07.600000,4
+Berlin,1936,100m,Freestyle,0,Women,NED,Catharina (Tini) Willemina Wagner,00:01:08.100000,4
+Berlin,1936,100m,Freestyle,0,Women,USA,Mary Olive Mckean,00:01:08.400000,4
+Berlin,1936,100m,Freestyle,0,Women,USA,Katherine Louise Rawls,00:01:08.700000,4
+Berlin,1936,100m,Freestyle,0,Women,BEL,Jeanne De Rademaecker-Eyckmans,Did not start,0
+Berlin,1936,1500m,Freestyle,0,Men,JPN,Noboru Terada,00:19:13.700000,1
+Berlin,1936,1500m,Freestyle,0,Men,USA,Jack C. Medica,00:19:34.000000,2
+Berlin,1936,1500m,Freestyle,0,Men,JPN,Shunpei Uto,00:19:34.500000,3
+Berlin,1936,1500m,Freestyle,0,Men,JPN,Sunao Ishiharada,00:19:48.500000,4
+Berlin,1936,1500m,Freestyle,0,Men,USA,Ralph Drew Flanagan,00:19:54.800000,4
+Berlin,1936,1500m,Freestyle,0,Men,GBR,Robert Hanford Joachim Leivers,00:19:57.400000,4
+Berlin,1936,1500m,Freestyle,0,Men,GER,Heinz Arendt,00:19:59.000000,4
+Berlin,1936,1500m,Freestyle,0,Men,AUT,Kurt Patuzzi,Did not start,0
+Berlin,1936,200m,Breaststroke,0,Men,JPN,Tetsuo Hamuro,00:02:41.500000,1
+Berlin,1936,200m,Breaststroke,0,Men,GER,Erwin Sietas,00:02:42.900000,2
+Berlin,1936,200m,Breaststroke,0,Men,JPN,Reizo Koike,00:02:44.200000,3
+Berlin,1936,200m,Breaststroke,0,Men,USA,John Herbert Higgins,00:02:45.200000,4
+Berlin,1936,200m,Breaststroke,0,Men,JPN,Saburo Ito,00:02:47.600000,4
+Berlin,1936,200m,Breaststroke,0,Men,GER,Joachim (Jochen) Balke,00:02:47.800000,4
+Berlin,1936,200m,Breaststroke,0,Men,PHI,Teofilo Yldefonso,00:02:51.100000,4
+Berlin,1936,200m,Breaststroke,0,Men,BER,Leonard Spence,Disqualified,0
+Berlin,1936,200m,Breaststroke,0,Women,JPN,Hideko Maehata,00:03:03.600000,1
+Berlin,1936,200m,Breaststroke,0,Women,GER,Martha Genenger,00:03:04.200000,2
+Berlin,1936,200m,Breaststroke,0,Women,DEN,Inge Sörensen,00:03:07.800000,3
+Berlin,1936,200m,Breaststroke,0,Women,GER,Hanni Hölzner,00:03:09.500000,4
+Berlin,1936,200m,Breaststroke,0,Women,NED,Johanna Maria Elizabeth Waalberg,00:03:09.500000,4
+Berlin,1936,200m,Breaststroke,0,Women,GBR,Doris Storey,00:03:09.700000,4
+Berlin,1936,200m,Breaststroke,0,Women,NED,Jeanette Hermine Kastein,00:03:12.800000,4
+Berlin,1936,200m,Breaststroke,0,Women,AUT,Elfriede Freudenreich,Did not start,0
+Berlin,1936,400m,Freestyle,0,Men,USA,Jack C. Medica,00:04:44.500000,1
+Berlin,1936,400m,Freestyle,0,Men,JPN,Shunpei Uto,00:04:45.600000,2
+Berlin,1936,400m,Freestyle,0,Men,JPN,Shozo Makino,00:04:48.100000,3
+Berlin,1936,400m,Freestyle,0,Men,USA,Ralph Drew Flanagan,00:04:52.700000,4
+Berlin,1936,400m,Freestyle,0,Men,JPN,Hiroshi Negami,00:04:53.600000,4
+Berlin,1936,400m,Freestyle,0,Men,FRA,Jean Taris,00:04:53.800000,4
+Berlin,1936,400m,Freestyle,0,Men,GBR,Robert Hanford Joachim Leivers,00:05:00.900000,4
+Berlin,1936,400m,Freestyle,0,Men,AUT,Günther Zobernig,Did not start,0
+Berlin,1936,400m,Freestyle,0,Women,NED,Hendrika Mastenbroek,00:05:26.400000,1
+Berlin,1936,400m,Freestyle,0,Women,DEN,Ragnild Tove Hveger,00:05:27.500000,2
+Berlin,1936,400m,Freestyle,0,Women,USA,Lenore Kight-Wingard,00:05:29.000000,3
+Berlin,1936,400m,Freestyle,0,Women,USA,Mary Lou Petty,00:05:32.200000,4
+Berlin,1936,400m,Freestyle,0,Women,BRA,Piedade De Azevedo Coutinho,00:05:35.200000,4
+Berlin,1936,400m,Freestyle,0,Women,JPN,Kazue Kojima,00:05:43.100000,4
+Berlin,1936,400m,Freestyle,0,Women,DEN,Grethe Ortved Frederiksen,00:05:45.000000,4
+Berlin,1936,400m,Freestyle,0,Women,NED,Catharina (Tini) Willemina Wagner,00:05:46.000000,4
+Berlin,1936,4x100,Freestyle,1,Women,NLD,"Johanna Katarina Selbach, Willemyntje (Willy) Den Ouden, Catharina (Tini) Willemina Wagner, Hendrika Mastenbroek, Anna Petronella Timmermans",00:04:36.000000,1
+Berlin,1936,4x100,Freestyle,1,Women,GER,"Maria Magdalene Lohmar -Henze, Ursula Pollack, Ruth Halbsguth, Gisela Arendt-Jacobs, Ingeborg Schmitz",00:04:36.800000,2
+Berlin,1936,4x100,Freestyle,1,Women,USA,"Mary Olive Mckean, Elizabeth Ryan, Dorothy June Schiller, Bernice Ruth Lapp, Mavis Anne Freeman, Katherine Louise Rawls",00:04:40.200000,3
+Berlin,1936,4x100,Freestyle,1,Women,CAN,"Phyllis Dewar, Margaret Anne Stone, Mary Christine Mcconkey, Moel Gertrude Oxenbury-Morrow, Irene Pirie-Milton",00:04:48.000000,4
+Berlin,1936,4x100,Freestyle,1,Women,HUN,"Agnes Biro, Boriska Sothy, Ilona Acs, Vera Harsanyi, Magda Lenkei",00:04:48.000000,4
+Berlin,1936,4x100,Freestyle,1,Women,GBR,"Zilpha Grant, Audrey Morris Mavis Hancock, Margery Hinton, Edna Tildesley Hughes, Olive L. Wadham, Margaret K. Jeffrey",00:04:51.000000,4
+Berlin,1936,4x100,Freestyle,1,Women,DEN,"Grethe Ortved Frederiksen, Eva Johanne Riise, Ragnild Tove Hveger, Tove Brunnstrom Madsen, Elvi Johanne Svendsen",00:04:51.400000,4
+Berlin,1936,4x200,Freestyle,1,Men,JPN,"Shigeo Arai, Shigeo Sugiura, Masanori Yusa, Masaharu Taguchi",00:08:51.500000,1
+Berlin,1936,4x200,Freestyle,1,Men,USA,"John Joseph Macionis, Ralph Gilman, Charles George Jr. Hutter, Jack C. Medica, Ralph Drew Flanagan",00:09:03.000000,2
+Berlin,1936,4x200,Freestyle,1,Men,HUN,"Istvan Angyel, Ödön Grof, Oszkar Abay-Nemes, Arpad Lengyel, Ferenc Csik",00:09:12.300000,3
+Berlin,1936,4x200,Freestyle,1,Men,FRA,"Christian Talli, Jean Taris, Alfred Nakache, Rene Cavalero, Marco Diener, Claude Desusclade",00:09:18.200000,4
+Berlin,1936,4x200,Freestyle,1,Men,GER,"Helmuth Fischer, Werner Plath, Wolfgang Heimlich, Heiko Schwartz, Hermann Heibel",00:09:19.000000,4
+Berlin,1936,4x200,Freestyle,1,Men,GBR,"Robert Hanford Joachim Leivers, Mostyn Yanto Ffrench-Williams, Norman Wainwright, William Pearson, George Frederick Dove",00:09:21.500000,4
+Berlin,1936,4x200,Freestyle,1,Men,CAN,"Frederick Munroe Bourne, George Larson, Robert Percy Hooper, Robert Charles Pirie",00:09:27.500000,4
+Berlin,1936,4x200,Freestyle,1,Men,SWE,"Ake Julin, Björn Borg, Gunnar Werner, Sten-Olof Bollden",00:09:37.500000,4

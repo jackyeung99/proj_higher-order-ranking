@@ -1,0 +1,86 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+Amsterdam,1928,100m,Backstroke,0,Men,USA,George Harold Kojac,00:01:08.200000,1
+Amsterdam,1928,100m,Backstroke,0,Men,USA,Walter Laufer,00:01:10.000000,2
+Amsterdam,1928,100m,Backstroke,0,Men,USA,Paul Wyatt,00:01:12.000000,3
+Amsterdam,1928,100m,Backstroke,0,Men,JPN,Toshio Iriye,00:01:13.600000,4
+Amsterdam,1928,100m,Backstroke,0,Men,GER,Ernst Kuppers,00:01:13.800000,4
+Amsterdam,1928,100m,Backstroke,0,Men,GBR,John Charles Preston Besford,00:01:15.400000,4
+Amsterdam,1928,100m,Backstroke,0,Men,ITA,Sante Omero,Did not start,0
+Amsterdam,1928,100m,Backstroke,0,Men,BEL,Émile Thienpondt,Did not start,0
+Amsterdam,1928,100m,Backstroke,0,Women,NED,Maria Johanna Philipsen-Braun,00:01:22.000000,1
+Amsterdam,1928,100m,Backstroke,0,Women,GBR,Ellen Elizabeth King,00:01:22.200000,2
+Amsterdam,1928,100m,Backstroke,0,Women,GBR,Margaret Joyce Cooper,00:01:22.800000,3
+Amsterdam,1928,100m,Backstroke,0,Women,USA,Marion Ulmer Gilman,00:01:24.200000,4
+Amsterdam,1928,100m,Backstroke,0,Women,USA,Eleanor Holm,00:01:24.400000,4
+Amsterdam,1928,100m,Backstroke,0,Women,USA,Lisa A. Lindstrom,00:01:24.400000,4
+Amsterdam,1928,100m,Backstroke,0,Women,NZL,Ena Stockley,00:01:25.800000,4
+Amsterdam,1928,100m,Backstroke,0,Women,NED,Willy Den Turk,Did not start,0
+Amsterdam,1928,100m,Freestyle,0,Men,USA,Johnny Weissmuller,58.600,4
+Amsterdam,1928,100m,Freestyle,0,Men,HUN,Istvan Barany,59.800,4
+Amsterdam,1928,100m,Freestyle,0,Men,JPN,Katsuo Takaishi,00:01:00.000000,1
+Amsterdam,1928,100m,Freestyle,0,Men,USA,George Harold Kojac,00:01:00.800000,2
+Amsterdam,1928,100m,Freestyle,0,Men,USA,Walter Laufer,00:01:01.000000,3
+Amsterdam,1928,100m,Freestyle,0,Men,CAN,Walter Spence,00:01:01.400000,4
+Amsterdam,1928,100m,Freestyle,0,Men,ARG,Alberto Zorrilla,00:01:01.600000,4
+Amsterdam,1928,100m,Freestyle,0,Men,BEL,Henri Stoelen,Did not start,0
+Amsterdam,1928,100m,Freestyle,0,Women,USA,Albina Lucy Osipowich,00:01:11.000000,1
+Amsterdam,1928,100m,Freestyle,0,Women,USA,Eleanor Saville,00:01:11.400000,2
+Amsterdam,1928,100m,Freestyle,0,Women,GBR,Margaret Joyce Cooper,00:01:13.600000,3
+Amsterdam,1928,100m,Freestyle,0,Women,GBR,Jean H. Mcdowall,00:01:13.800000,4
+Amsterdam,1928,100m,Freestyle,0,Women,USA,Susanne E. Laird,00:01:14.600000,4
+Amsterdam,1928,100m,Freestyle,0,Women,GER,Lotte Lehmann,00:01:15.200000,4
+Amsterdam,1928,100m,Freestyle,0,Women,HUN,Sarolta Stieber,Did not finish,0
+Amsterdam,1928,100m,Freestyle,0,Women,GER,Dora Schönemann,Did not start,0
+Amsterdam,1928,1500m,Freestyle,0,Men,SWE,Arne Borg,00:19:51.800000,1
+Amsterdam,1928,1500m,Freestyle,0,Men,AUS,Andrew Murray Charlton,00:20:02.600000,2
+Amsterdam,1928,1500m,Freestyle,0,Men,USA,Buster Crabbe,00:20:28.800000,3
+Amsterdam,1928,1500m,Freestyle,0,Men,USA,Raymond Maurice Ruddy,00:21:05.000000,4
+Amsterdam,1928,1500m,Freestyle,0,Men,ARG,Alberto Zorrilla,00:21:23.800000,4
+Amsterdam,1928,1500m,Freestyle,0,Men,CAN,Garnet Walter Ault,00:21:46.000000,4
+Amsterdam,1928,1500m,Freestyle,0,Men,JPN,Takaji Takebayashi,Did not finish,0
+Amsterdam,1928,1500m,Freestyle,0,Men,IND,D. D. Mulji,Did not start,0
+Amsterdam,1928,200m,Breaststroke,0,Men,JPN,Yoshiyuki Tsuruta,00:02:48.800000,1
+Amsterdam,1928,200m,Breaststroke,0,Men,GER,Erich Rademacher,00:02:50.600000,2
+Amsterdam,1928,200m,Breaststroke,0,Men,PHI,Teofilo Yldefonso,00:02:56.400000,3
+Amsterdam,1928,200m,Breaststroke,0,Men,GER,Erwin Sietas,00:02:56.600000,4
+Amsterdam,1928,200m,Breaststroke,0,Men,SWE,Eric Harling,00:02:56.800000,4
+Amsterdam,1928,200m,Breaststroke,0,Men,CAN,Walter Spence,00:02:57.200000,4
+Amsterdam,1928,200m,Breaststroke,0,Men,BEL,Joseph De Combe,Did not finish,0
+Amsterdam,1928,200m,Breaststroke,0,Men,AUT,Edwin Friedberger,Did not start,0
+Amsterdam,1928,200m,Breaststroke,0,Women,GER,Hilde Schrader,00:03:12.600000,1
+Amsterdam,1928,200m,Breaststroke,0,Women,NED,Mietje Baron,00:03:15.200000,2
+Amsterdam,1928,200m,Breaststroke,0,Women,GER,Charlotte Mühe,00:03:17.600000,3
+Amsterdam,1928,200m,Breaststroke,0,Women,DEN,Else Agnes Ella Jacobsen,00:03:19.000000,4
+Amsterdam,1928,200m,Breaststroke,0,Women,USA,Margaret Hoffman,00:03:19.200000,4
+Amsterdam,1928,200m,Breaststroke,0,Women,SWE,Brita Hazelius,00:03:23.000000,4
+Amsterdam,1928,200m,Breaststroke,0,Women,POL,Fitzówna Fitzówna,Did not start,0
+Amsterdam,1928,400m,Freestyle,0,Men,ARG,Alberto Zorrilla,00:05:01.600000,1
+Amsterdam,1928,400m,Freestyle,0,Men,AUS,Andrew Murray Charlton,00:05:03.600000,2
+Amsterdam,1928,400m,Freestyle,0,Men,SWE,Arne Borg,00:05:04.600000,3
+Amsterdam,1928,400m,Freestyle,0,Men,USA,Buster Crabbe,00:05:05.400000,4
+Amsterdam,1928,400m,Freestyle,0,Men,USA,Austin Rhone Clapp,00:05:16.000000,4
+Amsterdam,1928,400m,Freestyle,0,Men,USA,Raymond Maurice Ruddy,00:05:25.000000,4
+Amsterdam,1928,400m,Freestyle,0,Men,IND,D. D. Mulji,Did not start,0
+Amsterdam,1928,400m,Freestyle,0,Men,GBR,Paul Radmilovic,Did not start,0
+Amsterdam,1928,400m,Freestyle,0,Women,USA,Martha Norelius,00:05:42.800000,1
+Amsterdam,1928,400m,Freestyle,0,Women,NED,Maria Johanna Philipsen-Braun,00:05:57.800000,2
+Amsterdam,1928,400m,Freestyle,0,Women,USA,Josephine Mckim,00:06:00.200000,3
+Amsterdam,1928,400m,Freestyle,0,Women,GBR,Sarah Gillow Marshal Stewart,00:06:07.000000,4
+Amsterdam,1928,400m,Freestyle,0,Women,RSA,Freddie Van Der Goes,00:06:07.200000,4
+Amsterdam,1928,400m,Freestyle,0,Women,GBR,Vera Tanner,00:06:11.600000,4
+Amsterdam,1928,400m,Freestyle,0,Women,IRL,Marguerite Dockrell,Did not start,0
+Amsterdam,1928,400m,Freestyle,0,Women,POL,Halina Iżycka,Did not start,0
+Amsterdam,1928,4x100,Freestyle,1,Women,USA,"Eleanor Saville, Albina Lucy Osipowich, Martha Norelius, Josephine Mckim, Adelaide T. Lambert, Susanne E. Laird",00:04:47.600000,1
+Amsterdam,1928,4x100,Freestyle,1,Women,GBR,"Ellen Elizabeth King, Sarah Gillow Marshal Stewart, Margaret Joyce Cooper, Vera Tanner",00:05:02.800000,2
+Amsterdam,1928,4x100,Freestyle,1,Women,ZAF,Rhoda Rennie,00:05:13.400000,3
+Amsterdam,1928,4x100,Freestyle,1,Women,GER,Irmintraut Schneider,00:05:14.400000,4
+Amsterdam,1928,4x100,Freestyle,1,Women,FRA,"Anne A. Dupire, Marguerite M. Ledoux, Claire M. Horrent",00:05:32.000000,4
+Amsterdam,1928,4x100,Freestyle,1,Women,NLD,"Maria Johanna Philipsen-Braun, Maria Vierdag",Disqualified,0
+Amsterdam,1928,4x200,Freestyle,1,Men,USA,"Walter Laufer, George Harold Kojac, Paul Curkeet Samson, Austin Rhone Clapp, Johnny Weissmuller, David Turquand Young",00:09:36.200000,1
+Amsterdam,1928,4x200,Freestyle,1,Men,JPN,"Katsuo Takaishi, Hiroshi Yoneyama, Nobuo Arai, Kazuo Noda",00:09:41.400000,2
+Amsterdam,1928,4x200,Freestyle,1,Men,CAN,"Walter Spence, Frederick Munroe Bourne, Garnet Walter Ault",00:09:47.800000,3
+Amsterdam,1928,4x200,Freestyle,1,Men,HUN,"Istvan Barany, Andras Wanie, Geza Szigritz, Rezsö Wanié",00:09:57.000000,4
+Amsterdam,1928,4x200,Freestyle,1,Men,SWE,"Arne Borg, Ake Borg, Aulo Gustafsson, Eskil Lundahl",00:10:01.800000,4
+Amsterdam,1928,4x200,Freestyle,1,Men,GBR,"Joseph Whiteside, Reginald James Cushing Sutton, Albert Edward Dickin, Edward Percival Peter",00:10:15.800000,4
+Amsterdam,1928,4x200,Freestyle,1,Men,ESP,,00:11:43.000000,4
+Amsterdam,1928,4x200,Freestyle,1,Men,GER,Herbert Heinrich,Disqualified,0

@@ -1,0 +1,257 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+Rio,2016,100m,Backstroke,0,Men,USA,Ryan Murphy,51.970,1
+Rio,2016,100m,Backstroke,0,Men,CHN,Jiayu Xu,52.310,2
+Rio,2016,100m,Backstroke,0,Men,USA,David Plummer,52.400,3
+Rio,2016,100m,Backstroke,0,Men,AUS,Mitchell Larkin,52.430,4
+Rio,2016,100m,Backstroke,0,Men,FRA,Camille Lacourt,52.700,4
+Rio,2016,100m,Backstroke,0,Men,RUS,Evgeny Rylov,52.740,4
+Rio,2016,100m,Backstroke,0,Men,JPN,Ryosuke Irie,53.420,4
+Rio,2016,100m,Backstroke,0,Men,ROU,Robert Glinta,53.500,4
+Rio,2016,100m,Backstroke,0,Women,HUN,Katinka Hosszu,58.450,1
+Rio,2016,100m,Backstroke,0,Women,USA,Kathleen Baker,58.750,2
+Rio,2016,100m,Backstroke,0,Women,CAN,Kylie Masse,58.760,3
+Rio,2016,100m,Backstroke,0,Women,CHN,Yuanhui Fu,58.760,3
+Rio,2016,100m,Backstroke,0,Women,DEN,Mie Nielsen,58.800,4
+Rio,2016,100m,Backstroke,0,Women,USA,Olivia Smoliga,58.950,4
+Rio,2016,100m,Backstroke,0,Women,AUS,Emily Seebohm,59.190,4
+Rio,2016,100m,Backstroke,0,Women,AUS,Madison Wilson,59.230,4
+Rio,2016,100m,Breaststroke,0,Men,GBR,Adam Peaty,57.130,1
+Rio,2016,100m,Breaststroke,0,Men,RSA,Cameron Van Der Burgh,58.690,2
+Rio,2016,100m,Breaststroke,0,Men,USA,Cody Miller,58.870,3
+Rio,2016,100m,Breaststroke,0,Men,USA,Kevin Cordes,59.220,4
+Rio,2016,100m,Breaststroke,0,Men,BRA,Joao Gomes,59.310,4
+Rio,2016,100m,Breaststroke,0,Men,JPN,Yasuhiro Koseki,59.370,4
+Rio,2016,100m,Breaststroke,0,Men,BRA,Felipe Franca,59.380,4
+Rio,2016,100m,Breaststroke,0,Men,KAZ,Dmitriy Balandin,59.950,4
+Rio,2016,100m,Breaststroke,0,Women,USA,Lilly King,00:01:04.930000,1
+Rio,2016,100m,Breaststroke,0,Women,RUS,Yuliya Efimova,00:01:05.500000,2
+Rio,2016,100m,Breaststroke,0,Women,USA,Katie Meili,00:01:05.690000,3
+Rio,2016,100m,Breaststroke,0,Women,CHN,Jinglin Shi,00:01:06.370000,4
+Rio,2016,100m,Breaststroke,0,Women,CAN,Rachel Nicol,00:01:06.680000,4
+Rio,2016,100m,Breaststroke,0,Women,ISL,Hrafnhildur Luthersdottir,00:01:07.180000,4
+Rio,2016,100m,Breaststroke,0,Women,LTU,Ruta Meilutyte,00:01:07.320000,4
+Rio,2016,100m,Breaststroke,0,Women,JAM,Alia Atkinson,00:01:08.100000,4
+Rio,2016,100m,Butterfly,0,Men,SGP,Joseph Schooling,50.390,1
+Rio,2016,100m,Butterfly,0,Men,USA,Michael Phelps,51.140,2
+Rio,2016,100m,Butterfly,0,Men,RSA,Chad Le Clos,51.140,2
+Rio,2016,100m,Butterfly,0,Men,HUN,Laszlo Cseh,51.140,2
+Rio,2016,100m,Butterfly,0,Men,CHN,Zhuhao Li,51.260,4
+Rio,2016,100m,Butterfly,0,Men,FRA,Mehdy Metella,51.580,4
+Rio,2016,100m,Butterfly,0,Men,USA,Tom Shields,51.730,4
+Rio,2016,100m,Butterfly,0,Men,RUS,Aleksandr Sadovnikov,51.840,4
+Rio,2016,100m,Butterfly,0,Women,SWE,Sarah Sjostrom,55.480,2
+Rio,2016,100m,Butterfly,0,Women,CAN,Penny Oleksiak,56.460,3
+Rio,2016,100m,Butterfly,0,Women,USA,Dana Vollmer,56.630,4
+Rio,2016,100m,Butterfly,0,Women,CHN,Ying Lu,56.760,4
+Rio,2016,100m,Butterfly,0,Women,JPN,Rikako Ikee,56.860,4
+Rio,2016,100m,Butterfly,0,Women,AUS,Emma Mckeon,57.050,4
+Rio,2016,100m,Butterfly,0,Women,DEN,Jeanette Ottesen,57.170,4
+Rio,2016,100m,Butterfly,0,Women,USA,Kelsi Worrell,,5
+Rio,2016,100m,Freestyle,0,Men,AUS,Kyle Chalmers,47.580,1
+Rio,2016,100m,Freestyle,0,Men,BEL,Pieter Timmers,47.800,2
+Rio,2016,100m,Freestyle,0,Men,USA,Nathan Adrian,47.850,3
+Rio,2016,100m,Freestyle,0,Men,CAN,Santo Condorelli,47.880,4
+Rio,2016,100m,Freestyle,0,Men,GBR,Duncan Scott,48.010,4
+Rio,2016,100m,Freestyle,0,Men,USA,Caeleb Dressel,48.020,4
+Rio,2016,100m,Freestyle,0,Men,AUS,Cameron Mcevoy,48.120,4
+Rio,2016,100m,Freestyle,0,Men,BRA,Marcelo Chierighini,48.410,4
+Rio,2016,100m,Freestyle,0,Women,USA,Simone Manuel,52.700,1
+Rio,2016,100m,Freestyle,0,Women,CAN,Penny Oleksiak,52.700,1
+Rio,2016,100m,Freestyle,0,Women,SWE,Sarah Sjostrom,52.990,3
+Rio,2016,100m,Freestyle,0,Women,AUS,Bronte Campbell,53.040,4
+Rio,2016,100m,Freestyle,0,Women,NED,Ranomi Kromowidjojo,53.080,4
+Rio,2016,100m,Freestyle,0,Women,AUS,Cate Campbell,53.240,4
+Rio,2016,100m,Freestyle,0,Women,USA,Abbey Weitzeil,53.300,4
+Rio,2016,100m,Freestyle,0,Women,DEN,Jeanette Ottesen,53.360,4
+Rio,2016,1500m,Freestyle,0,Men,ITA,Gregorio Paltrinieri,00:14:34.570000,1
+Rio,2016,1500m,Freestyle,0,Men,USA,Connor Jaeger,00:14:39.480000,2
+Rio,2016,1500m,Freestyle,0,Men,ITA,Gabriele Detti,00:14:40.860000,3
+Rio,2016,1500m,Freestyle,0,Men,USA,Jordan Wilimovsky,00:14:45.030000,4
+Rio,2016,1500m,Freestyle,0,Men,AUS,Mack Horton,00:14:49.540000,4
+Rio,2016,1500m,Freestyle,0,Men,CAN,Ryan Cochrane,00:14:49.610000,4
+Rio,2016,1500m,Freestyle,0,Men,FRA,Damien Joly,00:14:52.730000,4
+Rio,2016,1500m,Freestyle,0,Men,NOR,Henrik Christiansen,00:15:02.660000,4
+Rio,2016,200m,Backstroke,0,Men,USA,Ryan Murphy,00:01:53.620000,1
+Rio,2016,200m,Backstroke,0,Men,AUS,Mitchell Larkin,00:01:53.960000,2
+Rio,2016,200m,Backstroke,0,Men,RUS,Evgeny Rylov,00:01:53.970000,3
+Rio,2016,200m,Backstroke,0,Men,CHN,Jiayu Xu,00:01:55.160000,4
+Rio,2016,200m,Backstroke,0,Men,USA,Jacob Pebley,00:01:55.520000,4
+Rio,2016,200m,Backstroke,0,Men,CHN,Guangyuan Li,00:01:55.890000,4
+Rio,2016,200m,Backstroke,0,Men,GER,Christian Diener,00:01:56.270000,4
+Rio,2016,200m,Backstroke,0,Men,JPN,Ryosuke Irie,00:01:56.360000,4
+Rio,2016,200m,Backstroke,0,Women,USA,Madeline Dirado,00:02:05.990000,1
+Rio,2016,200m,Backstroke,0,Women,HUN,Katinka Hosszu,00:02:06.050000,2
+Rio,2016,200m,Backstroke,0,Women,CAN,Hilary Caldwell,00:02:07.540000,3
+Rio,2016,200m,Backstroke,0,Women,RUS,Daria Ustinova,00:02:07.890000,4
+Rio,2016,200m,Backstroke,0,Women,AUS,Belinda Hocking,00:02:08.020000,4
+Rio,2016,200m,Backstroke,0,Women,ZIM,Kirsty Leigh Coventry,00:02:08.800000,4
+Rio,2016,200m,Backstroke,0,Women,CHN,Yaxin Liu,00:02:09.030000,4
+Rio,2016,200m,Backstroke,0,Women,ISL,Eyglo Gustafsdottir,00:02:09.440000,4
+Rio,2016,200m,Breaststroke,0,Men,KAZ,Dmitriy Balandin,00:02:07.460000,1
+Rio,2016,200m,Breaststroke,0,Men,USA,Josh Prenot,00:02:07.530000,2
+Rio,2016,200m,Breaststroke,0,Men,RUS,Anton Chupkov,00:02:07.700000,3
+Rio,2016,200m,Breaststroke,0,Men,GBR,Andrew Willis,00:02:07.780000,4
+Rio,2016,200m,Breaststroke,0,Men,JPN,Yasuhiro Koseki,00:02:07.800000,4
+Rio,2016,200m,Breaststroke,0,Men,JPN,Ippei Watanabe,00:02:07.870000,4
+Rio,2016,200m,Breaststroke,0,Men,GER,Marco Koch,00:02:08.000000,4
+Rio,2016,200m,Breaststroke,0,Men,USA,Kevin Cordes,00:02:08.340000,4
+Rio,2016,200m,Breaststroke,0,Men,KAZ,Dmitriy Balandin,00:02:07.460000,1
+Rio,2016,200m,Breaststroke,0,Men,USA,Josh Prenot,00:02:07.530000,2
+Rio,2016,200m,Breaststroke,0,Men,RUS,Anton Chupkov,00:02:07.700000,3
+Rio,2016,200m,Breaststroke,0,Men,GBR,Andrew Willis,00:02:07.780000,4
+Rio,2016,200m,Breaststroke,0,Men,JPN,Yasuhiro Koseki,00:02:07.800000,4
+Rio,2016,200m,Breaststroke,0,Men,JPN,Ippei Watanabe,00:02:07.870000,4
+Rio,2016,200m,Breaststroke,0,Men,GER,Marco Koch,00:02:08.000000,4
+Rio,2016,200m,Breaststroke,0,Men,USA,Kevin Cordes,00:02:08.340000,4
+Rio,2016,200m,Butterfly,0,Men,USA,Michael Phelps,00:01:53.360000,1
+Rio,2016,200m,Butterfly,0,Men,JPN,Masato Sakai,00:01:53.400000,2
+Rio,2016,200m,Butterfly,0,Men,HUN,Tamas Kenderesi,00:01:53.620000,3
+Rio,2016,200m,Butterfly,0,Men,RSA,Chad Le Clos,00:01:54.060000,4
+Rio,2016,200m,Butterfly,0,Men,JPN,Daiya Seto,00:01:54.820000,4
+Rio,2016,200m,Butterfly,0,Men,DEN,Viktor Bromer,00:01:55.640000,4
+Rio,2016,200m,Butterfly,0,Men,HUN,Laszlo Cseh,00:01:56.240000,4
+Rio,2016,200m,Butterfly,0,Men,BEL,Louis Croenen,00:01:57.040000,4
+Rio,2016,200m,Butterfly,0,Women,ESP,Mireia Belmonte,00:02:04.850000,1
+Rio,2016,200m,Butterfly,0,Women,AUS,Madeline Groves,00:02:04.880000,2
+Rio,2016,200m,Butterfly,0,Women,JPN,Natsumi Hoshi,00:02:05.200000,3
+Rio,2016,200m,Butterfly,0,Women,USA,Cammile Adams,00:02:05.900000,4
+Rio,2016,200m,Butterfly,0,Women,CHN,Yilin Zhou,00:02:07.370000,4
+Rio,2016,200m,Butterfly,0,Women,CHN,Yufei Zhang,00:02:07.400000,4
+Rio,2016,200m,Butterfly,0,Women,USA,Hali Flickinger,00:02:07.710000,4
+Rio,2016,200m,Butterfly,0,Women,AUS,Brianna Throssell,00:02:07.870000,4
+Rio,2016,200m,Freestyle,0,Men,CHN,Yang Sun,00:01:44.650000,1
+Rio,2016,200m,Freestyle,0,Men,RSA,Chad Le Clos,00:01:45.200000,2
+Rio,2016,200m,Freestyle,0,Men,USA,Conor Dwyer,00:01:45.230000,3
+Rio,2016,200m,Freestyle,0,Men,GBR,James Guy,00:01:45.490000,4
+Rio,2016,200m,Freestyle,0,Men,USA,Townley Haas,00:01:45.580000,4
+Rio,2016,200m,Freestyle,0,Men,GER,Paul Biedermann,00:01:45.840000,4
+Rio,2016,200m,Freestyle,0,Men,JPN,Kosuke Hagino,00:01:45.900000,4
+Rio,2016,200m,Freestyle,0,Men,RUS,Aleksandr Krasnykh,00:01:45.910000,4
+Rio,2016,200m,Freestyle,0,Women,USA,Katie Ledecky,00:01:53.730000,1
+Rio,2016,200m,Freestyle,0,Women,SWE,Sarah Sjostrom,00:01:54.080000,2
+Rio,2016,200m,Freestyle,0,Women,AUS,Emma Mckeon,00:01:54.920000,3
+Rio,2016,200m,Freestyle,0,Women,ITA,Federica Pellegrini,00:01:55.180000,4
+Rio,2016,200m,Freestyle,0,Women,CHN,Duo Shen,00:01:55.250000,4
+Rio,2016,200m,Freestyle,0,Women,AUS,Bronte Barratt,00:01:55.250000,4
+Rio,2016,200m,Freestyle,0,Women,SWE,Michelle Coleman,00:01:56.270000,4
+Rio,2016,200m,Freestyle,0,Women,FRA,Charlotte Bonnet,00:01:56.290000,4
+Rio,2016,200m,Individual medley,0,Men,USA,Michael Phelps,00:01:54.660000,1
+Rio,2016,200m,Individual medley,0,Men,JPN,Kosuke Hagino,00:01:56.610000,2
+Rio,2016,200m,Individual medley,0,Men,CHN,Shun Wang,00:01:57.050000,3
+Rio,2016,200m,Individual medley,0,Men,JPN,Hiromasa Fujimori,00:01:57.210000,4
+Rio,2016,200m,Individual medley,0,Men,USA,Ryan Lochte,00:01:57.470000,4
+Rio,2016,200m,Individual medley,0,Men,GER,Philip Heintz,00:01:57.480000,4
+Rio,2016,200m,Individual medley,0,Men,BRA,Thiago Pereira,00:01:58.020000,4
+Rio,2016,200m,Individual medley,0,Men,GBR,Dan Wallace,00:01:58.540000,4
+Rio,2016,200m,Individual medley,0,Women,HUN,Katinka Hosszu,00:02:06.580000,1
+Rio,2016,200m,Individual medley,0,Women,GBR,Siobhan-Marie Oconnor,00:02:06.880000,2
+Rio,2016,200m,Individual medley,0,Women,USA,Madeline Dirado,00:02:08.790000,3
+Rio,2016,200m,Individual medley,0,Women,USA,Melanie Margalis,00:02:09.210000,4
+Rio,2016,200m,Individual medley,0,Women,AUS,Alicia Coutts,00:02:10.880000,4
+Rio,2016,200m,Individual medley,0,Women,CAN,Sydney Pickrem,00:02:11.220000,4
+Rio,2016,200m,Individual medley,0,Women,RUS,Viktoriya Andreyeva,00:02:12.280000,4
+Rio,2016,200m,Individual medley,0,Women,CHN,Shiwen Ye,00:02:13.560000,4
+Rio,2016,400m,Freestyle,0,Men,AUS,Mack Horton,00:03:41.550000,1
+Rio,2016,400m,Freestyle,0,Men,CHN,Yang Sun,00:03:41.680000,2
+Rio,2016,400m,Freestyle,0,Men,ITA,Gabriele Detti,00:03:43.490000,3
+Rio,2016,400m,Freestyle,0,Men,USA,Conor Dwyer,00:03:44.010000,4
+Rio,2016,400m,Freestyle,0,Men,USA,Connor Jaeger,00:03:44.160000,4
+Rio,2016,400m,Freestyle,0,Men,GBR,James Guy,00:03:44.680000,4
+Rio,2016,400m,Freestyle,0,Men,AUS,David Mckeon,00:03:45.280000,4
+Rio,2016,400m,Freestyle,0,Men,FRA,Jordan Pothain,00:03:49.070000,4
+Rio,2016,400m,Freestyle,0,Women,USA,Katie Ledecky,00:03:56.460000,1
+Rio,2016,400m,Freestyle,0,Women,GBR,Jazz Carlin,00:04:01.230000,2
+Rio,2016,400m,Freestyle,0,Women,USA,Leah Smith,00:04:01.920000,3
+Rio,2016,400m,Freestyle,0,Women,HUN,Boglarka Kapas,00:04:02.370000,4
+Rio,2016,400m,Freestyle,0,Women,CAN,Brittany Maclean,00:04:04.690000,4
+Rio,2016,400m,Freestyle,0,Women,AUS,Tamsin Cook,00:04:05.300000,4
+Rio,2016,400m,Freestyle,0,Women,AUS,Jessica Ashwood,00:04:05.680000,4
+Rio,2016,400m,Freestyle,0,Women,FRA,Coralie Balmy,00:04:06.980000,4
+Rio,2016,400m,Individual medley,0,Men,JPN,Kosuke Hagino,00:04:06.050000,1
+Rio,2016,400m,Individual medley,0,Men,USA,Chase Kalisz,00:04:06.750000,2
+Rio,2016,400m,Individual medley,0,Men,JPN,Daiya Seto,00:04:09.710000,3
+Rio,2016,400m,Individual medley,0,Men,GBR,Max Litchfield,00:04:11.620000,4
+Rio,2016,400m,Individual medley,0,Men,USA,Jay Litherland,00:04:11.680000,4
+Rio,2016,400m,Individual medley,0,Men,AUS,Thomas Fraser-Holmes,00:04:11.900000,4
+Rio,2016,400m,Individual medley,0,Men,AUS,Travis Mahoney,00:04:15.480000,4
+Rio,2016,400m,Individual medley,0,Men,ESP,Joan Lluis Pons Ramon,00:04:16.580000,4
+Rio,2016,400m,Individual medley,0,Women,HUN,Katinka Hosszu,00:04:26.360000,1
+Rio,2016,400m,Individual medley,0,Women,USA,Madeline Dirado,00:04:31.150000,2
+Rio,2016,400m,Individual medley,0,Women,ESP,Mireia Belmonte,00:04:32.390000,3
+Rio,2016,400m,Individual medley,0,Women,GBR,Hannah Miley,00:04:32.540000,4
+Rio,2016,400m,Individual medley,0,Women,CAN,Emily Overholt,00:04:34.700000,4
+Rio,2016,400m,Individual medley,0,Women,USA,Elizabeth Beisel,00:04:34.980000,4
+Rio,2016,400m,Individual medley,0,Women,GBR,Aimee Willmott,00:04:35.040000,4
+Rio,2016,400m,Individual medley,0,Women,JPN,Sakiko Shimizu,00:04:38.060000,4
+Rio,2016,4x100,Freestyle,1,Men,USA,"Ryan Held, Anthony Ervin, Michael Phelps, James Feigen, Nathan Adrian, Caeleb Dressel, Blake Pieroni",00:03:09.920000,1
+Rio,2016,4x100,Freestyle,1,Men,FRA,"William Meynard, Jeremy Stravius, Fabien Gilot, Mehdy Metella, Florent Manaudou, Clement Mignon",00:03:10.530000,2
+Rio,2016,4x100,Freestyle,1,Men,AUS,"Cameron Mcevoy, Kyle Chalmers, Matthew Abood, James Magnussen, James Roberts",00:03:11.370000,3
+Rio,2016,4x100,Freestyle,1,Men,RUS,"Aleksandr Popkov, Andrey Grechin, Danila Izotov, Alexander Sukhorukov, Vladimir Morozov",00:03:11.640000,4
+Rio,2016,4x100,Freestyle,1,Men,BRA,"Joao De Lucca, Marcelo Chierighini, Gabriel Da Silva Santos, Matheus Santana, Nicolas Nilo",00:03:13.210000,4
+Rio,2016,4x100,Freestyle,1,Men,BEL,"Dieter Dekoninck, Pieter Timmers, Jasper Aerents, Emmanuel Vanluchene, Glenn Surgeloose",00:03:13.570000,4
+Rio,2016,4x100,Freestyle,1,Men,CAN,"Markus Thormeyer, Yuri Kisil, Santo Condorelli, Evan Van Moerkerke",00:03:14.350000,4
+Rio,2016,4x100,Freestyle,1,Men,JPN,"Junya Koga, Shinri Shioura, Katsumi Nakamura, Kenji Kobase",00:03:14.480000,4
+Rio,2016,4x100,Freestyle,1,Women,AUS,"Emma Mckeon, Madison Wilson, Bronte Campbell, Brittany Elmslie, Cate Campbell",00:03:30.650000,1
+Rio,2016,4x100,Freestyle,1,Women,USA,"Simone Manuel, Lia Neal, Dana Vollmer, Allison Schmitt, Amanda Weir, Katie Ledecky, Abbey Weitzeil",00:03:31.890000,2
+Rio,2016,4x100,Freestyle,1,Women,CAN,"Chantal Van Landeghem, Penny Oleksiak, Sandrine Mainville, Taylor Madison Ruck, Michelle Williams",00:03:32.890000,3
+Rio,2016,4x100,Freestyle,1,Women,NZ,"Maud Van Der Meer, Ranomi Kromowidjojo, Marrit Steenbergen, Inge Dekker, Femke Heemskerk",00:03:33.810000,4
+Rio,2016,4x100,Freestyle,1,Women,SWE,"Sarah Sjostrom, Michelle Coleman, Louise Hansson, Ida Lindborg, Ida Marko-Varga",00:03:35.900000,4
+Rio,2016,4x100,Freestyle,1,Women,NL,"Erika Ferraioli, Aglaia Pezzato, Federica Pellegrini, Silvia Di Pietro",00:03:36.780000,4
+Rio,2016,4x100,Freestyle,1,Women,FRA,"Mathilde Cini, Beryl Gastaldello, Anna Santamans, Charlotte Bonnet",00:03:37.450000,4
+Rio,2016,4x100,Freestyle,1,Women,JPN,"Yayoi Matsumoto, Rikako Ikee, Miki Uchida, Misaki Yamaguchi",00:03:37.780000,4
+Rio,2016,4x100,Medley,1,Men,USA,"Tom Shields, Cody Miller, Michael Phelps, Kevin Cordes, Ryan Murphy, David Plummer, Caeleb Dressel, Nathan Adrian",00:03:27.950000,2
+Rio,2016,4x100,Medley,1,Men,GBR,"Chris Walker-Hebborn, Duncan Scott, James Guy, Adam Peaty",00:03:29.240000,3
+Rio,2016,4x100,Medley,1,Men,AUS,"Cameron Mcevoy, David Morgan, Mitchell Larkin, Kyle Chalmers, Jake Packard",00:03:29.930000,4
+Rio,2016,4x100,Medley,1,Men,RUS,"Aleksandr Sadovnikov, Anton Chupkov, Evgeny Koptelov, Vladimir Morozov, Grigory Tarasevich, Evgeny Rylov, Alexander Sukhorukov",00:03:31.300000,4
+Rio,2016,4x100,Medley,1,Men,JPN,"Yasuhiro Koseki, Katsumi Nakamura, Ryosuke Irie, Takuro Fujii",00:03:31.970000,4
+Rio,2016,4x100,Medley,1,Men,BRA,"Marcelo Chierighini, Joao Gomes, Guilherme Guido, Henrique Martins, Felipe Franca",00:03:32.840000,4
+Rio,2016,4x100,Medley,1,Men,GER,"Steffen Deibler, Marco Koch, Damian Wierling, Christian Vom Lehn, Jan-Philip Glania",00:03:33.500000,4
+Rio,2016,4x100,Medley,1,Men,IR,"Bence Pulai, Richard Bohus, Daniel Gyurta, Gabor Balog",,5
+Rio,2016,4x100,Medley,1,Women,USA,"Kathleen Baker, Lilly King, Kelsi Worrell, Katie Meili, Dana Vollmer, Olivia Smoliga, Simone Manuel, Abbey Weitzeil",00:03:53.130000,1
+Rio,2016,4x100,Medley,1,Women,AUS,"Madison Wilson, Emily Seebohm, Taylor Mckeown, Emma Mckeon, Brittany Elmslie, Madeline Groves, Cate Campbell",00:03:55.000000,2
+Rio,2016,4x100,Medley,1,Women,DEN,"Rikke Moller Pedersen, Mie Nielsen, Jeanette Ottesen, Pernille Blume",00:03:55.010000,3
+Rio,2016,4x100,Medley,1,Women,CHN,,00:03:55.180000,4
+Rio,2016,4x100,Medley,1,Women,CAN,,00:03:55.490000,4
+Rio,2016,4x100,Medley,1,Women,RUS,,00:03:55.660000,4
+Rio,2016,4x100,Medley,1,Women,GBR,,00:03:56.960000,4
+Rio,2016,4x100,Medley,1,Women,ITA,"Ilaria Bianchi, Carlotta Zofkova, Federica Pellegrini, Arianna Castiglioni",00:03:59.500000,4
+Rio,2016,4x200,Freestyle,1,Men,USA,"Gunnar Bentz, Townley Haas, Ryan Lochte, Jack Conger, Conor Dwyer, Michael Phelps, Clark Smith",00:07:00.660000,1
+Rio,2016,4x200,Freestyle,1,Men,GBR,"Dan Wallace, James Guy, Robbie Renwick, Stephen Milne, Duncan Scott",00:07:03.130000,2
+Rio,2016,4x200,Freestyle,1,Men,JPN,"Yuki Kobori, Naito Ehara, Takeshi Matsuda, Kosuke Hagino",00:07:03.500000,3
+Rio,2016,4x200,Freestyle,1,Men,AUS,"Daniel Smith, Mack Horton, Thomas Fraser-Holmes, Jacob Hansford, David Mckeon",00:07:04.180000,4
+Rio,2016,4x200,Freestyle,1,Men,RUS,"Aleksandr Krasnykh, Mikhail Dovgalyuk, Nikita Lobintsev, Viacheslav Andrusenko, Danila Izotov",00:07:05.700000,4
+Rio,2016,4x200,Freestyle,1,Men,GER,,00:07:07.280000,4
+Rio,2016,4x200,Freestyle,1,Men,NLD,"Maarten Brzoskowski, Ben Schwietert, Sebastiaan Verschuren, Kyle Stolk, Dion Dreesens",00:07:09.100000,4
+Rio,2016,4x200,Freestyle,1,Men,BEL,"Dieter Dekoninck, Louis Croenen, Glenn Surgeloose, Emmanuel Vanluchene, Pieter Timmers",00:07:11.640000,4
+Rio,2016,4x200,Freestyle,1,Women,USA,"Katie Ledecky, Allison Schmitt, Madeline Dirado, Leah Smith, Missy Franklin, Melanie Margalis, Cierra Runge",00:07:43.030000,1
+Rio,2016,4x200,Freestyle,1,Women,AUS,"Jessica Ashwood, Bronte Barratt, Emma Mckeon, Tamsin Cook, Leah Neale",00:07:44.870000,2
+Rio,2016,4x200,Freestyle,1,Women,CAN,"Emily Overholt, Taylor Madison Ruck, Penny Oleksiak, Brittany Maclean, Katerine Savard, Kennedy Goss",00:07:45.390000,3
+Rio,2016,4x200,Freestyle,1,Women,CHN,"Yuhan Zhang, Jie Dong, Duo Shen, Yanhan Ai, Shijia Wang",00:07:47.960000,4
+Rio,2016,4x200,Freestyle,1,Women,SWE,"Michelle Coleman, Louise Hansson, Ida Marko-Varga, Sarah Sjostrom",00:07:50.260000,4
+Rio,2016,4x200,Freestyle,1,Women,HUN,"Zsuzsanna Jakabos, Evelin Verraszto, Ajna Kesely, Boglarka Kapas, Katinka Hosszu",00:07:51.030000,4
+Rio,2016,4x200,Freestyle,1,Women,RUS,"Arina Openysheva, Daria Ustinova, Veronika Popova",00:07:53.260000,4
+Rio,2016,4x200,Freestyle,1,Women,JPN,"Rikako Ikee, Chihiro Igarashi, Sachi Mochida, Tomomi Aoki",00:07:56.760000,4
+Rio,2016,50m,Freestyle,0,Men,USA,Anthony Ervin,21.400,1
+Rio,2016,50m,Freestyle,0,Men,FRA,Florent Manaudou,21.410,2
+Rio,2016,50m,Freestyle,0,Men,USA,Nathan Adrian,21.490,3
+Rio,2016,50m,Freestyle,0,Men,GBR,Ben Proud,21.680,4
+Rio,2016,50m,Freestyle,0,Men,UKR,Andriy Hovorov,21.740,4
+Rio,2016,50m,Freestyle,0,Men,BRA,Bruno Fratus,21.790,4
+Rio,2016,50m,Freestyle,0,Men,RSA,Bradley Edward Tandy,21.790,4
+Rio,2016,50m,Freestyle,0,Men,LTU,Simonas Bilis,22.080,4
+Rio,2016,50m,Freestyle,0,Women,DEN,Pernille Blume,24.070,1
+Rio,2016,50m,Freestyle,0,Women,USA,Simone Manuel,24.090,2
+Rio,2016,50m,Freestyle,0,Women,BLR,Aliaksandra Herasimenia,24.110,3
+Rio,2016,50m,Freestyle,0,Women,GBR,Francesca Halsall,24.130,4
+Rio,2016,50m,Freestyle,0,Women,AUS,Cate Campbell,24.150,4
+Rio,2016,50m,Freestyle,0,Women,NED,Ranomi Kromowidjojo,24.190,4
+Rio,2016,50m,Freestyle,0,Women,AUS,Bronte Campbell,24.420,4
+Rio,2016,50m,Freestyle,0,Women,BRA,Etiene Medeiros,24.690,4
+Rio,2016,800m,Freestyle,0,Women,USA,Katie Ledecky,00:08:04.790000,1
+Rio,2016,800m,Freestyle,0,Women,GBR,Jazz Carlin,00:08:16.170000,2
+Rio,2016,800m,Freestyle,0,Women,HUN,Boglarka Kapas,00:08:16.370000,3
+Rio,2016,800m,Freestyle,0,Women,ESP,Mireia Belmonte,00:08:18.550000,4
+Rio,2016,800m,Freestyle,0,Women,AUS,Jessica Ashwood,00:08:20.320000,4
+Rio,2016,800m,Freestyle,0,Women,USA,Leah Smith,00:08:20.950000,4
+Rio,2016,800m,Freestyle,0,Women,DEN,Lotte Friis,00:08:24.500000,4
+Rio,2016,800m,Freestyle,0,Women,GER,Sarah Kohler,00:08:27.750000,4

@@ -1,0 +1,257 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+London,2012,100m,Backstroke,0,Men,USA,Matt Grevers,52.160,1
+London,2012,100m,Backstroke,0,Men,USA,Nick Thoman,52.920,2
+London,2012,100m,Backstroke,0,Men,JPN,Ryosuke Irie,52.970,3
+London,2012,100m,Backstroke,0,Men,FRA,Camille Lacourt,53.080,4
+London,2012,100m,Backstroke,0,Men,GBR,Liam Tancock,53.350,4
+London,2012,100m,Backstroke,0,Men,GER,Helge Meeuw,53.480,4
+London,2012,100m,Backstroke,0,Men,AUS,Hayden Stoeckel,53.550,4
+London,2012,100m,Backstroke,0,Men,CHN,Feiyi Cheng,53.770,4
+London,2012,100m,Backstroke,0,Women,USA,Missy Franklin,58.330,2
+London,2012,100m,Backstroke,0,Women,AUS,Emily Seebohm,58.680,3
+London,2012,100m,Backstroke,0,Women,JPN,Aya Terakawa,58.830,4
+London,2012,100m,Backstroke,0,Women,RUS,Anastasia Zueva,59.000,4
+London,2012,100m,Backstroke,0,Women,GBR,Gemma Spofforth,59.200,4
+London,2012,100m,Backstroke,0,Women,CHN,Jing Zhao,59.230,4
+London,2012,100m,Backstroke,0,Women,AUS,Belinda Hocking,59.290,4
+London,2012,100m,Backstroke,0,Women,CHN,Yuanhui Fu,00:01:00.500000,1
+London,2012,100m,Breaststroke,0,Men,RSA,Cameron Van Der Burgh,58.460,2
+London,2012,100m,Breaststroke,0,Men,AUS,Christian Sprenger,58.930,3
+London,2012,100m,Breaststroke,0,Men,USA,Brendan Hansen,59.490,4
+London,2012,100m,Breaststroke,0,Men,HUN,Daniel Gyurta,59.530,4
+London,2012,100m,Breaststroke,0,Men,JPN,Kosuke Kitajima,59.790,4
+London,2012,100m,Breaststroke,0,Men,AUS,Brenton Rickard,59.870,4
+London,2012,100m,Breaststroke,0,Men,ITA,Fabio Scozzoli,59.970,4
+London,2012,100m,Breaststroke,0,Men,LTU,Giedrius Titenis,00:01:00.840000,1
+London,2012,100m,Breaststroke,0,Women,LTU,Ruta Meilutyte,00:01:05.470000,1
+London,2012,100m,Breaststroke,0,Women,USA,Rebecca Soni,00:01:05.550000,2
+London,2012,100m,Breaststroke,0,Women,JPN,Satomi Suzuki,00:01:06.460000,3
+London,2012,100m,Breaststroke,0,Women,JAM,Alia Atkinson,00:01:06.930000,4
+London,2012,100m,Breaststroke,0,Women,AUS,Leisel Jones,00:01:06.950000,4
+London,2012,100m,Breaststroke,0,Women,USA,Breeja Larson,00:01:06.960000,4
+London,2012,100m,Breaststroke,0,Women,RUS,Yuliya Efimova,00:01:06.980000,4
+London,2012,100m,Breaststroke,0,Women,DEN,Rikke Moller Pedersen,00:01:07.550000,4
+London,2012,100m,Butterfly,0,Men,USA,Michael Phelps,51.210,1
+London,2012,100m,Butterfly,0,Men,RSA,Chad Le Clos,51.440,2
+London,2012,100m,Butterfly,0,Men,RUS,Evgeny Korotyshkin,51.440,2
+London,2012,100m,Butterfly,0,Men,SRB,Milorad Cavic,51.810,4
+London,2012,100m,Butterfly,0,Men,GER,Steffen Deibler,51.810,4
+London,2012,100m,Butterfly,0,Men,NED,Joeri Verlinden,51.820,4
+London,2012,100m,Butterfly,0,Men,USA,Tyler Mcgill,51.880,4
+London,2012,100m,Butterfly,0,Men,POL,Konrad Czerniak,52.050,4
+London,2012,100m,Butterfly,0,Women,USA,Dana Vollmer,55.980,1
+London,2012,100m,Butterfly,0,Women,CHN,Ying Lu,56.870,2
+London,2012,100m,Butterfly,0,Women,AUS,Alicia Coutts,56.940,3
+London,2012,100m,Butterfly,0,Women,SWE,Sarah Sjostrom,57.170,4
+London,2012,100m,Butterfly,0,Women,ITA,Ilaria Bianchi,57.270,4
+London,2012,100m,Butterfly,0,Women,DEN,Jeanette Ottesen,57.350,4
+London,2012,100m,Butterfly,0,Women,USA,Claire Donahue,57.480,4
+London,2012,100m,Butterfly,0,Women,GBR,Ellen Gandy,57.760,4
+London,2012,100m,Freestyle,0,Men,USA,Nathan Adrian,47.520,1
+London,2012,100m,Freestyle,0,Men,AUS,James Magnussen,47.530,2
+London,2012,100m,Freestyle,0,Men,CAN,Brent Hayden,47.800,3
+London,2012,100m,Freestyle,0,Men,FRA,Yannick Agnel,47.840,4
+London,2012,100m,Freestyle,0,Men,NED,Sebastiaan Verschuren,47.880,4
+London,2012,100m,Freestyle,0,Men,BRA,Cesar Cielo Filho,47.920,4
+London,2012,100m,Freestyle,0,Men,CUB,Hanser Garcia,48.040,4
+London,2012,100m,Freestyle,0,Men,RUS,Nikita Lobintsev,48.440,4
+London,2012,100m,Freestyle,0,Women,NED,Ranomi Kromowidjojo,53.000,1
+London,2012,100m,Freestyle,0,Women,BLR,Aliaksandra Herasimenia,53.380,2
+London,2012,100m,Freestyle,0,Women,CHN,Yi Tang,53.440,3
+London,2012,100m,Freestyle,0,Women,AUS,Melanie Schlanger,53.470,4
+London,2012,100m,Freestyle,0,Women,USA,Missy Franklin,53.640,4
+London,2012,100m,Freestyle,0,Women,GBR,Francesca Halsall,53.660,4
+London,2012,100m,Freestyle,0,Women,DEN,Jeanette Ottesen,53.750,4
+London,2012,100m,Freestyle,0,Women,USA,Jessica Hardy,54.020,4
+London,2012,1500m,Freestyle,0,Men,CHN,Yang Sun,00:14:31.020000,1
+London,2012,1500m,Freestyle,0,Men,CAN,Ryan Cochrane,00:14:39.630000,2
+London,2012,1500m,Freestyle,0,Men,TUN,Oussama Mellouli,00:14:40.310000,3
+London,2012,1500m,Freestyle,0,Men,KOR,Tae-Hwan Park,00:14:50.610000,4
+London,2012,1500m,Freestyle,0,Men,ITA,Gregorio Paltrinieri,00:14:51.920000,4
+London,2012,1500m,Freestyle,0,Men,USA,Connor Jaeger,00:14:52.990000,4
+London,2012,1500m,Freestyle,0,Men,POL,Mateusz Sawrymowicz,00:14:54.320000,4
+London,2012,1500m,Freestyle,0,Men,GBR,Daniel Fogg,00:15:00.760000,4
+London,2012,200m,Backstroke,0,Men,USA,Tyler Clary,00:01:53.410000,1
+London,2012,200m,Backstroke,0,Men,JPN,Ryosuke Irie,00:01:53.780000,2
+London,2012,200m,Backstroke,0,Men,USA,Ryan Lochte,00:01:53.940000,3
+London,2012,200m,Backstroke,0,Men,POL,Radoslaw Kawecki,00:01:55.590000,4
+London,2012,200m,Backstroke,0,Men,CHN,Fenglin Zhang,00:01:55.590000,4
+London,2012,200m,Backstroke,0,Men,JPN,Kazuki Watanabe,00:01:57.030000,4
+London,2012,200m,Backstroke,0,Men,ISR,Yakov Toumarkin,00:01:57.620000,4
+London,2012,200m,Backstroke,0,Men,AUS,Mitchell Larkin,00:01:58.020000,4
+London,2012,200m,Backstroke,0,Women,USA,Missy Franklin,00:02:04.060000,1
+London,2012,200m,Backstroke,0,Women,RUS,Anastasia Zueva,00:02:05.920000,2
+London,2012,200m,Backstroke,0,Women,USA,Elizabeth Beisel,00:02:06.550000,3
+London,2012,200m,Backstroke,0,Women,GBR,Elizabeth Simmonds,00:02:07.260000,4
+London,2012,200m,Backstroke,0,Women,AUS,Meagen Nay,00:02:07.430000,4
+London,2012,200m,Backstroke,0,Women,ZIM,Kirsty Leigh Coventry,00:02:08.180000,4
+London,2012,200m,Backstroke,0,Women,FRA,Alexianne Castel,00:02:08.430000,4
+London,2012,200m,Backstroke,0,Women,CAN,Sinead Russell,00:02:09.860000,4
+London,2012,200m,Breaststroke,0,Men,HUN,Daniel Gyurta,00:02:07.280000,1
+London,2012,200m,Breaststroke,0,Men,GBR,Michael Jamieson,00:02:07.430000,2
+London,2012,200m,Breaststroke,0,Men,JPN,Ryo Tateishi,00:02:08.290000,3
+London,2012,200m,Breaststroke,0,Men,JPN,Kosuke Kitajima,00:02:08.350000,4
+London,2012,200m,Breaststroke,0,Men,USA,Scott Weltz,00:02:09.020000,4
+London,2012,200m,Breaststroke,0,Men,USA,Clark Burckle,00:02:09.250000,4
+London,2012,200m,Breaststroke,0,Men,AUS,Brenton Rickard,00:02:09.280000,4
+London,2012,200m,Breaststroke,0,Men,GBR,Andrew Willis,00:02:09.440000,4
+London,2012,200m,Breaststroke,0,Women,USA,Rebecca Soni,00:02:19.590000,1
+London,2012,200m,Breaststroke,0,Women,JPN,Satomi Suzuki,00:02:20.720000,2
+London,2012,200m,Breaststroke,0,Women,RUS,Yuliya Efimova,00:02:20.920000,3
+London,2012,200m,Breaststroke,0,Women,DEN,Rikke Moller Pedersen,00:02:21.650000,4
+London,2012,200m,Breaststroke,0,Women,CAN,Martha Mccabe,00:02:23.160000,4
+London,2012,200m,Breaststroke,0,Women,USA,Micah Lawrence,00:02:23.270000,4
+London,2012,200m,Breaststroke,0,Women,RSA,Suzaan Van Biljon,00:02:23.720000,4
+London,2012,200m,Breaststroke,0,Women,AUS,Sally Foster,00:02:26.000000,4
+London,2012,200m,Butterfly,0,Men,RSA,Chad Le Clos,00:01:52.960000,1
+London,2012,200m,Butterfly,0,Men,USA,Michael Phelps,00:01:53.010000,2
+London,2012,200m,Butterfly,0,Men,JPN,Takeshi Matsuda,00:01:53.210000,3
+London,2012,200m,Butterfly,0,Men,AUT,Dinko Jukic,00:01:54.350000,4
+London,2012,200m,Butterfly,0,Men,USA,Tyler Clary,00:01:55.060000,4
+London,2012,200m,Butterfly,0,Men,SRB,Velimir Stjepanovic,00:01:55.070000,4
+London,2012,200m,Butterfly,0,Men,POL,Pawel Korzeniowski,00:01:55.080000,4
+London,2012,200m,Butterfly,0,Men,CHN,Yin Chen,00:01:55.180000,4
+London,2012,200m,Butterfly,0,Women,CHN,Liuyang Jiao,00:02:04.060000,1
+London,2012,200m,Butterfly,0,Women,ESP,Mireia Belmonte,00:02:05.250000,2
+London,2012,200m,Butterfly,0,Women,JPN,Natsumi Hoshi,00:02:05.480000,3
+London,2012,200m,Butterfly,0,Women,USA,Kathleen Hersey,00:02:05.780000,4
+London,2012,200m,Butterfly,0,Women,USA,Cammile Adams,00:02:06.780000,4
+London,2012,200m,Butterfly,0,Women,GBR,Jemma Lowe,00:02:06.800000,4
+London,2012,200m,Butterfly,0,Women,HUN,Zsuzsanna Jakabos,00:02:07.330000,4
+London,2012,200m,Butterfly,0,Women,CHN,Zige Liu,00:02:07.770000,4
+London,2012,200m,Freestyle,0,Men,FRA,Yannick Agnel,00:01:43.140000,1
+London,2012,200m,Freestyle,0,Men,KOR,Tae-Hwan Park,00:01:44.930000,2
+London,2012,200m,Freestyle,0,Men,CHN,Yang Sun,00:01:44.930000,2
+London,2012,200m,Freestyle,0,Men,USA,Ryan Lochte,00:01:45.040000,4
+London,2012,200m,Freestyle,0,Men,GER,Paul Biedermann,00:01:45.530000,4
+London,2012,200m,Freestyle,0,Men,GBR,Robbie Renwick,00:01:46.530000,4
+London,2012,200m,Freestyle,0,Men,AUS,Thomas Fraser-Holmes,00:01:46.930000,4
+London,2012,200m,Freestyle,0,Men,RUS,Danila Izotov,00:01:47.750000,4
+London,2012,200m,Freestyle,0,Women,USA,Allison Schmitt,00:01:53.610000,1
+London,2012,200m,Freestyle,0,Women,FRA,Camille Muffat,00:01:55.580000,2
+London,2012,200m,Freestyle,0,Women,AUS,Bronte Barratt,00:01:55.810000,3
+London,2012,200m,Freestyle,0,Women,USA,Missy Franklin,00:01:55.820000,4
+London,2012,200m,Freestyle,0,Women,ITA,Federica Pellegrini,00:01:56.730000,4
+London,2012,200m,Freestyle,0,Women,RUS,Veronika Popova,00:01:57.250000,4
+London,2012,200m,Freestyle,0,Women,GBR,Caitlin Mcclatchey,00:01:57.600000,4
+London,2012,200m,Freestyle,0,Women,AUS,Kylie Palmer,00:01:57.680000,4
+London,2012,200m,Individual medley,0,Men,USA,Michael Phelps,00:01:54.270000,1
+London,2012,200m,Individual medley,0,Men,USA,Ryan Lochte,00:01:54.900000,2
+London,2012,200m,Individual medley,0,Men,HUN,Laszlo Cseh,00:01:56.220000,3
+London,2012,200m,Individual medley,0,Men,BRA,Thiago Pereira,00:01:56.740000,4
+London,2012,200m,Individual medley,0,Men,JPN,Kosuke Hagino,00:01:57.350000,4
+London,2012,200m,Individual medley,0,Men,JPN,Ken Takakuwa,00:01:58.530000,4
+London,2012,200m,Individual medley,0,Men,GBR,James Goddard,00:01:59.050000,4
+London,2012,200m,Individual medley,0,Men,GER,Markus Deibler,00:01:59.100000,4
+London,2012,200m,Individual medley,0,Women,CHN,Shiwen Ye,00:02:07.570000,1
+London,2012,200m,Individual medley,0,Women,AUS,Alicia Coutts,00:02:08.150000,2
+London,2012,200m,Individual medley,0,Women,USA,Caitlin Leverenz,00:02:08.950000,3
+London,2012,200m,Individual medley,0,Women,AUS,Stephanie Rice,00:02:09.550000,4
+London,2012,200m,Individual medley,0,Women,USA,Ariana Kukors,00:02:09.830000,4
+London,2012,200m,Individual medley,0,Women,ZIM,Kirsty Leigh Coventry,00:02:11.130000,4
+London,2012,200m,Individual medley,0,Women,GBR,Hannah Miley,00:02:11.290000,4
+London,2012,200m,Individual medley,0,Women,HUN,Katinka Hosszu,00:02:14.190000,4
+London,2012,400m,Freestyle,0,Men,CHN,Yang Sun,00:03:40.140000,1
+London,2012,400m,Freestyle,0,Men,KOR,Tae-Hwan Park,00:03:42.060000,2
+London,2012,400m,Freestyle,0,Men,USA,Peter Vanderkaay,00:03:44.690000,3
+London,2012,400m,Freestyle,0,Men,CHN,Yun Hao,00:03:46.020000,4
+London,2012,400m,Freestyle,0,Men,USA,Conor Dwyer,00:03:46.390000,4
+London,2012,400m,Freestyle,0,Men,HUN,Gergo Kis,00:03:47.030000,4
+London,2012,400m,Freestyle,0,Men,GBR,David Carry,00:03:48.620000,4
+London,2012,400m,Freestyle,0,Men,AUS,Ryan Napoleon,00:03:49.250000,4
+London,2012,400m,Freestyle,0,Women,FRA,Camille Muffat,00:04:01.450000,1
+London,2012,400m,Freestyle,0,Women,USA,Allison Schmitt,00:04:01.770000,2
+London,2012,400m,Freestyle,0,Women,GBR,Rebecca Adlington,00:04:03.010000,3
+London,2012,400m,Freestyle,0,Women,DEN,Lotte Friis,00:04:03.980000,4
+London,2012,400m,Freestyle,0,Women,ITA,Federica Pellegrini,00:04:04.500000,4
+London,2012,400m,Freestyle,0,Women,FRA,Coralie Balmy,00:04:05.950000,4
+London,2012,400m,Freestyle,0,Women,CAN,Brittany Maclean,00:04:06.240000,4
+London,2012,400m,Freestyle,0,Women,NZL,Lauren Boyle,00:04:06.250000,4
+London,2012,400m,Individual medley,0,Men,USA,Ryan Lochte,00:04:05.180000,1
+London,2012,400m,Individual medley,0,Men,BRA,Thiago Pereira,00:04:08.860000,2
+London,2012,400m,Individual medley,0,Men,JPN,Kosuke Hagino,00:04:08.940000,3
+London,2012,400m,Individual medley,0,Men,USA,Michael Phelps,00:04:09.280000,4
+London,2012,400m,Individual medley,0,Men,RSA,Chad Le Clos,00:04:12.420000,4
+London,2012,400m,Individual medley,0,Men,JPN,Yuya Horihata,00:04:13.300000,4
+London,2012,400m,Individual medley,0,Men,AUS,Thomas Fraser-Holmes,00:04:13.490000,4
+London,2012,400m,Individual medley,0,Men,ITA,Luca Marin,00:04:14.890000,4
+London,2012,400m,Individual medley,0,Women,CHN,Shiwen Ye,00:04:28.430000,1
+London,2012,400m,Individual medley,0,Women,USA,Elizabeth Beisel,00:04:31.270000,2
+London,2012,400m,Individual medley,0,Women,CHN,Xuanxu Li,00:04:32.910000,3
+London,2012,400m,Individual medley,0,Women,HUN,Katinka Hosszu,00:04:33.490000,4
+London,2012,400m,Individual medley,0,Women,GBR,Hannah Miley,00:04:34.170000,4
+London,2012,400m,Individual medley,0,Women,AUS,Stephanie Rice,00:04:35.490000,4
+London,2012,400m,Individual medley,0,Women,USA,Caitlin Leverenz,00:04:35.490000,4
+London,2012,400m,Individual medley,0,Women,ESP,Mireia Belmonte,00:04:35.620000,4
+London,2012,4x100,Freestyle,1,Men,FRA,"Jeremy Stravius, Fabien Gilot, Clement Lefert, Amaury Leveaux, Yannick Agnel, Alain Bernard",00:03:09.930000,1
+London,2012,4x100,Freestyle,1,Men,USA,"Michael Phelps, Matt Grevers, Nathan Adrian, Cullen Jones, Ryan Lochte, Jason Lezak, Ricky Berens, James Feigen",00:03:10.380000,2
+London,2012,4x100,Freestyle,1,Men,RUS,"Andrey Grechin, Vladimir Morozov, Danila Izotov, Sergey Fesikov, Nikita Lobintsev, Evgeny Lagunov",00:03:11.410000,3
+London,2012,4x100,Freestyle,1,Men,AUS,"Matt Targett, Eamon Sullivan, Tommaso Dorsogna, Cameron Mcevoy, James Roberts, James Magnussen",00:03:11.630000,4
+London,2012,4x100,Freestyle,1,Men,ZAF,"Roland Schoeman, Gideon Louw, Graeme Moore, Darian Townsend",00:03:13.450000,4
+London,2012,4x100,Freestyle,1,Men,GER,"Benjamin Starke, Christoph Fildebrandt, Marco Di Carli, Markus Deibler",00:03:13.520000,4
+London,2012,4x100,Freestyle,1,Men,ITA,"Andrea Rolla, Michele Santucci, Luca Dotto, Marco Orsi, Filippo Magnini",00:03:14.130000,4
+London,2012,4x100,Freestyle,1,Men,BEL,"Jasper Aerents, Emmanuel Vanluchene, Pieter Timmers, Dieter Dekoninck",00:03:14.400000,4
+London,2012,4x100,Freestyle,1,Women,AUS,"Libby Trickett, Brittany Elmslie, Yolane Kukla, Melanie Schlanger, Emily Seebohm, Alicia Coutts, Cate Campbell",00:03:33.150000,2
+London,2012,4x100,Freestyle,1,Women,NLD,"Ranomi Kromowidjojo, Hinkelien Schreuder, Inge Dekker, Marleen Veldhuis, Femke Heemskerk",00:03:33.790000,3
+London,2012,4x100,Freestyle,1,Women,USA,"Jessica Hardy, Lia Neal, Amanda Weir, Allison Schmitt, Natalie Coughlin, Missy Franklin",00:03:34.240000,4
+London,2012,4x100,Freestyle,1,Women,CHN,"Yi Tang, Jiaying Pang, Yuhan Qiu, Haibing Wang, Shijia Wang",00:03:36.750000,4
+London,2012,4x100,Freestyle,1,Women,GBR,"Jess Lloyd, Rebecca Turner, Amy Smith, Caitlin Mcclatchey, Francesca Halsall",00:03:37.020000,4
+London,2012,4x100,Freestyle,1,Women,DEN,"Lotte Friis, Mie Nielsen, Jeanette Ottesen, Pernille Blume",00:03:37.450000,4
+London,2012,4x100,Freestyle,1,Women,JPN,"Hanae Ito, Haruka Ueda, Miki Uchida, Yayoi Matsumoto",00:03:37.960000,4
+London,2012,4x100,Freestyle,1,Women,SWE,"Michelle Coleman, Gabriella Fagundez, Sarah Sjostrom, Ida Marko-Varga",,5
+London,2012,4x100,Medley,1,Men,USA,"Nick Thoman, Nathan Adrian, Tyler Mcgill, Brendan Hansen, Matt Grevers, Cullen Jones, Eric Shanteau, Michael Phelps",00:03:29.350000,1
+London,2012,4x100,Medley,1,Men,JPN,"Takuro Fujii, Ryosuke Irie, Kosuke Kitajima, Takeshi Matsuda",00:03:31.260000,2
+London,2012,4x100,Medley,1,Men,AUS,"Hayden Stoeckel, James Magnussen, Matt Targett, Christian Sprenger, Brenton Rickard, Tommaso Dorsogna",00:03:31.580000,3
+London,2012,4x100,Medley,1,Men,GBR,"Michael Rock, Liam Tancock, Michael Jamieson, Adam Brown, Craig Benson",00:03:32.320000,4
+London,2012,4x100,Medley,1,Men,HUN,"Dominik Kozma, Daniel Gyurta, Bence Pulai, Laszlo Cseh",00:03:33.020000,4
+London,2012,4x100,Medley,1,Men,GER,"Steffen Deibler, Helge Meeuw, Christian Vom Lehn, Markus Deibler, Marco Di Carli",00:03:33.060000,4
+London,2012,4x100,Medley,1,Men,NLD,"Sebastiaan Verschuren, Nick Driebergen, Joeri Verlinden, Lennart Stekelenburg",00:03:33.460000,4
+London,2012,4x100,Medley,1,Men,CAN,"Brent Hayden, Joe Bartoch, Scott Dickens, Charles Francis",00:03:34.190000,4
+London,2012,4x100,Medley,1,Women,USA,"Jessica Hardy, Allison Schmitt, Rebecca Soni, Dana Vollmer, Breeja Larson, Claire Donahue, Rachel Bootsma, Missy Franklin",00:03:52.050000,1
+London,2012,4x100,Medley,1,Women,AUS,"Brittany Elmslie, Alicia Coutts, Melanie Schlanger, Leisel Jones, Emily Seebohm",00:03:54.020000,2
+London,2012,4x100,Medley,1,Women,JPN,"Aya Terakawa, Yuka Kato, Haruka Ueda, Satomi Suzuki",00:03:55.730000,3
+London,2012,4x100,Medley,1,Women,RUS,"Yuliya Efimova, Irina Bespalova, Anastasia Zueva, Maria Gromova, Veronika Popova",00:03:56.030000,4
+London,2012,4x100,Medley,1,Women,CHN,"Liuyang Jiao, Yi Tang, Liping Ji, Chang Gao, Ying Lu, Ye Sun, Jing Zhao",00:03:56.410000,4
+London,2012,4x100,Medley,1,Women,NLD,"Femke Heemskerk, Sharon Van Rouwendaal, Inge Dekker, Moniek Nijhuis, Ranomi Kromowidjojo",00:03:57.280000,4
+London,2012,4x100,Medley,1,Women,DEN,"Pernille Blume, Mie Nielsen, Jeanette Ottesen, Rikke Moller Pedersen",00:03:57.760000,4
+London,2012,4x100,Medley,1,Women,GBR,"Gemma Spofforth, Francesca Halsall, Ellen Gandy, Amy Smith, Jemma Lowe, Siobhan-Marie Oconnor",00:03:59.460000,4
+London,2012,4x200,Freestyle,1,Men,USA,"Charlie Houchin, Michael Phelps, Matthew Mclean, Conor Dwyer, Davis Tarwater, Ryan Lochte, Ricky Berens",00:06:59.700000,1
+London,2012,4x200,Freestyle,1,Men,FRA,"Gregory Mallet, Clement Lefert, Yannick Agnel, Amaury Leveaux, Jeremy Stravius",00:07:02.770000,2
+London,2012,4x200,Freestyle,1,Men,CHN,"Zhiwu Lu, Yang Sun, Haiqi Jiang, Yun Hao, Jun Dai, Yunqi Li",00:07:06.300000,3
+London,2012,4x200,Freestyle,1,Men,GER,"Paul Biedermann, Clemens Rapp, Dimitri Colupaev, Tim Wallburger",00:07:06.590000,4
+London,2012,4x200,Freestyle,1,Men,AUS,"Ned Mckendry, Cameron Mcevoy, Thomas Fraser-Holmes, David Mckeon, Kenrick Monk, Ryan Napoleon",00:07:07.000000,4
+London,2012,4x200,Freestyle,1,Men,GBR,"Robbie Renwick, David Carry, Ieuan Lloyd, Ross Davenport, Rob Bale",00:07:09.330000,4
+London,2012,4x200,Freestyle,1,Men,ZAF,"Darian Townsend, Sebastien Daniel Rousseau, Chad Le Clos, Jean Basson",00:07:09.650000,4
+London,2012,4x200,Freestyle,1,Men,HUN,"Dominik Kozma, Laszlo Cseh, Peter Bernek, Gergo Kis",00:07:13.660000,4
+London,2012,4x200,Freestyle,1,Women,USA,"Allison Schmitt, Alyssa Anderson, Missy Franklin, Lauren Perdue, Shannon Vreeland, Dana Vollmer",00:07:42.920000,1
+London,2012,4x200,Freestyle,1,Women,AUS,"Jade Neilsen, Melanie Schlanger, Brittany Elmslie, Angie Bainbridge, Blair Evans, Kylie Palmer, Alicia Coutts, Bronte Barratt",00:07:44.410000,2
+London,2012,4x200,Freestyle,1,Women,FRA,"Mylene Lazare, Ophelie-Cyrielle Etienne, Coralie Balmy, Camille Muffat, Charlotte Bonnet, Margaux Farrell",00:07:47.490000,3
+London,2012,4x200,Freestyle,1,Women,CAN,"Amanda Reason, Barbara Jardin, Brittany Maclean, Samantha Cheverton",00:07:50.650000,4
+London,2012,4x200,Freestyle,1,Women,GBR,"Ellie Faulkner, Caitlin Mcclatchey, Joanne Jackson, Rebecca Turner, Hannah Miley",00:07:52.370000,4
+London,2012,4x200,Freestyle,1,Women,CHN,"Qianwei Zhu, Yi Tang, Qian Chen, Jing Liu, Jiaying Pang, Shijia Wang, Shiwen Ye",00:07:53.110000,4
+London,2012,4x200,Freestyle,1,Women,ITA,"Alice Mizzau, Federica Pellegrini, Diletta Carli, Alice Nesti",00:07:56.300000,4
+London,2012,4x200,Freestyle,1,Women,JPN,"Aya Takano, Haruka Ueda, Hanae Ito, Yayoi Matsumoto",00:07:56.730000,4
+London,2012,50m,Freestyle,0,Men,FRA,Florent Manaudou,21.340,1
+London,2012,50m,Freestyle,0,Men,USA,Cullen Jones,21.540,2
+London,2012,50m,Freestyle,0,Men,BRA,Cesar Cielo Filho,21.590,3
+London,2012,50m,Freestyle,0,Men,BRA,Bruno Fratus,21.610,4
+London,2012,50m,Freestyle,0,Men,USA,Anthony Ervin,21.780,4
+London,2012,50m,Freestyle,0,Men,RSA,Roland Schoeman,21.800,4
+London,2012,50m,Freestyle,0,Men,TTO,George Bovell,21.820,4
+London,2012,50m,Freestyle,0,Men,AUS,Eamon Sullivan,21.980,4
+London,2012,50m,Freestyle,0,Women,NED,Ranomi Kromowidjojo,24.050,1
+London,2012,50m,Freestyle,0,Women,BLR,Aliaksandra Herasimenia,24.280,2
+London,2012,50m,Freestyle,0,Women,NED,Marleen Veldhuis,24.390,3
+London,2012,50m,Freestyle,0,Women,GER,Britta Steffen,24.460,4
+London,2012,50m,Freestyle,0,Women,GBR,Francesca Halsall,24.470,4
+London,2012,50m,Freestyle,0,Women,SWE,Therese Alshammar,24.610,4
+London,2012,50m,Freestyle,0,Women,USA,Jessica Hardy,24.620,4
+London,2012,50m,Freestyle,0,Women,BAH,Arianna Vanderpool-Wallace,24.690,4
+London,2012,800m,Freestyle,0,Women,USA,Katie Ledecky,00:08:14.630000,1
+London,2012,800m,Freestyle,0,Women,ESP,Mireia Belmonte,00:08:18.760000,2
+London,2012,800m,Freestyle,0,Women,GBR,Rebecca Adlington,00:08:20.320000,3
+London,2012,800m,Freestyle,0,Women,NZL,Lauren Boyle,00:08:22.720000,4
+London,2012,800m,Freestyle,0,Women,DEN,Lotte Friis,00:08:23.860000,4
+London,2012,800m,Freestyle,0,Women,HUN,Boglarka Kapas,00:08:23.890000,4
+London,2012,800m,Freestyle,0,Women,FRA,Coralie Balmy,00:08:29.260000,4
+London,2012,800m,Freestyle,0,Women,VEN,Andreina Pinto,00:08:29.280000,4

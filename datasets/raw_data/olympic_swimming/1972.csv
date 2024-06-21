@@ -1,0 +1,233 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+Munich,1972,100m,Backstroke,0,Men,GDR,Roland Matthes,56.580,2
+Munich,1972,100m,Backstroke,0,Men,USA,Michael Eugene Stamm,57.700,3
+Munich,1972,100m,Backstroke,0,Men,USA,John Joseph Murphy,58.350,4
+Munich,1972,100m,Backstroke,0,Men,USA,Mitchell Ivey,58.480,4
+Munich,1972,100m,Backstroke,0,Men,URS,Igor Grivennikov,59.500,4
+Munich,1972,100m,Backstroke,0,Men,GDR,Lutz Wanja,59.800,4
+Munich,1972,100m,Backstroke,0,Men,GDR,Jürgen Krüger,59.930,4
+Munich,1972,100m,Backstroke,0,Men,JPN,Tadashi Honda,00:01:00.410000,1
+Munich,1972,100m,Backstroke,0,Women,USA,Melissa Louise Belote,00:01:05.780000,1
+Munich,1972,100m,Backstroke,0,Women,HUN,Andrea Gyarmati,00:01:06.260000,2
+Munich,1972,100m,Backstroke,0,Women,USA,Susanne Jean Atwood,00:01:06.340000,3
+Munich,1972,100m,Backstroke,0,Women,USA,Karen Patricia Moe-Thornton,00:01:06.690000,4
+Munich,1972,100m,Backstroke,0,Women,CAN,Wendy Cook-Hogg,00:01:06.700000,4
+Munich,1972,100m,Backstroke,0,Women,NED,Enith Brigitha,00:01:06.820000,4
+Munich,1972,100m,Backstroke,0,Women,GDR,Christine Herbst,00:01:07.270000,4
+Munich,1972,100m,Backstroke,0,Women,FRG,Silke Pielen,00:01:07.360000,4
+Munich,1972,100m,Breaststroke,0,Men,JPN,Nobutaka Taguchi,00:01:04.940000,1
+Munich,1972,100m,Breaststroke,0,Men,USA,Thomas Edwin Bruce,00:01:05.430000,2
+Munich,1972,100m,Breaststroke,0,Men,USA,John Frederick Hencken,00:01:05.610000,3
+Munich,1972,100m,Breaststroke,0,Men,USA,Mark Webster Chatfield,00:01:06.010000,4
+Munich,1972,100m,Breaststroke,0,Men,FRG,Walter Kusch,00:01:06.230000,4
+Munich,1972,100m,Breaststroke,0,Men,BRA,Jose Sylvio Fiolo,00:01:06.240000,4
+Munich,1972,100m,Breaststroke,0,Men,URS,Nikolai Pankin,00:01:06.360000,4
+Munich,1972,100m,Breaststroke,0,Men,GBR,David Andrew Wilkie,00:01:06.520000,4
+Munich,1972,100m,Breaststroke,0,Women,USA,Catherine L. Carr,00:01:13.580000,1
+Munich,1972,100m,Breaststroke,0,Women,URS,Halyna Prozumenshchykova-Stepanova,00:01:14.990000,2
+Munich,1972,100m,Breaststroke,0,Women,AUS,Beverley Joy Whitfield,00:01:15.730000,3
+Munich,1972,100m,Breaststroke,0,Women,HUN,Agnes Kaczander-Kiss,00:01:16.260000,4
+Munich,1972,100m,Breaststroke,0,Women,USA,Judith Ellen Melick,00:01:16.340000,4
+Munich,1972,100m,Breaststroke,0,Women,FRG,Verena (Vreni) Eberle,00:01:17.160000,4
+Munich,1972,100m,Breaststroke,0,Women,SWE,Britt-Marie Smedh,00:01:17.190000,4
+Munich,1972,100m,Breaststroke,0,Women,GBR,Dorothy Elizabeth Harrison,00:01:17.490000,4
+Munich,1972,100m,Butterfly,0,Men,USA,Mark Spitz,54.270,1
+Munich,1972,100m,Butterfly,0,Men,CAN,Bruce Richard Robertson,55.560,2
+Munich,1972,100m,Butterfly,0,Men,USA,Jerry Alan Heidenreich,55.740,3
+Munich,1972,100m,Butterfly,0,Men,GDR,Roland Matthes,55.870,4
+Munich,1972,100m,Butterfly,0,Men,USA,David Holmes Edgar,56.110,4
+Munich,1972,100m,Butterfly,0,Men,CAN,Byron Mac Donald,57.270,4
+Munich,1972,100m,Butterfly,0,Men,GDR,Hartmut Flöckner,57.400,4
+Munich,1972,100m,Butterfly,0,Men,AUS,Neil Rogers,57.900,4
+Munich,1972,100m,Butterfly,0,Women,JPN,Mayumi Aoki,00:01:03.340000,1
+Munich,1972,100m,Butterfly,0,Women,GDR,Roswitha Beier,00:01:03.610000,2
+Munich,1972,100m,Butterfly,0,Women,HUN,Andrea Gyarmati,00:01:03.730000,3
+Munich,1972,100m,Butterfly,0,Women,USA,Deena Diana Deardruff,00:01:03.950000,4
+Munich,1972,100m,Butterfly,0,Women,USA,Dana Jayne Shrader,00:01:03.980000,4
+Munich,1972,100m,Butterfly,0,Women,USA,Eleanor Suzanne Daniel,00:01:04.080000,4
+Munich,1972,100m,Butterfly,0,Women,FRG,Gudrun Beckmann,00:01:04.150000,4
+Munich,1972,100m,Butterfly,0,Women,JPN,Noriko Asano,00:01:04.250000,4
+Munich,1972,100m,Freestyle,0,Men,USA,Mark Spitz,51.220,1
+Munich,1972,100m,Freestyle,0,Men,USA,Jerry Alan Heidenreich,51.650,2
+Munich,1972,100m,Freestyle,0,Men,URS,Vladimir Bure,51.770,3
+Munich,1972,100m,Freestyle,0,Men,USA,John Joseph Murphy,52.080,4
+Munich,1972,100m,Freestyle,0,Men,AUS,Michael Vincent Wenden,52.410,4
+Munich,1972,100m,Freestyle,0,Men,URS,Igor Grivennikov,52.440,4
+Munich,1972,100m,Freestyle,0,Men,FRA,Michel Rousseau,52.900,4
+Munich,1972,100m,Freestyle,0,Men,FRG,Klaus Steinbach,52.920,4
+Munich,1972,100m,Freestyle,0,Women,USA,Alexandra Lynn Neilson,58.590,3
+Munich,1972,100m,Freestyle,0,Women,USA,Shirley Farber Babashoff,59.020,4
+Munich,1972,100m,Freestyle,0,Women,AUS,Shane Gould,59.060,4
+Munich,1972,100m,Freestyle,0,Women,GDR,Gabriele Wetzko,59.210,4
+Munich,1972,100m,Freestyle,0,Women,FRG,Heidemarie Reineck,59.730,4
+Munich,1972,100m,Freestyle,0,Women,GDR,Andrea Eife,59.910,4
+Munich,1972,100m,Freestyle,0,Women,HUN,Magdolna Patoh,00:01:00.020000,1
+Munich,1972,100m,Freestyle,0,Women,NED,Enith Brigitha,00:01:00.090000,2
+Munich,1972,1500m,Freestyle,0,Men,USA,Mike Burton,00:15:52.580000,1
+Munich,1972,1500m,Freestyle,0,Men,AUS,Graham Claud Windeatt,00:15:58.480000,2
+Munich,1972,1500m,Freestyle,0,Men,USA,Douglas Dale Northway,00:16:09.250000,3
+Munich,1972,1500m,Freestyle,0,Men,SWE,Bengt Gingsjo,00:16:16.010000,4
+Munich,1972,1500m,Freestyle,0,Men,AUS,Graham Rose White,00:16:17.220000,4
+Munich,1972,1500m,Freestyle,0,Men,NZL,Marcus Treffers,00:16:18.840000,4
+Munich,1972,1500m,Freestyle,0,Men,AUS,Bradford Paul Cooper,00:16:30.490000,4
+Munich,1972,1500m,Freestyle,0,Men,MEX,Guillermo Garcia,00:16:36.030000,4
+Munich,1972,200m,Backstroke,0,Men,GDR,Roland Matthes,00:02:02.820000,1
+Munich,1972,200m,Backstroke,0,Men,USA,Michael Eugene Stamm,00:02:04.090000,2
+Munich,1972,200m,Backstroke,0,Men,USA,Mitchell Ivey,00:02:04.330000,3
+Munich,1972,200m,Backstroke,0,Men,AUS,Bradford Paul Cooper,00:02:06.590000,4
+Munich,1972,200m,Backstroke,0,Men,USA,Alexander Timothy Mckee,00:02:07.290000,4
+Munich,1972,200m,Backstroke,0,Men,GDR,Lothar Noack,00:02:08.670000,4
+Munich,1972,200m,Backstroke,0,Men,HUN,Zoltan Verraszto,00:02:10.090000,4
+Munich,1972,200m,Backstroke,0,Men,FRA,Jean-Paul Berjaud,00:02:11.770000,4
+Munich,1972,200m,Backstroke,0,Women,USA,Melissa Louise Belote,00:02:19.190000,1
+Munich,1972,200m,Backstroke,0,Women,USA,Susanne Jean Atwood,00:02:20.380000,2
+Munich,1972,200m,Backstroke,0,Women,CAN,Donna Marie Gurr,00:02:23.220000,3
+Munich,1972,200m,Backstroke,0,Women,FRG,Annegret Kober,00:02:23.350000,4
+Munich,1972,200m,Backstroke,0,Women,GDR,Christine Herbst,00:02:23.440000,4
+Munich,1972,200m,Backstroke,0,Women,NED,Enith Brigitha,00:02:23.700000,4
+Munich,1972,200m,Backstroke,0,Women,AUS,Deborah Palmer,00:02:24.650000,4
+Munich,1972,200m,Backstroke,0,Women,CAN,Leslie Cliff,00:02:25.800000,4
+Munich,1972,200m,Breaststroke,0,Men,USA,John Frederick Hencken,00:02:21.550000,1
+Munich,1972,200m,Breaststroke,0,Men,GBR,David Andrew Wilkie,00:02:23.670000,2
+Munich,1972,200m,Breaststroke,0,Men,JPN,Nobutaka Taguchi,00:02:23.880000,3
+Munich,1972,200m,Breaststroke,0,Men,USA,Richard Phillip Jr. Colella,00:02:24.280000,4
+Munich,1972,200m,Breaststroke,0,Men,MEX,Felipe Munoz,00:02:26.440000,4
+Munich,1972,200m,Breaststroke,0,Men,FRG,Walter Kusch,00:02:26.550000,4
+Munich,1972,200m,Breaststroke,0,Men,URS,Igor Cherdakov,00:02:27.150000,4
+Munich,1972,200m,Breaststroke,0,Men,GDR,Klaus Katzur,00:02:27.440000,4
+Munich,1972,200m,Breaststroke,0,Women,AUS,Beverley Joy Whitfield,00:02:41.710000,1
+Munich,1972,200m,Breaststroke,0,Women,USA,Dana Lee Schoenfield,00:02:42.050000,2
+Munich,1972,200m,Breaststroke,0,Women,URS,Halyna Prozumenshchykova-Stepanova,00:02:42.360000,3
+Munich,1972,200m,Breaststroke,0,Women,USA,Claudia Jean Clevenger,00:02:42.880000,4
+Munich,1972,200m,Breaststroke,0,Women,FRG,Petra Nows,00:02:43.380000,4
+Munich,1972,200m,Breaststroke,0,Women,HUN,Agnes Kaczander-Kiss,00:02:43.410000,4
+Munich,1972,200m,Breaststroke,0,Women,URS,Lyudmila Porubaiko,00:02:44.480000,4
+Munich,1972,200m,Breaststroke,0,Women,HUN,Eva Kiss,00:02:45.120000,4
+Munich,1972,200m,Butterfly,0,Men,USA,Mark Spitz,00:02:00.700000,1
+Munich,1972,200m,Butterfly,0,Men,USA,Gary Jr. Hall,00:02:02.860000,2
+Munich,1972,200m,Butterfly,0,Men,USA,Robin James Backhaus,00:02:03.230000,3
+Munich,1972,200m,Butterfly,0,Men,ECU,Jorge Delgado,00:02:04.600000,4
+Munich,1972,200m,Butterfly,0,Men,FRG,Hans Fassnacht,00:02:04.690000,4
+Munich,1972,200m,Butterfly,0,Men,HUN,Andras Hargitay,00:02:04.690000,4
+Munich,1972,200m,Butterfly,0,Men,GDR,Hartmut Flöckner,00:02:05.340000,4
+Munich,1972,200m,Butterfly,0,Men,FRG,Volkert Meeuw,00:02:05.570000,4
+Munich,1972,200m,Butterfly,0,Women,USA,Karen Patricia Moe-Thornton,00:02:15.570000,1
+Munich,1972,200m,Butterfly,0,Women,USA,Lynn Ann Colella,00:02:16.340000,2
+Munich,1972,200m,Butterfly,0,Women,USA,Eleanor Suzanne Daniel,00:02:16.740000,3
+Munich,1972,200m,Butterfly,0,Women,GDR,Rosemarie Kother-Gabriel,00:02:17.110000,4
+Munich,1972,200m,Butterfly,0,Women,JPN,Noriko Asano,00:02:19.500000,4
+Munich,1972,200m,Butterfly,0,Women,GDR,Helga Lindner,00:02:20.470000,4
+Munich,1972,200m,Butterfly,0,Women,AUS,Gail Neall,00:02:21.880000,4
+Munich,1972,200m,Butterfly,0,Women,JPN,Mayumi Aoki,00:02:22.840000,4
+Munich,1972,200m,Freestyle,0,Men,USA,Mark Spitz,00:01:52.780000,1
+Munich,1972,200m,Freestyle,0,Men,USA,Robert Steven Genter,00:01:53.730000,2
+Munich,1972,200m,Freestyle,0,Men,FRG,Werner Lampe,00:01:53.990000,3
+Munich,1972,200m,Freestyle,0,Men,AUS,Michael Vincent Wenden,00:01:54.400000,4
+Munich,1972,200m,Freestyle,0,Men,USA,Frederick Daniel Tyler,00:01:54.960000,4
+Munich,1972,200m,Freestyle,0,Men,FRG,Klaus Steinbach,00:01:55.650000,4
+Munich,1972,200m,Freestyle,0,Men,URS,Vladimir Bure,00:01:57.240000,4
+Munich,1972,200m,Freestyle,0,Men,CAN,Ralph Hutton,00:01:57.560000,4
+Munich,1972,200m,Freestyle,0,Women,AUS,Shane Gould,00:02:03.560000,1
+Munich,1972,200m,Freestyle,0,Women,USA,Shirley Farber Babashoff,00:02:04.330000,2
+Munich,1972,200m,Freestyle,0,Women,USA,Keena Ruth Rothhammer,00:02:04.920000,3
+Munich,1972,200m,Freestyle,0,Women,USA,Barbara Ann Marshall,00:02:05.450000,4
+Munich,1972,200m,Freestyle,0,Women,GDR,Andrea Eife,00:02:06.270000,4
+Munich,1972,200m,Freestyle,0,Women,NED,Johanna (Hansje) Bunschoten,00:02:08.400000,4
+Munich,1972,200m,Freestyle,0,Women,NED,Cotharina (Anke) Rijnders,00:02:09.410000,4
+Munich,1972,200m,Freestyle,0,Women,GDR,Karin Tülling,00:02:11.700000,4
+Munich,1972,200m,Individual medley,0,Men,SWE,Gunnar Larsson,00:02:07.170000,1
+Munich,1972,200m,Individual medley,0,Men,USA,Alexander Timothy Mckee,00:02:08.370000,2
+Munich,1972,200m,Individual medley,0,Men,USA,Steven Charles Furniss,00:02:08.450000,3
+Munich,1972,200m,Individual medley,0,Men,USA,Gary Jr. Hall,00:02:08.490000,4
+Munich,1972,200m,Individual medley,0,Men,HUN,Andras Hargitay,00:02:09.660000,4
+Munich,1972,200m,Individual medley,0,Men,URS,Mikhail Sukharev,00:02:11.780000,4
+Munich,1972,200m,Individual medley,0,Men,PER,Juan Carlos Bello,00:02:11.870000,4
+Munich,1972,200m,Individual medley,0,Men,SWE,Hans Ljungberg,00:02:13.560000,4
+Munich,1972,200m,Individual medley,0,Women,AUS,Shane Gould,00:02:23.070000,1
+Munich,1972,200m,Individual medley,0,Women,GDR,Kornelia Ender,00:02:23.590000,2
+Munich,1972,200m,Individual medley,0,Women,USA,Lynn Marie Vidali,00:02:24.060000,3
+Munich,1972,200m,Individual medley,0,Women,USA,Jennifer Ann Bartz,00:02:24.550000,4
+Munich,1972,200m,Individual medley,0,Women,CAN,Leslie Cliff,00:02:24.830000,4
+Munich,1972,200m,Individual medley,0,Women,GDR,Evelyn Stolze,00:02:25.900000,4
+Munich,1972,200m,Individual medley,0,Women,JPN,Yoshimi Nishigawa,00:02:26.350000,4
+Munich,1972,200m,Individual medley,0,Women,USA,Carolyn Ann Woods,00:02:27.420000,4
+Munich,1972,400m,Freestyle,0,Men,AUS,Bradford Paul Cooper,00:04:00.270000,1
+Munich,1972,400m,Freestyle,0,Men,USA,Robert Steven Genter,00:04:01.940000,2
+Munich,1972,400m,Freestyle,0,Men,USA,Thomas Sean Mcbreen,00:04:02.640000,3
+Munich,1972,400m,Freestyle,0,Men,AUS,Graham Claud Windeatt,00:04:02.930000,4
+Munich,1972,400m,Freestyle,0,Men,GBR,Brian Brinkley,00:04:06.690000,4
+Munich,1972,400m,Freestyle,0,Men,SWE,Bengt Gingsjo,00:04:06.750000,4
+Munich,1972,400m,Freestyle,0,Men,FRG,Werner Lampe,00:04:06.970000,4
+Munich,1972,400m,Freestyle,0,Men,USA,Rick Demont,Disqualified,0
+Munich,1972,400m,Freestyle,0,Women,AUS,Shane Gould,00:04:19.040000,1
+Munich,1972,400m,Freestyle,0,Women,ITA,Novella Calligaris,00:04:22.440000,2
+Munich,1972,400m,Freestyle,0,Women,GDR,Gudrun Wegner,00:04:23.110000,3
+Munich,1972,400m,Freestyle,0,Women,USA,Shirley Farber Babashoff,00:04:23.590000,4
+Munich,1972,400m,Freestyle,0,Women,USA,Jenny Wylie,00:04:24.070000,4
+Munich,1972,400m,Freestyle,0,Women,USA,Keena Ruth Rothhammer,00:04:24.220000,4
+Munich,1972,400m,Freestyle,0,Women,NED,Johanna (Hansje) Bunschoten,00:04:29.700000,4
+Munich,1972,400m,Freestyle,0,Women,NED,Cotharina (Anke) Rijnders,00:04:31.510000,4
+Munich,1972,400m,Individual medley,0,Men,SWE,Gunnar Larsson,00:04:31.980000,1
+Munich,1972,400m,Individual medley,0,Men,USA,Alexander Timothy Mckee,00:04:31.980000,1
+Munich,1972,400m,Individual medley,0,Men,HUN,Andras Hargitay,00:04:32.700000,3
+Munich,1972,400m,Individual medley,0,Men,USA,Steven Charles Furniss,00:04:35.440000,4
+Munich,1972,400m,Individual medley,0,Men,USA,Gary Jr. Hall,00:04:37.380000,4
+Munich,1972,400m,Individual medley,0,Men,SWE,Bengt Gingsjo,00:04:37.960000,4
+Munich,1972,400m,Individual medley,0,Men,AUS,Graham Claud Windeatt,00:04:40.390000,4
+Munich,1972,400m,Individual medley,0,Men,GDR,Wolfram Sperling,00:04:40.660000,4
+Munich,1972,400m,Individual medley,0,Women,AUS,Gail Neall,00:05:02.970000,1
+Munich,1972,400m,Individual medley,0,Women,CAN,Leslie Cliff,00:05:03.570000,2
+Munich,1972,400m,Individual medley,0,Women,ITA,Novella Calligaris,00:05:03.990000,3
+Munich,1972,400m,Individual medley,0,Women,USA,Jennifer Ann Bartz,00:05:05.560000,4
+Munich,1972,400m,Individual medley,0,Women,GDR,Evelyn Stolze,00:05:06.800000,4
+Munich,1972,400m,Individual medley,0,Women,USA,Mary Coulter Montgomery,00:05:09.980000,4
+Munich,1972,400m,Individual medley,0,Women,USA,Lynn Marie Vidali,00:05:13.060000,4
+Munich,1972,400m,Individual medley,0,Women,URS,Nina Petrova,00:05:15.680000,4
+Munich,1972,4x100,Freestyle,1,Men,USA,"Gary Robert Conelly, David William Fairbank, John Joseph Murphy, Mark Spitz, Jerry Alan Heidenreich, David Holmes Edgar",00:03:26.420000,1
+Munich,1972,4x100,Freestyle,1,Men,SUN,"Vladimir Bure, Viktor Mazanov, Viktor Aboimov, Igor Grivennikov",00:03:29.720000,2
+Munich,1972,4x100,Freestyle,1,Men,GER,"Lutz Unger, Udo Poser, Wilfried Hartung, Roland Matthes, Peter Bruch",00:03:32.420000,3
+Munich,1972,4x100,Freestyle,1,Men,BRA,"Paulo Zanetti, Rui Tadeu Aquino Oliveira, Jose Roberto Diniz Aranha",00:03:33.140000,4
+Munich,1972,4x100,Freestyle,1,Men,CAN,"Brian Phillips, Timothy Bach, Bruce Richard Robertson, Robert Kasting",00:03:33.200000,4
+Munich,1972,4x100,Freestyle,1,Men,GER,"Rainer Jacob, Karsten Meier, Hans-Günther Vosseler, Hans Fassnacht, Klaus Steinbach, Gerhard Schiller, Werner Lampe",00:03:33.900000,4
+Munich,1972,4x100,Freestyle,1,Men,FRA,"Michel Rousseau, Alain Mosconi, Gilles Vigne, Alain Hermitte",00:03:34.130000,4
+Munich,1972,4x100,Freestyle,1,Men,ESP,"Jose Pujol Simon, Antonio Culebras, Enrique Melo Ramon, Jorge Comas Lopez",00:03:38.210000,4
+Munich,1972,4x100,Freestyle,1,Women,USA,"Barbara Ann Marshall, Kim Marie Peyton, Lynn Ellen Skrifvars, Shirley Farber Babashoff, Jennifer Jo Kemp, Alexandra Lynn Neilson, Jane Louise Barkman",00:03:55.190000,1
+Munich,1972,4x100,Freestyle,1,Women,GER,"Sylvia Eichner, Andrea Eife, Elke Sehmisch, Kornelia Ender, Gabriele Wetzko",00:03:55.550000,2
+Munich,1972,4x100,Freestyle,1,Women,GER,"Gudrun Beckmann, Angela Steinbach, Heidemarie Reineck, Judith (Jutta) Weber",00:03:57.930000,3
+Munich,1972,4x100,Freestyle,1,Women,HUN,"Andrea Gyarmati, Magdolna Patoh, Edit Kovacs",00:04:00.390000,4
+Munich,1972,4x100,Freestyle,1,Women,NLD,"Cotharina (Anke) Rijnders, Enith Brigitha, Johanna (Hansje) Bunschoten, Josephine (Jozien) Elzerman",00:04:01.490000,4
+Munich,1972,4x100,Freestyle,1,Women,SWE,"Diana Olsson, Eva Andersson, Anita Zarnowiecki, Irwi Johansson",00:04:02.690000,4
+Munich,1972,4x100,Freestyle,1,Women,CAN,"Wendy Cook-Hogg, Mary Beth Rondeau, Leslie Cliff",00:04:03.830000,4
+Munich,1972,4x100,Freestyle,1,Women,AUS,"Shane Gould, Debra Cain, Sharon Booth, Deborah Palmer, Leanne Francis",00:04:04.820000,4
+Munich,1972,4x100,Medley,1,Men,USA,"Mitchell Ivey, Thomas Edwin Bruce, Jerry Alan Heidenreich, David William Fairbank, John Frederick Hencken, Mark Spitz, Michael Eugene Stamm, Gary Jr. Hall",00:03:48.160000,1
+Munich,1972,4x100,Medley,1,Men,GER,"Roger Pyttel, Hartmut Flöckner, Klaus Katzur, Lutz Unger, Roland Matthes",00:03:52.120000,2
+Munich,1972,4x100,Medley,1,Men,CAN,"Bruce Richard Robertson, William Mahony, William Kennedy, Clayton Evans, Robert Kasting, Erik Fish, Brian Phillips",00:03:52.260000,3
+Munich,1972,4x100,Medley,1,Men,SUN,"Igor Grivennikov, Viktor Stulikov, Vladimir Bure, Nikolai Pankin, Viktor Sharygin, Viktor Aboimov",00:03:53.260000,4
+Munich,1972,4x100,Medley,1,Men,BRA,"Sergio Waismann, Jose Roberto Diniz Aranha, Rui Tadeu Aquino Oliveira, Romulo Duncan Duncan Arantes, Jose Sylvio Fiolo",00:03:57.890000,4
+Munich,1972,4x100,Medley,1,Men,JPN,"Jiro Sasaki, Tadashi Honda, Yasuhiro Komazaki, Nobutaka Taguchi",00:03:58.230000,4
+Munich,1972,4x100,Medley,1,Men,GBR,"John Maurice Mills, Malcolm Barrie Windeatt, Colin Cunningham, David Andrew Wilkie, Malcolm Gregory O'Connell",00:03:58.820000,4
+Munich,1972,4x100,Medley,1,Men,HUN,"Attila Csaszari, Andras Hargitay, Laszlo Cseh, Istvan Szentirmai, Sandor Szabo",00:03:59.070000,4
+Munich,1972,4x100,Medley,1,Women,USA,"Dana Jayne Shrader, Susanne Jean Atwood, Jennifer Jo Kemp, Judith Ellen Melick, Melissa Louise Belote, Deena Diana Deardruff, Alexandra Lynn Neilson, Catherine L. Carr, Shirley Farber Babashoff",00:04:20.750000,1
+Munich,1972,4x100,Medley,1,Women,GER,"Gabriele Wetzko, Rosemarie Kother-Gabriel, Brigitte Schuchardt, Kornelia Ender, Roswitha Beier, Christine Herbst, Renate Vogel",00:04:24.910000,2
+Munich,1972,4x100,Medley,1,Women,GER,"Dagmar Sierck, Gudrun Beckmann, Edeltraud Koch, Annegret Kober, Silke Pielen, Heidemarie Reineck, Judith (Jutta) Weber, Verena (Vreni) Eberle, Heike Hustede-Nagel",00:04:26.460000,3
+Munich,1972,4x100,Medley,1,Women,SUN,"Nina Petrova, Tatyana Zolotnitskaya",00:04:27.810000,4
+Munich,1972,4x100,Medley,1,Women,NLD,"Enith Brigitha, Marianne Vermaat, Cotharina (Anke) Rijnders, Friederike (Frieke) Buys, Alice (Alie) Te Riet, Johanna (Hansje) Bunschoten",00:04:29.990000,4
+Munich,1972,4x100,Medley,1,Women,JPN,"Suzuko Matsumura, Yuko Yamamoto, Kikuyo Ishii, Yoshimi Nishigawa, Shigeko Kawanishi, Mayumi Aoki",00:04:30.180000,4
+Munich,1972,4x100,Medley,1,Women,CAN,"Donna Marie Gurr, Sylvia Dockerill-Dodd, Mary Beth Rondeau, Wendy Cook-Hogg, Leslie Cliff, Marian Stuart-Johnson",00:04:31.560000,4
+Munich,1972,4x100,Medley,1,Women,SWE,"Jeanette Pettersson, Diana Olsson, Anita Zarnowiecki, Britt-Marie Smedh, Eva Wikner",00:04:32.610000,4
+Munich,1972,4x200,Freestyle,1,Men,USA,"Frederick Daniel Tyler, Mark Spitz, Thomas Sean Mcbreen, Mike Burton, Robert Steven Genter, John Pitann Kinsella, Gary Robert Conelly",00:07:35.780000,1
+Munich,1972,4x200,Freestyle,1,Men,GER,"Hans Fassnacht, Gerhard Schiller, Hans-Günther Vosseler, Werner Lampe, Volkert Meeuw, Klaus Steinbach",00:07:41.690000,2
+Munich,1972,4x200,Freestyle,1,Men,SUN,"Igor Grivennikov, Viktor Mazanov, Vladimir Bure, Aleksandr Samsonov, Viktor Aboimov",00:07:45.760000,3
+Munich,1972,4x200,Freestyle,1,Men,SWE,"Hans Ljungberg, Bengt Gingsjo, Anders Bellbring, Rolf Pettersson, Gunnar Larsson",00:07:47.370000,4
+Munich,1972,4x200,Freestyle,1,Men,AUS,"Graham Claud Windeatt, Michael Vincent Wenden, Bradford Paul Cooper, Bruce Featherston, Graham Rose White, Robert Nay",00:07:48.660000,4
+Munich,1972,4x200,Freestyle,1,Men,GER,"Udo Poser, Roger Pyttel, Lutz Unger, Wilfried Hartung, Peter Bruch",00:07:49.110000,4
+Munich,1972,4x200,Freestyle,1,Men,CAN,"Bruce Richard Robertson, Ian Mac Kenzie, Dean Buckboro, Ralph Hutton, Brian Phillips",00:07:53.610000,4
+Munich,1972,4x200,Freestyle,1,Men,GBR,"Colin Cunningham, John Maurice Mills, Michael Bailey, Brian Brinkley, Raymond James Terrell",00:07:55.590000,4
+Munich,1972,800m,Freestyle,0,Women,USA,Keena Ruth Rothhammer,00:08:53.680000,1
+Munich,1972,800m,Freestyle,0,Women,AUS,Shane Gould,00:08:56.390000,2
+Munich,1972,800m,Freestyle,0,Women,ITA,Novella Calligaris,00:08:57.460000,3
+Munich,1972,800m,Freestyle,0,Women,USA,Ann Simmons,00:08:57.620000,4
+Munich,1972,800m,Freestyle,0,Women,GDR,Gudrun Wegner,00:08:58.890000,4
+Munich,1972,800m,Freestyle,0,Women,USA,Jo Ann Harshbarger,00:09:01.210000,4
+Munich,1972,800m,Freestyle,0,Women,NED,Johanna (Hansje) Bunschoten,00:09:16.690000,4
+Munich,1972,800m,Freestyle,0,Women,AUS,Narelle Moras,00:09:19.060000,4

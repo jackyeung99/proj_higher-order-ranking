@@ -1,0 +1,257 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+Beijing,2008,100m,Backstroke,0,Men,USA,Aaron Peirsol,52.540,1
+Beijing,2008,100m,Backstroke,0,Men,USA,Matt Grevers,53.110,2
+Beijing,2008,100m,Backstroke,0,Men,RUS,Arkady Vyatchanin,53.180,3
+Beijing,2008,100m,Backstroke,0,Men,AUS,Hayden Stoeckel,53.180,3
+Beijing,2008,100m,Backstroke,0,Men,AUS,Ashley Delaney,53.310,4
+Beijing,2008,100m,Backstroke,0,Men,GBR,Liam Tancock,53.390,4
+Beijing,2008,100m,Backstroke,0,Men,ESP,Aschwin Wildeboer Faber,53.510,4
+Beijing,2008,100m,Backstroke,0,Men,JPN,Junichi Miyashita,53.990,4
+Beijing,2008,100m,Backstroke,0,Women,USA,Natalie Coughlin,58.960,3
+Beijing,2008,100m,Backstroke,0,Women,ZIM,Kirsty Leigh Coventry,59.190,4
+Beijing,2008,100m,Backstroke,0,Women,USA,Margaret Hoelzer,59.340,4
+Beijing,2008,100m,Backstroke,0,Women,GBR,Gemma Spofforth,59.380,4
+Beijing,2008,100m,Backstroke,0,Women,RUS,Anastasia Zueva,59.400,4
+Beijing,2008,100m,Backstroke,0,Women,JPN,Reiko Nakamura,59.720,4
+Beijing,2008,100m,Backstroke,0,Women,FRA,Laure Manaudou,00:01:00.100000,1
+Beijing,2008,100m,Backstroke,0,Women,JPN,Hanae Ito,00:01:00.180000,2
+Beijing,2008,100m,Breaststroke,0,Men,JPN,Kosuke Kitajima,58.910,3
+Beijing,2008,100m,Breaststroke,0,Men,NOR,Alexander Dale Oen,59.200,4
+Beijing,2008,100m,Breaststroke,0,Men,FRA,Hugues Duboscq,59.370,4
+Beijing,2008,100m,Breaststroke,0,Men,USA,Brendan Hansen,59.570,4
+Beijing,2008,100m,Breaststroke,0,Men,AUS,Brenton Rickard,59.740,4
+Beijing,2008,100m,Breaststroke,0,Men,RUS,Roman Sloudnov,59.870,4
+Beijing,2008,100m,Breaststroke,0,Men,UKR,Ihor Borysyk,00:01:00.200000,1
+Beijing,2008,100m,Breaststroke,0,Men,USA,Mark Gangloff,00:01:00.240000,2
+Beijing,2008,100m,Breaststroke,0,Women,AUS,Leisel Jones,00:01:05.170000,1
+Beijing,2008,100m,Breaststroke,0,Women,USA,Rebecca Soni,00:01:06.730000,2
+Beijing,2008,100m,Breaststroke,0,Women,AUT,Mirna Jukic,00:01:07.340000,3
+Beijing,2008,100m,Breaststroke,0,Women,RUS,Yuliya Efimova,00:01:07.430000,4
+Beijing,2008,100m,Breaststroke,0,Women,USA,Megan Quann,00:01:07.620000,4
+Beijing,2008,100m,Breaststroke,0,Women,AUS,Tarnee White,00:01:07.630000,4
+Beijing,2008,100m,Breaststroke,0,Women,CHN,Ye Sun,00:01:08.080000,4
+Beijing,2008,100m,Breaststroke,0,Women,JPN,Asami Kitagawa,00:01:08.430000,4
+Beijing,2008,100m,Butterfly,0,Men,USA,Michael Phelps,50.580,1
+Beijing,2008,100m,Butterfly,0,Men,SRB,Milorad Cavic,50.590,2
+Beijing,2008,100m,Butterfly,0,Men,AUS,Andrew Lauterstein,51.120,3
+Beijing,2008,100m,Butterfly,0,Men,USA,Ian Crocker,51.130,4
+Beijing,2008,100m,Butterfly,0,Men,KEN,Jason Dunford,51.470,4
+Beijing,2008,100m,Butterfly,0,Men,JPN,Takuro Fujii,51.500,4
+Beijing,2008,100m,Butterfly,0,Men,UKR,Andriy Serdinov,51.590,4
+Beijing,2008,100m,Butterfly,0,Men,PNG,Ryan Pini,51.860,4
+Beijing,2008,100m,Butterfly,0,Women,AUS,Libby Trickett,56.730,1
+Beijing,2008,100m,Butterfly,0,Women,USA,Christine Magnuson,57.100,2
+Beijing,2008,100m,Butterfly,0,Women,AUS,Jessicah Schipper,57.250,3
+Beijing,2008,100m,Butterfly,0,Women,CHN,Yafei Zhou,57.840,4
+Beijing,2008,100m,Butterfly,0,Women,SGP,Li Tao,57.990,4
+Beijing,2008,100m,Butterfly,0,Women,GBR,Jemma Lowe,58.060,4
+Beijing,2008,100m,Butterfly,0,Women,BRA,Gabriella Silva,58.100,4
+Beijing,2008,100m,Butterfly,0,Women,NED,Inge Dekker,58.540,4
+Beijing,2008,100m,Freestyle,0,Men,FRA,Alain Bernard,47.210,1
+Beijing,2008,100m,Freestyle,0,Men,AUS,Eamon Sullivan,47.320,2
+Beijing,2008,100m,Freestyle,0,Men,USA,Jason Lezak,47.670,3
+Beijing,2008,100m,Freestyle,0,Men,BRA,Cesar Cielo Filho,47.670,3
+Beijing,2008,100m,Freestyle,0,Men,NED,Pieter Van Den Hoogenband,47.750,4
+Beijing,2008,100m,Freestyle,0,Men,RSA,Lyndon Ferns,48.040,4
+Beijing,2008,100m,Freestyle,0,Men,AUS,Matt Targett,48.200,4
+Beijing,2008,100m,Freestyle,0,Men,SWE,Stefan Nystrand,48.330,4
+Beijing,2008,100m,Freestyle,0,Women,GER,Britta Steffen,53.120,1
+Beijing,2008,100m,Freestyle,0,Women,AUS,Libby Trickett,53.160,2
+Beijing,2008,100m,Freestyle,0,Women,USA,Natalie Coughlin,53.390,3
+Beijing,2008,100m,Freestyle,0,Women,FIN,Hanna-Maria Seppala,53.970,4
+Beijing,2008,100m,Freestyle,0,Women,DEN,Jeanette Ottesen,54.060,4
+Beijing,2008,100m,Freestyle,0,Women,CHN,Yingwen Zhu,54.210,4
+Beijing,2008,100m,Freestyle,0,Women,NED,Marleen Veldhuis,54.210,4
+Beijing,2008,100m,Freestyle,0,Women,GBR,Francesca Halsall,54.290,4
+Beijing,2008,1500m,Freestyle,0,Men,TUN,Oussama Mellouli,00:14:40.840000,1
+Beijing,2008,1500m,Freestyle,0,Men,AUS,Grant Hackett,00:14:41.530000,2
+Beijing,2008,1500m,Freestyle,0,Men,CAN,Ryan Cochrane,00:14:42.690000,3
+Beijing,2008,1500m,Freestyle,0,Men,RUS,Yuri Prilukov,00:14:43.210000,4
+Beijing,2008,1500m,Freestyle,0,Men,USA,Larsen Jensen,00:14:48.160000,4
+Beijing,2008,1500m,Freestyle,0,Men,GBR,David Davies,00:14:52.110000,4
+Beijing,2008,1500m,Freestyle,0,Men,CHN,Lin Zhang,00:14:55.200000,4
+Beijing,2008,1500m,Freestyle,0,Men,CHN,Yang Sun,00:15:05.120000,4
+Beijing,2008,200m,Backstroke,0,Men,USA,Ryan Lochte,00:01:53.940000,1
+Beijing,2008,200m,Backstroke,0,Men,USA,Aaron Peirsol,00:01:54.330000,2
+Beijing,2008,200m,Backstroke,0,Men,RUS,Arkady Vyatchanin,00:01:54.930000,3
+Beijing,2008,200m,Backstroke,0,Men,AUT,Markus Rogan,00:01:55.490000,4
+Beijing,2008,200m,Backstroke,0,Men,JPN,Ryosuke Irie,00:01:55.720000,4
+Beijing,2008,200m,Backstroke,0,Men,AUS,Hayden Stoeckel,00:01:56.390000,4
+Beijing,2008,200m,Backstroke,0,Men,ROU,Razvan Ionut Florea,00:01:56.520000,4
+Beijing,2008,200m,Backstroke,0,Men,GBR,Gregor Tait,00:01:57.000000,4
+Beijing,2008,200m,Backstroke,0,Women,ZIM,Kirsty Leigh Coventry,00:02:05.240000,1
+Beijing,2008,200m,Backstroke,0,Women,USA,Margaret Hoelzer,00:02:06.230000,2
+Beijing,2008,200m,Backstroke,0,Women,JPN,Reiko Nakamura,00:02:07.130000,3
+Beijing,2008,200m,Backstroke,0,Women,RUS,Anastasia Zueva,00:02:07.880000,4
+Beijing,2008,200m,Backstroke,0,Women,USA,Elizabeth Beisel,00:02:08.230000,4
+Beijing,2008,200m,Backstroke,0,Women,GBR,Elizabeth Simmonds,00:02:08.510000,4
+Beijing,2008,200m,Backstroke,0,Women,AUS,Meagen Nay,00:02:08.840000,4
+Beijing,2008,200m,Backstroke,0,Women,AUS,Belinda Hocking,00:02:10.120000,4
+Beijing,2008,200m,Breaststroke,0,Men,JPN,Kosuke Kitajima,00:02:07.640000,1
+Beijing,2008,200m,Breaststroke,0,Men,AUS,Brenton Rickard,00:02:08.880000,2
+Beijing,2008,200m,Breaststroke,0,Men,FRA,Hugues Duboscq,00:02:08.940000,3
+Beijing,2008,200m,Breaststroke,0,Men,CAN,Mike Brown,00:02:09.030000,4
+Beijing,2008,200m,Breaststroke,0,Men,HUN,Daniel Gyurta,00:02:09.220000,4
+Beijing,2008,200m,Breaststroke,0,Men,USA,Scott Spann,00:02:09.760000,4
+Beijing,2008,200m,Breaststroke,0,Men,ITA,Loris Facci,00:02:10.570000,4
+Beijing,2008,200m,Breaststroke,0,Men,ITA,Paolo Bossini,00:02:11.480000,4
+Beijing,2008,200m,Breaststroke,0,Women,USA,Rebecca Soni,00:02:20.220000,1
+Beijing,2008,200m,Breaststroke,0,Women,AUS,Leisel Jones,00:02:22.050000,2
+Beijing,2008,200m,Breaststroke,0,Women,NOR,Sara Nordenstam,00:02:23.020000,3
+Beijing,2008,200m,Breaststroke,0,Women,AUT,Mirna Jukic,00:02:23.240000,4
+Beijing,2008,200m,Breaststroke,0,Women,RUS,Yuliya Efimova,00:02:23.760000,4
+Beijing,2008,200m,Breaststroke,0,Women,CAN,Annamay Pierse,00:02:23.770000,4
+Beijing,2008,200m,Breaststroke,0,Women,JPN,Rie Kaneto,00:02:25.140000,4
+Beijing,2008,200m,Breaststroke,0,Women,JPN,Megumi Taneda,00:02:25.230000,4
+Beijing,2008,200m,Butterfly,0,Men,USA,Michael Phelps,00:01:52.030000,1
+Beijing,2008,200m,Butterfly,0,Men,HUN,Laszlo Cseh,00:01:52.700000,2
+Beijing,2008,200m,Butterfly,0,Men,JPN,Takeshi Matsuda,00:01:52.970000,3
+Beijing,2008,200m,Butterfly,0,Men,NZL,Moss Burmester,00:01:54.350000,4
+Beijing,2008,200m,Butterfly,0,Men,CHN,Peng Wu,00:01:54.350000,4
+Beijing,2008,200m,Butterfly,0,Men,POL,Pawel Korzeniowski,00:01:54.600000,4
+Beijing,2008,200m,Butterfly,0,Men,BRA,Kaio Marcio,00:01:54.710000,4
+Beijing,2008,200m,Butterfly,0,Men,RUS,Nikolay Skvortsov,00:01:55.140000,4
+Beijing,2008,200m,Butterfly,0,Women,CHN,Zige Liu,00:02:04.180000,1
+Beijing,2008,200m,Butterfly,0,Women,CHN,Liuyang Jiao,00:02:04.720000,2
+Beijing,2008,200m,Butterfly,0,Women,AUS,Jessicah Schipper,00:02:06.260000,3
+Beijing,2008,200m,Butterfly,0,Women,POL,Otylia Jedrzejczak,00:02:07.020000,4
+Beijing,2008,200m,Butterfly,0,Women,JPN,Yuko Nakanishi,00:02:07.320000,4
+Beijing,2008,200m,Butterfly,0,Women,FRA,Aurore Mongel,00:02:07.360000,4
+Beijing,2008,200m,Butterfly,0,Women,USA,Elaine Breeden,00:02:07.570000,4
+Beijing,2008,200m,Butterfly,0,Women,USA,Kathleen Hersey,00:02:08.230000,4
+Beijing,2008,200m,Freestyle,0,Men,USA,Michael Phelps,00:01:42.960000,1
+Beijing,2008,200m,Freestyle,0,Men,KOR,Tae-Hwan Park,00:01:44.850000,2
+Beijing,2008,200m,Freestyle,0,Men,USA,Peter Vanderkaay,00:01:45.140000,3
+Beijing,2008,200m,Freestyle,0,Men,RSA,Jean Basson,00:01:45.970000,4
+Beijing,2008,200m,Freestyle,0,Men,GER,Paul Biedermann,00:01:46.000000,4
+Beijing,2008,200m,Freestyle,0,Men,SUI,Dominik Meichtry,00:01:46.950000,4
+Beijing,2008,200m,Freestyle,0,Men,JPN,Yoshihiro Okumura,00:01:47.140000,4
+Beijing,2008,200m,Freestyle,0,Men,GBR,Robbie Renwick,00:01:47.470000,4
+Beijing,2008,200m,Freestyle,0,Women,ITA,Federica Pellegrini,00:01:54.820000,1
+Beijing,2008,200m,Freestyle,0,Women,SLO,Sara Isakovic,00:01:54.970000,2
+Beijing,2008,200m,Freestyle,0,Women,CHN,Jiaying Pang,00:01:55.050000,3
+Beijing,2008,200m,Freestyle,0,Women,USA,Katie Hoff,00:01:55.780000,4
+Beijing,2008,200m,Freestyle,0,Women,ROU,Camelia Alina Potec,00:01:56.870000,4
+Beijing,2008,200m,Freestyle,0,Women,GBR,Caitlin Mcclatchey,00:01:57.650000,4
+Beijing,2008,200m,Freestyle,0,Women,AUS,Bronte Barratt,00:01:57.830000,4
+Beijing,2008,200m,Freestyle,0,Women,FRA,Ophelie-Cyrielle Etienne,00:01:57.830000,4
+Beijing,2008,200m,Individual medley,0,Men,USA,Michael Phelps,00:01:54.230000,1
+Beijing,2008,200m,Individual medley,0,Men,HUN,Laszlo Cseh,00:01:56.520000,2
+Beijing,2008,200m,Individual medley,0,Men,USA,Ryan Lochte,00:01:56.530000,3
+Beijing,2008,200m,Individual medley,0,Men,BRA,Thiago Pereira,00:01:58.140000,4
+Beijing,2008,200m,Individual medley,0,Men,JPN,Ken Takakuwa,00:01:58.220000,4
+Beijing,2008,200m,Individual medley,0,Men,GBR,James Goddard,00:01:59.240000,4
+Beijing,2008,200m,Individual medley,0,Men,CAN,Keith Beavers,00:01:59.430000,4
+Beijing,2008,200m,Individual medley,0,Men,GBR,Liam Tancock,00:02:00.760000,4
+Beijing,2008,200m,Individual medley,0,Women,AUS,Stephanie Rice,00:02:08.450000,1
+Beijing,2008,200m,Individual medley,0,Women,ZIM,Kirsty Leigh Coventry,00:02:08.590000,2
+Beijing,2008,200m,Individual medley,0,Women,USA,Natalie Coughlin,00:02:10.340000,3
+Beijing,2008,200m,Individual medley,0,Women,USA,Katie Hoff,00:02:10.680000,4
+Beijing,2008,200m,Individual medley,0,Women,AUS,Alicia Coutts,00:02:11.430000,4
+Beijing,2008,200m,Individual medley,0,Women,JPN,Asami Kitagawa,00:02:11.560000,4
+Beijing,2008,200m,Individual medley,0,Women,CAN,Julia Wilkinson,00:02:12.430000,4
+Beijing,2008,200m,Individual medley,0,Women,POL,Katarzyna Baranowska,00:02:13.360000,4
+Beijing,2008,400m,Freestyle,0,Men,KOR,Tae-Hwan Park,00:03:41.860000,1
+Beijing,2008,400m,Freestyle,0,Men,CHN,Lin Zhang,00:03:42.440000,2
+Beijing,2008,400m,Freestyle,0,Men,USA,Larsen Jensen,00:03:42.780000,3
+Beijing,2008,400m,Freestyle,0,Men,USA,Peter Vanderkaay,00:03:43.110000,4
+Beijing,2008,400m,Freestyle,0,Men,TUN,Oussama Mellouli,00:03:43.450000,4
+Beijing,2008,400m,Freestyle,0,Men,AUS,Grant Hackett,00:03:43.840000,4
+Beijing,2008,400m,Freestyle,0,Men,RUS,Yuri Prilukov,00:03:43.970000,4
+Beijing,2008,400m,Freestyle,0,Men,RUS,Nikita Lobintsev,00:03:48.290000,4
+Beijing,2008,400m,Freestyle,0,Women,GBR,Rebecca Adlington,00:04:03.220000,1
+Beijing,2008,400m,Freestyle,0,Women,USA,Katie Hoff,00:04:03.290000,2
+Beijing,2008,400m,Freestyle,0,Women,GBR,Joanne Jackson,00:04:03.520000,3
+Beijing,2008,400m,Freestyle,0,Women,FRA,Coralie Balmy,00:04:03.600000,4
+Beijing,2008,400m,Freestyle,0,Women,ITA,Federica Pellegrini,00:04:04.560000,4
+Beijing,2008,400m,Freestyle,0,Women,ROU,Camelia Alina Potec,00:04:04.660000,4
+Beijing,2008,400m,Freestyle,0,Women,AUS,Bronte Barratt,00:04:05.050000,4
+Beijing,2008,400m,Freestyle,0,Women,FRA,Laure Manaudou,00:04:11.260000,4
+Beijing,2008,400m,Individual medley,0,Men,USA,Michael Phelps,00:04:03.840000,1
+Beijing,2008,400m,Individual medley,0,Men,HUN,Laszlo Cseh,00:04:06.160000,2
+Beijing,2008,400m,Individual medley,0,Men,USA,Ryan Lochte,00:04:08.090000,3
+Beijing,2008,400m,Individual medley,0,Men,ITA,Alessio Boggiatto,00:04:12.160000,4
+Beijing,2008,400m,Individual medley,0,Men,ITA,Luca Marin,00:04:12.470000,4
+Beijing,2008,400m,Individual medley,0,Men,HUN,Gergo Kis,00:04:12.840000,4
+Beijing,2008,400m,Individual medley,0,Men,CAN,Brian Johns,00:04:13.380000,4
+Beijing,2008,400m,Individual medley,0,Men,BRA,Thiago Pereira,00:04:15.400000,4
+Beijing,2008,400m,Individual medley,0,Women,AUS,Stephanie Rice,00:04:29.450000,1
+Beijing,2008,400m,Individual medley,0,Women,ZIM,Kirsty Leigh Coventry,00:04:29.890000,2
+Beijing,2008,400m,Individual medley,0,Women,USA,Katie Hoff,00:04:31.710000,3
+Beijing,2008,400m,Individual medley,0,Women,USA,Elizabeth Beisel,00:04:34.240000,4
+Beijing,2008,400m,Individual medley,0,Women,ITA,Alessia Filippi,00:04:34.340000,4
+Beijing,2008,400m,Individual medley,0,Women,GBR,Hannah Miley,00:04:39.440000,4
+Beijing,2008,400m,Individual medley,0,Women,RUS,Yana Martynova,00:04:40.040000,4
+Beijing,2008,400m,Individual medley,0,Women,CHN,Xuanxu Li,00:04:42.130000,4
+Beijing,2008,4x100,Freestyle,1,Men,USA,"Nathan Adrian, Ben Wildman-Tobriner, Michael Phelps, Garrett Weber-Gale, Cullen Jones, Jason Lezak, Matt Grevers",00:03:08.240000,1
+Beijing,2008,4x100,Freestyle,1,Men,FRA,"Alain Bernard, Frederick Bousquet, Fabien Gilot, Gregory Mallet, Boris Steimetz, Amaury Leveaux",00:03:08.320000,2
+Beijing,2008,4x100,Freestyle,1,Men,AUS,"Leith Brodie, Ashley Callus, Andrew Lauterstein, Matt Targett, Eamon Sullivan, Patrick Murphy",00:03:09.910000,3
+Beijing,2008,4x100,Freestyle,1,Men,ITA,"Christian Galenda, Michele Santucci, Filippo Magnini, Marco Belotti, Alessandro Calvi",00:03:11.480000,4
+Beijing,2008,4x100,Freestyle,1,Men,SWE,"Petter Stymne, Lars Frolander, Jonas Persson, Stefan Nystrand",00:03:11.920000,4
+Beijing,2008,4x100,Freestyle,1,Men,CAN,"Rick Say, Brent Hayden, Colin Russell, Joel Greenshields",00:03:12.260000,4
+Beijing,2008,4x100,Freestyle,1,Men,ZAF,"Roland Schoeman, Lyndon Ferns, Ryk Neethling, Darian Townsend",00:03:12.660000,4
+Beijing,2008,4x100,Freestyle,1,Men,GBR,"Adam Brown, Simon Burnett, Ross Davenport, Benjamin Hockin",00:03:12.870000,4
+Beijing,2008,4x100,Freestyle,1,Women,NLD,"Ranomi Kromowidjojo, Inge Dekker, Marleen Veldhuis, Hinkelien Schreuder, Manon Van Rooijen, Femke Heemskerk",00:03:33.760000,1
+Beijing,2008,4x100,Freestyle,1,Women,USA,"Dara Torres, Natalie Coughlin, Julia Smit, Emily Silver, Kara Lynn Joyce, Lacey Nymeyer",00:03:34.330000,2
+Beijing,2008,4x100,Freestyle,1,Women,AUS,"Cate Campbell, Libby Trickett, Shayne Reese, Alice Mills, Melanie Schlanger",00:03:35.050000,3
+Beijing,2008,4x100,Freestyle,1,Women,CHN,"Yi Tang, Yanwei Xu, Jiaying Pang, Yingwen Zhu",00:03:35.640000,4
+Beijing,2008,4x100,Freestyle,1,Women,GER,"Antje Buschschulte, Meike Freitag, Daniela Gotz, Britta Steffen",00:03:36.850000,4
+Beijing,2008,4x100,Freestyle,1,Women,FRA,"Celine Couderc, Hanna Shcherba-Lorgeril, Alena Popchanka, Malia Metella, Ophelie-Cyrielle Etienne",00:03:37.680000,4
+Beijing,2008,4x100,Freestyle,1,Women,GBR,"Jessica Sylvester, Melanie Marshall, Caitlin Mcclatchey, Francesca Halsall, Julia Beckett",00:03:38.180000,4
+Beijing,2008,4x100,Freestyle,1,Women,CAN,"Erica Morningstar, Audrey Lacroix, Genevieve Saumur, Julia Wilkinson",00:03:38.320000,4
+Beijing,2008,4x100,Medley,1,Men,USA,"Michael Phelps, Mark Gangloff, Ian Crocker, Garrett Weber-Gale, Matt Grevers, Jason Lezak, Brendan Hansen, Aaron Peirsol",00:03:29.340000,2
+Beijing,2008,4x100,Medley,1,Men,AUS,"Eamon Sullivan, Hayden Stoeckel, Adam Pine, Matt Targett, Andrew Lauterstein, Brenton Rickard, Christian Sprenger, Ashley Delaney",00:03:30.040000,3
+Beijing,2008,4x100,Medley,1,Men,JPN,"Takuro Fujii, Junichi Miyashita, Kosuke Kitajima, Hisayoshi Sato",00:03:31.180000,4
+Beijing,2008,4x100,Medley,1,Men,RUS,"Nikolay Skvortsov, Andrey Grechin, Roman Sloudnov, Arkady Vyatchanin, Evgeny Korotyshkin, Evgeny Lagunov",00:03:31.920000,4
+Beijing,2008,4x100,Medley,1,Men,NZL,"Daniel Bell, Corney Swanepoel, Glenn Snyders, Cameron Gibson",00:03:33.390000,4
+Beijing,2008,4x100,Medley,1,Men,GBR,"Liam Tancock, Michael Rock, Christopher Cook, Simon Burnett",00:03:33.690000,4
+Beijing,2008,4x100,Medley,1,Men,ZAF,"Cameron Van Der Burgh, Darian Townsend, Lyndon Ferns, Gerhard Zandberg",00:03:33.700000,4
+Beijing,2008,4x100,Medley,1,Men,FRA,"Benjamin Stasiulis, Christophe Lebon, Fabien Gilot, Hugues Duboscq",,5
+Beijing,2008,4x100,Medley,1,Women,AUS,"Emily Seebohm, Libby Trickett, Shayne Reese, Tarnee White, Leisel Jones, Jessicah Schipper, Felicity Galvez",00:03:52.690000,2
+Beijing,2008,4x100,Medley,1,Women,USA,"Natalie Coughlin, Elaine Breeden, Christine Magnuson, Dara Torres, Kara Lynn Joyce, Margaret Hoelzer, Rebecca Soni, Megan Quann",00:03:53.300000,3
+Beijing,2008,4x100,Medley,1,Women,CHN,"Tianlongzi Xu, Jing Zhao, Yafei Zhou, Jiaying Pang, Ye Sun",00:03:56.110000,4
+Beijing,2008,4x100,Medley,1,Women,GBR,"Kate Haywood, Francesca Halsall, Gemma Spofforth, Jemma Lowe",00:03:57.500000,4
+Beijing,2008,4x100,Medley,1,Women,RUS,"Kseniya Moskvina, Anastasiya Tulapina, Yuliya Efimova, Anastasia Zueva, Natalia Sutyagina",00:03:57.840000,4
+Beijing,2008,4x100,Medley,1,Women,JPN,"Asami Kitagawa, Yuka Kato, Reiko Nakamura, Hanae Ito, Haruka Ueda",00:03:59.540000,4
+Beijing,2008,4x100,Medley,1,Women,CAN,"Audrey Lacroix, Annamay Pierse, Erica Morningstar, Julia Wilkinson",00:04:01.350000,4
+Beijing,2008,4x100,Medley,1,Women,GER,"Antje Buschschulte, Daniela Samulski, Britta Steffen, Sarah Poewe",,5
+Beijing,2008,4x200,Freestyle,1,Men,USA,,00:06:58.560000,1
+Beijing,2008,4x200,Freestyle,1,Men,RUS,"Danila Izotov, Nikita Lobintsev, Mikhail Polishchuk, Evgeny Lagunov, Alexander Sukhorukov",00:07:03.700000,2
+Beijing,2008,4x200,Freestyle,1,Men,AUS,"Grant Hackett, Kirk Palmer, Patrick Murphy, Leith Brodie, Nick Ffrost, Grant Brits",00:07:04.980000,3
+Beijing,2008,4x200,Freestyle,1,Men,ITA,"Marco Belotti, Nicola Cassio, Filippo Magnini, Emiliano Brembilla, Massimiliano Rosolino",00:07:05.350000,4
+Beijing,2008,4x200,Freestyle,1,Men,CAN,"Brent Hayden, Adam Sioui, Rick Say, Brian Johns, Andrew Hurd, Colin Russell",00:07:05.770000,4
+Beijing,2008,4x200,Freestyle,1,Men,GBR,"David Carry, Ross Davenport, Robbie Renwick, Andrew Hunter",00:07:05.920000,4
+Beijing,2008,4x200,Freestyle,1,Men,JPN,"Yasunori Mononobe, Hisato Matsumoto, Sho Uchida, Yoshihiro Okumura",00:07:10.310000,4
+Beijing,2008,4x200,Freestyle,1,Men,ZAF,"Jean Basson, Sebastien Daniel Rousseau, Jan Venter, Darian Townsend",00:07:13.020000,4
+Beijing,2008,4x200,Freestyle,1,Women,AUS,"Stephanie Rice, Lara Davenport, Felicity Galvez, Kylie Palmer, Melanie Schlanger, Linda Mackenzie, Bronte Barratt, Angie Bainbridge",00:07:44.310000,1
+Beijing,2008,4x200,Freestyle,1,Women,CHN,"Jiaying Pang, Miao Tan, Qianwei Zhu, Jingzhi Tang, Yu-Ting Yang",00:07:45.930000,2
+Beijing,2008,4x200,Freestyle,1,Women,USA,"Caroline Burckle, Katie Hoff, Christine Marshall, Allison Schmitt, Julia Smit, Natalie Coughlin, Kimberly Vandenberg",00:07:46.330000,3
+Beijing,2008,4x200,Freestyle,1,Women,ITA,"Alessia Filippi, Alice Carpanese, Federica Pellegrini, Flavia Zoccari, Renata Fabiola Spagnolo",00:07:49.760000,4
+Beijing,2008,4x200,Freestyle,1,Women,FRA,"Celine Couderc, Alena Popchanka, Ophelie-Cyrielle Etienne, Camille Muffat, Coralie Balmy, Aurore Mongel",00:07:50.660000,4
+Beijing,2008,4x200,Freestyle,1,Women,HUN,"Eszter Dara, Zsuzsanna Jakabos, Evelin Verraszto, Agnes Mutina",00:07:55.530000,4
+Beijing,2008,4x200,Freestyle,1,Women,JPN,"Maki Mita, Emi Takanabe, Haruka Ueda, Misaki Yamaguchi",00:07:57.560000,4
+Beijing,2008,4x200,Freestyle,1,Women,SWE,"Gabriella Fagundez, Ida Marko-Varga, Petra Granlund, Josefin Lillhage",00:07:59.830000,4
+Beijing,2008,50m,Freestyle,0,Men,BRA,Cesar Cielo Filho,21.300,1
+Beijing,2008,50m,Freestyle,0,Men,FRA,Amaury Leveaux,21.450,2
+Beijing,2008,50m,Freestyle,0,Men,FRA,Alain Bernard,21.490,3
+Beijing,2008,50m,Freestyle,0,Men,AUS,Ashley Callus,21.620,4
+Beijing,2008,50m,Freestyle,0,Men,USA,Ben Wildman-Tobriner,21.640,4
+Beijing,2008,50m,Freestyle,0,Men,AUS,Eamon Sullivan,21.650,4
+Beijing,2008,50m,Freestyle,0,Men,RSA,Roland Schoeman,21.670,4
+Beijing,2008,50m,Freestyle,0,Men,SWE,Stefan Nystrand,21.720,4
+Beijing,2008,50m,Freestyle,0,Women,GER,Britta Steffen,24.060,1
+Beijing,2008,50m,Freestyle,0,Women,USA,Dara Torres,24.070,2
+Beijing,2008,50m,Freestyle,0,Women,AUS,Cate Campbell,24.170,3
+Beijing,2008,50m,Freestyle,0,Women,AUS,Libby Trickett,24.250,4
+Beijing,2008,50m,Freestyle,0,Women,NED,Marleen Veldhuis,24.260,4
+Beijing,2008,50m,Freestyle,0,Women,USA,Kara Lynn Joyce,24.630,4
+Beijing,2008,50m,Freestyle,0,Women,NED,Hinkelien Schreuder,24.650,4
+Beijing,2008,50m,Freestyle,0,Women,BLR,Aliaksandra Herasimenia,24.770,4
+Beijing,2008,800m,Freestyle,0,Women,GBR,Rebecca Adlington,00:08:14.100000,1
+Beijing,2008,800m,Freestyle,0,Women,ITA,Alessia Filippi,00:08:20.230000,2
+Beijing,2008,800m,Freestyle,0,Women,DEN,Lotte Friis,00:08:23.030000,3
+Beijing,2008,800m,Freestyle,0,Women,ROU,Camelia Alina Potec,00:08:23.110000,4
+Beijing,2008,800m,Freestyle,0,Women,CHN,Xuanxu Li,00:08:26.340000,4
+Beijing,2008,800m,Freestyle,0,Women,AUS,Kylie Palmer,00:08:26.390000,4
+Beijing,2008,800m,Freestyle,0,Women,RUS,Elena Sokolova,00:08:29.790000,4
+Beijing,2008,800m,Freestyle,0,Women,GBR,Cassandra Patten,00:08:32.350000,4

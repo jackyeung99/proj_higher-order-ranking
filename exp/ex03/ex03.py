@@ -24,20 +24,16 @@ def get_predictions(model, training_set, pi_values):
         return compute_predicted_rankings_std(training_set, pi_values)
     elif model == 'higher_order_leadership':
         return compute_predicted_rankings_std_leadership(training_set, pi_values)
-    elif model == 'tensor_flow_ltr.py':
+    elif model == 'tensor_flow':
         pass
-    elif model == 'point_wise.py':
+    elif model == 'point_wise':
         return compute_point_wise_ratings(training_set, pi_values)
 
 
 
 def run_experiment(dataset_file_path, models, splits, metric='std_likelihood'):
 
-
-    
-
     for file in os.listdir(dataset_file_path):
-
 
         if file.endswith('.soc'):
             file_path = os.path.join(dataset_file_path, file)
@@ -83,6 +79,6 @@ if __name__ == '__main__':
 
 
     dataset_file_path = 'datasets/preflib_datasets'
-    models = ['newman', 'newman_leadership', 'higher_order_newman', 'higher_order_leadership']
+    models = ['newman', 'newman_leadership', 'higher_order_newman', 'higher_order_leadership', 'point_wise']
     splits = 10
     run_experiment(dataset_file_path, models, splits) 

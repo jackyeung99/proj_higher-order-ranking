@@ -1,0 +1,257 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+Sydney,2000,100m,Backstroke,0,Men,USA,Lenny Krayzelburg,53.720,1
+Sydney,2000,100m,Backstroke,0,Men,AUS,Matthew Welsh,54.070,2
+Sydney,2000,100m,Backstroke,0,Men,GER,Stev Theloke,54.820,3
+Sydney,2000,100m,Backstroke,0,Men,AUS,Josh Watson,55.010,4
+Sydney,2000,100m,Backstroke,0,Men,POL,Bartosz Kizierowski,55.040,4
+Sydney,2000,100m,Backstroke,0,Men,USA,Neil Walker,55.140,4
+Sydney,2000,100m,Backstroke,0,Men,GER,Steffen Driesen,55.270,4
+Sydney,2000,100m,Backstroke,0,Men,ISR,Eithan Urbach,55.740,4
+Sydney,2000,100m,Backstroke,0,Women,ROU,Diana Mocanu,00:01:00.210000,1
+Sydney,2000,100m,Backstroke,0,Women,JPN,Mai Nakamura,00:01:00.550000,2
+Sydney,2000,100m,Backstroke,0,Women,ESP,Nina Alexandrovna Zhivanevskaya,00:01:00.890000,3
+Sydney,2000,100m,Backstroke,0,Women,FRA,Roxana Maracineanu,00:01:01.100000,4
+Sydney,2000,100m,Backstroke,0,Women,JPN,Noriko Inada,00:01:01.140000,4
+Sydney,2000,100m,Backstroke,0,Women,USA,B J Bedford,00:01:01.470000,4
+Sydney,2000,100m,Backstroke,0,Women,AUS,Dyana Calub,00:01:01.610000,4
+Sydney,2000,100m,Backstroke,0,Women,DEN,Louise Ornstedt,00:01:02.020000,4
+Sydney,2000,100m,Breaststroke,0,Men,ITA,Domenico Fioravanti,00:01:00.460000,1
+Sydney,2000,100m,Breaststroke,0,Men,USA,Ed Moses,00:01:00.730000,2
+Sydney,2000,100m,Breaststroke,0,Men,RUS,Roman Sloudnov,00:01:00.910000,3
+Sydney,2000,100m,Breaststroke,0,Men,JPN,Kosuke Kitajima,00:01:01.340000,4
+Sydney,2000,100m,Breaststroke,0,Men,CZE,Daniel Malek,00:01:01.500000,4
+Sydney,2000,100m,Breaststroke,0,Men,CAN,Morgan Knabe,00:01:01.580000,4
+Sydney,2000,100m,Breaststroke,0,Men,RSA,Brett Petersen,00:01:01.630000,4
+Sydney,2000,100m,Breaststroke,0,Men,SUI,Remo Luetolf,00:01:01.880000,4
+Sydney,2000,100m,Breaststroke,0,Women,USA,Megan Quann,00:01:07.050000,1
+Sydney,2000,100m,Breaststroke,0,Women,AUS,Leisel Jones,00:01:07.490000,2
+Sydney,2000,100m,Breaststroke,0,Women,RSA,Penelope Heyns,00:01:07.550000,3
+Sydney,2000,100m,Breaststroke,0,Women,RSA,Sarah Poewe,00:01:07.850000,4
+Sydney,2000,100m,Breaststroke,0,Women,HUN,Agnes Kovacs,00:01:08.090000,4
+Sydney,2000,100m,Breaststroke,0,Women,JPN,Masami Tanaka,00:01:08.370000,4
+Sydney,2000,100m,Breaststroke,0,Women,AUS,Tarnee White,00:01:09.090000,4
+Sydney,2000,100m,Breaststroke,0,Women,GER,Sylvia Gerasch,00:01:09.860000,4
+Sydney,2000,100m,Butterfly,0,Men,SWE,Lars Frolander,52.000,1
+Sydney,2000,100m,Butterfly,0,Men,AUS,Michael Klim,52.180,2
+Sydney,2000,100m,Butterfly,0,Men,AUS,Geoffrey Huegill,52.220,3
+Sydney,2000,100m,Butterfly,0,Men,USA,Ian Crocker,52.440,4
+Sydney,2000,100m,Butterfly,0,Men,JPN,Takashi Yamamoto,52.580,4
+Sydney,2000,100m,Butterfly,0,Men,CAN,Michael Mintenko,52.580,4
+Sydney,2000,100m,Butterfly,0,Men,GER,Thomas Rupprath,53.130,4
+Sydney,2000,100m,Butterfly,0,Men,RUS,Anatoly Polyakov,53.130,4
+Sydney,2000,100m,Butterfly,0,Women,NED,Inge De Bruijn,56.610,1
+Sydney,2000,100m,Butterfly,0,Women,SVK,Martina Moravcova,57.970,2
+Sydney,2000,100m,Butterfly,0,Women,USA,Dara Torres,58.200,3
+Sydney,2000,100m,Butterfly,0,Women,AUS,Petria Thomas,58.490,4
+Sydney,2000,100m,Butterfly,0,Women,USA,Jenny Thompson,58.730,4
+Sydney,2000,100m,Butterfly,0,Women,JPN,Junko Onishi,59.130,4
+Sydney,2000,100m,Butterfly,0,Women,AUS,Susan O'Neill,59.270,4
+Sydney,2000,100m,Butterfly,0,Women,ROU,Diana Mocanu,59.430,4
+Sydney,2000,100m,Freestyle,0,Men,NED,Pieter Van Den Hoogenband,48.300,1
+Sydney,2000,100m,Freestyle,0,Men,RUS,Alexander Popov,48.690,2
+Sydney,2000,100m,Freestyle,0,Men,USA,"Gary Hall, Jr.",48.730,3
+Sydney,2000,100m,Freestyle,0,Men,AUS,Michael Klim,48.740,4
+Sydney,2000,100m,Freestyle,0,Men,USA,Neil Walker,49.090,4
+Sydney,2000,100m,Freestyle,0,Men,SWE,Lars Frolander,49.220,4
+Sydney,2000,100m,Freestyle,0,Men,RUS,Denis Pimankov,49.360,4
+Sydney,2000,100m,Freestyle,0,Men,AUS,Christopher John Fydler,49.440,4
+Sydney,2000,100m,Freestyle,0,Women,NED,Inge De Bruijn,53.830,1
+Sydney,2000,100m,Freestyle,0,Women,SWE,Therese Alshammar,54.330,2
+Sydney,2000,100m,Freestyle,0,Women,USA,Jenny Thompson,54.430,3
+Sydney,2000,100m,Freestyle,0,Women,USA,Dara Torres,54.430,3
+Sydney,2000,100m,Freestyle,0,Women,SVK,Martina Moravcova,54.720,4
+Sydney,2000,100m,Freestyle,0,Women,RSA,Helene Muller,55.190,4
+Sydney,2000,100m,Freestyle,0,Women,JPN,Sumika Minamoto,55.530,4
+Sydney,2000,100m,Freestyle,0,Women,NED,Wilma Van Rijn,55.580,4
+Sydney,2000,1500m,Freestyle,0,Men,AUS,Grant Hackett,00:14:48.330000,1
+Sydney,2000,1500m,Freestyle,0,Men,AUS,Kieren John Perkins,00:14:53.590000,2
+Sydney,2000,1500m,Freestyle,0,Men,USA,Chris Thompson,00:14:56.810000,3
+Sydney,2000,1500m,Freestyle,0,Men,RUS,Alexei Filipets,00:14:56.880000,4
+Sydney,2000,1500m,Freestyle,0,Men,RSA,Ryk Neethling,00:15:00.480000,4
+Sydney,2000,1500m,Freestyle,0,Men,USA,Erik Vendt,00:15:08.610000,4
+Sydney,2000,1500m,Freestyle,0,Men,UKR,Igor Chervynskiy,00:15:08.800000,4
+Sydney,2000,1500m,Freestyle,0,Men,GER,Heiko Hell,00:15:19.870000,4
+Sydney,2000,200m,Backstroke,0,Men,USA,Lenny Krayzelburg,00:01:56.760000,1
+Sydney,2000,200m,Backstroke,0,Men,USA,Aaron Peirsol,00:01:57.350000,2
+Sydney,2000,200m,Backstroke,0,Men,AUS,Matthew Welsh,00:01:57.590000,3
+Sydney,2000,200m,Backstroke,0,Men,ISL,Orn Arnarson,00:01:59.000000,4
+Sydney,2000,200m,Backstroke,0,Men,ITA,Emanuele Merisi,00:01:59.010000,4
+Sydney,2000,200m,Backstroke,0,Men,ROU,Razvan Ionut Florea,00:01:59.050000,4
+Sydney,2000,200m,Backstroke,0,Men,BRA,Rogerio Romero,00:01:59.270000,4
+Sydney,2000,200m,Backstroke,0,Men,CRO,Gordan Kozulj,00:01:59.380000,4
+Sydney,2000,200m,Backstroke,0,Women,ROU,Diana Mocanu,00:02:08.160000,1
+Sydney,2000,200m,Backstroke,0,Women,FRA,Roxana Maracineanu,00:02:10.250000,2
+Sydney,2000,200m,Backstroke,0,Women,JPN,Miki Nakao,00:02:11.050000,3
+Sydney,2000,200m,Backstroke,0,Women,JPN,Tomoko Hagiwara,00:02:11.210000,4
+Sydney,2000,200m,Backstroke,0,Women,USA,Amanda Adkins,00:02:12.350000,4
+Sydney,2000,200m,Backstroke,0,Women,ESP,Nina Alexandrovna Zhivanevskaya,00:02:12.750000,4
+Sydney,2000,200m,Backstroke,0,Women,GER,Antje Buschschulte,00:02:13.310000,4
+Sydney,2000,200m,Backstroke,0,Women,CAN,Kelly Stefanyshyn,00:02:14.570000,4
+Sydney,2000,200m,Breaststroke,0,Men,ITA,Domenico Fioravanti,00:02:10.870000,1
+Sydney,2000,200m,Breaststroke,0,Men,RSA,Terence Parkin,00:02:12.500000,2
+Sydney,2000,200m,Breaststroke,0,Men,ITA,Davide Rummolo,00:02:12.730000,3
+Sydney,2000,200m,Breaststroke,0,Men,AUS,Regan Harrison,00:02:12.880000,4
+Sydney,2000,200m,Breaststroke,0,Men,CZE,Daniel Malek,00:02:13.200000,4
+Sydney,2000,200m,Breaststroke,0,Men,USA,Kyle Salyards,00:02:13.270000,4
+Sydney,2000,200m,Breaststroke,0,Men,FRA,Johan Bernard,00:02:13.310000,4
+Sydney,2000,200m,Breaststroke,0,Men,AUS,Ryan Mitchell,00:02:14.000000,4
+Sydney,2000,200m,Breaststroke,0,Women,HUN,Agnes Kovacs,00:02:24.350000,1
+Sydney,2000,200m,Breaststroke,0,Women,USA,Kristy Kowal,00:02:24.560000,2
+Sydney,2000,200m,Breaststroke,0,Women,USA,Amanda Beard,00:02:25.350000,3
+Sydney,2000,200m,Breaststroke,0,Women,CHN,Hui Qi,00:02:25.360000,4
+Sydney,2000,200m,Breaststroke,0,Women,RUS,Olga Bakaldina,00:02:25.470000,4
+Sydney,2000,200m,Breaststroke,0,Women,RSA,Sarah Poewe,00:02:25.720000,4
+Sydney,2000,200m,Breaststroke,0,Women,JPN,Masami Tanaka,00:02:26.980000,4
+Sydney,2000,200m,Breaststroke,0,Women,CHN,Xuejuan Luo,00:02:27.330000,4
+Sydney,2000,200m,Butterfly,0,Men,USA,Tom Malchow,00:01:55.350000,1
+Sydney,2000,200m,Butterfly,0,Men,UKR,Denys Sylantiev,00:01:55.760000,2
+Sydney,2000,200m,Butterfly,0,Men,AUS,Justin Norris,00:01:56.170000,3
+Sydney,2000,200m,Butterfly,0,Men,RUS,Anatoly Polyakov,00:01:56.340000,4
+Sydney,2000,200m,Butterfly,0,Men,USA,Michael Phelps,00:01:56.500000,4
+Sydney,2000,200m,Butterfly,0,Men,GBR,Steve Parry,00:01:57.010000,4
+Sydney,2000,200m,Butterfly,0,Men,RUS,Denis Pankratov,00:01:57.970000,4
+Sydney,2000,200m,Butterfly,0,Men,FRA,Franck Esposito,00:01:58.390000,4
+Sydney,2000,200m,Butterfly,0,Women,USA,Misty Hyman,00:02:05.880000,1
+Sydney,2000,200m,Butterfly,0,Women,AUS,Susan O'Neill,00:02:06.580000,2
+Sydney,2000,200m,Butterfly,0,Women,AUS,Petria Thomas,00:02:07.120000,3
+Sydney,2000,200m,Butterfly,0,Women,DEN,Mette Jacobsen,00:02:08.240000,4
+Sydney,2000,200m,Butterfly,0,Women,POL,Otylia Jedrzejczak,00:02:08.480000,4
+Sydney,2000,200m,Butterfly,0,Women,USA,Kaitlin Sandeno,00:02:08.810000,4
+Sydney,2000,200m,Butterfly,0,Women,JPN,Yuko Nakanishi,00:02:09.660000,4
+Sydney,2000,200m,Butterfly,0,Women,JPN,Maki Mita,00:02:10.720000,4
+Sydney,2000,200m,Freestyle,0,Men,NED,Pieter Van Den Hoogenband,00:01:45.350000,1
+Sydney,2000,200m,Freestyle,0,Men,AUS,Ian Thorpe,00:01:45.830000,2
+Sydney,2000,200m,Freestyle,0,Men,ITA,Massimiliano Rosolino,00:01:46.650000,3
+Sydney,2000,200m,Freestyle,0,Men,USA,Josh Davis,00:01:46.730000,4
+Sydney,2000,200m,Freestyle,0,Men,GBR,Paul Rory Palmer,00:01:47.950000,4
+Sydney,2000,200m,Freestyle,0,Men,GBR,James Salter,00:01:48.740000,4
+Sydney,2000,200m,Freestyle,0,Men,CAN,Rick Say,00:01:48.760000,4
+Sydney,2000,200m,Freestyle,0,Men,AUS,Grant Hackett,00:01:49.460000,4
+Sydney,2000,200m,Freestyle,0,Women,AUS,Susan O'Neill,00:01:58.240000,1
+Sydney,2000,200m,Freestyle,0,Women,SVK,Martina Moravcova,00:01:58.320000,2
+Sydney,2000,200m,Freestyle,0,Women,CRC,Claudia Poll Ahrens,00:01:58.810000,3
+Sydney,2000,200m,Freestyle,0,Women,GER,Kerstin Kielgass,00:01:58.860000,4
+Sydney,2000,200m,Freestyle,0,Women,RUS,Nadezhda Chemezova,00:01:58.860000,4
+Sydney,2000,200m,Freestyle,0,Women,BLR,Natalia Baranovskaya-Khatziloizou,00:01:59.280000,4
+Sydney,2000,200m,Freestyle,0,Women,ROU,Camelia Alina Potec,00:01:59.460000,4
+Sydney,2000,200m,Freestyle,0,Women,CHN,Luna Wang,00:01:59.550000,4
+Sydney,2000,200m,Individual medley,0,Men,ITA,Massimiliano Rosolino,00:01:58.980000,1
+Sydney,2000,200m,Individual medley,0,Men,USA,Tom Dolan,00:01:59.770000,2
+Sydney,2000,200m,Individual medley,0,Men,USA,Tom Wilkens,00:02:00.870000,3
+Sydney,2000,200m,Individual medley,0,Men,HUN,Attila Czene,00:02:01.160000,4
+Sydney,2000,200m,Individual medley,0,Men,NED,Marcel Wouda,00:02:01.480000,4
+Sydney,2000,200m,Individual medley,0,Men,GER,Christian Keller,00:02:02.020000,4
+Sydney,2000,200m,Individual medley,0,Men,FRA,Xavier Marchand,00:02:02.230000,4
+Sydney,2000,200m,Individual medley,0,Men,FIN,Jani Sievinen,00:02:02.490000,4
+Sydney,2000,200m,Individual medley,0,Women,UKR,Yana Klochkova,00:02:10.680000,1
+Sydney,2000,200m,Individual medley,0,Women,ROU,Beatrice Caslaru,00:02:12.570000,2
+Sydney,2000,200m,Individual medley,0,Women,USA,Cristina Teuscher,00:02:13.320000,3
+Sydney,2000,200m,Individual medley,0,Women,CAN,Marianne Luise Limpert,00:02:13.440000,4
+Sydney,2000,200m,Individual medley,0,Women,CAN,Joanne Susan Malar,00:02:13.700000,4
+Sydney,2000,200m,Individual medley,0,Women,RUS,Oxana Verevka,00:02:13.880000,4
+Sydney,2000,200m,Individual medley,0,Women,USA,Gabrielle Rose,00:02:14.820000,4
+Sydney,2000,200m,Individual medley,0,Women,JPN,Tomoko Hagiwara,00:02:15.640000,4
+Sydney,2000,400m,Freestyle,0,Men,AUS,Ian Thorpe,00:03:40.590000,1
+Sydney,2000,400m,Freestyle,0,Men,ITA,Massimiliano Rosolino,00:03:43.400000,2
+Sydney,2000,400m,Freestyle,0,Men,USA,Klete Keller,00:03:47.000000,3
+Sydney,2000,400m,Freestyle,0,Men,ITA,Emiliano Brembilla,00:03:47.010000,4
+Sydney,2000,400m,Freestyle,0,Men,ROU,Dragos Cristian Coman,00:03:47.380000,4
+Sydney,2000,400m,Freestyle,0,Men,USA,Chad Carvin,00:03:47.580000,4
+Sydney,2000,400m,Freestyle,0,Men,AUS,Grant Hackett,00:03:48.220000,4
+Sydney,2000,400m,Freestyle,0,Men,RSA,Ryk Neethling,00:03:48.520000,4
+Sydney,2000,400m,Freestyle,0,Women,USA,Brooke Bennett,00:04:05.800000,1
+Sydney,2000,400m,Freestyle,0,Women,USA,Diana Munz,00:04:07.070000,2
+Sydney,2000,400m,Freestyle,0,Women,CRC,Claudia Poll Ahrens,00:04:07.830000,3
+Sydney,2000,400m,Freestyle,0,Women,JAM,Janelle Atkinson,00:04:08.790000,4
+Sydney,2000,400m,Freestyle,0,Women,RUS,Nadezhda Chemezova,00:04:10.370000,4
+Sydney,2000,400m,Freestyle,0,Women,GER,Hannah Stockbauer,00:04:10.380000,4
+Sydney,2000,400m,Freestyle,0,Women,NED,Carla Louise Geurts,00:04:12.360000,4
+Sydney,2000,400m,Freestyle,0,Women,CHN,Hua Chen,00:04:13.110000,4
+Sydney,2000,400m,Individual medley,0,Men,USA,Tom Dolan,00:04:11.760000,1
+Sydney,2000,400m,Individual medley,0,Men,USA,Erik Vendt,00:04:14.230000,2
+Sydney,2000,400m,Individual medley,0,Men,CAN,Curtis Allen Myden,00:04:15.330000,3
+Sydney,2000,400m,Individual medley,0,Men,ITA,Alessio Boggiatto,00:04:15.930000,4
+Sydney,2000,400m,Individual medley,0,Men,RSA,Terence Parkin,00:04:16.920000,4
+Sydney,2000,400m,Individual medley,0,Men,AUS,Justin Norris,00:04:17.870000,4
+Sydney,2000,400m,Individual medley,0,Men,ROU,Cezar Alexandru Badita,00:04:20.910000,4
+Sydney,2000,400m,Individual medley,0,Men,JPN,Shinya Taniguchi,00:04:20.930000,4
+Sydney,2000,400m,Individual medley,0,Women,UKR,Yana Klochkova,00:04:33.590000,1
+Sydney,2000,400m,Individual medley,0,Women,JPN,Yasuko Tajima,00:04:35.960000,2
+Sydney,2000,400m,Individual medley,0,Women,ROU,Beatrice Caslaru,00:04:37.180000,3
+Sydney,2000,400m,Individual medley,0,Women,USA,Kaitlin Sandeno,00:04:41.030000,4
+Sydney,2000,400m,Individual medley,0,Women,GER,Nicole Hetzer,00:04:43.560000,4
+Sydney,2000,400m,Individual medley,0,Women,USA,Maddy Crippen,00:04:44.630000,4
+Sydney,2000,400m,Individual medley,0,Women,CAN,Joanne Susan Malar,00:04:45.170000,4
+Sydney,2000,400m,Individual medley,0,Women,AUS,Jennifer Reilly,00:04:45.990000,4
+Sydney,2000,4x100,Freestyle,1,Men,AUS,,00:03:13.670000,2
+Sydney,2000,4x100,Freestyle,1,Men,USA,"Josh Davis, Scott Tucker, Jason Lezak, Anthony Ervin, Neil Walker",00:03:13.860000,3
+Sydney,2000,4x100,Freestyle,1,Men,BRA,"Carlos Jayme, Edvaldo Silva Filho, Fernando Scherer, Gustavo Borges",00:03:17.400000,4
+Sydney,2000,4x100,Freestyle,1,Men,GER,"Torsten Spanneberg, Christian Tröger, Stephan Kunzelmann, Stefan Herbst, Lars Conrad",00:03:17.770000,4
+Sydney,2000,4x100,Freestyle,1,Men,ITA,"Lorenzo Vismara, Klaus Lanzarini, Simone Cercato, Massimiliano Rosolino",00:03:17.850000,4
+Sydney,2000,4x100,Freestyle,1,Men,SWE,"Lars Frolander, Stefan Nystrand, Johan Wallberg, Johan Nystroem, Mattias Ohlin",00:03:19.600000,4
+Sydney,2000,4x100,Freestyle,1,Men,FRA,"Nicolas Kintz, Frederick Bousquet, Romain Barnier, Hugo Viart",00:03:21.000000,4
+Sydney,2000,4x100,Freestyle,1,Men,RUS,"Andrey Kapralov, Alexander Popov, Denis Pimankov",,5
+Sydney,2000,4x100,Freestyle,1,Women,USA,"Courtney Shealy, Dara Torres, Amy Van Dyken, Jenny Thompson, Ashley T Tappin, Erin Ashley Phenix",00:03:36.610000,1
+Sydney,2000,4x100,Freestyle,1,Women,NLD,"Chantal Groot, Inge De Bruijn, Wilma Van Rijn, Manon Van Rooijen, Thamar Henneken",00:03:39.830000,2
+Sydney,2000,4x100,Freestyle,1,Women,SWE,"Therese Alshammar, Anna-Karin Kammerling, Josefin Lillhage, Louise Johncke, Johanna Sjoberg, Malin Svahnstrom",00:03:40.300000,3
+Sydney,2000,4x100,Freestyle,1,Women,GER,"Antje Buschschulte, Katrin Meissner, Britta Steffen, Franziska Van Almsick, Kerstin Kielgass, Sandra Voelker, Daniela Samulski",00:03:40.310000,4
+Sydney,2000,4x100,Freestyle,1,Women,GBR,"Rosalind Brett, Susan Rolph, Alison Sheppard, Karen Pickering",00:03:40.540000,4
+Sydney,2000,4x100,Freestyle,1,Women,AUS,"Elka Graham, Susan O'Neill, Giaan Rooney, Sarah Ryan, Melanie Dodd",00:03:40.910000,4
+Sydney,2000,4x100,Freestyle,1,Women,CAN,"Shannon Shakespeare, Marianne Luise Limpert, Laura Nicholls, Jessica Deglau",00:03:42.920000,4
+Sydney,2000,4x100,Freestyle,1,Women,ITA,"Cecilia Vianini, Cristina Chiuso, Luisa Striani, Sara Parise",00:03:44.490000,4
+Sydney,2000,4x100,Medley,1,Men,USA,"Ian Crocker, Lenny Krayzelburg, Tommy Hannan, Jason Lezak, Ed Moses, Neil Walker",00:03:33.730000,1
+Sydney,2000,4x100,Medley,1,Men,AUS,"Michael Klim, Josh Watson, Adam Pine, Ian Thorpe, Matthew Welsh, Regan Harrison, Ryan Mitchell, Geoffrey Huegill",00:03:35.270000,2
+Sydney,2000,4x100,Medley,1,Men,GER,"Stev Theloke, Torsten Spanneberg, Thomas Rupprath, Jens Kruppa",00:03:35.880000,3
+Sydney,2000,4x100,Medley,1,Men,NLD,"Pieter Van Den Hoogenband, Mark Hermanus Veens, Joris Keizer, Klaas-Erik Zwering, Marcel Wouda",00:03:37.530000,4
+Sydney,2000,4x100,Medley,1,Men,HUN,"Zsolt Gaspar, Karoly Guttler, Attila Zubor, Peter Horvath",00:03:39.090000,4
+Sydney,2000,4x100,Medley,1,Men,CAN,"Michael Mintenko, Yannick Lupien, Morgan Knabe, Chris Renaud, Craig Hutchison, Shamek Pietucha",00:03:39.880000,4
+Sydney,2000,4x100,Medley,1,Men,FRA,"Frederick Bousquet, Franck Esposito, Hugues Duboscq, Simon Dufour",00:03:40.020000,4
+Sydney,2000,4x100,Medley,1,Men,GBR,"Neil Willey, Darren Mew, James Hickman, Sion Brinn",00:03:40.190000,4
+Sydney,2000,4x100,Medley,1,Women,USA,"Megan Quann, Courtney Shealy, Ashley T Tappin, Jenny Thompson, Dara Torres, Amy Van Dyken, Staciana Stitts, B J Bedford",00:03:58.300000,1
+Sydney,2000,4x100,Medley,1,Women,AUS,"Dyana Calub, Susan O'Neill, Petria Thomas, Leisel Jones, Tarnee White, Sarah Ryan, Giaan Rooney",00:04:01.590000,2
+Sydney,2000,4x100,Medley,1,Women,JPN,"Mai Nakamura, Sumika Minamoto, Masami Tanaka, Junko Onishi",00:04:04.160000,3
+Sydney,2000,4x100,Medley,1,Women,GER,"Franziska Van Almsick, Antje Buschschulte, Katrin Meissner, Sylvia Gerasch",00:04:04.330000,4
+Sydney,2000,4x100,Medley,1,Women,ZAF,"Sarah Poewe, Helene Muller, Charlene Wittstock, Amanda Loots",00:04:05.150000,4
+Sydney,2000,4x100,Medley,1,Women,CAN,"Laura Nicholls, Jen Button, Marianne Luise Limpert, Kelly Stefanyshyn, Christin Petelski, Michelle Lischinsky",00:04:07.550000,4
+Sydney,2000,4x100,Medley,1,Women,GBR,"Karen Pickering, Katy Sexton, Susan Rolph, Heidi Earp",00:04:07.610000,4
+Sydney,2000,4x100,Medley,1,Women,CHN,"Shu Zhan, Limin Liu, Xue Han, Hui Qi",00:04:07.830000,4
+Sydney,2000,4x200,Freestyle,1,Men,AUS,"Michael Klim, Todd Pearson, Daniel Kowalski, William Kirby, Grant Hackett, Ian Thorpe",00:07:07.050000,1
+Sydney,2000,4x200,Freestyle,1,Men,USA,"Nate Dusing, Scott Goldblatt, Josh Davis, Klete Keller, Chad Carvin, Jamie Rauch",00:07:12.640000,2
+Sydney,2000,4x200,Freestyle,1,Men,NLD,"Mark Van Der Zijden, Pieter Van Den Hoogenband, Marcel Wouda, Martijn Zuijdweg, Johan Kenkhuis",00:07:12.700000,3
+Sydney,2000,4x200,Freestyle,1,Men,ITA,,00:07:12.910000,4
+Sydney,2000,4x200,Freestyle,1,Men,GBR,"James Salter, Marc Spackman, Andrew Clayton, Edward Sinclair, Paul Rory Palmer",00:07:12.980000,4
+Sydney,2000,4x200,Freestyle,1,Men,GER,"Christian Keller, Stefan Herbst, Christian Tröger, Stefan Pohl, Michael Kiedel, Heiko Hell",00:07:20.190000,4
+Sydney,2000,4x200,Freestyle,1,Men,CAN,"Michael Mintenko, Yannick Lupien, Rick Say, Mark Johnston, Brian Johns",00:07:21.920000,4
+Sydney,2000,4x200,Freestyle,1,Men,RUS,"Aleksey Yegorov, Andrey Kapralov, Alexei Filipets, Serguei Lavrenov",00:07:24.370000,4
+Sydney,2000,4x200,Freestyle,1,Women,USA,"Samantha Arsenault, Julia Stowers, Jenny Thompson, Kim Black, Diana Munz, Lindsay Benko",00:07:57.800000,1
+Sydney,2000,4x200,Freestyle,1,Women,AUS,"Elka Graham, Giaan Rooney, Susan O'Neill, Petria Thomas, Jacinta Van Lint, Kirsten Thomson",00:07:58.520000,2
+Sydney,2000,4x200,Freestyle,1,Women,GER,"Sara Harstick, Kerstin Kielgass, Meike Freitag, Britta Steffen, Antje Buschschulte, Franziska Van Almsick",00:07:58.640000,3
+Sydney,2000,4x200,Freestyle,1,Women,ROU,"Camelia Alina Potec, Simona Paduraru, Florina Herea, Ioana Diaconescu, Beatrice Caslaru",00:08:01.630000,4
+Sydney,2000,4x200,Freestyle,1,Women,CAN,"Marianne Luise Limpert, Shannon Shakespeare, Joanne Susan Malar, Jessica Deglau, Jen Button",00:08:02.650000,4
+Sydney,2000,4x200,Freestyle,1,Women,GBR,"Karen Pickering, Karen Legg, Claire Huddart, Janine Belton",00:08:03.690000,4
+Sydney,2000,4x200,Freestyle,1,Women,ITA,"Sara Goffi, Cecilia Vianini, Luisa Striani, Sara Parise",00:08:04.680000,4
+Sydney,2000,4x200,Freestyle,1,Women,FRA,"Solenne Figues, Katarin Quelennec, Leatitia Choux",00:08:05.990000,4
+Sydney,2000,50m,Freestyle,0,Men,USA,"Gary Hall, Jr.",21.980,1
+Sydney,2000,50m,Freestyle,0,Men,USA,Anthony Ervin,21.980,1
+Sydney,2000,50m,Freestyle,0,Men,NED,Pieter Van Den Hoogenband,22.030,3
+Sydney,2000,50m,Freestyle,0,Men,ITA,Lorenzo Vismara,22.110,4
+Sydney,2000,50m,Freestyle,0,Men,POL,Bartosz Kizierowski,22.220,4
+Sydney,2000,50m,Freestyle,0,Men,RUS,Alexander Popov,22.240,4
+Sydney,2000,50m,Freestyle,0,Men,GBR,Mark Andrew Foster,22.410,4
+Sydney,2000,50m,Freestyle,0,Men,UKR,Oleksandr Volynets,22.510,4
+Sydney,2000,50m,Freestyle,0,Women,NED,Inge De Bruijn,24.320,1
+Sydney,2000,50m,Freestyle,0,Women,SWE,Therese Alshammar,24.510,2
+Sydney,2000,50m,Freestyle,0,Women,USA,Dara Torres,24.630,3
+Sydney,2000,50m,Freestyle,0,Women,USA,Amy Van Dyken,25.040,4
+Sydney,2000,50m,Freestyle,0,Women,SVK,Martina Moravcova,25.240,4
+Sydney,2000,50m,Freestyle,0,Women,GER,Sandra Voelker,25.270,4
+Sydney,2000,50m,Freestyle,0,Women,GBR,Alison Sheppard,25.450,4
+Sydney,2000,50m,Freestyle,0,Women,JPN,Sumika Minamoto,25.650,4
+Sydney,2000,800m,Freestyle,0,Women,USA,Brooke Bennett,00:08:19.670000,1
+Sydney,2000,800m,Freestyle,0,Women,UKR,Yana Klochkova,00:08:22.660000,2
+Sydney,2000,800m,Freestyle,0,Women,USA,Kaitlin Sandeno,00:08:24.290000,3
+Sydney,2000,800m,Freestyle,0,Women,SUI,Flavia Rigamonti,00:08:25.910000,4
+Sydney,2000,800m,Freestyle,0,Women,GER,Hannah Stockbauer,00:08:30.110000,4
+Sydney,2000,800m,Freestyle,0,Women,CHN,Hua Chen,00:08:30.580000,4
+Sydney,2000,800m,Freestyle,0,Women,GER,Jana Henke,00:08:31.970000,4
+Sydney,2000,800m,Freestyle,0,Women,JPN,Sachiko Yamada,00:08:37.390000,4

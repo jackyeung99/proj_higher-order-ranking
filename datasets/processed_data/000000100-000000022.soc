@@ -1,0 +1,150 @@
+# TITLE: olympic_swimming
+# PUBLICATION DATE: 2024-06-21
+# NUMBER ALTERNATIVES: 123
+# NUMBER VOTERS: 22
+# NUMBER UNIQUE ORDERS: 22
+# ALTERNATIVE NAME 1: John Phillips Naber
+# ALTERNATIVE NAME 2: Peter Drake Rocca
+# ALTERNATIVE NAME 3: Roland Matthes
+# ALTERNATIVE NAME 4: Carlos Berrocal
+# ALTERNATIVE NAME 5: Lutz Wanja
+# ALTERNATIVE NAME 6: Robert Scott Jackson
+# ALTERNATIVE NAME 7: Mark Kerry
+# ALTERNATIVE NAME 8: Mark Tonelli
+# ALTERNATIVE NAME 9: Ulrike Richter
+# ALTERNATIVE NAME 10: Birgit Treiber
+# ALTERNATIVE NAME 11: Nancy Ellen Garapick
+# ALTERNATIVE NAME 12: Wendy Cook-Hogg
+# ALTERNATIVE NAME 13: Cheryl Gibson
+# ALTERNATIVE NAME 14: Nadezhda Stavko
+# ALTERNATIVE NAME 15: Antje Stille
+# ALTERNATIVE NAME 16: Diane Edelijn
+# ALTERNATIVE NAME 17: John Frederick Hencken
+# ALTERNATIVE NAME 18: David Andrew Wilkie
+# ALTERNATIVE NAME 19: Arvydas Juozaitis
+# ALTERNATIVE NAME 20: Graham Smith
+# ALTERNATIVE NAME 21: Giorgio Lalle
+# ALTERNATIVE NAME 22: Walter Kusch
+# ALTERNATIVE NAME 23: Duncan Goodhew
+# ALTERNATIVE NAME 24: Chris Woo
+# ALTERNATIVE NAME 25: Hannelore Anke
+# ALTERNATIVE NAME 26: Lyubov Rusanova
+# ALTERNATIVE NAME 27: Marina Koshevaya
+# ALTERNATIVE NAME 28: Carola Nitschke
+# ALTERNATIVE NAME 29: Gabriele Askamp
+# ALTERNATIVE NAME 30: Maryna Yurchenia
+# ALTERNATIVE NAME 31: Margaret Kelly-Hohmann
+# ALTERNATIVE NAME 32: Karla Linke
+# ALTERNATIVE NAME 33: Matthew Haynes Vogel
+# ALTERNATIVE NAME 34: Joseph Stuart Bottom
+# ALTERNATIVE NAME 35: Gary Jr. Hall
+# ALTERNATIVE NAME 36: Roger Pyttel
+# ALTERNATIVE NAME 37: Clayton Evans
+# ALTERNATIVE NAME 38: Hideaki Hara
+# ALTERNATIVE NAME 39: Neil Rogers
+# ALTERNATIVE NAME 40: Kornelia Ender
+# ALTERNATIVE NAME 41: Andrea Pollack
+# ALTERNATIVE NAME 42: Wendy Lansbach Boglioli
+# ALTERNATIVE NAME 43: Camille Wright
+# ALTERNATIVE NAME 44: Rosemarie Kother-Gabriel
+# ALTERNATIVE NAME 45: Wendy Quirk
+# ALTERNATIVE NAME 46: Lelei Alofa Fonoimoana
+# ALTERNATIVE NAME 47: Tamara Shelofastova
+# ALTERNATIVE NAME 48: Jim Montgomery
+# ALTERNATIVE NAME 49: Jack, Jr. Babashoff
+# ALTERNATIVE NAME 50: Peter Nocke
+# ALTERNATIVE NAME 51: Klaus Steinbach
+# ALTERNATIVE NAME 52: Marcello Guarducci
+# ALTERNATIVE NAME 53: Vladimir Bure
+# ALTERNATIVE NAME 54: Andrei Krylov
+# ALTERNATIVE NAME 55: Petra Priemer
+# ALTERNATIVE NAME 56: Enith Brigitha
+# ALTERNATIVE NAME 57: Kim Marie Peyton
+# ALTERNATIVE NAME 58: Shirley Farber Babashoff
+# ALTERNATIVE NAME 59: Claudia Hempel
+# ALTERNATIVE NAME 60: Jill Sterkel
+# ALTERNATIVE NAME 61: Judith (Jutta) Weber
+# ALTERNATIVE NAME 62: Brian Stuart Goodell
+# ALTERNATIVE NAME 63: Robert William Hackett
+# ALTERNATIVE NAME 64: Stephen Holland
+# ALTERNATIVE NAME 65: Djan Garrido Madruga
+# ALTERNATIVE NAME 66: Vladimir Salnikov
+# ALTERNATIVE NAME 67: Maxwell Metzker
+# ALTERNATIVE NAME 68: Paul Michael Hartloff
+# ALTERNATIVE NAME 69: Zoltan Wladar
+# ALTERNATIVE NAME 70: Daniel Lee Harrigan
+# ALTERNATIVE NAME 71: Miloslav Rolko
+# ALTERNATIVE NAME 72: Robert Rudolf
+# ALTERNATIVE NAME 73: Zoltan Verraszto
+# ALTERNATIVE NAME 74: Melissa Louise Belote
+# ALTERNATIVE NAME 75: Klavdiya Studennikova
+# ALTERNATIVE NAME 76: Richard Phillip Jr. Colella
+# ALTERNATIVE NAME 77: Charles Humphrey Keating
+# ALTERNATIVE NAME 78: Nikolai Pankin
+# ALTERNATIVE NAME 79: Deborah Rudd
+# ALTERNATIVE NAME 80: Mike Bruner
+# ALTERNATIVE NAME 81: Steven Garrett Gregg
+# ALTERNATIVE NAME 82: William Ronald, Jr. Forrester
+# ALTERNATIVE NAME 83: Michael Kraus
+# ALTERNATIVE NAME 84: Brian Brinkley
+# ALTERNATIVE NAME 85: Jorge Delgado
+# ALTERNATIVE NAME 86: Oleksandr Manachynskiy
+# ALTERNATIVE NAME 87: Ulrike Tauber
+# ALTERNATIVE NAME 88: Karen Patricia Moe-Thornton
+# ALTERNATIVE NAME 89: Natalya Popova
+# ALTERNATIVE NAME 90: Bruce Macfarlane Furniss
+# ALTERNATIVE NAME 91: Gordon Hunter Downie
+# ALTERNATIVE NAME 92: Andrei Bogdanov
+# ALTERNATIVE NAME 93: Annelies Maas
+# ALTERNATIVE NAME 94: Gail Amundrud
+# ALTERNATIVE NAME 95: Jennifer Leigh Hooker
+# ALTERNATIVE NAME 96: Irina Vlasova
+# ALTERNATIVE NAME 97: Timothy Andrew Shaw
+# ALTERNATIVE NAME 98: Vladimir Raskatov
+# ALTERNATIVE NAME 99: Sandor Nagy
+# ALTERNATIVE NAME 100: Vladimir Mikheev
+# ALTERNATIVE NAME 101: Stephen Badger
+# ALTERNATIVE NAME 102: Petra Thümer
+# ALTERNATIVE NAME 103: Shannon Smith
+# ALTERNATIVE NAME 104: Rebecca Perrott
+# ALTERNATIVE NAME 105: Kathy Heddy
+# ALTERNATIVE NAME 106: Brenda Grace Borgh
+# ALTERNATIVE NAME 107: Sabine Kahle
+# ALTERNATIVE NAME 108: Rodney Strachan
+# ALTERNATIVE NAME 109: Alexander Timothy Mckee
+# ALTERNATIVE NAME 110: Andrei Smirnov
+# ALTERNATIVE NAME 111: Andras Hargitay
+# ALTERNATIVE NAME 112: Steven Charles Furniss
+# ALTERNATIVE NAME 113: Andrew Ritchie
+# ALTERNATIVE NAME 114: Hans-Joachim Geisler
+# ALTERNATIVE NAME 115: Becky Smith
+# ALTERNATIVE NAME 116: Donna Lee Wennerstrom
+# ALTERNATIVE NAME 117: Joann Baker
+# ALTERNATIVE NAME 118: Monique Rodahl
+# ALTERNATIVE NAME 119: Wendy Elizabeth Weinberg
+# ALTERNATIVE NAME 120: Rosemary Milgate
+# ALTERNATIVE NAME 121: Nicole Kramer
+# ALTERNATIVE NAME 122: Regina Jäger
+# ALTERNATIVE NAME 123: Jenny Turrall
+1: 1,2,3,4,5,6,7,8
+1: 9,10,11,12,13,14,15,16
+1: 17,18,19,20,21,22,23,24
+1: 25,26,27,28,29,30,31,32
+1: 33,34,35,36,3,37,38,39
+1: 40,41,42,43,44,45,46,47
+1: 48,49,50,51,52,34,53,54
+1: 40,55,56,57,58,59,60,61
+1: 62,63,64,65,66,67,68,69
+1: 1,2,70,8,7,71,72,73
+1: 9,10,11,14,74,15,75,12
+1: 18,17,76,20,77,19,78,22
+1: 27,30,26,25,32,28,31,79
+1: 80,81,82,36,83,84,85,86
+1: 41,87,44,88,45,13,47,89
+1: 90,1,48,54,51,50,91,92
+1: 40,58,56,93,94,95,59,96
+1: 62,97,98,65,64,99,100,101
+1: 102,58,103,104,105,106,93,107
+1: 108,109,110,111,20,112,113,114
+1: 87,13,115,10,107,116,117,118
+1: 102,58,119,120,121,103,122,123

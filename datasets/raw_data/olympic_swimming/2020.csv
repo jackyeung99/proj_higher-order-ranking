@@ -1,0 +1,225 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+Tokyo,2020,100m,Backstroke,0,Men,ROC,Evgeny Rylov,51.98,1
+Tokyo,2020,100m,Backstroke,0,Men,ROC,Kliment Kolesnikov,52,2
+Tokyo,2020,100m,Backstroke,0,Men,USA,Ryan Murphy,52.19,3
+Tokyo,2020,100m,Backstroke,0,Men,ITA,Thomas Ceccon,52.3,4
+Tokyo,2020,100m,Backstroke,0,Men,CHN,Jiayu Xu,52.51,4
+Tokyo,2020,100m,Backstroke,0,Men,ESP,Hugo Gonzalez De Oliveira,52.78,4
+Tokyo,2020,100m,Backstroke,0,Men,AUS,Mitchell Larkin,52.79,4
+Tokyo,2020,100m,Backstroke,0,Men,ROU,Robert Glinta,52.95,4
+Tokyo,2020,100m,Breaststroke,0,Men,GBR,Adam Peaty,57.37,1
+Tokyo,2020,100m,Breaststroke,0,Men,NED,Arno Kamminga,58,2
+Tokyo,2020,100m,Breaststroke,0,Men,ITA,Nicolo Martinenghi,58.33,3
+Tokyo,2020,100m,Breaststroke,0,Men,USA,Michael Andrew,58.84,4
+Tokyo,2020,100m,Breaststroke,0,Men,GBR,James Wilby,58.96,4
+Tokyo,2020,100m,Breaststroke,0,Men,CHN,Zibei Yan,58.99,4
+Tokyo,2020,100m,Breaststroke,0,Men,USA,Andrew Wilson,58.99,4
+Tokyo,2020,100m,Breaststroke,0,Men,BLR,Ilya Shymanovich,59.36,4
+Tokyo,2020,100m,Butterfly,0,Men,USA,Caeleb Dressel,49.45,1
+Tokyo,2020,100m,Butterfly,0,Men,HUN,Kristof Kristof Milak,49.68,2
+Tokyo,2020,100m,Butterfly,0,Men,SUI,Noe Ponti,50.74,3
+Tokyo,2020,100m,Butterfly,0,Men,ROC,Andrei Minakov,50.88,4
+Tokyo,2020,100m,Butterfly,0,Men,POL,Jakub Majerski,50.92,4
+Tokyo,2020,100m,Butterfly,0,Men,AUS,Matthew Temple,50.92,4
+Tokyo,2020,100m,Butterfly,0,Men,GUA,Luis Martinez,51.09,4
+Tokyo,2020,100m,Butterfly,0,Men,BUL,Josif Miladinov,51.49,4
+Tokyo,2020,100m,Freestyle,0,Men,USA,Caeleb Dressel,47.02,1
+Tokyo,2020,100m,Freestyle,0,Men,AUS,Kyle Chalmers,47.08,2
+Tokyo,2020,100m,Freestyle,0,Men,ROC,Kliment Kolesnikov,47.44,3
+Tokyo,2020,100m,Freestyle,0,Men,FRA,Maxime Grousset,47.72,4
+Tokyo,2020,100m,Freestyle,0,Men,KOR,Sunwoo Hwang,47.82,4
+Tokyo,2020,100m,Freestyle,0,Men,ITA,Alessandro Miressi,47.86,4
+Tokyo,2020,100m,Freestyle,0,Men,ROU,David Popovici,48.04,4
+Tokyo,2020,100m,Freestyle,0,Men,HUN,Nandor Nemeth,48.1,4
+Tokyo,2020,1500m,Freestyle,0,Men,USA,Robert Finke,14:39.65,1
+Tokyo,2020,1500m,Freestyle,0,Men,UKR,Mykhailo Romanchuk,14:40.66,2
+Tokyo,2020,1500m,Freestyle,0,Men,GER,Florian Wellbrock,14:40.91,3
+Tokyo,2020,1500m,Freestyle,0,Men,ITA,Gregorio Paltrinieri,14:45.01,4
+Tokyo,2020,1500m,Freestyle,0,Men,GBR,Daniel Jervis,14:55.48,4
+Tokyo,2020,1500m,Freestyle,0,Men,ROC,Kirill Martynychev,14:55.85,4
+Tokyo,2020,1500m,Freestyle,0,Men,AUT,Felix Auboeck,15:03.47,4
+Tokyo,2020,1500m,Freestyle,0,Men,UKR,Serhii Frolov,15:04.26,4
+Tokyo,2020,200m,Backstroke,0,Men,ROC,Evgeny Rylov,1:53.27,1
+Tokyo,2020,200m,Backstroke,0,Men,USA,Ryan Murphy,1:54.15,2
+Tokyo,2020,200m,Backstroke,0,Men,GBR,Luke Greenbank,1:54.72,3
+Tokyo,2020,200m,Backstroke,0,Men,USA,Bryce Mefford,1:55.49,4
+Tokyo,2020,200m,Backstroke,0,Men,HUN,Adam Telegdy,1:56.15,4
+Tokyo,2020,200m,Backstroke,0,Men,POL,Radoslaw Kawecki,1:56.39,4
+Tokyo,2020,200m,Backstroke,0,Men,JPN,Ryosuke Irie,1:57.32,4
+Tokyo,2020,200m,Backstroke,0,Men,ESP,Nicolas Garcia Saiz,1:59.06,4
+Tokyo,2020,200m,Breaststroke,0,Men,AUS,Izaac Stubblety-Cook,2:06.38,1
+Tokyo,2020,200m,Breaststroke,0,Men,NED,Arno Kamminga,2:07.01,2
+Tokyo,2020,200m,Breaststroke,0,Men,FIN,Matti Mattsson,2:07.13,3
+Tokyo,2020,200m,Breaststroke,0,Men,ROC,Anton Chupkov,2:07.24,4
+Tokyo,2020,200m,Breaststroke,0,Men,USA,Nic Fink,2:07.93,4
+Tokyo,2020,200m,Breaststroke,0,Men,GBR,James Wilby,2:08.19,4
+Tokyo,2020,200m,Breaststroke,0,Men,JPN,Ryuya Mura,2:08.42,4
+Tokyo,2020,200m,Breaststroke,0,Men,SWE,Erik Persson,2:08.88,4
+Tokyo,2020,200m,Butterfly,0,Men,HUN,Kristof Kristof Milak,1:51.25,1
+Tokyo,2020,200m,Butterfly,0,Men,JPN,Tomoru Honda,1:53.73,2
+Tokyo,2020,200m,Butterfly,0,Men,ITA,Federico Burdisso,1:54.45,3
+Tokyo,2020,200m,Butterfly,0,Men,HUN,Tamas Kenderesi,1:54.52,4
+Tokyo,2020,200m,Butterfly,0,Men,RSA,Chad Le Clos,1:54.93,4
+Tokyo,2020,200m,Butterfly,0,Men,BRA,Leonardo De Deus,1:55.19,4
+Tokyo,2020,200m,Butterfly,0,Men,USA,Gunnar Bentz,1:55.46,4
+Tokyo,2020,200m,Butterfly,0,Men,POL,Krzysztof Chmielewski,1:55.88,4
+Tokyo,2020,200m,Freestyle,0,Men,GBR,Tom Dean,1:44.22,1
+Tokyo,2020,200m,Freestyle,0,Men,GBR,Duncan Scott,1:44.26,2
+Tokyo,2020,200m,Freestyle,0,Men,BRA,Fernando Scheffer,1:44.66,3
+Tokyo,2020,200m,Freestyle,0,Men,ROU,David Popovici,1:44.68,4
+Tokyo,2020,200m,Freestyle,0,Men,ROC,Martin Malyutin,1:45.01,4
+Tokyo,2020,200m,Freestyle,0,Men,USA,Kieran Smith,1:45.12,4
+Tokyo,2020,200m,Freestyle,0,Men,KOR,Sunwoo Hwang,1:45.26,4
+Tokyo,2020,200m,Freestyle,0,Men,LTU,Danas Rapsys,1:45.78,4
+Tokyo,2020,200m,Individual medley,0,Men,CHN,Shun Wang,1:55.00,1
+Tokyo,2020,200m,Individual medley,0,Men,GBR,Duncan Scott,1:55.28,2
+Tokyo,2020,200m,Individual medley,0,Men,SUI,Jeremy Desplanches,1:56.17,3
+Tokyo,2020,200m,Individual medley,0,Men,JPN,Daiya Seto,1:56.22,4
+Tokyo,2020,200m,Individual medley,0,Men,USA,Michael Andrew,1:57.31,4
+Tokyo,2020,200m,Individual medley,0,Men,JPN,Kosuke Hagino,1:57.49,4
+Tokyo,2020,200m,Individual medley,0,Men,HUN,Laszlo Cseh,1:57.68,4
+Tokyo,2020,200m,Individual medley,0,Men,NZL,Lewis Clareburt,1:57.70,4
+Tokyo,2020,400m,Freestyle,0,Men,TUN,Ahmed Hafnaoui,3:43.36,1
+Tokyo,2020,400m,Freestyle,0,Men,AUS,Jack Mcloughlin,3:43.52,2
+Tokyo,2020,400m,Freestyle,0,Men,USA,Kieran Smith,3:43.94,3
+Tokyo,2020,400m,Freestyle,0,Men,GER,Henning Bennet Muhlleitner,3:44.07,4
+Tokyo,2020,400m,Freestyle,0,Men,AUT,Felix Auboeck,3:44.07,4
+Tokyo,2020,400m,Freestyle,0,Men,ITA,Gabriele Detti,3:44.88,4
+Tokyo,2020,400m,Freestyle,0,Men,AUS,Elijah Winnington,3:45.20,4
+Tokyo,2020,400m,Freestyle,0,Men,USA,Jake Mitchell,3:45.39,4
+Tokyo,2020,400m,Individual medley,0,Men,USA,Chase Kalisz,4:09.42,1
+Tokyo,2020,400m,Individual medley,0,Men,USA,Jay Litherland,4:10.28,2
+Tokyo,2020,400m,Individual medley,0,Men,AUS,Brendon Smith,4:10.38,3
+Tokyo,2020,400m,Individual medley,0,Men,HUN,David Verraszto,4:10.59,4
+Tokyo,2020,400m,Individual medley,0,Men,GBR,Max Litchfield,4:10.59,4
+Tokyo,2020,400m,Individual medley,0,Men,FRA,Leon Marchand,4:11.16,4
+Tokyo,2020,400m,Individual medley,0,Men,NZL,Lewis Clareburt,4:11.22,4
+Tokyo,2020,400m,Individual medley,0,Men,ITA,Alberto Razzetti,4:11.32,4
+Tokyo,2020,50m,Freestyle,0,Men,USA,Caeleb Dressel,21.07,1
+Tokyo,2020,50m,Freestyle,0,Men,FRA,Florent Manaudou,21.55,2
+Tokyo,2020,50m,Freestyle,0,Men,BRA,Bruno Fratus,21.57,3
+Tokyo,2020,50m,Freestyle,0,Men,USA,Michael Andrew,21.60,4
+Tokyo,2020,50m,Freestyle,0,Men,GBR,Ben Proud,21.72,4
+Tokyo,2020,50m,Freestyle,0,Men,GRE,Kristian Gkolomeev,21.72,4
+Tokyo,2020,50m,Freestyle,0,Men,ITA,Lorenzo Zazzeri,21.78,4
+Tokyo,2020,50m,Freestyle,0,Men,NED,Thom De Boer,21.79,4
+Tokyo,2020,800m,Freestyle,0,Men,USA,Robert Finke,7:41.87,1
+Tokyo,2020,800m,Freestyle,0,Men,ITA,Gregorio Paltrinieri,7:42.11,2
+Tokyo,2020,800m,Freestyle,0,Men,UKR,Mykhailo Romanchuk,7:42.33,3
+Tokyo,2020,800m,Freestyle,0,Men,GER,Florian Wellbrock,7:42.68,4
+Tokyo,2020,800m,Freestyle,0,Men,AUS,Jack Mcloughlin,7:45.00,4
+Tokyo,2020,800m,Freestyle,0,Men,UKR,Serhii Frolov,7:45.11,4
+Tokyo,2020,800m,Freestyle,0,Men,AUT,Felix Auboeck,7:49.14,4
+Tokyo,2020,800m,Freestyle,0,Men,BRA,Guilherme Costa,7:53.31,4
+Tokyo,2020,100m,Backstroke,0,Women,AUS,Kaylee Mckeown,57.47,1
+Tokyo,2020,100m,Backstroke,0,Women,CAN,Kylie Masse,57.72,2
+Tokyo,2020,100m,Backstroke,0,Women,USA,Regan Smith,58.05,3
+Tokyo,2020,100m,Backstroke,0,Women,USA,Rhyan Elizabeth White,58.43,4
+Tokyo,2020,100m,Backstroke,0,Women,AUS,Emily Seebohm,58.45,4
+Tokyo,2020,100m,Backstroke,0,Women,GBR,Kathleen Dawson,58.70,4
+Tokyo,2020,100m,Backstroke,0,Women,NED,Kira Toussaint,59.11,4
+Tokyo,2020,100m,Backstroke,0,Women,ISR,Anastasya Gorbenko,59.53,4
+Tokyo,2020,100m,Breaststroke,0,Women,USA,Lydia Jacoby,1:04.95,1
+Tokyo,2020,100m,Breaststroke,0,Women,RSA,Tatjana Schoenmaker,1:05.22,2
+Tokyo,2020,100m,Breaststroke,0,Women,USA,Lilly King,1:05.54,3
+Tokyo,2020,100m,Breaststroke,0,Women,ROC,Evgeniia Chikunova,1:05.90,4
+Tokyo,2020,100m,Breaststroke,0,Women,ROC,Yuliya Efimova,1:06.02,4
+Tokyo,2020,100m,Breaststroke,0,Women,SWE,Sophie Hansson,1:06.07,4
+Tokyo,2020,100m,Breaststroke,0,Women,ITA,Martina Carraro,1:06.19,4
+Tokyo,2020,100m,Breaststroke,0,Women,IRL,Mona Mc Sharry,1:06.94,4
+Tokyo,2020,100m,Butterfly,0,Women,CAN,Margaret Mac Neil,55.59,1
+Tokyo,2020,100m,Butterfly,0,Women,CHN,Yufei Zhang,55.64,2
+Tokyo,2020,100m,Butterfly,0,Women,AUS,Emma Mckeon,55.72,3
+Tokyo,2020,100m,Butterfly,0,Women,USA,Torri Huske,55.73,4
+Tokyo,2020,100m,Butterfly,0,Women,SWE,Louise Hansson,56.22,4
+Tokyo,2020,100m,Butterfly,0,Women,FRA,Marie Wattel,56.27,4
+Tokyo,2020,100m,Butterfly,0,Women,SWE,Sarah Sjoestroem,56.91,4
+Tokyo,2020,100m,Butterfly,0,Women,BLR,Anastasiya Shkurdai,57.05,4
+Tokyo,2020,100m,Freestyle,0,Women,AUS,Emma Mckeon,51.96,1
+Tokyo,2020,100m,Freestyle,0,Women,HKG,Siobhan Bernadette Haughey,52.27,2
+Tokyo,2020,100m,Freestyle,0,Women,AUS,Cate Campbell,52.52,3
+Tokyo,2020,100m,Freestyle,0,Women,CAN,Penny Oleksiak,52.59,4
+Tokyo,2020,100m,Freestyle,0,Women,SWE,Sarah Sjoestroem,52.68,4
+Tokyo,2020,100m,Freestyle,0,Women,NED,Femke Heemskerk,52.79,4
+Tokyo,2020,100m,Freestyle,0,Women,GBR,Anna Hopkin,52.83,4
+Tokyo,2020,100m,Freestyle,0,Women,USA,Abbey Weitzeil,53.23,4
+Tokyo,2020,1500m,Freestyle,0,Women,USA,Katie Ledecky,15:37.34,1
+Tokyo,2020,1500m,Freestyle,0,Women,USA,Erica Sullivan,15:41.41,2
+Tokyo,2020,1500m,Freestyle,0,Women,GER,Sarah Kohler,15:42.91,3
+Tokyo,2020,1500m,Freestyle,0,Women,CHN,Jianjiahe Wang,15:46.37,4
+Tokyo,2020,1500m,Freestyle,0,Women,ITA,Simona Quadarella,15:53.97,4
+Tokyo,2020,1500m,Freestyle,0,Women,AUS,Kiah Melverton,16:00.36,4
+Tokyo,2020,1500m,Freestyle,0,Women,ROC,Anastasiia Kirpichnikova,16:00.38,4
+Tokyo,2020,1500m,Freestyle,0,Women,AUS,Maddy Gough,16:05.81,4
+Tokyo,2020,200m,Backstroke,0,Women,AUS,Kaylee Mckeown,2:04.68,1
+Tokyo,2020,200m,Backstroke,0,Women,CAN,Kylie Masse,2:05.42,2
+Tokyo,2020,200m,Backstroke,0,Women,AUS,Emily Seebohm,2:06.17,3
+Tokyo,2020,200m,Backstroke,0,Women,USA,Rhyan Elizabeth White,2:06.39,4
+Tokyo,2020,200m,Backstroke,0,Women,USA,Phoebe Bacon,2:06.40,4
+Tokyo,2020,200m,Backstroke,0,Women,CAN,Taylor Madison Ruck,2:08.24,4
+Tokyo,2020,200m,Backstroke,0,Women,CHN,Xuwei Peng,2:08.26,4
+Tokyo,2020,200m,Backstroke,0,Women,CHN,Yaxin Liu,2:08.48,4
+Tokyo,2020,200m,Breaststroke,0,Women,RSA,Tatjana Schoenmaker,2:18.95,1
+Tokyo,2020,200m,Breaststroke,0,Women,USA,Lilly King,2:19.92,2
+Tokyo,2020,200m,Breaststroke,0,Women,USA,Annie Lazor,2:20.84,3
+Tokyo,2020,200m,Breaststroke,0,Women,ROC,Evgeniia Chikunova,2:20.88,4
+Tokyo,2020,200m,Breaststroke,0,Women,RSA,Kaylene Corbett,2:22.06,4
+Tokyo,2020,200m,Breaststroke,0,Women,GBR,Molly Renshaw,2:22.65,4
+Tokyo,2020,200m,Breaststroke,0,Women,GBR,Abbie Wood,2:23.72,4
+Tokyo,2020,200m,Breaststroke,0,Women,BEL,Fanny Lecluyse,2:24.57,4
+Tokyo,2020,200m,Butterfly,0,Women,CHN,Yufei Zhang,2:03.86,1
+Tokyo,2020,200m,Butterfly,0,Women,USA,Regan Smith,2:05.30,2
+Tokyo,2020,200m,Butterfly,0,Women,USA,Hali Flickinger,2:05.65,3
+Tokyo,2020,200m,Butterfly,0,Women,HUN,Boglarka Kapas,2:06.53,4
+Tokyo,2020,200m,Butterfly,0,Women,ROC,Svetlana Chimrova,2:07.70,4
+Tokyo,2020,200m,Butterfly,0,Women,CHN,Liyan Yu,2:07.85,4
+Tokyo,2020,200m,Butterfly,0,Women,GBR,Alys Margaret Thomas,2:07.90,4
+Tokyo,2020,200m,Butterfly,0,Women,AUS,Brianna Throssell,2:09.48,4
+Tokyo,2020,200m,Freestyle,0,Women,AUS,Ariarne Titmus,1:53.50,1
+Tokyo,2020,200m,Freestyle,0,Women,HKG,Siobhan Bernadette Haughey,1:53.92,2
+Tokyo,2020,200m,Freestyle,0,Women,CAN,Penny Oleksiak,1:54.70,3
+Tokyo,2020,200m,Freestyle,0,Women,CHN,Junxuan Yang,1:55.01,4
+Tokyo,2020,200m,Freestyle,0,Women,USA,Katie Ledecky,1:55.21,4
+Tokyo,2020,200m,Freestyle,0,Women,CZE,Barbora Seemanova,1:55.45,4
+Tokyo,2020,200m,Freestyle,0,Women,ITA,Federica Pellegrini,1:55.91,4
+Tokyo,2020,200m,Freestyle,0,Women,AUS,Madison Wilson,1:56.39,4
+Tokyo,2020,200m,Individual medley,0,Women,JPN,Yui Ohashi,2:08.52,1
+Tokyo,2020,200m,Individual medley,0,Women,USA,Alex Walsh,2:08.65,2
+Tokyo,2020,200m,Individual medley,0,Women,USA,Kate Douglass,2:09.04,3
+Tokyo,2020,200m,Individual medley,0,Women,GBR,Abbie Wood,2:09.15,4
+Tokyo,2020,200m,Individual medley,0,Women,CHN,Yiting Yu,2:09.57,4
+Tokyo,2020,200m,Individual medley,0,Women,CAN,Sydney Pickrem,2:10.05,4
+Tokyo,2020,200m,Individual medley,0,Women,HUN,Katinka Hosszu,2:12.38,4
+Tokyo,2020,200m,Individual medley,0,Women,GBR,Alicia Wilson,2:12.86,4
+Tokyo,2020,400m,Freestyle,0,Women,AUS,Ariarne Titmus,3:56.69,1
+Tokyo,2020,400m,Freestyle,0,Women,USA,Katie Ledecky,3:57.36,2
+Tokyo,2020,400m,Freestyle,0,Women,CHN,Bingjie Li,4:01.08,3
+Tokyo,2020,400m,Freestyle,0,Women,CAN,Summer Mcintosh,4:02.42,4
+Tokyo,2020,400m,Freestyle,0,Women,CHN,Muhan Tang,4:04.10,4
+Tokyo,2020,400m,Freestyle,0,Women,GER,Isabel Gose,4:04.98,4
+Tokyo,2020,400m,Freestyle,0,Women,USA,Paige Madden,4:06.81,4
+Tokyo,2020,400m,Freestyle,0,Women,NZL,Erika Fairweather,4:08.01,4
+Tokyo,2020,400m,Freestyle,0,Women,AUS,Ariarne Titmus,3:56.69,1
+Tokyo,2020,400m,Freestyle,0,Women,USA,Katie Ledecky,3:57.36,2
+Tokyo,2020,400m,Freestyle,0,Women,CHN,Bingjie Li,4:01.08,3
+Tokyo,2020,400m,Freestyle,0,Women,CAN,Summer Mcintosh,4:02.42,4
+Tokyo,2020,400m,Freestyle,0,Women,CHN,Muhan Tang,4:04.10,4
+Tokyo,2020,400m,Freestyle,0,Women,GER,Isabel Gose,4:04.98,4
+Tokyo,2020,400m,Freestyle,0,Women,USA,Paige Madden,4:06.81,4
+Tokyo,2020,400m,Freestyle,0,Women,NZL,Erika Fairweather,4:08.01,4
+Tokyo,2020,50m,Freestyle,0,Women,AUS,Emma Mckeon,23.81,1
+Tokyo,2020,50m,Freestyle,0,Women,SWE,Sarah Sjoestroem,24.07,2
+Tokyo,2020,50m,Freestyle,0,Women,DEN,Pernille Blume,24.21,3
+Tokyo,2020,50m,Freestyle,0,Women,NED,Ranomi Kromowidjojo,24.30,4
+Tokyo,2020,50m,Freestyle,0,Women,POL,Katarzyna Wasick,24.32,4
+Tokyo,2020,50m,Freestyle,0,Women,CHN,Qingfeng Wu,24.32,4
+Tokyo,2020,50m,Freestyle,0,Women,AUS,Cate Campbell,24.36,4
+Tokyo,2020,50m,Freestyle,0,Women,USA,Abbey Weitzeil,24.41,4
+Tokyo,2020,800m,Freestyle,0,Women,USA,Katie Ledecky,8:12.57,1
+Tokyo,2020,800m,Freestyle,0,Women,AUS,Ariarne Titmus,8:13.83,2
+Tokyo,2020,800m,Freestyle,0,Women,ITA,Simona Quadarella,8:18.35,3
+Tokyo,2020,800m,Freestyle,0,Women,USA,Katie Grimes,8:19.38,4
+Tokyo,2020,800m,Freestyle,0,Women,CHN,Jianjiahe Wang,8:21.93,4
+Tokyo,2020,800m,Freestyle,0,Women,AUS,Kiah Melverton,8:22.25,4
+Tokyo,2020,800m,Freestyle,0,Women,GER,Sarah Kohler,8:24.56,4
+Tokyo,2020,800m,Freestyle,0,Women,ROC,Anastasiia Kirpichnikova,8:26.30,4

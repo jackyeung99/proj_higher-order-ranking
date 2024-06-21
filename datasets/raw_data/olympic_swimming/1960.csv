@@ -1,0 +1,121 @@
+Location,Year,Distance (in meters),Stroke,Relay?,Gender,Team,Athlete,Results,Rank
+Rome,1960,100m,Backstroke,0,Men,AUS,David Egmont Theile,00:01:01.900000,1
+Rome,1960,100m,Backstroke,0,Men,USA,Frank Edward Jr. Mckinney,00:01:02.100000,2
+Rome,1960,100m,Backstroke,0,Men,USA,Robert Earl Bennett,00:01:02.300000,3
+Rome,1960,100m,Backstroke,0,Men,FRA,Robert Christophe,00:01:03.200000,4
+Rome,1960,100m,Backstroke,0,Men,URS,Leonid Barbier,00:01:03.500000,4
+Rome,1960,100m,Backstroke,0,Men,GER,Wolfgang Wagner,00:01:03.500000,4
+Rome,1960,100m,Backstroke,0,Men,AUS,John James Monckton,00:01:04.100000,4
+Rome,1960,100m,Backstroke,0,Men,URS,Veiko Siimar,00:01:04.600000,4
+Rome,1960,100m,Backstroke,0,Women,USA,Lynn Edythe Burke,00:01:09.300000,1
+Rome,1960,100m,Backstroke,0,Women,GBR,Natalie Alwyne Steward,00:01:10.800000,2
+Rome,1960,100m,Backstroke,0,Women,JPN,Satoko Tanaka,00:01:11.400000,3
+Rome,1960,100m,Backstroke,0,Women,RSA,Laura Ranwell,00:01:11.400000,3
+Rome,1960,100m,Backstroke,0,Women,FRA,Rose Piacentini,00:01:11.400000,3
+Rome,1960,100m,Backstroke,0,Women,GBR,Sylvia Anne Lewis,00:01:11.800000,4
+Rome,1960,100m,Backstroke,0,Women,NED,Maria (Ria) Martina Van Velsen,00:01:12.100000,4
+Rome,1960,100m,Backstroke,0,Women,FRA,Nadine Delache,00:01:12.400000,4
+Rome,1960,100m,Butterfly,0,Women,USA,Carolyn Jane Schuler,00:01:09.500000,1
+Rome,1960,100m,Butterfly,0,Women,NED,Marianne Yvonne Heemskerk,00:01:10.400000,2
+Rome,1960,100m,Butterfly,0,Women,AUS,Janice Andrew,00:01:12.200000,3
+Rome,1960,100m,Butterfly,0,Women,GBR,Sheila Watt,00:01:13.300000,4
+Rome,1960,100m,Butterfly,0,Women,NED,Aartje Johanna Voorbij,00:01:13.300000,4
+Rome,1960,100m,Butterfly,0,Women,URS,Zinaida Belovetskaya,00:01:13.300000,4
+Rome,1960,100m,Butterfly,0,Women,SWE,Kristina Larsson,00:01:13.600000,4
+Rome,1960,100m,Butterfly,0,Women,USA,Carolyn Virginia Wood,Did not finish,0
+Rome,1960,100m,Freestyle,0,Men,AUS,John Devitt,55.200,2
+Rome,1960,100m,Freestyle,0,Men,USA,Lance Melvin Larson,55.100,1
+Rome,1960,100m,Freestyle,0,Men,BRA,Manuel Dos Santos Filho,55.400,3
+Rome,1960,100m,Freestyle,0,Men,USA,Richard Bruce Hunter,55.600,4
+Rome,1960,100m,Freestyle,0,Men,HUN,Gyula Dobai,56.300,4
+Rome,1960,100m,Freestyle,0,Men,CAN,Richard W. Pound,56.300,4
+Rome,1960,100m,Freestyle,0,Men,RSA,Aubrey Burer,56.300,4
+Rome,1960,100m,Freestyle,0,Men,SWE,Per-Ola Lindberg,57.100,4
+Rome,1960,100m,Freestyle,0,Women,AUS,Dawn Fraser,00:01:01.200000,1
+Rome,1960,100m,Freestyle,0,Women,USA,Chris Von Saltza,00:01:02.800000,2
+Rome,1960,100m,Freestyle,0,Women,GBR,Natalie Alwyne Steward,00:01:03.100000,3
+Rome,1960,100m,Freestyle,0,Women,USA,Carolyn Virginia Wood,00:01:03.400000,4
+Rome,1960,100m,Freestyle,0,Women,HUN,Csilla Madarasz-Bajnogel-Dobai,00:01:03.600000,4
+Rome,1960,100m,Freestyle,0,Women,NED,Erica Georgine Terpstra,00:01:04.300000,4
+Rome,1960,100m,Freestyle,0,Women,NED,Cocki Van Engelsdorp Gastelaars,00:01:04.700000,4
+Rome,1960,100m,Freestyle,0,Women,CAN,Mary Pauline Stewart,00:01:05.500000,4
+Rome,1960,1500m,Freestyle,0,Men,AUS,John (Jon) Konrads,00:17:19.600000,1
+Rome,1960,1500m,Freestyle,0,Men,AUS,Murray Rose,00:17:21.700000,2
+Rome,1960,1500m,Freestyle,0,Men,USA,George Thomas Breen,00:17:30.600000,3
+Rome,1960,1500m,Freestyle,0,Men,JPN,Tsuyoshi Yamanaka,00:17:34.700000,4
+Rome,1960,1500m,Freestyle,0,Men,HUN,Jozsef Katona,00:17:43.700000,4
+Rome,1960,1500m,Freestyle,0,Men,RSA,Murray Mclachlan,00:17:44.900000,4
+Rome,1960,1500m,Freestyle,0,Men,USA,Alan Brounell Somers,00:18:02.800000,4
+Rome,1960,1500m,Freestyle,0,Men,GBR,Richard Campion,00:18:22.700000,4
+Rome,1960,200m,Breaststroke,0,Men,USA,William Danforth Mulliken,00:02:37.400000,1
+Rome,1960,200m,Breaststroke,0,Men,JPN,Yoshihiko Osaki,00:02:38.000000,2
+Rome,1960,200m,Breaststroke,0,Men,NED,Wieger Emile Mensonides,00:02:39.700000,3
+Rome,1960,200m,Breaststroke,0,Men,GER,Egon Henninger,00:02:40.100000,4
+Rome,1960,200m,Breaststroke,0,Men,ITA,Roberto Lazzari,00:02:40.100000,4
+Rome,1960,200m,Breaststroke,0,Men,AUS,Terence Gathercole,00:02:40.200000,4
+Rome,1960,200m,Breaststroke,0,Men,POL,Andrzej Klopotowski,00:02:41.200000,4
+Rome,1960,200m,Breaststroke,0,Men,USA,Paul William Hait,00:02:41.400000,4
+Rome,1960,200m,Breaststroke,0,Women,GBR,Anita Lonsbrough,00:02:49.500000,1
+Rome,1960,200m,Breaststroke,0,Women,GER,Wiltrud Urselmann,00:02:50.000000,2
+Rome,1960,200m,Breaststroke,0,Women,GER,Barbara Göbel,00:02:53.600000,3
+Rome,1960,200m,Breaststroke,0,Women,NED,Adelaide Henriette (Ada) Den Haan,00:02:54.400000,4
+Rome,1960,200m,Breaststroke,0,Women,NED,Margretta (Gretta) Kok,00:02:54.600000,4
+Rome,1960,200m,Breaststroke,0,Women,USA,Anna Kindel Warner,00:02:55.400000,4
+Rome,1960,200m,Breaststroke,0,Women,USA,Patricia Kempner,00:02:55.500000,4
+Rome,1960,200m,Breaststroke,0,Women,DEN,Dorrit Gosmer Kristensen,00:02:55.700000,4
+Rome,1960,200m,Butterfly,0,Men,USA,Michael Francis Troy,00:02:12.800000,1
+Rome,1960,200m,Butterfly,0,Men,AUS,Neville Hayes,00:02:14.600000,2
+Rome,1960,200m,Butterfly,0,Men,USA,John David Gillanders,00:02:15.300000,3
+Rome,1960,200m,Butterfly,0,Men,ITA,Federico Dennerlein,00:02:16.000000,4
+Rome,1960,200m,Butterfly,0,Men,JPN,Haruo Yoshimuta,00:02:18.300000,4
+Rome,1960,200m,Butterfly,0,Men,AUS,Kevin John Berry,00:02:18.500000,4
+Rome,1960,200m,Butterfly,0,Men,URS,Valentin Kuzmin,00:02:18.900000,4
+Rome,1960,200m,Butterfly,0,Men,JPN,Kenzo Izutsu,00:02:19.400000,4
+Rome,1960,400m,Freestyle,0,Men,AUS,Murray Rose,00:04:18.300000,1
+Rome,1960,400m,Freestyle,0,Men,JPN,Tsuyoshi Yamanaka,00:04:21.400000,2
+Rome,1960,400m,Freestyle,0,Men,AUS,John (Jon) Konrads,00:04:21.800000,3
+Rome,1960,400m,Freestyle,0,Men,GBR,Ian Macintosh Black,00:04:21.800000,3
+Rome,1960,400m,Freestyle,0,Men,USA,Alan Brounell Somers,00:04:22.000000,4
+Rome,1960,400m,Freestyle,0,Men,RSA,Murray Mclachlan,00:04:26.300000,4
+Rome,1960,400m,Freestyle,0,Men,USA,Eugene Carl Lenz,00:04:26.800000,4
+Rome,1960,400m,Freestyle,0,Men,JPN,Makoto Fukui,00:04:29.600000,4
+Rome,1960,400m,Freestyle,0,Women,USA,Chris Von Saltza,00:04:50.600000,1
+Rome,1960,400m,Freestyle,0,Women,SWE,Jane Cederqvist,00:04:53.900000,2
+Rome,1960,400m,Freestyle,0,Women,NED,Catharina (Tineke) Lagerberg,00:04:56.900000,3
+Rome,1960,400m,Freestyle,0,Women,AUS,Ilsa Konrads,00:04:57.900000,4
+Rome,1960,400m,Freestyle,0,Women,AUS,Dawn Fraser,00:04:58.500000,4
+Rome,1960,400m,Freestyle,0,Women,GBR,Nancy Rae,00:04:59.700000,4
+Rome,1960,400m,Freestyle,0,Women,NED,Cornelia Hendrika Schimmel,00:05:02.300000,4
+Rome,1960,400m,Freestyle,0,Women,SWE,Birgitta Segerstrom,00:05:02.400000,4
+Rome,1960,4x100,Freestyle,1,Women,USA,"Shirley Anne Stobs, Chris Von Saltza, Susan Elizabeth Doerr, Joan Arlene Spillane, Carolyn Virginia Wood, Mary (Molly) Rae Botkin, Donna Elizabeth De Varona, Sylvia Eliina Ruuska",00:04:08.900000,1
+Rome,1960,4x100,Freestyle,1,Women,AUS,"Alva Colquhoun, Dawn Fraser, Sandra Anne Morgan, Ruth Rhonda Everuss, Lorraine Joyce Crapp, Ilsa Konrads",00:04:11.300000,2
+Rome,1960,4x100,Freestyle,1,Women,GER,"Gisela Weiss, Christel Steffin, Heidi Pechstein, Ursula Brunner",00:04:19.700000,3
+Rome,1960,4x100,Freestyle,1,Women,HUN,"Maria Frank, Katalin Boros, Csilla Madarasz-Bajnogel-Dobai",00:04:21.200000,4
+Rome,1960,4x100,Freestyle,1,Women,GBR,"Judith V. Samuel, Christine Robertson Harris, Natalie Alwyne Steward, Beryl O. Noakes",00:04:24.600000,4
+Rome,1960,4x100,Freestyle,1,Women,SWE,"Inger Thorngren, Kristina Larsson, Birgitta Segerstrom, Karin Larsson",00:04:25.100000,4
+Rome,1960,4x100,Freestyle,1,Women,ITA,"Anna Maria Cecchi, Rosanna Contardo, Paola Saini, Daniela Beneck, Maria Cristina Pacifici",00:04:26.800000,4
+Rome,1960,4x100,Freestyle,1,Women,SUN,"Ulvi Voog, Galina Sosnova, Marina Shamal, Irina Lyakhovskaya",00:04:29.000000,4
+Rome,1960,4x100,Medley,1,Men,USA,"Paul William Hait, Robert Earl Bennett, Frank Edward Jr. Mckinney, John David Gillanders, Stephen Edward Clark, Lance Melvin Larson, Felix Geoffrey Farrell",00:04:05.400000,1
+Rome,1960,4x100,Medley,1,Men,AUS,"Kevin John Berry, Julian Carroll, Geoffrey Shipton, William Burton, Neville Hayes, David Egmont Theile, Terence Gathercole",00:04:12.000000,2
+Rome,1960,4x100,Medley,1,Men,JPN,"Katsuki Ishihara, Kazuo Tomita, Yoshihiko Osaki, Kazuo Watanabe, Koichi Hirakida, Keigo Shimizu",00:04:12.200000,3
+Rome,1960,4x100,Medley,1,Men,CAN,"Richard W. Pound, Robert Wheaton, Cameron Grout, Stephen Rabinovitch",00:04:16.800000,4
+Rome,1960,4x100,Medley,1,Men,SUN,"Igor Luzhkovsky, Leonid Kolesnikov, Leonid Barbier",00:04:16.800000,4
+Rome,1960,4x100,Medley,1,Men,ITA,"Roberto Lazzari, Federico Dennerlein, Bruno Bianchi, Giuseppe Avellano",00:04:17.200000,4
+Rome,1960,4x100,Medley,1,Men,GBR,"Ian Macintosh Black, Christopher Charles Walkden, Stanley Richard Clarke, Graham Sykes",00:04:17.600000,4
+Rome,1960,4x100,Medley,1,Men,NLD,"Ronald (Ron) Kroon, Johannes (Jan) Jiskoot, Wieger Emile Mensonides, Gerrit Jacobus Korteweg",00:04:18.200000,4
+Rome,1960,4x100,Medley,1,Women,USA,"Joan Arlene Spillane, Carolyn Jane Schuler, Anna Kindel Warner, Chris Von Saltza, Lynn Edythe Burke, Patricia Kempner, Carolyn Virginia Wood",00:04:41.100000,1
+Rome,1960,4x100,Medley,1,Women,AUS,"Ilsa Konrads, Dawn Fraser, Rosemary Lassig, Maryleen Joy Wilson, Janice Andrew",00:04:45.900000,2
+Rome,1960,4x100,Medley,1,Women,GER,"Bärbel Fuhrmann, Ingrid Schmidt, Ursula Brunner, Ursula Küper",00:04:47.600000,3
+Rome,1960,4x100,Medley,1,Women,NLD,"Marianne Yvonne Heemskerk, Erica Georgine Terpstra, Maria (Ria) Martina Van Velsen, Adelaide Henriette (Ada) Den Haan, Catharina (Tineke) Lagerberg",00:04:47.600000,3
+Rome,1960,4x100,Medley,1,Women,GBR,"Jean Oldroyd, Sylvia Anne Lewis, Anita Lonsbrough, Natalie Alwyne Steward, Sheila Watt",00:04:47.600000,3
+Rome,1960,4x100,Medley,1,Women,HUN,"Magdolna David, Klara Killerman Bartos, Csilla Madarasz-Bajnogel-Dobai, Marta Egervary",00:04:53.700000,4
+Rome,1960,4x100,Medley,1,Women,JPN,"Yoshiko Takamatsu, Yoshiko Sato, Satoko Tanaka, Shizue Miyabe",00:04:56.400000,4
+Rome,1960,4x100,Medley,1,Women,SUN,"Marina Shamal, Lyudmila Korobova, Zinaida Belovetskaya, Valentina Poznyak, Larisa Viktorova",00:04:58.100000,4
+Rome,1960,4x200,Freestyle,1,Men,USA,"Stephen Edward Clark, George Prifold Harrison, Felix Geoffrey Farrell, Richard Adolph Blick, Frank Thomas Winters, William Thomas Darnton, Michael Francis Troy",00:08:10.200000,1
+Rome,1960,4x200,Freestyle,1,Men,JPN,,00:08:13.200000,2
+Rome,1960,4x200,Freestyle,1,Men,AUS,"David Gavin Dickson, Allan Wood, Murray Rose, John (Jon) Konrads, John Rigby, John Devitt",00:08:13.800000,3
+Rome,1960,4x200,Freestyle,1,Men,GBR,"Ian Macintosh Black, John Martin-Dye, Richard Campion, Hamilton Pirie Matt Milton",00:08:28.100000,4
+Rome,1960,4x200,Freestyle,1,Men,FIN,"Ilkka Suvanto, Stig-Olof Grenner, Kari Haavisto, Karri Kalervo Kayhko",00:08:29.700000,4
+Rome,1960,4x200,Freestyle,1,Men,SWE,"Lars-Erik Bengtsson, Sven-Goran Johansson, Bengt Nordwall, Bengt-Olov Almstedt, Per-Ola Lindberg",00:08:31.000000,4
+Rome,1960,4x200,Freestyle,1,Men,GER,"Frank Wiegand, Hans-Joachim Klein, Hans Zierold, Gerhard Hetz",00:08:31.800000,4
+Rome,1960,4x200,Freestyle,1,Men,SUN,"Boris Nikitin, Vitali Sorokin, Sergei Tovstoplet, Igor Luzhkovsky",00:08:32.200000,4
