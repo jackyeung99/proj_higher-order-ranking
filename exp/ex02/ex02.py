@@ -13,6 +13,9 @@ FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def evaluate_model_prediction(N, M, K1, K2, splits):
 
+    pi_values, data = generate_model_instance(N, M, K1, K2)
+    random.shuffle(data)
+
     shuffle_split = ShuffleSplit(n_splits=splits, test_size=0.2, random_state=42)
 
     for idx, (train_index, test_index) in enumerate(shuffle_split.split(data)):
