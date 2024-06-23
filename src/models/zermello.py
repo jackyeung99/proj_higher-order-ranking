@@ -1,5 +1,5 @@
 import random 
-from ..synthetic import * 
+from ..experiment_helpers.synthetic import * 
 
 
 

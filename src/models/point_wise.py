@@ -7,7 +7,7 @@ sys.path.append(repo_root)
 from src.models.newman import *
 from src.experiment_helpers.file_handlers import *
 from src.experiment_helpers.metrics import * 
-from src.synthetic import *
+from src.experiment_helpers.synthetic import *
 from src.utils import *
 
 def compute_point_wise_ratings(training_set, pi_values):

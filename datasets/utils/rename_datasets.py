@@ -106,7 +106,7 @@ def rename_dataset_name_to_num(file_directory):
         file_split = file.split('-')
         try:
             datset_num = FLIPPED_DATASET_NAMES[file_split[0]]
-            new_name = f'{datset_num.zfill(9)}-{file_split[1]}'
+            new_name = f'{datset_num.zfill(5)}-{file_split[1]}'
 
             os.rename(os.path.join(base_path, file), os.path.join(base_path, new_name))
         except:

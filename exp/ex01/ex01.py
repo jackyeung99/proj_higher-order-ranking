@@ -6,12 +6,7 @@ import logging
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.models.zermello import *
-from src.synthetic import *
-from src.file_readers import * 
-from src.experiment_helpers.metrics import * 
-from src.models.higher_order_leadership import * 
-from src.experiment_helpers.file_handlers import * 
+from src.experiment_helpers import *
 
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -19,37 +14,15 @@ FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 def evaluate_model_likelihood(N, M, K1, K2):
 
     for rep in range(20):
-        for model in ['ho','hol']:
-            if model == 'ho':
-                experiment_train_size_ho(N, M, K1, K2, rep)
-            else:
-                experiment_train_size_hol(N, M, K1, K2, rep)
+        pi_values, data = generate_model_instance(N, M, K1, K2)
+        random.shuffle(data)
+        for train_size in np.logspace(-2, 0, endpoint=False, num=25):
+            training_set, testing_set = split_games(data, train_size)
     
+            file_name = f"N-{N}_M-{M}_K1-{K1}_K2-{K2}_trainsize-{train_size}_rep-{rep}_model-ho.csv"
+            run_models(training_set, testing_set, pi_values, file_name)
 
-def experiment_train_size_ho(N, M, K1, K2, rep):
-
-    pi_values, data = generate_model_instance(N, M, K1, K2)
-    random.shuffle(data)
-    for train_size in np.logspace(-2, 0, endpoint=False, num=25):
-        training_set, testing_set = split_games(data, train_size)
-        ho_likelihood, hol_likelihood, std_likelihood = benchmark_ho(training_set, testing_set, pi_values)
-
-        file_name = f"N-{N}_M-{M}_K1-{K1}_K2-{K2}_trainsize-{train_size}_rep-{rep}_model-ho.csv"
-        save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, FILE_DIR, file_name)
         
-        
-def experiment_train_size_hol(N, M, K1, K2, rep):
-
-    pi_values, data = generate_leadership_model_instance(N, M, K1, K2)
-    random.shuffle(data)
-    for train_size in np.logspace(-2, 0, endpoint=False, num=25):
-        training_set, testing_set = split_games(data, train_size)
-
-        ho_likelihood, hol_likelihood, std_likelihood = benchmark_hol(training_set, testing_set, pi_values)
-
-        file_name = f"N-{N}_M-{M}_K1-{K1}_K2-{K2}_trainsize-{train_size}_rep-{rep}_model-hol.csv"
-        save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, FILE_DIR, file_name)
-
 
 
 if __name__ == "__main__":

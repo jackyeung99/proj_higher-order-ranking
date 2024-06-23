@@ -8,15 +8,6 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(repo_root)
 
 
-def split_games(games, train_size):
-    
-    sampled_games = int(train_size * len(games))
-
-    training_set = games[:sampled_games]
-    testing_set = games[sampled_games:]
-
-    return training_set, testing_set
-
 
 def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-6):
 
@@ -54,7 +45,6 @@ def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-6):
         tmp_scores = {}
         
         for s in scores:
-            
             tmp_scores[s] = method(s, scores, bond_matrix)
             
                             
@@ -81,7 +71,7 @@ def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-6):
             
     return scores, [x, y, z]
 
-def solve_equations (bond_matrix, max_iter, pi_values, method = 'newman', sens=1e-6):
+def solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-6):
 
     ''' 
     Offline/asynchronous iterative method:
@@ -124,18 +114,7 @@ def solve_equations (bond_matrix, max_iter, pi_values, method = 'newman', sens=1
             s = random.choice(list_of_nodes)
 
             old = scores[s]
-
-            if method == 'zermelo':
-                scores[s] = iterate_equation_zermelo_new (s, scores, bond_matrix)
-            if method == 'newman':
-                scores[s] = iterate_equation_newman (s, scores, bond_matrix)
-            if method == 'newman_leadership':
-                scores[s] = iterate_equation_newman_leadership (s, scores, bond_matrix)
-
-
-
-
-
+            scores[n] = method(s, scores, bond_matrix)
             normalize_scores (scores)
 
             if abs(old-scores[s]) > err:
@@ -196,3 +175,54 @@ def establish_order (tmp, pi_values):
         tmp = tmp1.copy()
 
     return order
+
+def create_hypergraph_from_data (data):
+
+    bond_matrix = {}
+
+
+    for i in range(0, len(data)):
+
+        K = len(data[i])
+        for r in range(0, len(data[i])):
+
+            s = data[i][r]
+
+            if s not in bond_matrix:
+                bond_matrix[s] = {}
+            if K not in bond_matrix[s]:
+                bond_matrix[s][K] = {}
+            if r not in bond_matrix[s][K]:
+                bond_matrix[s][K][r] = []
+            bond_matrix[s][K][r].append(data[i])
+
+
+    return bond_matrix
+
+
+def binarize_data (data):
+
+    bin_data = []
+
+    for i in range(0, len(data)):
+
+        K = len(data[i])
+        for r in range(0, K-1):
+            for s in range (r+1, K):
+                bin_data.append([data[i][r],data[i][s]])
+
+
+    return bin_data
+
+def binarize_data_leadership (data):
+    
+    bin_data = []
+    
+    for i in range(0, len(data)):
+        
+        K = len(data[i])
+        for s in range (1, K):
+            bin_data.append([data[i][0],data[i][s]])
+        
+        
+    return bin_data

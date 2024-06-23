@@ -1,15 +1,16 @@
 import sys
 import os
 import numpy as np
-import random
 import tensorflow as tf
 import tensorflow_ranking as tfr
 import tensorflow_recommenders as tfrs
+from sklearn.model_selection import train_test_split
 
-repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.experiment_helpers.file_handlers import read_data_fifa
+from src.utils import *
+from src.experiment_helpers import *
 
 # Convert games to features and labels for list-wise ranking
 def prepare_data(games):
@@ -40,6 +41,7 @@ class RankingModel(tfrs.Model):
         self.score_model = tf.keras.Sequential([
             # Learn multiple dense layers.
             tf.keras.layers.Dense(256, activation="relu"),
+    
             tf.keras.layers.Dense(64, activation="relu"),
             # Make ranking predictions in the final layer.
             tf.keras.layers.Dense(1)
@@ -86,7 +88,7 @@ def predict_ratings(data, model):
     return player_ratings
 
 
-def run_model(games):
+def compute_predicited_rankings_tensor_flow(games, pi_values):
 
     # Prepare the data
     prepared_data = prepare_data(games)
@@ -104,16 +106,33 @@ def run_model(games):
     # Predict ratings for the prepared data
     player_ratings = predict_ratings(prepared_data, model)
 
-    final_player_ratings = {}
     for key, value in player_ratings.items():
-        final_player_ratings[key] = np.mean(value)
+        pi_values[key] = np.mean(value)
 
-    return final_player_ratings
+    # shift data into positive space
+    min = sorted(pi_values.values())[0] - .1
+    pi_values = { key: value - min for key, value in pi_values.items()}
+    normalize_scores(pi_values)
+
+    return pi_values
 
 
 
 if __name__ == '__main__':
-    # Read data
-    data, pi_values = read_data_fifa('datasets/fifa_wc.txt')
 
-    print(run_model(data))
+
+
+    # Read data
+    data, pi_values = read_strict_ordered_dataset('datasets/processed_data/00045-00000014.soc')
+
+
+    train, test = train_test_split(data)
+    
+    
+    ratings = compute_predicited_rankings_tensor_flow(train, pi_values)
+    # print(ratings)
+   
+    print(np.mean(compute_likelihood(ratings, test)))
+
+
+

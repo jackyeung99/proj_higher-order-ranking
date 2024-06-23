@@ -111,11 +111,11 @@ def leadership_probability_estimation(pred_rating, game):
     total_ratings = sum(player_rankings)
     return np.log(highest_rank) - np.log(total_ratings)
 
-def recursive_probability_estimation(pred_rating, game, total_prob_estimation=0):
+def recursive_probability_estimation(pred_rating, game, total_prob_estimation=0, episilon=1e-10):
     player_ratings = [pred_rating[player] for player in game]
     first_pos = player_ratings[0]
     total_ratings = sum(player_ratings)
-    total_prob_estimation += np.log(first_pos) - np.log(total_ratings)
+    total_prob_estimation += np.log(first_pos+episilon) - np.log(total_ratings+episilon)
 
     if len(player_ratings) > 2:
         return recursive_probability_estimation(pred_rating, game[1:], total_prob_estimation)

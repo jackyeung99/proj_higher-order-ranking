@@ -1,37 +1,28 @@
 import os
 import sys
-import csv
 import logging
+from sklearn.model_selection import ShuffleSplit
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-
-from src.models.zermello import *
-from src.synthetic import *
-from src.file_readers import * 
-from src.experiment_helpers.metrics import * 
-from src.models.higher_order_leadership import * 
-from src.experiment_helpers.file_handlers import * 
+from src.experiment_helpers import *
 
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-def evaluate_model_prediction(N, M, K1, K2):
+def evaluate_model_prediction(N, M, K1, K2, splits):
 
-    for rep in range(50):
+    shuffle_split = ShuffleSplit(n_splits=splits, test_size=0.2, random_state=42)
 
-        for model in ['ho', 'hol']:
+    for idx, (train_index, test_index) in enumerate(shuffle_split.split(data)):
+        train_data = [data[i] for i in train_index]
+        test_data = [data[i] for i in test_index]
 
-            if model == 'ho':
-                ho_likelihood, hol_likelihood, std_likelihood = generate_and_benchmark_ho_model(N, M, K1, K2, train_size=.8)
-            else: 
-                ho_likelihood, hol_likelihood, std_likelihood = generate_and_benchmark_hol_model(N, M, K1, K2, train_size = .8)
+        file_name = os.path.join(repo_root, f"exp/ex02/data/N-{N}_M-{M}_K1-{K1}_K2-{K2}_rep-{idx}.csv")
+        run_models(train_data, test_data, pi_values, file_name)
 
-
-            file_name = f"N-{N}_M-{M}_K1-{K1}_K2-{K2}_rep-{rep}_model-{model}.csv"
-            save_instance_results(ho_likelihood, hol_likelihood, std_likelihood, FILE_DIR, file_name)
-
+        
 
 if __name__ == '__main__':
 
@@ -41,5 +32,5 @@ if __name__ == '__main__':
     
     K2 = K1 + 1
     logging.debug(f'running code for {N} {M} {K1} {K2}')
-    evaluate_model_prediction(N, M, K1, K2)
+    evaluate_model_prediction(N, M, K1, K2, 20)
         
