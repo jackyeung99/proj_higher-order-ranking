@@ -9,3 +9,4 @@ experiments/experiment_helpers/__pycache__
 experiments/scores*
 bin/*.txt
 exp/**/data/
+tensor_flow_ltr.py
