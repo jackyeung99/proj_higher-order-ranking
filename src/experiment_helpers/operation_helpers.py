@@ -4,7 +4,7 @@ import sys
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src import *
+from src.models import *
 
 
 def split_games(games, train_size):
@@ -24,11 +24,12 @@ def get_predictions(model, training_set, pi_values):
     elif model == 'newman_leadership':
         return compute_predicted_rankings_std_leadership(training_set, pi_values)
     elif model == 'higher_order_newman':
-        return compute_predicted_rankings_std(training_set, pi_values)
+        return compute_predicted_rankings_ho(training_set, pi_values)
     elif model == 'higher_order_leadership':
-        return compute_predicted_rankings_std_leadership(training_set, pi_values)
+        return compute_predicted_rankings_hol(training_set, pi_values)
     elif model == 'tensor_flow':
-        return compute_predicited_rankings_tensor_flow(training_set, pi_values)
+        # return compute_predicited_rankings_tensor_flow(training_set, pi_values)
+        pass
     elif model == 'point_wise':
         return compute_point_wise_ratings(training_set, pi_values)
     elif model == 'spring_rank':

@@ -14,7 +14,6 @@ sys.path.append(repo_root)
 
 from src.models import *
 from src.experiment_helpers import *
-from src.experiment_helpers.synthetic import *
 from src.utils import *
 
 ''' Credit to https://github.com/LarremoreLab/SpringRank for this file'''
@@ -160,7 +159,9 @@ def compute_predicted_ratings_spring_rank(games, pi_values):
     for i,j in bin_data:
         A[node_to_index[i]][node_to_index[j]] += 1
 
+
     shifted_ranks = shift_rank(get_ranks(A))
+
 
     return {index_to_node[index]: rank for index, rank in enumerate(shifted_ranks)}
 
@@ -183,5 +184,9 @@ if __name__ == '__main__':
 
     data, pi_values = read_strict_ordered_dataset('datasets/processed_data/00045-00000014.soc')
 
-    ranks = compute_predicted_ratings_spring_rank(data, pi_values)
-    print(ranks)
+    train, test = train_test_split(data)
+
+    ranks = compute_predicted_ratings_spring_rank(train, pi_values)
+
+    print(np.mean(compute_likelihood(ranks, test)))
+   

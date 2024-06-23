@@ -1,9 +1,9 @@
 import sys
 import os
 import numpy as np
-import tensorflow as tf
-import tensorflow_ranking as tfr
-import tensorflow_recommenders as tfrs
+# import tensorflow as tf
+# import tensorflow_ranking as tfr
+# import tensorflow_recommenders as tfrs
 from sklearn.model_selection import train_test_split
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))

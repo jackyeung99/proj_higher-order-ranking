@@ -24,8 +24,10 @@ def run_experiment(dataset_file_path, splits, metric='std_likelihood'):
                     train_data = [data[i] for i in train_index]
                     test_data = [data[i] for i in test_index]
 
-                    file_name = f'exp/ex03/data/f{file[:-4]}_split_{idx + 1}_results.csv'
-                    run_models(train_data, test_data, pi_values, metric, file_name)
+                    file_name = f'exp/ex03/data/f{file[:-4]}_results.csv'
+                    run_models(train_data, test_data, pi_values,file_name)
+
+
                 
             
 
@@ -35,5 +37,5 @@ if __name__ == '__main__':
     # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex03_realdata/data ~/senior_thesis/higher_order_ranking/exp/ex03_realdata/data
 
     dataset_file_path = 'datasets/processed_data'
-    splits = 10
+    splits = 1
     run_experiment(dataset_file_path, splits) 
