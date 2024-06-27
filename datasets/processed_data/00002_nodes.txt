@@ -1,0 +1,35 @@
+# ALTERNATIVE NAME 1: Branden Robinson
+# ALTERNATIVE NAME 2: Anthony Towns
+# ALTERNATIVE NAME 3: Matthew Garrett
+# ALTERNATIVE NAME 4: Andreas Schuldei
+# ALTERNATIVE NAME 5: Angus Lees
+# ALTERNATIVE NAME 6: None of the Above
+# ALTERNATIVE NAME 7: Jonathan Walther
+# ALTERNATIVE NAME 8: None Of The Above
+# ALTERNATIVE NAME 9: Wouter Verhelst
+# ALTERNATIVE NAME 10: Aigars Mahinovs
+# ALTERNATIVE NAME 11: Gustavo Franco
+# ALTERNATIVE NAME 12: Sam Hocevar
+# ALTERNATIVE NAME 13: Steve McIntyre
+# ALTERNATIVE NAME 14: Raphal Hertzog
+# ALTERNATIVE NAME 15: Simon Richter
+# ALTERNATIVE NAME 16: Stefano Zacchiroli
+# ALTERNATIVE NAME 17: Margarita Manterola
+# ALTERNATIVE NAME 18: Charles Plessy
+# ALTERNATIVE NAME 19: Jeroen van Wolffelaar
+# ALTERNATIVE NAME 20: Bill Allombert
+# ALTERNATIVE NAME 21: Ari Pollak
+# ALTERNATIVE NAME 22: Jonathan aka Ted Walther
+# ALTERNATIVE NAME 23: Gergely Nagy
+# ALTERNATIVE NAME 24: Swirl
+# ALTERNATIVE NAME 25: Modified
+# ALTERNATIVE NAME 26: DV
+# ALTERNATIVE NAME 27: Old Logo
+# ALTERNATIVE NAME 28: Fixed Chicken
+# ALTERNATIVE NAME 29: Ants
+# ALTERNATIVE NAME 30: Further Discussion
+# ALTERNATIVE NAME 31: Seal
+# ALTERNATIVE NAME 32: Bdale Garbee
+# ALTERNATIVE NAME 33: Raphael Hertzog
+# ALTERNATIVE NAME 34: Martin Michlmayr
+# ALTERNATIVE NAME 35: Moshe Zadka

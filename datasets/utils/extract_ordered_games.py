@@ -1,8 +1,25 @@
-
+import sys 
+import os
 import pandas as pd 
 
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(repo_root)
+
+from datasets.utils.extract_ordered_games import *
+from src.utils.file_handlers import *
 
 ''' Functions to read files and extract games and pi_values'''
+def convert_games_to_dict(games):
+    # Count occurrences of each unique ordering
+    unique_orderings = {}
+    for game in games:
+        ordering = tuple(game)  
+        if ordering in unique_orderings:
+            unique_orderings[ordering] += 1
+        else: 
+            unique_orderings[ordering] = 1
+    
+    return dict(sorted(unique_orderings.items(), key = lambda x:x[1],  reverse=True))
 
 def read_data_horse(filename):
 
@@ -16,6 +33,7 @@ def read_data_horse(filename):
         group = group.sort_values(by='position')
         data.append(group['horseName'].to_list()) 
 
+    data = convert_games_to_dict(data)
     return data, pi_values
 
     
@@ -33,6 +51,7 @@ def read_data_swimming(filename):
         group.sort_values(by='Results')
         data.append(group['Athlete'].to_list())
 
+    data = convert_games_to_dict(data)
     return data, pi_values
 
 def read_data_ucl (filename):
@@ -50,7 +69,7 @@ def read_data_ucl (filename):
                     pi_values[teams[i]] = 1.0
                 data.append(teams)
 
-
+    data = convert_games_to_dict(data)
     return data, pi_values
 
 def read_data_fifa (filename):
@@ -70,7 +89,7 @@ def read_data_fifa (filename):
                     pi_values[teams[i]] = 1.0
                 data.append(teams)
 
-
+    data = convert_games_to_dict(data)
     return data, pi_values
 
 
@@ -89,5 +108,35 @@ def read_data_authors (filename):
                     pi_values[teams[i]] = 1.0
                 data.append(teams)
 
+    data = convert_games_to_dict(data)
+    return data, pi_values
+
+
+def read_strict_ordered_dataset(filename):
+    data = {}
+    pi_values = {}
+
+    with open(filename, 'r') as file:
+        for line in file:
+            line = line.strip()
+
+            # Extract votes and counts
+            if line and not line.startswith("#"):
+                try:
+                    count, order = line.split(": ")
+                    count = int(count)
+                    order = tuple(map(int, order.split(",")))
+
+
+                    data[order] = count
+                    # add all unique players to pi_values
+                    for id in order:
+                        if id not in pi_values:
+                            pi_values[id] = 1.0
+                except:
+                    print(filename)
+     
+
 
     return data, pi_values
+

@@ -9,8 +9,8 @@ from sklearn.model_selection import train_test_split
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.utils import *
-from src.experiment_helpers import *
+from src.utils.solvers import *
+
 
 # Convert games to features and labels for list-wise ranking
 def prepare_data(games):

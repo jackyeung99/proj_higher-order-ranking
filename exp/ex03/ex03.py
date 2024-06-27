@@ -24,7 +24,7 @@ def run_experiment(dataset_file_path, splits, metric='std_likelihood'):
                     train_data = [data[i] for i in train_index]
                     test_data = [data[i] for i in test_index]
 
-                    file_name = f'exp/ex03/data/f{file[:-4]}_results.csv'
+                    file_name = os.path.join(repo_root, f'exp/ex03/data/f{file[:-4]}_results.csv')
                     run_models(train_data, test_data, pi_values,file_name)
 
 

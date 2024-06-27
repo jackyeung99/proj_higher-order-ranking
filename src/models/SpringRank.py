@@ -13,8 +13,7 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 from src.models import *
-from src.experiment_helpers import *
-from src.utils import *
+from src.utils.solvers import *
 
 ''' Credit to https://github.com/LarremoreLab/SpringRank for this file'''
 def get_scaled_ranks(A, scale=0.75):
@@ -139,11 +138,11 @@ def SpringRank(A, alpha=0):
     return np.transpose(rank)
 
 ''' Credit to https://github.com/cdebacco/SpringRank/blob/master/python/tools.py for this function  '''
-def shift_rank(ranks):
+def shift_rank(ranks, episolon = 1e-10):
     '''
     Shifts all scores so that the minimum is in zero and the others are all positive
     '''
-    min_r=min(ranks)
+    min_r=min(ranks)-episolon
     N=len(ranks)
     for i in range(N): ranks[i]=ranks[i]-min_r
     return ranks    
@@ -161,9 +160,9 @@ def compute_predicted_ratings_spring_rank(games, pi_values):
 
 
     shifted_ranks = shift_rank(get_ranks(A))
-
-
-    return {index_to_node[index]: rank for index, rank in enumerate(shifted_ranks)}
+    pi_values = {index_to_node[index]: rank for index, rank in enumerate(shifted_ranks)}
+    normalize_scores(pi_values)
+    return pi_values
 
 
 @jit(nopython=True)
@@ -188,5 +187,6 @@ if __name__ == '__main__':
 
     ranks = compute_predicted_ratings_spring_rank(train, pi_values)
 
-    print(np.mean(compute_likelihood(ranks, test)))
+    print(ranks)
+    # print(np.mean(compute_likelihood(ranks, test)))
    

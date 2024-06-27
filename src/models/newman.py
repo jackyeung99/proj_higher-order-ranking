@@ -6,10 +6,10 @@ import random
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.experiment_helpers.file_handlers import *
-from src.experiment_helpers.metrics import * 
-from src.experiment_helpers.synthetic import *
-from src.utils import *
+from src.utils.file_handlers import *
+from src.utils.metrics import * 
+from src.utils.graph_tools import *
+from src.utils.solvers import *
 
 
 def iterate_equation_newman (s, scores, bond_matrix):
