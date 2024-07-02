@@ -46,7 +46,7 @@ def iterate_equation_newman_leadership (s, scores, bond_matrix):
 
     return a/b
 
-def compute_predicted_rankings_ho(training_set, pi_values): 
+def compute_predicted_ratings_ho(training_set, pi_values): 
     
     bond_matrix = create_hypergraph_from_data (training_set)
     predicted_ho_scores, _ = synch_solve_equations(bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-6)
@@ -55,7 +55,7 @@ def compute_predicted_rankings_ho(training_set, pi_values):
 
 
 
-def compute_predicted_rankings_hol(training_set, pi_values):
+def compute_predicted_ratings_hol(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data (training_set)
     predicted_hol_scores, _ = synch_solve_equations (bond_matrix, 1000, pi_values, iterate_equation_newman_leadership, sens=1e-6)
 

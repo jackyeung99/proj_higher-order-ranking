@@ -12,8 +12,7 @@ warnings.simplefilter('ignore', SparseEfficiencyWarning)
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.models import *
-from src.utils.solvers import *
+from src.utils.graph_tools import *
 
 ''' Credit to https://github.com/LarremoreLab/SpringRank for this file'''
 def get_scaled_ranks(A, scale=0.75):
@@ -163,6 +162,24 @@ def compute_predicted_ratings_spring_rank(games, pi_values):
     pi_values = {index_to_node[index]: rank for index, rank in enumerate(shifted_ranks)}
     normalize_scores(pi_values)
     return pi_values
+
+def compute_predicted_ratings_spring_rank_leadership(games, pi_values):
+    bin_data = binarize_data_leadership (games)
+    unique_nodes = list(pi_values.keys())
+    node_to_index = {node: index for index, node in enumerate(unique_nodes)}
+    index_to_node = {v:k for k, v in node_to_index.items()}
+    num_players = len(unique_nodes)
+
+    A = np.full((num_players, num_players), 1.0, dtype=float)
+    for i,j in bin_data:
+        A[node_to_index[i]][node_to_index[j]] += 1
+
+
+    shifted_ranks = shift_rank(get_ranks(A))
+    pi_values = {index_to_node[index]: rank for index, rank in enumerate(shifted_ranks)}
+    normalize_scores(pi_values)
+    return pi_values
+
 
 
 @jit(nopython=True)

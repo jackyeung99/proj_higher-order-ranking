@@ -6,10 +6,9 @@ import logging
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.experiment_helpers import *
+from src import *
 
 
-FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def evaluate_model_likelihood(N, M, K1, K2):
 
@@ -20,7 +19,12 @@ def evaluate_model_likelihood(N, M, K1, K2):
             training_set, testing_set = split_games(data, train_size)
     
             file_name = os.path.join(repo_root, f"exp/ex01/data/N-{N}_M-{M}_K1-{K1}_K2-{K2}_trainsize-{train_size}_rep-{rep}.csv")
-            run_models(training_set, testing_set, pi_values, file_name)
+            df = run_models(training_set, testing_set, pi_values, file_name)
+            print(calculate_percentages(df))
+            
+
+
+
 
         
 

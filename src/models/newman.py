@@ -51,7 +51,7 @@ def iterate_equation_newman (s, scores, bond_matrix):
     return a/b
 
 
-def compute_predicted_rankings_std(training_set, pi_values):
+def compute_predicted_ratings_std(training_set, pi_values):
     bin_data = binarize_data (training_set)
     bin_bond_matrix = create_hypergraph_from_data (bin_data)
 
@@ -59,7 +59,7 @@ def compute_predicted_rankings_std(training_set, pi_values):
 
     return predicted_std_scores
 
-def compute_predicted_rankings_std_leadership(training_set, pi_values): 
+def compute_predicted_ratings_std_leadership(training_set, pi_values): 
     bin_data = binarize_data_leadership (training_set)
     bin_bond_matrix = create_hypergraph_from_data (bin_data)
 

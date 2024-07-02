@@ -3,3 +3,4 @@ from .point_wise import *
 from .newman import *
 # from .tensor_flow_ltr import *
 from .SpringRank import *
+from .page_rank import *

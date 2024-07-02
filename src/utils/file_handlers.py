@@ -35,21 +35,21 @@ def read_dataset(file):
     dataset = {'dataset': dataset}
     return dataset
 
-def calculate_percentages(df):
+def calculate_percentages(df, compared_axis):
     total_rows = len(df)
     if total_rows == 0:
-        return 0, 0, 0, 0, 0
+        return 0, 0, 0, 0, 0, 0, 0, 0
 
-    comparisons = [df.iloc[:, col] > df.iloc[:, 1] for col in range(2, 7)]
+    comparisons = [df.iloc[:, col] > df.iloc[:, compared_axis] for col in range(1,10) if col != compared_axis]
     percentages = [comparison.sum() / total_rows for comparison in comparisons]
 
     return tuple(percentages)
 
 def calculate_column_means(df):
     if df.empty:
-        return 0, 0, 0, 0, 0, 0
+        return 0, 0, 0, 0, 0, 0, 0, 0, 0
 
-    means = [df.iloc[:, col].mean() for col in range(1,7)]
+    means = [df.iloc[:, col].mean() for col in range(1,10)]
 
     return tuple(means)
 
