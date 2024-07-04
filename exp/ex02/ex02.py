@@ -11,6 +11,8 @@ from src import *
 
 
 def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, leadership=False, repetitions=1000, train_size=0.8):
+    os.makedirs(file_dir, exist_ok=True)
+
     for rep in range(repetitions):
         if leadership:
             pi_values, data = generate_leadership_model_instance(N, M, K1, K2)

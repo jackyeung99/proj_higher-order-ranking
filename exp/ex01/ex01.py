@@ -12,6 +12,8 @@ from src import *
 
 
 def evaluate_model_train_size(N, M, K1, K2, file_dir, executor, leadership=False):
+    os.makedirs(file_dir, exist_ok=True)
+
     futures = []
     for rep in range(250):
         if leadership:
