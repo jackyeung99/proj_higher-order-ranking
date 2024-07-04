@@ -1,5 +1,6 @@
 import os 
 import sys
+import pandas as pd
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
@@ -46,7 +47,7 @@ def run_models(train_data, test_data, pi_values):
 
     models = ['newman', 'newman_leadership', 'higher_order_newman', 'higher_order_leadership', 'spring_rank', 'spring_rank_leadership', 'page_rank', 'page_rank_leadership', 'point_wise']
    
-    likelihoods_dict = {}
+    likelihoods_dict = {'Game': list(range(len(test_data)))}
     for model in models:
         predicted_rankings = get_predictions(model, train_data, pi_values)
         game_likelihoods = compute_likelihood(predicted_rankings, test_data)
@@ -74,6 +75,7 @@ def calculate_column_means(df, compared_axis):
         raise ValueError("Invalid compared_axis index")
 
     means = {df.columns[col]: (df.iloc[:, col] - df.iloc[:, compared_axis]).mean() 
-             for col in range(1, 10)}
+             for col in range(1, 10) if col != compared_axis}
 
     return means
+

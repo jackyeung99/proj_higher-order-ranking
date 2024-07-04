@@ -1,8 +1,14 @@
 
 import os 
+import sys
 import csv
 import pandas as pd
 import re 
+
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.append(repo_root)
+
+from src.utils.operation_helpers import *
 
 def save_results_to_csv(filename, headers, results):
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -21,10 +27,9 @@ def read_file_parameters(file):
     file_parameters = {}    
     file = file.replace('.csv', '')
     file_split = file.split('_')
-    for param_value in file_split:
-   
-        param, value = param_value.split('-')
-        file_parameters[param] = value
+    for param_value in range(0,len(file_split), 2):
+    #     param, value = param_value.split('-')
+        file_parameters[file_split[param_value]] = file_split[param_value+1]
 
     return file_parameters
 
@@ -36,63 +41,37 @@ def read_dataset(file):
     return dataset
 
 
-def process_directory_prop(directory, output_file, is_synthetic=True):
-    results = []
+def process_directory(compared_axis, base_path, directory, output_file, is_synthetic = True):
+    os.makedirs(os.path.join(base_path, 'results'), exist_ok=True)
+
+    results_proportions = []
+    results_mean = []
     for file in os.listdir(directory):
         if file.endswith('.csv'):
             file_path = os.path.join(directory, file)
             df = pd.read_csv(file_path)
 
+            averages = calculate_column_means(df, compared_axis=compared_axis)
+            proportions = calculate_percentages(df, compared_axis=compared_axis)
 
-            proportions = calculate_percentages(df)
-            if is_synthetic:
-                file_info = read_file_parameters(file)
-            
-            else: 
-                file_info = read_dataset(file)
-
-            result = {
-                'prop_stdl_>_std': proportions[0],
-                'prop_ho_>_std': proportions[1],
-                'prop_hol_>_std': proportions[2],
-                'prop_point_>_std': proportions[3],
-                'prop_spring_>_std': proportions[4]
-            }
-            result.update(file_info)
-            results.append(result)
-
-    results_df = pd.DataFrame(results)
-    
-    results_df.to_csv(output_file, index=False)
-
-
-def process_directory_mean(directory, output_file, is_synthetic = True):
-    results = []
-    for file in os.listdir(directory):
-        if file.endswith('.csv'):
-            file_path = os.path.join(directory, file)
-            df = pd.read_csv(file_path)
-            averages = calculate_column_means(df)
         
             if is_synthetic:
                 file_info = read_file_parameters(file)
             else: 
                 file_info = read_dataset(file)
 
-            result = {
-                'std': averages[0],
-                'stdl': averages[1],
-                'ho': averages[2],
-                'hol': averages[3],
-                'point': averages[4],
-                'spring_rank': averages[5],
-            }
-            result.update(file_info)
-            results.append(result)
+            averages.update(file_info)
+            proportions.update(file_info)
 
-    results_df = pd.DataFrame(results)
+            results_mean.append(averages)
+            results_proportions.append(proportions)
+            
     
-    results_df.to_csv(output_file, index=False)
+    mean_df = pd.DataFrame(results_proportions)
+    proportion_df = pd.DataFrame(results_mean)
+
+    mean_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_means.csv"))
+    proportion_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_proportions.csv"))
 
 
 
