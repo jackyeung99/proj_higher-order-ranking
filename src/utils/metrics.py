@@ -105,11 +105,11 @@ def compute_likelihood_ratio(pred_ranking, pi_values, testing_set):
         likelihood_ratios.append(pred_likelihood / ground_truth_likelihood)
     return likelihood_ratios
 
-def leadership_probability_estimation(pred_rating, game):
+def leadership_probability_estimation(pred_rating, game, epsilon=1e-10):
     player_rankings = [pred_rating[player] for player in game]
     highest_rank = player_rankings[0]
     total_ratings = sum(player_rankings)
-    return np.log(highest_rank) - np.log(total_ratings)
+    return np.log(highest_rank+epsilon) - np.log(total_ratings+epsilon)
 
 def recursive_probability_estimation(pred_rating, game, total_prob_estimation=0, episilon=1e-10):
     player_ratings = [pred_rating[player] for player in game]

@@ -19,6 +19,7 @@ class TestModels:
 
 
     def test_bin_games(self):
+        ''' test higher order, higher order newman, and std newman all reduce to the same predicted ratings in diadic games'''
         pi_values, data = generate_model_instance(50, 50, 2, 2)
         
         # Get predictions from each model
@@ -42,6 +43,7 @@ class TestModels:
 
 
     def test_games_shuffled(self):
+        ''' test that the ordering in which games are presented do not alter predicted ratings'''
         pi_values, data = generate_model_instance(50, 50, 2, 2)
         
         # Get predictions from each model
@@ -54,6 +56,7 @@ class TestModels:
 
 
     def test_leadership_shuffled(self):
+        ''' Check that leadership likelihood and likelihood output the same values for leadership diatic games, i.e. diadic leadership should be equivalent to diadic normal'''
         pi_values, data = generate_leadership_model_instance(50, 50, 2, 2)
     
         # Get predictions from each model
@@ -65,6 +68,7 @@ class TestModels:
         assert all(np.isclose(shuffled_newman[key], newman[key], atol=1e-15) for key in pi_values.keys())
 
     def test_leadership_similarity(self): 
+        ''' Check that leadership likelihood and likelihood output the same predicted ratings for synthetic diatic games'''
         models = [('newman', 'newman_leadership'), ('higher_order_newman', 'higher_order_leadership'), ('spring_rank', 'spring_rank_leadership'), ('page_rank', 'page_rank_leadership')] 
 
         for model, leadership in models: 
@@ -76,7 +80,8 @@ class TestModels:
 
             assert all(np.isclose(leadership[key], model[key], atol=1e-15) for key in pi_values.keys())
 
-    def test_leadership_similarity_normal(self): 
+    def test_likelihood(self): 
+        ''' Check that leadership and normal models perform the same on diatic edges'''
         models = [('newman', 'newman_leadership'), ('higher_order_newman', 'higher_order_leadership'), ('spring_rank', 'spring_rank_leadership'), ('page_rank', 'page_rank_leadership')] 
 
         for model, leadership in models: 
@@ -85,12 +90,29 @@ class TestModels:
 
             training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
 
-            model = get_predictions(model, data, pi_values)
-            leadership = get_predictions(leadership, data, pi_values)
+            model = get_predictions(model, training_set, pi_values)
+            leadership = get_predictions(leadership, training_set, pi_values)
 
-            model_likelihood = get
+            model_likelihood = compute_likelihood(model, testing_set)
+            leadership_likelihood = compute_likelihood(leadership, testing_set)
 
-            assert all(np.isclose(leadership[key], model[key], atol=1e-15) for key in pi_values.keys())
+            assert all(np.isclose(model_likelihood[game], leadership_likelihood[game], atol=1e-15) for game in range(len(testing_set)))
+
+    def test_leadership_likelihood(self): 
+
+        ''' Check that leadership likelihood and likelihood output the same values for diatic games'''
+
+        pi_values, data = generate_model_instance(50, 50, 2, 2)
+
+        training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
+
+        predictions = get_predictions('newman', training_set, pi_values)
+
+        likelihood = compute_likelihood(predictions, testing_set)
+        leadership_likelihood = compute_leadership_likelihood(predictions, testing_set)
+
+        assert all(np.isclose(likelihood[game], leadership_likelihood[game], atol=1e-15) for game in range(len(testing_set)))
+
 
 
 
