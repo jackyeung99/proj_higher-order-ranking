@@ -1,39 +1,43 @@
 import os
 import sys
 import logging
-from sklearn.model_selection import ShuffleSplit
+from sklearn.model_selection import train_test_split
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.experiment_helpers import *
+from src import *
 
 
-FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-def evaluate_model_prediction(N, M, K1, K2, splits):
+def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, leadership=False, repetitions=1000, train_size=0.8):
+    for rep in range(repetitions):
+        if leadership:
+            pi_values, data = generate_leadership_model_instance(N, M, K1, K2)
+        else:
+            pi_values, data = generate_model_instance(N, M, K1, K2)
 
-    pi_values, data = generate_model_instance(N, M, K1, K2)
-    random.shuffle(data)
-
-    shuffle_split = ShuffleSplit(n_splits=splits, test_size=0.2, random_state=42)
-
-    for idx, (train_index, test_index) in enumerate(shuffle_split.split(data)):
-        train_data = [data[i] for i in train_index]
-        test_data = [data[i] for i in test_index]
-
-        file_name = os.path.join(repo_root, f"exp/ex02/data/N-{N}_M-{M}_K1-{K1}_K2-{K2}_rep-{idx}.csv")
-        run_models(train_data, test_data, pi_values, file_name)
+        # Split data into training and testing sets
+        training_set, testing_set = train_test_split(data, train_size=train_size, random_state=None)
+        
+        # Run models and save the results
+        df = run_models(training_set, testing_set, pi_values)
+        file_path = os.path.join(os.path.dirname(__file__), file_dir, f'rep_{rep+1}.csv')
+        df.to_csv(file_path)
+    
 
         
-
 if __name__ == '__main__':
 
-    # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex02_predictive_newman/data ~/senior_thesis/higher_order_ranking/exp/ex02_predictive_newman
-    # parallel --jobs 24 python3 ex02.py {1} {2} {3} ::: 1000 ::: 64 141 312 689 1521 3360 7419 16384 ::: $(seq 2 10)
-    N, M, K1 = map(int, sys.argv[1:])
+    # standard 
+    N, M, K1, K2 = 5000, 10000, 2, 2
+    evaluate_models_fixed_train_size(N, M, K1, K2, 'ex02.1')
+
+    # higher order 
+    N, M, K1, K2 = 5000, 10000, 5, 5
+    evaluate_models_fixed_train_size(N, M, K1, K2, 'ex02.2')
     
-    K2 = K1 + 1
-    logging.debug(f'running code for {N} {M} {K1} {K2}')
-    evaluate_model_prediction(N, M, K1, K2, 20)
+    # higher order leadership
+    N, M, K1, K2 = 5000, 10000, 5, 5
+    evaluate_models_fixed_train_size(N, M, K1, K2, 'ex02.3', leadership=True)
         

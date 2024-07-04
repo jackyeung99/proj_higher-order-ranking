@@ -9,7 +9,7 @@ sys.path.append(repo_root)
 
 
 
-def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-6):
+def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-10):
 
     x, y, z = [], [], []
     scores = {}

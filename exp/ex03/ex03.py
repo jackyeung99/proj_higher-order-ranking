@@ -1,41 +1,40 @@
 import os
 import sys
-from sklearn.model_selection import ShuffleSplit
+import logging
+from sklearn.model_selection import train_test_split
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.experiment_helpers import *
+from src import *
 
+def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, leadership=False, repetitions=100, train_size=0.8):
+    for rep in range(repetitions):
+        if leadership:
+            pi_values, data = generate_leadership_model_instance(N, M, K1, K2)
+        else:
+            pi_values, data = generate_model_instance(N, M, K1, K2)
 
-def run_experiment(dataset_file_path, splits, metric='std_likelihood'):
+        # Split data into training and testing sets
+        training_set, testing_set = train_test_split(data, train_size=train_size, random_state=None)
+        
+        # Run models and save the results
+        df = run_models(training_set, testing_set, pi_values)
+        file_path = os.path.join(os.path.dirname(__file__), file_dir, f'rep_{rep+1}.csv')
+        df.to_csv(file_path)
+    
 
-    for file in os.listdir(dataset_file_path):
-
-        if file.endswith('.soc'):
-            file_path = os.path.join(dataset_file_path, file)
-            data, pi_values = read_strict_ordered_dataset(file_path)
-
-            if len(data) > 50: 
-                shuffle_split = ShuffleSplit(n_splits=splits, test_size=0.2, random_state=42)
-
-                for idx, (train_index, test_index) in enumerate(shuffle_split.split(data)):
-
-                    train_data = [data[i] for i in train_index]
-                    test_data = [data[i] for i in test_index]
-
-                    file_name = os.path.join(repo_root, f'exp/ex03/data/f{file[:-4]}_results.csv')
-                    run_models(train_data, test_data, pi_values,file_name)
-
-
-                
-            
-
-
+        
 if __name__ == '__main__':
-    # Run From ex03_realdata directory
-    # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex03_realdata/data ~/senior_thesis/higher_order_ranking/exp/ex03_realdata/data
+   M_values = [1000, 2500, 7500, 10000, 20000, 50000]
+   for M in M_values: 
+      N, K1, K2 = 5000, 4, 4
+      evaluate_models_fixed_train_size(N, M, K1, K2, 'ex03.1')
+      evaluate_models_fixed_train_size(N, M, K1, K2, 'ex03.2', leadership=True)
 
-    dataset_file_path = 'datasets/processed_data'
-    splits = 1
-    run_experiment(dataset_file_path, splits) 
+   K_values = [4, 8, 12, 16]
+   for K in K_values:
+      N, M = 5000, 5000
+      evaluate_models_fixed_train_size(N, M, K, K, 'ex03.3')
+      evaluate_models_fixed_train_size(N, M, K, K, 'ex03.4', leadership=True)
+       
