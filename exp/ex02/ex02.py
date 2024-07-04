@@ -23,23 +23,23 @@ def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, leadership=False, r
         training_set, testing_set = train_test_split(data, train_size=train_size, random_state=None)
         
         # Run models and save the results
-        df = run_models(training_set, testing_set, pi_values)
-        file_path = os.path.join(os.path.dirname(__file__), file_dir, f'rep_{rep+1}.csv')
-        df.to_csv(file_path)
+        df = run_models(training_set, testing_set, pi_values, leadership)
+        file_path = os.path.join(os.path.dirname(__file__), file_dir, f'rep-{rep+1}.csv')
+        df.to_csv(file_path, index=False)
     
 
         
 if __name__ == '__main__':
 
-    # standard 
-    N, M, K1, K2 = 5000, 10000, 2, 2
-    evaluate_models_fixed_train_size(N, M, K1, K2, 'ex02.1')
+    # # standard 
+    # N, M, K1, K2 = 5000, 10000, 2, 2
+    # evaluate_models_fixed_train_size(N, M, K1, K2, 'data/ex02.1')
 
-    # higher order 
-    N, M, K1, K2 = 5000, 10000, 5, 5
-    evaluate_models_fixed_train_size(N, M, K1, K2, 'ex02.2')
+    # # higher order 
+    # N, M, K1, K2 = 5000, 10000, 5, 5
+    # evaluate_models_fixed_train_size(N, M, K1, K2, 'data/ex02.2')
     
     # higher order leadership
     N, M, K1, K2 = 5000, 10000, 5, 5
-    evaluate_models_fixed_train_size(N, M, K1, K2, 'ex02.3', leadership=True)
+    evaluate_models_fixed_train_size(N, M, K1, K2, 'data/ex02.3', leadership=True)
         

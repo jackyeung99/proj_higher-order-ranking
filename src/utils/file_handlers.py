@@ -46,9 +46,9 @@ def process_directory(compared_axis, base_path, directory, output_file, is_synth
 
     results_proportions = []
     results_mean = []
-    for file in os.listdir(directory):
+    for file in os.listdir(os.path.join(base_path, 'data', directory)):
         if file.endswith('.csv'):
-            file_path = os.path.join(directory, file)
+            file_path = os.path.join(base_path, 'data', directory, file)
             df = pd.read_csv(file_path)
 
             averages = calculate_column_means(df, compared_axis=compared_axis)
@@ -67,11 +67,11 @@ def process_directory(compared_axis, base_path, directory, output_file, is_synth
             results_proportions.append(proportions)
             
     
-    mean_df = pd.DataFrame(results_proportions)
-    proportion_df = pd.DataFrame(results_mean)
+    mean_df = pd.DataFrame(results_mean)
+    proportion_df = pd.DataFrame(results_proportions)
 
-    mean_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_means.csv"))
-    proportion_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_proportions.csv"))
+    mean_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_means.csv"), index=False)
+    proportion_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_proportions.csv"), index=False)
 
 
 

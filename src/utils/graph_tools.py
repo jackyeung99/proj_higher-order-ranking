@@ -17,7 +17,7 @@ def generate_model_instance (N, M, K1, K2):
     ##random scores from logistic distribution
     pi_values = {}
     for n in range(0, N):
-        pi_values[n] = float(np.exp(logistic.rvs(size=1)))
+        pi_values[n] = float(np.exp(logistic.rvs(size=1)[0]))
 
 
     normalize_scores (pi_values)
@@ -37,34 +37,34 @@ def generate_model_instance (N, M, K1, K2):
     return pi_values, data
 
 def generate_leadership_model_instance (N, M, K1, K2):
-        
-        ##random scores from logistic distribution
-        pi_values = {}
-        for n in range(0, N):
-            pi_values[n] = float(np.exp(logistic.rvs(size=1)))
+    
+    ##random scores from logistic distribution
+    pi_values = {}
+    for n in range(0, N):
+        pi_values[n] = float(np.exp(logistic.rvs(size=1)[0]))
 
+    
+    normalize_scores (pi_values)
+    
+    
+    list_of_nodes = list(range(0, N))
+    ##
+    data = []
+    for m in range(0, M):
+        K = random.randint(K1, K2)
+        tmp = random.sample(list_of_nodes, K)
+        ##establish order
+        order = establish_order (tmp, pi_values)
+        #print (order)
+        f = order[0]
+        order = order[1:]
+        random.shuffle(order)
+        order.insert(0,f)
+        data.append(order)
+        #print (order,'\n')
         
-        normalize_scores (pi_values)
         
-        
-        list_of_nodes = list(range(0, N))
-        ##
-        data = []
-        for m in range(0, M):
-            K = random.randint(K1, K2)
-            tmp = random.sample(list_of_nodes, K)
-            ##establish order
-            order = establish_order (tmp, pi_values)
-            #print (order)
-            f = order[0]
-            order = order[1:]
-            random.shuffle(order)
-            order.insert(0,f)
-            data.append(order)
-            #print (order,'\n')
-            
-            
-        return pi_values, data 
+    return pi_values, data 
 
 def create_hypergraph_from_data (data):
 
@@ -90,38 +90,23 @@ def create_hypergraph_from_data (data):
     return bond_matrix
 
 
-def binarize_data (data):
 
+def binarize_data(data):
     bin_data = []
-
-    for i in range(0, len(data)):
-
-        K = len(data[i])
-        for r in range(0, K-1):
-            for s in range (r+1, K):
-                bin_data.append([data[i][r],data[i][s]])
-
-
+    for arr in data:
+        arr = np.array(arr)
+        idx = np.triu_indices(len(arr), k=1)
+        pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
+        bin_data.extend(pairs.tolist())
     return bin_data
-
-# def binarize_data(data):
-#     bin_data = []
-#     for arr in data:
-#         arr = np.array(arr)
-#         idx = np.triu_indices(len(arr), k=1)
-#         pairs = arr[idx].T
-#         bin_data.extend(pairs.tolist())
-#     return bin_data
 
 def binarize_data_leadership (data):
     
     bin_data = []
     
-    for i in range(0, len(data)):
-        
-        K = len(data[i])
-        for s in range (1, K):
-            bin_data.append([data[i][0],data[i][s]])
-        
+    for arr in data:
+        arr = np.array(arr)
+        pairs = np.column_stack((np.repeat(arr[0], len(arr) - 1), arr[1:]))
+        bin_data.extend(pairs.tolist())
         
     return bin_data

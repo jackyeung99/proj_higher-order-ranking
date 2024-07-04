@@ -16,7 +16,7 @@ def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-10)
 #     for n in bond_matrix:
     for n in pi_values:
         # scores[n] = random.random()
-        scores[n] = float(np.exp(logistic.rvs(size=1)))
+        scores[n] = float(np.exp(logistic.rvs(size=1)[0]))
         # scores[n] = 1.0
         # scores[n] = pi_values[n]
         # if n not in bond_matrix:

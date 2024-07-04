@@ -12,19 +12,19 @@ def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, file_name, leadersh
    os.makedirs(file_dir, exist_ok=True)
     
    for rep in range(repetitions):
-        if leadership:
-            pi_values, data = generate_leadership_model_instance(N, M, K1, K2)
-        else:
-            pi_values, data = generate_model_instance(N, M, K1, K2)
+      if leadership:
+         pi_values, data = generate_leadership_model_instance(N, M, K1, K2)
+      else:
+         pi_values, data = generate_model_instance(N, M, K1, K2)
 
-         
-        # Split data into training and testing sets
-        training_set, testing_set = train_test_split(data, train_size=train_size, random_state=None)
-        
-        # Run models and save the results
-        df = run_models(training_set, testing_set, pi_values)
-        file_path = os.path.join(os.path.dirname(__file__), file_dir, f'{file_name}_rep_{rep+1}.csv')
-        df.to_csv(file_path)
+      
+      # Split data into training and testing sets
+      training_set, testing_set = train_test_split(data, train_size=train_size, random_state=None)
+      
+      # Run models and save the results
+      df = run_models(training_set, testing_set, pi_values, leadership)
+      file_path = os.path.join(os.path.dirname(__file__), file_dir, f'{file_name}_rep-{rep+1}.csv')
+      df.to_csv(file_path, index=False)
     
 
         
@@ -32,12 +32,12 @@ if __name__ == '__main__':
    M_values = [1000, 2500, 7500, 10000, 20000, 50000]
    for M in M_values: 
       N, K1, K2 = 5000, 4, 4
-      evaluate_models_fixed_train_size(N, M, K1, K2, 'ex03.1', f'M_{M}')
-      evaluate_models_fixed_train_size(N, M, K1, K2, 'ex03.2', f'M_{M}', leadership=True)
+      evaluate_models_fixed_train_size(N, M, K1, K2, 'data/ex03.1', f'M-{M}')
+      evaluate_models_fixed_train_size(N, M, K1, K2, 'data/ex03.2', f'M-{M}', leadership=True)
 
    K_values = [4, 8, 12, 16]
    for K in K_values:
       N, M = 5000, 5000
-      evaluate_models_fixed_train_size(N, M, K, K, 'ex03.3', f'K_{K}')
-      evaluate_models_fixed_train_size(N, M, K, K, 'ex03.4', f'K_{K}',  leadership=True)
+      evaluate_models_fixed_train_size(N, M, K, K, 'data/ex03.3', f'K-{K}')
+      evaluate_models_fixed_train_size(N, M, K, K, 'data/ex03.4', f'K-{K}',  leadership=True)
        
