@@ -27,9 +27,9 @@ def read_file_parameters(file):
     file_parameters = {}    
     file = file.replace('.csv', '')
     file_split = file.split('_')
-    for param_value in range(0,len(file_split), 2):
-    #     param, value = param_value.split('-')
-        file_parameters[file_split[param_value]] = file_split[param_value+1]
+    for param_value in file_split:
+        param, value = param_value.split('-')
+        file_parameters[param] = value
 
     return file_parameters
 
@@ -67,11 +67,23 @@ def process_directory(compared_axis, base_path, directory, output_file, is_synth
             results_proportions.append(proportions)
             
     
-    mean_df = pd.DataFrame(results_mean)
-    proportion_df = pd.DataFrame(results_proportions)
+    mean_df = pd.DataFrame(results_mean).drop(columns=['Game'])
+    proportion_df = pd.DataFrame(results_proportions).drop(columns=['Game'])
 
     mean_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_means.csv"), index=False)
     proportion_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_proportions.csv"), index=False)
+
+def read_edge_list(file_path):
+    data = {}
+
+    with open(file_path) as file:
+        for line in file.readlines():   
+            if line.startswith('#'):
+                split = line.split(':')
+                pi_values = {player: 1.0 for player in range(split[1])}
+            else:
+                count, order = line.split(':')
+                data[order] = count
 
 
 

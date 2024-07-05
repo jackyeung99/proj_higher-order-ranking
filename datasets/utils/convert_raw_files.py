@@ -38,12 +38,13 @@ def write_files(out_file, pi_values, games):
     name_to_id = {name: idx + 1 for idx, name in enumerate(alternative_names)}
     converted_games = convert_names_to_id(games, name_to_id)
     write_edges(out_file, converted_games)
-    write_nodes(out_file, name_to_id)
+    write_nodes(out_file, name_to_id, len(alternative_names))
 
-def write_edges(out_file, games):
+def write_edges(out_file, games, num_unique_players):
     file_name = os.path.join(repo_root, 'datasets', 'processed_data', f'{out_file}_edges.txt')
     
     with open(file_name, 'w') as file:
+        file.write(f"# UNIQUE PLAYERS: {num_unique_players}")
         for ordered_tuple, count in games.items():
             votes_str = ','.join(map(str, ordered_tuple))
             file.write(f"{count}: {votes_str}\n")
