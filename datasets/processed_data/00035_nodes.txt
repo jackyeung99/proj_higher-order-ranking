@@ -1,15 +1,15 @@
-# ALTERNATIVE NAME 1: Jelly donut
-# ALTERNATIVE NAME 2: Glazed donut
-# ALTERNATIVE NAME 3: Cinnamon bun
-# ALTERNATIVE NAME 4: Danish pastry
-# ALTERNATIVE NAME 5: Coffee cake
-# ALTERNATIVE NAME 6: Blueberry muffin and margarine
-# ALTERNATIVE NAME 7: English muffin and margarine EMM
-# ALTERNATIVE NAME 8: Corn muffin and butter
-# ALTERNATIVE NAME 9: Buttered toast
-# ALTERNATIVE NAME 10: Toast and margarine
-# ALTERNATIVE NAME 11: Cinnamon toast
-# ALTERNATIVE NAME 12: Hard rolls and butter
-# ALTERNATIVE NAME 13: Buttered toast and jelly
-# ALTERNATIVE NAME 14: Toast pop-up
-# ALTERNATIVE NAME 15: Toast and marmalade
+# ALTERNATIVE NAME 1: Buttered toast and jelly
+# ALTERNATIVE NAME 2: Cinnamon toast
+# ALTERNATIVE NAME 3: Buttered toast
+# ALTERNATIVE NAME 4: Toast and margarine
+# ALTERNATIVE NAME 5: English muffin and margarine EMM
+# ALTERNATIVE NAME 6: Cinnamon bun
+# ALTERNATIVE NAME 7: Hard rolls and butter
+# ALTERNATIVE NAME 8: Blueberry muffin and margarine
+# ALTERNATIVE NAME 9: Coffee cake
+# ALTERNATIVE NAME 10: Danish pastry
+# ALTERNATIVE NAME 11: Glazed donut
+# ALTERNATIVE NAME 12: Jelly donut
+# ALTERNATIVE NAME 13: Toast and marmalade
+# ALTERNATIVE NAME 14: Corn muffin and butter
+# ALTERNATIVE NAME 15: Toast pop-up

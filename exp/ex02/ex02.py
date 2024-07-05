@@ -15,9 +15,9 @@ def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, leadership=False, r
 
     for rep in range(repetitions):
         if leadership:
-            pi_values, data = generate_leadership_model_instance(N, M, K1, K2)
+            data, pi_values = generate_leadership_model_instance(N, M, K1, K2)
         else:
-            pi_values, data = generate_model_instance(N, M, K1, K2)
+            data, pi_values = generate_model_instance(N, M, K1, K2)
 
         # Split data into training and testing sets
         training_set, testing_set = train_test_split(data, train_size=train_size, random_state=None)

@@ -20,7 +20,7 @@ class TestModels:
 
     def test_bin_games(self):
         ''' test higher order, higher order newman, and std newman all reduce to the same predicted ratings in diadic games'''
-        pi_values, data = generate_model_instance(50, 50, 2, 2)
+        data, pi_values = generate_model_instance(50, 50, 2, 2)
         
         # Get predictions from each model
         newman = get_predictions('newman', data, pi_values)
@@ -44,7 +44,7 @@ class TestModels:
 
     def test_games_shuffled(self):
         ''' test that the ordering in which games are presented do not alter predicted ratings'''
-        pi_values, data = generate_model_instance(50, 50, 2, 2)
+        data, pi_values = generate_model_instance(50, 50, 2, 2)
         
         # Get predictions from each model
         newman = get_predictions('newman', data, pi_values)
@@ -57,7 +57,7 @@ class TestModels:
 
     def test_leadership_shuffled(self):
         ''' Check that leadership likelihood and likelihood output the same values for leadership diatic games, i.e. diadic leadership should be equivalent to diadic normal'''
-        pi_values, data = generate_leadership_model_instance(50, 50, 2, 2)
+        data, pi_values = generate_leadership_model_instance(50, 50, 2, 2)
     
         # Get predictions from each model
         newman = get_predictions('newman', data, pi_values)
@@ -73,7 +73,7 @@ class TestModels:
 
         for model, leadership in models: 
 
-            pi_values, data = generate_model_instance(50, 50, 2, 2)
+            data, pi_values = generate_model_instance(50, 50, 2, 2)
 
             model = get_predictions(model, data, pi_values)
             leadership = get_predictions(leadership, data, pi_values)
@@ -86,7 +86,7 @@ class TestModels:
 
         for model, leadership in models: 
 
-            pi_values, data = generate_model_instance(50, 50, 2, 2)
+            data, pi_values = generate_model_instance(50, 50, 2, 2)
 
             training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
 
@@ -102,7 +102,7 @@ class TestModels:
 
         ''' Check that leadership likelihood and likelihood output the same values for diatic games'''
 
-        pi_values, data = generate_model_instance(50, 50, 2, 2)
+        data, pi_values = generate_model_instance(50, 50, 2, 2)
 
         training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
 

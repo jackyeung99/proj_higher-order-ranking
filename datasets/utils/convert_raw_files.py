@@ -8,6 +8,8 @@ sys.path.append(repo_root)
 from datasets.utils.extract_ordered_games import *
 from src.utils.file_handlers import *
 
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
 
 def get_alternative_names(filename):
     id_to_name = {}
@@ -37,15 +39,15 @@ def write_files(out_file, pi_values, games):
     alternative_names = list(pi_values.keys())
     name_to_id = {name: idx + 1 for idx, name in enumerate(alternative_names)}
     converted_games = convert_names_to_id(games, name_to_id)
-    write_edges(out_file, converted_games)
-    write_nodes(out_file, name_to_id, len(alternative_names))
+    write_edges(out_file, converted_games, len(alternative_names))
+    write_nodes(out_file, name_to_id)
 
 def write_edges(out_file, games, num_unique_players):
     file_name = os.path.join(repo_root, 'datasets', 'processed_data', f'{out_file}_edges.txt')
     
     with open(file_name, 'w') as file:
-        file.write(f"# UNIQUE PLAYERS: {num_unique_players}")
-        for ordered_tuple, count in games.items():
+        file.write(f"# UNIQUE PLAYERS: {num_unique_players}\n")
+        for ordered_tuple, count in sorted(games.items(), key = lambda x:x[1], reverse=True):
             votes_str = ','.join(map(str, ordered_tuple))
             file.write(f"{count}: {votes_str}\n")
 
@@ -65,8 +67,7 @@ def group_soi(file_directory):
             sub_files[dataset_id].append(file)
     return sub_files
 
-def combine_soi(sub_files):
-    base_path = os.path.join(repo_root, 'datasets', 'processed_data')
+def combine_soi(sub_files, base_path):
     for dataset_id, files in sub_files.items():
         dataset_games = {}
         dataset_pi_values = {}
@@ -117,12 +118,14 @@ def convert_raw_files(file_path, read_function, title):
     write_files(title, dataset_pi_values, dataset_games)
 
 if __name__ == '__main__':
-    file_directory = os.path.join(repo_root, 'datasets', 'processed_data')
+    file_directory = os.path.join(repo_root, 'datasets', 'raw_data', 'preflib')
     grouping = group_soi(file_directory)
-    combine_soi(grouping)
+    combine_soi(grouping, file_directory)
 
     convert_raw_files('authorships.txt', read_data_authors, '00104')
     convert_raw_files('cl_data.txt', read_data_ucl, '00102')
     convert_raw_files('fifa_wc.txt', read_data_fifa, '00103')
     convert_raw_files('olympic_swimming', read_data_swimming, '00100')
     convert_raw_files('horse_racing', read_data_horse, '00101')
+
+    

@@ -34,7 +34,7 @@ def generate_model_instance (N, M, K1, K2):
         data.append(order)
 
 
-    return pi_values, data
+    return data, pi_values
 
 def generate_leadership_model_instance (N, M, K1, K2):
     
@@ -64,7 +64,7 @@ def generate_leadership_model_instance (N, M, K1, K2):
         #print (order,'\n')
         
         
-    return pi_values, data 
+    return data, pi_values
 
 def create_hypergraph_from_data (data):
 

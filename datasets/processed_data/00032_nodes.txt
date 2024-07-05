@@ -11,9 +11,9 @@
 # ALTERNATIVE NAME 11: Introduction to Artificial Intelligence
 # ALTERNATIVE NAME 12: Professional Seminar
 # ALTERNATIVE NAME 13: Software Engineering 3
-# ALTERNATIVE NAME 14: Low effort
-# ALTERNATIVE NAME 15: Curricula
-# ALTERNATIVE NAME 16: Bad preparation in the preceding education
-# ALTERNATIVE NAME 17: Generational apathy
-# ALTERNATIVE NAME 18: Bad motivation to enter into the labour market
+# ALTERNATIVE NAME 14: Bad motivation to enter into the labour market
+# ALTERNATIVE NAME 15: Bad preparation in the preceding education
+# ALTERNATIVE NAME 16: Generational apathy
+# ALTERNATIVE NAME 17: Low effort
+# ALTERNATIVE NAME 18: Curricula
 # ALTERNATIVE NAME 19: Professors

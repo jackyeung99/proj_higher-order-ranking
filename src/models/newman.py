@@ -32,6 +32,7 @@ def iterate_equation_newman (s, scores, bond_matrix):
 
                       a += tmp1/tmp2
 
+
               for t in range(0, len(bond_matrix[s][K][r])):
                   for v in range(0, r):
                       tmp = 0.0

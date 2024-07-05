@@ -98,7 +98,7 @@ class TestGraphTools:
 
     def test_real_data(self):
 
-        pi_values, data = generate_model_instance(50, 50, 3,3)
+        data, pi_values = generate_model_instance(50, 50, 3,3)
         
         assert len(binarize_data_np(data)) == 150
         assert len(binarize_data_leadership(data)) == 100
