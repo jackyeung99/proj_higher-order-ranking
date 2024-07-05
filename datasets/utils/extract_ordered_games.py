@@ -8,6 +8,8 @@ sys.path.append(repo_root)
 from datasets.utils.extract_ordered_games import *
 from src.utils.file_handlers import *
 
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
 ''' Functions to read files and extract games and pi_values'''
 def convert_games_to_dict(games):
     # Count occurrences of each unique ordering
@@ -139,4 +141,3 @@ def read_strict_ordered_dataset(filename):
 
 
     return data, pi_values
-

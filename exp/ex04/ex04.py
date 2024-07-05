@@ -1,31 +1,37 @@
 import os
 import sys
-from sklearn.model_selection import ShuffleSplit
+from sklearn.model_selection import train_test_split
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.experiment_helpers import *
+from src.utils import *
+
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 
-def run_experiment(dataset_file_path, splits, metric='std_likelihood'):
+def run_experiment(dataset_file_path, reps, file_name, leadership=False):
+
+    os.makedirs(file_name, exist_ok=True)
 
     for file in os.listdir(dataset_file_path):
 
         if file.endswith('_edges.csv'):
+
             file_path = os.path.join(dataset_file_path, file)
             data, pi_values = read_edge_list(file_path)
 
+            file_split = file.split('_')
+            dataset_id = file_split[0]
+
             if len(data) > 50: 
-                shuffle_split = ShuffleSplit(n_splits=splits, test_size=0.2, random_state=42)
+        
+                for rep in range(reps):
 
-                for idx, (train_index, test_index) in enumerate(shuffle_split.split(data)):
-
-                    train_data = [data[i] for i in train_index]
-                    test_data = [data[i] for i in test_index]
-
-                    file_name = os.path.join(repo_root, f'exp/ex03/data/f{file[:-4]}_results.csv')
-                    run_models(train_data, test_data, pi_values,file_name)
+                    training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
+                    out_file_name = os.path.join(repo_root, f'dataset-{dataset_id}_rep-{rep}.csv')
+                    df = run_models(training_set, testing_set, pi_values, leadership=leadership)
+                    df.to_csv(out_file_name, index=False)
 
 
                 
@@ -36,6 +42,12 @@ if __name__ == '__main__':
     # Run From ex03_realdata directory
     # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex03_realdata/data ~/senior_thesis/higher_order_ranking/exp/ex03_realdata/data
 
-    dataset_file_path = 'datasets/processed_data'
-    splits = 1
-    run_experiment(dataset_file_path, splits) 
+    base_path = os.path.dirname(__file__)
+
+    dataset_file_path = os.path.join('..', '..', 'datasets', 'processed_data')
+
+    out_file = os.path.join(base_path, 'data', 'ex04.1')
+    run_experiment(dataset_file_path, 1000, file_name=out_file) 
+
+    out_file = os.path.join(base_path, 'data', 'ex04.2')
+    run_experiment(dataset_file_path, 1000, file_name=out_file) 
