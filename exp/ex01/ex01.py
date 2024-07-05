@@ -38,7 +38,7 @@ def evaluate_single_instance(rep, train_size, data, pi_values, file_dir, leaders
 
 if __name__ == "__main__":
 
-    base_path = os.getcwd(__file__)
+    base_path = os.path.dirname(__file__)
     with concurrent.futures.ThreadPoolExecutor() as executor:
         # standard 
         N, M, K1, K2 = 5000, 10000, 2, 2

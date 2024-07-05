@@ -31,7 +31,7 @@ def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, leadership=False, r
         
 if __name__ == '__main__':
 
-    base_path = os.getcwd(__file__)
+    base_path = os.path.dirname(__file__)
     # standard 
     N, M, K1, K2 = 5000, 10000, 2, 2
     evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data','ex02.1'))

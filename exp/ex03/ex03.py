@@ -29,7 +29,7 @@ def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, file_name, leadersh
 
         
 if __name__ == '__main__':
-   base_path = os.getcwd(__file__)
+   base_path = os.path.dirname(__file__)
 
 
    M_values = np.logspace(6, 18, num=10, endpoint=True, base=2.0)
