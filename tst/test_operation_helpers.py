@@ -11,7 +11,6 @@ from src.utils.operation_helpers import calculate_percentages, calculate_column_
 @pytest.fixture
 
 def sample_df():
-    # Set up a sample DataFrame for testing
     data = { 
         'test_comparison': [-1, -2, -3],
         'value_x': [-2, -3, -4],

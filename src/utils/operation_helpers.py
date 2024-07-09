@@ -9,7 +9,6 @@ from src.models import *
 
 MODEL_FUNCTIONS = {
     'newman': compute_predicted_ratings_std,
-    'newman_leadership': compute_predicted_ratings_std_leadership,
     'higher_order_newman': compute_predicted_ratings_ho,
     'higher_order_leadership': compute_predicted_ratings_hol,
     'spring_rank': compute_predicted_ratings_spring_rank,

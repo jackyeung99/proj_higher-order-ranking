@@ -83,7 +83,7 @@ def read_edge_list(file_path):
                 pi_values = {player: 1.0 for player in range(split[1])}
             else:
                 count, order = line.split(':')
-                data[order] = count
+                data[order] = tuple(count.split(','))
 
 
     return data, pi_values

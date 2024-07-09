@@ -22,6 +22,7 @@ class TestModels:
         ''' test higher order, higher order newman, and std newman all reduce to the same predicted ratings in diadic games'''
         data, pi_values = generate_model_instance(50, 50, 2, 2)
         
+        
         # Get predictions from each model
         newman = get_predictions('newman', data, pi_values)
         newman_leadership = get_predictions('newman_leadership', data, pi_values)
