@@ -30,7 +30,7 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
     
     while iteration < max_iter and err > sens:
         err = 0.0
-        tmp_scores = np.zeros_like(scores)
+        tmp_scores = scores.copy()
         for s in range(len(scores)):
             if s in bond_matrix:
                 games_with_player = bond_matrix[s]
@@ -47,9 +47,29 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
     return final_scores, iteration
 
 
+# def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
+#     a = b = 1.0 / (pi_values[player_idx] + 1.0)
+   
+#     for i in range(len(games_with_players)):
+
+#         K, position, game, weight = games_with_players[i]
+        
+#         score_sums = [pi_values[game[p]] for p in range(K)]
+#         if position < K - 1:
+#             tmp1 = np.sum(score_sums[position+1:K])
+#             tmp2 = np.sum(score_sums[position:K])
+#             if tmp2 != 0:
+#                 a += weight * (tmp1 / tmp2)
+        
+#         sums = np.array([np.sum(score_sums[v:K]) for v in range(position)])
+#         non_zero_sums = sums[sums != 0]
+#         b += np.sum(weight * (1.0 / non_zero_sums))
+
+#     return a / b
+
 def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
     a = b = 1.0 / (pi_values[player_idx] + 1.0)
-   
+
     for i in range(len(games_with_players)):
 
         K, position, game, weight = games_with_players[i]
@@ -60,33 +80,13 @@ def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
             tmp2 = np.sum(score_sums[position:K])
             if tmp2 != 0:
                 a += weight * (tmp1 / tmp2)
-        
-        sums = np.array([np.sum(score_sums[v:K]) for v in range(position)])
-        non_zero_sums = sums[sums != 0]
-        b += np.sum(weight * (1.0 / non_zero_sums))
+        for v in range(position):
+            tmp = np.sum(score_sums[v:K])
+            if tmp != 0:
+                b += weight * (1.0 / tmp)
+
 
     return a / b
-
-# def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
-#     a = b = 1.0 / (pi_values[player_idx] + 1.0)
-
-#     for i in range(len(games_with_players)):
-
-#         K, position, game, weight = games_with_players[i]
-        
-#         score_sums = np.array([pi_values[game[p]] for p in range(K)])
-#         if position < K - 1:
-#             tmp1 = np.sum(score_sums[position+1:K])
-#             tmp2 = np.sum(score_sums[position:K])
-#             if tmp2 != 0:
-#                 a += weight * (tmp1 / tmp2)
-#         for v in range(position):
-#             tmp = np.sum(score_sums[v:K])
-#             if tmp != 0:
-#                 b += weight * (1.0 / tmp)
-
-
-#     return a / b
 
 
 def iterate_equation_newman_leadership_weighted(player_idx, pi_values, games_with_players):
@@ -123,7 +123,7 @@ def compute_predicted_ratings_std_leadership(training_set, pi_values):
     bin_data = binarize_data_weighted_leadership(training_set)
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_weighted, sens=1e-10)
+    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-10)
 
     return predicted_std_scores
 

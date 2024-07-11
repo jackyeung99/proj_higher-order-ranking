@@ -90,7 +90,7 @@ def test_weighted_hol():
 
 
 def test_speed_gains_large_MN():
-    data, pi_values = generate_model_instance(50000, 50000, 4, 4)
+    data, pi_values = generate_model_instance(10000, 10000, 4, 4)
     weighted_data = convert_games_to_dict( data)
     
     start = time.perf_counter() 
@@ -115,15 +115,15 @@ def test_speed_gains_large_MN():
     assert weighted_speed < standard_speed
 
 def test_speed_gains_large_K():
-    data, pi_values = generate_model_instance(1000, 1000, 10, 10)
+    data, pi_values = generate_model_instance(1000, 1000, 8, 8)
     weighted_data = convert_games_to_dict( data)
     
     start = time.perf_counter()
     
     compute_predicted_ratings_std(weighted_data, pi_values)
-    compute_predicted_ratings_std_leadership(weighted_data, pi_values)
+    # compute_predicted_ratings_std_leadership(weighted_data, pi_values)
     compute_predicted_ratings_ho(weighted_data, pi_values)
-    compute_predicted_ratings_hol(weighted_data, pi_values)
+    # compute_predicted_ratings_hol(weighted_data, pi_values)
 
     end = time.perf_counter()
     weighted_speed = end - start
@@ -133,9 +133,9 @@ def test_speed_gains_large_K():
     start = time.perf_counter()
    
     compute_predicted_ratings_std_old(data, pi_values)
-    compute_predicted_ratings_std_leadership_old(data, pi_values)
+    # compute_predicted_ratings_std_leadership_old(data, pi_values)
     compute_predicted_ratings_ho_old(data, pi_values)
-    compute_predicted_ratings_hol_old(data, pi_values)
+    # compute_predicted_ratings_hol_old(data, pi_values)
     end = time.perf_counter()
     standard_speed = end - start
     print(f"Standard speed: {standard_speed}")

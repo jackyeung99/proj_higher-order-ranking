@@ -227,4 +227,3 @@ def compute_predicted_ratings_hol_old(training_set, pi_values):
     predicted_hol_scores, _ = synch_solve_equations (bond_matrix, 1000, pi_values, iterate_equation_newman_leadership, sens=1e-10)
 
     return predicted_hol_scores
-

@@ -22,8 +22,9 @@ def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, leadership=False, r
         # Split data into training and testing sets
         training_set, testing_set = train_test_split(data, train_size=train_size, random_state=None)
         
+        weighted_train = convert_games_to_dict(training_set)
         # Run models and save the results
-        df = run_models(training_set, testing_set, pi_values, leadership)
+        df = run_models(weighted_train, testing_set, pi_values, leadership)
         file_path = os.path.join(os.path.dirname(__file__), file_dir, f'rep-{rep+1}.csv')
         df.to_csv(file_path, index=False)
     
