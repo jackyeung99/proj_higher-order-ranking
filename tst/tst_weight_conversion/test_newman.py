@@ -47,7 +47,7 @@ def test_weighted_newman():
   
     
     assert len(old_newman) == len(new_newman)
-    assert all(np.isclose(old_newman[player], new_newman[player], atol=1e-10) for player in new_newman)
+    assert all(np.isclose(old_newman[player], new_newman[player], atol=1e-10) for player in new_newman), print(old_newman, new_newman)
 
 def test_binarized_leadership(): 
     data, pi_values = generate_leadership_model_instance(100, 500, 4, 4)
