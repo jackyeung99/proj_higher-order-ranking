@@ -1,5 +1,6 @@
 import os 
 import sys
+import concurrent.futures
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
@@ -43,7 +44,7 @@ def normalize_scores (pi_values):
         pi_values[n] = pi_values[n] / norm
 
 
-def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-10):
+def synch_solve_equations_old(bond_matrix, max_iter, pi_values, method, sens=1e-10):
 
     x, y, z = [], [], []
     scores = {}
@@ -74,18 +75,22 @@ def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-10)
         
         err = 0.0
         tmp_scores = {}
-        
+
+
         for s in scores:
             tmp_scores[s] = method(s, scores, bond_matrix)
+
+    
             
                             
         normalize_scores (tmp_scores)
-        
+
         for s in tmp_scores:
             if abs(tmp_scores[s]-scores[s]) > err:
                 err = abs(tmp_scores[s]-scores[s])
             scores[s] = tmp_scores[s]
                 
+        # print(err)
         iteration += 1
         
         rms = N = 0.0
@@ -97,9 +102,7 @@ def synch_solve_equations (bond_matrix, max_iter, pi_values, method, sens=1e-10)
         x.append(iteration)
         y.append(rms)
         z.append(err)
-        
-        
-            
+   
     return scores, [x, y, z]
 
 def create_hypergraph_from_data (data):
@@ -202,7 +205,7 @@ def compute_predicted_ratings_std_old(training_set, pi_values):
     bin_data = binarize_data(training_set)
     bin_bond_matrix = create_hypergraph_from_data (bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
+    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
 
     return predicted_std_scores
 
@@ -210,20 +213,20 @@ def compute_predicted_ratings_std_leadership_old(training_set, pi_values):
     bin_data = binarize_data_leadership(training_set)
     bin_bond_matrix = create_hypergraph_from_data (bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
+    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
 
     return predicted_std_scores
 
 def compute_predicted_ratings_ho_old(training_set, pi_values): 
     
     bond_matrix = create_hypergraph_from_data (training_set)
-    predicted_ho_scores, _ = synch_solve_equations(bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
+    predicted_ho_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
 
     return predicted_ho_scores
 
 
 def compute_predicted_ratings_hol_old(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data (training_set)
-    predicted_hol_scores, _ = synch_solve_equations (bond_matrix, 1000, pi_values, iterate_equation_newman_leadership, sens=1e-10)
+    predicted_hol_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman_leadership, sens=1e-10)
 
     return predicted_hol_scores
