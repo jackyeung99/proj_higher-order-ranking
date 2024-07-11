@@ -77,7 +77,50 @@ def generate_leadership_model_instance (N, M, K1, K2):
         
     return data, pi_values
 
+def generate_model_instance_weighted(N, M, K1, K2):
+    # Random scores from logistic distribution
+    pi_values = {n: float(np.exp(logistic.rvs(size=1)[0])) for n in range(N)}
+    normalize_scores(pi_values)
 
+    list_of_nodes = list(range(N))
+    data = {}
+
+    for m in range(M):
+        K = random.randint(K1, K2)
+        tmp = random.sample(list_of_nodes, K)
+        order = tuple(establish_order(tmp, pi_values))
+        if order not in data:
+            data[order] = 0
+
+        data[order] += 1 
+
+    return data, pi_values
+
+def generate_leadership_model_instance_weighted(N, M, K1, K2):
+    # Random scores from logistic distribution
+    pi_values = {n: float(np.exp(logistic.rvs(size=1)[0])) for n in range(N)}
+    normalize_scores(pi_values)
+
+    list_of_nodes = list(range(N))
+    data = {}
+
+    for m in range(M):
+        K = random.randint(K1, K2)
+        tmp = random.sample(list_of_nodes, K)
+        order = establish_order(tmp, pi_values)
+        
+        f = order[0]
+        order = order[1:]
+        random.shuffle(order)
+        order.insert(0, f)
+        order = tuple(order)
+
+        if order not in data:
+            data[order] = 0
+            
+        data[order] += 1 
+       
+    return data, pi_values
  
 def create_hypergraph_from_data_weight(data):
     bond_matrix = {}
@@ -91,6 +134,29 @@ def create_hypergraph_from_data_weight(data):
     return bond_matrix
 
 
+# def create_hypergraph_from_data_weight (data):
+
+#     bond_matrix = {}
+
+
+#     for order, weight in data.items():
+
+#         K = len(order)
+#         for player in order:
+            
+#             position = order.index(player)
+
+#             if player not in bond_matrix:
+#                 bond_matrix[player] = {}
+#             if K not in bond_matrix[player]:
+#                 bond_matrix[player][K] = {}
+#             if position not in bond_matrix[player][K]:
+#                 bond_matrix[player][K][position] = {}
+
+#             bond_matrix[player][K][position][order] = weight
+
+
+#     return bond_matrix
 
 def binarize_data_weighted(data):
     bin_data = {}

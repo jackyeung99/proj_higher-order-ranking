@@ -202,7 +202,7 @@ def compute_predicted_ratings_std_old(training_set, pi_values):
     bin_data = binarize_data(training_set)
     bin_bond_matrix = create_hypergraph_from_data (bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-6)
+    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
 
     return predicted_std_scores
 
@@ -210,21 +210,21 @@ def compute_predicted_ratings_std_leadership_old(training_set, pi_values):
     bin_data = binarize_data_leadership(training_set)
     bin_bond_matrix = create_hypergraph_from_data (bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-6)
+    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
 
     return predicted_std_scores
 
 def compute_predicted_ratings_ho_old(training_set, pi_values): 
     
     bond_matrix = create_hypergraph_from_data (training_set)
-    predicted_ho_scores, _ = synch_solve_equations(bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-6)
+    predicted_ho_scores, _ = synch_solve_equations(bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
 
     return predicted_ho_scores
 
 
 def compute_predicted_ratings_hol_old(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data (training_set)
-    predicted_hol_scores, _ = synch_solve_equations (bond_matrix, 1000, pi_values, iterate_equation_newman_leadership, sens=1e-6)
+    predicted_hol_scores, _ = synch_solve_equations (bond_matrix, 1000, pi_values, iterate_equation_newman_leadership, sens=1e-10)
 
     return predicted_hol_scores
 

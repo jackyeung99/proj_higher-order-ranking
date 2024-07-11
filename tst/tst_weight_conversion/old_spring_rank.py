@@ -14,6 +14,26 @@ sys.path.append(repo_root)
 
 from src.utils.graph_tools import *
 
+
+def binarize_data(data):
+    bin_data = []
+    for arr in data:
+        arr = np.array(arr)
+        idx = np.triu_indices(len(arr), k=1)
+        pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
+        bin_data.extend(pairs.tolist())
+    return bin_data
+
+def binarize_data_leadership(data):
+    bin_data = []
+    
+    for arr in data:
+        arr = np.array(arr)
+        pairs = np.column_stack((np.repeat(arr[0], len(arr) - 1), arr[1:]))
+        bin_data.extend(pairs.tolist())
+        
+    return bin_data
+
 ''' Credit to https://github.com/LarremoreLab/SpringRank for this file'''
 def get_scaled_ranks(A, scale=0.75):
     """
@@ -146,32 +166,33 @@ def shift_rank(ranks, episolon = 1e-10):
     for i in range(N): ranks[i]=ranks[i]-min_r
     return ranks    
 
-def compute_predicted_ratings_spring_rank(games, pi_values):
-    bin_data = binarize_data_weighted(games)
+def compute_predicted_ratings_spring_rank_old(games, pi_values):
+    bin_data = binarize_data (games)
     unique_nodes = list(pi_values.keys())
     node_to_index = {node: index for index, node in enumerate(unique_nodes)}
     index_to_node = {v:k for k, v in node_to_index.items()}
     num_players = len(unique_nodes)
 
     A = np.full((num_players, num_players), 1.0, dtype=float)
-    for order, weight in bin_data.items():
-        A[node_to_index[order[0]]][node_to_index[order[1]]] = float(weight + 1)
+    for i,j in bin_data:
+        A[node_to_index[i]][node_to_index[j]] += 1
+
 
     shifted_ranks = shift_rank(get_ranks(A))
     pi_values = {index_to_node[index]: rank for index, rank in enumerate(shifted_ranks)}
     normalize_scores(pi_values)
     return pi_values
 
-def compute_predicted_ratings_spring_rank_leadership(games, pi_values):
-    bin_data = binarize_data_weighted_leadership (games)
+def compute_predicted_ratings_spring_rank_leadership_old(games, pi_values):
+    bin_data = binarize_data_leadership (games)
     unique_nodes = list(pi_values.keys())
     node_to_index = {node: index for index, node in enumerate(unique_nodes)}
     index_to_node = {v:k for k, v in node_to_index.items()}
     num_players = len(unique_nodes)
 
     A = np.full((num_players, num_players), 1.0, dtype=float)
-    for order, weight in bin_data.items():
-        A[order[0]][order[1]] = float(weight + 1)
+    for i,j in bin_data:
+        A[node_to_index[i]][node_to_index[j]] += 1
 
 
     shifted_ranks = shift_rank(get_ranks(A))
@@ -194,15 +215,3 @@ def eqs39(beta, s, A):
     return x
 
 
-
-if __name__ == '__main__':
-
-    data, pi_values = read_strict_ordered_dataset('datasets/processed_data/00045-00000014.soc')
-
-    train, test = train_test_split(data)
-
-    ranks = compute_predicted_ratings_spring_rank(train, pi_values)
-
-    print(ranks)
-    # print(np.mean(compute_likelihood(ranks, test)))
-   

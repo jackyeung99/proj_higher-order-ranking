@@ -3,7 +3,7 @@ import os
 import csv
 import random
 import numpy as np
-from numba import njit, prange, types
+from numba import njit,jit, prange, types
 from numba.typed import List
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
@@ -46,7 +46,7 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
     final_scores = {players[i]: scores[i] for i in range(len(players))}
     return final_scores, iteration
 
-@njit
+
 def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
     a = b = 1.0 / (pi_values[player_idx] + 1.0)
 
@@ -60,15 +60,19 @@ def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
             tmp2 = np.sum(score_sums[position:K])
             if tmp2 != 0:
                 a += weight * (tmp1 / tmp2)
+        # for v in range(position):
+        tmp = np.sum(score_sums[0:K])
+        if tmp != 0:
+            b += weight/tmp
         for v in range(position):
-            tmp = np.sum(score_sums[v:K])
-            if tmp != 0:
-                b += weight * (1.0 / tmp)
+            tmp -= score_sums[v]
+            if tmp !=0:
+                 b += weight * (1.0 / tmp)
 
 
     return a / b
 
-@njit
+
 def iterate_equation_newman_leadership_weighted(player_idx, pi_values, games_with_players):
     a = b = 1.0 / (pi_values[player_idx] + 1.0)
 
@@ -103,7 +107,7 @@ def compute_predicted_ratings_std_leadership(training_set, pi_values):
     bin_data = binarize_data_weighted_leadership(training_set)
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
+    predicted_std_scores, _ = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_weighted, sens=1e-10)
 
     return predicted_std_scores
 
@@ -112,8 +116,6 @@ def compute_predicted_ratings_ho(training_set, pi_values):
     predicted_ho_scores, _ = synch_solve_equations(bond_matrix, 1000, pi_values, iterate_equation_newman_weighted, sens=1e-10)
 
     return predicted_ho_scores
-
-
 
 
 def compute_predicted_ratings_hol(training_set, pi_values):

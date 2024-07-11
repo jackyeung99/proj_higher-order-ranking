@@ -7,14 +7,30 @@ sys.path.append(repo_root)
 
 from src.utils.graph_tools import *
 
-def compute_predicted_ratings_page_rank(games, pi_values):
-    bin_data = binarize_data_weighted(games)
+def binarize_data(data):
+    bin_data = []
+    for arr in data:
+        arr = np.array(arr)
+        idx = np.triu_indices(len(arr), k=1)
+        pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
+        bin_data.extend(pairs.tolist())
+    return bin_data
 
-    weighted_edges = [(i,j,weight) for (i,j), weight in bin_data.items()]
+def binarize_data_leadership(data):
+    bin_data = []
     
+    for arr in data:
+        arr = np.array(arr)
+        pairs = np.column_stack((np.repeat(arr[0], len(arr) - 1), arr[1:]))
+        bin_data.extend(pairs.tolist())
+        
+    return bin_data
+
+def compute_predicted_ratings_page_rank_old(games, pi_values):
+    edge_list = binarize_data (games)
+
     G = nx.DiGraph()
-    G.add_weighted_edges_from(weighted_edges)
-    
+    G.add_edges_from(edge_list)
     
     # Initialize PageRank values with the provided pi_values
     personalization = {node: 1.0 for node in G.nodes}
@@ -29,12 +45,11 @@ def compute_predicted_ratings_page_rank(games, pi_values):
     return pi_values
 
 
-def compute_predicted_ratings_page_rank_leadership(games, pi_values):
-    bin_data = binarize_data_weighted_leadership(games)
-    weighted_edges = [(i,j,weight) for (i,j), weight in bin_data.items()]
-    
+def compute_predicted_ratings_page_rank_leadership_old(games, pi_values):
+    edge_list = binarize_data_leadership (games)
+
     G = nx.DiGraph()
-    G.add_weighted_edges_from(weighted_edges)
+    G.add_edges_from(edge_list)
     
     # Initialize PageRank values with the provided pi_values
     personalization = {node: 1.0 for node in G.nodes}
@@ -47,11 +62,3 @@ def compute_predicted_ratings_page_rank_leadership(games, pi_values):
     normalize_scores(pi_values)
         
     return pi_values
-
-
-if __name__ == '__main__': 
-
-    pi_values, data = generate_model_instance(500, 500, 2, 4)
-
-    calculate_predicted_rankings_page_rank(data, pi_values)
- 

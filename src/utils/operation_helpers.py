@@ -6,9 +6,11 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 from src.models import *
+from src.utils.metrics import *
 
 MODEL_FUNCTIONS = {
     'newman': compute_predicted_ratings_std,
+    'newman_leadership': compute_predicted_ratings_std_leadership,
     'higher_order_newman': compute_predicted_ratings_ho,
     'higher_order_leadership': compute_predicted_ratings_hol,
     'spring_rank': compute_predicted_ratings_spring_rank,

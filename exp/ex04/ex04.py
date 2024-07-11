@@ -40,7 +40,7 @@ def run_experiment(dataset_file_path, reps, file_name, leadership=False):
 
 if __name__ == '__main__':
     # Run From ex03_realdata directory
-    # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex03_realdata/data ~/senior_thesis/higher_order_ranking/exp/ex03_realdata/data
+    # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex03/data ~/senior_thesis/higher_order_ranking/exp/ex03/data
 
     base_path = os.path.dirname(__file__)
 

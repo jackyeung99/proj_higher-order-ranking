@@ -8,6 +8,7 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..',))
 sys.path.append(repo_root)
 
 from src.utils import *
+from src.utils.graph_tools import *
 
 
 def binarize_data (data):
@@ -59,6 +60,46 @@ def binarize_data_leadership_np(data):
 
 
 class TestGraphTools:
+
+    def test_weight_conversion(self):
+        data, _ = generate_model_instance(50, 50, 4, 4)
+        weighted = convert_games_to_dict(data)
+
+        expanded_weighted = []
+        for order, count in weighted.items():
+            expanded_weighted.extend([list(order)] * count)
+
+        print(expanded_weighted)
+        print(data)
+        assert sorted(expanded_weighted) == sorted(data)
+
+
+    def test_weighted_generation(self):
+        weighted_data, _ = generate_model_instance_weighted(50,50,4,4)
+
+        assert len(weighted_data) <= 50
+        assert isinstance(weighted_data, dict)
+        assert np.sum(list(weighted_data.values())) == 50
+
+    def test_weighted_leadership_generation(self):
+        weighted_data, _ = generate_leadership_model_instance_weighted(50,50,2,2)
+
+        assert len(weighted_data) <= 50
+        assert isinstance(weighted_data, dict)
+        assert np.sum(list(weighted_data.values())) == 50
+
+
+    def test_weighted_binarize(self):
+
+        data, _ = generate_model_instance(50,50, 4,4)
+
+        weighted = convert_games_to_dict(data)
+        weighted_bin =  binarize_data_weighted(weighted)
+
+        bin = binarize_data(data)
+
+        assert len(bin) == np.sum(list(weighted_bin.values()))
+
 
     def test_numpy_binarize(self):
 
