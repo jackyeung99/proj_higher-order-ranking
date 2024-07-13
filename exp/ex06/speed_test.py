@@ -81,6 +81,7 @@ def test_M(results_dir):
 
     results = []
     for m in M_vec:
+        m = int(m)
         iteration = test_models(N, m, K, K)
         iteration['m'] = m
         results.append(iteration)
@@ -98,6 +99,7 @@ def test_N(results_dir):
 
     results = []
     for n in N_vec:
+        n = int(n)
         iteration = test_models(n, M, K, K)
         iteration['n'] = n
         results.append(iteration)
