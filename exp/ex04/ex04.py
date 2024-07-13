@@ -38,9 +38,9 @@ def split_weighted_dataset(dataset, train_ratio=0.8):
     
     return dict(train_set), dict(test_set)
 
-def run_experiment(dataset_file_path, reps, file_name, leadership=False):
+def run_experiment(dataset_file_path, reps, out_file_directory, leadership=False):
 
-    os.makedirs(file_name, exist_ok=True)
+    os.makedirs(out_file_directory, exist_ok=True)
 
     for file in os.listdir(dataset_file_path):
 
@@ -50,19 +50,17 @@ def run_experiment(dataset_file_path, reps, file_name, leadership=False):
             file_path = os.path.join(dataset_file_path, file)
             data, pi_values = read_edge_list(file_path)
             
-            if all(len(x) > 1 for x in data.keys()):
+            if all(len(x) > 1 for x in data.keys()) and len(data) > 50:
                 file_split = file.split('_')
                 dataset_id = file_split[0]
 
-                if len(data) > 50: 
-            
-                    for rep in range(reps):
-                        
-
-                        training_set, testing_set = split_weighted_dataset(data)
-                        out_file_name = os.path.join(repo_root, f'dataset-{dataset_id}_rep-{rep}.csv')
-                        df = run_models(training_set, testing_set, pi_values, leadership=leadership)
-                        df.to_csv(out_file_name, index=False)
+                for rep in range(reps):
+                    
+                    print(f"\t{rep}")
+                    training_set, testing_set = split_weighted_dataset(data)
+                    out_file_name = os.path.join(out_file_directory, f'dataset-{dataset_id}_rep-{rep}.csv')
+                    df = run_models(training_set, testing_set, pi_values, leadership=leadership)
+                    df.to_csv(out_file_name, index=False)
 
  
 
