@@ -1,6 +1,6 @@
 import os 
 import sys
-import concurrent.futures
+
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
@@ -12,14 +12,42 @@ from datasets.utils.extract_ordered_games import *
 
 # ===== Old Functions to test against ======
 
-def binarize_data(data):
+# def binarize_data(data):
+#     bin_data = []
+#     for arr in data:
+#         arr = np.array(arr)
+#         idx = np.triu_indices(len(arr), k=1)
+#         pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
+#         bin_data.extend(pairs.tolist())
+#     return bin_data
+
+def binarize_data (data):
+
     bin_data = []
-    for arr in data:
-        arr = np.array(arr)
-        idx = np.triu_indices(len(arr), k=1)
-        pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
-        bin_data.extend(pairs.tolist())
+
+    for i in range(0, len(data)):
+
+        K = len(data[i])
+        for r in range(0, K-1):
+            for s in range (r+1, K):
+                bin_data.append([data[i][r],data[i][s]])
+
+
     return bin_data
+
+# def binarize_data_leadership (data):
+    
+#     bin_data = []
+    
+#     for i in range(0, len(data)):
+        
+#         K = len(data[i])
+#         for s in range (1, K):
+#             bin_data.append([data[i][0],data[i][s]])
+        
+        
+#     return bin_data
+
 
 def binarize_data_leadership(data):
     bin_data = []

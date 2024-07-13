@@ -89,49 +89,76 @@ def test_weighted_hol():
 
 
 
-def test_speed_gains_large_MN():
-    data, pi_values = generate_model_instance(10000, 50000, 4, 4)
+def test_speed_gains_std():
+    data, pi_values = generate_model_instance(10000, 10000, 5, 5)
     weighted_data = convert_games_to_dict( data)
     
     start = time.perf_counter() 
     compute_predicted_ratings_std(weighted_data, pi_values)
-    compute_predicted_ratings_std_leadership(weighted_data, pi_values)
-    compute_predicted_ratings_ho(weighted_data, pi_values)
-    compute_predicted_ratings_hol(weighted_data, pi_values)
     end = time.perf_counter()
     weighted_speed = end - start
-    print(f"Weighted + numba speed: {weighted_speed}")
+    print(f"Weighted + cython: {weighted_speed}")
 
     
     start = time.perf_counter()
     compute_predicted_ratings_std_old(data, pi_values)
-    compute_predicted_ratings_std_leadership_old(data, pi_values)
-    compute_predicted_ratings_ho_old(data, pi_values)
-    compute_predicted_ratings_hol_old(data, pi_values)
     end = time.perf_counter()
     standard_speed = end - start
     print(f"Standard speed: {standard_speed}")
 
     assert weighted_speed < standard_speed
 
-def test_speed_gains_large_K():
-    data, pi_values = generate_model_instance(1000, 1000, 15, 15)
+def test_speed_gains_large_stdl():
+    data, pi_values = generate_model_instance(10000, 10000, 5, 5)
     weighted_data = convert_games_to_dict( data)
     
-    start = time.perf_counter()
-    compute_predicted_ratings_std(weighted_data, pi_values)
+    start = time.perf_counter() 
+
     compute_predicted_ratings_std_leadership(weighted_data, pi_values)
-    compute_predicted_ratings_ho(weighted_data, pi_values)
-    compute_predicted_ratings_hol(weighted_data, pi_values)
     end = time.perf_counter()
     weighted_speed = end - start
-    print(f"Weighted + numba speed: {weighted_speed}")
+    print(f"Weighted + cython speed: {weighted_speed}")
+
+    start = time.perf_counter()
+    compute_predicted_ratings_std_leadership_old(data, pi_values)
+    end = time.perf_counter()
+    standard_speed = end - start
+    print(f"Standard speed: {standard_speed}")
+
+    assert weighted_speed < standard_speed
+
+def test_speed_gains_large_ho():
+    data, pi_values = generate_model_instance(10000, 10000, 5, 5)
+    weighted_data = convert_games_to_dict( data)
+    
+    start = time.perf_counter() 
+    compute_predicted_ratings_ho(weighted_data, pi_values)
+    end = time.perf_counter()
+    weighted_speed = end - start
+    print(f"Weighted + cython speed: {weighted_speed}")
 
     
     start = time.perf_counter()
-    compute_predicted_ratings_std_old(data, pi_values)
-    compute_predicted_ratings_std_leadership_old(data, pi_values)
     compute_predicted_ratings_ho_old(data, pi_values)
+    end = time.perf_counter()
+    standard_speed = end - start
+    print(f"Standard speed: {standard_speed}")
+
+    assert weighted_speed < standard_speed
+
+
+def test_speed_gains_large_hol():
+    data, pi_values = generate_model_instance(10000, 10000, 5, 5)
+    weighted_data = convert_games_to_dict( data)
+    
+    start = time.perf_counter() 
+    compute_predicted_ratings_hol(weighted_data, pi_values)
+    end = time.perf_counter()
+    weighted_speed = end - start
+    print(f"Weighted + cython speed: {weighted_speed}")
+
+    
+    start = time.perf_counter()
     compute_predicted_ratings_hol_old(data, pi_values)
     end = time.perf_counter()
     standard_speed = end - start
@@ -139,14 +166,66 @@ def test_speed_gains_large_K():
 
     assert weighted_speed < standard_speed
 
+
+
+# def test_speed_gains_large_MN():
+#     data, pi_values = generate_model_instance(10000, 50000, 4, 4)
+#     weighted_data = convert_games_to_dict( data)
+    
+#     start = time.perf_counter() 
+#     compute_predicted_ratings_std(weighted_data, pi_values)
+#     compute_predicted_ratings_std_leadership(weighted_data, pi_values)
+#     compute_predicted_ratings_ho(weighted_data, pi_values)
+#     compute_predicted_ratings_hol(weighted_data, pi_values)
+#     end = time.perf_counter()
+#     weighted_speed = end - start
+#     print(f"Weighted + numba speed: {weighted_speed}")
+
+    
+#     start = time.perf_counter()
+#     compute_predicted_ratings_std_old(data, pi_values)
+#     compute_predicted_ratings_std_leadership_old(data, pi_values)
+#     compute_predicted_ratings_ho_old(data, pi_values)
+#     compute_predicted_ratings_hol_old(data, pi_values)
+#     end = time.perf_counter()
+#     standard_speed = end - start
+#     print(f"Standard speed: {standard_speed}")
+
+#     assert weighted_speed < standard_speed
+
+# def test_speed_gains_large_K():
+#     data, pi_values = generate_model_instance(1000, 1000, 15, 15)
+#     weighted_data = convert_games_to_dict( data)
+    
+#     start = time.perf_counter()
+#     compute_predicted_ratings_std(weighted_data, pi_values)
+#     compute_predicted_ratings_std_leadership(weighted_data, pi_values)
+#     compute_predicted_ratings_ho(weighted_data, pi_values)
+#     compute_predicted_ratings_hol(weighted_data, pi_values)
+#     end = time.perf_counter()
+#     weighted_speed = end - start
+#     print(f"Weighted + numba speed: {weighted_speed}")
+
+    
+#     start = time.perf_counter()
+#     compute_predicted_ratings_std_old(data, pi_values)
+#     compute_predicted_ratings_std_leadership_old(data, pi_values)
+#     compute_predicted_ratings_ho_old(data, pi_values)
+#     compute_predicted_ratings_hol_old(data, pi_values)
+#     end = time.perf_counter()
+#     standard_speed = end - start
+#     print(f"Standard speed: {standard_speed}")
+
+#     assert weighted_speed < standard_speed
+
 def main():
-    data, pi_values = generate_model_instance(10000, 10000, 4, 4)
+    data, pi_values = generate_model_instance(300000, 300000, 4, 4)
     weighted_data = convert_games_to_dict(data)
     
-    profiler = profile_test_function(compute_predicted_ratings_ho, weighted_data, pi_values)
+    profiler = profile_test_function(compute_predicted_ratings_std_leadership, weighted_data, pi_values)
     print_profile_stats(profiler)
 
-    profiler = profile_test_function(compute_predicted_ratings_ho_old, data, pi_values)
+    profiler = profile_test_function(compute_predicted_ratings_std_leadership_old, data, pi_values)
     print_profile_stats(profiler)
 
 if __name__ == '__main__':

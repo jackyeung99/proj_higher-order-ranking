@@ -41,51 +41,44 @@ def read_dataset(file):
     return dataset
 
 
-def process_directory(compared_axis, base_path, directory, output_file, is_synthetic = True):
+def process_directory(base_path, directory, output_file, is_synthetic = True):
     os.makedirs(os.path.join(base_path, 'results'), exist_ok=True)
 
-    results_proportions = []
-    results_mean = []
+    results = []
     for file in os.listdir(os.path.join(base_path, 'data', directory)):
         if file.endswith('.csv'):
             file_path = os.path.join(base_path, 'data', directory, file)
-            df = pd.read_csv(file_path)
+            df = pd.read_csv(file_path).drop(columns=['Game'])
 
-            averages = calculate_column_means(df, compared_axis=compared_axis)
-            proportions = calculate_percentages(df, compared_axis=compared_axis)
+            averages = df.mean().to_dict()
 
-        
             if is_synthetic:
                 file_info = read_file_parameters(file)
             else: 
                 file_info = read_dataset(file)
 
             averages.update(file_info)
-            proportions.update(file_info)
-
-            results_mean.append(averages)
-            results_proportions.append(proportions)
-            
+            results.append(averages)
+                   
     
-    mean_df = pd.DataFrame(results_mean).drop(columns=['Game'])
-    proportion_df = pd.DataFrame(results_proportions).drop(columns=['Game'])
-
-    mean_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_means.csv"), index=False)
-    proportion_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_proportions.csv"), index=False)
+    results_df = pd.DataFrame(results)
+    results_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_results.csv"), index=False)
 
 def read_edge_list(file_path):
     data = {}
-
     with open(file_path) as file:
         for line in file.readlines():   
             if line.startswith('#'):
                 split = line.split(':')
-                pi_values = {player: 1.0 for player in range(split[1])}
+                num = int(split[1].strip())
             else:
                 count, order = line.split(':')
-                data[order] = tuple(count.split(','))
+                count = int(count.strip())
+                order = tuple(int(x) for x in order.split(','))
+                data[order] = count
 
 
+    pi_values = {player: 1.0 for player in range(num+1)}
     return data, pi_values
 
 

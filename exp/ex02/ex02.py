@@ -34,12 +34,12 @@ if __name__ == '__main__':
 
     base_path = os.path.dirname(__file__)
     # standard 
-    N, M, K1, K2 = 5000, 10000, 2, 2
-    evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data','ex02.1'))
+    # N, M, K1, K2 = 5000, 10000, 2, 2
+    # evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data','ex02.1'))
 
-    # higher order 
-    N, M, K1, K2 = 5000, 10000, 5, 5
-    evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex02.2'))
+    # # higher order 
+    # N, M, K1, K2 = 5000, 10000, 5, 5
+    # evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex02.2'))
     
     # higher order leadership
     N, M, K1, K2 = 5000, 10000, 5, 5

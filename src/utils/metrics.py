@@ -50,13 +50,13 @@ def calculate_tau(predicted_scores, ground_truth_scores):
     return correlation
 
 
-def measure_log_likelihood (data, pi_values, model = 'ho_bt'):
+def measure_log_likelihood (data, pi_values, model = 'ho_bt', epsilon=1e-10):
     
     
     log_like = log_prior = 0.0
     
     for i in pi_values:
-        log_prior += np.log(pi_values[i]) - 2.0 * np.log(1.0+pi_values[i])
+        log_prior += np.log(pi_values[i]+epsilon) - 2.0 * np.log(1.0+pi_values[i]+epsilon)
         
     ############################################    
     if model == 'ho_bt':
@@ -68,15 +68,17 @@ def measure_log_likelihood (data, pi_values, model = 'ho_bt'):
                     norm += pi_values[data[i][k]]
                 tmp -= np.log(norm)
             log_like += tmp
+            
     ############################################    
     if model == 'ho_bt_leader':
         for i in range(0,len(data)):
-            tmp = np.log(pi_values[data[i][0]])
+            tmp = np.log(pi_values[data[i][0]] + epsilon)
             norm = 0.0
             for j in range(0, len(data[i])):
                 norm += pi_values[data[i][j]]
             tmp -= np.log(norm)
             log_like += tmp
+
     #############################################
     if model == 'std_bt':
         for i in range(0,len(data)):

@@ -52,8 +52,7 @@ def split_games(games, train_size):
     return training_set, testing_set
 
 
-
-def calculate_percentages(df, compared_axis):
+def calculate_percentages_against_base(df, compared_axis):
     total_rows = len(df)
     if total_rows == 0:
         return {}
@@ -69,7 +68,7 @@ def calculate_percentages(df, compared_axis):
 
     return comparisons
 
-def calculate_column_means(df, compared_axis):
+def calculate_column_means_against_base(df, compared_axis):
     if df.empty:
         return {}
 
@@ -83,3 +82,4 @@ def calculate_column_means(df, compared_axis):
     }
 
     return means
+

@@ -80,7 +80,6 @@ int main (int argc, char **argv)
   compute_probability_model (binGtest);
 
 
-
   iterative_algorithm_ho_model (binGtrain, binR, eps, MAX_ITER);
   evaluate_results (Gtest, binR);
   //print_results (binR);
