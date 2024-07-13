@@ -1,9 +1,7 @@
 import os
 import sys
-import csv
-import matplotlib.pyplot as plt
-import seaborn as sns
 import time
+import pandas as pd
 
 repo_root = os.path.abspath(os.path.join(os.getcwd(), '..', '..'))
 sys.path.append(repo_root)
