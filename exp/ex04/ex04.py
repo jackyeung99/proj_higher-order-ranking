@@ -44,7 +44,7 @@ def run_experiment(dataset_file_path, reps, file_name, leadership=False):
 
     for file in os.listdir(dataset_file_path):
 
-
+        print(file)
         if file.endswith('_edges.txt'):
 
             file_path = os.path.join(dataset_file_path, file)
