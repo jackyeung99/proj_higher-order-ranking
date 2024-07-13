@@ -121,8 +121,8 @@ def iterate_equation_newman_leadership(s, scores, bond_matrix):
 def parrallel_std(training_set, pi_values):
     bin_data = binarize_data(training_set)
     bin_bond_matrix = create_hypergraph_from_data(bin_data)
-    predicted_std_scores, iter = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
-    print(len(iter[0]))
+    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
+
     return predicted_std_scores
 
 def parallel_std_leadership(training_set, pi_values):
@@ -133,8 +133,8 @@ def parallel_std_leadership(training_set, pi_values):
 
 def parallel_ho(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data(training_set)
-    predicted_ho_scores, iter = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
-    print(len(iter[0]))
+    predicted_ho_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
+
     return predicted_ho_scores
 
 def parallel_hol(training_set, pi_values):

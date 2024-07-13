@@ -3,10 +3,10 @@ import sys
 import time
 import pandas as pd
 
-repo_root = os.path.abspath(os.path.join(os.getcwd(), '..', '..'))
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src import *
+from src.models.newman import *
 from exp.ex06.models.parallel_newman import *
 from exp.ex06.models.numba_newman import *
 from tst.tst_weight_conversion.old_newman import * 
@@ -35,12 +35,12 @@ def run_all_newman_old(data, pi_values):
 
     return tot_time
 
-def run_all_parrallel(weighted_data, pi_values):
+def run_all_parrallel(data, pi_values):
     start = time.perf_counter()
-    parrallel_std(weighted_data, pi_values)
-    parallel_std_leadership(weighted_data, pi_values)
-    parallel_ho(weighted_data, pi_values)
-    parallel_hol(weighted_data, pi_values)
+    parrallel_std(data, pi_values)
+    parallel_std_leadership(data, pi_values)
+    parallel_ho(data, pi_values)
+    parallel_hol(data, pi_values)
     end = time.perf_counter()
     tot_time = end - start
 
@@ -67,7 +67,7 @@ def test_models(N, M, K1, K2):
 
     std_model = run_all_newman(weighted_data, pi_values)
     old_newman = run_all_newman_old(data, pi_values)
-    parallel = run_all_parrallel(weighted_data, pi_values)
+    parallel = run_all_parrallel(data, pi_values)
     numba = run_all_numba(weighted_data, pi_values)
 
     return {'std_model': std_model, 'old_newman': old_newman, 'parrallel': parallel, 'numba': numba}
