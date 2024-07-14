@@ -8,7 +8,7 @@ sys.path.append(repo_root)
 
 from src.models.newman import *
 from exp.ex06.models.parallel_newman import *
-from exp.ex06.models.numba_newman import *
+from exp.ex06.models.numpy_newman import *
 from tst.tst_weight_conversion.old_newman import * 
 
 
@@ -47,13 +47,13 @@ def run_all_parrallel(data, pi_values):
     return tot_time
 
 
-def run_all_numba(weighted_data, pi_values): 
+def run_all_numpy(weighted_data, pi_values): 
 
     start = time.perf_counter()
-    numba_std(weighted_data, pi_values)
-    numba_std_leadership(weighted_data, pi_values)
-    numba_ho(weighted_data, pi_values)
-    numba_hol(weighted_data, pi_values)
+    numpy_std(weighted_data, pi_values)
+    numpy_std_leadership(weighted_data, pi_values)
+    numpy_ho(weighted_data, pi_values)
+    numpy_hol(weighted_data, pi_values)
     end = time.perf_counter()
     tot_time = end - start
 
@@ -68,9 +68,9 @@ def test_models(N, M, K1, K2):
     std_model = run_all_newman(weighted_data, pi_values)
     old_newman = run_all_newman_old(data, pi_values)
     parallel = run_all_parrallel(data, pi_values)
-    numba = run_all_numba(weighted_data, pi_values)
+    numpy = run_all_numpy(weighted_data, pi_values)
 
-    return {'std_model': std_model, 'old_newman': old_newman, 'parrallel': parallel, 'numba': numba}
+    return {'std_model': std_model, 'old_newman': old_newman, 'parrallel': parallel, 'numpy': numpy}
 
 
 def test_M(results_dir):
@@ -113,7 +113,7 @@ def test_K(results_dir):
 
     N = 1000
     M = 1000
-    K_vec = [2, 8, 15, 30, 50]
+    K_vec = [2, 8, 15, 30, 50, 100, 250, 500]
 
     results = []
     for k in K_vec:

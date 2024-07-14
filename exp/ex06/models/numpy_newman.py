@@ -46,7 +46,7 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
     final_scores = {players[i]: scores[i] for i in range(len(players))}
     return final_scores, iteration
 
-@njit
+
 def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
     a = b = 1.0 / (pi_values[player_idx] + 1.0)
 
@@ -68,7 +68,7 @@ def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
 
     return a / b
 
-@njit
+
 def iterate_equation_newman_leadership_weighted(player_idx, pi_values, games_with_players):
     a = b = 1.0 / (pi_values[player_idx] + 1.0)
 
@@ -91,7 +91,7 @@ def iterate_equation_newman_leadership_weighted(player_idx, pi_values, games_wit
 
 
 
-def numba_std(training_set, pi_values):
+def numpy_std(training_set, pi_values):
     bin_data = binarize_data_weighted(training_set)
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
@@ -99,7 +99,7 @@ def numba_std(training_set, pi_values):
 
     return predicted_std_scores
 
-def numba_std_leadership(training_set, pi_values): 
+def numpy_std_leadership(training_set, pi_values): 
     bin_data = binarize_data_weighted_leadership(training_set)
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
@@ -107,14 +107,14 @@ def numba_std_leadership(training_set, pi_values):
 
     return predicted_std_scores
 
-def numba_ho(training_set, pi_values): 
+def numpy_ho(training_set, pi_values): 
     bond_matrix = create_hypergraph_from_data_weight(training_set)
     predicted_ho_scores, _ = synch_solve_equations(bond_matrix, 1000, pi_values, iterate_equation_newman_weighted, sens=1e-10)
 
     return predicted_ho_scores
 
 
-def numba_hol(training_set, pi_values):
+def numpy_hol(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data_weight(training_set)
     predicted_hol_scores, _ = synch_solve_equations (bond_matrix, 1000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-10)
 
