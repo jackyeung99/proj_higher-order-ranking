@@ -18,7 +18,7 @@ def process_rep(rep, N, M, K1, K2, train_size, file_dir, file_name, leadership):
    training_set, testing_set = split_weighted_dataset(data, train_size=train_size, random_state=None)
    
    # Run models and save the results
-   model_performance = run_models(training_set, testing_set, pi_values)
+   model_performance = run_models_synthetic(training_set, testing_set, pi_values)
    file_path = os.path.join(file_dir, f'{file_name}_rep-{rep+1}.csv')
    model_performance.to_csv(file_path, index=False)
 
