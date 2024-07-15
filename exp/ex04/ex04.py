@@ -23,7 +23,7 @@ def process_file(file, dataset_file_path, repetitions, out_file_dir):
     data, pi_values = read_edge_list(file_path)
     dataset_id = int(file.split('_')[0])
     
-    if all(len(x) > 1 for x in data.keys()) and len(data) > 50 and dataset_id not in [11, 41, 44, 46, 54, 55, 56]:
+    if dataset_id in [4, 6, 9, 12, 14, 24, 25, 34, 35, 38, 52, 53, 100, 101, 102, 103, 104]:
         print(file)
         futures = []
         with ProcessPoolExecutor() as executor:
@@ -49,5 +49,5 @@ if __name__ == '__main__':
 
     dataset_file_path = os.path.join(repo_root, 'datasets', 'processed_data')
 
-    out_file = os.path.join(base_path, 'data', 'ex04.1')
+    out_file = os.path.join(base_path, 'data')
     run_experiment(dataset_file_path, 20, out_file_directory=out_file) 
