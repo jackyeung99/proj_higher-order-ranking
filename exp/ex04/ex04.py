@@ -21,7 +21,7 @@ def process_rep(rep, data, pi_values, out_file_dir, dataset_id):
 def process_file(file, dataset_file_path, repetitions, out_file_dir):
     file_path = os.path.join(dataset_file_path, file)
     data, pi_values = read_edge_list(file_path)
-    dataset_id = file.split('_')[0]
+    dataset_id = int(file.split('_')[0])
     
     if all(len(x) > 1 for x in data.keys()) and len(data) > 50 and dataset_id not in [11, 41, 44, 46, 54, 55, 56]:
         futures = []
@@ -35,7 +35,6 @@ def run_experiment(dataset_file_path, repetitions, out_file_directory):
 
     for file in os.listdir(dataset_file_path):
         if file.endswith('_edges.txt'):
-            print(file)
             process_file(file, dataset_file_path, repetitions, out_file_directory)
 
             
