@@ -7,51 +7,41 @@ sys.path.append(repo_root)
 
 from src.utils.graph_tools import *
 
-def compute_predicted_ratings_page_rank(games, pi_values):
+def compute_predicted_ratings_page_rank(games, true_pi_values):
     bin_data = binarize_data_weighted(games)
 
     weighted_edges = [(i,j,weight) for (i,j), weight in bin_data.items()]
     
     G = nx.DiGraph()
     G.add_weighted_edges_from(weighted_edges)
-    
-    
-    # Initialize PageRank values with the provided pi_values
     personalization = {node: 1.0 for node in G.nodes}
     
     page_rank = nx.pagerank(G, personalization=personalization)
-    for node in pi_values:
-        pi_values[node] = page_rank.get(node, 1.0)
+
+    for player in true_pi_values:
+        if player not in page_rank:
+            page_rank[player] = 1.0
+
+    normalize_scores(page_rank)
         
-    
-    normalize_scores(pi_values)
-        
-    return pi_values
+    return page_rank
 
 
-def compute_predicted_ratings_page_rank_leadership(games, pi_values):
+def compute_predicted_ratings_page_rank_leadership(games, true_pi_values):
     bin_data = binarize_data_weighted_leadership(games)
     weighted_edges = [(i,j,weight) for (i,j), weight in bin_data.items()]
-    
+        
     G = nx.DiGraph()
     G.add_weighted_edges_from(weighted_edges)
-    
-    # Initialize PageRank values with the provided pi_values
     personalization = {node: 1.0 for node in G.nodes}
     
     page_rank = nx.pagerank(G, personalization=personalization)
-    for node in pi_values:
-        pi_values[node] = page_rank.get(node, 1.0)
-            
-    
-    normalize_scores(pi_values)
+
+    for player in true_pi_values:
+        if player not in page_rank:
+            page_rank[player] = 1.0
+
+    normalize_scores(page_rank)
         
-    return pi_values
+    return page_rank
 
-
-if __name__ == '__main__': 
-
-    pi_values, data = generate_model_instance(500, 500, 2, 4)
-
-    calculate_predicted_rankings_page_rank(data, pi_values)
- 

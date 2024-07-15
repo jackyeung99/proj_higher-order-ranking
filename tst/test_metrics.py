@@ -74,3 +74,20 @@ class TestMetrics:
         assert np.isclose(old_likelihood, non_weighted_likelihood) 
         assert np.isclose(weighted_log_likelihood, (non_weighted_likelihood / len(testing_set)))
         assert np.isclose(weighted_leadership_likelihood, (non_weighted_leadership_likelihood / len(testing_set)))
+
+    def test_weighted_log(self):
+
+        data, pi_values = generate_model_instance(100,1000,4,4)
+        training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
+        weighted_train = convert_games_to_dict(training_set)
+        weighted_test = convert_games_to_dict(testing_set)
+
+        #non-weighted test set
+        pr = compute_predicted_ratings_page_rank(weighted_train, pi_values)
+ 
+        rms = measure_rms(pr, pi_values)
+        rho = measure_rho(pr, pi_values)
+
+        assert rms != 0
+        assert rho != 1.0
+       

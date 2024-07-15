@@ -2,26 +2,33 @@ import os
 import sys
 from concurrent.futures import ProcessPoolExecutor
 import pandas as pd
-
+import traceback
+import numpy as np
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src import *
+from src import generate_weighted_leadership_model_instance, generate_weighted_model_instance, split_weighted_dataset, run_models_synthetic
+
 
 def process_rep(rep, N, M, K1, K2, train_size, file_dir, file_name, leadership):
-   if leadership:
-      data, pi_values = generate_weighted_leadership_model_instance(N, M, K1, K2)
-   else:
-      data, pi_values = generate_weighted_model_instance(N, M, K1, K2)
+   try: 
+      if leadership:
+         data, pi_values = generate_weighted_leadership_model_instance(N, M, K1, K2)
+      else:
+         data, pi_values = generate_weighted_model_instance(N, M, K1, K2)
 
-   # Split data into training and testing sets
-   training_set, testing_set = split_weighted_dataset(data, train_size=train_size, random_state=None)
-   
-   # Run models and save the results
-   model_performance = run_models_synthetic(training_set, testing_set, pi_values)
-   file_path = os.path.join(file_dir, f'{file_name}_rep-{rep+1}.csv')
-   model_performance.to_csv(file_path, index=False)
+      # Split data into training and testing sets
+      training_set, testing_set = split_weighted_dataset(data, train_ratio=train_size)
+      
+      # Run models and save the results
+      model_performance = run_models_synthetic(training_set, testing_set, pi_values)
+      file_path = os.path.join(file_dir, f'{file_name}_rep-{rep+1}.csv')
+      model_performance.to_csv(file_path, index=False)
+
+   except Exception as e:
+        print(f"Error in process_rep (rep={rep}): {e}")
+        traceback.print_exc()
 
 def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, file_name, leadership=False, repetitions=100, train_size=0.8):
    os.makedirs(file_dir, exist_ok=True)
