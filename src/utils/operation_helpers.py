@@ -1,6 +1,7 @@
 import os 
 import sys
 import pandas as pd
+import random
 from sklearn.model_selection import train_test_split
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
@@ -85,7 +86,8 @@ def split_weighted_dataset(dataset, train_ratio=0.8):
     for key, weight in dataset.items():
         expanded_list.extend([key] * weight)
     
-    training_set, testing_set = train_test_split(data, train_size=train_ratio, random_state=None)
+    random.shuffle(expanded_list)
+    training_set, testing_set = train_test_split(expanded_list, train_size=train_ratio, random_state=None)
 
     weighted_training_set = convert_games_to_dict(training_set)
     weighted_testing_set = convert_games_to_dict(testing_set)
