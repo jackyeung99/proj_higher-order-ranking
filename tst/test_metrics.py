@@ -50,7 +50,7 @@ class TestMetrics:
 
     def test_weighted_log(self):
 
-        data, pi_values = generate_model_instance(100,100,4,4)
+        data, pi_values = generate_model_instance(1000,1000,10,10)
         training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
         weighted_train = convert_games_to_dict(training_set)
         weighted_test = convert_games_to_dict(testing_set)
@@ -64,8 +64,9 @@ class TestMetrics:
         non_weighted_leadership_likelihood, _ = measure_log_likelihood(testing_set, std, model='ho_bt_leader')
  
         #weighted test set
-        df = run_models_synthetic(weighted_train, weighted_test, std)
- 
+        df = run_models_synthetic(weighted_train, weighted_test, pi_values)
+    
+        with pd.option_context('display.max_rows', 10, 'display.max_columns', 5):print(df)
         row = df[df['model'] == 'newman']
         weighted_log_likelihood = row['log-likelihood'].values[0]
         weighted_leadership_likelihood = row['leadership-log-likelihood'].values[0]

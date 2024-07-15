@@ -20,15 +20,23 @@ def get_sorted_player_scores(scores):
 
 
 
-def measure_rms(predicted_scores, ground_truth_scores):
-    # predicted_scores = get_sorted_player_scores(predicted_scores)
-    # true_scores = get_sorted_player_scores(ground_truth_scores)
+def measure_rms(predicted_scores, ground_truth_scores, epsilon=1e-10):
+    # Ensure the keys in both dictionaries are the same
+    if predicted_scores.keys() != ground_truth_scores.keys():
+        raise ValueError("Keys in predicted_scores and ground_truth_scores do not match.")
+    
 
-    predicted_scores = [score for player, score in sorted(predicted_scores.items())]
-    true_scores = [score for player, score in sorted(ground_truth_scores.items())]
+    predicted_scores = [score for player, score in sorted(predicted_scores.items(), key=lambda x: x[0])]
+    true_scores = [score for player, score in sorted(ground_truth_scores.items(), key=lambda x: x[0])]
 
 
-    return np.sqrt(np.mean( (np.log(np.array(predicted_scores)) - np.log(np.array(true_scores))) ** 2) )
+    predicted_scores = np.array(predicted_scores) + epsilon
+    true_scores = np.array(true_scores) + epsilon
+
+
+    rms = np.sqrt(np.mean((np.log(predicted_scores) - np.log(true_scores)) ** 2))
+    
+    return rms
 
 
 def measure_rho(predicted_scores, ground_truth_scores):
