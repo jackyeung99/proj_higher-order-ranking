@@ -49,4 +49,4 @@ if __name__ == '__main__':
     dataset_file_path = os.path.join(repo_root, 'datasets', 'processed_data')
 
     out_file = os.path.join(base_path, 'data', 'ex04.1')
-    run_experiment(dataset_file_path, 20, file_name=out_file) 
+    run_experiment(dataset_file_path, 20, out_file_directory=out_file) 
