@@ -65,12 +65,12 @@ def test_models(N, M, K1, K2):
     data, pi_values = generate_model_instance(N,M,K1,K2)
     weighted_data = convert_games_to_dict(data)
 
-    std_model = run_all_newman(weighted_data, pi_values)
-    old_newman = run_all_newman_old(data, pi_values)
-    parallel = run_all_parrallel(data, pi_values)
-    numpy = run_all_numpy(weighted_data, pi_values)
-
-    return {'std_model': std_model, 'old_newman': old_newman, 'parrallel': parallel, 'numpy': numpy}
+    # std_model = run_all_newman(weighted_data, pi_values)
+    # old_newman = run_all_newman_old(data, pi_values)
+    # parallel = run_all_parrallel(data, pi_values)
+    # numpy = run_all_numpy(weighted_data, pi_values)
+    return {}
+    # return {'std_model': std_model, 'old_newman': old_newman, 'parrallel': parallel, 'numpy': numpy}
 
 
 def test_M(results_dir):
@@ -81,6 +81,7 @@ def test_M(results_dir):
 
     results = []
     for m in M_vec:
+        print(m)
         m = int(m)
         iteration = test_models(N, m, K, K)
         iteration['m'] = m
@@ -88,7 +89,7 @@ def test_M(results_dir):
 
     
     df = pd.DataFrame(results)
-    out_file = os.path.join(results_dir, 'ex06.1')
+    out_file = os.path.join(results_dir, 'ex06.1.csv')
     df.to_csv(out_file, index=False)
 
 def test_N(results_dir):
@@ -106,7 +107,7 @@ def test_N(results_dir):
 
     
     df = pd.DataFrame(results)
-    out_file = os.path.join(results_dir, 'ex06.2')
+    out_file = os.path.join(results_dir, 'ex06.2.csv')
     df.to_csv(out_file, index=False)
 
 def test_K(results_dir):
@@ -123,7 +124,7 @@ def test_K(results_dir):
 
     
     df = pd.DataFrame(results)
-    out_file = os.path.join(results_dir, 'ex06.3')
+    out_file = os.path.join(results_dir, 'ex06.3.csv')
     df.to_csv(out_file, index=False)
 
 if __name__ == '__main__':

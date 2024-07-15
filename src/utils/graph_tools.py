@@ -77,7 +77,7 @@ def generate_leadership_model_instance (N, M, K1, K2):
         
     return data, pi_values
 
-def generate_model_instance_weighted(N, M, K1, K2):
+def generate_weighted_model_instance(N, M, K1, K2):
     # Random scores from logistic distribution
     pi_values = {n: float(np.exp(logistic.rvs(size=1)[0])) for n in range(N)}
     normalize_scores(pi_values)
@@ -96,7 +96,7 @@ def generate_model_instance_weighted(N, M, K1, K2):
 
     return data, pi_values
 
-def generate_leadership_model_instance_weighted(N, M, K1, K2):
+def generate_weighted_leadership_model_instance(N, M, K1, K2):
     # Random scores from logistic distribution
     pi_values = {n: float(np.exp(logistic.rvs(size=1)[0])) for n in range(N)}
     normalize_scores(pi_values)

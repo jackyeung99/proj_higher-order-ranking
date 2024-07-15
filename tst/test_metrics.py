@@ -9,6 +9,25 @@ sys.path.append(repo_root)
 
 from src import *
 
+def measure_likelihood_old(pred_ranking, testing_set):
+    return [recursive_probability_estimation_old(pred_ranking, game) for game in testing_set]
+
+
+def recursive_probability_estimation_old(pred_rating, game, total_prob_estimation=0, episilon=1e-10):
+    player_ratings = [pred_rating[player] for player in game]
+    first_pos = player_ratings[0]
+    total_ratings = sum(player_ratings)
+
+    total_prob_estimation += np.log(first_pos+episilon) - np.log(total_ratings+episilon)
+
+    if len(player_ratings) > 2:
+        return recursive_probability_estimation_old(pred_rating, game[1:], total_prob_estimation)
+    else:
+        return total_prob_estimation 
+    
+        
+
+
 class TestMetrics:
     def test_kendall_tau_match(self):
         r1 = [1, 2, 3, 4]
@@ -29,21 +48,28 @@ class TestMetrics:
     #     assert np.isclose(kendalltau(r1, r2)[0], 0)
 
 
-    def test_log_likelihood(self):
+    def test_weighted_log(self):
 
-        data, pi_values = generate_leadership_model_instance(100,100,4,4)
-
+        data, pi_values = generate_model_instance(100,100,4,4)
         training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
         weighted_train = convert_games_to_dict(training_set)
-        
-        stdl = compute_predicted_ratings_std_leadership(weighted_train, pi_values)
-        hol = compute_predicted_ratings_hol(weighted_train, pi_values)
+        weighted_test = convert_games_to_dict(testing_set)
+ 
+        #non-weighted test set
+        std = compute_predicted_ratings_std(weighted_train, pi_values)
 
-        std_likelihood = np.array(compute_leadership_likelihood(stdl, testing_set))
-        hol_likelihood = np.array(compute_leadership_likelihood(hol, testing_set))
+        old_likelihood = np.sum(measure_likelihood_old(std, testing_set))
 
-        new_stdl_likelihood, _ = measure_log_likelihood(testing_set, stdl, model='ho_bt_leader')
-        new_hol_likelihood, _ = measure_log_likelihood(testing_set, hol, model='ho_bt_leader')
+        non_weighted_likelihood, _ = measure_log_likelihood(testing_set, std)
+        non_weighted_leadership_likelihood, _ = measure_log_likelihood(testing_set, std, model='ho_bt_leader')
+ 
+        #weighted test set
+        df = run_models_synthetic(weighted_train, weighted_test, std)
+ 
+        row = df[df['model'] == 'newman']
+        weighted_log_likelihood = row['log-likelihood'].values[0]
+        weighted_leadership_likelihood = row['leadership-log-likelihood'].values[0]
 
-        assert np.isclose(new_stdl_likelihood, np.sum(std_likelihood), atol=1e-10)
-        assert np.isclose(new_hol_likelihood, np.sum(hol_likelihood), atol=1e-10)
+        assert np.isclose(old_likelihood, non_weighted_likelihood) 
+        assert np.isclose(weighted_log_likelihood, (non_weighted_likelihood / len(testing_set)))
+        assert np.isclose(weighted_leadership_likelihood, (non_weighted_leadership_likelihood / len(testing_set)))

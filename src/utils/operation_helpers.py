@@ -1,6 +1,7 @@
 import os 
 import sys
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
@@ -27,20 +28,48 @@ def get_predictions(model, training_set, pi_values):
         # return compute_predicted_rankings_tensor_flow(training_set, pi_values)
         pass
 
-def run_models(train_data, test_data, pi_values, leadership=False):
-    likelihoods_dict = {'Game': list(range(len(test_data)))}
+def run_models_synthetic(train_data, test_data, pi_values):
+    model_performance = []
     for model in MODEL_FUNCTIONS:
-        predicted_rankings = get_predictions(model, train_data, pi_values)
+        predicted_ratings = get_predictions(model, train_data, pi_values)
         
-        if leadership:
-            game_likelihoods = compute_leadership_likelihood(predicted_rankings, test_data)
-        else: 
-            game_likelihoods = compute_likelihood(predicted_rankings, test_data)
+        game_likelihoods = measure_likelihood(predicted_ratings, test_data)
+        leadership_likelihoods = measure_leadership_likelihood(predicted_ratings, test_data)
+        rms = measure_rms(predicted_ratings, pi_values)
+        rho = measure_rho(predicted_ratings, pi_values)
 
-        likelihoods_dict[model] = game_likelihoods
+        model_results = {
+            'model': model,
+            'log-likelihood': np.average(game_likelihoods),
+            'leadership-log-likelihood': np.average(leadership_likelihoods),
+            'rms': rms,
+            'rho': rho
+            }
+        
+        model_performance.append(model_results)
 
-    df = pd.DataFrame(likelihoods_dict)
-    return df
+
+    return pd.DataFrame(model_performance)
+
+def run_models(train_data, test_data, pi_values):
+    model_performance = []
+    for model in MODEL_FUNCTIONS:
+        predicted_ratings = get_predictions(model, train_data, pi_values)
+        
+        game_likelihoods = measure_likelihood(predicted_ratings, test_data)
+        leadership_likelihoods = measure_leadership_likelihood(predicted_ratings, test_data)
+
+        model_results = { 
+            'model': model,
+            'log-likelihoods': np.mean(game_likelihoods),
+            'leadership-log-likelihood': np.mean(leadership_likelihoods),
+            }
+        
+        model_performance.append(model_results)
+
+
+    return pd.DataFrame(model_performance)
+
 
 def split_games(games, train_size):
     
@@ -51,6 +80,17 @@ def split_games(games, train_size):
 
     return training_set, testing_set
 
+def split_weighted_dataset(dataset, train_ratio=0.8):
+    expanded_list = []
+    for key, weight in dataset.items():
+        expanded_list.extend([key] * weight)
+    
+    training_set, testing_set = train_test_split(data, train_size=train_ratio, random_state=None)
+
+    weighted_training_set = convert_games_to_dict(training_set)
+    weighted_testing_set = convert_games_to_dict(testing_set)
+    
+    return weighted_training_set, weighted_testing_set
 
 def calculate_percentages_against_base(df, compared_axis):
     total_rows = len(df)

@@ -1,31 +1,36 @@
 import os
 import sys
-import logging
-from sklearn.model_selection import train_test_split
+from concurrent.futures import ProcessPoolExecutor
+
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 from src import *
 
+def process_rep(rep, N, M, K1, K2, train_size, file_dir, file_name, leadership):
+   if leadership:
+      data, pi_values = generate_weighted_leadership_model_instance(N, M, K1, K2)
+   else:
+      data, pi_values = generate_weighted_model_instance(N, M, K1, K2)
+
+   # Split data into training and testing sets
+   training_set, testing_set = split_weighted_dataset(data, train_size=train_size, random_state=None)
+   
+   # Run models and save the results
+   model_performance = run_models(training_set, testing_set, pi_values)
+   file_path = os.path.join(file_dir, f'{file_name}_rep-{rep+1}.csv')
+   model_performance.to_csv(file_path, index=False)
+
 def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, file_name, leadership=False, repetitions=100, train_size=0.8):
    os.makedirs(file_dir, exist_ok=True)
-    
-   for rep in range(repetitions):
-      if leadership:
-         data, pi_values = generate_leadership_model_instance(N, M, K1, K2)
-      else:
-         data, pi_values = generate_model_instance(N, M, K1, K2)
 
-      
-      # Split data into training and testing sets
-      training_set, testing_set = train_test_split(data, train_size=train_size, random_state=None)
-      
-      # Run models and save the results
-      df = run_models(training_set, testing_set, pi_values, leadership)
-      file_path = os.path.join(os.path.dirname(__file__), file_dir, f'{file_name}_rep-{rep+1}.csv')
-      df.to_csv(file_path, index=False)
-    
+   futures  = []
+   with ProcessPoolExecutor() as executor:
+      for rep in range(repetitions):
+         futures.append(executor.submit(process_rep, rep, N, M, K1, K2, train_size, file_dir, file_name, leadership))
+   
+
 
         
 if __name__ == '__main__':

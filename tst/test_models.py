@@ -90,7 +90,7 @@ class TestModels:
     #     for model, leadership in models: 
 
     #         data, pi_values = generate_model_instance(50, 50, 2, 2)
-
+                
     #         data = convert_games_to_dict(data)
 
     #         model = get_predictions(model, data, pi_values)
