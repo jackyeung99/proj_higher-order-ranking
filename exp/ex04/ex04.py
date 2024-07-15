@@ -24,6 +24,7 @@ def process_file(file, dataset_file_path, repetitions, out_file_dir):
     dataset_id = int(file.split('_')[0])
     
     if all(len(x) > 1 for x in data.keys()) and len(data) > 50 and dataset_id not in [11, 41, 44, 46, 54, 55, 56]:
+        print(file)
         futures = []
         with ProcessPoolExecutor() as executor:
             for rep in range(repetitions):
