@@ -88,6 +88,7 @@ def measure_log_likelihood (data, pi_values, model = 'ho_bt', epsilon=1e-10):
             log_like += tmp
 
     #############################################
+    ##NOT SURE WHAT THIS IS FOR...
     if model == 'std_bt':
         for i in range(0,len(data)):
             for j in range(0, len(data[i])-1):
