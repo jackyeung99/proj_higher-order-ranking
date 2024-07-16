@@ -7,8 +7,8 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 from src.models.newman import *
-from exp.ex06.models.parallel_newman import *
-from exp.ex06.models.numpy_newman import *
+from exp.ex_speed_benchmark.models.parallel_newman import *
+from exp.ex_speed_benchmark.models.numpy_newman import *
 from tst.tst_weight_conversion.old_newman import * 
 
 
@@ -129,7 +129,7 @@ def test_K(results_dir):
 
 if __name__ == '__main__':
 
-    results_path = os.path.join(repo_root, 'exp', 'ex06', 'results')
+    results_path = os.path.join(repo_root, 'exp', 'ex_speed_benchmark', 'results')
     os.makedirs(results_path, exist_ok=True)
 
     test_M(results_path)

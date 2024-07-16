@@ -94,33 +94,42 @@ def split_weighted_dataset(dataset, train_ratio=0.8):
     
     return weighted_training_set, weighted_testing_set
 
-def calculate_percentages_against_base(df, compared_axis):
+def calculate_percentages_against_base(df, compared_column, flipped=False):
     total_rows = len(df)
     if total_rows == 0:
         return {}
 
-    # Ensure the compared_axis is valid
-    if compared_axis < 0 or compared_axis >= df.shape[1]:
-        raise ValueError("Invalid compared_axis index")
+    # Ensure the compared_column exists in the DataFrame
+    if compared_column not in df.columns:
+        raise ValueError("Invalid compared_column name")
 
-    comparisons = {
-        df.columns[col]: (df.iloc[:, col] > df.iloc[:, compared_axis]).sum() / total_rows 
-        for col in range(df.shape[1]) if col != compared_axis
-    }
+    if flipped:
+        comparisons = {
+            col: (df[col] < df[compared_column]).sum() / total_rows 
+            for col in df.columns 
+            if col != compared_column and col not in ['rep', 'train']
+        }
+    else:
+        comparisons = {
+            col: (df[col] > df[compared_column]).sum() / total_rows 
+            for col in df.columns 
+            if col != compared_column and col not in ['rep', 'train']
+        }
 
     return comparisons
 
-def calculate_column_means_against_base(df, compared_axis):
+def calculate_column_means_against_base(df, compared_column):
     if df.empty:
         return {}
 
-    # Ensure the compared_axis is valid
-    if compared_axis < 0 or compared_axis >= df.shape[1]:
-        raise ValueError("Invalid compared_axis index")
+    # Ensure the compared_column exists in the DataFrame
+    if compared_column not in df.columns:
+        raise ValueError("Invalid compared_column name")
 
     means = {
-        df.columns[col]: (df.iloc[:, col] - df.iloc[:, compared_axis]).mean() 
-        for col in range(df.shape[1]) if col != compared_axis
+        col: (df[col] - df[compared_column]).mean() 
+        for col in df.columns 
+        if col != compared_column and col not in ['rep', 'train']
     }
 
     return means
