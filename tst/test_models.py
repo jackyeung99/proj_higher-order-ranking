@@ -19,7 +19,7 @@ class TestModels:
 
 
     def test_bin_games(self):
-        ''' test higher order, higher order newman, and std newman all reduce to the same predicted ratings in dadic games'''
+        ''' test higher order, higher order newman, and std newman all reduce to the same predicted ratings in dyadic games'''
         data, pi_values = generate_model_instance(50, 50, 2, 2)
        
         data = convert_games_to_dict(data)

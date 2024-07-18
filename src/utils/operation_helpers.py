@@ -41,14 +41,13 @@ def run_models_synthetic(train_data, test_data, pi_values):
 
         model_results = {
             'model': model,
-            'log-likelihood': np.average(game_likelihoods),
-            'leadership-log-likelihood': np.average(leadership_likelihoods),
+            'log-likelihood': game_likelihoods,
+            'leadership-log-likelihood': leadership_likelihoods,
             'rms': rms,
             'rho': rho
             }
         
         model_performance.append(model_results)
-
 
     return pd.DataFrame(model_performance)
 
@@ -62,8 +61,8 @@ def run_models(train_data, test_data, pi_values):
 
         model_results = { 
             'model': model,
-            'log-likelihoods': np.mean(game_likelihoods),
-            'leadership-log-likelihood': np.mean(leadership_likelihoods),
+            'log-likelihoods': game_likelihoods,
+            'leadership-log-likelihood': leadership_likelihoods,
             }
         
         model_performance.append(model_results)

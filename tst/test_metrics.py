@@ -50,32 +50,37 @@ class TestMetrics:
 
     def test_weighted_log(self):
 
-        data, pi_values = generate_model_instance(1000,1000,10,10)
+        data, pi_values = generate_leadership_model_instance(1000,1000,2,2)
         training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
         weighted_train = convert_games_to_dict(training_set)
         weighted_test = convert_games_to_dict(testing_set)
- 
+    
+        print(len(testing_set))
         #non-weighted test set
         std = compute_predicted_ratings_std(weighted_train, pi_values)
 
         old_likelihood = np.sum(measure_likelihood_old(std, testing_set))
 
+        # non weighted
         non_weighted_likelihood, _ = measure_log_likelihood(testing_set, std)
         non_weighted_leadership_likelihood, _ = measure_log_likelihood(testing_set, std, model='ho_bt_leader')
+
+        avg_like = non_weighted_likelihood/len(testing_set)
+        avg_lead_like = non_weighted_leadership_likelihood/len(testing_set)
  
         #weighted test set
         df = run_models_synthetic(weighted_train, weighted_test, pi_values)
-    
-        with pd.option_context('display.max_rows', 10, 'display.max_columns', 5):print(df)
+        with pd.option_context('display.max_rows', 10, 'display.max_columns', None):print(df)
         row = df[df['model'] == 'newman']
         weighted_log_likelihood = row['log-likelihood'].values[0]
         weighted_leadership_likelihood = row['leadership-log-likelihood'].values[0]
 
+        print(weighted_leadership_likelihood)
         assert np.isclose(old_likelihood, non_weighted_likelihood) 
-        assert np.isclose(weighted_log_likelihood, (non_weighted_likelihood / len(testing_set)))
-        assert np.isclose(weighted_leadership_likelihood, (non_weighted_leadership_likelihood / len(testing_set)))
+        assert np.isclose(weighted_log_likelihood, avg_like)
+        assert np.isclose(weighted_leadership_likelihood, avg_lead_like)
 
-    def test_weighted_log(self):
+    def test_pr(self):
 
         data, pi_values = generate_model_instance(100,1000,4,4)
         training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)

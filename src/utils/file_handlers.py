@@ -62,7 +62,7 @@ def process_directory(base_path, directory):
     for file in os.listdir(os.path.join(base_path, 'data', directory)):
         if file.endswith('.csv'):
             file_path = os.path.join(base_path, 'data', directory, file)
-            file_info = read_dataset(file)
+            file_info = read_file_parameters(file)
 
             # Process each metric and store the results
             results = process_file(file_path, 'log-likelihood')

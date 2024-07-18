@@ -10,8 +10,7 @@ import numpy as np
 
 ''' Functions to test our ranking algorithm against a syntethic ground truth'''
 
-
-def normalize_scores (pi_values):
+def normalize_scores(pi_values):
     norm = 0.0
     val = 0.0
     for n in pi_values:

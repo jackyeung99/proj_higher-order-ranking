@@ -14,7 +14,7 @@ sys.path.append(repo_root)
 from src.utils.graph_tools import *
 
 
-def normalize_scores(scores):
+def normalize_scores_numpy(scores):
     scores_nonzero = scores[scores != 0]
     if len(scores_nonzero) == 0:
         return
@@ -26,21 +26,21 @@ def normalize_scores(scores):
 def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
     players = np.array(list(pi_values.keys()))
     scores = np.ones(len(pi_values))
-    normalize_scores(scores)
+    normalize_scores_numpy(scores)
    
     err = 1.0
     iteration = 0
     
     while iteration < max_iter and err > sens:
         err = 0
-        tmp_scores = np.zeros(len(scores))
+        tmp_scores = scores.copy()
 
         for s in range(len(scores)):
             if s in bond_matrix:
                 games_with_player = bond_matrix[s]
                 tmp_scores[s] = method(s, scores, games_with_player)
         
-        normalize_scores(tmp_scores)
+        normalize_scores_numpy(tmp_scores)
        
         err = np.max(np.abs(tmp_scores - scores))
         scores = tmp_scores.copy()
@@ -51,8 +51,10 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
     return final_scores
 
 
+
 def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
     a = b = 1.0 / (pi_values[player_idx] + 1.0)
+    tolerance = 1e-10
 
     for K, position, game, weight in games_with_players:
         score_sums = [pi_values[p] for p in game]
@@ -63,20 +65,21 @@ def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
             cumulative_sum[j] = cumulative_sum[j - 1] + score_sums[j - 1]
 
         if position < K - 1:
-            tmp1 = cumulative_sum[K] - cumulative_sum[position + 1]
+            tmp1 = cumulative_sum[K] - cumulative_sum[position+1]
             tmp2 = tmp1 + score_sums[position]
             if tmp2 != 0:
                 a += weight * (tmp1 / tmp2)
 
         for v in range(position):
             tmp = cumulative_sum[K] - cumulative_sum[v]
-            if tmp != 0:
+            if tmp != 0 :
                 b += weight * (1.0 / tmp)
 
     return a / b
 
 def iterate_equation_newman_leadership_weighted(player_idx, pi_values, games_with_players):
     a = b = 1.0 / (pi_values[player_idx] + 1.0)
+    tolerance = 1e-10
 
     for K, position, game, weight in games_with_players:
         
@@ -88,7 +91,7 @@ def iterate_equation_newman_leadership_weighted(player_idx, pi_values, games_wit
         if position == 0:
             tmp1 = cumulative_sum[K] - cumulative_sum[position + 1]
             tmp2 = tmp1 + score_sums[position]
-            if tmp2 != 0:
+            if tmp2 != 0 :
                 a += weight * (tmp1 / tmp2)
         else:
             tmp = cumulative_sum[K]

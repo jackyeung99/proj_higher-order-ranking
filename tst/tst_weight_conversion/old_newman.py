@@ -12,16 +12,9 @@ from datasets.utils.extract_ordered_games import *
 
 # ===== Old Functions to test against ======
 
-# def binarize_data(data):
-#     bin_data = []
-#     for arr in data:
-#         arr = np.array(arr)
-#         idx = np.triu_indices(len(arr), k=1)
-#         pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
-#         bin_data.extend(pairs.tolist())
-#     return bin_data
 
-def binarize_data (data):
+
+def binarize_data_old(data):
 
     bin_data = []
 
@@ -35,21 +28,9 @@ def binarize_data (data):
 
     return bin_data
 
-# def binarize_data_leadership (data):
-    
-#     bin_data = []
-    
-#     for i in range(0, len(data)):
-        
-#         K = len(data[i])
-#         for s in range (1, K):
-#             bin_data.append([data[i][0],data[i][s]])
-        
-        
-#     return bin_data
 
 
-def binarize_data_leadership(data):
+def binarize_data_leadership_old(data):
     bin_data = []
     
     for arr in data:
@@ -59,7 +40,7 @@ def binarize_data_leadership(data):
         
     return bin_data
 
-def normalize_scores (pi_values):
+def normalize_scores_old(pi_values):
     norm = 0.0
     val = 0.0
     for n in pi_values:
@@ -81,7 +62,7 @@ def synch_solve_equations_old(bond_matrix, max_iter, pi_values, method, sens=1e-
         # scores[n] = float(np.exp(logistic.rvs(size=1)[0]))
         scores[n] = 1.0
    
-    normalize_scores (scores)
+    normalize_scores_old(scores)
     
     list_of_nodes = list(scores.keys())
     
@@ -108,10 +89,8 @@ def synch_solve_equations_old(bond_matrix, max_iter, pi_values, method, sens=1e-
         for s in scores:
             tmp_scores[s] = method(s, scores, bond_matrix)
 
-    
-            
-                            
-        normalize_scores (tmp_scores)
+                 
+        normalize_scores_old(tmp_scores)
 
         for s in tmp_scores:
             if abs(tmp_scores[s]-scores[s]) > err:
@@ -133,7 +112,7 @@ def synch_solve_equations_old(bond_matrix, max_iter, pi_values, method, sens=1e-
    
     return scores, [x, y, z]
 
-def create_hypergraph_from_data (data):
+def create_hypergraph_from_data_old (data):
 
     bond_matrix = {}
 
@@ -156,33 +135,38 @@ def create_hypergraph_from_data (data):
 
     return bond_matrix
 
-def iterate_equation_newman (s, scores, bond_matrix):
+def iterate_equation_newman_old(s, scores, bond_matrix):
     ##prior
     a = b = 1.0 / (scores[s]+1.0)
+    tolerance = 1e-10
     if s in bond_matrix:
 
-      for K in bond_matrix[s]:
+        for K in bond_matrix[s]:
 
-          for r in bond_matrix[s][K]:
+            for r in bond_matrix[s][K]:
 
-              if r < K-1:
+                if r < K-1:
 
-                  for t in range(0, len(bond_matrix[s][K][r])):
-                      tmp1 = tmp2 =  0.0
-                      for q in range(r, K):
-                          if q > r:
-                              tmp1 += scores[bond_matrix[s][K][r][t][q]]
-                          tmp2 += scores[bond_matrix[s][K][r][t][q]]
+                    for t in range(0, len(bond_matrix[s][K][r])):
+                        tmp1 = tmp2 =  0.0
+                        for q in range(r, K):
+                            if q > r:
+                                tmp1 += scores[bond_matrix[s][K][r][t][q]]
+                            tmp2 += scores[bond_matrix[s][K][r][t][q]]
 
-                      a += tmp1/tmp2
+                        if tmp2 != 0:
+                            a += tmp1/tmp2
 
 
-              for t in range(0, len(bond_matrix[s][K][r])):
-                  for v in range(0, r):
-                      tmp = 0.0
-                      for q in range(v, K):
-                          tmp += scores[bond_matrix[s][K][r][t][q]]
-                      b += 1.0 / tmp
+                for t in range(0, len(bond_matrix[s][K][r])):
+                    for v in range(0, r):
+                        tmp = 0.0
+                        for q in range(v, K):
+                            tmp += scores[bond_matrix[s][K][r][t][q]]
+                     
+                        if tmp != 0:
+                            b += 1.0 / tmp
+                      
 
   #             for t in range(0, len(bond_matrix[s][K][r])):
   #                 tmp = 0.0
@@ -195,10 +179,13 @@ def iterate_equation_newman (s, scores, bond_matrix):
 
     return a/b
 
-def iterate_equation_newman_leadership (s, scores, bond_matrix):
+
+
+def iterate_equation_newman_leadership_old(s, scores, bond_matrix):
 
     ##prior
     a = b = 1.0 / (scores[s]+1.0)
+    tolerance = 1e-10
     if s in bond_matrix:
 
         for K in bond_matrix[s]:
@@ -218,43 +205,46 @@ def iterate_equation_newman_leadership (s, scores, bond_matrix):
                                 tmp1 += scores[bond_matrix[s][K][r][t][q]]
                             tmp2 += scores[bond_matrix[s][K][r][t][q]]
 
-                        a += tmp1/tmp2
+                        if tmp2 != 0:
+                            a += tmp1/tmp2
                     
                 else:
                     for t in range(0, len(bond_matrix[s][K][r])):
                         tmp = 0.0
                         for q in range(0, K): 
                             tmp += scores[bond_matrix[s][K][r][t][q]]
-                        b += 1.0 / tmp
+
+                        if tmp != 0:
+                            b += 1.0 / tmp
 
     return a/b
 
 def compute_predicted_ratings_std_old(training_set, pi_values):
-    bin_data = binarize_data(training_set)
-    bin_bond_matrix = create_hypergraph_from_data (bin_data)
+    bin_data = binarize_data_old(training_set)
+    bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
+    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_old, sens=1e-10)
 
     return predicted_std_scores
 
 def compute_predicted_ratings_std_leadership_old(training_set, pi_values): 
-    bin_data = binarize_data_leadership(training_set)
-    bin_bond_matrix = create_hypergraph_from_data (bin_data)
+    bin_data = binarize_data_leadership_old(training_set)
+    bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
+    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_old, sens=1e-10)
 
     return predicted_std_scores
 
 def compute_predicted_ratings_ho_old(training_set, pi_values): 
     
-    bond_matrix = create_hypergraph_from_data (training_set)
-    predicted_ho_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman, sens=1e-10)
+    bond_matrix = create_hypergraph_from_data_old(training_set)
+    predicted_ho_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman_old, sens=1e-10)
 
     return predicted_ho_scores
 
 
 def compute_predicted_ratings_hol_old(training_set, pi_values):
-    bond_matrix = create_hypergraph_from_data (training_set)
-    predicted_hol_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman_leadership, sens=1e-10)
+    bond_matrix = create_hypergraph_from_data_old(training_set)
+    predicted_hol_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman_leadership_old, sens=1e-10)
 
     return predicted_hol_scores

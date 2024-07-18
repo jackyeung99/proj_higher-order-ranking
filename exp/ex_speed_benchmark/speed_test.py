@@ -114,7 +114,7 @@ def test_K(results_dir):
 
     N = 1000
     M = 1000
-    K_vec = [2, 8, 15, 30, 50, 100, 250, 500]
+    K_vec = [2, 8, 15, 30, 50, 100]
 
     results = []
     for k in K_vec:
