@@ -58,6 +58,7 @@ def process_directory(base_path, directory):
     results_leadership = []
     results_rms = []
     results_rho = []
+    results_tau = []
 
     for file in os.listdir(os.path.join(base_path, 'data', directory)):
         if file.endswith('.csv'):
@@ -81,17 +82,23 @@ def process_directory(base_path, directory):
             results.update(file_info)
             results_rho.append(results)
 
+            results = process_file(file_path, 'tau')
+            results.update(file_info)
+            results_tau.append(results)
+
     # Create DataFrames for each metric
     log_likelihood_df = pd.DataFrame(results_log)
     leadership_log_likelihood_df = pd.DataFrame(results_leadership)
     rms_df = pd.DataFrame(results_rms)
     rho_df = pd.DataFrame(results_rho)
+    tau_df = pd.DataFrame(results_rho)
 
     # Save each summary to a separate CSV file
     log_likelihood_df.to_csv(os.path.join(base_path, 'results', directory, 'log_likelihood_summary.csv'), index=False)
     leadership_log_likelihood_df.to_csv(os.path.join(base_path, 'results', directory, 'leadership_log_likelihood_summary.csv'), index=False)
     rms_df.to_csv(os.path.join(base_path, 'results', directory, 'rms_summary.csv'), index=False)
     rho_df.to_csv(os.path.join(base_path, 'results', directory, 'rho_summary.csv'), index=False)
+    tau_df.to_csv(os.path.join(base_path, 'results', directory, 'rho_summary.csv'), index=False)
 
 def process_directory_real_data(base_path):
     os.makedirs(os.path.join(base_path, 'results'), exist_ok=True)
@@ -135,7 +142,8 @@ def read_edge_list(file_path):
                 count, order = line.split(':')
                 count = int(count.strip())
                 order = tuple(int(x) for x in order.split(','))
-                data[order] = count
+                if len(order) > 1:
+                    data[order] = count
 
 
     pi_values = {player: 1.0 for player in range(num+1)}
