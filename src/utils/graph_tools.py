@@ -10,8 +10,7 @@ import numpy as np
 
 ''' Functions to test our ranking algorithm against a syntethic ground truth'''
 
-
-def normalize_scores (pi_values):
+def normalize_scores(pi_values):
     norm = 0.0
     val = 0.0
     for n in pi_values:
@@ -133,7 +132,7 @@ def create_hypergraph_from_data_weight(data):
 
     return bond_matrix
 
-
+ 
 # def create_hypergraph_from_data_weight (data):
 
 #     bond_matrix = {}
@@ -160,36 +159,36 @@ def create_hypergraph_from_data_weight(data):
 
 def binarize_data_weighted(data):
     bin_data = {}
-  
+    
     for game, weight in data.items():
-        arr = np.array(game)
-        idx = np.triu_indices(len(arr), k=1)
-        pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
-        for pair in pairs:
-            pair_tuple = tuple(pair)
-            if pair_tuple in bin_data:
-                bin_data[pair_tuple] += weight
-            else:
-                bin_data[pair_tuple] = weight
+        if len(game) > 2:
+            arr = np.array(game)
+            idx = np.triu_indices(len(arr), k=1)
+            pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
+            for pair in pairs:
+                pair_tuple = tuple(pair)
+                bin_data[pair_tuple] = bin_data.get(pair_tuple, 0) + weight
+        else:
+            bin_data[game] = bin_data.get(game, 0) + weight
 
     return bin_data
 
 
-def binarize_data_weighted_leadership (data):
-    
+def binarize_data_weighted_leadership(data):
     bin_data = {}
     
-    for arr, weight in data.items():
-        arr = np.array(arr)
-        pairs = np.column_stack((np.repeat(arr[0], len(arr) - 1), arr[1:]))
-        for pair in pairs:
-            pair_tuple = tuple(pair)
-            if pair_tuple in bin_data:
-                bin_data[pair_tuple] += weight
-            else:
-                bin_data[pair_tuple] = weight
+    for game, weight in data.items():
+        if len(game) > 2:
+            arr = np.array(game)
+            pairs = np.column_stack((np.repeat(arr[0], len(arr) - 1), arr[1:]))
+            for pair in pairs:
+                pair_tuple = tuple(pair)
+                bin_data[pair_tuple] = bin_data.get(pair_tuple, 0) + weight
+        else:
+            bin_data[game] = bin_data.get(game, 0) + weight
 
     return bin_data
+
 
 
 def establish_order (tmp, pi_values):

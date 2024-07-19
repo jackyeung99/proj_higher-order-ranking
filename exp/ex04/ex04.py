@@ -13,10 +13,11 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 
 def process_rep(rep, data, pi_values, out_file_dir, dataset_id):
-    training_set, testing_set = split_weighted_dataset(data)
-    model_performance = run_models(training_set, testing_set, pi_values)
-    file_path = os.path.join(out_file_dir, f'dataset-{dataset_id}_rep-{rep+1}.csv')
-    model_performance.to_csv(file_path, index=False)
+    pass 
+    # training_set, testing_set = split_weighted_dataset(data)
+    # model_performance = run_models(training_set, testing_set, pi_values)
+    # file_path = os.path.join(out_file_dir, f'dataset-{dataset_id}_rep-{rep+1}.csv')
+    # model_performance.to_csv(file_path, index=False)
 
 def process_file(file, dataset_file_path, repetitions, out_file_dir):
     file_path = os.path.join(dataset_file_path, file)

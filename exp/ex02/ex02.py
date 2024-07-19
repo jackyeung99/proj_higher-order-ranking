@@ -23,7 +23,6 @@ def process_fixed_rep(rep, N, M, K1, K2, train_size, file_dir, leadership=False)
         training_set, testing_set = split_weighted_dataset(data, train_ratio=train_size)
 
         model_performance = run_models_synthetic(training_set, testing_set, pi_values)
-        model_performance = pd.DataFrame()
         file_path = os.path.join(file_dir, f'rep-{rep+1}.csv')
         model_performance.to_csv(file_path)
 
@@ -48,14 +47,14 @@ if __name__ == '__main__':
 
     base_path = os.path.dirname(__file__)
     # standard 
-    N, M, K1, K2 = 5000, 10000, 2, 2
+    N, M, K1, K2 = 1000, 10000, 2, 2
     evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data','ex02.1'))
 
     # higher order 
-    N, M, K1, K2 = 5000, 10000, 5, 5
+    N, M, K1, K2 = 1000, 10000, 5, 5
     evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex02.2'))
     
     # higher order leadership
-    N, M, K1, K2 = 5000, 10000, 5, 5
+    N, M, K1, K2 = 1000, 10000, 5, 5
     evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex02.3'), leadership=True)
         

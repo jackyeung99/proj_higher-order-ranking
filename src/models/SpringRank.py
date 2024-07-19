@@ -195,14 +195,4 @@ def eqs39(beta, s, A):
 
 
 
-if __name__ == '__main__':
-
-    data, pi_values = read_strict_ordered_dataset('datasets/processed_data/00045-00000014.soc')
-
-    train, test = train_test_split(data)
-
-    ranks = compute_predicted_ratings_spring_rank(train, pi_values)
-
-    print(ranks)
-    # print(np.mean(compute_likelihood(ranks, test)))
    

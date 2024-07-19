@@ -40,29 +40,89 @@ def read_dataset(file):
     dataset = {'dataset': dataset}
     return dataset
 
+def process_file(file_path, metric):
+    results = {} 
+    df = pd.read_csv(file_path)
+    for index, row in df.iterrows():
+        value = row[metric]
+        model = row['model']
+        
+        results[model] = value
 
-def process_directory(base_path, directory, output_file, is_synthetic = True):
-    os.makedirs(os.path.join(base_path, 'results'), exist_ok=True)
+    return results
+        
+def process_directory(base_path, directory):
+    os.makedirs(os.path.join(base_path, 'results', directory), exist_ok=True)
 
-    results = []
+    results_log = []
+    results_leadership = []
+    results_rms = []
+    results_rho = []
+
     for file in os.listdir(os.path.join(base_path, 'data', directory)):
         if file.endswith('.csv'):
             file_path = os.path.join(base_path, 'data', directory, file)
-            df = pd.read_csv(file_path).drop(columns=['Game'])
+            file_info = read_file_parameters(file)
 
-            averages = df.mean().to_dict()
+            # Process each metric and store the results
+            results = process_file(file_path, 'log-likelihood')
+            results.update(file_info)
+            results_log.append(results)
 
-            if is_synthetic:
-                file_info = read_file_parameters(file)
-            else: 
-                file_info = read_dataset(file)
+            results = process_file(file_path, 'leadership-log-likelihood')
+            results.update(file_info)
+            results_leadership.append(results)
 
-            averages.update(file_info)
-            results.append(averages)
-                   
-    
-    results_df = pd.DataFrame(results)
-    results_df.to_csv(os.path.join(base_path, 'results', f"{output_file}_results.csv"), index=False)
+            results = process_file(file_path, 'rms')
+            results.update(file_info)
+            results_rms.append(results)
+
+            results = process_file(file_path, 'rho')
+            results.update(file_info)
+            results_rho.append(results)
+
+    # Create DataFrames for each metric
+    log_likelihood_df = pd.DataFrame(results_log)
+    leadership_log_likelihood_df = pd.DataFrame(results_leadership)
+    rms_df = pd.DataFrame(results_rms)
+    rho_df = pd.DataFrame(results_rho)
+
+    # Save each summary to a separate CSV file
+    log_likelihood_df.to_csv(os.path.join(base_path, 'results', directory, 'log_likelihood_summary.csv'), index=False)
+    leadership_log_likelihood_df.to_csv(os.path.join(base_path, 'results', directory, 'leadership_log_likelihood_summary.csv'), index=False)
+    rms_df.to_csv(os.path.join(base_path, 'results', directory, 'rms_summary.csv'), index=False)
+    rho_df.to_csv(os.path.join(base_path, 'results', directory, 'rho_summary.csv'), index=False)
+
+def process_directory_real_data(base_path):
+    os.makedirs(os.path.join(base_path, 'results'), exist_ok=True)
+
+    results_log = []
+    results_leadership = []
+
+    for file in os.listdir(os.path.join(base_path, 'data')):
+        if file.endswith('.csv'):
+            file_path = os.path.join(base_path, 'data', file)
+            file_info = read_file_parameters(file)
+
+            # Process each metric and store the results
+            results = process_file(file_path, 'log-likelihoods')
+            results.update(file_info)
+            results_log.append(results)
+
+            results = process_file(file_path, 'leadership-log-likelihood')
+            results.update(file_info)
+            results_leadership.append(results)
+
+
+    # Create DataFrames for each metric
+    log_likelihood_df = pd.DataFrame(results_log)
+    leadership_log_likelihood_df = pd.DataFrame(results_leadership)
+
+    # Save each summary to a separate CSV file
+    log_likelihood_df.to_csv(os.path.join(base_path, 'results', 'log_likelihood_summary.csv'), index=False)
+    leadership_log_likelihood_df.to_csv(os.path.join(base_path, 'results', 'leadership_log_likelihood_summary.csv'), index=False)
+
+
 
 def read_edge_list(file_path):
     data = {}
