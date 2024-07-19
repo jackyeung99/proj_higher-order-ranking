@@ -48,9 +48,19 @@ class TestMetrics:
     #     assert np.isclose(kendalltau(r1, r2)[0], 0)
 
 
+    def test_rho(self):
+
+        test_1 = {1:2.0, 2:1.0, 3:4.0}
+        test_3: {1:4.0, 2:1.0, 3:2.0}
+        ground_truth = {1:1.0, 2: 0.0, 3:3.0}
+
+        test_1_val =  measure_rho(test_1, ground_truth)   
+
+        assert spearmanr(test1, test2) > soea
+
     def test_weighted_log(self):
 
-        data, pi_values = generate_leadership_model_instance(1000,1000,2,2)
+        data, pi_values = generate_leadership_model_instance(5000,5000,5,5)
         training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
         weighted_train = convert_games_to_dict(training_set)
         weighted_test = convert_games_to_dict(testing_set)

@@ -11,7 +11,6 @@ sys.path.append(repo_root)
 
 from src.models.newman import *
 from src.utils.graph_tools import *
-from src.utils import *
 from datasets.utils.extract_ordered_games import *
 from tst.tst_weight_conversion.old_newman import *
 
@@ -197,11 +196,11 @@ def test_iteration():
 
     weighted_test = convert_games_to_dict(data)
     weighted_bin = binarize_data_weighted(weighted_test)
-    weighted_bond_matrix = create_hypergraph_from_data_weight(weighted_bin)
+    weighted_bond_matrix = create_hypergraph_from_data_weight(weighted_test)
     games_with_player = weighted_bond_matrix[player_idx]
 
     bin = binarize_data_old(data)
-    bond = create_hypergraph_from_data_old(bin)
+    bond = create_hypergraph_from_data_old(data)
 
     result_weighted = iterate_equation_newman_weighted(player_idx, pi_values, games_with_player)
     result_standard = iterate_equation_newman_old(player_idx, pi_values, bond)
@@ -238,8 +237,8 @@ def test_synch_solve():
 
     data, pi_values = generate_model_instance(10, 10, 2, 2)
     
-    weighted_test = convert_games_to_dict(data)
-    weighted_bin = binarize_data_weighted(weighted_test)
+    weighted_data = convert_games_to_dict(data)
+    weighted_bin = binarize_data_weighted(weighted_data)
     weighted_bond_matrix = create_hypergraph_from_data_weight(weighted_bin)
 
     bin = binarize_data_old(data)
@@ -248,14 +247,14 @@ def test_synch_solve():
     weighted_newman, weighted_iter, tot1 = synch_solve_equations_verbose(weighted_bond_matrix, 1000, pi_values, iterate_equation_newman_weighted)
     norm_newman, iter, tot2 = synch_solve_equations_old_verbose(bond, 1000, pi_values, iterate_equation_newman_old)
 
+    assert weighted_iter == iter, f"Iteration mismatch: weighted_iter={weighted_iter}, iter={iter}"
+        
+    if weighted_iter != iter:
+        for rep in range(len(tot1)):
+            print(f"REP: {rep}, WEIGHTED: {tot1[rep]}, NORMAL: {tot2[rep]}, DIFF: {tot1[rep] - tot2[rep]}")
 
-    assert weighted_iter == iter
-    # for rep in range(len(tot1)):
-        # print(f"REP: {rep}, WEIGHTED: {tot1[rep]}, NORMAL: {tot2[rep]}, DIFF: {tot1[rep]-tot2[rep]}")
-
-    assert len(weighted_newman) == len(norm_newman)
-    assert all(np.isclose(weighted_newman[player], norm_newman[player], atol=1e-10) for player in norm_newman)
-
+    assert len(weighted_newman) == len(norm_newman), f"Length mismatch: weighted_newman={len(weighted_newman)}, norm_newman={len(norm_newman)}"
+    assert all(np.isclose(weighted_newman[player], norm_newman[player], atol=1e-10) for player in norm_newman), "Values mismatch between weighted_newman and norm_newman"
 
 def test_small_batch():
     data, pi_values = generate_model_instance(20, 20, 2, 2)

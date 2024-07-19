@@ -38,13 +38,15 @@ def run_models_synthetic(train_data, test_data, pi_values):
         leadership_likelihoods = measure_leadership_likelihood(predicted_ratings, test_data)
         rms = measure_rms(predicted_ratings, pi_values)
         rho = measure_rho(predicted_ratings, pi_values)
+        tau = measure_tau(predicted_ratings, pi_values)
 
         model_results = {
             'model': model,
             'log-likelihood': game_likelihoods,
             'leadership-log-likelihood': leadership_likelihoods,
             'rms': rms,
-            'rho': rho
+            'rho': rho,
+            'tau': tau
             }
         
         model_performance.append(model_results)

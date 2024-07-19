@@ -89,12 +89,12 @@ def test_M(results_dir):
 
     
     df = pd.DataFrame(results)
-    out_file = os.path.join(results_dir, 'ex06.1.csv')
+    out_file = os.path.join(results_dir, 'test_M.csv')
     df.to_csv(out_file, index=False)
 
 def test_N(results_dir):
 
-    N_vec= [10 ** i for i in range(1, 6)]
+    N_vec = np.logspace(2,6, num=10)
     M = 1000
     K = 4
 
@@ -107,7 +107,7 @@ def test_N(results_dir):
 
     
     df = pd.DataFrame(results)
-    out_file = os.path.join(results_dir, 'ex06.2.csv')
+    out_file = os.path.join(results_dir, 'test_N.csv')
     df.to_csv(out_file, index=False)
 
 def test_K(results_dir):
@@ -124,7 +124,7 @@ def test_K(results_dir):
 
     
     df = pd.DataFrame(results)
-    out_file = os.path.join(results_dir, 'ex06.3.csv')
+    out_file = os.path.join(results_dir, 'test_K.csv')
     df.to_csv(out_file, index=False)
 
 if __name__ == '__main__':
