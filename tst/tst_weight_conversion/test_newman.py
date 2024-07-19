@@ -335,7 +335,7 @@ def test_weighted_hol():
 
 
 def main():
-    data, pi_values = generate_model_instance(300000, 300000, 4, 4)
+    data, pi_values = generate_model_instance(3000, 3000, 4, 4)
     weighted_data = convert_games_to_dict(data)
     
     profiler = profile_test_function(compute_predicted_ratings_std_leadership, weighted_data, pi_values)

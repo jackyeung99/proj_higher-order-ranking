@@ -45,16 +45,16 @@ if __name__ == '__main__':
    base_path = os.path.dirname(__file__)
 
 
-   M_values = np.logspace(6, 18, num=10, endpoint=True, base=2.0)
-   for M in M_values: 
-      M = int(M)
-      N, K1, K2 = 5000, 4, 4
-      evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex03.1'), f'M-{M}')
-      evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex03.2'), f'M-{M}', leadership=True)
+   ratios = [.25, .5, .75, 1, 2, 5, 10, 25]
+   for ratio in ratios: 
+      N, K1, K2 = 1000, 4, 4
+      M = int(ratio * N)
+      evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex03.1'), f'ratio-{ratio}')
+      evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex03.2'), f'ratio-{ratio}', leadership=True)
 
    K_values = range(2,20,2)
    for K in K_values:
-      N, M = 5000, 5000
+      N, M = 1000, 10000
       evaluate_models_fixed_train_size(N, M, K, K, os.path.join(base_path, 'data', 'ex03.3'), f'K-{K}')
       evaluate_models_fixed_train_size(N, M, K, K, os.path.join(base_path, 'data', 'ex03.4'), f'K-{K}',  leadership=True)
        

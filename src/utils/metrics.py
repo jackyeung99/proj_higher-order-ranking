@@ -4,20 +4,11 @@ from scipy import stats
 from scipy.stats import spearmanr, kendalltau
 
 # helpers
-def get_sorted_ratings(scores):
-    # Sort the dictionary by scores in descending order
-    sorted_scores = sorted(scores.items(), key=lambda item: item[1], reverse=True)
-    # Extract the player names to get the rankings
-    rankings = [player for player, score in sorted_scores]
-    return rankings
-
-def get_sorted_player(scores):
-    # Sort the dictionary by player 
-    sorted_players = sorted(scores.items(), key=lambda item: item[0])
-    # Extract the player scores to get the rankings
-    player_names = [score for player, score in sorted_players]
-    return player_names
-
+def get_sorted_ratings(scores_dict):
+    # Sort the dictionary by keys (players) and return the values (scores) in the same order
+    sorted_players = sorted(scores_dict.keys())
+    sorted_scores = [scores_dict[player] for player in sorted_players]
+    return sorted_scores
 
 
 def measure_rms(predicted_scores, ground_truth_scores, epsilon=1e-10):
@@ -41,10 +32,11 @@ def measure_rms(predicted_scores, ground_truth_scores, epsilon=1e-10):
 
 def measure_rho(predicted_scores, ground_truth_scores):
     # measure predicted score of a player to it's true score
-    predicted_scores = get_sorted_player(predicted_scores)
-    true_scores = get_sorted_player(ground_truth_scores)
+    predicted_scores = get_sorted_ratings(predicted_scores)
+    true_scores = get_sorted_ratings(ground_truth_scores)
 
     correlation, p_val = spearmanr(predicted_scores, true_scores)
+
     return correlation
 
 
@@ -55,6 +47,7 @@ def measure_tau(predicted_scores, ground_truth_scores):
 
     # Calculate Kendall's tau correlation coefficient
     correlation, p_val = kendalltau(sorted_predicted, sorted_true)
+
     return correlation
 
 

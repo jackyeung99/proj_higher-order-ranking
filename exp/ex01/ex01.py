@@ -60,13 +60,13 @@ if __name__ == "__main__":
     base_path = os.path.dirname(__file__)
     with concurrent.futures.ThreadPoolExecutor() as executor:
         # standard 
-        N, M, K1, K2 = 5000, 10000, 2, 2
+        N, M, K1, K2 = 1000, 10000, 2, 2
         evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex01.1'), executor)
 
         # higher order 
-        N, M, K1, K2 = 5000, 10000, 5, 5
+        N, M, K1, K2 = 1000, 10000, 5, 5
         evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data','ex01.2'), executor)
 
         # higher order leadership
-        N, M, K1, K2 = 5000, 10000, 5, 5
+        N, M, K1, K2 = 1000, 10000, 5, 5
         evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex01.3'), executor, leadership=True)

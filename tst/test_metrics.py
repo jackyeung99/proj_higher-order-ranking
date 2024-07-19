@@ -41,31 +41,46 @@ class TestMetrics:
 
         assert kendalltau(r1, r2)[0] == -1
 
-    # def test_kendall_tau_uncorrelated(self):
-    #     r1 = np.random.shuffle(list(range(100)))
-    #     r2 = np.random.shuffle(list(range(100)))
+    def test_kendall_tau_uncorrelated(self):
+        r1 = list(range(100))
+        r2 = list(range(100))
 
-    #     assert np.isclose(kendalltau(r1, r2)[0], 0)
+        np.random.shuffle(r1)
+        np.random.shuffle(r2)
+
+        correlation, _ = kendalltau(r1, r2)
+        assert np.isclose(correlation, 0, atol=0.1)
 
 
     def test_rho(self):
 
         test_1 = {1:2.0, 2:1.0, 3:4.0}
-        test_3: {1:4.0, 2:1.0, 3:2.0}
+        test_2 = {1:4.0, 2:1.0, 3:2.0}
         ground_truth = {1:1.0, 2: 0.0, 3:3.0}
 
-        test_1_val =  measure_rho(test_1, ground_truth)   
+        test_1_val = measure_rho(test_1, ground_truth)   
+        test_2_val = measure_rho(test_2, ground_truth)
 
-        assert spearmanr(test1, test2) > soea
+        assert test_1_val > test_2_val
+
+    def test_tau(self):
+
+        test_1 = {1:2.0, 2:1.0, 3:4.0}
+        test_2 = {1:4.0, 2:1.0, 3:2.0}
+        ground_truth = {1:1.0, 2: 0.0, 3:3.0}
+
+        test_1_val = measure_tau(test_1, ground_truth)   
+        test_2_val = measure_tau(test_2, ground_truth)
+
+        assert test_1_val > test_2_val
 
     def test_weighted_log(self):
 
-        data, pi_values = generate_leadership_model_instance(5000,5000,5,5)
+        data, pi_values = generate_leadership_model_instance(1000,1000,15,15)
         training_set, testing_set = train_test_split(data, train_size=.8, random_state=None)
         weighted_train = convert_games_to_dict(training_set)
         weighted_test = convert_games_to_dict(testing_set)
-    
-        print(len(testing_set))
+ 
         #non-weighted test set
         std = compute_predicted_ratings_std(weighted_train, pi_values)
 

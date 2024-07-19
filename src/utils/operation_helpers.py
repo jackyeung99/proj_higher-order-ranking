@@ -34,16 +34,16 @@ def run_models_synthetic(train_data, test_data, pi_values):
     for model in MODEL_FUNCTIONS:
         predicted_ratings = get_predictions(model, train_data, pi_values)
         
-        game_likelihoods = measure_likelihood(predicted_ratings, test_data)
-        leadership_likelihoods = measure_leadership_likelihood(predicted_ratings, test_data)
+        log_likelihoods = measure_likelihood(predicted_ratings, test_data)
+        leadership_log_likelihoods = measure_leadership_likelihood(predicted_ratings, test_data)
         rms = measure_rms(predicted_ratings, pi_values)
         rho = measure_rho(predicted_ratings, pi_values)
         tau = measure_tau(predicted_ratings, pi_values)
 
         model_results = {
             'model': model,
-            'log-likelihood': game_likelihoods,
-            'leadership-log-likelihood': leadership_likelihoods,
+            'log-likelihood': log_likelihoods,
+            'leadership-log-likelihood': leadership_log_likelihoods,
             'rms': rms,
             'rho': rho,
             'tau': tau

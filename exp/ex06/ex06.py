@@ -115,15 +115,15 @@ if __name__ == '__main__':
 
 
     base_path = os.path.dirname(__file__)
-    N, M, K1, K2 = 5000, 10000, 2, 2
+    N, M, K1, K2 = 1000, 10000, 2, 2
     file_dir_6_1 = os.path.join(base_path, 'data', 'ex06.1')
     run_experiments(N, M, K1, K2, leadership=False, repetitions=100, file_dir=file_dir_6_1)
 
-    N, M, K1, K2 = 5000, 10000, 5, 5
+    N, M, K1, K2 = 1000, 10000, 5, 5
     file_dir_6_2 = os.path.join(base_path, 'data', 'ex06.2')
     run_experiments(N, M, K1, K2, leadership=False, repetitions=100, file_dir=file_dir_6_2)
 
-    N, M, K1, K2 = 5000, 10000, 5, 5
+    N, M, K1, K2 = 1000, 10000, 5, 5
     file_dir_6_3 = os.path.join(base_path, 'data', 'ex06.3')
     run_experiments(N, M, K1, K2, leadership=True, repetitions=100, file_dir=file_dir_6_2)
    
