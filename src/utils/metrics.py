@@ -87,17 +87,6 @@ def measure_log_likelihood (data, pi_values, model = 'ho_bt', epsilon=1e-10):
             tmp -= np.log(norm+epsilon)
             log_like += tmp
 
-    #############################################
-    ##NOT SURE WHAT THIS IS FOR...
-    if model == 'std_bt':
-        for i in range(0,len(data)):
-            for j in range(0, len(data[i])-1):
-                for k in range(j+1, len(data[i])):
-                    norm = pi_values[data[i][j]] + pi_values[data[i][k]]
-                    tmp  = np.log(pi_values[data[i][j]] + epsilon) - np.log(norm)
-            log_like += tmp
-    #############################################
-    
     
     return log_like, log_prior
     
