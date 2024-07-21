@@ -7,8 +7,8 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 from src.models.newman import *
-from exp.ex_speed_benchmark.models.parallel_newman import *
-from exp.ex_speed_benchmark.models.numpy_newman import *
+from exp.ex_speed_benchmark.models.parallel_BT import *
+from exp.ex_speed_benchmark.models.numpy_BT import *
 from tst.tst_weight_conversion.old_newman import * 
 
 

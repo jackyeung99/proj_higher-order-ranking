@@ -9,7 +9,8 @@ import traceback
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src import *
+from src import generate_weighted_leadership_model_instance, generate_weighted_model_instance, split_weighted_dataset, run_models_synthetic
+
 def process_rep(rep, N, M, K1, K2, file_dir, leadership):
     try:
         if leadership:

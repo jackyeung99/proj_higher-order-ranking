@@ -1,19 +1,8 @@
-import os 
-import sys
 
-
-repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-sys.path.append(repo_root)
-
-from src.models.newman import *
-from src.utils import *
-from datasets.utils.extract_ordered_games import *
+import numpy as np
 
 
 # ===== Old Functions to test against ======
-
-
-
 def binarize_data_old(data):
 
     bin_data = []
@@ -219,7 +208,7 @@ def iterate_equation_newman_leadership_old(s, scores, bond_matrix):
 
     return a/b
 
-def compute_predicted_ratings_std_old(training_set, pi_values):
+def compute_predicted_ratings_BT_old(training_set, pi_values):
     bin_data = binarize_data_old(training_set)
     bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
 
@@ -227,7 +216,7 @@ def compute_predicted_ratings_std_old(training_set, pi_values):
 
     return predicted_std_scores
 
-def compute_predicted_ratings_std_leadership_old(training_set, pi_values): 
+def compute_predicted_ratings_BT_leadership_old(training_set, pi_values): 
     bin_data = binarize_data_leadership_old(training_set)
     bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
 
@@ -235,7 +224,7 @@ def compute_predicted_ratings_std_leadership_old(training_set, pi_values):
 
     return predicted_std_scores
 
-def compute_predicted_ratings_ho_old(training_set, pi_values): 
+def compute_predicted_ratings_HO_BT_old(training_set, pi_values): 
     
     bond_matrix = create_hypergraph_from_data_old(training_set)
     predicted_ho_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman_old, sens=1e-10)
@@ -243,7 +232,7 @@ def compute_predicted_ratings_ho_old(training_set, pi_values):
     return predicted_ho_scores
 
 
-def compute_predicted_ratings_hol_old(training_set, pi_values):
+def compute_predicted_ratings_HOL_BT_old(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data_old(training_set)
     predicted_hol_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman_leadership_old, sens=1e-10)
 

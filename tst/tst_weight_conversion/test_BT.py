@@ -9,7 +9,7 @@ import time
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.models.newman import *
+from src.models.BradleyTerry import *
 from src.utils.graph_tools import *
 from datasets.utils.extract_ordered_games import *
 from tst.tst_weight_conversion.old_newman import *
@@ -261,8 +261,8 @@ def test_small_batch():
 
     weighted_data = convert_games_to_dict(data)
     
-    new_newman = compute_predicted_ratings_std(weighted_data, pi_values)
-    old_newman = compute_predicted_ratings_std_old(data, pi_values)
+    new_newman = compute_predicted_ratings_BT(weighted_data, pi_values)
+    old_newman = compute_predicted_ratings_BT_old(data, pi_values)
   
     
     assert all(isinstance(x, float) for x in new_newman.values())
@@ -272,8 +272,8 @@ def test_weighted_newman():
 
     weighted_data = convert_games_to_dict(data)
     
-    new_newman = compute_predicted_ratings_std(weighted_data, pi_values)
-    old_newman = compute_predicted_ratings_std_old(data, pi_values)
+    new_newman = compute_predicted_ratings_BT(weighted_data, pi_values)
+    old_newman = compute_predicted_ratings_BT_old(data, pi_values)
   
     
     assert len(old_newman) == len(new_newman)
@@ -284,8 +284,8 @@ def test_bin():
 
     weighted_data = convert_games_to_dict(data)
     
-    new_newman = compute_predicted_ratings_std(weighted_data, pi_values)
-    old_newman = compute_predicted_ratings_std_old(data, pi_values)
+    new_newman = compute_predicted_ratings_BT(weighted_data, pi_values)
+    old_newman = compute_predicted_ratings_BT_old(data, pi_values)
 
     for player in pi_values:
         print(new_newman[player], old_newman[player])
@@ -298,8 +298,8 @@ def test_binarized_leadership():
 
     weighted_data = convert_games_to_dict(data)
     
-    new_newman = compute_predicted_ratings_std_leadership(weighted_data, pi_values)
-    old_newman = compute_predicted_ratings_std_leadership_old(data, pi_values)
+    new_newman = compute_predicted_ratings_BT_leadership(weighted_data, pi_values)
+    old_newman = compute_predicted_ratings_BT_leadership_old(data, pi_values)
   
 
     assert len(old_newman) == len(new_newman)
@@ -310,8 +310,8 @@ def test_weighted_ho():
 
     weighted_data = convert_games_to_dict(data)
     
-    new_newman = compute_predicted_ratings_ho(weighted_data, pi_values)
-    old_newman = compute_predicted_ratings_ho_old(data, pi_values)
+    new_newman = compute_predicted_ratings_HO_BT(weighted_data, pi_values)
+    old_newman = compute_predicted_ratings_HO_BT_old(data, pi_values)
   
     
     assert len(old_newman) == len(new_newman)
@@ -324,8 +324,8 @@ def test_weighted_hol():
 
     weighted_data = convert_games_to_dict(data)
     
-    new_newman = compute_predicted_ratings_hol(weighted_data, pi_values)
-    old_newman = compute_predicted_ratings_hol_old(data, pi_values)
+    new_newman = compute_predicted_ratings_HOL_BT(weighted_data, pi_values)
+    old_newman = compute_predicted_ratings_HOL_BT(data, pi_values)
   
    
     assert len(old_newman) == len(new_newman)
@@ -338,10 +338,10 @@ def main():
     data, pi_values = generate_model_instance(3000, 3000, 4, 4)
     weighted_data = convert_games_to_dict(data)
     
-    profiler = profile_test_function(compute_predicted_ratings_std_leadership, weighted_data, pi_values)
+    profiler = profile_test_function(compute_predicted_ratings_BT_leadership, weighted_data, pi_values)
     print_profile_stats(profiler)
 
-    profiler = profile_test_function(compute_predicted_ratings_std_leadership_old, data, pi_values)
+    profiler = profile_test_function(compute_predicted_ratings_BT_leadership_old, data, pi_values)
     print_profile_stats(profiler)
 
 if __name__ == '__main__':

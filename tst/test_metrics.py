@@ -9,6 +9,7 @@ sys.path.append(repo_root)
 
 from src import *
 
+
 def measure_likelihood_old(pred_ranking, testing_set):
     return [recursive_probability_estimation_old(pred_ranking, game) for game in testing_set]
 
@@ -82,7 +83,7 @@ class TestMetrics:
         weighted_test = convert_games_to_dict(testing_set)
  
         #non-weighted test set
-        std = compute_predicted_ratings_std(weighted_train, pi_values)
+        std = compute_predicted_ratings_HO_BT(weighted_train, pi_values)
 
         old_likelihood = np.sum(measure_likelihood_old(std, testing_set))
 

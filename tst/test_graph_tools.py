@@ -7,8 +7,7 @@ import pytest
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..',))
 sys.path.append(repo_root)
 
-from src.utils import *
-from src.utils.graph_tools import *
+from src import binarize_data_weighted, generate_model_instance, generate_weighted_leadership_model_instance, generate_weighted_model_instance, convert_games_to_dict
 
 
 def binarize_data (data):
@@ -75,14 +74,14 @@ class TestGraphTools:
 
 
     def test_weighted_generation(self):
-        weighted_data, _ = generate_model_instance_weighted(50,50,4,4)
+        weighted_data, _ = generate_weighted_model_instance(50,50,4,4)
 
         assert len(weighted_data) <= 50
         assert isinstance(weighted_data, dict)
         assert np.sum(list(weighted_data.values())) == 50
 
     def test_weighted_leadership_generation(self):
-        weighted_data, _ = generate_leadership_model_instance_weighted(50,50,2,2)
+        weighted_data, _ = generate_weighted_leadership_model_instance(50,50,2,2)
 
         assert len(weighted_data) <= 50
         assert isinstance(weighted_data, dict)

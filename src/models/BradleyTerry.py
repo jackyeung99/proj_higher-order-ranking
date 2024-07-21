@@ -1,17 +1,11 @@
 import sys
 import os
-import csv
-import random
-import concurrent.futures
 import numpy as np
-from numba import njit,jit, prange, types
-from numba.typed import List
-import math
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.utils.graph_tools import *
+from src.utils.graph_tools import create_hypergraph_from_data_weight, binarize_data_weighted, binarize_data_weighted_leadership
 
 
 def normalize_scores_numpy(scores):
@@ -104,14 +98,14 @@ def iterate_equation_newman_leadership_weighted(player_idx, pi_values, games_wit
 
 
 
-def compute_predicted_ratings_std(training_set, pi_values):
+def compute_predicted_ratings_BT(training_set, pi_values):
     bin_data = binarize_data_weighted(training_set)
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
     predicted_std_scores = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_weighted, sens=1e-10)
     return predicted_std_scores
 
-def compute_predicted_ratings_std_leadership(training_set, pi_values): 
+def compute_predicted_ratings_BT_leadership(training_set, pi_values): 
     bin_data = binarize_data_weighted_leadership(training_set)
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
@@ -119,14 +113,14 @@ def compute_predicted_ratings_std_leadership(training_set, pi_values):
 
     return predicted_std_scores
 
-def compute_predicted_ratings_ho(training_set, pi_values): 
+def compute_predicted_ratings_HO_BT(training_set, pi_values): 
     bond_matrix = create_hypergraph_from_data_weight(training_set)
     predicted_ho_scores = synch_solve_equations(bond_matrix, 1000, pi_values, iterate_equation_newman_weighted, sens=1e-10)
  
     return predicted_ho_scores
 
 
-def compute_predicted_ratings_hol(training_set, pi_values):
+def compute_predicted_ratings_HOL_BT(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data_weight(training_set)
     predicted_hol_scores = synch_solve_equations (bond_matrix, 1000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-10)
 

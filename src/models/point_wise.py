@@ -1,11 +1,5 @@
-import sys
-import os
 
-repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-sys.path.append(repo_root)
-
-from src.utils.graph_tools import *
-
+''' Average position '''
 def compute_point_wise_ratings(training_set, pi_values):
     scores = {k: 0 for k in pi_values.keys()}
     num_games = {k: 0 for k in pi_values.keys()}

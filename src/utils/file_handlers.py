@@ -3,12 +3,11 @@ import os
 import sys
 import csv
 import pandas as pd
-import re 
+
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.utils.operation_helpers import *
 
 def save_results_to_csv(filename, headers, results):
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -98,7 +97,7 @@ def process_directory(base_path, directory):
     leadership_log_likelihood_df.to_csv(os.path.join(base_path, 'results', directory, 'leadership_log_likelihood_summary.csv'), index=False)
     rms_df.to_csv(os.path.join(base_path, 'results', directory, 'rms_summary.csv'), index=False)
     rho_df.to_csv(os.path.join(base_path, 'results', directory, 'rho_summary.csv'), index=False)
-    tau_df.to_csv(os.path.join(base_path, 'results', directory, 'rho_summary.csv'), index=False)
+    tau_df.to_csv(os.path.join(base_path, 'results', directory, 'tau_summary.csv'), index=False)
 
 def process_directory_real_data(base_path):
     os.makedirs(os.path.join(base_path, 'results'), exist_ok=True)

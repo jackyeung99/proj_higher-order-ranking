@@ -8,18 +8,19 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 from src.models import *
-from src.utils.metrics import *
+from src.utils.metrics import measure_leadership_likelihood, measure_likelihood, measure_rho, measure_rms, measure_tau
+from src.utils.graph_tools import convert_games_to_dict
 
 MODEL_FUNCTIONS = {
-    'newman': compute_predicted_ratings_std,
-    'newman_leadership': compute_predicted_ratings_std_leadership,
-    'higher_order_newman': compute_predicted_ratings_ho,
-    'higher_order_leadership': compute_predicted_ratings_hol,
-    'spring_rank': compute_predicted_ratings_spring_rank,
-    'spring_rank_leadership': compute_predicted_ratings_spring_rank_leadership,
-    'page_rank': compute_predicted_ratings_page_rank,
-    'page_rank_leadership': compute_predicted_ratings_page_rank_leadership,
-    'point_wise': compute_point_wise_ratings
+    'BT': compute_predicted_ratings_BT,
+    'BT_leadership': compute_predicted_ratings_BT_leadership,
+    'HO_BT': compute_predicted_ratings_HO_BT,
+    'HOL_BT': compute_predicted_ratings_HOL_BT,
+    'Spring_Rank': compute_predicted_ratings_spring_rank,
+    'Spring_Rank_Leadership': compute_predicted_ratings_spring_rank_leadership,
+    'Page_Rank': compute_predicted_ratings_page_rank,
+    'Page_Rank_Leadership': compute_predicted_ratings_page_rank_leadership,
+    'Point_Wise': compute_point_wise_ratings
 }
 
 def get_predictions(model, training_set, pi_values):

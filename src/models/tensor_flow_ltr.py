@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.utils.solvers import *
+from src.utils.graph_tools import normalize_scores
 
 
 # Convert games to features and labels for list-wise ranking
@@ -118,21 +118,6 @@ def compute_predicited_rankings_tensor_flow(games, pi_values):
 
 
 
-if __name__ == '__main__':
-
-
-
-    # Read data
-    data, pi_values = read_strict_ordered_dataset('datasets/processed_data/00045-00000014.soc')
-
-
-    train, test = train_test_split(data)
-    
-    
-    ratings = compute_predicited_rankings_tensor_flow(train, pi_values)
-    # print(ratings)
-   
-    print(np.mean(compute_likelihood(ratings, test)))
 
 
 
