@@ -37,7 +37,7 @@ def process_rep(rep, N, M, K1, K2, file_dir, leadership):
         print(f"Error in process_rep (rep={rep}): {e}")
         traceback.print_exc()
 
-def evaluate_model_train_size(N, M, K1, K2, file_dir, executor, leadership=False):
+def evaluate_model_train_size(N, M, K1, K2, file_dir, leadership=False):
     os.makedirs(file_dir, exist_ok=True)
 
     futures = []
@@ -58,15 +58,15 @@ def evaluate_model_train_size(N, M, K1, K2, file_dir, executor, leadership=False
 if __name__ == "__main__":
 
     base_path = os.path.dirname(__file__)
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        # standard 
-        N, M, K1, K2 = 1000, 10000, 2, 2
-        evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex01.1'), executor)
 
-        # higher order 
-        N, M, K1, K2 = 1000, 10000, 5, 5
-        evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data','ex01.2'), executor)
+    # standard 
+    N, M, K1, K2 = 1000, 10000, 2, 2
+    evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex01.1'))
 
-        # higher order leadership
-        N, M, K1, K2 = 1000, 10000, 5, 5
-        evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex01.3'), executor, leadership=True)
+    # higher order 
+    N, M, K1, K2 = 1000, 10000, 5, 5
+    evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data','ex01.2'))
+
+    # higher order leadership
+    N, M, K1, K2 = 1000, 10000, 5, 5
+    evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex01.3'),leadership=True)
