@@ -46,5 +46,9 @@ if __name__ == '__main__':
     base_path = os.path.dirname(__file__)
     dataset_file_path = os.path.join(repo_root, 'datasets', 'processed_data')
     out_file = os.path.join(base_path, 'data')
+<<<<<<< HEAD
 
     run_experiment(dataset_file_path, 50, out_file_directory=out_file) 
+=======
+    run_experiment(dataset_file_path, 20, out_file_directory=out_file) 
+>>>>>>> 54728e13 (MISC: small server fixes)
