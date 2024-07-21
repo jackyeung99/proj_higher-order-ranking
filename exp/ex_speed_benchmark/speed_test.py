@@ -2,23 +2,24 @@ import os
 import sys
 import time
 import pandas as pd
+import numpy as np
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.models.newman import *
-from exp.ex_speed_benchmark.models.parallel_BT import *
-from exp.ex_speed_benchmark.models.numpy_BT import *
-from tst.tst_weight_conversion.old_newman import * 
-
+from src.models import *
+from exp.ex_speed_benchmark.models.parallel_BT import parallel_ho, parallel_hol, parallel_std_leadership, parrallel_std
+from exp.ex_speed_benchmark.models.numpy_BT import numpy_ho, numpy_hol, numpy_std, numpy_std_leadership
+from tst.tst_weight_conversion.old_newman import compute_predicted_ratings_BT_leadership_old, compute_predicted_ratings_BT_old, compute_predicted_ratings_HO_BT_old, compute_predicted_ratings_HOL_BT_old
+from src.utils import generate_model_instance, convert_games_to_dict
 
 def run_all_newman(weighted_data, pi_values):
     
     start = time.perf_counter() 
-    compute_predicted_ratings_std(weighted_data, pi_values)
-    compute_predicted_ratings_std_leadership(weighted_data, pi_values)
-    compute_predicted_ratings_ho(weighted_data, pi_values)
-    compute_predicted_ratings_hol(weighted_data, pi_values)
+    compute_predicted_ratings_BT(weighted_data, pi_values)
+    compute_predicted_ratings_BT_leadership(weighted_data, pi_values)
+    compute_predicted_ratings_HO_BT(weighted_data, pi_values)
+    compute_predicted_ratings_HOL_BT(weighted_data, pi_values)
     end = time.perf_counter()
     tot_time  = end - start
     return tot_time
@@ -26,10 +27,10 @@ def run_all_newman(weighted_data, pi_values):
     
 def run_all_newman_old(data, pi_values):
     start = time.perf_counter()
-    compute_predicted_ratings_std_old(data, pi_values)
-    compute_predicted_ratings_std_leadership_old(data, pi_values)
-    compute_predicted_ratings_ho_old(data, pi_values)
-    compute_predicted_ratings_hol_old(data, pi_values)
+    compute_predicted_ratings_BT_old(data, pi_values)
+    compute_predicted_ratings_BT_leadership_old(data, pi_values)
+    compute_predicted_ratings_HO_BT_old(data, pi_values)
+    compute_predicted_ratings_HOL_BT_old(data, pi_values)
     end = time.perf_counter()
     tot_time = end - start
 

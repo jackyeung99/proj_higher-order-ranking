@@ -3,7 +3,6 @@ import sys
 from concurrent.futures import ProcessPoolExecutor
 import pandas as pd
 import numpy as np
-import random
 import traceback
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
