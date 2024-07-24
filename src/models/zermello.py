@@ -1,12 +1,12 @@
 import random 
 import os 
 import sys
+import numpy as np 
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.models import synch_solve_equations
-from src.utils.graph_tools import create_hypergraph_from_data_weight, binarize_data_weighted 
+from tst.tst_weight_conversion.old_newman import *
 
 def iterate_equation_zermelo (s, scores, bond_matrix):
 
@@ -93,16 +93,16 @@ def iterate_equation_zermelo_new (s, scores, bond_matrix):
 
 
 def compute_predicted_ratings_BT_zermello(training_set, pi_values):
-    bin_data = binarize_data_weighted(training_set)
-    bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
+    bin_data = binarize_data_old(training_set)
+    bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
 
-    predicted_std_scores = synch_solve_equations(bin_bond_matrix, 1000, pi_values, iterate_equation_zermelo, sens=1e-10)
-    return predicted_std_scores
+    predicted_std_scores, info = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_zermelo, sens=1e-10)
+    return predicted_std_scores, info
 
 
 
 def compute_predicted_ratings_plackett_luce(training_set, pi_values): 
-    bond_matrix = create_hypergraph_from_data_weight(training_set)
-    predicted_ho_scores = synch_solve_equations(bond_matrix, 1000, pi_values, iterate_equation_zermelo_new, sens=1e-10)
+    bond_matrix = create_hypergraph_from_data_old(training_set)
+    predicted_ho_scores, info = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_zermelo_new, sens=1e-10)
  
-    return predicted_ho_scores
+    return predicted_ho_scores, info

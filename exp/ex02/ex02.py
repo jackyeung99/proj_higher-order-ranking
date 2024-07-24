@@ -36,7 +36,7 @@ def evaluate_models_fixed_train_size(N, M, K1, K2, file_dir, leadership=False, r
     futures = []
     with ProcessPoolExecutor() as executor:
         for rep in range(repetitions):
-            futures.append(executor.submit(process_fixed_rep, rep, N, M, K1, K2, train_size, file_dir, train_size))
+            futures.append(executor.submit(process_fixed_rep, rep, N, M, K1, K2, train_size, file_dir, leadership))
 
 
 
