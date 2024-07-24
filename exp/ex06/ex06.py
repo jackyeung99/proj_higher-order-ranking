@@ -125,5 +125,5 @@ if __name__ == '__main__':
 
     N, M, K1, K2 = 1000, 10000, 5, 5
     file_dir_6_3 = os.path.join(base_path, 'data', 'ex06.3')
-    run_experiments(N, M, K1, K2, leadership=True, repetitions=100, file_dir=file_dir_6_2)
+    run_experiments(N, M, K1, K2, leadership=True, repetitions=100, file_dir=file_dir_6_3)
    
