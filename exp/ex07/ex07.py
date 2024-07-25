@@ -93,11 +93,9 @@ def compute_predicted_ratings_HO_BT_info(training_set, pi_values):
  
     return predicted_ho_scores, info
 
-def test_convergence(leadership, max_iter):
-    if leadership:
-        data, pi_values = generate_leadership_model_instance(1000, 10000, 5, 5)
-    else:
-        data, pi_values = generate_model_instance(1000, 10000, 5, 5)
+def test_convergence( max_iter):
+
+    data, pi_values = generate_model_instance(1000, 10000, 5, 5)
 
     weighted_data = convert_games_to_dict(data)
     _, ho_info = compute_predicted_ratings_HO_BT_info(weighted_data, pi_values)
@@ -115,14 +113,15 @@ def test_convergence(leadership, max_iter):
 
     return ho_errors, pl_errors
 
-def average_convergence(reps, leadership, output_file, max_iter=1000):
-    os.makedirs(output_file, exist_ok=True)
+def average_convergence(reps, output_file, max_iter=1000):
+    directory = os.path.dirname(output_file)
+    os.makedirs(directory, exist_ok=True)
 
     ho_errors_sum = np.zeros(max_iter)
     pl_errors_sum = np.zeros(max_iter)
 
     for _ in range(reps):
-        ho_errors, pl_errors = test_convergence(leadership, max_iter)
+        ho_errors, pl_errors = test_convergence( max_iter)
         ho_errors_sum += ho_errors
         pl_errors_sum += pl_errors
 
@@ -144,10 +143,7 @@ def average_convergence(reps, leadership, output_file, max_iter=1000):
 if __name__ == '__main__':
 
     out_file_7_1 = os.path.join(os.path.dirname(__file__), 'results', 'ex07.1.csv')
-    average_convergence(reps=1000, leadership=False, output_file=out_file_7_1)
-
-    out_file_7_2 = os.path.join(os.path.dirname(__file__), 'results', 'ex07.2.csv')
-    average_convergence(reps=1000, leadership=True, output_file=out_file_7_2)
+    average_convergence(reps=1000, output_file=out_file_7_1)
 
 
 
