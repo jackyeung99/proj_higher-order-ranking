@@ -138,7 +138,7 @@ def average_convergence(reps, out_dir, max_iter=1000):
 if __name__ == '__main__':
 
     out_dir = os.path.join(os.path.dirname(__file__), 'data')
-    average_convergence(reps=1000, out_dir=out_dir)
+    average_convergence(reps=100, out_dir=out_dir)
 
 
 
