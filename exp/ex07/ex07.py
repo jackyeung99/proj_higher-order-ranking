@@ -56,7 +56,6 @@ def compute_predicted_ratings_HO_BT_info(training_set, pi_values):
 def synch_solve_equations_w_iterations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
     info = {}
     
-    
     players = np.array(list(pi_values.keys()))
     scores = np.ones(len(pi_values))
     normalize_scores_numpy(scores)
@@ -108,8 +107,8 @@ def test_convergence( max_iter):
     for i in range(max_iter):
         if i in ho_info:
             ho_errors[i] = ho_info[i]
-        if i < len(PL_info[1]):
-            pl_errors[i] = PL_info[1][i]
+        if i < len(PL_info[2]):
+            pl_errors[i] = PL_info[2][i]
 
     return ho_errors, pl_errors
 
