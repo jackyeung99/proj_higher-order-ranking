@@ -2,7 +2,7 @@ import os
 import sys
 import matplotlib.pyplot as plt
 import pandas as pd
-
+from concurrent.futures import ThreadPoolExecutor
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
@@ -113,37 +113,33 @@ def test_convergence( max_iter):
 
     return ho_errors, pl_errors
 
-def average_convergence(reps, output_file, max_iter=1000):
-    directory = os.path.dirname(output_file)
-    os.makedirs(directory, exist_ok=True)
-
-    ho_errors_sum = np.zeros(max_iter)
-    pl_errors_sum = np.zeros(max_iter)
-
-    for _ in range(reps):
-        ho_errors, pl_errors = test_convergence( max_iter)
-        ho_errors_sum += ho_errors
-        pl_errors_sum += pl_errors
-
-    avg_ho_errors = ho_errors_sum / reps
-    avg_pl_errors = pl_errors_sum / reps
-
-    data = {
-            'Iteration': np.arange(max_iter),
-            'Avg_HO_Error': avg_ho_errors,
-            'Avg_PL_Error': avg_pl_errors,
-     }
+def save_convergence_data(rep, out_dir, max_iter):
+    ho_errors, pl_errors = test_convergence(max_iter)
     
-    df = pd.DataFrame(data)
-    df.to_csv(output_file, index=False)
+    data = {
+        'Iteration': np.arange(max_iter),
+        'Avg_HO_Error': ho_errors,
+        'Avg_PL_Error': pl_errors,
+    }
 
-    return avg_ho_errors, avg_pl_errors
+    df = pd.DataFrame(data)
+    file_path = os.path.join(out_dir, f'rep-{rep}.csv')
+    df.to_csv(file_path, index=False)
+
+def average_convergence(reps, out_dir, max_iter=1000):
+    os.makedirs(out_dir, exist_ok=True)
+    
+    with ThreadPoolExecutor() as executor:
+        futures = [executor.submit(save_convergence_data, rep, out_dir, max_iter) for rep in range(reps)]
+        for future in futures:
+            future.result()
+
 
 
 if __name__ == '__main__':
 
-    out_file_7_1 = os.path.join(os.path.dirname(__file__), 'results', 'ex07.1.csv')
-    average_convergence(reps=1000, output_file=out_file_7_1)
+    out_dir = os.path.join(os.path.dirname(__file__), 'data')
+    average_convergence(reps=1000, out_dir=out_dir)
 
 
 
