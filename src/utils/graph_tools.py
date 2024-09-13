@@ -229,3 +229,10 @@ def convert_games_to_dict(games):
     return dict(sorted(unique_orderings.items(), key = lambda x:x[1],  reverse=True))
 
 
+def convert_dict_to_games(weighted_games):
+
+    list_of_games = []
+    for ordering, count in weighted_games.items():
+        list_of_games.extend([list(ordering)] * count)
+        
+    return list_of_games
