@@ -80,7 +80,7 @@ def test_convergence(un_weighted_data, pi_values, max_iter):
     return ho_errors, pl_errors
 
 # for each repetition obtain error for each iteration
-def save_convergence_data(file_name, data, pi_values, max_iter = 1000):
+def save_convergence_data(file_name, data, pi_values, max_iter = 5000):
     ho_errors, pl_errors = test_convergence(data, pi_values, max_iter)
     
     data = {
