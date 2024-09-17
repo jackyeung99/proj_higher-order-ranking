@@ -42,7 +42,7 @@ def normalize_scores_old(pi_values):
         pi_values[n] = pi_values[n] / norm
 
 
-def synch_solve_equations_old(bond_matrix, max_iter, pi_values, method, sens=1e-10):
+def synch_solve_equations_old(bond_matrix, max_iter, pi_values, method, sens=1e-6):
 
     x, y, z = [], [], []
     scores = {}
@@ -212,7 +212,7 @@ def compute_predicted_ratings_BT_old(training_set, pi_values):
     bin_data = binarize_data_old(training_set)
     bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_old, sens=1e-10)
+    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_old, sens=1e-6)
 
     return predicted_std_scores
 
@@ -220,20 +220,20 @@ def compute_predicted_ratings_BT_leadership_old(training_set, pi_values):
     bin_data = binarize_data_leadership_old(training_set)
     bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
 
-    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_newman_old, sens=1e-10)
+    predicted_std_scores, _ = synch_solve_equations_old(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_old, sens=1e-6)
 
     return predicted_std_scores
 
 def compute_predicted_ratings_HO_BT_old(training_set, pi_values): 
     
     bond_matrix = create_hypergraph_from_data_old(training_set)
-    predicted_ho_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman_old, sens=1e-10)
+    predicted_ho_scores, _ = synch_solve_equations_old(bond_matrix, 10000, pi_values, iterate_equation_newman_old, sens=1e-6)
 
     return predicted_ho_scores
 
 
 def compute_predicted_ratings_HOL_BT_old(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data_old(training_set)
-    predicted_hol_scores, _ = synch_solve_equations_old(bond_matrix, 1000, pi_values, iterate_equation_newman_leadership_old, sens=1e-10)
+    predicted_hol_scores, _ = synch_solve_equations_old(bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_old, sens=1e-6)
 
     return predicted_hol_scores

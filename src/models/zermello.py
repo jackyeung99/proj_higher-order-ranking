@@ -95,17 +95,17 @@ def iterate_equation_zermelo_new (s, scores, bond_matrix):
 
 
 
-def compute_predicted_ratings_BT_zermello(training_set, pi_values):
+def compute_predicted_ratings_BT_zermello(training_set, pi_values, max_iter=10000):
     bin_data = binarize_data_old(training_set)
     bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
 
-    predicted_std_scores, info = synch_solve_equations_old(bin_bond_matrix, 1000, pi_values, iterate_equation_zermelo, sens=1e-10)
+    predicted_std_scores, info = synch_solve_equations_old(bin_bond_matrix, max_iter, pi_values, iterate_equation_zermelo, sens=1e-6)
     return predicted_std_scores, info
 
 
 
-def compute_predicted_ratings_plackett_luce(training_set, pi_values, max_iter=1000): 
+def compute_predicted_ratings_plackett_luce(training_set, pi_values, max_iter=10000): 
     bond_matrix = create_hypergraph_from_data_old(training_set)
-    predicted_ho_scores, info = synch_solve_equations_old(bond_matrix, max_iter, pi_values, iterate_equation_zermelo_new, sens=1e-10)
+    predicted_ho_scores, info = synch_solve_equations_old(bond_matrix, max_iter, pi_values, iterate_equation_zermelo_new, sens=1e-6)
  
     return predicted_ho_scores, info
