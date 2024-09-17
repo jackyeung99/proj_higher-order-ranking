@@ -46,15 +46,15 @@ if __name__ == '__main__':
 
 
    ratios = [.25, .5, .75, 1, 2, 5, 10, 25]
-   for ratio in ratios: 
-      N, K1, K2 = 1000, 4, 4
+   for ratio in np.logspace(-3,1, num=25): 
+      N, K1, K2 = 10000, 4, 4
       M = int(ratio * N)
       evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex03.1'), f'ratio-{ratio}')
       evaluate_models_fixed_train_size(N, M, K1, K2, os.path.join(base_path, 'data', 'ex03.2'), f'ratio-{ratio}', leadership=True)
 
    K_values = range(2,20,2)
    for K in K_values:
-      N, M = 1000, 10000
+      N, M = 10000, 50000
       evaluate_models_fixed_train_size(N, M, K, K, os.path.join(base_path, 'data', 'ex03.3'), f'K-{K}')
       evaluate_models_fixed_train_size(N, M, K, K, os.path.join(base_path, 'data', 'ex03.4'), f'K-{K}',  leadership=True)
        
