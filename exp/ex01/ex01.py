@@ -18,7 +18,7 @@ def process_rep(rep, N, M, K1, K2, file_dir, leadership):
             data, pi_values = generate_weighted_model_instance(N, M, K1, K2)
         
 
-        for train_size in np.logspace(-2, 1, endpoint=False, num=25):
+        for train_size in np.logspace(-2, 0, endpoint=False, num=25):
             training_set, testing_set = split_weighted_dataset(data, train_ratio=train_size)
             model_performance = run_models_synthetic(training_set, testing_set, pi_values)
 
