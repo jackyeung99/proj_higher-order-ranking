@@ -14,7 +14,7 @@ from src.utils.graph_tools import generate_model_instance
 def average_convergence(repetitions, out_file_dir):
     os.makedirs(out_dir, exist_ok=True)
     futures = []
-    with ProcessPoolExecutor() as executor:
+    with ProcessPoolExecutor(max_workers=10) as executor:
          for rep in range(repetitions):
             data, pi_values = generate_model_instance(1000, 10000, 5, 5)
             file_name = os.path.join(out_file_dir, f"rep-{rep}.csv")

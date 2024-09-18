@@ -41,7 +41,7 @@ def evaluate_model_train_size(N, M, K1, K2, file_dir, leadership=False):
     os.makedirs(file_dir, exist_ok=True)
 
     futures = []
-    with ProcessPoolExecutor() as executor:
+    with ProcessPoolExecutor(max_workers=10) as executor:
         for rep in range(250):
             futures.append(executor.submit(process_rep, rep, N, M, K1, K2, file_dir, leadership))
 
