@@ -24,7 +24,7 @@ def process_file(file, dataset_file_path, repetitions, out_file_dir):
     if dataset_id not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 101]:
         print(file)
         futures = []
-        with ProcessPoolExecutor(max_workers=10) as executor:
+        with ProcessPoolExecutor(max_workers=32) as executor:
             for rep in range(repetitions):
                 futures.append(executor.submit(process_rep, rep, data, pi_values, out_file_dir, dataset_id))
                

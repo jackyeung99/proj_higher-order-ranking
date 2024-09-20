@@ -28,7 +28,6 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     while iteration < max_iter and err > sens:
         err = 0
         tmp_scores = np.ones(len(pi_values))
-        # tmp_scores = scores.copy()
         
 
         for s in range(len(scores)):

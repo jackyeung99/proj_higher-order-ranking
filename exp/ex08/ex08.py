@@ -29,7 +29,7 @@ def process_file(file, dataset_file_path, repetitions, out_file_dir):
         print(file)
         futures = []
 
-        with ProcessPoolExecutor(max_workers=10) as executor:
+        with ProcessPoolExecutor(max_workers=32) as executor:
             for rep in range(repetitions):
                 #randomize the list of games
                 random_data, _ = train_test_split(un_weighted_data, test_size=.2)

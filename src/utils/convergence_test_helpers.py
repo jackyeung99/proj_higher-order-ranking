@@ -16,7 +16,7 @@ from src.models.zermello import *
 
 
 # Modified Solver function  to Keep Track of iterations for Genralized Newman 
-def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e-10):
+def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     scores = {n: 1.0 for n in pi_values}
     normalize_scores_old(scores)
 
