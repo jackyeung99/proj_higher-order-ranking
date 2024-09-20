@@ -104,7 +104,6 @@ def compute_predicted_ratings_BT(training_set, pi_values):
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
     predicted_std_scores, iter = synch_solve_equations(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
-    print(iter)
     return predicted_std_scores
 
 def compute_predicted_ratings_BT_leadership(training_set, pi_values): 
@@ -112,19 +111,16 @@ def compute_predicted_ratings_BT_leadership(training_set, pi_values):
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
     predicted_std_scores, iter = synch_solve_equations(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-6)
-    print(iter)
     return predicted_std_scores
 
 def compute_predicted_ratings_HO_BT(training_set, pi_values): 
     bond_matrix = create_hypergraph_from_data_weight(training_set)
     predicted_ho_scores, iter = synch_solve_equations(bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
-    print(iter)
     return predicted_ho_scores
 
 
 def compute_predicted_ratings_HOL_BT(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data_weight(training_set)
     predicted_hol_scores, iter = synch_solve_equations (bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-6)
-    print(iter)
     return predicted_hol_scores
 
