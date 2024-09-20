@@ -79,7 +79,7 @@ def iterate_equation_newman_verbose(s, scores, bond_matrix):
     return result
 
 
-def synch_solve_equations_old_verbose(bond_matrix, max_iter, pi_values, method, sens=1e-10):
+def synch_solve_equations_old_verbose(bond_matrix, max_iter, pi_values, method, sens=1e-6):
 
     x, y, z = [], [], []
     scores = {}
@@ -141,7 +141,7 @@ def synch_solve_equations_old_verbose(bond_matrix, max_iter, pi_values, method, 
  
     return scores, iteration, total_ratings
 
-def synch_solve_equations_verbose(bond_matrix, max_iter, pi_values, method, sens=1e-10):
+def synch_solve_equations_verbose(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     players = np.array(list(pi_values.keys()))
     scores = np.ones(len(pi_values))
     normalize_scores_numpy(scores)
@@ -151,7 +151,8 @@ def synch_solve_equations_verbose(bond_matrix, max_iter, pi_values, method, sens
     total_ratings = []
     while iteration < max_iter and err > sens:
         err = 0
-        tmp_scores = scores.copy()
+        # tmp_scores = scores.copy()
+        tmp_scores = np.ones(len(pi_values))
 
         for s in range(len(scores)):
             if s in bond_matrix:
@@ -325,7 +326,7 @@ def test_weighted_hol():
     weighted_data = convert_games_to_dict(data)
     
     new_newman = compute_predicted_ratings_HOL_BT(weighted_data, pi_values)
-    old_newman = compute_predicted_ratings_HOL_BT(data, pi_values)
+    old_newman = compute_predicted_ratings_HOL_BT_old(data, pi_values)
   
    
     assert len(old_newman) == len(new_newman)

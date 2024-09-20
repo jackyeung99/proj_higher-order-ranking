@@ -17,7 +17,7 @@ def normalize_scores_numpy(scores):
         scores[i] /= norm
         
 
-def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
+def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     players = np.array(list(pi_values.keys()))
     scores = np.ones(len(pi_values))
     normalize_scores_numpy(scores)
@@ -27,7 +27,9 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
     
     while iteration < max_iter and err > sens:
         err = 0
-        tmp_scores = scores.copy()
+        tmp_scores = np.ones(len(pi_values))
+        # tmp_scores = scores.copy()
+        
 
         for s in range(len(scores)):
             if s in bond_matrix:
@@ -38,11 +40,11 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-10):
        
         err = np.max(np.abs(tmp_scores - scores))
         scores = tmp_scores.copy()
-        
         iteration += 1
+
         
     final_scores = {players[i]: scores[i] for i in range(len(players))}
-    return final_scores
+    return final_scores, iteration
 
 
 
@@ -102,27 +104,28 @@ def compute_predicted_ratings_BT(training_set, pi_values):
     bin_data = binarize_data_weighted(training_set)
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
-    predicted_std_scores = synch_solve_equations(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
+    predicted_std_scores, iter = synch_solve_equations(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
+    print(iter)
     return predicted_std_scores
 
 def compute_predicted_ratings_BT_leadership(training_set, pi_values): 
     bin_data = binarize_data_weighted_leadership(training_set)
     bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
 
-    predicted_std_scores = synch_solve_equations(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-6)
-
+    predicted_std_scores, iter = synch_solve_equations(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-6)
+    print(iter)
     return predicted_std_scores
 
 def compute_predicted_ratings_HO_BT(training_set, pi_values): 
     bond_matrix = create_hypergraph_from_data_weight(training_set)
-    predicted_ho_scores = synch_solve_equations(bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
- 
+    predicted_ho_scores, iter = synch_solve_equations(bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
+    print(iter)
     return predicted_ho_scores
 
 
 def compute_predicted_ratings_HOL_BT(training_set, pi_values):
     bond_matrix = create_hypergraph_from_data_weight(training_set)
-    predicted_hol_scores = synch_solve_equations (bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-6)
-
+    predicted_hol_scores, iter = synch_solve_equations (bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-6)
+    print(iter)
     return predicted_hol_scores
 

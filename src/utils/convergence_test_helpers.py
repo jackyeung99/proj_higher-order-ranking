@@ -48,17 +48,17 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
     return scores, info
 
 
-def compute_predicted_ratings_HO_BT_info_random(training_set, pi_values, max_iter=1000): 
+def compute_predicted_ratings_HO_BT_info_random(training_set, pi_values, max_iter=10000): 
     # Using un-weighted newman iterative schema such that a random shuffle of the data can occur 
     bond_matrix = create_hypergraph_from_data_old(training_set)
-    predicted_ho_scores, info  = synch_solve_equations_info(bond_matrix, max_iter, pi_values, iterate_equation_newman_old, sens=1e-10)
+    predicted_ho_scores, info  = synch_solve_equations_info(bond_matrix, max_iter, pi_values, iterate_equation_newman_old, sens=1e-6)
  
     return predicted_ho_scores, info
 
 
-def compute_predicted_ratings_plackett_luce_random(training_set, pi_values, max_iter=1000): 
+def compute_predicted_ratings_plackett_luce_random(training_set, pi_values, max_iter=10000): 
     bond_matrix = create_hypergraph_from_data_old(training_set)
-    predicted_ho_scores, info = synch_solve_equations_info(bond_matrix, max_iter, pi_values, iterate_equation_zermelo_new, sens=1e-10)
+    predicted_ho_scores, info = synch_solve_equations_info(bond_matrix, max_iter, pi_values, iterate_equation_zermelo_new, sens=1e-6)
  
     return predicted_ho_scores, info
 
