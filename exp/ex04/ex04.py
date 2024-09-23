@@ -41,7 +41,7 @@ def run_experiment(dataset_file_path, repetitions, out_file_directory):
 
 if __name__ == '__main__':
     # Run From ex03_realdata directory
-    # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ ~/senior_thesis/higher_order_ranking/
+    # rsync -zaP burrow:multi-reactive_rankings/higher_order_ranking/exp/ex02/data ~/senior_thesis/higher_order_ranking/exp/ex02/
 
     base_path = os.path.dirname(__file__)
     dataset_file_path = os.path.join(repo_root, 'datasets', 'processed_data')
