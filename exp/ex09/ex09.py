@@ -38,7 +38,7 @@ def hyper_edge_iteration(repetitions, out_file_dir, K_values):
 
 
 if __name__ == '__main__':
-    K_values = [2, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+    K_values = range(2,22,2)
     out_dir = os.path.join(os.path.dirname(__file__), 'data')
     reps = 100
     hyper_edge_iteration(reps, out_dir, K_values)

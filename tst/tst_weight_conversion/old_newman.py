@@ -1,6 +1,6 @@
 
 import numpy as np
-
+from scipy.stats import logistic
 
 # ===== Old Functions to test against ======
 def binarize_data_old(data):
@@ -48,8 +48,8 @@ def synch_solve_equations_old(bond_matrix, max_iter, pi_values, method, sens=1e-
     scores = {}
 
     for n in pi_values:
-        # scores[n] = float(np.exp(logistic.rvs(size=1)[0]))
-        scores[n] = 1.0
+        scores[n] = float(np.exp(logistic.rvs(size=1)[0]))
+        # scores[n] = 1.0
    
     normalize_scores_old(scores)
     
