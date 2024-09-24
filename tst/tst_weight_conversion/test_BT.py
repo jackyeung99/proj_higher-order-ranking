@@ -144,6 +144,8 @@ def synch_solve_equations_old_verbose(bond_matrix, max_iter, pi_values, method, 
 def synch_solve_equations_verbose(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     players = np.array(list(pi_values.keys()))
     scores = np.ones(len(pi_values))
+
+
     normalize_scores_numpy(scores)
 
 
