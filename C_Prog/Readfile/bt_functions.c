@@ -9,90 +9,41 @@
 
 
 
-// void read_index_file (char *filename, struct hypergraph *G, char **names)
-// {
-  
-//   int i, q;
-//   char name[256];
-//   FILE *f;
-
-//   G->N = 0;
-//   f = fopen(filename,"r");
-//   while(!feof(f))
-//     {
-//       q = fscanf(f,"%d %s",&i,name);
-//       if (q<=0) goto exit_file_A;
-//       if(i>G->N) G->N = i;
-//     }
-//  exit_file_A:
-//   fclose(f);
-
-  
-//   //names = (char **)malloc((G->N+1)*sizeof(char *));
-//   //for(i=1;i<=G->N;i++) names[i] = (char *)malloc(100*sizeof(char));
-
-
-//   f = fopen(filename,"r");
-//   while(!feof(f))
-//     {
-//       q = fscanf(f,"%d %s",&i,name);
-//       if (q<=0) goto exit_file_B;
-//       //sprintf(names[i], "%s", name);
-//     }
-//  exit_file_B:
-//   fclose(f);
-
-
-  
-// }
-
-void read_index_file(char *filename, struct hypergraph *G, char **names)
+void read_index_file (char *filename, struct hypergraph *G, char **names)
 {
-    int i, q;
-    char name[256];  // Make the buffer large enough to hold long names
-    FILE *f;
+  
+  int i, q;
+  char name[256];
+  FILE *f;
 
-    G->N = 0;
-    f = fopen(filename, "r");
-    if (f == NULL) {
-        printf("Error opening file %s\n", filename);
-        return;
-    }
-
-    // First pass to get the largest index (G->N)
-    while (!feof(f))
+  G->N = 0;
+  f = fopen(filename,"r");
+  while(!feof(f))
     {
-        q = fscanf(f, "%d ", &i);  // Note the space after %d to consume whitespace
-        fgets(name, sizeof(name), f);  // Use fgets to read the rest of the line (movie name)
-        if (q <= 0 || ferror(f)) goto exit_file_A;  // Check for read errors
-        if (i > G->N) G->N = i;
+      q = fscanf(f,"%d %s",&i,name);
+      if (q<=0) goto exit_file_A;
+      if(i>G->N) G->N = i;
     }
+ exit_file_A:
+  fclose(f);
 
-exit_file_A:
-    fclose(f);
+  
+  //names = (char **)malloc((G->N+1)*sizeof(char *));
+  //for(i=1;i<=G->N;i++) names[i] = (char *)malloc(100*sizeof(char));
 
-    // Allocate memory for names
-    names = (char **)malloc((G->N + 1) * sizeof(char *));
-    for (i = 1; i <= G->N; i++) names[i] = (char *)malloc(256 * sizeof(char));  // Adjust size if needed
 
-    // Second pass to store the names
-    f = fopen(filename, "r");
-    if (f == NULL) {
-        printf("Error opening file %s\n", filename);
-        return;
-    }
-
-    while (!feof(f))
+  f = fopen(filename,"r");
+  while(!feof(f))
     {
-        q = fscanf(f, "%d ", &i);  // Note the space after %d to consume whitespace
-        fgets(name, sizeof(name), f);  // Use fgets to read the full name
-        if (q <= 0 || ferror(f)) goto exit_file_B;
-        name[strcspn(name, "\n")] = 0;  // Remove the newline character from the name
-        sprintf(names[i], "%s", name);
+      q = fscanf(f,"%d %s",&i,name);
+      if (q<=0) goto exit_file_B;
+      //sprintf(names[i], "%s", name);
     }
+ exit_file_B:
+  fclose(f);
 
-exit_file_B:
-    fclose(f);
+
+  
 }
 
 
