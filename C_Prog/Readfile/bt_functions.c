@@ -9,41 +9,90 @@
 
 
 
-void read_index_file (char *filename, struct hypergraph *G, char **names)
+// void read_index_file (char *filename, struct hypergraph *G, char **names)
+// {
+  
+//   int i, q;
+//   char name[256];
+//   FILE *f;
+
+//   G->N = 0;
+//   f = fopen(filename,"r");
+//   while(!feof(f))
+//     {
+//       q = fscanf(f,"%d %s",&i,name);
+//       if (q<=0) goto exit_file_A;
+//       if(i>G->N) G->N = i;
+//     }
+//  exit_file_A:
+//   fclose(f);
+
+  
+//   //names = (char **)malloc((G->N+1)*sizeof(char *));
+//   //for(i=1;i<=G->N;i++) names[i] = (char *)malloc(100*sizeof(char));
+
+
+//   f = fopen(filename,"r");
+//   while(!feof(f))
+//     {
+//       q = fscanf(f,"%d %s",&i,name);
+//       if (q<=0) goto exit_file_B;
+//       //sprintf(names[i], "%s", name);
+//     }
+//  exit_file_B:
+//   fclose(f);
+
+
+  
+// }
+
+void read_index_file(char *filename, struct hypergraph *G, char **names)
 {
-  
-  int i, q;
-  char name[100];
-  FILE *f;
+    int i, q;
+    char name[256];  // Make the buffer large enough to hold long names
+    FILE *f;
 
-  G->N = 0;
-  f = fopen(filename,"r");
-  while(!feof(f))
-    {
-      q = fscanf(f,"%d %s",&i,name);
-      if (q<=0) goto exit_file_A;
-      if(i>G->N) G->N = i;
+    G->N = 0;
+    f = fopen(filename, "r");
+    if (f == NULL) {
+        printf("Error opening file %s\n", filename);
+        return;
     }
- exit_file_A:
-  fclose(f);
 
-  
-  //names = (char **)malloc((G->N+1)*sizeof(char *));
-  //for(i=1;i<=G->N;i++) names[i] = (char *)malloc(100*sizeof(char));
-
-
-  f = fopen(filename,"r");
-  while(!feof(f))
+    // First pass to get the largest index (G->N)
+    while (!feof(f))
     {
-      q = fscanf(f,"%d %s",&i,name);
-      if (q<=0) goto exit_file_B;
-      //sprintf(names[i], "%s", name);
+        q = fscanf(f, "%d ", &i);  // Note the space after %d to consume whitespace
+        fgets(name, sizeof(name), f);  // Use fgets to read the rest of the line (movie name)
+        if (q <= 0 || ferror(f)) goto exit_file_A;  // Check for read errors
+        if (i > G->N) G->N = i;
     }
- exit_file_B:
-  fclose(f);
 
+exit_file_A:
+    fclose(f);
 
-  
+    // Allocate memory for names
+    names = (char **)malloc((G->N + 1) * sizeof(char *));
+    for (i = 1; i <= G->N; i++) names[i] = (char *)malloc(256 * sizeof(char));  // Adjust size if needed
+
+    // Second pass to store the names
+    f = fopen(filename, "r");
+    if (f == NULL) {
+        printf("Error opening file %s\n", filename);
+        return;
+    }
+
+    while (!feof(f))
+    {
+        q = fscanf(f, "%d ", &i);  // Note the space after %d to consume whitespace
+        fgets(name, sizeof(name), f);  // Use fgets to read the full name
+        if (q <= 0 || ferror(f)) goto exit_file_B;
+        name[strcspn(name, "\n")] = 0;  // Remove the newline character from the name
+        sprintf(names[i], "%s", name);
+    }
+
+exit_file_B:
+    fclose(f);
 }
 
 
@@ -899,7 +948,7 @@ void measure_convergence (struct model_results *R)
 
 
 ///
-void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter)
+int iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter)
 {
   int i;
   
@@ -907,11 +956,18 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
   R->iterations = 0;
   R->scores = (double *)malloc((R->N+1)*sizeof(double));
   R->tmp_scores = (double *)malloc((R->N+1)*sizeof(double));
+  // for(i=1;i<=R->N;i++)
+  //   {
+  //     R->scores[i] = random_number_from_logistic();
+  //     R->tmp_scores[i] = random_number_from_logistic();
+  //   }
+
   for(i=1;i<=R->N;i++)
     {
-      R->scores[i] = random_number_from_logistic();
-      R->tmp_scores[i] = random_number_from_logistic();
+      R->scores[i] = 1.0;
+      R->tmp_scores[i] = 1.0;
     }
+
   normalize_scores (R);
 
 
@@ -928,10 +984,11 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
       single_iteration_ho_model (G, R);
       normalize_scores (R);
       measure_convergence (R);
+      R->iterations++;
       //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
     }
   
-  return;
+  return R->iterations;
 }
 
 

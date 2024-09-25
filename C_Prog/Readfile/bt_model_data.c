@@ -71,8 +71,8 @@ int main (int argc, char **argv)
  
   //print_hypergraph(G);
 
-
-  iterative_algorithm_ho_model (Gtrain, R, eps, MAX_ITER);
+  int ho_model_iterations = iterative_algorithm_ho_model(Gtrain, R, eps, MAX_ITER);
+  // iterative_algorithm_ho_model (Gtrain, R, eps, MAX_ITER);
   evaluate_results (Gtest, R);
   //print_results (R);
 
@@ -97,7 +97,7 @@ int main (int argc, char **argv)
 
 
 
-  iterative_algorithm_ho_model (binGtrain, binR, eps, MAX_ITER);
+  int bt_model_iterations = iterative_algorithm_ho_model (binGtrain, binR, eps, MAX_ITER);
   evaluate_results (Gtest, binR);
   //print_results (binR);
 
@@ -113,6 +113,8 @@ int main (int argc, char **argv)
   printf("%g %g %g %g %g %g", leader_R->log_error, leader_R->spearman,leader_R->kendall, leader_R->prior,leader_R->likelihood_ho,leader_R->likelihood_leader);
   printf("\t");
   printf("%g %g %g %g %g %g", binR->log_error, binR->spearman,binR->kendall, binR->prior,binR->likelihood_ho,binR->likelihood_leader);
+  printf("\t");
+  printf("%d %d", ho_model_iterations, bt_model_iterations);
   printf("\n");
   
   

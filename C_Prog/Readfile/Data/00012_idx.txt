@@ -1,0 +1,11 @@
+1 TSP
+2 Graph_Coloring
+3 Red
+4 Simple
+5 VRP
+6 College
+7 Brush_Strokes
+8 Braille
+9 Australia
+10 Star_Trek
+11 Exponential

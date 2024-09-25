@@ -794,7 +794,7 @@ void measure_convergence (struct model_results *R)
 
 
 ///
-void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter)
+int iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter)
 {
   int i;
   
@@ -807,6 +807,7 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
       R->scores[i] = random_number_from_logistic();
       R->tmp_scores[i] = random_number_from_logistic();
     }
+
   normalize_scores (R);
 
 
@@ -823,10 +824,12 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
       single_iteration_ho_model (G, R);
       normalize_scores (R);
       measure_convergence (R);
-      //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
+      R->iterations++;
+      // printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
     }
   
-  return;
+  return R->iterations;
+  // return;
 }
 
 

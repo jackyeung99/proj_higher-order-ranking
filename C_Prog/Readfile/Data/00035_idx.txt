@@ -1,0 +1,15 @@
+1 Buttered_toast_and_jelly
+2 Cinnamon_toast
+3 Buttered_toast
+4 Toast_and_margarine
+5 English_muffin_and_margarine_EMM
+6 Cinnamon_bun
+7 Hard_rolls_and_butter
+8 Blueberry_muffin_and_margarine
+9 Coffee_cake
+10 Danish_pastry
+11 Glazed_donut
+12 Jelly_donut
+13 Toast_and_marmalade
+14 Corn_muffin_and_butter
+15 Toast_pop-up

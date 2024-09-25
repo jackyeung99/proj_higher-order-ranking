@@ -3,6 +3,7 @@ import os
 import numpy as np
 from scipy.stats import logistic
 
+
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
@@ -20,13 +21,10 @@ def normalize_scores_numpy(scores):
 
 def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     players = np.array(list(pi_values.keys()))
-    scores = np.ones(len(pi_values))
-    
-    for n in pi_values:
-        scores[n] = float(np.exp(logistic.rvs(size=1)[0]))
-
+    # scores = np.ones(len(pi_values))
+    scores = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
     normalize_scores_numpy(scores)
-   
+
     err = 1.0
     iteration = 0
     
@@ -41,7 +39,7 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
         
         normalize_scores_numpy(tmp_scores)
        
-        err = np.max(np.abs(tmp_scores - scores))
+        err = np.max(np.abs(np.log(tmp_scores) - np.log(scores)))
         scores = tmp_scores.copy()
         iteration += 1
 
