@@ -18,8 +18,8 @@ from src.models.zermello import *
 # Modified Solver function  to Keep Track of iterations for Genralized Newman 
 def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     scores = {}
-    log_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
-    scores = {n: log_distribution[n] for n in pi_values}
+    logistic_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
+    scores = {n: logistic_distribution[n] for n in pi_values}
     normalize_scores_old(scores)
 
     info = {}
@@ -38,11 +38,12 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
         normalize_scores_old(tmp_scores)
 
         for s in tmp_scores:
-            if abs(tmp_scores[s]-scores[s]) > err:
-                err = abs(np.log(tmp_scores[s])-np.log(scores[s]))
+            cur_err = abs(np.log(tmp_scores[s])-np.log(scores[s]))
+            if cur_err > err:
+                err = cur_err
             scores[s] = tmp_scores[s]
-                
-        # print(err)
+
+
         iteration += 1
         info[iteration] = err
 
