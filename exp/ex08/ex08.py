@@ -25,7 +25,7 @@ def process_file(file, dataset_file_path, repetitions, out_file_dir):
     # using un weighted data for Plackett Luce model 
     un_weighted_data = convert_dict_to_games(data)
     
-    if dataset_id not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 101]:
+    if dataset_id not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
         print(file)
         futures = []
 

@@ -21,7 +21,7 @@ def process_file(file, dataset_file_path, repetitions, out_file_dir):
     data, pi_values = read_edge_list(file_path)
     dataset_id = int(file.split('_')[0])
     
-    if dataset_id not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 101]:
+    if dataset_id not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
         print(file)
         futures = []
         with ProcessPoolExecutor(max_workers=32) as executor:
