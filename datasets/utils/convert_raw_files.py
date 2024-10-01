@@ -61,11 +61,22 @@ def group_soi(file_directory):
     sub_files = {}
     for file in os.listdir(file_directory):
         if file and (file.endswith('.soc') or file.endswith('.soi')):
-            dataset_id = file.split('-')[0]
+            split = file.replace('.soc', '').replace('.soi', '').split('-')
+            dataset_id = split[0] 
+            file_suffix = split[1]  
+            
             if dataset_id not in sub_files:
-                sub_files[dataset_id] = []
-            sub_files[dataset_id].append(file)
-    return sub_files
+                sub_files[dataset_id] = {}
+            
+            if file.endswith('.soi'):
+                sub_files[dataset_id][file_suffix] = file
+            elif file.endswith('.soc') and file_suffix not in sub_files[dataset_id]:
+                sub_files[dataset_id][file_suffix] = file
+
+    # Convert sub_files to a more usable format (list of files per dataset)
+    grouped_files = {dataset_id: list(sub_data.values())  for dataset_id, sub_data in sub_files.items()}
+    return grouped_files
+     
 
 def combine_soi(sub_files, file_directory, outfile):
     for dataset_id, files in sub_files.items():

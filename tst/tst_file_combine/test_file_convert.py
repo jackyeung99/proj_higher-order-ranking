@@ -20,6 +20,7 @@ class TestSocCombination:
     def test_read(self):
         file = os.path.join(self.data_dir, '99999_edges.txt')
         data, pi_values = read_edge_list(file)
+
         assert len(data) == 3
         assert len(pi_values) == 5
         
@@ -41,6 +42,8 @@ class TestSocCombination:
     def test_grouping(self):
         file_directory = os.path.join(self.data_dir, 'soc_tst_files')
         grouping = group_soi(file_directory)
+
+        print(grouping)
         assert len(grouping) == 3
         assert all(len(x) for x in grouping.values())
 
