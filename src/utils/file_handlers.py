@@ -134,7 +134,7 @@ def read_edge_list(file_path):
     data = {}
     with open(file_path) as file:
         for line in file.readlines():   
-            if line.startswith('#'):
+            if line.startswith('# UNIQUE PLAYERS'):
                 split = line.split(':')
                 num = int(split[1].strip())
             else:
@@ -145,7 +145,7 @@ def read_edge_list(file_path):
                     data[order] = count
 
 
-    pi_values = {player: 1.0 for player in range(num+1)}
+    pi_values = {player: 1.0 for player in range(num)}
     return data, pi_values
 
 
