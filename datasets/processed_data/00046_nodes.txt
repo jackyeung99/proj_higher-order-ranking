@@ -1,1239 +1,1239 @@
 # ALTERNATIVE NAME 1: Harvard University
 # ALTERNATIVE NAME 2: Stanford University
-# ALTERNATIVE NAME 3: University of Pennsylvania
-# ALTERNATIVE NAME 4: Seoul National University
-# ALTERNATIVE NAME 5: University of Cambridge
-# ALTERNATIVE NAME 6: Northwestern University
-# ALTERNATIVE NAME 7: University of Oxford
-# ALTERNATIVE NAME 8: University of Chicago
-# ALTERNATIVE NAME 9: Princeton University
-# ALTERNATIVE NAME 10: Kyoto University
-# ALTERNATIVE NAME 11: Cornell University
-# ALTERNATIVE NAME 12: Dartmouth College
-# ALTERNATIVE NAME 13: University of Virginia
-# ALTERNATIVE NAME 14: University of California
-# ALTERNATIVE NAME 15: New York University
-# ALTERNATIVE NAME 16: National Taiwan University
-# ALTERNATIVE NAME 17: Yale University
-# ALTERNATIVE NAME 18: Duke University
-# ALTERNATIVE NAME 19: University of the Witwatersrand
-# ALTERNATIVE NAME 20: Georgetown University
-# ALTERNATIVE NAME 21: McGill University
-# ALTERNATIVE NAME 22: Peking University
-# ALTERNATIVE NAME 23: Osaka University
-# ALTERNATIVE NAME 24: University of Houston
-# ALTERNATIVE NAME 25: Brown University
-# ALTERNATIVE NAME 26: Yonsei University
-# ALTERNATIVE NAME 27: Tufts University
-# ALTERNATIVE NAME 28: Kyushu University
-# ALTERNATIVE NAME 29: Tokyo Institute of Technology
-# ALTERNATIVE NAME 30: University of Toronto
-# ALTERNATIVE NAME 31: National Cheng Kung University
-# ALTERNATIVE NAME 32: University of Rochester
-# ALTERNATIVE NAME 33: Boston University
-# ALTERNATIVE NAME 34: University of Arizona
-# ALTERNATIVE NAME 35: Korea University
-# ALTERNATIVE NAME 36: Georgia Institute of Technology
-# ALTERNATIVE NAME 37: University of Southern California
-# ALTERNATIVE NAME 38: Stellenbosch University
-# ALTERNATIVE NAME 39: University of North Carolina at Chapel Hill
-# ALTERNATIVE NAME 40: Tsinghua University
-# ALTERNATIVE NAME 41: Stockholm University
-# ALTERNATIVE NAME 42: Wake Forest University
-# ALTERNATIVE NAME 43: Johns Hopkins University
-# ALTERNATIVE NAME 44: University of Cincinnati
-# ALTERNATIVE NAME 45: University of Manitoba
-# ALTERNATIVE NAME 46: Vanderbilt University
-# ALTERNATIVE NAME 47: University of Southampton
-# ALTERNATIVE NAME 48: Boston College
-# ALTERNATIVE NAME 49: National University of Singapore
-# ALTERNATIVE NAME 50: University of Utah
-# ALTERNATIVE NAME 51: Tel Aviv University
-# ALTERNATIVE NAME 52: Texas A&M University
-# ALTERNATIVE NAME 53: University of Nottingham
-# ALTERNATIVE NAME 54: University College Dublin
-# ALTERNATIVE NAME 55: University of Waterloo
-# ALTERNATIVE NAME 56: Northeastern University
-# ALTERNATIVE NAME 57: University of Cape Town
-# ALTERNATIVE NAME 58: Dalhousie University
-# ALTERNATIVE NAME 59: Rensselaer Polytechnic Institute
-# ALTERNATIVE NAME 60: Shanghai Jiao Tong University
-# ALTERNATIVE NAME 61: Monash University
-# ALTERNATIVE NAME 62: Emory University
-# ALTERNATIVE NAME 63: University of Copenhagen
-# ALTERNATIVE NAME 64: University of Alberta
-# ALTERNATIVE NAME 65: Virginia Polytechnic Institute and State University
-# ALTERNATIVE NAME 66: University of Leeds
-# ALTERNATIVE NAME 67: University of Birmingham
-# ALTERNATIVE NAME 68: Carnegie Mellon University
-# ALTERNATIVE NAME 69: Rice University
-# ALTERNATIVE NAME 70: Michigan State University
-# ALTERNATIVE NAME 71: University of Ottawa
-# ALTERNATIVE NAME 72: Aarhus University
-# ALTERNATIVE NAME 73: Hanyang University
-# ALTERNATIVE NAME 74: Tohoku University
-# ALTERNATIVE NAME 75: University of Stuttgart
-# ALTERNATIVE NAME 76: University of Liverpool
-# ALTERNATIVE NAME 77: University of Vienna
-# ALTERNATIVE NAME 78: Iowa State University
-# ALTERNATIVE NAME 79: University of Geneva
-# ALTERNATIVE NAME 80: University of Science and Technology of China
-# ALTERNATIVE NAME 81: University of Groningen
-# ALTERNATIVE NAME 82: University of Bristol
-# ALTERNATIVE NAME 83: University of Sydney
-# ALTERNATIVE NAME 84: Utrecht University
-# ALTERNATIVE NAME 85: Fudan University
-# ALTERNATIVE NAME 86: San Diego State University
-# ALTERNATIVE NAME 87: Sapienza University of Rome
-# ALTERNATIVE NAME 88: National Chiao Tung University
-# ALTERNATIVE NAME 89: University of Maryland
-# ALTERNATIVE NAME 90: Cardiff University
-# ALTERNATIVE NAME 91: Syracuse University
-# ALTERNATIVE NAME 92: Newcastle University
-# ALTERNATIVE NAME 93: Aalto University
-# ALTERNATIVE NAME 94: University of Barcelona
-# ALTERNATIVE NAME 95: Kansas State University
-# ALTERNATIVE NAME 96: Drexel University
-# ALTERNATIVE NAME 97: RWTH Aachen University
-# ALTERNATIVE NAME 98: Oregon State University
-# ALTERNATIVE NAME 99: Sun Yat-sen University
-# ALTERNATIVE NAME 100: University of Sussex
-# ALTERNATIVE NAME 101: Wuhan University
-# ALTERNATIVE NAME 102: University of Connecticut
-# ALTERNATIVE NAME 103: Durham University
-# ALTERNATIVE NAME 104: McMaster University
-# ALTERNATIVE NAME 105: University of Wollongong
-# ALTERNATIVE NAME 106: Laval University
-# ALTERNATIVE NAME 107: Radboud University Nijmegen
-# ALTERNATIVE NAME 108: University of British Columbia
-# ALTERNATIVE NAME 109: Hokkaido University
-# ALTERNATIVE NAME 110: University of Oslo
-# ALTERNATIVE NAME 111: University of Gothenburg
-# ALTERNATIVE NAME 112: University of Iowa
-# ALTERNATIVE NAME 113: Delft University of Technology
-# ALTERNATIVE NAME 114: Washington State University
-# ALTERNATIVE NAME 115: Macquarie University
-# ALTERNATIVE NAME 116: Zhejiang University
-# ALTERNATIVE NAME 117: Chalmers University of Technology
-# ALTERNATIVE NAME 118: University of Aberdeen
-# ALTERNATIVE NAME 119: University of Amsterdam
-# ALTERNATIVE NAME 120: Queen Mary University of London
-# ALTERNATIVE NAME 121: Uppsala University
-# ALTERNATIVE NAME 122: Nagoya University
-# ALTERNATIVE NAME 123: University of Florence
-# ALTERNATIVE NAME 124: California Institute of Technology
-# ALTERNATIVE NAME 125: Ghent University
-# ALTERNATIVE NAME 126: Indian Institute of Science
-# ALTERNATIVE NAME 127: University of Delaware
-# ALTERNATIVE NAME 128: Brandeis University
-# ALTERNATIVE NAME 129: Eindhoven University of Technology
-# ALTERNATIVE NAME 130: University of Bologna
-# ALTERNATIVE NAME 131: Vienna University of Technology
-# ALTERNATIVE NAME 132: University of Essex
-# ALTERNATIVE NAME 133: Lancaster University
-# ALTERNATIVE NAME 134: Nanjing University
-# ALTERNATIVE NAME 135: University of Basel
-# ALTERNATIVE NAME 136: University of Bath
-# ALTERNATIVE NAME 137: University of Montreal
-# ALTERNATIVE NAME 138: University of Otago
-# ALTERNATIVE NAME 139: University of Pavia
-# ALTERNATIVE NAME 140: VU University Amsterdam
-# ALTERNATIVE NAME 141: University of Zurich
-# ALTERNATIVE NAME 142: University of Innsbruck
-# ALTERNATIVE NAME 143: University at Buffalo
-# ALTERNATIVE NAME 144: University of Lausanne
-# ALTERNATIVE NAME 145: Deakin University
-# ALTERNATIVE NAME 146: University College Cork
-# ALTERNATIVE NAME 147: Aalborg University
-# ALTERNATIVE NAME 148: University of Milan
-# ALTERNATIVE NAME 149: University of Trieste
-# ALTERNATIVE NAME 150: University of Warwick
-# ALTERNATIVE NAME 151: University College London
-# ALTERNATIVE NAME 152: University of Turin
-# ALTERNATIVE NAME 153: University of Graz
-# ALTERNATIVE NAME 154: Arizona State University
-# ALTERNATIVE NAME 155: Autonomous University of Madrid
-# ALTERNATIVE NAME 156: University of Lisbon
-# ALTERNATIVE NAME 157: Lund University
-# ALTERNATIVE NAME 158: University of Valencia
-# ALTERNATIVE NAME 159: University of Pisa
-# ALTERNATIVE NAME 160: University of Exeter
-# ALTERNATIVE NAME 161: University of Kiel
-# ALTERNATIVE NAME 162: University of Duisburg-Essen
-# ALTERNATIVE NAME 163: University of St Andrews
-# ALTERNATIVE NAME 164: Technical University of Denmark
-# ALTERNATIVE NAME 165: University of Twente
-# ALTERNATIVE NAME 166: National Tsing Hua University
-# ALTERNATIVE NAME 167: University of Bern
-# ALTERNATIVE NAME 168: University of Turku
-# ALTERNATIVE NAME 169: Carleton University
-# ALTERNATIVE NAME 170: University of Illinois at Chicago
-# ALTERNATIVE NAME 171: University of Helsinki
-# ALTERNATIVE NAME 172: University of Erlangen-Nuremberg
-# ALTERNATIVE NAME 173: Curtin University
-# ALTERNATIVE NAME 174: Charles University in Prague
-# ALTERNATIVE NAME 175: University of Warsaw
-# ALTERNATIVE NAME 176: Karolinska Institute
-# ALTERNATIVE NAME 177: Leiden University
-# ALTERNATIVE NAME 178: Nanyang Technological University
-# ALTERNATIVE NAME 179: Stony Brook University
-# ALTERNATIVE NAME 180: Pohang University of Science and Technology
-# ALTERNATIVE NAME 181: University of Padua
-# ALTERNATIVE NAME 182: University of Strasbourg
-# ALTERNATIVE NAME 183: Claude Bernard University Lyon 1
-# ALTERNATIVE NAME 184: Maastricht University
-# ALTERNATIVE NAME 185: University of Leicester
-# ALTERNATIVE NAME 186: Autonomous University of Barcelona
-# ALTERNATIVE NAME 187: University of Tsukuba
-# ALTERNATIVE NAME 188: Medical University of Vienna
-# ALTERNATIVE NAME 189: University of Bergen
-# ALTERNATIVE NAME 190: University of Antwerp
-# ALTERNATIVE NAME 191: University of East Anglia
-# ALTERNATIVE NAME 192: University of Victoria
-# ALTERNATIVE NAME 193: University of Southern Denmark
-# ALTERNATIVE NAME 194: Simon Fraser University
-# ALTERNATIVE NAME 195: University of Eastern Finland
-# ALTERNATIVE NAME 196: University of Ferrara
-# ALTERNATIVE NAME 197: City University of Hong Kong
-# ALTERNATIVE NAME 198: Pompeu Fabra University
-# ALTERNATIVE NAME 199: Ewha Womans University
-# ALTERNATIVE NAME 200: George Mason University
-# ALTERNATIVE NAME 201: Swedish University of Agricultural Sciences
-# ALTERNATIVE NAME 202: Bielefeld University
-# ALTERNATIVE NAME 203: University of Konstanz
-# ALTERNATIVE NAME 204: University of Bremen
-# ALTERNATIVE NAME 205: Queensland University of Technology
-# ALTERNATIVE NAME 206: Swinburne University of Technology
-# ALTERNATIVE NAME 207: Sharif University of Technology
-# ALTERNATIVE NAME 208: Rutgers
-# ALTERNATIVE NAME 209: University of Notre Dame
-# ALTERNATIVE NAME 210: King Saud University
-# ALTERNATIVE NAME 211: University of Canterbury
-# ALTERNATIVE NAME 212: Victoria University of Wellington
-# ALTERNATIVE NAME 213: York University
-# ALTERNATIVE NAME 214: University of Surrey
-# ALTERNATIVE NAME 215: University of Porto
-# ALTERNATIVE NAME 216: King Abdulaziz University
-# ALTERNATIVE NAME 217: University of Guelph
-# ALTERNATIVE NAME 218: Polytechnic University of Valencia
-# ALTERNATIVE NAME 219: University of Newcastle
-# ALTERNATIVE NAME 220: University of Tasmania
-# ALTERNATIVE NAME 221: University of Tokyo
-# ALTERNATIVE NAME 222: Keio University
-# ALTERNATIVE NAME 223: École Polytechnique
-# ALTERNATIVE NAME 224: Waseda University
-# ALTERNATIVE NAME 225: Columbia University
-# ALTERNATIVE NAME 226: Massachusetts Institute of Technology
-# ALTERNATIVE NAME 227: University of Michigan
-# ALTERNATIVE NAME 228: Royal Institute of Technology
-# ALTERNATIVE NAME 229: University of Wisconsin–Madison
-# ALTERNATIVE NAME 230: Mines ParisTech
-# ALTERNATIVE NAME 231: Rutgers University-New Brunswick
-# ALTERNATIVE NAME 232: Southern Methodist University
-# ALTERNATIVE NAME 233: Indiana University - Bloomington
-# ALTERNATIVE NAME 234: University of Texas at Austin
-# ALTERNATIVE NAME 235: Pennsylvania State University
-# ALTERNATIVE NAME 236: Lehigh University
-# ALTERNATIVE NAME 237: Western University (The University of Western Ontario)
-# ALTERNATIVE NAME 238: Chulalongkorn University
-# ALTERNATIVE NAME 239: Purdue University
-# ALTERNATIVE NAME 240: George Washington University
-# ALTERNATIVE NAME 241: Wesleyan University
-# ALTERNATIVE NAME 242: Complutense University of Madrid
-# ALTERNATIVE NAME 243: University of Colorado Boulder
-# ALTERNATIVE NAME 244: Indian Institute of Technology Delhi
-# ALTERNATIVE NAME 245: Ohio State University
-# ALTERNATIVE NAME 246: Erasmus University Rotterdam
-# ALTERNATIVE NAME 247: Dalian University of Technology
-# ALTERNATIVE NAME 248: Trinity College
-# ALTERNATIVE NAME 249: University of São Paulo
-# ALTERNATIVE NAME 250: Cranfield University
-# ALTERNATIVE NAME 251: University of Navarra
-# ALTERNATIVE NAME 252: University of Manchester
-# ALTERNATIVE NAME 253: Colorado School of Mines
-# ALTERNATIVE NAME 254: University of Reading
-# ALTERNATIVE NAME 255: Middle East Technical University
-# ALTERNATIVE NAME 256: University of Illinois at Urbana–Champaign
-# ALTERNATIVE NAME 257: College of William and Mary
-# ALTERNATIVE NAME 258: University of Kansas
-# ALTERNATIVE NAME 259: Korea Advanced Institute of Science and Technology (KAIST)
-# ALTERNATIVE NAME 260: Tianjin University
-# ALTERNATIVE NAME 261: University of Delhi
-# ALTERNATIVE NAME 262: University of Calgary
-# ALTERNATIVE NAME 263: Tulane University
-# ALTERNATIVE NAME 264: University of Missouri–Columbia
-# ALTERNATIVE NAME 265: Imperial College London
-# ALTERNATIVE NAME 266: Xiamen University
-# ALTERNATIVE NAME 267: University of Melbourne
-# ALTERNATIVE NAME 268: Tongji University
-# ALTERNATIVE NAME 269: City University London
-# ALTERNATIVE NAME 270: Miami University
-# ALTERNATIVE NAME 271: Swiss Federal Institute of Technology in Zurich
-# ALTERNATIVE NAME 272: University of Washington - Seattle
-# ALTERNATIVE NAME 273: École Centrale Paris
-# ALTERNATIVE NAME 274: University of Cologne
-# ALTERNATIVE NAME 275: Concordia University
-# ALTERNATIVE NAME 276: Oklahoma State University–Stillwater
-# ALTERNATIVE NAME 277: University of Glasgow
-# ALTERNATIVE NAME 278: Albert Ludwig University of Freiburg
-# ALTERNATIVE NAME 279: University of New South Wales
-# ALTERNATIVE NAME 280: University of Malaya
-# ALTERNATIVE NAME 281: University of Hong Kong
-# ALTERNATIVE NAME 282: University of Tennessee
-# ALTERNATIVE NAME 283: University of Massachusetts Amherst
-# ALTERNATIVE NAME 284: Federal University of Rio de Janeiro
-# ALTERNATIVE NAME 285: Illinois Institute of Technology
-# ALTERNATIVE NAME 286: University of Oklahoma - Norman Campus
-# ALTERNATIVE NAME 287: Xi'an Jiaotong University
-# ALTERNATIVE NAME 288: Nagasaki University
-# ALTERNATIVE NAME 289: Saint Petersburg State University
-# ALTERNATIVE NAME 290: Swiss Federal Institute of Technology in Lausanne
-# ALTERNATIVE NAME 291: University of Edinburgh
-# ALTERNATIVE NAME 292: Yokohama National University
-# ALTERNATIVE NAME 293: Tampere University of Technology
-# ALTERNATIVE NAME 294: University of Alabama - Tuscaloosa
-# ALTERNATIVE NAME 295: Technical University of Munich
-# ALTERNATIVE NAME 296: London School of Economics
-# ALTERNATIVE NAME 297: University of Dayton
-# ALTERNATIVE NAME 298: University of Denver
-# ALTERNATIVE NAME 299: University of KwaZulu-Natal
-# ALTERNATIVE NAME 300: Washington University in St. Louis
-# ALTERNATIVE NAME 301: University of Hamburg
-# ALTERNATIVE NAME 302: Brunel University
-# ALTERNATIVE NAME 303: University of Los Andes (Colombia)
-# ALTERNATIVE NAME 304: University of Miami
-# ALTERNATIVE NAME 305: Ludwig Maximilian University of Munich
-# ALTERNATIVE NAME 306: Mississippi State University
-# ALTERNATIVE NAME 307: University of Minnesota
-# ALTERNATIVE NAME 308: Central South University
-# ALTERNATIVE NAME 309: Norwegian University of Science and Technology
-# ALTERNATIVE NAME 310: University of Science and Technology Beijing
-# ALTERNATIVE NAME 311: Université libre de Bruxelles
-# ALTERNATIVE NAME 312: Nankai University
-# ALTERNATIVE NAME 313: Karlsruhe Institute of Technology
-# ALTERNATIVE NAME 314: Queen's University
-# ALTERNATIVE NAME 315: King's College London
-# ALTERNATIVE NAME 316: University of Göttingen
-# ALTERNATIVE NAME 317: Ohio University
-# ALTERNATIVE NAME 318: Linköping University
-# ALTERNATIVE NAME 319: Louisiana State University - Baton Rouge
-# ALTERNATIVE NAME 320: West Virginia University
-# ALTERNATIVE NAME 321: Wayne State University
-# ALTERNATIVE NAME 322: Hong Kong Polytechnic University
-# ALTERNATIVE NAME 323: Sungkyunkwan University
-# ALTERNATIVE NAME 324: University of Georgia
-# ALTERNATIVE NAME 325: North Carolina State University
-# ALTERNATIVE NAME 326: University of Pittsburgh - Pittsburgh Campus
-# ALTERNATIVE NAME 327: Yokohama City University
-# ALTERNATIVE NAME 328: AGH University of Science and Technology
-# ALTERNATIVE NAME 329: Tottori University
-# ALTERNATIVE NAME 330: Technical University of Madrid
-# ALTERNATIVE NAME 331: National Polytechnic Institute of Toulouse
-# ALTERNATIVE NAME 332: Indian Institute of Technology Kharagpur
-# ALTERNATIVE NAME 333: Polytechnic University of Milan
-# ALTERNATIVE NAME 334: Missouri University of Science and Technology
-# ALTERNATIVE NAME 335: American University of Beirut
-# ALTERNATIVE NAME 336: Indian Institute of Technology Madras
-# ALTERNATIVE NAME 337: Case Western Reserve University
-# ALTERNATIVE NAME 338: University of Fribourg
-# ALTERNATIVE NAME 339: Lomonosov Moscow State University
-# ALTERNATIVE NAME 340: Kagoshima University
-# ALTERNATIVE NAME 341: Panjab University
-# ALTERNATIVE NAME 342: Louisiana Tech University
-# ALTERNATIVE NAME 343: University of Vermont
-# ALTERNATIVE NAME 344: Marquette University
-# ALTERNATIVE NAME 345: Niigata University
-# ALTERNATIVE NAME 346: Technion  Israel Institute of Technology
-# ALTERNATIVE NAME 347: University of Wyoming
-# ALTERNATIVE NAME 348: Katholieke Universiteit Leuven
-# ALTERNATIVE NAME 349: Okayama University
-# ALTERNATIVE NAME 350: Tilburg University
-# ALTERNATIVE NAME 351: Binghamton University
-# ALTERNATIVE NAME 352: Chung Yuan Christian University
-# ALTERNATIVE NAME 353: King Fahd University of Petroleum and Minerals
-# ALTERNATIVE NAME 354: Huazhong University of Science and Technology
-# ALTERNATIVE NAME 355: University of Pretoria
-# ALTERNATIVE NAME 356: University of Tampere
-# ALTERNATIVE NAME 357: City College of New York
-# ALTERNATIVE NAME 358: University of Windsor
-# ALTERNATIVE NAME 359: Wilfrid Laurier University
-# ALTERNATIVE NAME 360: Nanjing University of Science and Technology
-# ALTERNATIVE NAME 361: University of Texas at Dallas
-# ALTERNATIVE NAME 362: University of Strathclyde
-# ALTERNATIVE NAME 363: National and Kapodistrian University of Athens
-# ALTERNATIVE NAME 364: University of Ulsan
-# ALTERNATIVE NAME 365: University of Hull
-# ALTERNATIVE NAME 366: Beihang University
-# ALTERNATIVE NAME 367: Hebrew University of Jerusalem
-# ALTERNATIVE NAME 368: University of Nebraska–Lincoln
-# ALTERNATIVE NAME 369: University of Sheffield
-# ALTERNATIVE NAME 370: Darmstadt University of Technology
-# ALTERNATIVE NAME 371: Northern Illinois University
-# ALTERNATIVE NAME 372: University of Arkansas - Fayetteville
-# ALTERNATIVE NAME 373: Auburn University
-# ALTERNATIVE NAME 374: Pontifical Catholic University of Chile
-# ALTERNATIVE NAME 375: University of North Carolina at Charlotte
-# ALTERNATIVE NAME 376: Université catholique de Louvain
-# ALTERNATIVE NAME 377: University of Kentucky
-# ALTERNATIVE NAME 378: Portland State University
-# ALTERNATIVE NAME 379: University of Wisconsin–Milwaukee
-# ALTERNATIVE NAME 380: University of Bonn
-# ALTERNATIVE NAME 381: Technical University of Berlin
-# ALTERNATIVE NAME 382: Texas Tech University (TTU)
-# ALTERNATIVE NAME 383: University of Chile
-# ALTERNATIVE NAME 384: Hong Kong University of Science and Technology
-# ALTERNATIVE NAME 385: University of South Australia
-# ALTERNATIVE NAME 386: Ritsumeikan University
-# ALTERNATIVE NAME 387: Ruhr University Bochum
-# ALTERNATIVE NAME 388: University of South Florida - Tampa
-# ALTERNATIVE NAME 389: Banaras Hindu University
-# ALTERNATIVE NAME 390: Florida State University
-# ALTERNATIVE NAME 391: Harbin Institute of Technology
-# ALTERNATIVE NAME 392: Jinan University
-# ALTERNATIVE NAME 393: Goethe University Frankfurt
-# ALTERNATIVE NAME 394: South China University of Technology
-# ALTERNATIVE NAME 395: Hunan University
-# ALTERNATIVE NAME 396: University of Queensland
-# ALTERNATIVE NAME 397: National University of Colombia
-# ALTERNATIVE NAME 398: University of Florida
-# ALTERNATIVE NAME 399: Fluminense Federal University
-# ALTERNATIVE NAME 400: University of Lorraine
-# ALTERNATIVE NAME 401: Chongqing University
-# ALTERNATIVE NAME 402: Clarkson University
-# ALTERNATIVE NAME 403: Nagoya City University
-# ALTERNATIVE NAME 404: Indian Institute of Technology Roorkee
-# ALTERNATIVE NAME 405: Indian Institute of Technology Kanpur
-# ALTERNATIVE NAME 406: Hasselt University
-# ALTERNATIVE NAME 407: Nagoya Institute of Technology
-# ALTERNATIVE NAME 408: Université de Namur
-# ALTERNATIVE NAME 409: The Catholic University of America
-# ALTERNATIVE NAME 410: Osaka Prefecture University
-# ALTERNATIVE NAME 411: National Taiwan Ocean University
-# ALTERNATIVE NAME 412: Saitama University
-# ALTERNATIVE NAME 413: Osaka City University
-# ALTERNATIVE NAME 414: Tokyo Metropolitan University
-# ALTERNATIVE NAME 415: University of Toyama
-# ALTERNATIVE NAME 416: Ehime University
-# ALTERNATIVE NAME 417: Kumamoto University
-# ALTERNATIVE NAME 418: New Jersey Institute of Technology
-# ALTERNATIVE NAME 419: Kanazawa University
-# ALTERNATIVE NAME 420: University of New Brunswick
-# ALTERNATIVE NAME 421: Chemnitz University of Technology
-# ALTERNATIVE NAME 422: Aston University
-# ALTERNATIVE NAME 423: Shinshu University
-# ALTERNATIVE NAME 424: University of Stirling
-# ALTERNATIVE NAME 425: Istanbul University
-# ALTERNATIVE NAME 426: University of Waikato
-# ALTERNATIVE NAME 427: University of Bradford
-# ALTERNATIVE NAME 428: Saint Louis University
-# ALTERNATIVE NAME 429: Ajou University
-# ALTERNATIVE NAME 430: Montana State University - Bozeman
-# ALTERNATIVE NAME 431: National Taiwan Normal University
-# ALTERNATIVE NAME 432: University of New Hampshire
-# ALTERNATIVE NAME 433: University of Nevada
-# ALTERNATIVE NAME 434: University of Nebraska Omaha
-# ALTERNATIVE NAME 435: Loyola University Chicago
-# ALTERNATIVE NAME 436: Baylor University
-# ALTERNATIVE NAME 437: University of Rhode Island
-# ALTERNATIVE NAME 438: University of Oulu
-# ALTERNATIVE NAME 439: Swansea University
-# ALTERNATIVE NAME 440: University of Missouri–Kansas City
-# ALTERNATIVE NAME 441: University of Montpellier 2
-# ALTERNATIVE NAME 442: Bangor University
-# ALTERNATIVE NAME 443: University of Missouri–St. Louis
-# ALTERNATIVE NAME 444: Kobe University
-# ALTERNATIVE NAME 445: University of Haifa
-# ALTERNATIVE NAME 446: National Chung Hsing University
-# ALTERNATIVE NAME 447: Bowling Green State University
-# ALTERNATIVE NAME 448: Rochester Institute of Technology
-# ALTERNATIVE NAME 449: University of Salzburg
-# ALTERNATIVE NAME 450: Queens College
-# ALTERNATIVE NAME 451: New Mexico State University
-# ALTERNATIVE NAME 452: Saarland University
-# ALTERNATIVE NAME 453: Johannes Kepler University of Linz
-# ALTERNATIVE NAME 454: University of Kent
-# ALTERNATIVE NAME 455: Feng Chia University
-# ALTERNATIVE NAME 456: Australian National University
-# ALTERNATIVE NAME 457: University of Hawaii at Manoa
-# ALTERNATIVE NAME 458: University of Saskatchewan
-# ALTERNATIVE NAME 459: Heriot-Watt University
-# ALTERNATIVE NAME 460: University of Regensburg
-# ALTERNATIVE NAME 461: Hunter College
-# ALTERNATIVE NAME 462: Inha University
-# ALTERNATIVE NAME 463: Istanbul Technical University
-# ALTERNATIVE NAME 464: University of Louisville
-# ALTERNATIVE NAME 465: University of Memphis
-# ALTERNATIVE NAME 466: University of Texas at El Paso
-# ALTERNATIVE NAME 467: University of Hanover
-# ALTERNATIVE NAME 468: Xiangtan University
-# ALTERNATIVE NAME 469: Dongguk University
-# ALTERNATIVE NAME 470: University of Western Australia
-# ALTERNATIVE NAME 471: Queen's University Belfast
-# ALTERNATIVE NAME 472: University of Adelaide
-# ALTERNATIVE NAME 473: University of Electronic Science and Technology of China
-# ALTERNATIVE NAME 474: Konkuk University
-# ALTERNATIVE NAME 475: Beijing University of Chemical Technology
-# ALTERNATIVE NAME 476: Julius-Maximilian's University of Würzburg
-# ALTERNATIVE NAME 477: Bar-Ilan University
-# ALTERNATIVE NAME 478: Southeast University
-# ALTERNATIVE NAME 479: University of Paris-Sud
-# ALTERNATIVE NAME 480: East Carolina University
-# ALTERNATIVE NAME 481: Federal University of Santa Maria
-# ALTERNATIVE NAME 482: Northwestern Polytechnical University
-# ALTERNATIVE NAME 483: Utah State University
-# ALTERNATIVE NAME 484: Fuzhou University
-# ALTERNATIVE NAME 485: University of Akron
-# ALTERNATIVE NAME 486: Pusan National University
+# ALTERNATIVE NAME 3: University of Tokyo
+# ALTERNATIVE NAME 4: University of Pennsylvania
+# ALTERNATIVE NAME 5: Keio University
+# ALTERNATIVE NAME 6: Columbia University
+# ALTERNATIVE NAME 7: École Polytechnique
+# ALTERNATIVE NAME 8: Waseda University
+# ALTERNATIVE NAME 9: Seoul National University
+# ALTERNATIVE NAME 10: University of Cambridge
+# ALTERNATIVE NAME 11: Massachusetts Institute of Technology
+# ALTERNATIVE NAME 12: Northwestern University
+# ALTERNATIVE NAME 13: University of Oxford
+# ALTERNATIVE NAME 14: University of Chicago
+# ALTERNATIVE NAME 15: Princeton University
+# ALTERNATIVE NAME 16: Kyoto University
+# ALTERNATIVE NAME 17: University of Michigan
+# ALTERNATIVE NAME 18: Cornell University
+# ALTERNATIVE NAME 19: Dartmouth College
+# ALTERNATIVE NAME 20: University of Virginia
+# ALTERNATIVE NAME 21: University of California
+# ALTERNATIVE NAME 22: New York University
+# ALTERNATIVE NAME 23: Mines ParisTech
+# ALTERNATIVE NAME 24: University of Notre Dame
+# ALTERNATIVE NAME 25: National Taiwan University
+# ALTERNATIVE NAME 26: Yale University
+# ALTERNATIVE NAME 27: Southern Methodist University
+# ALTERNATIVE NAME 28: University of Wisconsin–Madison
+# ALTERNATIVE NAME 29: Royal Institute of Technology
+# ALTERNATIVE NAME 30: Duke University
+# ALTERNATIVE NAME 31: University of the Witwatersrand
+# ALTERNATIVE NAME 32: Purdue University
+# ALTERNATIVE NAME 33: Georgetown University
+# ALTERNATIVE NAME 34: Indiana University - Bloomington
+# ALTERNATIVE NAME 35: University of Texas at Austin
+# ALTERNATIVE NAME 36: McGill University
+# ALTERNATIVE NAME 37: Peking University
+# ALTERNATIVE NAME 38: Osaka University
+# ALTERNATIVE NAME 39: Rutgers University-New Brunswick
+# ALTERNATIVE NAME 40: Western University (The University of Western Ontario)
+# ALTERNATIVE NAME 41: University of Houston
+# ALTERNATIVE NAME 42: Brown University
+# ALTERNATIVE NAME 43: Pennsylvania State University
+# ALTERNATIVE NAME 44: Yonsei University
+# ALTERNATIVE NAME 45: Erasmus University Rotterdam
+# ALTERNATIVE NAME 46: Lehigh University
+# ALTERNATIVE NAME 47: Tufts University
+# ALTERNATIVE NAME 48: Kyushu University
+# ALTERNATIVE NAME 49: Tokyo Institute of Technology
+# ALTERNATIVE NAME 50: University of Toronto
+# ALTERNATIVE NAME 51: National Cheng Kung University
+# ALTERNATIVE NAME 52: University of Rochester
+# ALTERNATIVE NAME 53: Boston University
+# ALTERNATIVE NAME 54: University of Arizona
+# ALTERNATIVE NAME 55: George Washington University
+# ALTERNATIVE NAME 56: Chulalongkorn University
+# ALTERNATIVE NAME 57: Korea University
+# ALTERNATIVE NAME 58: Indian Institute of Technology Delhi
+# ALTERNATIVE NAME 59: Georgia Institute of Technology
+# ALTERNATIVE NAME 60: Wesleyan University
+# ALTERNATIVE NAME 61: University of Southern California
+# ALTERNATIVE NAME 62: University of Reading
+# ALTERNATIVE NAME 63: Swiss Federal Institute of Technology in Zurich
+# ALTERNATIVE NAME 64: London School of Economics
+# ALTERNATIVE NAME 65: Stellenbosch University
+# ALTERNATIVE NAME 66: University of Colorado Boulder
+# ALTERNATIVE NAME 67: Complutense University of Madrid
+# ALTERNATIVE NAME 68: University of North Carolina at Chapel Hill
+# ALTERNATIVE NAME 69: University of New South Wales
+# ALTERNATIVE NAME 70: University of São Paulo
+# ALTERNATIVE NAME 71: University of Delhi
+# ALTERNATIVE NAME 72: Tsinghua University
+# ALTERNATIVE NAME 73: Swiss Federal Institute of Technology in Lausanne
+# ALTERNATIVE NAME 74: University of Illinois at Urbana–Champaign
+# ALTERNATIVE NAME 75: University of Navarra
+# ALTERNATIVE NAME 76: Tianjin University
+# ALTERNATIVE NAME 77: Trinity College
+# ALTERNATIVE NAME 78: Stockholm University
+# ALTERNATIVE NAME 79: Xiamen University
+# ALTERNATIVE NAME 80: Colorado School of Mines
+# ALTERNATIVE NAME 81: Imperial College London
+# ALTERNATIVE NAME 82: Wake Forest University
+# ALTERNATIVE NAME 83: Johns Hopkins University
+# ALTERNATIVE NAME 84: College of William and Mary
+# ALTERNATIVE NAME 85: University of Cincinnati
+# ALTERNATIVE NAME 86: Ohio State University
+# ALTERNATIVE NAME 87: University of Missouri–Columbia
+# ALTERNATIVE NAME 88: University of Glasgow
+# ALTERNATIVE NAME 89: University of Dayton
+# ALTERNATIVE NAME 90: University of Kansas
+# ALTERNATIVE NAME 91: University of Manchester
+# ALTERNATIVE NAME 92: University of Manitoba
+# ALTERNATIVE NAME 93: Vanderbilt University
+# ALTERNATIVE NAME 94: University of Southampton
+# ALTERNATIVE NAME 95: Washington University in St. Louis
+# ALTERNATIVE NAME 96: Boston College
+# ALTERNATIVE NAME 97: National University of Singapore
+# ALTERNATIVE NAME 98: Concordia University
+# ALTERNATIVE NAME 99: Renmin University of China
+# ALTERNATIVE NAME 100: University of Denver
+# ALTERNATIVE NAME 101: Miami University
+# ALTERNATIVE NAME 102: University of Washington - Seattle
+# ALTERNATIVE NAME 103: Dalian University of Technology
+# ALTERNATIVE NAME 104: University of Utah
+# ALTERNATIVE NAME 105: York University
+# ALTERNATIVE NAME 106: Tel Aviv University
+# ALTERNATIVE NAME 107: Texas A&M University
+# ALTERNATIVE NAME 108: University of Nottingham
+# ALTERNATIVE NAME 109: Université libre de Bruxelles
+# ALTERNATIVE NAME 110: École Centrale Paris
+# ALTERNATIVE NAME 111: University College Dublin
+# ALTERNATIVE NAME 112: University of Melbourne
+# ALTERNATIVE NAME 113: Illinois Institute of Technology
+# ALTERNATIVE NAME 114: Tongji University
+# ALTERNATIVE NAME 115: Federal University of Rio de Janeiro
+# ALTERNATIVE NAME 116: University of Tennessee
+# ALTERNATIVE NAME 117: Technical University of Munich
+# ALTERNATIVE NAME 118: Norwegian University of Science and Technology
+# ALTERNATIVE NAME 119: Middle East Technical University
+# ALTERNATIVE NAME 120: University of Science and Technology Beijing
+# ALTERNATIVE NAME 121: City University London
+# ALTERNATIVE NAME 122: University of Calgary
+# ALTERNATIVE NAME 123: University of Waterloo
+# ALTERNATIVE NAME 124: Northeastern University
+# ALTERNATIVE NAME 125: University of Cape Town
+# ALTERNATIVE NAME 126: University of Edinburgh
+# ALTERNATIVE NAME 127: University of Hong Kong
+# ALTERNATIVE NAME 128: Ludwig Maximilian University of Munich
+# ALTERNATIVE NAME 129: University of Minnesota
+# ALTERNATIVE NAME 130: Central South University
+# ALTERNATIVE NAME 131: University of Cologne
+# ALTERNATIVE NAME 132: University of Windsor
+# ALTERNATIVE NAME 133: Albert Ludwig University of Freiburg
+# ALTERNATIVE NAME 134: Nankai University
+# ALTERNATIVE NAME 135: University of Hamburg
+# ALTERNATIVE NAME 136: Dalhousie University
+# ALTERNATIVE NAME 137: University of Malaya
+# ALTERNATIVE NAME 138: Pontifical Catholic University of Chile
+# ALTERNATIVE NAME 139: University of Alabama - Tuscaloosa
+# ALTERNATIVE NAME 140: University of Massachusetts Amherst
+# ALTERNATIVE NAME 141: Rensselaer Polytechnic Institute
+# ALTERNATIVE NAME 142: Shanghai Jiao Tong University
+# ALTERNATIVE NAME 143: Tulane University
+# ALTERNATIVE NAME 144: Monash University
+# ALTERNATIVE NAME 145: Emory University
+# ALTERNATIVE NAME 146: Indian Institute of Technology Madras
+# ALTERNATIVE NAME 147: University of KwaZulu-Natal
+# ALTERNATIVE NAME 148: University of Copenhagen
+# ALTERNATIVE NAME 149: University of Oklahoma - Norman Campus
+# ALTERNATIVE NAME 150: University of Alberta
+# ALTERNATIVE NAME 151: Virginia Polytechnic Institute and State University
+# ALTERNATIVE NAME 152: Oklahoma State University–Stillwater
+# ALTERNATIVE NAME 153: Xi'an Jiaotong University
+# ALTERNATIVE NAME 154: Queen's University
+# ALTERNATIVE NAME 155: Tampere University of Technology
+# ALTERNATIVE NAME 156: University of Leeds
+# ALTERNATIVE NAME 157: University of Birmingham
+# ALTERNATIVE NAME 158: University of Texas at Dallas
+# ALTERNATIVE NAME 159: Carnegie Mellon University
+# ALTERNATIVE NAME 160: Rice University
+# ALTERNATIVE NAME 161: Michigan State University
+# ALTERNATIVE NAME 162: University of Ottawa
+# ALTERNATIVE NAME 163: Hebrew University of Jerusalem
+# ALTERNATIVE NAME 164: Aarhus University
+# ALTERNATIVE NAME 165: Hong Kong Polytechnic University
+# ALTERNATIVE NAME 166: Panjab University
+# ALTERNATIVE NAME 167: Hanyang University
+# ALTERNATIVE NAME 168: University of Pittsburgh - Pittsburgh Campus
+# ALTERNATIVE NAME 169: Tohoku University
+# ALTERNATIVE NAME 170: University of Göttingen
+# ALTERNATIVE NAME 171: University of Stuttgart
+# ALTERNATIVE NAME 172: University of Chile
+# ALTERNATIVE NAME 173: Ohio University
+# ALTERNATIVE NAME 174: Lomonosov Moscow State University
+# ALTERNATIVE NAME 175: Cranfield University
+# ALTERNATIVE NAME 176: Louisiana State University - Baton Rouge
+# ALTERNATIVE NAME 177: West Virginia University
+# ALTERNATIVE NAME 178: University of Liverpool
+# ALTERNATIVE NAME 179: Technion  Israel Institute of Technology
+# ALTERNATIVE NAME 180: Polytechnic University of Milan
+# ALTERNATIVE NAME 181: King Saud University
+# ALTERNATIVE NAME 182: Wayne State University
+# ALTERNATIVE NAME 183: Texas Tech University (TTU)
+# ALTERNATIVE NAME 184: University of Vienna
+# ALTERNATIVE NAME 185: Iowa State University
+# ALTERNATIVE NAME 186: City College of New York
+# ALTERNATIVE NAME 187: University of Georgia
+# ALTERNATIVE NAME 188: University of Los Andes (Colombia)
+# ALTERNATIVE NAME 189: King's College London
+# ALTERNATIVE NAME 190: University of Geneva
+# ALTERNATIVE NAME 191: University of Science and Technology of China
+# ALTERNATIVE NAME 192: University of Groningen
+# ALTERNATIVE NAME 193: Korea Advanced Institute of Science and Technology (KAIST)
+# ALTERNATIVE NAME 194: University of Canterbury
+# ALTERNATIVE NAME 195: University of Bristol
+# ALTERNATIVE NAME 196: Louisiana Tech University
+# ALTERNATIVE NAME 197: University of Sydney
+# ALTERNATIVE NAME 198: Utrecht University
+# ALTERNATIVE NAME 199: National and Kapodistrian University of Athens
+# ALTERNATIVE NAME 200: Marquette University
+# ALTERNATIVE NAME 201: Katholieke Universiteit Leuven
+# ALTERNATIVE NAME 202: Fudan University
+# ALTERNATIVE NAME 203: San Diego State University
+# ALTERNATIVE NAME 204: Sapienza University of Rome
+# ALTERNATIVE NAME 205: National Chiao Tung University
+# ALTERNATIVE NAME 206: University of Nebraska–Lincoln
+# ALTERNATIVE NAME 207: Karlsruhe Institute of Technology
+# ALTERNATIVE NAME 208: University of Sheffield
+# ALTERNATIVE NAME 209: University of Maryland
+# ALTERNATIVE NAME 210: National Chung Hsing University
+# ALTERNATIVE NAME 211: Technical University of Madrid
+# ALTERNATIVE NAME 212: University of Lorraine
+# ALTERNATIVE NAME 213: Nagasaki University
+# ALTERNATIVE NAME 214: Case Western Reserve University
+# ALTERNATIVE NAME 215: University of Strathclyde
+# ALTERNATIVE NAME 216: Yokohama National University
+# ALTERNATIVE NAME 217: Cardiff University
+# ALTERNATIVE NAME 218: Goethe University Frankfurt
+# ALTERNATIVE NAME 219: Mississippi State University
+# ALTERNATIVE NAME 220: Syracuse University
+# ALTERNATIVE NAME 221: Newcastle University
+# ALTERNATIVE NAME 222: Victoria University of Wellington
+# ALTERNATIVE NAME 223: Aalto University
+# ALTERNATIVE NAME 224: Sungkyunkwan University
+# ALTERNATIVE NAME 225: University of Barcelona
+# ALTERNATIVE NAME 226: North Carolina State University
+# ALTERNATIVE NAME 227: Kansas State University
+# ALTERNATIVE NAME 228: University of Wyoming
+# ALTERNATIVE NAME 229: Yokohama City University
+# ALTERNATIVE NAME 230: Auburn University
+# ALTERNATIVE NAME 231: Drexel University
+# ALTERNATIVE NAME 232: King Fahd University of Petroleum and Minerals
+# ALTERNATIVE NAME 233: Ruhr University Bochum
+# ALTERNATIVE NAME 234: Brunel University
+# ALTERNATIVE NAME 235: Linköping University
+# ALTERNATIVE NAME 236: RWTH Aachen University
+# ALTERNATIVE NAME 237: Oregon State University
+# ALTERNATIVE NAME 238: Kobe University
+# ALTERNATIVE NAME 239: University of Miami
+# ALTERNATIVE NAME 240: National Polytechnic Institute of Toulouse
+# ALTERNATIVE NAME 241: Indian Institute of Technology Kharagpur
+# ALTERNATIVE NAME 242: Harbin Institute of Technology
+# ALTERNATIVE NAME 243: Portland State University
+# ALTERNATIVE NAME 244: Missouri University of Science and Technology
+# ALTERNATIVE NAME 245: American University of Beirut
+# ALTERNATIVE NAME 246: University of Wisconsin–Milwaukee
+# ALTERNATIVE NAME 247: University of Bonn
+# ALTERNATIVE NAME 248: Saint Petersburg State University
+# ALTERNATIVE NAME 249: University of New England (Australia)
+# ALTERNATIVE NAME 250: University of Fribourg
+# ALTERNATIVE NAME 251: University of Hull
+# ALTERNATIVE NAME 252: Sun Yat-sen University
+# ALTERNATIVE NAME 253: École centrale de Lyon
+# ALTERNATIVE NAME 254: University of Vermont
+# ALTERNATIVE NAME 255: University of Sussex
+# ALTERNATIVE NAME 256: Wuhan University
+# ALTERNATIVE NAME 257: University of Connecticut
+# ALTERNATIVE NAME 258: Banaras Hindu University
+# ALTERNATIVE NAME 259: Saint Louis University
+# ALTERNATIVE NAME 260: University of Pretoria
+# ALTERNATIVE NAME 261: Binghamton University
+# ALTERNATIVE NAME 262: Université catholique de Louvain
+# ALTERNATIVE NAME 263: University of Rhode Island
+# ALTERNATIVE NAME 264: South China University of Technology
+# ALTERNATIVE NAME 265: Durham University
+# ALTERNATIVE NAME 266: McMaster University
+# ALTERNATIVE NAME 267: University of Wollongong
+# ALTERNATIVE NAME 268: University of Salzburg
+# ALTERNATIVE NAME 269: Technical University of Berlin
+# ALTERNATIVE NAME 270: East China Normal University
+# ALTERNATIVE NAME 271: Laval University
+# ALTERNATIVE NAME 272: Radboud University Nijmegen
+# ALTERNATIVE NAME 273: University of British Columbia
+# ALTERNATIVE NAME 274: University of Florida
+# ALTERNATIVE NAME 275: Hokkaido University
+# ALTERNATIVE NAME 276: University of Saskatchewan
+# ALTERNATIVE NAME 277: AGH University of Science and Technology
+# ALTERNATIVE NAME 278: Kagoshima University
+# ALTERNATIVE NAME 279: Huazhong University of Science and Technology
+# ALTERNATIVE NAME 280: Chongqing University
+# ALTERNATIVE NAME 281: Northern Illinois University
+# ALTERNATIVE NAME 282: Niigata University
+# ALTERNATIVE NAME 283: University of Oslo
+# ALTERNATIVE NAME 284: University of Bradford
+# ALTERNATIVE NAME 285: Okayama University
+# ALTERNATIVE NAME 286: Tilburg University
+# ALTERNATIVE NAME 287: University of Kentucky
+# ALTERNATIVE NAME 288: Hunan University
+# ALTERNATIVE NAME 289: University of Queensland
+# ALTERNATIVE NAME 290: Baylor University
+# ALTERNATIVE NAME 291: University of Gothenburg
+# ALTERNATIVE NAME 292: University of Surrey
+# ALTERNATIVE NAME 293: University of Iowa
+# ALTERNATIVE NAME 294: University of Tampere
+# ALTERNATIVE NAME 295: Wilfrid Laurier University
+# ALTERNATIVE NAME 296: University of South Carolina - Columbia
+# ALTERNATIVE NAME 297: Delft University of Technology
+# ALTERNATIVE NAME 298: Washington State University
+# ALTERNATIVE NAME 299: Hefei University of Technology
+# ALTERNATIVE NAME 300: University of Regensburg
+# ALTERNATIVE NAME 301: Macquarie University
+# ALTERNATIVE NAME 302: Dongguk University
+# ALTERNATIVE NAME 303: University of Western Australia
+# ALTERNATIVE NAME 304: University of Toyama
+# ALTERNATIVE NAME 305: University of Electronic Science and Technology of China
+# ALTERNATIVE NAME 306: Zhejiang University
+# ALTERNATIVE NAME 307: University of North Carolina at Charlotte
+# ALTERNATIVE NAME 308: Chalmers University of Technology
+# ALTERNATIVE NAME 309: National University of Colombia
+# ALTERNATIVE NAME 310: Fluminense Federal University
+# ALTERNATIVE NAME 311: University of Aberdeen
+# ALTERNATIVE NAME 312: Northeastern University (China)
+# ALTERNATIVE NAME 313: University of Porto
+# ALTERNATIVE NAME 314: University of Amsterdam
+# ALTERNATIVE NAME 315: University of New Hampshire
+# ALTERNATIVE NAME 316: Queen Mary University of London
+# ALTERNATIVE NAME 317: Chung Yuan Christian University
+# ALTERNATIVE NAME 318: Uppsala University
+# ALTERNATIVE NAME 319: Nagoya University
+# ALTERNATIVE NAME 320: École normale supérieure de Cachan
+# ALTERNATIVE NAME 321: University of South Australia
+# ALTERNATIVE NAME 322: Ritsumeikan University
+# ALTERNATIVE NAME 323: University of Florence
+# ALTERNATIVE NAME 324: Southwest Jiaotong University
+# ALTERNATIVE NAME 325: California Institute of Technology
+# ALTERNATIVE NAME 326: Ghent University
+# ALTERNATIVE NAME 327: Polytechnic University of Catalonia
+# ALTERNATIVE NAME 328: Nanjing University of Science and Technology
+# ALTERNATIVE NAME 329: Indian Institute of Science
+# ALTERNATIVE NAME 330: Nagoya City University
+# ALTERNATIVE NAME 331: Florida State University
+# ALTERNATIVE NAME 332: Heriot-Watt University
+# ALTERNATIVE NAME 333: Jinan University
+# ALTERNATIVE NAME 334: University of Delaware
+# ALTERNATIVE NAME 335: Jilin University
+# ALTERNATIVE NAME 336: Moscow Institute of Physics and Technology
+# ALTERNATIVE NAME 337: Hasselt University
+# ALTERNATIVE NAME 338: Ankara University
+# ALTERNATIVE NAME 339: Brandeis University
+# ALTERNATIVE NAME 340: Tottori University
+# ALTERNATIVE NAME 341: Darmstadt University of Technology
+# ALTERNATIVE NAME 342: University of Arkansas - Fayetteville
+# ALTERNATIVE NAME 343: University of Calcutta
+# ALTERNATIVE NAME 344: Eindhoven University of Technology
+# ALTERNATIVE NAME 345: University of Bologna
+# ALTERNATIVE NAME 346: Saitama University
+# ALTERNATIVE NAME 347: Vienna University of Technology
+# ALTERNATIVE NAME 348: Northwestern Polytechnical University
+# ALTERNATIVE NAME 349: Utah State University
+# ALTERNATIVE NAME 350: Kumamoto University
+# ALTERNATIVE NAME 351: University of New Brunswick
+# ALTERNATIVE NAME 352: Aston University
+# ALTERNATIVE NAME 353: University of Parma
+# ALTERNATIVE NAME 354: University of Stirling
+# ALTERNATIVE NAME 355: University of Essex
+# ALTERNATIVE NAME 356: Hong Kong University of Science and Technology
+# ALTERNATIVE NAME 357: Lancaster University
+# ALTERNATIVE NAME 358: Brigham Young University
+# ALTERNATIVE NAME 359: Nanjing University
+# ALTERNATIVE NAME 360: University of Basel
+# ALTERNATIVE NAME 361: University of Nevada
+# ALTERNATIVE NAME 362: University of Nebraska Omaha
+# ALTERNATIVE NAME 363: Loyola University Chicago
+# ALTERNATIVE NAME 364: University of Brasília
+# ALTERNATIVE NAME 365: University of Bath
+# ALTERNATIVE NAME 366: University of Oulu
+# ALTERNATIVE NAME 367: Bangor University
+# ALTERNATIVE NAME 368: University of Missouri–St. Louis
+# ALTERNATIVE NAME 369: University of Haifa
+# ALTERNATIVE NAME 370: Bowling Green State University
+# ALTERNATIVE NAME 371: Queens College
+# ALTERNATIVE NAME 372: Saarland University
+# ALTERNATIVE NAME 373: University of Montreal
+# ALTERNATIVE NAME 374: University of Otago
+# ALTERNATIVE NAME 375: Johannes Kepler University of Linz
+# ALTERNATIVE NAME 376: Australian National University
+# ALTERNATIVE NAME 377: University of Pavia
+# ALTERNATIVE NAME 378: Inha University
+# ALTERNATIVE NAME 379: University of Memphis
+# ALTERNATIVE NAME 380: Beihang University
+# ALTERNATIVE NAME 381: Xiangtan University
+# ALTERNATIVE NAME 382: VU University Amsterdam
+# ALTERNATIVE NAME 383: Istanbul University
+# ALTERNATIVE NAME 384: Queen's University Belfast
+# ALTERNATIVE NAME 385: Konkuk University
+# ALTERNATIVE NAME 386: University of Zurich
+# ALTERNATIVE NAME 387: Clarkson University
+# ALTERNATIVE NAME 388: Julius-Maximilian's University of Würzburg
+# ALTERNATIVE NAME 389: Bar-Ilan University
+# ALTERNATIVE NAME 390: University of Paris-Sud
+# ALTERNATIVE NAME 391: East Carolina University
+# ALTERNATIVE NAME 392: Indian Institute of Technology Roorkee
+# ALTERNATIVE NAME 393: Federal University of Santa Maria
+# ALTERNATIVE NAME 394: University of Innsbruck
+# ALTERNATIVE NAME 395: University at Buffalo
+# ALTERNATIVE NAME 396: Fuzhou University
+# ALTERNATIVE NAME 397: University of Akron
+# ALTERNATIVE NAME 398: Pusan National University
+# ALTERNATIVE NAME 399: Ruprecht Karl University of Heidelberg
+# ALTERNATIVE NAME 400: Virginia Commonwealth University
+# ALTERNATIVE NAME 401: Pierre-and-Marie-Curie University
+# ALTERNATIVE NAME 402: Georgia State University
+# ALTERNATIVE NAME 403: Paris-Est Créteil Val-de-Marne University
+# ALTERNATIVE NAME 404: The Catholic University of America
+# ALTERNATIVE NAME 405: University of Zaragoza
+# ALTERNATIVE NAME 406: Wrocław University of Technology
+# ALTERNATIVE NAME 407: Shenzhen University
+# ALTERNATIVE NAME 408: Osaka Prefecture University
+# ALTERNATIVE NAME 409: Kyungpook National University
+# ALTERNATIVE NAME 410: National Taiwan Ocean University
+# ALTERNATIVE NAME 411: Osaka City University
+# ALTERNATIVE NAME 412: Tokyo Metropolitan University
+# ALTERNATIVE NAME 413: Kanazawa University
+# ALTERNATIVE NAME 414: Yeungnam University
+# ALTERNATIVE NAME 415: University of South Florida - Tampa
+# ALTERNATIVE NAME 416: University of Auckland
+# ALTERNATIVE NAME 417: University of Alaska Fairbanks
+# ALTERNATIVE NAME 418: University of Münster
+# ALTERNATIVE NAME 419: University of Québec at Montreal
+# ALTERNATIVE NAME 420: University of Lausanne
+# ALTERNATIVE NAME 421: Deakin University
+# ALTERNATIVE NAME 422: Federal University of Minas Gerais
+# ALTERNATIVE NAME 423: Ajou University
+# ALTERNATIVE NAME 424: Zhengzhou University
+# ALTERNATIVE NAME 425: Swansea University
+# ALTERNATIVE NAME 426: University of Massachusetts Boston
+# ALTERNATIVE NAME 427: University College Cork
+# ALTERNATIVE NAME 428: Rochester Institute of Technology
+# ALTERNATIVE NAME 429: New Mexico State University
+# ALTERNATIVE NAME 430: University of Kent
+# ALTERNATIVE NAME 431: Feng Chia University
+# ALTERNATIVE NAME 432: University of Hawaii at Manoa
+# ALTERNATIVE NAME 433: University of Ulsan
+# ALTERNATIVE NAME 434: Shandong University
+# ALTERNATIVE NAME 435: Hunter College
+# ALTERNATIVE NAME 436: Aalborg University
+# ALTERNATIVE NAME 437: Istanbul Technical University
+# ALTERNATIVE NAME 438: University of Milan
+# ALTERNATIVE NAME 439: University of Texas at El Paso
+# ALTERNATIVE NAME 440: University of Trieste
+# ALTERNATIVE NAME 441: University of Warwick
+# ALTERNATIVE NAME 442: University of Adelaide
+# ALTERNATIVE NAME 443: Fu Jen Catholic University
+# ALTERNATIVE NAME 444: University College London
+# ALTERNATIVE NAME 445: King Abdulaziz University
+# ALTERNATIVE NAME 446: University of Turin
+# ALTERNATIVE NAME 447: Aix-Marseille University
+# ALTERNATIVE NAME 448: South China Normal University
+# ALTERNATIVE NAME 449: University of Graz
+# ALTERNATIVE NAME 450: University of Valladolid
+# ALTERNATIVE NAME 451: Arizona State University
+# ALTERNATIVE NAME 452: Nanjing Normal University
+# ALTERNATIVE NAME 453: La Trobe University
+# ALTERNATIVE NAME 454: Manchester Metropolitan University
+# ALTERNATIVE NAME 455: University of Naples Federico II
+# ALTERNATIVE NAME 456: Autonomous University of Madrid
+# ALTERNATIVE NAME 457: Chung-Ang University
+# ALTERNATIVE NAME 458: University of Montpellier
+# ALTERNATIVE NAME 459: Shanghai Normal University
+# ALTERNATIVE NAME 460: Université de Namur
+# ALTERNATIVE NAME 461: University of Lisbon
+# ALTERNATIVE NAME 462: Lund University
+# ALTERNATIVE NAME 463: Michigan Technological University
+# ALTERNATIVE NAME 464: Gazi University
+# ALTERNATIVE NAME 465: Cairo University
+# ALTERNATIVE NAME 466: University of Valencia
+# ALTERNATIVE NAME 467: University of Ulm
+# ALTERNATIVE NAME 468: New Jersey Institute of Technology
+# ALTERNATIVE NAME 469: University of Pisa
+# ALTERNATIVE NAME 470: University of Waikato
+# ALTERNATIVE NAME 471: Bilkent University
+# ALTERNATIVE NAME 472: Shizuoka University
+# ALTERNATIVE NAME 473: Montana State University - Bozeman
+# ALTERNATIVE NAME 474: National Taiwan Normal University
+# ALTERNATIVE NAME 475: Chinese University of Hong Kong
+# ALTERNATIVE NAME 476: University of Missouri–Kansas City
+# ALTERNATIVE NAME 477: University of Exeter
+# ALTERNATIVE NAME 478: University of Siena
+# ALTERNATIVE NAME 479: University of Guelph
+# ALTERNATIVE NAME 480: University of Louisville
+# ALTERNATIVE NAME 481: University of Hanover
+# ALTERNATIVE NAME 482: Nanjing University of Aeronautics and Astronautics
+# ALTERNATIVE NAME 483: University of Kiel
+# ALTERNATIVE NAME 484: Southeast University
+# ALTERNATIVE NAME 485: University of Santiago de Compostela
+# ALTERNATIVE NAME 486: University of Tübingen
 # ALTERNATIVE NAME 487: University of Salamanca
 # ALTERNATIVE NAME 488: Indiana University-Purdue University Indianapolis
-# ALTERNATIVE NAME 489: Northeastern University (China)
-# ALTERNATIVE NAME 490: Ruprecht Karl University of Heidelberg
-# ALTERNATIVE NAME 491: Virginia Commonwealth University
-# ALTERNATIVE NAME 492: University of Valladolid
-# ALTERNATIVE NAME 493: Pierre-and-Marie-Curie University
-# ALTERNATIVE NAME 494: University of Parma
-# ALTERNATIVE NAME 495: East China Normal University
-# ALTERNATIVE NAME 496: Georgia State University
-# ALTERNATIVE NAME 497: Paris-Est Créteil Val-de-Marne University
-# ALTERNATIVE NAME 498: Nanjing Normal University
-# ALTERNATIVE NAME 499: Plymouth University
-# ALTERNATIVE NAME 500: La Trobe University
-# ALTERNATIVE NAME 501: University of South Carolina - Columbia
-# ALTERNATIVE NAME 502: University of Zaragoza
-# ALTERNATIVE NAME 503: Manchester Metropolitan University
-# ALTERNATIVE NAME 504: Wrocław University of Technology
-# ALTERNATIVE NAME 505: Brigham Young University
-# ALTERNATIVE NAME 506: Kyung Hee University
-# ALTERNATIVE NAME 507: Kyungpook National University
-# ALTERNATIVE NAME 508: Massey University
-# ALTERNATIVE NAME 509: University of Brasília
-# ALTERNATIVE NAME 510: Polytechnic University of Catalonia
-# ALTERNATIVE NAME 511: Yeungnam University
-# ALTERNATIVE NAME 512: University of Auckland
-# ALTERNATIVE NAME 513: University of Münster
-# ALTERNATIVE NAME 514: University of Québec at Montreal
-# ALTERNATIVE NAME 515: Shanghai Normal University
-# ALTERNATIVE NAME 516: Ankara University
-# ALTERNATIVE NAME 517: Federal University of Minas Gerais
-# ALTERNATIVE NAME 518: Zhengzhou University
-# ALTERNATIVE NAME 519: Shandong University
-# ALTERNATIVE NAME 520: University of Central Florida
-# ALTERNATIVE NAME 521: Jilin University
-# ALTERNATIVE NAME 522: Aix-Marseille University
-# ALTERNATIVE NAME 523: Cairo University
-# ALTERNATIVE NAME 524: Nihon University
-# ALTERNATIVE NAME 525: University of Naples Federico II
-# ALTERNATIVE NAME 526: National University of La Plata
-# ALTERNATIVE NAME 527: University of Buenos Aires
-# ALTERNATIVE NAME 528: École normale supérieure - Paris
-# ALTERNATIVE NAME 529: Rockefeller University
-# ALTERNATIVE NAME 530: Weizmann Institute of Science
-# ALTERNATIVE NAME 531: University of Texas Southwestern Medical Center
-# ALTERNATIVE NAME 532: University of Texas MD Anderson Cancer Center
-# ALTERNATIVE NAME 533: Baylor College of Medicine
-# ALTERNATIVE NAME 534: University of Colorado Denver
-# ALTERNATIVE NAME 535: Paris Diderot University - Paris 7
-# ALTERNATIVE NAME 536: Humboldt University of Berlin
-# ALTERNATIVE NAME 537: Free University of Berlin
-# ALTERNATIVE NAME 538: University of Tübingen
-# ALTERNATIVE NAME 539: University of Alabama at Birmingham
-# ALTERNATIVE NAME 540: Icahn School of Medicine at Mount Sinai
-# ALTERNATIVE NAME 541: Yeshiva University
-# ALTERNATIVE NAME 542: Oregon Health & Science University
-# ALTERNATIVE NAME 543: University of New Mexico
-# ALTERNATIVE NAME 544: University of Massachusetts Medical School
-# ALTERNATIVE NAME 545: Chinese University of Hong Kong
-# ALTERNATIVE NAME 546: Joseph Fourier University
-# ALTERNATIVE NAME 547: Dresden University of Technology
-# ALTERNATIVE NAME 548: University of Texas Health Science Center at San Antonio
-# ALTERNATIVE NAME 549: Paul Sabatier University - Toulouse III
-# ALTERNATIVE NAME 550: Paris Descartes University
-# ALTERNATIVE NAME 551: Vrije Universiteit Brussel
-# ALTERNATIVE NAME 552: Johannes Gutenberg University of Mainz
-# ALTERNATIVE NAME 553: University of Düsseldorf
-# ALTERNATIVE NAME 554: University of Dundee
-# ALTERNATIVE NAME 555: University of Texas at San Antonio
-# ALTERNATIVE NAME 556: London School of Hygiene & Tropical Medicine
-# ALTERNATIVE NAME 557: Thomas Jefferson University
-# ALTERNATIVE NAME 558: Colorado State University - Fort Collins
-# ALTERNATIVE NAME 559: University of Texas Health Science Center at Houston
-# ALTERNATIVE NAME 560: Hiroshima University
-# ALTERNATIVE NAME 561: University of Ulm
-# ALTERNATIVE NAME 562: Wageningen University and Research Centre
-# ALTERNATIVE NAME 563: Umeå University
-# ALTERNATIVE NAME 564: Medical College of Wisconsin
-# ALTERNATIVE NAME 565: Hannover Medical School
-# ALTERNATIVE NAME 566: Leipzig University
-# ALTERNATIVE NAME 567: Medical University of South Carolina
-# ALTERNATIVE NAME 568: University of Science
-# ALTERNATIVE NAME 569: University of Liège
-# ALTERNATIVE NAME 570: Rush University
-# ALTERNATIVE NAME 571: University of Rome Tor Vergata
-# ALTERNATIVE NAME 572: Vita-Salute San Raffaele University
-# ALTERNATIVE NAME 573: Gwangju Institute of Science and Technology
-# ALTERNATIVE NAME 574: University of York
-# ALTERNATIVE NAME 575: National Autonomous University of Mexico
-# ALTERNATIVE NAME 576: University of Genoa
-# ALTERNATIVE NAME 577: University of Marburg
-# ALTERNATIVE NAME 578: St George's
-# ALTERNATIVE NAME 579: University of Oregon
-# ALTERNATIVE NAME 580: University of Nebraska Medical Center
-# ALTERNATIVE NAME 581: University of Santiago de Compostela
-# ALTERNATIVE NAME 582: University of Jena
-# ALTERNATIVE NAME 583: University of Perugia
-# ALTERNATIVE NAME 584: Justus Liebig University Giessen
-# ALTERNATIVE NAME 585: Ben-Gurion University of the Negev
-# ALTERNATIVE NAME 586: University of Verona
-# ALTERNATIVE NAME 587: University at Albany
-# ALTERNATIVE NAME 588: Eötvös Loránd University
-# ALTERNATIVE NAME 589: Tokyo Medical and Dental University
-# ALTERNATIVE NAME 590: University of Texas Medical Branch at Galveston
-# ALTERNATIVE NAME 591: Scuola Normale Superiore di Pisa
-# ALTERNATIVE NAME 592: University of Seville
-# ALTERNATIVE NAME 593: Beijing Normal University
-# ALTERNATIVE NAME 594: Chiba University
-# ALTERNATIVE NAME 595: University of Bari Aldo Moro
-# ALTERNATIVE NAME 596: Temple University
-# ALTERNATIVE NAME 597: Chonnam National University
-# ALTERNATIVE NAME 598: University of Bordeaux II
-# ALTERNATIVE NAME 599: Versailles Saint-Quentin-en-Yvelines University
-# ALTERNATIVE NAME 600: Chonbuk National University
-# ALTERNATIVE NAME 601: Tokyo University of Science
-# ALTERNATIVE NAME 602: Catholic University of the Sacred Heart
-# ALTERNATIVE NAME 603: Georgia Regents University
-# ALTERNATIVE NAME 604: Sogang University
-# ALTERNATIVE NAME 605: Gyeongsang National University
-# ALTERNATIVE NAME 606: University of Milan - Bicocca
-# ALTERNATIVE NAME 607: University of Bordeaux I
-# ALTERNATIVE NAME 608: University of Campinas
-# ALTERNATIVE NAME 609: University of Mississippi - Oxford Campus
-# ALTERNATIVE NAME 610: University of Arkansas for Medical Sciences
-# ALTERNATIVE NAME 611: University of Tokushima
-# ALTERNATIVE NAME 612: Innsbruck Medical University
-# ALTERNATIVE NAME 613: University of Granada
-# ALTERNATIVE NAME 614: University of Siena
-# ALTERNATIVE NAME 615: Technical University of Dortmund
-# ALTERNATIVE NAME 616: École normale supérieure de Lyon
-# ALTERNATIVE NAME 617: University of Modena and Reggio Emilia
-# ALTERNATIVE NAME 618: University of Rennes 1
-# ALTERNATIVE NAME 619: Aristotle University of Thessaloniki
-# ALTERNATIVE NAME 620: Jagiellonian University
-# ALTERNATIVE NAME 621: University of Rostock
-# ALTERNATIVE NAME 622: Juntendo University
-# ALTERNATIVE NAME 623: Creighton University
-# ALTERNATIVE NAME 624: Grenoble Institute of Technology
-# ALTERNATIVE NAME 625: Otto-von-Guericke University Magdeburg
-# ALTERNATIVE NAME 626: Flinders University
-# ALTERNATIVE NAME 627: Martin Luther University of Halle-Wittenberg
-# ALTERNATIVE NAME 628: Graduate University for Advanced Studies
-# ALTERNATIVE NAME 629: Clemson University
-# ALTERNATIVE NAME 630: University of Brescia
-# ALTERNATIVE NAME 631: Sichuan University
-# ALTERNATIVE NAME 632: University of Iceland
-# ALTERNATIVE NAME 633: University of Sherbrooke
-# ALTERNATIVE NAME 634: University of Málaga
-# ALTERNATIVE NAME 635: New York Medical College
-# ALTERNATIVE NAME 636: SUNY Downstate Medical Center
-# ALTERNATIVE NAME 637: University of Ljubljana
-# ALTERNATIVE NAME 638: University of Montpellier 1
-# ALTERNATIVE NAME 639: East China University of Science and Technology
-# ALTERNATIVE NAME 640: University of Potsdam
-# ALTERNATIVE NAME 641: University of the Basque Country
-# ALTERNATIVE NAME 642: University of Nice Sophia Antipolis
-# ALTERNATIVE NAME 643: University of Udine
-# ALTERNATIVE NAME 644: National Yang-Ming University
-# ALTERNATIVE NAME 645: Indian Institute of Technology Bombay
-# ALTERNATIVE NAME 646: University of Bayreuth
-# ALTERNATIVE NAME 647: Royal Holloway
-# ALTERNATIVE NAME 648: Tokyo Women's Medical University
-# ALTERNATIVE NAME 649: University of Coimbra
-# ALTERNATIVE NAME 650: Nara Institute of Science and Technology
-# ALTERNATIVE NAME 651: Mahidol University
-# ALTERNATIVE NAME 652: University of Crete
-# ALTERNATIVE NAME 653: University of Aveiro
-# ALTERNATIVE NAME 654: University of Palermo
-# ALTERNATIVE NAME 655: University of Tartu
-# ALTERNATIVE NAME 656: University of Savoy
-# ALTERNATIVE NAME 657: University of Tromsø - The Arctic University of Norway
-# ALTERNATIVE NAME 658: University of Nantes
-# ALTERNATIVE NAME 659: University of Zagreb
-# ALTERNATIVE NAME 660: National Central University
-# ALTERNATIVE NAME 661: University Lille 1: Sciences and Technologies
-# ALTERNATIVE NAME 662: University of Catania
-# ALTERNATIVE NAME 663: Lanzhou University
-# ALTERNATIVE NAME 664: James Cook University
-# ALTERNATIVE NAME 665: Shizuoka University
-# ALTERNATIVE NAME 666: Second University of Naples
-# ALTERNATIVE NAME 667: International School for Advanced Studies
-# ALTERNATIVE NAME 668: Polytechnic University of Turin
-# ALTERNATIVE NAME 669: University of Oviedo
-# ALTERNATIVE NAME 670: University of Ioannina
-# ALTERNATIVE NAME 671: University of Cagliari
-# ALTERNATIVE NAME 672: Federal University of Rio Grande do Sul
-# ALTERNATIVE NAME 673: Kent State University
-# ALTERNATIVE NAME 674: Tokai University
-# ALTERNATIVE NAME 675: LSU Health Sciences Center New Orleans
-# ALTERNATIVE NAME 676: Southern Illinois University Carbondale
-# ALTERNATIVE NAME 677: Tata Institute of Fundamental Research
-# ALTERNATIVE NAME 678: Chang Gung University
-# ALTERNATIVE NAME 679: University of Trento
-# ALTERNATIVE NAME 680: Semmelweis University
-# ALTERNATIVE NAME 681: National University of Ireland
-# ALTERNATIVE NAME 682: Dankook University
-# ALTERNATIVE NAME 683: Tokyo University of Agriculture and Technology
-# ALTERNATIVE NAME 684: University of Montana - Missoula
-# ALTERNATIVE NAME 685: Central China Normal University
-# ALTERNATIVE NAME 686: University of New Orleans
-# ALTERNATIVE NAME 687: University of L'Aquila
-# ALTERNATIVE NAME 688: Chungnam National University
-# ALTERNATIVE NAME 689: University of Alaska Fairbanks
-# ALTERNATIVE NAME 690: University of Poitiers
-# ALTERNATIVE NAME 691: Albany Medical College
-# ALTERNATIVE NAME 692: Birkbeck
-# ALTERNATIVE NAME 693: Griffith University
-# ALTERNATIVE NAME 694: Federal University of São Paulo
-# ALTERNATIVE NAME 695: Catholic University of Korea
-# ALTERNATIVE NAME 696: Open University (UK)
-# ALTERNATIVE NAME 697: University of Patras
-# ALTERNATIVE NAME 698: Universidade Nova de Lisboa
-# ALTERNATIVE NAME 699: Texas A&M Health Science Center
-# ALTERNATIVE NAME 700: Braunschweig University of Technology
-# ALTERNATIVE NAME 701: University of Idaho
-# ALTERNATIVE NAME 702: University of Portsmouth
-# ALTERNATIVE NAME 703: University of La Laguna
-# ALTERNATIVE NAME 704: Florida International University
-# ALTERNATIVE NAME 705: Medical University of Graz
-# ALTERNATIVE NAME 706: Howard University
-# ALTERNATIVE NAME 707: University of Hertfordshire
-# ALTERNATIVE NAME 708: State University of New York Upstate Medical University
-# ALTERNATIVE NAME 709: Royal College of Surgeons in Ireland
-# ALTERNATIVE NAME 710: National Technical University of Athens
-# ALTERNATIVE NAME 711: Rovira i Virgili University
-# ALTERNATIVE NAME 712: University of Burgundy
-# ALTERNATIVE NAME 713: Gunma University
-# ALTERNATIVE NAME 714: Gifu University
-# ALTERNATIVE NAME 715: Hacettepe University
-# ALTERNATIVE NAME 716: Örebro University
-# ALTERNATIVE NAME 717: Memorial University of Newfoundland
-# ALTERNATIVE NAME 718: Kindai University
-# ALTERNATIVE NAME 719: University of Alicante
-# ALTERNATIVE NAME 720: Lille 2 University of Health and Law
-# ALTERNATIVE NAME 721: Keele University
-# ALTERNATIVE NAME 722: University of Jyväskylä
-# ALTERNATIVE NAME 723: Sapporo Medical University
-# ALTERNATIVE NAME 724: King Abdullah University of Science and Technology
-# ALTERNATIVE NAME 725: Northeast Normal University
-# ALTERNATIVE NAME 726: University of Debrecen
-# ALTERNATIVE NAME 727: Loma Linda University
-# ALTERNATIVE NAME 728: Old Dominion University
-# ALTERNATIVE NAME 729: University of Insubria
-# ALTERNATIVE NAME 730: Hong Kong Baptist University
-# ALTERNATIVE NAME 731: University of Minho
-# ALTERNATIVE NAME 732: University of Messina
-# ALTERNATIVE NAME 733: University of Texas at Arlington
-# ALTERNATIVE NAME 734: University François Rabelais
-# ALTERNATIVE NAME 735: UNESP
-# ALTERNATIVE NAME 736: Toho University
-# ALTERNATIVE NAME 737: Warsaw University of Technology
-# ALTERNATIVE NAME 738: University of Paris 13
-# ALTERNATIVE NAME 739: University of Toledo
-# ALTERNATIVE NAME 740: University of Vigo
-# ALTERNATIVE NAME 741: Jichi Medical University
-# ALTERNATIVE NAME 742: Roma Tre University
-# ALTERNATIVE NAME 743: bo Akademi University
-# ALTERNATIVE NAME 744: China Agricultural University
-# ALTERNATIVE NAME 745: Marche Polytechnic University
-# ALTERNATIVE NAME 746: University of Maine
-# ALTERNATIVE NAME 747: Loughborough University
-# ALTERNATIVE NAME 748: Kaiserslautern University of Technology
-# ALTERNATIVE NAME 749: University of Girona
-# ALTERNATIVE NAME 750: University of Natural Resources and Life Sciences
-# ALTERNATIVE NAME 751: University of Szeged
-# ALTERNATIVE NAME 752: Soochow University (Suzhou)
-# ALTERNATIVE NAME 753: University of the Balearic Islands
-# ALTERNATIVE NAME 754: San Francisco State University
-# ALTERNATIVE NAME 755: University of Augsburg
-# ALTERNATIVE NAME 756: Kyoto Prefectural University of Medicine
-# ALTERNATIVE NAME 757: Shanghai University
-# ALTERNATIVE NAME 758: Liverpool John Moores University
-# ALTERNATIVE NAME 759: Graz University of Technology
-# ALTERNATIVE NAME 760: Kitasato University
-# ALTERNATIVE NAME 761: G. d'Annunzio University
-# ALTERNATIVE NAME 762: University of Cantabria
-# ALTERNATIVE NAME 763: Miguel Hernández University of Elche
-# ALTERNATIVE NAME 764: Donghua University
-# ALTERNATIVE NAME 765: Comenius University in Bratislava
-# ALTERNATIVE NAME 766: University of Alabama in Huntsville
-# ALTERNATIVE NAME 767: Mie University
-# ALTERNATIVE NAME 768: University of Ulster
-# ALTERNATIVE NAME 769: University of Évry Val d'Essonne
-# ALTERNATIVE NAME 770: University of Salerno
-# ALTERNATIVE NAME 771: Masaryk University
-# ALTERNATIVE NAME 772: Yamaguchi University
-# ALTERNATIVE NAME 773: University of Yamanashi
-# ALTERNATIVE NAME 774: Showa University
-# ALTERNATIVE NAME 775: North Dakota State University - Main Campus
-# ALTERNATIVE NAME 776: University of North Texas
-# ALTERNATIVE NAME 777: University of Mississippi Medical Center
-# ALTERNATIVE NAME 778: University of Tehran
-# ALTERNATIVE NAME 779: Paul Valéry University
-# ALTERNATIVE NAME 780: Wuhan University of Technology
-# ALTERNATIVE NAME 781: University of Hyogo
-# ALTERNATIVE NAME 782: University of Neuchâtel
-# ALTERNATIVE NAME 783: National Polytechnic Institute
-# ALTERNATIVE NAME 784: Jikei University School of Medicine
-# ALTERNATIVE NAME 785: University of Calabria
-# ALTERNATIVE NAME 786: University of Lübeck
-# ALTERNATIVE NAME 787: Kurume University
-# ALTERNATIVE NAME 788: Peking Union Medical College
-# ALTERNATIVE NAME 789: Yamagata University
-# ALTERNATIVE NAME 790: University of Córdoba (Spain)
-# ALTERNATIVE NAME 791: University of Mons
-# ALTERNATIVE NAME 792: Saga University
-# ALTERNATIVE NAME 793: University of South Alabama
-# ALTERNATIVE NAME 794: Inje University
-# ALTERNATIVE NAME 795: University of Caen Lower Normandy
-# ALTERNATIVE NAME 796: University of Castilla–La Mancha
-# ALTERNATIVE NAME 797: Czech Technical University in Prague
-# ALTERNATIVE NAME 798: Saitama Medical University
-# ALTERNATIVE NAME 799: Kaohsiung Medical University
-# ALTERNATIVE NAME 800: University of Electro-Communications
-# ALTERNATIVE NAME 801: Jawaharlal Nehru Centre for Advanced Scientific Research
-# ALTERNATIVE NAME 802: Putra University
-# ALTERNATIVE NAME 803: Institut national des sciences Appliquées de Lyon
-# ALTERNATIVE NAME 804: University of Perpignan Via Domitia
-# ALTERNATIVE NAME 805: University of Miyazaki
-# ALTERNATIVE NAME 806: Second Military Medical University
-# ALTERNATIVE NAME 807: Northern Arizona University
-# ALTERNATIVE NAME 808: École Polytechnique de Montréal
-# ALTERNATIVE NAME 809: University of Salento
-# ALTERNATIVE NAME 810: Fukuoka University
-# ALTERNATIVE NAME 811: Blaise Pascal University
-# ALTERNATIVE NAME 812: National Sun Yat-sen University
-# ALTERNATIVE NAME 813: University of Rouen
-# ALTERNATIVE NAME 814: Norwegian University of Life Sciences
-# ALTERNATIVE NAME 815: University of Picardie Jules Verne
-# ALTERNATIVE NAME 816: Michigan Technological University
-# ALTERNATIVE NAME 817: University of Concepción
-# ALTERNATIVE NAME 818: China Medical University (Taiwan)
-# ALTERNATIVE NAME 819: University of Hohenheim
-# ALTERNATIVE NAME 820: Aberystwyth University
-# ALTERNATIVE NAME 821: University of Murcia
-# ALTERNATIVE NAME 822: Palacký University
-# ALTERNATIVE NAME 823: Taipei Medical University
-# ALTERNATIVE NAME 824: Ege University
-# ALTERNATIVE NAME 825: University of Belgrade
-# ALTERNATIVE NAME 826: University of Eastern Piedmont Amedeo Avogadro""
-# ALTERNATIVE NAME 827: Budapest University of Technology and Economics
-# ALTERNATIVE NAME 828: University of Massachusetts Lowell
-# ALTERNATIVE NAME 829: Jaume I University
-# ALTERNATIVE NAME 830: Beijing Institute of Technology
-# ALTERNATIVE NAME 831: Dublin City University
-# ALTERNATIVE NAME 832: Kangwon National University
-# ALTERNATIVE NAME 833: Royal Veterinary College
-# ALTERNATIVE NAME 834: Wright State University - Dayton
-# ALTERNATIVE NAME 835: Capital Medical University
-# ALTERNATIVE NAME 836: University of Brighton
-# ALTERNATIVE NAME 837: Sofia University
-# ALTERNATIVE NAME 838: University of Regina
-# ALTERNATIVE NAME 839: Magna Græcia University of Catanzaro
-# ALTERNATIVE NAME 840: Chungbuk National University
-# ALTERNATIVE NAME 841: Kōchi University
-# ALTERNATIVE NAME 842: Sejong University
-# ALTERNATIVE NAME 843: Chung-Ang University
-# ALTERNATIVE NAME 844: Murdoch University
-# ALTERNATIVE NAME 845: Chosun University
-# ALTERNATIVE NAME 846: Vilnius University
-# ALTERNATIVE NAME 847: University of Maribor
-# ALTERNATIVE NAME 848: University of Sassari
-# ALTERNATIVE NAME 849: University of Franche-Comté
-# ALTERNATIVE NAME 850: Rio de Janeiro State University
-# ALTERNATIVE NAME 851: University of Massachusetts Boston
-# ALTERNATIVE NAME 852: University of Alcalá
-# ALTERNATIVE NAME 853: Tehran University of Medical Sciences
-# ALTERNATIVE NAME 854: University of the Ryukyus
-# ALTERNATIVE NAME 855: University of Angers
-# ALTERNATIVE NAME 856: Florida Institute of Technology
-# ALTERNATIVE NAME 857: Trent University
-# ALTERNATIVE NAME 858: National Chung Cheng University
-# ALTERNATIVE NAME 859: Bilkent University
-# ALTERNATIVE NAME 860: RMIT University
-# ALTERNATIVE NAME 861: Hamamatsu University School of Medicine
-# ALTERNATIVE NAME 862: University of Greifswald
-# ALTERNATIVE NAME 863: University of Pécs
-# ALTERNATIVE NAME 864: University of Fukui
-# ALTERNATIVE NAME 865: Oakland University
-# ALTERNATIVE NAME 866: Nanjing University of Technology
-# ALTERNATIVE NAME 867: University of Technology
-# ALTERNATIVE NAME 868: University of North Carolina at Greensboro
-# ALTERNATIVE NAME 869: All India Institute of Medical Sciences
-# ALTERNATIVE NAME 870: Kyoto Institute of Technology
-# ALTERNATIVE NAME 871: Ocean University of China
-# ALTERNATIVE NAME 872: Chiang Mai University
-# ALTERNATIVE NAME 873: University of Camerino
-# ALTERNATIVE NAME 874: Hirosaki University
-# ALTERNATIVE NAME 875: University of North Dakota
-# ALTERNATIVE NAME 876: University of Extremadura
-# ALTERNATIVE NAME 877: Teikyo University
-# ALTERNATIVE NAME 878: Jiangnan University
-# ALTERNATIVE NAME 879: Adam Mickiewicz University in Pozna
-# ALTERNATIVE NAME 880: University of Veterinary Medicine Vienna
-# ALTERNATIVE NAME 881: University of Cádiz
-# ALTERNATIVE NAME 882: Florida Atlantic University
-# ALTERNATIVE NAME 883: Huazhong Agricultural University
-# ALTERNATIVE NAME 884: Brock University
-# ALTERNATIVE NAME 885: University of Lleida
-# ALTERNATIVE NAME 886: Jean Monnet University
-# ALTERNATIVE NAME 887: Shimane University
-# ALTERNATIVE NAME 888: University of Orléans
-# ALTERNATIVE NAME 889: University of Siegen
-# ALTERNATIVE NAME 890: Makerere University
-# ALTERNATIVE NAME 891: University of Wales
-# ALTERNATIVE NAME 892: National Taiwan University of Science and Technology
-# ALTERNATIVE NAME 893: University of Western Brittany
-# ALTERNATIVE NAME 894: Nanjing Agricultural University
-# ALTERNATIVE NAME 895: National University of Córdoba
-# ALTERNATIVE NAME 896: Federal University of Santa Catarina
-# ALTERNATIVE NAME 897: Gazi University
-# ALTERNATIVE NAME 898: University of Jaén
-# ALTERNATIVE NAME 899: Boğaziçi University
-# ALTERNATIVE NAME 900: Jadavpur University
-# ALTERNATIVE NAME 901: Pukyong National University
-# ALTERNATIVE NAME 902: University of Western Sydney
-# ALTERNATIVE NAME 903: University of Mannheim
-# ALTERNATIVE NAME 904: University of Osnabrück
-# ALTERNATIVE NAME 905: Charles Darwin University
-# ALTERNATIVE NAME 906: University of Hyderabad
-# ALTERNATIVE NAME 907: Northwest University (China)
-# ALTERNATIVE NAME 908: University of Southern Mississippi
-# ALTERNATIVE NAME 909: University of Wrocław
-# ALTERNATIVE NAME 910: Carlos III University of Madrid
-# ALTERNATIVE NAME 911: Novosibirsk State University
-# ALTERNATIVE NAME 912: Nanjing Medical University
-# ALTERNATIVE NAME 913: Nicolaus Copernicus University in Toru
-# ALTERNATIVE NAME 914: Southwest University
-# ALTERNATIVE NAME 915: United Arab Emirates University
-# ALTERNATIVE NAME 916: Federal University of São Carlos
-# ALTERNATIVE NAME 917: University of Thessaly
-# ALTERNATIVE NAME 918: University of Basilicata
-# ALTERNATIVE NAME 919: Federal University of Paraná
-# ALTERNATIVE NAME 920: University of Almería
-# ALTERNATIVE NAME 921: Hallym University
-# ALTERNATIVE NAME 922: Fourth Military Medical University
-# ALTERNATIVE NAME 923: University of the Republic (Uruguay)
-# ALTERNATIVE NAME 924: Dokuz Eylül University
-# ALTERNATIVE NAME 925: Nanjing University of Aeronautics and Astronautics
-# ALTERNATIVE NAME 926: Public University of Navarre
-# ALTERNATIVE NAME 927: University of A Coruña
-# ALTERNATIVE NAME 928: Isfahan University of Technology
-# ALTERNATIVE NAME 929: University of New England (Australia)
-# ALTERNATIVE NAME 930: Federal University of Pernambuco
-# ALTERNATIVE NAME 931: Jiangsu University
-# ALTERNATIVE NAME 932: Third Military Medical University
-# ALTERNATIVE NAME 933: South China Normal University
-# ALTERNATIVE NAME 934: University of Limerick
-# ALTERNATIVE NAME 935: Yangzhou University
-# ALTERNATIVE NAME 936: University of Reims Champagne-Ardenne
-# ALTERNATIVE NAME 937: Ibaraki University
-# ALTERNATIVE NAME 938: Chung Shan Medical University
-# ALTERNATIVE NAME 939: Alexandria University
-# ALTERNATIVE NAME 940: Yuan Ze University
-# ALTERNATIVE NAME 941: University of Cyprus
-# ALTERNATIVE NAME 942: University of Silesia
-# ALTERNATIVE NAME 943: Southern Medical University
-# ALTERNATIVE NAME 944: Shiraz University
-# ALTERNATIVE NAME 945: University of Bucharest
-# ALTERNATIVE NAME 946: Mansoura University
-# ALTERNATIVE NAME 947: Amirkabir University of Technology
-# ALTERNATIVE NAME 948: Beijing Jiaotong University
-# ALTERNATIVE NAME 949: University of Valenciennes and Hainaut-Cambresis
-# ALTERNATIVE NAME 950: University of the Algarve
-# ALTERNATIVE NAME 951: University of Chemistry and Technology
-# ALTERNATIVE NAME 952: Federal University of Ceará
-# ALTERNATIVE NAME 953: Ain Shams University
-# ALTERNATIVE NAME 954: University of Oldenburg
-# ALTERNATIVE NAME 955: Federal University of Bahia
-# ALTERNATIVE NAME 956: Hunan Normal University
-# ALTERNATIVE NAME 957: Western Michigan University
-# ALTERNATIVE NAME 958: University of Seoul
+# ALTERNATIVE NAME 489: Colorado State University - Fort Collins
+# ALTERNATIVE NAME 490: University of Central Lancashire
+# ALTERNATIVE NAME 491: Kyung Hee University
+# ALTERNATIVE NAME 492: Massey University
+# ALTERNATIVE NAME 493: Federal University of Paraná
+# ALTERNATIVE NAME 494: University of Duisburg-Essen
+# ALTERNATIVE NAME 495: Wuhan University of Technology
+# ALTERNATIVE NAME 496: University of Buenos Aires
+# ALTERNATIVE NAME 497: University of Central Florida
+# ALTERNATIVE NAME 498: École normale supérieure - Paris
+# ALTERNATIVE NAME 499: Indian Institute of Technology Kanpur
+# ALTERNATIVE NAME 500: Nagoya Institute of Technology
+# ALTERNATIVE NAME 501: Hirosaki University
+# ALTERNATIVE NAME 502: University of St Andrews
+# ALTERNATIVE NAME 503: Indian Institute of Technology Bombay
+# ALTERNATIVE NAME 504: École Polytechnique de Montréal
+# ALTERNATIVE NAME 505: Trent University
+# ALTERNATIVE NAME 506: Technical University of Denmark
+# ALTERNATIVE NAME 507: University of Twente
+# ALTERNATIVE NAME 508: Wageningen University and Research Centre
+# ALTERNATIVE NAME 509: National University of La Plata
+# ALTERNATIVE NAME 510: Ehime University
+# ALTERNATIVE NAME 511: Jadavpur University
+# ALTERNATIVE NAME 512: Hong Kong Baptist University
+# ALTERNATIVE NAME 513: Shinshu University
+# ALTERNATIVE NAME 514: University of Mannheim
+# ALTERNATIVE NAME 515: Boğaziçi University
+# ALTERNATIVE NAME 516: National Tsing Hua University
+# ALTERNATIVE NAME 517: United Arab Emirates University
+# ALTERNATIVE NAME 518: Kaiserslautern University of Technology
+# ALTERNATIVE NAME 519: University of Cantabria
+# ALTERNATIVE NAME 520: University of Orléans
+# ALTERNATIVE NAME 521: University of Jyväskylä
+# ALTERNATIVE NAME 522: University of Bern
+# ALTERNATIVE NAME 523: Murdoch University
+# ALTERNATIVE NAME 524: University of Massachusetts Lowell
+# ALTERNATIVE NAME 525: Örebro University
+# ALTERNATIVE NAME 526: University of Limerick
+# ALTERNATIVE NAME 527: University of Turku
+# ALTERNATIVE NAME 528: University of Siegen
+# ALTERNATIVE NAME 529: Southern Illinois University Carbondale
+# ALTERNATIVE NAME 530: China Agricultural University
+# ALTERNATIVE NAME 531: Clemson University
+# ALTERNATIVE NAME 532: Beijing University of Chemical Technology
+# ALTERNATIVE NAME 533: Northern Arizona University
+# ALTERNATIVE NAME 534: Carleton University
+# ALTERNATIVE NAME 535: University of Oviedo
+# ALTERNATIVE NAME 536: Federal University of Bahia
+# ALTERNATIVE NAME 537: University of Illinois at Chicago
+# ALTERNATIVE NAME 538: Xidian University
+# ALTERNATIVE NAME 539: University of Technology
+# ALTERNATIVE NAME 540: Plymouth University
+# ALTERNATIVE NAME 541: Warsaw University of Technology
+# ALTERNATIVE NAME 542: National Autonomous University of Mexico
+# ALTERNATIVE NAME 543: Chonnam National University
+# ALTERNATIVE NAME 544: Free University of Berlin
+# ALTERNATIVE NAME 545: Federal University of Ceará
+# ALTERNATIVE NAME 546: Chiang Mai University
+# ALTERNATIVE NAME 547: University of Helsinki
+# ALTERNATIVE NAME 548: Federal University of Pernambuco
+# ALTERNATIVE NAME 549: Temple University
+# ALTERNATIVE NAME 550: University of Erlangen-Nuremberg
+# ALTERNATIVE NAME 551: Catholic University of the Sacred Heart
+# ALTERNATIVE NAME 552: Jiangsu University
+# ALTERNATIVE NAME 553: University of Rome Tor Vergata
+# ALTERNATIVE NAME 554: China University of Geosciences (Wuhan)
+# ALTERNATIVE NAME 555: Curtin University
+# ALTERNATIVE NAME 556: Charles University in Prague
+# ALTERNATIVE NAME 557: RMIT University
+# ALTERNATIVE NAME 558: University of Warsaw
+# ALTERNATIVE NAME 559: Sichuan University
+# ALTERNATIVE NAME 560: University of Seville
+# ALTERNATIVE NAME 561: Nihon University
+# ALTERNATIVE NAME 562: Alexandria University
+# ALTERNATIVE NAME 563: Rockefeller University
+# ALTERNATIVE NAME 564: Weizmann Institute of Science
+# ALTERNATIVE NAME 565: Karolinska Institute
+# ALTERNATIVE NAME 566: University of Texas Southwestern Medical Center
+# ALTERNATIVE NAME 567: University of Texas MD Anderson Cancer Center
+# ALTERNATIVE NAME 568: Leiden University
+# ALTERNATIVE NAME 569: Baylor College of Medicine
+# ALTERNATIVE NAME 570: University of Colorado Denver
+# ALTERNATIVE NAME 571: Paris Diderot University - Paris 7
+# ALTERNATIVE NAME 572: Nanyang Technological University
+# ALTERNATIVE NAME 573: Stony Brook University
+# ALTERNATIVE NAME 574: Icahn School of Medicine at Mount Sinai
+# ALTERNATIVE NAME 575: University of Alabama at Birmingham
+# ALTERNATIVE NAME 576: Humboldt University of Berlin
+# ALTERNATIVE NAME 577: Pohang University of Science and Technology
+# ALTERNATIVE NAME 578: Oregon Health & Science University
+# ALTERNATIVE NAME 579: University of Padua
+# ALTERNATIVE NAME 580: Yeshiva University
+# ALTERNATIVE NAME 581: University of New Mexico
+# ALTERNATIVE NAME 582: University of Strasbourg
+# ALTERNATIVE NAME 583: University of Massachusetts Medical School
+# ALTERNATIVE NAME 584: Joseph Fourier University
+# ALTERNATIVE NAME 585: Claude Bernard University Lyon 1
+# ALTERNATIVE NAME 586: Dresden University of Technology
+# ALTERNATIVE NAME 587: Paris Descartes University
+# ALTERNATIVE NAME 588: Maastricht University
+# ALTERNATIVE NAME 589: Johannes Gutenberg University of Mainz
+# ALTERNATIVE NAME 590: University of Texas Health Science Center at San Antonio
+# ALTERNATIVE NAME 591: Paul Sabatier University - Toulouse III
+# ALTERNATIVE NAME 592: University of Leicester
+# ALTERNATIVE NAME 593: Autonomous University of Barcelona
+# ALTERNATIVE NAME 594: University of Dundee
+# ALTERNATIVE NAME 595: London School of Hygiene & Tropical Medicine
+# ALTERNATIVE NAME 596: University of Texas Health Science Center at Houston
+# ALTERNATIVE NAME 597: University of Düsseldorf
+# ALTERNATIVE NAME 598: Thomas Jefferson University
+# ALTERNATIVE NAME 599: University of Tsukuba
+# ALTERNATIVE NAME 600: Medical University of Vienna
+# ALTERNATIVE NAME 601: Vrije Universiteit Brussel
+# ALTERNATIVE NAME 602: University of Bergen
+# ALTERNATIVE NAME 603: Umeå University
+# ALTERNATIVE NAME 604: Hiroshima University
+# ALTERNATIVE NAME 605: University of Texas at San Antonio
+# ALTERNATIVE NAME 606: Hannover Medical School
+# ALTERNATIVE NAME 607: Medical College of Wisconsin
+# ALTERNATIVE NAME 608: University of Bordeaux
+# ALTERNATIVE NAME 609: Leipzig University
+# ALTERNATIVE NAME 610: Medical University of South Carolina
+# ALTERNATIVE NAME 611: Gwangju Institute of Science and Technology
+# ALTERNATIVE NAME 612: University of Antwerp
+# ALTERNATIVE NAME 613: University of Liège
+# ALTERNATIVE NAME 614: Rush University
+# ALTERNATIVE NAME 615: University of York
+# ALTERNATIVE NAME 616: University of Jena
+# ALTERNATIVE NAME 617: Vita-Salute San Raffaele University
+# ALTERNATIVE NAME 618: University of Genoa
+# ALTERNATIVE NAME 619: University of East Anglia
+# ALTERNATIVE NAME 620: University of Oregon
+# ALTERNATIVE NAME 621: St George's
+# ALTERNATIVE NAME 622: University of Perugia
+# ALTERNATIVE NAME 623: University of Marburg
+# ALTERNATIVE NAME 624: Ben-Gurion University of the Negev
+# ALTERNATIVE NAME 625: University of Victoria
+# ALTERNATIVE NAME 626: University of Southern Denmark
+# ALTERNATIVE NAME 627: Justus Liebig University Giessen
+# ALTERNATIVE NAME 628: Simon Fraser University
+# ALTERNATIVE NAME 629: University of Eastern Finland
+# ALTERNATIVE NAME 630: University of Ferrara
+# ALTERNATIVE NAME 631: Versailles Saint-Quentin-en-Yvelines University
+# ALTERNATIVE NAME 632: City University of Hong Kong
+# ALTERNATIVE NAME 633: Pompeu Fabra University
+# ALTERNATIVE NAME 634: University of Bari Aldo Moro
+# ALTERNATIVE NAME 635: University of Texas Medical Branch at Galveston
+# ALTERNATIVE NAME 636: University of Milan - Bicocca
+# ALTERNATIVE NAME 637: University at Albany
+# ALTERNATIVE NAME 638: Ewha Womans University
+# ALTERNATIVE NAME 639: Tokyo Medical and Dental University
+# ALTERNATIVE NAME 640: Scuola Normale Superiore di Pisa
+# ALTERNATIVE NAME 641: Innsbruck Medical University
+# ALTERNATIVE NAME 642: Beijing Normal University
+# ALTERNATIVE NAME 643: University of Nebraska Medical Center
+# ALTERNATIVE NAME 644: University of Campinas
+# ALTERNATIVE NAME 645: University of Verona
+# ALTERNATIVE NAME 646: George Mason University
+# ALTERNATIVE NAME 647: Swedish University of Agricultural Sciences
+# ALTERNATIVE NAME 648: Chiba University
+# ALTERNATIVE NAME 649: Chonbuk National University
+# ALTERNATIVE NAME 650: Peking Union Medical College
+# ALTERNATIVE NAME 651: Georgia Regents University
+# ALTERNATIVE NAME 652: University of Arkansas for Medical Sciences
+# ALTERNATIVE NAME 653: Grenoble Institute of Technology
+# ALTERNATIVE NAME 654: University of Granada
+# ALTERNATIVE NAME 655: University of Modena and Reggio Emilia
+# ALTERNATIVE NAME 656: Gyeongsang National University
+# ALTERNATIVE NAME 657: Polytechnic University of Valencia
+# ALTERNATIVE NAME 658: University of Rostock
+# ALTERNATIVE NAME 659: Jagiellonian University
+# ALTERNATIVE NAME 660: Eötvös Loránd University
+# ALTERNATIVE NAME 661: Aristotle University of Thessaloniki
+# ALTERNATIVE NAME 662: University of Iceland
+# ALTERNATIVE NAME 663: Bielefeld University
+# ALTERNATIVE NAME 664: Juntendo University
+# ALTERNATIVE NAME 665: École normale supérieure de Lyon
+# ALTERNATIVE NAME 666: University of Rennes 1
+# ALTERNATIVE NAME 667: University of Oklahoma Health Sciences Center
+# ALTERNATIVE NAME 668: East China University of Science and Technology
+# ALTERNATIVE NAME 669: Tokyo University of Science
+# ALTERNATIVE NAME 670: University of Science
+# ALTERNATIVE NAME 671: University of the Basque Country
+# ALTERNATIVE NAME 672: Technical University of Dortmund
+# ALTERNATIVE NAME 673: University of Konstanz
+# ALTERNATIVE NAME 674: University of Newcastle
+# ALTERNATIVE NAME 675: Martin Luther University of Halle-Wittenberg
+# ALTERNATIVE NAME 676: University of Savoy
+# ALTERNATIVE NAME 677: University of Udine
+# ALTERNATIVE NAME 678: University of Sherbrooke
+# ALTERNATIVE NAME 679: University of Brescia
+# ALTERNATIVE NAME 680: University of Ljubljana
+# ALTERNATIVE NAME 681: University of Nice Sophia Antipolis
+# ALTERNATIVE NAME 682: University of Coimbra
+# ALTERNATIVE NAME 683: Creighton University
+# ALTERNATIVE NAME 684: Catholic University of Korea
+# ALTERNATIVE NAME 685: University of Tokushima
+# ALTERNATIVE NAME 686: Lanzhou University
+# ALTERNATIVE NAME 687: University of Crete
+# ALTERNATIVE NAME 688: SUNY Downstate Medical Center
+# ALTERNATIVE NAME 689: University of Potsdam
+# ALTERNATIVE NAME 690: University of Bayreuth
+# ALTERNATIVE NAME 691: University of Mississippi - Oxford Campus
+# ALTERNATIVE NAME 692: University of Tasmania
+# ALTERNATIVE NAME 693: Graduate University for Advanced Studies
+# ALTERNATIVE NAME 694: University of Tromsø - The Arctic University of Norway
+# ALTERNATIVE NAME 695: University of Palermo
+# ALTERNATIVE NAME 696: University of Catania
+# ALTERNATIVE NAME 697: Mahidol University
+# ALTERNATIVE NAME 698: University of Bremen
+# ALTERNATIVE NAME 699: Otto-von-Guericke University Magdeburg
+# ALTERNATIVE NAME 700: University of Tartu
+# ALTERNATIVE NAME 701: University of Nantes
+# ALTERNATIVE NAME 702: Royal Holloway
+# ALTERNATIVE NAME 703: James Cook University
+# ALTERNATIVE NAME 704: National Yang-Ming University
+# ALTERNATIVE NAME 705: New York Medical College
+# ALTERNATIVE NAME 706: Nara Institute of Science and Technology
+# ALTERNATIVE NAME 707: University of Zagreb
+# ALTERNATIVE NAME 708: University of Lübeck
+# ALTERNATIVE NAME 709: Tokyo Women's Medical University
+# ALTERNATIVE NAME 710: University of Aveiro
+# ALTERNATIVE NAME 711: National University of Ireland
+# ALTERNATIVE NAME 712: University of Trento
+# ALTERNATIVE NAME 713: University Lille 1: Sciences and Technologies
+# ALTERNATIVE NAME 714: Chang Gung University
+# ALTERNATIVE NAME 715: National Central University
+# ALTERNATIVE NAME 716: University of Cagliari
+# ALTERNATIVE NAME 717: Kent State University
+# ALTERNATIVE NAME 718: Central China Normal University
+# ALTERNATIVE NAME 719: Medical University of Graz
+# ALTERNATIVE NAME 720: Second University of Naples
+# ALTERNATIVE NAME 721: International School for Advanced Studies
+# ALTERNATIVE NAME 722: Sogang University
+# ALTERNATIVE NAME 723: University of Ioannina
+# ALTERNATIVE NAME 724: Federal University of Rio Grande do Sul
+# ALTERNATIVE NAME 725: University of Montana - Missoula
+# ALTERNATIVE NAME 726: Federal University of São Paulo
+# ALTERNATIVE NAME 727: University of Toledo
+# ALTERNATIVE NAME 728: University of Portsmouth
+# ALTERNATIVE NAME 729: LSU Health Sciences Center New Orleans
+# ALTERNATIVE NAME 730: Tata Institute of Fundamental Research
+# ALTERNATIVE NAME 731: University of La Laguna
+# ALTERNATIVE NAME 732: University of Hertfordshire
+# ALTERNATIVE NAME 733: Florida International University
+# ALTERNATIVE NAME 734: Gunma University
+# ALTERNATIVE NAME 735: University of New Orleans
+# ALTERNATIVE NAME 736: Putra University
+# ALTERNATIVE NAME 737: Memorial University of Newfoundland
+# ALTERNATIVE NAME 738: Universidade Nova de Lisboa
+# ALTERNATIVE NAME 739: Griffith University
+# ALTERNATIVE NAME 740: Soochow University (Suzhou)
+# ALTERNATIVE NAME 741: Texas A&M Health Science Center
+# ALTERNATIVE NAME 742: Semmelweis University
+# ALTERNATIVE NAME 743: Lille 2 University of Health and Law
+# ALTERNATIVE NAME 744: Flinders University
+# ALTERNATIVE NAME 745: Queensland University of Technology
+# ALTERNATIVE NAME 746: Tokai University
+# ALTERNATIVE NAME 747: Tokyo University of Agriculture and Technology
+# ALTERNATIVE NAME 748: University of Texas at Arlington
+# ALTERNATIVE NAME 749: Chungnam National University
+# ALTERNATIVE NAME 750: University of Minho
+# ALTERNATIVE NAME 751: University of Eastern Piedmont Amedeo Avogadro""
+# ALTERNATIVE NAME 752: Open University (UK)
+# ALTERNATIVE NAME 753: Hacettepe University
+# ALTERNATIVE NAME 754: State University of New York Upstate Medical University
+# ALTERNATIVE NAME 755: Braunschweig University of Technology
+# ALTERNATIVE NAME 756: Northeast Normal University
+# ALTERNATIVE NAME 757: University of Patras
+# ALTERNATIVE NAME 758: Rovira i Virgili University
+# ALTERNATIVE NAME 759: Albany Medical College
+# ALTERNATIVE NAME 760: Polytechnic University of Turin
+# ALTERNATIVE NAME 761: University of Burgundy
+# ALTERNATIVE NAME 762: University of Idaho
+# ALTERNATIVE NAME 763: Old Dominion University
+# ALTERNATIVE NAME 764: Yamaguchi University
+# ALTERNATIVE NAME 765: Donghua University
+# ALTERNATIVE NAME 766: University of the Balearic Islands
+# ALTERNATIVE NAME 767: Marche Polytechnic University
+# ALTERNATIVE NAME 768: UNESP
+# ALTERNATIVE NAME 769: Loma Linda University
+# ALTERNATIVE NAME 770: University of Debrecen
+# ALTERNATIVE NAME 771: University of Maine
+# ALTERNATIVE NAME 772: Graz University of Technology
+# ALTERNATIVE NAME 773: Gifu University
+# ALTERNATIVE NAME 774: University of Paris 13
+# ALTERNATIVE NAME 775: University of Girona
+# ALTERNATIVE NAME 776: Keele University
+# ALTERNATIVE NAME 777: University of Poitiers
+# ALTERNATIVE NAME 778: University of Insubria
+# ALTERNATIVE NAME 779: University of L'Aquila
+# ALTERNATIVE NAME 780: University of Alicante
+# ALTERNATIVE NAME 781: University of Ulster
+# ALTERNATIVE NAME 782: Shanghai University
+# ALTERNATIVE NAME 783: Comenius University in Bratislava
+# ALTERNATIVE NAME 784: University of Vigo
+# ALTERNATIVE NAME 785: Swinburne University of Technology
+# ALTERNATIVE NAME 786: University of Messina
+# ALTERNATIVE NAME 787: University of Málaga
+# ALTERNATIVE NAME 788: Loughborough University
+# ALTERNATIVE NAME 789: National Technical University of Athens
+# ALTERNATIVE NAME 790: Liverpool John Moores University
+# ALTERNATIVE NAME 791: Sharif University of Technology
+# ALTERNATIVE NAME 792: Birkbeck
+# ALTERNATIVE NAME 793: University François Rabelais
+# ALTERNATIVE NAME 794: Roma Tre University
+# ALTERNATIVE NAME 795: Masaryk University
+# ALTERNATIVE NAME 796: University of Salerno
+# ALTERNATIVE NAME 797: King Abdullah University of Science and Technology
+# ALTERNATIVE NAME 798: China Medical University (Taiwan)
+# ALTERNATIVE NAME 799: Royal College of Surgeons in Ireland
+# ALTERNATIVE NAME 800: San Francisco State University
+# ALTERNATIVE NAME 801: Sapporo Medical University
+# ALTERNATIVE NAME 802: Czech Technical University in Prague
+# ALTERNATIVE NAME 803: Howard University
+# ALTERNATIVE NAME 804: Jichi Medical University
+# ALTERNATIVE NAME 805: Rutgers
+# ALTERNATIVE NAME 806: Palacký University
+# ALTERNATIVE NAME 807: University of Belgrade
+# ALTERNATIVE NAME 808: Toho University
+# ALTERNATIVE NAME 809: Kyoto Prefectural University of Medicine
+# ALTERNATIVE NAME 810: University of Szeged
+# ALTERNATIVE NAME 811: Kitasato University
+# ALTERNATIVE NAME 812: University of Córdoba (Spain)
+# ALTERNATIVE NAME 813: bo Akademi University
+# ALTERNATIVE NAME 814: Kindai University
+# ALTERNATIVE NAME 815: University of Castilla–La Mancha
+# ALTERNATIVE NAME 816: University of Augsburg
+# ALTERNATIVE NAME 817: Paul Valéry University
+# ALTERNATIVE NAME 818: University of Mons
+# ALTERNATIVE NAME 819: University of Natural Resources and Life Sciences
+# ALTERNATIVE NAME 820: University of Calabria
+# ALTERNATIVE NAME 821: G. d'Annunzio University
+# ALTERNATIVE NAME 822: Beijing Institute of Technology
+# ALTERNATIVE NAME 823: University of Évry Val d'Essonne
+# ALTERNATIVE NAME 824: University of Alabama in Huntsville
+# ALTERNATIVE NAME 825: University of Mississippi Medical Center
+# ALTERNATIVE NAME 826: National Research Nuclear University MEPhI
+# ALTERNATIVE NAME 827: Kaohsiung Medical University
+# ALTERNATIVE NAME 828: University of Neuchâtel
+# ALTERNATIVE NAME 829: University of Yamanashi
+# ALTERNATIVE NAME 830: Yamagata University
+# ALTERNATIVE NAME 831: University of Hyogo
+# ALTERNATIVE NAME 832: University of Picardie Jules Verne
+# ALTERNATIVE NAME 833: University of Salento
+# ALTERNATIVE NAME 834: Miguel Hernández University of Elche
+# ALTERNATIVE NAME 835: University of Tehran
+# ALTERNATIVE NAME 836: Blaise Pascal University
+# ALTERNATIVE NAME 837: Kurume University
+# ALTERNATIVE NAME 838: Institut national des sciences Appliquées de Lyon
+# ALTERNATIVE NAME 839: Saga University
+# ALTERNATIVE NAME 840: Jikei University School of Medicine
+# ALTERNATIVE NAME 841: Second Military Medical University
+# ALTERNATIVE NAME 842: Jawaharlal Nehru Centre for Advanced Scientific Research
+# ALTERNATIVE NAME 843: University of North Texas
+# ALTERNATIVE NAME 844: Ege University
+# ALTERNATIVE NAME 845: Mie University
+# ALTERNATIVE NAME 846: University of Greifswald
+# ALTERNATIVE NAME 847: National Polytechnic Institute
+# ALTERNATIVE NAME 848: Jacobs University Bremen
+# ALTERNATIVE NAME 849: Capital Medical University
+# ALTERNATIVE NAME 850: Norwegian University of Life Sciences
+# ALTERNATIVE NAME 851: Vilnius University
+# ALTERNATIVE NAME 852: North Dakota State University - Main Campus
+# ALTERNATIVE NAME 853: University of Hohenheim
+# ALTERNATIVE NAME 854: University of Caen Lower Normandy
+# ALTERNATIVE NAME 855: Saitama Medical University
+# ALTERNATIVE NAME 856: University of Murcia
+# ALTERNATIVE NAME 857: Showa University
+# ALTERNATIVE NAME 858: University of Oldenburg
+# ALTERNATIVE NAME 859: Magna Græcia University of Catanzaro
+# ALTERNATIVE NAME 860: National Sun Yat-sen University
+# ALTERNATIVE NAME 861: University of Concepción
+# ALTERNATIVE NAME 862: Chungbuk National University
+# ALTERNATIVE NAME 863: Taipei Medical University
+# ALTERNATIVE NAME 864: Jaume I University
+# ALTERNATIVE NAME 865: Nanjing University of Technology
+# ALTERNATIVE NAME 866: Kangwon National University
+# ALTERNATIVE NAME 867: Inje University
+# ALTERNATIVE NAME 868: Aberystwyth University
+# ALTERNATIVE NAME 869: University of Franche-Comté
+# ALTERNATIVE NAME 870: University of Sassari
+# ALTERNATIVE NAME 871: Budapest University of Technology and Economics
+# ALTERNATIVE NAME 872: University of Maribor
+# ALTERNATIVE NAME 873: University of Perpignan Via Domitia
+# ALTERNATIVE NAME 874: Florida Institute of Technology
+# ALTERNATIVE NAME 875: University of Brighton
+# ALTERNATIVE NAME 876: Rio de Janeiro State University
+# ALTERNATIVE NAME 877: Jiangnan University
+# ALTERNATIVE NAME 878: University of Wales
+# ALTERNATIVE NAME 879: University of Rouen
+# ALTERNATIVE NAME 880: Wright State University - Dayton
+# ALTERNATIVE NAME 881: Dankook University
+# ALTERNATIVE NAME 882: University of Regina
+# ALTERNATIVE NAME 883: Kōchi University
+# ALTERNATIVE NAME 884: University of Miyazaki
+# ALTERNATIVE NAME 885: University of Electro-Communications
+# ALTERNATIVE NAME 886: Dublin City University
+# ALTERNATIVE NAME 887: University of South Alabama
+# ALTERNATIVE NAME 888: Sofia University
+# ALTERNATIVE NAME 889: Ocean University of China
+# ALTERNATIVE NAME 890: University of Veterinary Medicine Vienna
+# ALTERNATIVE NAME 891: University of Alcalá
+# ALTERNATIVE NAME 892: All India Institute of Medical Sciences
+# ALTERNATIVE NAME 893: Tehran University of Medical Sciences
+# ALTERNATIVE NAME 894: University of the Ryukyus
+# ALTERNATIVE NAME 895: Florida Atlantic University
+# ALTERNATIVE NAME 896: Huazhong Agricultural University
+# ALTERNATIVE NAME 897: University of Angers
+# ALTERNATIVE NAME 898: University of Seoul
+# ALTERNATIVE NAME 899: Brock University
+# ALTERNATIVE NAME 900: Fukuoka University
+# ALTERNATIVE NAME 901: Hamamatsu University School of Medicine
+# ALTERNATIVE NAME 902: National Chung Cheng University
+# ALTERNATIVE NAME 903: Nanjing Agricultural University
+# ALTERNATIVE NAME 904: University of the Republic (Uruguay)
+# ALTERNATIVE NAME 905: Sejong University
+# ALTERNATIVE NAME 906: Makerere University
+# ALTERNATIVE NAME 907: University of Extremadura
+# ALTERNATIVE NAME 908: Royal Veterinary College
+# ALTERNATIVE NAME 909: University of Osnabrück
+# ALTERNATIVE NAME 910: Northwest University (China)
+# ALTERNATIVE NAME 911: Chosun University
+# ALTERNATIVE NAME 912: Jean Monnet University
+# ALTERNATIVE NAME 913: University of Western Sydney
+# ALTERNATIVE NAME 914: Nanjing Medical University
+# ALTERNATIVE NAME 915: Kyoto Institute of Technology
+# ALTERNATIVE NAME 916: Southwest University
+# ALTERNATIVE NAME 917: Adam Mickiewicz University in Pozna
+# ALTERNATIVE NAME 918: University of Pécs
+# ALTERNATIVE NAME 919: University of Lleida
+# ALTERNATIVE NAME 920: University of Western Brittany
+# ALTERNATIVE NAME 921: University of North Carolina at Greensboro
+# ALTERNATIVE NAME 922: Pukyong National University
+# ALTERNATIVE NAME 923: Fourth Military Medical University
+# ALTERNATIVE NAME 924: University of Fukui
+# ALTERNATIVE NAME 925: University of Southern Mississippi
+# ALTERNATIVE NAME 926: Shimane University
+# ALTERNATIVE NAME 927: University of Thessaly
+# ALTERNATIVE NAME 928: Oakland University
+# ALTERNATIVE NAME 929: Teikyo University
+# ALTERNATIVE NAME 930: Nicolaus Copernicus University in Toru
+# ALTERNATIVE NAME 931: Tarbiat Modares University
+# ALTERNATIVE NAME 932: University of North Dakota
+# ALTERNATIVE NAME 933: Isfahan University of Technology
+# ALTERNATIVE NAME 934: National Taiwan University of Science and Technology
+# ALTERNATIVE NAME 935: University of Lethbridge
+# ALTERNATIVE NAME 936: Federal University of Santa Catarina
+# ALTERNATIVE NAME 937: University of Camerino
+# ALTERNATIVE NAME 938: University of Wrocław
+# ALTERNATIVE NAME 939: University of Basilicata
+# ALTERNATIVE NAME 940: University of Hyderabad
+# ALTERNATIVE NAME 941: Carlos III University of Madrid
+# ALTERNATIVE NAME 942: University of Cyprus
+# ALTERNATIVE NAME 943: University of Cádiz
+# ALTERNATIVE NAME 944: Shahid Beheshti University of Medical Sciences
+# ALTERNATIVE NAME 945: National University of Córdoba
+# ALTERNATIVE NAME 946: University of Jaén
+# ALTERNATIVE NAME 947: University of Almería
+# ALTERNATIVE NAME 948: Federal University of São Carlos
+# ALTERNATIVE NAME 949: Charles Darwin University
+# ALTERNATIVE NAME 950: Yangzhou University
+# ALTERNATIVE NAME 951: Gachon University
+# ALTERNATIVE NAME 952: Hallym University
+# ALTERNATIVE NAME 953: Harbin Engineering University
+# ALTERNATIVE NAME 954: Dokuz Eylül University
+# ALTERNATIVE NAME 955: Shiraz University
+# ALTERNATIVE NAME 956: Third Military Medical University
+# ALTERNATIVE NAME 957: Amirkabir University of Technology
+# ALTERNATIVE NAME 958: Public University of Navarre
 # ALTERNATIVE NAME 959: Federico Santa María Technical University
-# ALTERNATIVE NAME 960: Ryerson University
-# ALTERNATIVE NAME 961: South China Agricultural University
-# ALTERNATIVE NAME 962: Fu Jen Catholic University
-# ALTERNATIVE NAME 963: China Pharmaceutical University
-# ALTERNATIVE NAME 964: Tarbiat Modares University
-# ALTERNATIVE NAME 965: University of Puerto Rico at Mayagüez
-# ALTERNATIVE NAME 966: National University of Rosario
-# ALTERNATIVE NAME 967: University of Pau and Pays de l'Adour
-# ALTERNATIVE NAME 968: Xidian University
-# ALTERNATIVE NAME 969: Zhejiang University of Technology
-# ALTERNATIVE NAME 970: China Medical University (PRC)
-# ALTERNATIVE NAME 971: Federal University of ABC
-# ALTERNATIVE NAME 972: King Juan Carlos University
-# ALTERNATIVE NAME 973: Beijing University of Technology
-# ALTERNATIVE NAME 974: Guangxi University
-# ALTERNATIVE NAME 975: Northwest A&F University
-# ALTERNATIVE NAME 976: Shanxi University
-# ALTERNATIVE NAME 977: Tamkang University
-# ALTERNATIVE NAME 978: Harbin Medical University
-# ALTERNATIVE NAME 979: Zhejiang Normal University
-# ALTERNATIVE NAME 980: Iran University of Science and Technology
-# ALTERNATIVE NAME 981: I-Shou University
-# ALTERNATIVE NAME 982: University of Maine (Le Mans)
-# ALTERNATIVE NAME 983: National Dong Hwa University
-# ALTERNATIVE NAME 984: National Taipei University of Technology
-# ALTERNATIVE NAME 985: Shaanxi Normal University
-# ALTERNATIVE NAME 986: National University of Defense Technology
-# ALTERNATIVE NAME 987: Yanbian University
+# ALTERNATIVE NAME 960: Federal University of ABC
+# ALTERNATIVE NAME 961: University of Puerto Rico at Mayagüez
+# ALTERNATIVE NAME 962: Southern Medical University
+# ALTERNATIVE NAME 963: University of Silesia
+# ALTERNATIVE NAME 964: Ain Shams University
+# ALTERNATIVE NAME 965: University of Valenciennes and Hainaut-Cambresis
+# ALTERNATIVE NAME 966: Chung Shan Medical University
+# ALTERNATIVE NAME 967: South China Agricultural University
+# ALTERNATIVE NAME 968: Ibaraki University
+# ALTERNATIVE NAME 969: Hunan Normal University
+# ALTERNATIVE NAME 970: Ulsan National Institute of Science and Technology
+# ALTERNATIVE NAME 971: Tianjin Medical University
+# ALTERNATIVE NAME 972: Beijing University of Technology
+# ALTERNATIVE NAME 973: University of Reims Champagne-Ardenne
+# ALTERNATIVE NAME 974: Yuan Ze University
+# ALTERNATIVE NAME 975: University of Chemistry and Technology
+# ALTERNATIVE NAME 976: China Medical University (PRC)
+# ALTERNATIVE NAME 977: Zhejiang University of Technology
+# ALTERNATIVE NAME 978: Novosibirsk State University
+# ALTERNATIVE NAME 979: University of Bucharest
+# ALTERNATIVE NAME 980: Babe-Bolyai University
+# ALTERNATIVE NAME 981: Mansoura University
+# ALTERNATIVE NAME 982: University of Pau and Pays de l'Adour
+# ALTERNATIVE NAME 983: Henan Normal University
+# ALTERNATIVE NAME 984: Ryerson University
+# ALTERNATIVE NAME 985: University of the Algarve
+# ALTERNATIVE NAME 986: University of A Coruña
+# ALTERNATIVE NAME 987: China Pharmaceutical University
 # ALTERNATIVE NAME 988: Massachusetts Institute of Technology (MIT)
-# ALTERNATIVE NAME 989: University of California-Berkeley
-# ALTERNATIVE NAME 990: Ecole Normale Superieure - Paris
-# ALTERNATIVE NAME 991: Moscow State University
-# ALTERNATIVE NAME 992: The Johns Hopkins University
-# ALTERNATIVE NAME 993: Technical University Munich
-# ALTERNATIVE NAME 994: University of Michigan-Ann Arbor
-# ALTERNATIVE NAME 995: Pierre and Marie  Curie University - Paris 6
-# ALTERNATIVE NAME 996: The Hebrew University of Jerusalem
-# ALTERNATIVE NAME 997: The University of Tokyo
-# ALTERNATIVE NAME 998: University of Wisconsin - Madison
-# ALTERNATIVE NAME 999: University of Goettingen
-# ALTERNATIVE NAME 1000: University of Paris Sud (Paris 11)
-# ALTERNATIVE NAME 1001: University of Frankfurt
-# ALTERNATIVE NAME 1002: University of Illinois at Urbana-Champaign
-# ALTERNATIVE NAME 1003: Swiss Federal Institute of Technology Zurich
-# ALTERNATIVE NAME 1004: City University of New York City College
-# ALTERNATIVE NAME 1005: University of Munich
-# ALTERNATIVE NAME 1006: Technion-Israel Institute of Technology
-# ALTERNATIVE NAME 1007: University of Tuebingen
-# ALTERNATIVE NAME 1008: University of Washington
-# ALTERNATIVE NAME 1009: The University of Edinburgh
-# ALTERNATIVE NAME 1010: London School of Economics and Political Science
-# ALTERNATIVE NAME 1011: University Libre Bruxelles
-# ALTERNATIVE NAME 1012: University of Muenster
-# ALTERNATIVE NAME 1013: University of Wuerzburg
-# ALTERNATIVE NAME 1014: The University of Manchester
-# ALTERNATIVE NAME 1015: The University of Texas Southwestern Medical Center at Dallas
-# ALTERNATIVE NAME 1016: University of Pittsburgh-Pittsburgh Campus
-# ALTERNATIVE NAME 1017: University of Freiburg
-# ALTERNATIVE NAME 1018: The University of Sheffield
-# ALTERNATIVE NAME 1019: Queen Mary
+# ALTERNATIVE NAME 989: Ecole Normale Superieure - Paris
+# ALTERNATIVE NAME 990: Moscow State University
+# ALTERNATIVE NAME 991: Technical University Munich
+# ALTERNATIVE NAME 992: University of Michigan-Ann Arbor
+# ALTERNATIVE NAME 993: Pierre and Marie  Curie University - Paris 6
+# ALTERNATIVE NAME 994: The Hebrew University of Jerusalem
+# ALTERNATIVE NAME 995: City University of New York City College
+# ALTERNATIVE NAME 996: The University of Tokyo
+# ALTERNATIVE NAME 997: University of Wisconsin - Madison
+# ALTERNATIVE NAME 998: University of Goettingen
+# ALTERNATIVE NAME 999: University of Paris-Sud (Paris 11)
+# ALTERNATIVE NAME 1000: University of Frankfurt
+# ALTERNATIVE NAME 1001: University of Illinois at Urbana-Champaign
+# ALTERNATIVE NAME 1002: Swiss Federal Institute of Technology Zurich
+# ALTERNATIVE NAME 1003: University of Munich
+# ALTERNATIVE NAME 1004: Technion-Israel Institute of Technology
+# ALTERNATIVE NAME 1005: University of Tuebingen
+# ALTERNATIVE NAME 1006: Ecole Polytechnique
+# ALTERNATIVE NAME 1007: University of Washington
+# ALTERNATIVE NAME 1008: The University of Edinburgh
+# ALTERNATIVE NAME 1009: Paris Dauphine University (Paris 9)
+# ALTERNATIVE NAME 1010: Heidelberg University
+# ALTERNATIVE NAME 1011: Université libre de Bruxelles (ULB)
+# ALTERNATIVE NAME 1012: London School of Economics and Political Science
+# ALTERNATIVE NAME 1013: University of Muenster
+# ALTERNATIVE NAME 1014: University of Wuerzburg
+# ALTERNATIVE NAME 1015: The University of Manchester
+# ALTERNATIVE NAME 1016: The University of Texas Southwestern Medical Center at Dallas
+# ALTERNATIVE NAME 1017: University of Pittsburgh
+# ALTERNATIVE NAME 1018: University of Freiburg
+# ALTERNATIVE NAME 1019: The University of Sheffield
 # ALTERNATIVE NAME 1020: The University of Melbourne
 # ALTERNATIVE NAME 1021: University of Nebraska - Lincoln
-# ALTERNATIVE NAME 1022: Ecole Polytechnique
-# ALTERNATIVE NAME 1023: The University of Texas at Austin
-# ALTERNATIVE NAME 1024: University of Paris Dauphine (Paris 9)
-# ALTERNATIVE NAME 1025: The Imperial College of Science
-# ALTERNATIVE NAME 1026: The University of Adelaide
-# ALTERNATIVE NAME 1027: Technical University Darmstadt
-# ALTERNATIVE NAME 1028: Heidelberg University
-# ALTERNATIVE NAME 1029: Purdue University - West Lafayette
-# ALTERNATIVE NAME 1030: The Australian National University
-# ALTERNATIVE NAME 1031: The University of Western Australia
-# ALTERNATIVE NAME 1032: Aix Marseille University
-# ALTERNATIVE NAME 1033: Norwegian University of Science and Technology - NTNU
-# ALTERNATIVE NAME 1034: The University of Auckland
-# ALTERNATIVE NAME 1035: Eotvos Lorand University
-# ALTERNATIVE NAME 1036: Vrije University Brussel
-# ALTERNATIVE NAME 1037: MINES ParisTech
-# ALTERNATIVE NAME 1038: University of Colorado at Boulder
-# ALTERNATIVE NAME 1039: The Ohio State University - Columbus
-# ALTERNATIVE NAME 1040: The University of Queensland
-# ALTERNATIVE NAME 1041: Technical University of Braunschweig
-# ALTERNATIVE NAME 1042: University Paris Diderot - Paris 7
-# ALTERNATIVE NAME 1043: University of Paris Descartes (Paris 5)
-# ALTERNATIVE NAME 1044: University of Roma - La Sapienza
-# ALTERNATIVE NAME 1045: The George Washington University
-# ALTERNATIVE NAME 1046: University of Leipzig
-# ALTERNATIVE NAME 1047: University of Duesseldorf
-# ALTERNATIVE NAME 1048: Pennsylvania State University - University Park
-# ALTERNATIVE NAME 1049: Catholic University of Louvain
-# ALTERNATIVE NAME 1050: Indiana University Bloomington
-# ALTERNATIVE NAME 1051: Trinity College Dublin
-# ALTERNATIVE NAME 1052: University of Tennessee - Knoxville
-# ALTERNATIVE NAME 1053: University of Missouri - Columbia
-# ALTERNATIVE NAME 1054: The University of Glasgow
-# ALTERNATIVE NAME 1055: Polytechnic Institute of Milan
-# ALTERNATIVE NAME 1056: University of Liege
-# ALTERNATIVE NAME 1057: ESPCI ParisTech
-# ALTERNATIVE NAME 1058: The University of Montana - Missoula
-# ALTERNATIVE NAME 1059: KU Leuven
-# ALTERNATIVE NAME 1060: Swiss Federal Institute of Technology Lausanne
-# ALTERNATIVE NAME 1061: Texas A & M University
-# ALTERNATIVE NAME 1062: Joseph Fourier University (Grenoble 1)
-# ALTERNATIVE NAME 1063: Mayo Medical School
-# ALTERNATIVE NAME 1064: The University of New South Wales
-# ALTERNATIVE NAME 1065: The University of Texas M. D. Anderson Cancer Center
-# ALTERNATIVE NAME 1066: University of Massachusetts Medical School - Worcester
-# ALTERNATIVE NAME 1067: University of Sao Paulo
-# ALTERNATIVE NAME 1068: University of Wageningen
-# ALTERNATIVE NAME 1069: Erasmus University
-# ALTERNATIVE NAME 1070: North Carolina State University - Raleigh
-# ALTERNATIVE NAME 1071: Oregon Health and Science University
-# ALTERNATIVE NAME 1072: The Chinese University of Hong Kong
-# ALTERNATIVE NAME 1073: The University of Calgary
-# ALTERNATIVE NAME 1074: The University of Georgia
-# ALTERNATIVE NAME 1075: The University of Hong Kong
-# ALTERNATIVE NAME 1076: University of Koeln
-# ALTERNATIVE NAME 1077: Colorado State University
-# ALTERNATIVE NAME 1078: Ecole Normale Superieure - Lyon
-# ALTERNATIVE NAME 1079: Karlsruhe Institute of Technology (KIT)
-# ALTERNATIVE NAME 1080: Korea Advanced Institute of Science and Technology
-# ALTERNATIVE NAME 1081: Paul Sabatier University (Toulouse 3)
-# ALTERNATIVE NAME 1082: State University of New York at Buffalo
-# ALTERNATIVE NAME 1083: The Hong Kong University of Science and Technology
-# ALTERNATIVE NAME 1084: The University of Alabama at Birmingham
-# ALTERNATIVE NAME 1085: The University of Dundee
-# ALTERNATIVE NAME 1086: The University of New Mexico - Albuquerque
-# ALTERNATIVE NAME 1087: The University of Texas Health Science Center at Houston
-# ALTERNATIVE NAME 1088: TU Dresden
-# ALTERNATIVE NAME 1089: Umea University
-# ALTERNATIVE NAME 1090: University of Bochum
-# ALTERNATIVE NAME 1091: University of Bordeaux
-# ALTERNATIVE NAME 1092: University of Mainz
-# ALTERNATIVE NAME 1093: University of South Florida
-# ALTERNATIVE NAME 1094: Xian Jiao Tong University
-# ALTERNATIVE NAME 1095: Indiana University-Purdue University at Indianapolis
-# ALTERNATIVE NAME 1096: Linkoping University
-# ALTERNATIVE NAME 1097: Scuola Normale Superiore - Pisa
-# ALTERNATIVE NAME 1098: SUNY at Albany
-# ALTERNATIVE NAME 1099: The Hong Kong Polytechnic University
-# ALTERNATIVE NAME 1100: The University of Reading
-# ALTERNATIVE NAME 1101: The University of Texas at Dallas
-# ALTERNATIVE NAME 1102: The University of Texas Health Science Center at San Antonio
-# ALTERNATIVE NAME 1103: University of Colorado at Denver
-# ALTERNATIVE NAME 1104: University of Giessen
-# ALTERNATIVE NAME 1105: University of Halle-Wittenberg
-# ALTERNATIVE NAME 1106: University of Pompeu Fabra
-# ALTERNATIVE NAME 1107: University of Roma - Tor Vergata
-# ALTERNATIVE NAME 1108: Capital University of Medical Sciences
-# ALTERNATIVE NAME 1109: Catholic University of Chile
-# ALTERNATIVE NAME 1110: King Fahd University of Petroleum & Minerals
-# ALTERNATIVE NAME 1111: National Sun Yat-Sen University
-# ALTERNATIVE NAME 1112: National Yang Ming University
-# ALTERNATIVE NAME 1113: Oklahoma State University
-# ALTERNATIVE NAME 1114: Soochow University
-# ALTERNATIVE NAME 1115: State University of New York Health Science Center at Brooklyn
-# ALTERNATIVE NAME 1116: Stockholm School of Economics
-# ALTERNATIVE NAME 1117: The Open University
-# ALTERNATIVE NAME 1118: The University of Texas Medical Branch at Galveston
-# ALTERNATIVE NAME 1119: University of Alaska - Fairbanks
-# ALTERNATIVE NAME 1120: University of Arkansas at Fayetteville
-# ALTERNATIVE NAME 1121: University of Arkansas at Little Rock
-# ALTERNATIVE NAME 1122: University of Auvergne
-# ALTERNATIVE NAME 1123: University of Genova
-# ALTERNATIVE NAME 1124: University of Hannover
-# ALTERNATIVE NAME 1125: University of New Hampshire - Durham
-# ALTERNATIVE NAME 1126: University of Oklahoma - Norman
-# ALTERNATIVE NAME 1127: University of Quebec
-# ALTERNATIVE NAME 1128: University of Santiago Compostela
-# ALTERNATIVE NAME 1129: University of Tennessee Health Science Center
-# ALTERNATIVE NAME 1130: Washington University in St Louis
-# ALTERNATIVE NAME 1131: École Polytechnique Fédérale de Lausanne
-# ALTERNATIVE NAME 1132: Paris Diderot University  Paris 7
-# ALTERNATIVE NAME 1133: University of the Andes
-# ALTERNATIVE NAME 1134: King’s College London
-# ALTERNATIVE NAME 1135: University of Wisconsin-Madison
-# ALTERNATIVE NAME 1136: École Normale Supérieure
-# ALTERNATIVE NAME 1137: Paris-Sud University
-# ALTERNATIVE NAME 1138: ETH Zurich  Swiss Federal Institute of Technology Zurich
-# ALTERNATIVE NAME 1139: University of Pittsburgh
-# ALTERNATIVE NAME 1140: St George’s
-# ALTERNATIVE NAME 1141: LMU Munich
-# ALTERNATIVE NAME 1142: Pierre and Marie Curie University
-# ALTERNATIVE NAME 1143: Université Libre de Bruxelles
-# ALTERNATIVE NAME 1144: University of Würzburg
-# ALTERNATIVE NAME 1145: University of Milan-Bicocca
-# ALTERNATIVE NAME 1146: King Mongkut’s University of Technology Thonburi
-# ALTERNATIVE NAME 1147: University of Massachusetts
-# ALTERNATIVE NAME 1148: University of Montana
-# ALTERNATIVE NAME 1149: Wageningen University and Research Center
-# ALTERNATIVE NAME 1150: William & Mary
-# ALTERNATIVE NAME 1151: Koç University
-# ALTERNATIVE NAME 1152: Indiana University
-# ALTERNATIVE NAME 1153: Renmin University of China
-# ALTERNATIVE NAME 1154: Ulm University
-# ALTERNATIVE NAME 1155: École Normale Supérieure de Lyon
-# ALTERNATIVE NAME 1156: Montpellier University
-# ALTERNATIVE NAME 1157: Université Catholique de Louvain
-# ALTERNATIVE NAME 1158: Bayreuth University
-# ALTERNATIVE NAME 1159: Brunel University London
-# ALTERNATIVE NAME 1160: University of Rovira i Virgili
-# ALTERNATIVE NAME 1161: Georgia Health Sciences University
-# ALTERNATIVE NAME 1162: State University of New York Albany
-# ALTERNATIVE NAME 1163: University of South Carolina
-# ALTERNATIVE NAME 1164: KTH Royal Institute of Technology
-# ALTERNATIVE NAME 1165: UiT The Arctic University of Norway
-# ALTERNATIVE NAME 1166: Queen’s University Belfast
-# ALTERNATIVE NAME 1167: University of Nebraska-Lincoln
-# ALTERNATIVE NAME 1168: Tokyo Medical and Dental University (TMDU)
-# ALTERNATIVE NAME 1169: Queen’s University
-# ALTERNATIVE NAME 1170: Technion Israel Institute of Technology
-# ALTERNATIVE NAME 1171: University of Technology Sydney
-# ALTERNATIVE NAME 1172: China Medical University
-# ALTERNATIVE NAME 1173: University of Oklahoma
-# ALTERNATIVE NAME 1174: Sungkyunkwan University (SKKU)
-# ALTERNATIVE NAME 1175: University of Western Ontario
-# ALTERNATIVE NAME 1176: University of Missouri
-# ALTERNATIVE NAME 1177: Technical University of Darmstadt
-# ALTERNATIVE NAME 1178: Leibniz University of Hanover
-# ALTERNATIVE NAME 1179: National Taiwan University of Science and Technology (Taiwan Tech)
-# ALTERNATIVE NAME 1180: State University of Campinas
-# ALTERNATIVE NAME 1181: National Research Nuclear University MePhI
-# ALTERNATIVE NAME 1182: Paris Dauphine University
-# ALTERNATIVE NAME 1183: University of Michigan - Ann Arbor
-# ALTERNATIVE NAME 1184: University of Heidelberg
-# ALTERNATIVE NAME 1185: Arizona State University - Tempe
-# ALTERNATIVE NAME 1186: University of Medicine and Dentistry of New Jersey
-# ALTERNATIVE NAME 1187: University of Hawai’i at Mānoa
-# ALTERNATIVE NAME 1188: University of Paris North  Paris 13
-# ALTERNATIVE NAME 1189: New University of Lisbon
-# ALTERNATIVE NAME 1190: University of Paris Diderot (Paris 7)
-# ALTERNATIVE NAME 1191: The University of Connecticut - Storrs
-# ALTERNATIVE NAME 1192: University of Kansas - Lawrence
-# ALTERNATIVE NAME 1193: Texas A&M University - College Station
-# ALTERNATIVE NAME 1194: Catholic University of Leuven
-# ALTERNATIVE NAME 1195: Swiss Federal Institute of Technology of Lausanne
-# ALTERNATIVE NAME 1196: Mount Sinai School of Medicine
-# ALTERNATIVE NAME 1197: State University of New York at Stony Brook
-# ALTERNATIVE NAME 1198: University of Durham
-# ALTERNATIVE NAME 1199: University of Maastricht
-# ALTERNATIVE NAME 1200: University of Medicine and Dentistry New Jersey
-# ALTERNATIVE NAME 1201: Williams College
-# ALTERNATIVE NAME 1202: École centrale de Lyon
-# ALTERNATIVE NAME 1203: Hefei University of Technology
-# ALTERNATIVE NAME 1204: École normale supérieure de Cachan
-# ALTERNATIVE NAME 1205: Southwest Jiaotong University
-# ALTERNATIVE NAME 1206: Moscow Institute of Physics and Technology
-# ALTERNATIVE NAME 1207: University of Calcutta
-# ALTERNATIVE NAME 1208: Shenzhen University
-# ALTERNATIVE NAME 1209: University of Montpellier
-# ALTERNATIVE NAME 1210: University of Central Lancashire
-# ALTERNATIVE NAME 1211: China University of Geosciences (Wuhan)
-# ALTERNATIVE NAME 1212: University of Oklahoma Health Sciences Center
-# ALTERNATIVE NAME 1213: National Research Nuclear University MEPhI
-# ALTERNATIVE NAME 1214: Jacobs University Bremen
-# ALTERNATIVE NAME 1215: University of Lethbridge
-# ALTERNATIVE NAME 1216: Shahid Beheshti University of Medical Sciences
-# ALTERNATIVE NAME 1217: Gachon University
-# ALTERNATIVE NAME 1218: Harbin Engineering University
-# ALTERNATIVE NAME 1219: Ulsan National Institute of Science and Technology
-# ALTERNATIVE NAME 1220: Tianjin Medical University
-# ALTERNATIVE NAME 1221: Babe-Bolyai University
-# ALTERNATIVE NAME 1222: Henan Normal University
-# ALTERNATIVE NAME 1223: University of Paris-Sud (Paris 11)
-# ALTERNATIVE NAME 1224: Paris Dauphine University (Paris 9)
-# ALTERNATIVE NAME 1225: Université libre de Bruxelles (ULB)
-# ALTERNATIVE NAME 1226: Vrije Universiteit Brussel (VUB)
-# ALTERNATIVE NAME 1227: The University of Tokushima
-# ALTERNATIVE NAME 1228: Toulouse School of Economics
-# ALTERNATIVE NAME 1229: Western University
-# ALTERNATIVE NAME 1230: The University of Newcastle
-# ALTERNATIVE NAME 1231: University at Albany (State University of New York)
-# ALTERNATIVE NAME 1232: Texas Tech University
-# ALTERNATIVE NAME 1233: University of Jyvaskyla
-# ALTERNATIVE NAME 1234: Sabancı University
-# ALTERNATIVE NAME 1235: University of Marrakech Cadi Ayyad
-# ALTERNATIVE NAME 1236: University of Macau
-# ALTERNATIVE NAME 1237: University of Rome III
-# ALTERNATIVE NAME 1238: Lappeenranta University of Technology
-# ALTERNATIVE NAME 1239: Western Sydney University
+# ALTERNATIVE NAME 1022: The University of Texas at Austin
+# ALTERNATIVE NAME 1023: The Imperial College of Science
+# ALTERNATIVE NAME 1024: The University of Adelaide
+# ALTERNATIVE NAME 1025: Technical University Darmstadt
+# ALTERNATIVE NAME 1026: Purdue University - West Lafayette
+# ALTERNATIVE NAME 1027: The Australian National University
+# ALTERNATIVE NAME 1028: The University of Western Australia
+# ALTERNATIVE NAME 1029: Aix Marseille University
+# ALTERNATIVE NAME 1030: Norwegian University of Science and Technology - NTNU
+# ALTERNATIVE NAME 1031: Vrije Universiteit Brussel (VUB)
+# ALTERNATIVE NAME 1032: The University of Auckland
+# ALTERNATIVE NAME 1033: Eotvos Lorand University
+# ALTERNATIVE NAME 1034: MINES ParisTech
+# ALTERNATIVE NAME 1035: The University of Tokushima
+# ALTERNATIVE NAME 1036: University of Colorado at Boulder
+# ALTERNATIVE NAME 1037: The Ohio State University - Columbus
+# ALTERNATIVE NAME 1038: The University of Queensland
+# ALTERNATIVE NAME 1039: Technical University of Braunschweig
+# ALTERNATIVE NAME 1040: University Paris Diderot - Paris 7
+# ALTERNATIVE NAME 1041: University of Paris Descartes (Paris 5)
+# ALTERNATIVE NAME 1042: The George Washington University
+# ALTERNATIVE NAME 1043: University of Leipzig
+# ALTERNATIVE NAME 1044: University of Duesseldorf
+# ALTERNATIVE NAME 1045: Pennsylvania State University - University Park
+# ALTERNATIVE NAME 1046: Indiana University Bloomington
+# ALTERNATIVE NAME 1047: Catholic University of Louvain
+# ALTERNATIVE NAME 1048: Trinity College Dublin
+# ALTERNATIVE NAME 1049: University of Tennessee - Knoxville
+# ALTERNATIVE NAME 1050: University of Missouri - Columbia
+# ALTERNATIVE NAME 1051: The University of Glasgow
+# ALTERNATIVE NAME 1052: Polytechnic Institute of Milan
+# ALTERNATIVE NAME 1053: University of Liege
+# ALTERNATIVE NAME 1054: ESPCI ParisTech
+# ALTERNATIVE NAME 1055: KU Leuven
+# ALTERNATIVE NAME 1056: Mayo Medical School
+# ALTERNATIVE NAME 1057: Swiss Federal Institute of Technology Lausanne
+# ALTERNATIVE NAME 1058: The University of New South Wales
+# ALTERNATIVE NAME 1059: The University of Texas M. D. Anderson Cancer Center
+# ALTERNATIVE NAME 1060: University of Massachusetts Medical School - Worcester
+# ALTERNATIVE NAME 1061: University of Sao Paulo
+# ALTERNATIVE NAME 1062: University of Wageningen
+# ALTERNATIVE NAME 1063: Erasmus University
+# ALTERNATIVE NAME 1064: Joseph Fourier University (Grenoble 1)
+# ALTERNATIVE NAME 1065: North Carolina State University - Raleigh
+# ALTERNATIVE NAME 1066: Oregon Health and Science University
+# ALTERNATIVE NAME 1067: The Chinese University of Hong Kong
+# ALTERNATIVE NAME 1068: The University of Georgia
+# ALTERNATIVE NAME 1069: The University of Hong Kong
+# ALTERNATIVE NAME 1070: University of Koeln
+# ALTERNATIVE NAME 1071: Colorado State University
+# ALTERNATIVE NAME 1072: Ecole Normale Superieure - Lyon
+# ALTERNATIVE NAME 1073: Indiana University-Purdue University at Indianapolis
+# ALTERNATIVE NAME 1074: Karlsruhe Institute of Technology (KIT)
+# ALTERNATIVE NAME 1075: Korea Advanced Institute of Science and Technology
+# ALTERNATIVE NAME 1076: KTH Royal Institute of Technology
+# ALTERNATIVE NAME 1077: Paul Sabatier University (Toulouse 3)
+# ALTERNATIVE NAME 1078: The Hong Kong University of Science and Technology
+# ALTERNATIVE NAME 1079: The University of Calgary
+# ALTERNATIVE NAME 1080: The University of Dundee
+# ALTERNATIVE NAME 1081: The University of New Mexico - Albuquerque
+# ALTERNATIVE NAME 1082: The University of Texas Health Science Center at Houston
+# ALTERNATIVE NAME 1083: Toulouse School of Economics
+# ALTERNATIVE NAME 1084: TU Dresden
+# ALTERNATIVE NAME 1085: University of Mainz
+# ALTERNATIVE NAME 1086: University of South Florida
+# ALTERNATIVE NAME 1087: Western University
+# ALTERNATIVE NAME 1088: Xian Jiao Tong University
+# ALTERNATIVE NAME 1089: China Medical University
+# ALTERNATIVE NAME 1090: Linkoping University
+# ALTERNATIVE NAME 1091: Scuola Normale Superiore - Pisa
+# ALTERNATIVE NAME 1092: The Hong Kong Polytechnic University
+# ALTERNATIVE NAME 1093: The University of Newcastle
+# ALTERNATIVE NAME 1094: The University of Reading
+# ALTERNATIVE NAME 1095: The University of Texas at Dallas
+# ALTERNATIVE NAME 1096: The University of Texas Health Science Center at San Antonio
+# ALTERNATIVE NAME 1097: Umea University
+# ALTERNATIVE NAME 1098: University at Albany (State University of New York)
+# ALTERNATIVE NAME 1099: University of Bochum
+# ALTERNATIVE NAME 1100: University of Colorado at Denver
+# ALTERNATIVE NAME 1101: University of Giessen
+# ALTERNATIVE NAME 1102: University of New Hampshire - Durham
+# ALTERNATIVE NAME 1103: Catholic University of Chile
+# ALTERNATIVE NAME 1104: King Fahd University of Petroleum & Minerals
+# ALTERNATIVE NAME 1105: National Sun Yat-Sen University
+# ALTERNATIVE NAME 1106: Oklahoma State University
+# ALTERNATIVE NAME 1107: Soochow University
+# ALTERNATIVE NAME 1108: State University of New York Health Science Center at Brooklyn
+# ALTERNATIVE NAME 1109: Stockholm School of Economics
+# ALTERNATIVE NAME 1110: Texas Tech University
+# ALTERNATIVE NAME 1111: The University of Texas Medical Branch at Galveston
+# ALTERNATIVE NAME 1112: University of Alaska - Fairbanks
+# ALTERNATIVE NAME 1113: University of Arkansas at Fayetteville
+# ALTERNATIVE NAME 1114: University of Arkansas at Little Rock
+# ALTERNATIVE NAME 1115: University of Auvergne
+# ALTERNATIVE NAME 1116: University of Halle-Wittenberg
+# ALTERNATIVE NAME 1117: University of Hannover
+# ALTERNATIVE NAME 1118: University of Jyvaskyla
+# ALTERNATIVE NAME 1119: University of Oklahoma - Norman
+# ALTERNATIVE NAME 1120: University of Quebec
+# ALTERNATIVE NAME 1121: University of Roma - Tor Vergata
+# ALTERNATIVE NAME 1122: University of Santiago Compostela
+# ALTERNATIVE NAME 1123: Washington University in St Louis
+# ALTERNATIVE NAME 1124: École Polytechnique Fédérale de Lausanne
+# ALTERNATIVE NAME 1125: Paris Diderot University  Paris 7
+# ALTERNATIVE NAME 1126: University of the Andes
+# ALTERNATIVE NAME 1127: Sabancı University
+# ALTERNATIVE NAME 1128: King’s College London
+# ALTERNATIVE NAME 1129: University of Wisconsin-Madison
+# ALTERNATIVE NAME 1130: Paris-Sud University
+# ALTERNATIVE NAME 1131: St George’s
+# ALTERNATIVE NAME 1132: École Normale Supérieure
+# ALTERNATIVE NAME 1133: ETH Zurich  Swiss Federal Institute of Technology Zurich
+# ALTERNATIVE NAME 1134: Pierre and Marie Curie University
+# ALTERNATIVE NAME 1135: LMU Munich
+# ALTERNATIVE NAME 1136: University of Marrakech Cadi Ayyad
+# ALTERNATIVE NAME 1137: University of Würzburg
+# ALTERNATIVE NAME 1138: University of Massachusetts
+# ALTERNATIVE NAME 1139: William & Mary
+# ALTERNATIVE NAME 1140: Wageningen University and Research Center
+# ALTERNATIVE NAME 1141: University of Milan-Bicocca
+# ALTERNATIVE NAME 1142: Brunel University London
+# ALTERNATIVE NAME 1143: University of Montana
+# ALTERNATIVE NAME 1144: King Mongkut’s University of Technology Thonburi
+# ALTERNATIVE NAME 1145: Indiana University
+# ALTERNATIVE NAME 1146: École Normale Supérieure de Lyon
+# ALTERNATIVE NAME 1147: Ulm University
+# ALTERNATIVE NAME 1148: State University of New York Albany
+# ALTERNATIVE NAME 1149: University of Macau
+# ALTERNATIVE NAME 1150: Université Catholique de Louvain
+# ALTERNATIVE NAME 1151: Montpellier University
+# ALTERNATIVE NAME 1152: Université Libre de Bruxelles
+# ALTERNATIVE NAME 1153: University of Rome III
+# ALTERNATIVE NAME 1154: Bayreuth University
+# ALTERNATIVE NAME 1155: Lappeenranta University of Technology
+# ALTERNATIVE NAME 1156: University of Technology Sydney
+# ALTERNATIVE NAME 1157: Western Sydney University
+# ALTERNATIVE NAME 1158: Koç University
+# ALTERNATIVE NAME 1159: University of Nebraska-Lincoln
+# ALTERNATIVE NAME 1160: University of Oklahoma
+# ALTERNATIVE NAME 1161: University of South Carolina
+# ALTERNATIVE NAME 1162: UiT The Arctic University of Norway
+# ALTERNATIVE NAME 1163: Queen’s University Belfast
+# ALTERNATIVE NAME 1164: Technion Israel Institute of Technology
+# ALTERNATIVE NAME 1165: Sungkyunkwan University (SKKU)
+# ALTERNATIVE NAME 1166: University of Hawai’i at Mānoa
+# ALTERNATIVE NAME 1167: Tokyo Medical and Dental University (TMDU)
+# ALTERNATIVE NAME 1168: Queen’s University
+# ALTERNATIVE NAME 1169: University of Western Ontario
+# ALTERNATIVE NAME 1170: University of Missouri
+# ALTERNATIVE NAME 1171: Technical University of Darmstadt
+# ALTERNATIVE NAME 1172: National Taiwan University of Science and Technology (Taiwan Tech)
+# ALTERNATIVE NAME 1173: State University of Campinas
+# ALTERNATIVE NAME 1174: Chemnitz University of Technology
+# ALTERNATIVE NAME 1175: University of Montpellier 2
+# ALTERNATIVE NAME 1176: University of Bordeaux II
+# ALTERNATIVE NAME 1177: University of Bordeaux I
+# ALTERNATIVE NAME 1178: University of Montpellier 1
+# ALTERNATIVE NAME 1179: Beijing Jiaotong University
+# ALTERNATIVE NAME 1180: Western Michigan University
+# ALTERNATIVE NAME 1181: National University of Rosario
+# ALTERNATIVE NAME 1182: King Juan Carlos University
+# ALTERNATIVE NAME 1183: Guangxi University
+# ALTERNATIVE NAME 1184: Northwest A&F University
+# ALTERNATIVE NAME 1185: Shanxi University
+# ALTERNATIVE NAME 1186: Tamkang University
+# ALTERNATIVE NAME 1187: Harbin Medical University
+# ALTERNATIVE NAME 1188: Zhejiang Normal University
+# ALTERNATIVE NAME 1189: Iran University of Science and Technology
+# ALTERNATIVE NAME 1190: I-Shou University
+# ALTERNATIVE NAME 1191: University of Maine (Le Mans)
+# ALTERNATIVE NAME 1192: National Dong Hwa University
+# ALTERNATIVE NAME 1193: National Taipei University of Technology
+# ALTERNATIVE NAME 1194: Shaanxi Normal University
+# ALTERNATIVE NAME 1195: National University of Defense Technology
+# ALTERNATIVE NAME 1196: Yanbian University
+# ALTERNATIVE NAME 1197: University of California-Berkeley
+# ALTERNATIVE NAME 1198: The Johns Hopkins University
+# ALTERNATIVE NAME 1199: University of Paris Sud (Paris 11)
+# ALTERNATIVE NAME 1200: University Libre Bruxelles
+# ALTERNATIVE NAME 1201: University of Pittsburgh-Pittsburgh Campus
+# ALTERNATIVE NAME 1202: Queen Mary
+# ALTERNATIVE NAME 1203: University of Paris Dauphine (Paris 9)
+# ALTERNATIVE NAME 1204: Vrije University Brussel
+# ALTERNATIVE NAME 1205: University of Roma - La Sapienza
+# ALTERNATIVE NAME 1206: The University of Montana - Missoula
+# ALTERNATIVE NAME 1207: Texas A & M University
+# ALTERNATIVE NAME 1208: State University of New York at Buffalo
+# ALTERNATIVE NAME 1209: The University of Alabama at Birmingham
+# ALTERNATIVE NAME 1210: SUNY at Albany
+# ALTERNATIVE NAME 1211: University of Pompeu Fabra
+# ALTERNATIVE NAME 1212: Capital University of Medical Sciences
+# ALTERNATIVE NAME 1213: National Yang Ming University
+# ALTERNATIVE NAME 1214: The Open University
+# ALTERNATIVE NAME 1215: University of Genova
+# ALTERNATIVE NAME 1216: University of Tennessee Health Science Center
+# ALTERNATIVE NAME 1217: University of Rovira i Virgili
+# ALTERNATIVE NAME 1218: Georgia Health Sciences University
+# ALTERNATIVE NAME 1219: Leibniz University of Hanover
+# ALTERNATIVE NAME 1220: National Research Nuclear University MePhI
+# ALTERNATIVE NAME 1221: Paris Dauphine University
+# ALTERNATIVE NAME 1222: University of Michigan - Ann Arbor
+# ALTERNATIVE NAME 1223: University of Heidelberg
+# ALTERNATIVE NAME 1224: Arizona State University - Tempe
+# ALTERNATIVE NAME 1225: University of Medicine and Dentistry of New Jersey
+# ALTERNATIVE NAME 1226: University of Paris North  Paris 13
+# ALTERNATIVE NAME 1227: New University of Lisbon
+# ALTERNATIVE NAME 1228: University of Paris Diderot (Paris 7)
+# ALTERNATIVE NAME 1229: The University of Connecticut - Storrs
+# ALTERNATIVE NAME 1230: University of Kansas - Lawrence
+# ALTERNATIVE NAME 1231: Texas A&M University - College Station
+# ALTERNATIVE NAME 1232: Catholic University of Leuven
+# ALTERNATIVE NAME 1233: Swiss Federal Institute of Technology of Lausanne
+# ALTERNATIVE NAME 1234: Mount Sinai School of Medicine
+# ALTERNATIVE NAME 1235: State University of New York at Stony Brook
+# ALTERNATIVE NAME 1236: University of Durham
+# ALTERNATIVE NAME 1237: University of Maastricht
+# ALTERNATIVE NAME 1238: University of Medicine and Dentistry New Jersey
+# ALTERNATIVE NAME 1239: Williams College
