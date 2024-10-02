@@ -20,7 +20,8 @@ class TestSocCombination:
     def test_read(self):
         file = os.path.join(self.data_dir, '99999_edges.txt')
         data, pi_values = read_edge_list(file)
-
+        print(pi_values)
+        print(data)
         assert len(data) == 3
         assert len(pi_values) == 5
         

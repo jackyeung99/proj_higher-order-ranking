@@ -145,7 +145,7 @@ def read_edge_list(file_path):
                     data[order] = count
 
 
-    pi_values = {player: 1.0 for player in range(num)}
+    pi_values = {player: 1.0 for player in range(1, num+1)}
     return data, pi_values
 
 
