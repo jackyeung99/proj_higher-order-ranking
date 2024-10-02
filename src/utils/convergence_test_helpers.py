@@ -19,7 +19,7 @@ from src.models.zermello import *
 def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     scores = {}
     logistic_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
-    scores = {n: logistic_distribution[n] for n in pi_values}
+    scores = {n: logistic_distribution[n-1] for n in pi_values}
     normalize_scores_old(scores)
 
     info = {}
