@@ -13,21 +13,29 @@ from tst.tst_weight_conversion.old_newman import iterate_equation_newman_old
 from src.models.zermello import *
 
 
+# def rms_error(new_scores, old_scores):
+#     beating_avg_new = [(pi/pi + 1) for pi in new_scores]
+#     beating_avg_old = [(pi/pi + 1) for pi in old_scores]
 
+#     return np.sqrt(np.mean([(beating_avg_new - beating_avg_old) ** 2]))
+
+def rms_error(new_scores, old_scores):
+    return np.sqrt(np.mean([(new_scores[n] - old_scores[n]) ** 2 for n in old_scores]))
 
 # Modified Solver function  to Keep Track of iterations for Genralized Newman 
 def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     scores = {}
     logistic_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
-    scores = {n: logistic_distribution[n-1] for n in pi_values}
+    scores = {n: logistic_distribution[n] for n in pi_values}
     normalize_scores_old(scores)
 
+    # err = 1.0
+    rms = 1.0
+
     info = {}
-    err = 1.0
     iteration = 0
     while iteration < max_iter and rms > sens:
         
-        err = 0.0
         tmp_scores = {}
 
 
@@ -43,11 +51,9 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
         #         err = cur_err
         #     scores[s] = tmp_scores[s]
 
-        rms = N = 0.0
-        for n in scores:
-            N += 1.0
-            rms += (scores[n]-tmp_scores[n])*(scores[n]-tmp_scores[n])
-        rms = np.sqrt(rms/N)
+        rms = rms_error(tmp_scores, scores)
+        scores = tmp_scores.copy()
+
 
         iteration += 1
         info[iteration] = rms
@@ -88,7 +94,7 @@ def test_convergence(un_weighted_data, pi_values, max_iter):
     return ho_errors, pl_errors
 
 # for each repetition obtain error for each iteration
-def save_convergence_data(file_name, data, pi_values, max_iter = 10000):
+def save_convergence_data(file_name, data, pi_values, max_iter = 1000):
     ho_errors, pl_errors = test_convergence(data, pi_values, max_iter)
     
     data = {

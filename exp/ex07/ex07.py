@@ -21,7 +21,6 @@ def average_convergence(repetitions, out_file_dir):
             futures.append(executor.submit(save_convergence_data, file_name, data, pi_values))
 
 
-
      
 
 
