@@ -127,8 +127,8 @@ def read_strict_ordered_dataset(filename):
                 try:
                     count, order = line.split(": ")
                     count = int(count)
-                    order = tuple(map(int, order.split(",")))
-
+                    # 0 index real data
+                    order = tuple(map(lambda x: int(x) - 1, order.split(",")))
 
                     data[order] = count
                     # add all unique players to pi_values

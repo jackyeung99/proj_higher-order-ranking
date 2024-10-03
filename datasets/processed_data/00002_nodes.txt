@@ -1,35 +1,35 @@
-# ALTERNATIVE NAME 1: Stefano Zacchiroli
-# ALTERNATIVE NAME 2: Wouter Verhelst
-# ALTERNATIVE NAME 3: Margarita Manterola
-# ALTERNATIVE NAME 4: None Of The Above
-# ALTERNATIVE NAME 5: Charles Plessy
-# ALTERNATIVE NAME 6: Anthony Towns
-# ALTERNATIVE NAME 7: Aigars Mahinovs
-# ALTERNATIVE NAME 8: Gustavo Franco
-# ALTERNATIVE NAME 9: Sam Hocevar
-# ALTERNATIVE NAME 10: Steve McIntyre
-# ALTERNATIVE NAME 11: Raphal Hertzog
-# ALTERNATIVE NAME 12: Simon Richter
-# ALTERNATIVE NAME 13: Gergely Nagy
-# ALTERNATIVE NAME 14: None of the Above
-# ALTERNATIVE NAME 15: Andreas Schuldei
-# ALTERNATIVE NAME 16: Jeroen van Wolffelaar
-# ALTERNATIVE NAME 17: Bill Allombert
-# ALTERNATIVE NAME 18: Ari Pollak
-# ALTERNATIVE NAME 19: Jonathan aka Ted Walther
-# ALTERNATIVE NAME 20: Branden Robinson
-# ALTERNATIVE NAME 21: Matthew Garrett
-# ALTERNATIVE NAME 22: Angus Lees
-# ALTERNATIVE NAME 23: Jonathan Walther
-# ALTERNATIVE NAME 24: Martin Michlmayr
-# ALTERNATIVE NAME 25: Bdale Garbee
-# ALTERNATIVE NAME 26: Moshe Zadka
-# ALTERNATIVE NAME 27: Raphael Hertzog
-# ALTERNATIVE NAME 28: Swirl
-# ALTERNATIVE NAME 29: Modified
-# ALTERNATIVE NAME 30: DV
-# ALTERNATIVE NAME 31: Old Logo
-# ALTERNATIVE NAME 32: Fixed Chicken
-# ALTERNATIVE NAME 33: Ants
-# ALTERNATIVE NAME 34: Further Discussion
-# ALTERNATIVE NAME 35: Seal
+# ALTERNATIVE NAME 0: Stefano Zacchiroli
+# ALTERNATIVE NAME 1: Wouter Verhelst
+# ALTERNATIVE NAME 2: Margarita Manterola
+# ALTERNATIVE NAME 3: None Of The Above
+# ALTERNATIVE NAME 4: Charles Plessy
+# ALTERNATIVE NAME 5: Anthony Towns
+# ALTERNATIVE NAME 6: Aigars Mahinovs
+# ALTERNATIVE NAME 7: Gustavo Franco
+# ALTERNATIVE NAME 8: Sam Hocevar
+# ALTERNATIVE NAME 9: Steve McIntyre
+# ALTERNATIVE NAME 10: Raphal Hertzog
+# ALTERNATIVE NAME 11: Simon Richter
+# ALTERNATIVE NAME 12: Gergely Nagy
+# ALTERNATIVE NAME 13: None of the Above
+# ALTERNATIVE NAME 14: Andreas Schuldei
+# ALTERNATIVE NAME 15: Jeroen van Wolffelaar
+# ALTERNATIVE NAME 16: Bill Allombert
+# ALTERNATIVE NAME 17: Ari Pollak
+# ALTERNATIVE NAME 18: Jonathan aka Ted Walther
+# ALTERNATIVE NAME 19: Branden Robinson
+# ALTERNATIVE NAME 20: Matthew Garrett
+# ALTERNATIVE NAME 21: Angus Lees
+# ALTERNATIVE NAME 22: Jonathan Walther
+# ALTERNATIVE NAME 23: Martin Michlmayr
+# ALTERNATIVE NAME 24: Bdale Garbee
+# ALTERNATIVE NAME 25: Moshe Zadka
+# ALTERNATIVE NAME 26: Raphael Hertzog
+# ALTERNATIVE NAME 27: Swirl
+# ALTERNATIVE NAME 28: Modified
+# ALTERNATIVE NAME 29: DV
+# ALTERNATIVE NAME 30: Old Logo
+# ALTERNATIVE NAME 31: Fixed Chicken
+# ALTERNATIVE NAME 32: Ants
+# ALTERNATIVE NAME 33: Further Discussion
+# ALTERNATIVE NAME 34: Seal

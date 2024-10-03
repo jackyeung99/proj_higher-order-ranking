@@ -29,8 +29,8 @@ class TestSocCombination:
         id_to_name = get_alternative_names(self.test_nodes)
       
         assert len(id_to_name) == 5
-        assert id_to_name[1] == 'a'
-        assert id_to_name[2] == 'b'
+        assert id_to_name[0] == 'a'
+        assert id_to_name[1] == 'b'
 
     def test_game_conversion(self):
         id_to_name = get_alternative_names(self.test_nodes)
@@ -70,7 +70,7 @@ class TestSocCombination:
     def test_mapping(self):
         data, pi_values = read_edge_list(os.path.join(self.processed_files, '10000_edges.txt'))
 
-        assert (3, 1, 4) in data 
-        assert data[(3, 1, 4)] == 2
+        assert (2, 0, 3) in data 
+        assert data[(2, 0, 3)] == 2
 
 

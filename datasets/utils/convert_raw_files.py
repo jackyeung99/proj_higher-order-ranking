@@ -20,7 +20,8 @@ def get_alternative_names(filename):
             line = line.strip()
             match = pattern.match(line)
             if match:
-                id = int(match.group(1))
+                # 0 index real data
+                id = int(match.group(1)) - 1
                 name = match.group(2)
                 id_to_name[id] = name
 
@@ -37,7 +38,7 @@ def convert_id_to_name(games, id_to_name):
 def write_files(out_path, out_file, pi_values, games):
     ''' convert combined names back into ids and write the files'''
     alternative_names = list(pi_values.keys())
-    name_to_id = {name: idx + 1 for idx, name in enumerate(alternative_names)}
+    name_to_id = {name: idx for idx, name in enumerate(alternative_names)}
     converted_games = convert_names_to_id(games, name_to_id)
 
     edge_file = os.path.join(out_path, f'{out_file}_edges.txt')
