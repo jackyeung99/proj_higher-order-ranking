@@ -25,7 +25,7 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
     info = {}
     err = 1.0
     iteration = 0
-    while iteration < max_iter and err > sens:
+    while iteration < max_iter and rms > sens:
         
         err = 0.0
         tmp_scores = {}
@@ -37,15 +37,20 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
                  
         normalize_scores_old(tmp_scores)
 
-        for s in tmp_scores:
-            cur_err = abs(np.log(tmp_scores[s])-np.log(scores[s]))
-            if cur_err > err:
-                err = cur_err
-            scores[s] = tmp_scores[s]
+        # for s in tmp_scores:
+        #     cur_err = abs(np.log(tmp_scores[s])-np.log(scores[s]))
+        #     if cur_err > err:
+        #         err = cur_err
+        #     scores[s] = tmp_scores[s]
 
+        rms = N = 0.0
+        for n in scores:
+            N += 1.0
+            rms += (scores[n]-tmp_scores[n])*(scores[n]-tmp_scores[n])
+        rms = np.sqrt(rms/N)
 
         iteration += 1
-        info[iteration] = err
+        info[iteration] = rms
 
    
     return scores, info

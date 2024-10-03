@@ -21,15 +21,20 @@ def normalize_scores_numpy(scores):
 
 def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     players = np.array(list(pi_values.keys()))
+
     # scores = np.ones(len(pi_values))
+    # MAP prior
     scores = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
+
+
     normalize_scores_numpy(scores)
 
-    err = 1.0
+    # err = 1.0
+    rms = 1.0
     iteration = 0
     
-    while iteration < max_iter and err > sens:
-        err = 0
+    while iteration < max_iter and rms > sens:
+    
         tmp_scores = np.ones(len(pi_values))
 
         for s in range(len(scores)):
@@ -39,7 +44,9 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
         
         normalize_scores_numpy(tmp_scores)
        
-        err = np.max(np.abs(np.log(tmp_scores) - np.log(scores)))
+        # err = np.max(np.abs(np.log(tmp_scores) - np.log(scores)))
+        rms = np.sqrt(np.mean((np.log(tmp_scores) - np.log(scores)) ** 2))
+
         scores = tmp_scores.copy()
         iteration += 1
 
