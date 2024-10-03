@@ -17,7 +17,15 @@ def normalize_scores_numpy(scores):
     norm = np.exp(np.sum(np.log(scores_nonzero)) / len(scores_nonzero))
     for i in range(len(scores)):
         scores[i] /= norm
-        
+
+def rms_error_numpy(new_scores, old_scores):
+    # Calculate the probability of beating the average player for both new and old scores
+    beating_avg_new = new_scores / (new_scores + 1)
+    beating_avg_old = old_scores / (old_scores + 1)
+    
+    # Compute the RMS error between the transformed scores
+    return np.sqrt(np.mean((beating_avg_new - beating_avg_old) ** 2))
+
 
 def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
     players = np.array(list(pi_values.keys()))
@@ -45,7 +53,7 @@ def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
         normalize_scores_numpy(tmp_scores)
        
         # err = np.max(np.abs(np.log(tmp_scores) - np.log(scores)))
-        rms = np.sqrt(np.mean((np.log(tmp_scores) - np.log(scores)) ** 2))
+        rms = rms_error_numpy(tmp_scores, scores)
 
         scores = tmp_scores.copy()
         iteration += 1
