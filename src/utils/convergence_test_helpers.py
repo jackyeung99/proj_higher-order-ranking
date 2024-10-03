@@ -13,14 +13,13 @@ from tst.tst_weight_conversion.old_newman import iterate_equation_newman_old
 from src.models.zermello import *
 
 
-# def rms_error(new_scores, old_scores):
-#     beating_avg_new = [(pi/pi + 1) for pi in new_scores]
-#     beating_avg_old = [(pi/pi + 1) for pi in old_scores]
-
-#     return np.sqrt(np.mean([(beating_avg_new - beating_avg_old) ** 2]))
-
 def rms_error(new_scores, old_scores):
-    return np.sqrt(np.mean([(new_scores[n] - old_scores[n]) ** 2 for n in old_scores]))
+    # calculate the probablity that a player beats the average player for old and new iterated scores
+    beating_avg_new = [(pi / (pi + 1)) for pi in new_scores.values()]
+    beating_avg_old = [(pi / (pi + 1)) for pi in old_scores.values()]
+
+    # Compute the RMS error between the transformed scores
+    return np.sqrt(np.mean([(new - old) ** 2 for new, old in zip(beating_avg_new, beating_avg_old)]))
 
 # Modified Solver function  to Keep Track of iterations for Genralized Newman 
 def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e-6):
@@ -35,13 +34,7 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
     info = {}
     iteration = 0
     while iteration < max_iter and rms > sens:
-        
-        tmp_scores = {}
-
-
-        for s in scores:
-            tmp_scores[s] = method(s, scores, bond_matrix)
-
+        tmp_scores = {s: method(s, scores, bond_matrix) for s in scores}
                  
         normalize_scores_old(tmp_scores)
 
@@ -50,6 +43,7 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
         #     if cur_err > err:
         #         err = cur_err
         #     scores[s] = tmp_scores[s]
+
 
         rms = rms_error(tmp_scores, scores)
         scores = tmp_scores.copy()
@@ -94,7 +88,7 @@ def test_convergence(un_weighted_data, pi_values, max_iter):
     return ho_errors, pl_errors
 
 # for each repetition obtain error for each iteration
-def save_convergence_data(file_name, data, pi_values, max_iter = 1000):
+def save_convergence_data(file_name, data, pi_values, max_iter = 10000):
     ho_errors, pl_errors = test_convergence(data, pi_values, max_iter)
     
     data = {
