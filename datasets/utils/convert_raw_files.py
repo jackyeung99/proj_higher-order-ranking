@@ -132,8 +132,8 @@ def convert_raw_files(file_path, read_function, title, outfile):
 if __name__ == '__main__':
     file_directory = os.path.join(repo_root, 'datasets', 'raw_data', 'preflib')
     out_file_dir = os.path.join(repo_root, 'datasets', 'processed_data')
-
     grouping = group_soi(file_directory)
+
     combine_soi(grouping, file_directory, out_file_dir)
 
     convert_raw_files('authorships.txt', read_data_authors, '00104', out_file_dir)
