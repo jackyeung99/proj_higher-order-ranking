@@ -155,10 +155,10 @@
 155 Trinidad_and_Tobago
 156 Laos
 157 Cuba
-158 Comoros
-159 Guyana
-160 Suriname
-161 Somaliland_region
-162 Djibouti
-163 Swaziland
-164 Oman
+158 Djibouti
+159 Somaliland_region
+160 Comoros
+161 Suriname
+162 Guyana
+163 Oman
+164 Swaziland

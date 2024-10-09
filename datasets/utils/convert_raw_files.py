@@ -21,7 +21,7 @@ def get_alternative_names(filename):
             match = pattern.match(line)
             if match:
                 # 0 index real data
-                id = int(match.group(1)) - 1
+                id = int(match.group(1))
                 name = match.group(2)
                 id_to_name[id] = name
 
@@ -87,6 +87,7 @@ def combine_soi(sub_files, file_directory, outfile):
         for file in files:
             file_path = os.path.join(file_directory, file)
             id_to_name = get_alternative_names(file_path)
+            id_to_name = {k-1: v for k,v in id_to_name.items()}
             data, pi_values = read_strict_ordered_dataset(file_path)
             converted_data = convert_id_to_name(data, id_to_name)
             

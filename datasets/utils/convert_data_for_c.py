@@ -37,10 +37,14 @@ def write_edges(games, out_file):
 def read_edges(file_path):
     data, pi_values = read_edge_list(file_path)
     list_of_games = convert_dict_to_games(data)
+
+    list_of_games = [tuple([x + 1 for x in game]) for game in list_of_games]
     return list_of_games
 
 def read_nodes(file_path):
     name_conversions = get_alternative_names(file_path)
+    # 1 index games
+    name_conversions = {k+1: v for k,v in name_conversions.items()}
     return name_conversions
 
 def loop_files(out_dir, data_dir, grouped_files):
@@ -62,7 +66,6 @@ def loop_files(out_dir, data_dir, grouped_files):
         
         write_edges(games, edge_out_file)
         write_nodes(node_ids, node_out_file)
-  
 
 
 
