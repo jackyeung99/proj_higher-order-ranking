@@ -50,7 +50,7 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
 
         err = std_error(tmp_scores, scores)
         # err = rms_error(tmp_scores, scores)
-        print(err)
+
         scores = tmp_scores.copy()
 
 
