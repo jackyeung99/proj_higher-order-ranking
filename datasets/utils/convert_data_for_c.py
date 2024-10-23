@@ -20,13 +20,11 @@ def group_datasets(file_directory):
         sub_files[dataset_id].append(file)
     return sub_files
 
-
 def write_nodes(node_ids, out_file):
     with open(out_file, mode='w') as f:
         for node_id, node_name in node_ids.items():
             node_name = '_'.join(node_name.split())
             f.write(f"{node_id} {node_name}" + '\n')
-
 
 def write_edges(games, out_file):
     with open(out_file, mode='w') as f:
