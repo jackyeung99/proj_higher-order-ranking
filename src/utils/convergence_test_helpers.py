@@ -21,36 +21,41 @@ def rms_error(new_scores, old_scores):
     # Compute the RMS error between the transformed scores
     return np.sqrt(np.mean([(new - old) ** 2 for new, old in zip(beating_avg_new, beating_avg_old)]))
 
+
+def std_error(new_scores, old_scores, err):
+    for s in old_scores:
+        cur_err = abs(np.log(old_scores[s])-np.log(new_scores[s]))
+        err = max(cur_err, err)
+        new_scores[s] = old_scores[s]
+
+    return err
+
+
+
 # Modified Solver function  to Keep Track of iterations for Genralized Newman 
 def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e-6):
-    scores = {}
     logistic_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
     scores = {n: logistic_distribution[n] for n in pi_values}
     normalize_scores_old(scores)
 
-    # err = 1.0
-    rms = 1.0
+    err = 1.0
 
     info = {}
     iteration = 0
-    while iteration < max_iter and rms > sens:
+    while iteration < max_iter and err > sens:
         tmp_scores = {s: method(s, scores, bond_matrix) for s in scores}
                  
         normalize_scores_old(tmp_scores)
 
-        # for s in tmp_scores:
-        #     cur_err = abs(np.log(tmp_scores[s])-np.log(scores[s]))
-        #     if cur_err > err:
-        #         err = cur_err
-        #     scores[s] = tmp_scores[s]
 
+        err = std_error(tmp_scores, scores, err)
+        # err = rms_error(tmp_scores, scores)
 
-        rms = rms_error(tmp_scores, scores)
         scores = tmp_scores.copy()
 
 
         iteration += 1
-        info[iteration] = rms
+        info[iteration] = err
 
    
     return scores, info

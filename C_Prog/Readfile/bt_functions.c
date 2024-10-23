@@ -938,8 +938,6 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
       //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
     }
 
-
-  return
 }
 
 
