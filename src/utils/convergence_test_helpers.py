@@ -22,11 +22,11 @@ def rms_error(new_scores, old_scores):
     return np.sqrt(np.mean([(new - old) ** 2 for new, old in zip(beating_avg_new, beating_avg_old)]))
 
 
-def std_error(new_scores, old_scores, err):
+def std_error(new_scores, old_scores):
+    err = 0
     for s in old_scores:
-        cur_err = abs(np.log(old_scores[s])-np.log(new_scores[s]))
+        cur_err = abs(np.log(new_scores[s])-np.log(old_scores[s]))
         err = max(cur_err, err)
-        new_scores[s] = old_scores[s]
 
     return err
 
@@ -48,9 +48,9 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
         normalize_scores_old(tmp_scores)
 
 
-        err = std_error(tmp_scores, scores, err)
+        err = std_error(tmp_scores, scores)
         # err = rms_error(tmp_scores, scores)
-
+        print(err)
         scores = tmp_scores.copy()
 
 

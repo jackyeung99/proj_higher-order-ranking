@@ -26,15 +26,15 @@ def process_file(file, dataset_file_path, repetitions, out_file_dir):
     un_weighted_data = convert_dict_to_games(data)
     
     if dataset_id not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
-
         futures = []
-
         with ProcessPoolExecutor(max_workers=32) as executor:
             for rep in range(repetitions):
                 #randomize the list of games
                 random_data, _ = train_test_split(un_weighted_data, test_size=.2)
                 file_name = os.path.join(out_file_dir, f"dataset-{dataset_id}_rep-{rep}.csv")
                 futures.append(executor.submit(save_convergence_data, file_name, random_data, pi_values))
+
+
 
 
 

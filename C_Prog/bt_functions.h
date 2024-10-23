@@ -51,7 +51,7 @@ void normalize_scores (struct model_results *R);
 void deallocate_memory_results (struct model_results *R);
 void print_results (struct model_results *R);
 
-int iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter);
+void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter);
 void single_iteration_ho_model (struct hypergraph *G, struct model_results *R);
 
 void single_iteration_leadership_model (struct hypergraph *G, struct model_results *R);
