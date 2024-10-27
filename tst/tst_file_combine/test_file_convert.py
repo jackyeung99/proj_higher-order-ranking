@@ -27,14 +27,17 @@ class TestSocCombination:
         
     def test_name_conversion(self):
         id_to_name = get_alternative_names(self.test_nodes)
-      
+
+        print(id_to_name)
         assert len(id_to_name) == 5
-        assert id_to_name[0] == 'a'
-        assert id_to_name[1] == 'b'
+        assert id_to_name[1] == 'a'
+        assert id_to_name[2] == 'b'
 
     def test_game_conversion(self):
         id_to_name = get_alternative_names(self.test_nodes)
+        id_to_name = {k-1: v for k,v in id_to_name.items()}
         data, pi_values = read_edge_list(self.test_edges)
+        
         named_games = convert_id_to_name(data, id_to_name)
 
         assert len(named_games) == len(data)
@@ -72,5 +75,11 @@ class TestSocCombination:
 
         assert (2, 0, 3) in data 
         assert data[(2, 0, 3)] == 2
+
+
+
+
+
+
 
 

@@ -29,7 +29,8 @@ def write_nodes(node_ids, out_file):
 def write_edges(games, out_file):
     with open(out_file, mode='w') as f:
         for game in games:
-            line = ' '.join(map(str, game))
+            k = len(tuple(game))
+            line = f'{k} '+ ' '.join(map(str, game))
             f.write(line + '\n')
 
 def read_edges(file_path):
@@ -61,7 +62,8 @@ def loop_files(out_dir, data_dir, grouped_files):
       
         edge_out_file = os.path.join(out_dir, f'{dataset}_game.txt')
         node_out_file = os.path.join(out_dir, f'{dataset}_idx.txt')
-        
+
+
         write_edges(games, edge_out_file)
         write_nodes(node_ids, node_out_file)
 

@@ -18,6 +18,7 @@ void read_index_file (char *filename, struct hypergraph *G, char **names)
 
   G->N = 0;
   f = fopen(filename,"r");
+
   while(!feof(f))
     {
       q = fscanf(f,"%d %s",&i,name);
@@ -45,8 +46,6 @@ void read_index_file (char *filename, struct hypergraph *G, char **names)
 
   
 }
-
-
 
 
 void read_data_file (char *filename, struct hypergraph *G)

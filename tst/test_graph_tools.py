@@ -68,8 +68,8 @@ class TestGraphTools:
         for order, count in weighted.items():
             expanded_weighted.extend([list(order)] * count)
 
-        print(expanded_weighted)
-        print(data)
+        print(len(expanded_weighted))
+        print(len(data))
         assert sorted(expanded_weighted) == sorted(data)
 
 

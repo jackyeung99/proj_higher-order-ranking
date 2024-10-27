@@ -9,7 +9,7 @@
 
 
 #define eps 1e-6
-#define MAX_ITER 1000
+#define MAX_ITER 10000
 
 
 
