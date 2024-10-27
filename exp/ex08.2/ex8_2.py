@@ -24,7 +24,7 @@ def run_simulation_real_data (filein_idx, filein_data, model, ratio):
     # command = '../Readfile/bt_model_data.out ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio) 
 #     print(shlex.split(command))
     command = os.path.join(C_PATH, 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio)
-
+    print(command)
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 
     
@@ -51,7 +51,7 @@ def run_real_data(grouped_files, model, repetitions, out_file_dir):
         filein_data = os.path.join(C_PATH,'Data', dataset_files[0])
         filein_idx = os.path.join(C_PATH,'Data', dataset_files[1])
         
-        print(filein_data)
+
         data = []
         for rep in range(repetitions):   
 
