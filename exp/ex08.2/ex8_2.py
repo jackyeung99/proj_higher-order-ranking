@@ -29,8 +29,9 @@ def run_simulation_real_data (filein_idx, filein_data, model, ratio):
 
     
     ##parse output
-    output = process.communicate()[0].decode("utf-8")
-
+    output, error = process.communicate()[0].decode("utf-8")
+    if error:
+        print(error)
 
     HO = {}
     HO['Iteration'] = int(output.split()[24])
