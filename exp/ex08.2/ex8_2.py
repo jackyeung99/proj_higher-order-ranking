@@ -12,7 +12,8 @@ from sklearn.model_selection import train_test_split
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 C_PATH = os.path.join(repo_root, 'C_Prog', 'Readfile')
-sys.path.append(C_PATH)
+# sys.path.append(C_PATH)
+os.chdir(C_PATH)
 
 
 
