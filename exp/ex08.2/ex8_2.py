@@ -36,7 +36,7 @@ def run_simulation_real_data (filein_idx, filein_data, model, ratio):
     error = error.decode("utf-8")
 
     if process.returncode != 0:
-        print(f"Subprocess failed with error: {error.decode('utf-8')}")
+        print(f"Subprocess failed with error: {error}")
         return None, None
 
     HO = {}
