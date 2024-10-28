@@ -29,7 +29,11 @@ def run_simulation_real_data (filein_idx, filein_data, model, ratio):
     
 
     ##parse output
-    output, error = process.communicate()[0].decode("utf-8")
+    output, error = process.communicate()
+
+    # Decode both output and error from bytes to string
+    output = output.decode("utf-8")
+    error = error.decode("utf-8")
 
     if process.returncode != 0:
         print(f"Subprocess failed with error: {error.decode('utf-8')}")
