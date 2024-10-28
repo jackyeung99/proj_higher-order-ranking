@@ -1,4 +1,4 @@
-,dataset,avg_HO_iteration,avg_PL_iteration,Avg_SpeedUp
+,dataset,Ours,Zermello,Avg_SpeedUp
 0,1,10000.0,10000.0,1.0
 8,2,665.2,1389.52,2.0888755261575462
 17,4,150.88,381.0,2.525185577942736

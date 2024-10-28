@@ -19,17 +19,10 @@ os.chdir(C_PATH)
 
 def run_simulation_real_data (filein_idx, filein_data, model, ratio):
     
-    print('----------------- Current Directory -----------------')
-    print(os.getcwd())
-    
-    bt_model_data_path = os.path.join(C_PATH, 'bt_model_data.out')
-    print(f"bt_model_data.out path: {bt_model_data_path}")
-    print(f"filein_idx path: {filein_idx}")
-    print(f"filein_data path: {filein_data}")
+
     # command = '../Readfile/bt_model_data.out ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio) 
-    print('----------------- Command  -----------------')
+
     command = os.path.join(C_PATH, 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio)
-    print(shlex.split(command))
 
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     
@@ -99,4 +92,4 @@ if __name__ == '__main__':
     grouped = group_c_data(dataset_file_path)
 
     out_path = os.path.join(os.path.dirname(__file__), 'data')
-    run_real_data(grouped, 1, 100, out_path)
+    run_real_data(grouped, 1, 20, out_path)

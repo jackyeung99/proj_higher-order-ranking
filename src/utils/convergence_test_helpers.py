@@ -31,11 +31,15 @@ def std_error(new_scores, old_scores):
     return err
 
 
+def random_number_from_logistic():
+    return 1.0 / np.random.rand() - 1.0
+
+
 
 # Modified Solver function  to Keep Track of iterations for Genralized Newman 
 def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e-6):
-    logistic_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
-    scores = {n: logistic_distribution[n] for n in pi_values}
+    # logistic_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
+    scores = {n: random_number_from_logistic () for n in pi_values}
     normalize_scores_old(scores)
 
     err = 1.0
@@ -47,12 +51,10 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
                  
         normalize_scores_old(tmp_scores)
 
-
         err = std_error(tmp_scores, scores)
         # err = rms_error(tmp_scores, scores)
 
         scores = tmp_scores.copy()
-
 
         iteration += 1
         info[iteration] = err
@@ -71,7 +73,7 @@ def compute_predicted_ratings_HO_BT_info_random(training_set, pi_values, max_ite
 
 def compute_predicted_ratings_plackett_luce_random(training_set, pi_values, max_iter=10000): 
     bond_matrix = create_hypergraph_from_data_old(training_set)
-    predicted_ho_scores, info = synch_solve_equations_info(bond_matrix, max_iter, pi_values, iterate_equation_zermelo_new, sens=1e-6)
+    predicted_ho_scores, info = synch_solve_equations_info(bond_matrix, max_iter, pi_values, iterate_equation_zermelo, sens=1e-6)
  
     return predicted_ho_scores, info
 

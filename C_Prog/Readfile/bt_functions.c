@@ -906,17 +906,17 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
   R->iterations = 0;
   R->scores = (double *)malloc((R->N+1)*sizeof(double));
   R->tmp_scores = (double *)malloc((R->N+1)*sizeof(double));
-  // for(i=1;i<=R->N;i++)
-  //   {
-  //     R->scores[i] = random_number_from_logistic();
-  //     R->tmp_scores[i] = random_number_from_logistic();
-  //   }
-
   for(i=1;i<=R->N;i++)
     {
-      R->scores[i] = 1.0;
-      R->tmp_scores[i] = 1.0;
+      R->scores[i] = random_number_from_logistic();
+      R->tmp_scores[i] = random_number_from_logistic();
     }
+
+  // for(i=1;i<=R->N;i++)
+  //   {
+  //     R->scores[i] = 1.0;
+  //     R->tmp_scores[i] = 1.0;
+  //   }
 
   normalize_scores (R);
 
