@@ -20,7 +20,11 @@ def run_simulation_real_data (filein_idx, filein_data, model, ratio):
     
     print('----------------- Current Directory -----------------')
     print(os.getcwd())
-
+    
+    bt_model_data_path = os.path.join(C_PATH, 'bt_model_data.out')
+    print(f"bt_model_data.out path: {bt_model_data_path}")
+    print(f"filein_idx path: {filein_idx}")
+    print(f"filein_data path: {filein_data}")
     # command = '../Readfile/bt_model_data.out ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio) 
     print('----------------- Command  -----------------')
     command = os.path.join(C_PATH, 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio)
