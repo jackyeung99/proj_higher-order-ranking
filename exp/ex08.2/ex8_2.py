@@ -24,14 +24,16 @@ def run_simulation_real_data (filein_idx, filein_data, model, ratio):
     # command = '../Readfile/bt_model_data.out ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio) 
 #     print(shlex.split(command))
     command = os.path.join(C_PATH, 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio)
-    print(command)
-    process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 
+    process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     
+
     ##parse output
     output, error = process.communicate()[0].decode("utf-8")
-    if error:
-        print(error)
+
+    if process.returncode != 0:
+        print(f"Subprocess failed with error: {error.decode('utf-8')}")
+        return None, None
 
     HO = {}
     HO['Iteration'] = int(output.split()[24])
