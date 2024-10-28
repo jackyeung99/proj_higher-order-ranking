@@ -23,8 +23,8 @@ def run_simulation_real_data (filein_idx, filein_data, model, ratio):
 
     # command = '../Readfile/bt_model_data.out ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio) 
     print('----------------- Command  -----------------')
-    print(shlex.split(command))
     command = os.path.join(C_PATH, 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio)
+    print(shlex.split(command))
 
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     
