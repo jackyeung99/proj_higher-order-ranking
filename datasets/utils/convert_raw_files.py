@@ -81,10 +81,15 @@ def group_soi(file_directory):
 
 def combine_soi(sub_files, file_directory, outfile):
     for dataset_id, files in sub_files.items():
+
+        if dataset_id not in [14, 45, 9, 28, 52, 44]:
+            continue
+
         dataset_games = {}
         dataset_pi_values = {}
 
         for file in files:
+
             file_path = os.path.join(file_directory, file)
             id_to_name = get_alternative_names(file_path)
             id_to_name = {k-1: v for k,v in id_to_name.items()}
@@ -100,6 +105,11 @@ def combine_soi(sub_files, file_directory, outfile):
             for key in pi_values.keys():
                 alt_name = id_to_name[key]
                 dataset_pi_values[alt_name] = 1.0
+
+            
+        if dataset_id in [9, 28]:
+            break
+          
 
         write_files(outfile, dataset_id, dataset_pi_values, dataset_games)
 
@@ -123,6 +133,7 @@ def convert_raw_files(file_path, read_function, title, outfile):
 
             for key in pi_values.keys():
                 dataset_pi_values[key] = 1.0
+
     else:
         data, pi_values = read_function(full_path)
         dataset_games = data
@@ -130,9 +141,16 @@ def convert_raw_files(file_path, read_function, title, outfile):
 
     write_files(outfile, title, dataset_pi_values, dataset_games)
 
+
+
+
+
 if __name__ == '__main__':
     file_directory = os.path.join(repo_root, 'datasets', 'raw_data', 'preflib')
     out_file_dir = os.path.join(repo_root, 'datasets', 'processed_data')
+    os.makedirs(out_file_dir, exist_ok=True)
+
+    
     grouping = group_soi(file_directory)
 
     combine_soi(grouping, file_directory, out_file_dir)

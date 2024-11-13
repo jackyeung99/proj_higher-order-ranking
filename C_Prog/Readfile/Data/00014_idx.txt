@@ -98,5 +98,3 @@
 98 namako_(sea_cucumber)
 99 kujira_(whale)
 100 battera_(OSHIZUSHI_style_mackerel)
-101 kappa-maki_(cucumber_roll)
-102 sake_(salmon_roe)

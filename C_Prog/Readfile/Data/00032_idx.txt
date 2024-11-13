@@ -11,9 +11,3 @@
 11 Introduction_to_Artificial_Intelligence
 12 Professional_Seminar
 13 Software_Engineering_3
-14 Bad_motivation_to_enter_into_the_labour_market
-15 Bad_preparation_in_the_preceding_education
-16 Generational_apathy
-17 Low_effort
-18 Curricula
-19 Professors
