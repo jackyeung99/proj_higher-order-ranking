@@ -81,8 +81,8 @@ def group_soi(file_directory):
 
 def combine_soi(sub_files, file_directory, outfile):
     for dataset_id, files in sub_files.items():
-
-        if dataset_id not in [14, 45, 9, 28, 52, 44]:
+        print(dataset_id)
+        if int(dataset_id) not in [14, 45, 9, 28, 52, 44]:
             continue
 
         dataset_games = {}
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     out_file_dir = os.path.join(repo_root, 'datasets', 'processed_data')
     os.makedirs(out_file_dir, exist_ok=True)
 
-    
+
     grouping = group_soi(file_directory)
 
     combine_soi(grouping, file_directory, out_file_dir)
