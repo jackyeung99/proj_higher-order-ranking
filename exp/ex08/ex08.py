@@ -11,7 +11,7 @@ from concurrent.futures import ProcessPoolExecutor
 from sklearn.model_selection import train_test_split
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-C_PATH = os.path.join(repo_root, 'C_Prog', 'Readfile')
+C_PATH = os.path.join(repo_root, 'C_Prog')
 # sys.path.append(C_PATH)
 os.chdir(C_PATH)
 
@@ -22,7 +22,7 @@ def run_simulation_real_data (filein_idx, filein_data, model, ratio):
     
     
 
-    command = '../Readfile/bt_model_data.out ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio) 
+    command = 'Real_data/Convergence_Readfile/bt_model_data.out ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio) 
 #     print(shlex.split(command))
 
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
@@ -78,10 +78,10 @@ def run_real_data(grouped_files, model, repetitions, out_file_dir):
 
             iteration_result = {
                 'Dataset': dataset_id,
-                'Ours': convergence_dict['R']['rms_convergence_criterion'],
-                'Zermello': convergence_dict['RL']['rms_convergence_criterion'],
-                'Ours_bin': convergence_dict['BIN']['rms_convergence_criterion'],
-                'Zermello_bin': convergence_dict['BINL']['rms_convergence_criterion'],
+                'Ours': convergence_dict['R']['rms_convergence_criteria'],
+                'Zermello': convergence_dict['RL']['rms_convergence_criteria'],
+                'Ours_bin': convergence_dict['BIN']['rms_convergence_criteria'],
+                'Zermello_bin': convergence_dict['BINL']['rms_convergence_criteria'],
                 'criterion': 'rms_difference',
                 'rep': rep 
             }
@@ -95,7 +95,7 @@ def group_c_data(data_dir):
     sub_files = {}
     for file in os.listdir(data_dir):
         dataset_id = file.split('_')[0]
-        if file not in ['cl_data_cprog_game.txt', 'cl_data_cprog_idx.txt', 'wc_data_cprog_game.txt', 'wc_data_cprog_idx.txt'] and int(dataset_id) not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
+        if int(dataset_id) not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
             if dataset_id not in sub_files:
                 sub_files[dataset_id] = []
             sub_files[dataset_id].append(file)
