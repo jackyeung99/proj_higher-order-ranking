@@ -95,7 +95,7 @@ def group_c_data(data_dir):
     sub_files = {}
     for file in os.listdir(data_dir):
         dataset_id = file.split('_')[0]
-        if int(dataset_id) not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
+        if int(dataset_id) not in [1, 10, 11, 15, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101, 105]:
             if dataset_id not in sub_files:
                 sub_files[dataset_id] = []
             sub_files[dataset_id].append(file)

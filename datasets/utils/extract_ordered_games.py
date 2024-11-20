@@ -141,3 +141,25 @@ def read_strict_ordered_dataset(filename):
 
 
     return data, pi_values
+
+
+def read_data_wolf(filename):
+    data = []
+    pi_values = {}
+
+    with open(filename, 'r') as file:
+
+
+        for line in file:
+            i, j = line.strip().split(',')
+
+            if i not in pi_values:
+                pi_values[i] = 0
+            if j not in pi_values:
+                pi_values[j] = 0
+
+            if i != j:
+                data.append((i, j))
+
+    data = convert_games_to_dict(data)
+    return data, pi_values

@@ -9,7 +9,7 @@
 
 
 #define eps 1e-6
-#define MAX_ITER 1000
+#define MAX_ITER 100000
 
 
 int main (int argc, char **argv)
@@ -37,10 +37,14 @@ int main (int argc, char **argv)
   struct hypergraph *G = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct hypergraph *Gtrain = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct hypergraph *Gtest = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
+
   struct model_results *R =  (struct model_results*)malloc(1 * sizeof(struct model_results));
+  struct model_results *RL =  (struct model_results*)malloc(1 * sizeof(struct model_results));
+
   struct hypergraph *binG = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct hypergraph *binGtrain = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct hypergraph *binGtest = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
+
   struct model_results *binR =  (struct model_results*)malloc(1 * sizeof(struct model_results));
   struct model_results *leader_R =  (struct model_results*)malloc(1 * sizeof(struct model_results));
 
@@ -88,6 +92,10 @@ int main (int argc, char **argv)
   evaluate_results (Gtest, leader_R);
 
 
+  zermelo_iterative_algorithm_ho_model (G, RL, eps, MAX_ITER);
+  evaluate_results(Gtest, RL);
+
+
   printf("%d %d %g %g %g %g", N, M, Gtest->prior, Gtest->likelihood_ho, Gtest->likelihood_leader, binGtest->likelihood_ho);
   printf("\t");
   printf("%g %g %g %g %g %g", R->log_error, R->spearman,R->kendall, R->prior,R->likelihood_ho,R->likelihood_leader);
@@ -96,7 +104,9 @@ int main (int argc, char **argv)
   printf("\t");
   printf("%g %g %g %g %g %g", binR->log_error, binR->spearman,binR->kendall, binR->prior,binR->likelihood_ho,binR->likelihood_leader);
   printf("\t");
-  printf("%d %d", R->iterations, leader_R->iterations);
+  printf("%g %g %g %g %g %g", RL->log_error, RL->spearman,RL->kendall, RL->prior,RL->likelihood_ho,RL->likelihood_leader);
+  printf("\t");
+  printf("%d %d %d", R->iterations, leader_R->iterations, RL->iterations);
   printf("\n");
   
   /*

@@ -1046,3 +1046,81 @@ void create_train_test_sets (struct hypergraph *G, struct hypergraph *Gtrain, st
 
    free(control);
 }
+
+
+void zermelo_iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter)
+{
+  int i;
+  
+  R->N = G->N;
+  R->iterations = 0;
+
+  
+  R->scores = (double *)malloc((R->N+1)*sizeof(double));
+  R->tmp_scores = (double *)malloc((R->N+1)*sizeof(double));
+  for(i=1;i<=R->N;i++)
+    {
+      R->scores[i] = random_number_from_logistic();
+      R->tmp_scores[i] = random_number_from_logistic();
+    }
+  normalize_scores (R);
+
+ 
+  zermelo_single_iteration_ho_model (G, R);
+  normalize_scores (R);
+  measure_convergence (R);
+
+
+  //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
+
+
+  while (R->log_convergence>accuracy && R->iterations < max_iter)
+    {
+      zermelo_single_iteration_ho_model (G, R);
+      normalize_scores (R);
+      measure_convergence (R);
+
+      //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
+    }
+  
+  return;
+}
+
+
+void zermelo_single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
+{
+  int t, v, i, r, m, j;
+  double tmp, num, den;
+
+  R->iterations += 1;
+  
+  for(i=1;i<=R->N;i++) R->tmp_scores[i] = R->scores[i];
+
+
+  for(i=1;i<=G->N;i++)
+    {
+
+      num = 1.0;
+      den = 2.0 / (R->tmp_scores[i] + 1.0);
+      
+      for(j=1;j<=G->node_rank[0][i];j++)
+	{
+	  r = G->node_rank[i][j];
+	  m = G->hyperbonds[i][j];
+
+	  num += 1.0;
+	  
+	  for(t=1;t<=r;t++){
+            tmp = 0.0;
+            for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+            den += 1.0 / tmp;
+          }
+
+	}
+
+      R->scores[i] = num /den;
+
+    }
+  
+
+}

@@ -1,0 +1,37 @@
+This package contains code implementing the fast iterative ranking method for the Bradley-Terry model described in the paper "Efficient computation of rankings from pairwise comparisons," by M. E. J. Newman, Journal of Machine Learning Research (2023).  A copy of the paper can be found here:
+
+https://arxiv.org/abs/2207.00076
+
+The files are:
+
+bt.py:    Python program implementing the method.  The program is written
+          for Python version 3.
+wolf.csv: CSV file containing an example data set, the wolf hierarchy
+          from the paper
+README:   This file
+
+The input file name is read as the first and only argument to the program.  Thus, from the command line you could type:
+
+bt.py wolf.csv
+
+and the program will compute rankings for the wolf data set.
+
+
+Input data format:
+
+The N objects or individuals to be ranked are numbered from zero to N-1 in Python style and the input data is in the form of a CSV file with two comma-separated integers per line.  There is one line for each interaction or contest in the data set, with the id number of the winner listed first, then the loser.  Lines can be in any order.  Thus:
+
+0,1
+1,0
+0,1
+2,1
+2,1
+1,3
+2,1
+
+indicates that 0 beat 1 twice, 1 beat 0 once, 2 beat 1 three times, and so on.
+
+
+Output format:
+
+If the input file is called filename.csv then the output file will be called filename.pi.  The output file is another CSV file, this one with three columns.  The first column gives the id number of the object or individual, the second column is the computed value of pi_i for that individual (the "strength" parameter in the nomenclature of the paper), and the third column is s_i = log(pi_i), the score or log-odds, which is just another way of representing the same strength.  Higher values of either pi_i or s_i indicate stronger "players," so sorting in descending order by either of these columns will give you a ranking from strongest to weakest.

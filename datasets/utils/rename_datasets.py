@@ -76,7 +76,8 @@ DATASET_NAMES = {
     '101': 'horse_racing',
     '102': 'UCL',
     '103': 'FIFA',
-    '104': 'authorship'
+    '104': 'authorship',
+    '105': 'wolf'
 }
 
 FLIPPED_DATASET_NAMES = {v:k for k,v in DATASET_NAMES.items()}

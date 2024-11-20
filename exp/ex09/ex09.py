@@ -3,24 +3,79 @@ import sys
 
 import pandas as pd 
 
+
+import subprocess
+import shlex
+
+
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-sys.path.append(repo_root)
-
-from src import *
-from src.models.BradleyTerry import *
-from tst.tst_weight_conversion.old_newman import * 
-
-def compute_predicted_ratings_HO_BT_info(training_set, pi_values): 
-    bond_matrix = create_hypergraph_from_data_weight(training_set)
-    predicted_ho_scores, iter = synch_solve_equations(bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
-    return predicted_ho_scores, iter
+C_PATH = os.path.join(repo_root, 'C_Prog')
+# sys.path.append(C_PATH)
+os.chdir(C_PATH)
 
 
 
-def iteration_at_convergence(K):
-    data, pi_values = generate_weighted_model_instance(1000, 1000, K , K)
-    predicted_scores, iteration = compute_predicted_ratings_HO_BT_info(data, pi_values)
-    return iteration
+def run_simulation (N, M, K1, K2, ratio, model):
+    
+    
+    
+
+    command = 'Synthetic/bt_model.out ' + str(N) + ' ' + str(M) + ' ' + str(K1) + ' ' + str(K2) + ' ' + str(model) + ' ' + str(ratio) 
+#     print(shlex.split(command))
+
+    process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+    
+    
+    ##parse output
+    output = process.communicate()[0].decode("utf-8")
+#     print (output)
+
+
+    G = {}
+    G['N'] = int(output.split()[0])
+    G['M'] = int(output.split()[1])
+    G['prior'] = float(output.split()[2])
+    G['like_ho'] = float(output.split()[3])
+    G['like_hol'] = float(output.split()[4])
+    G['like_bin'] = float(output.split()[5])
+
+    
+    HO = {}
+    HO['log_err'] = float(output.split()[6])
+    HO['spear'] = float(output.split()[7])
+    HO['kend'] = float(output.split()[8])
+    HO['prior'] = float(output.split()[9])
+    HO['like_ho'] = float(output.split()[10])
+    HO['like_hol'] = float(output.split()[11])
+    HO['Iteration'] = int(output.split()[30])
+    
+    HOL = {}
+    HOL['log_err'] = float(output.split()[12])
+    HOL['spear'] = float(output.split()[13])
+    HOL['kend'] = float(output.split()[14])
+    HOL['prior'] = float(output.split()[15])
+    HOL['like_ho'] = float(output.split()[16])
+    HOL['like_hol'] = float(output.split()[17])
+    HOL['Iteration'] = int(output.split()[31])
+    
+    BIN = {}
+    BIN['log_err'] = float(output.split()[18])
+    BIN['spear'] = float(output.split()[19])
+    BIN['kend'] = float(output.split()[20])
+    BIN['prior'] = float(output.split()[21])
+    BIN['like_ho'] = float(output.split()[22])
+    BIN['like_hol'] = float(output.split()[23])
+
+    Z = {}
+    Z['log_err'] = float(output.split()[24])
+    Z['spear'] = float(output.split()[25])
+    Z['kend'] = float(output.split()[26])
+    Z['prior'] = float(output.split()[27])
+    Z['like_ho'] = float(output.split()[28])
+    Z['like_hol'] = float(output.split()[29])
+    Z['Iteration'] = int(output.split()[32])
+    
+    return G, HO, HOL, BIN, Z
 
 
 def hyper_edge_iteration(repetitions, out_file_dir, K_values):
@@ -28,9 +83,17 @@ def hyper_edge_iteration(repetitions, out_file_dir, K_values):
 
     values = []
     for K in K_values:
+        print(K)
         for rep in range(repetitions):
-            iteration = iteration_at_convergence(K)
-            values.append({"K": K, "Rep": rep, "Iterations_to_converge": iteration}) 
+            _, HO, _, _, Z = run_simulation(1000, 10000, K, K, 1.0, 1)
+            values.append({
+                "K": K,
+                "Rep": rep,
+                "Ours": HO['Iteration'],
+                "Outs_Log_like": HO['log_err'],
+                "Zermello": Z['Iteration'],
+                "Zermello_log_like": Z['log_err']
+                }) 
 
     df = pd.DataFrame(values)
     path = os.path.join(out_file_dir, 'Hyperedge_iteration_count.csv')
@@ -40,7 +103,7 @@ def hyper_edge_iteration(repetitions, out_file_dir, K_values):
 if __name__ == '__main__':
     K_values = range(2,22,2)
     out_dir = os.path.join(os.path.dirname(__file__), 'data')
-    reps = 100
+    reps = 25
     hyper_edge_iteration(reps, out_dir, K_values)
 
 

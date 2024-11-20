@@ -82,6 +82,7 @@ def group_soi(file_directory):
 def combine_soi(sub_files, file_directory, outfile):
     for dataset_id, files in sub_files.items():
         print(dataset_id)
+
         if int(dataset_id) not in [14, 45, 9, 28, 52, 44]:
             continue
 
@@ -106,7 +107,7 @@ def combine_soi(sub_files, file_directory, outfile):
                 alt_name = id_to_name[key]
                 dataset_pi_values[alt_name] = 1.0
 
-            
+           
         if dataset_id in [9, 28]:
             break
           
@@ -151,14 +152,16 @@ if __name__ == '__main__':
     os.makedirs(out_file_dir, exist_ok=True)
 
 
-    grouping = group_soi(file_directory)
+    # grouping = group_soi(file_directory)
 
-    combine_soi(grouping, file_directory, out_file_dir)
+    # combine_soi(grouping, file_directory, out_file_dir)
 
-    convert_raw_files('authorships.txt', read_data_authors, '00104', out_file_dir)
-    convert_raw_files('cl_data.txt', read_data_ucl, '00102', out_file_dir)
-    convert_raw_files('fifa_wc.txt', read_data_fifa, '00103', out_file_dir)
-    convert_raw_files('olympic_swimming', read_data_swimming, '00100', out_file_dir)
-    convert_raw_files('horse_racing', read_data_horse, '00101', out_file_dir)
+    # convert_raw_files('authorships.txt', read_data_authors, '00104', out_file_dir)
+    # convert_raw_files('cl_data.txt', read_data_ucl, '00102', out_file_dir)
+    # convert_raw_files('fifa_wc.txt', read_data_fifa, '00103', out_file_dir)
+    # convert_raw_files('olympic_swimming', read_data_swimming, '00100', out_file_dir)
+    # convert_raw_files('horse_racing', read_data_horse, '00101', out_file_dir)
+    convert_raw_files('wolf.csv', read_data_wolf, '00105', out_file_dir)
+
 
     

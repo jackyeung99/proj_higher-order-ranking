@@ -63,6 +63,8 @@ int main (int argc, char **argv)
     {								  
       R->scores[i] = random_number_from_logistic();
       R->tmp_scores[i] = random_number_from_logistic();
+      // R->scores[i] = 1;
+      // R->tmp_scores[i] = 1;
     }                                                                                                                   
   normalize_scores (R);                                                                                                 
 
@@ -120,10 +122,10 @@ int main (int argc, char **argv)
   printf(";;;");
 
     for(i=0;i<=MAX_ITER;i++) if(binRL->vector_error[0][i]>0) printf("%d %g %g %g\t",i,binRL->vector_error[0][i],binRL->vector_error[1][i],binRL->vector_error[2][i]);
-  printf("\n");
+  printf(";;;");
 
 
-  //for(i=1;i<=G->N;i++) printf("%d %g %g\n",i,R->scores[i],RL->scores[i]);
+  for(i=1;i<=G->N;i++) printf("%d %g %g\n",i,R->scores[i],RL->scores[i]);
 
   
   

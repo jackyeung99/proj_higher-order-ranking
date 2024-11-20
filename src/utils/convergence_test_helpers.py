@@ -63,7 +63,7 @@ def synch_solve_equations_info(bond_matrix, max_iter, pi_values, method, sens=1e
     return scores, info
 
 
-def compute_predicted_ratings_HO_BT_info_random(training_set, pi_values, max_iter=10000): 
+def compute_predicted_ratings_HO_BT_info(training_set, pi_values, max_iter=10000): 
     # Using un-weighted newman iterative schema such that a random shuffle of the data can occur 
     bond_matrix = create_hypergraph_from_data_old(training_set)
     predicted_ho_scores, info  = synch_solve_equations_info(bond_matrix, max_iter, pi_values, iterate_equation_newman_old, sens=1e-6)
@@ -71,7 +71,7 @@ def compute_predicted_ratings_HO_BT_info_random(training_set, pi_values, max_ite
     return predicted_ho_scores, info
 
 
-def compute_predicted_ratings_plackett_luce_random(training_set, pi_values, max_iter=10000): 
+def compute_predicted_ratings_plackett_luce_info(training_set, pi_values, max_iter=10000): 
     bond_matrix = create_hypergraph_from_data_old(training_set)
     predicted_ho_scores, info = synch_solve_equations_info(bond_matrix, max_iter, pi_values, iterate_equation_zermelo, sens=1e-6)
  
@@ -80,8 +80,8 @@ def compute_predicted_ratings_plackett_luce_random(training_set, pi_values, max_
 
 # Run both models keeping track of error for iterations
 def test_convergence(un_weighted_data, pi_values, max_iter):
-    _, HO_info = compute_predicted_ratings_HO_BT_info_random(un_weighted_data, pi_values, max_iter)
-    _, PL_info = compute_predicted_ratings_plackett_luce_random(un_weighted_data, pi_values, max_iter)
+    _, HO_info = compute_predicted_ratings_HO_BT_info(un_weighted_data, pi_values, max_iter)
+    _, PL_info = compute_predicted_ratings_plackett_luce_info(un_weighted_data, pi_values, max_iter)
 
     ho_errors = np.zeros(max_iter)
     pl_errors = np.zeros(max_iter)

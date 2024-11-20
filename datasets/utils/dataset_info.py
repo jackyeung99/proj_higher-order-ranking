@@ -11,17 +11,9 @@ from datasets.utils.rename_datasets import DATASET_NAMES
 
 def get_edge_size(data):
 
-    K1 = float('inf')
-    K2 = float('-inf')
-
-    for edge in data.keys():
-        edge_length = len(edge)
-        if edge_length < K1:  
-            K1 = edge_length
-        if edge_length > K2:
-            K2 = edge_length
-
-    return K1, K2
+    edges = [len(x) for x in data.keys()]
+    
+    return min(edges), max(edges), np.mean(edges)
 
 
 
@@ -43,7 +35,8 @@ def create_info_table(dataset_file_directory, out_file):
             dataset_name = DATASET_NAMES[str(int(dataset_id))]
             N = len(pi_values)
             M = np.sum(list(data.values()))
-            K1, K2 = get_edge_size(data)
+            K1, K2, K_avg = get_edge_size(data)
+
 
 
             info = {
@@ -51,8 +44,10 @@ def create_info_table(dataset_file_directory, out_file):
                     'name': dataset_name,
                     'N': N,
                     'M': M,
+                    'Ratio': N/M,
                     'K1': K1,
-                    'K2': K2
+                    'K2': K2,
+                    'K_avg': round(K_avg, 3) 
                         }
             
             dataset_info.append(info)

@@ -41,7 +41,7 @@ def read_edges(file_path):
     return list_of_games
 
 def read_nodes(file_path):
-    name_conversions = get_alternative_names(file_path)
+    name_conversions = get_alternative_names(file_path)  
     # 1 index games
     name_conversions = {k+1: v for k,v in name_conversions.items()}
     return name_conversions
@@ -73,7 +73,7 @@ if __name__ == '__main__':
 
 
     data_dir = os.path.join(repo_root, 'datasets', 'processed_data')
-    out_dir = os.path.join(repo_root, 'C_Prog', 'Readfile', 'Data')
+    out_dir = os.path.join(repo_root, 'C_Prog','Data')
     grouped_files = group_datasets(data_dir)
 
     loop_files(out_dir,data_dir, grouped_files)
