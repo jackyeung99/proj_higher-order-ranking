@@ -23,11 +23,13 @@ struct model_results
   double prior;
   double error;
   double log_error;
+  double av_error;
   double spearman;
   double kendall;
   double *scores;
   double *tmp_scores;
   double **vector_error;
+  int cyclic;
 };
 
 

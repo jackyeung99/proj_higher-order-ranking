@@ -44,7 +44,7 @@ def create_info_table(dataset_file_directory, out_file):
                     'name': dataset_name,
                     'N': N,
                     'M': M,
-                    'Ratio': N/M,
+                    'Ratio': M/N,
                     'K1': K1,
                     'K2': K2,
                     'K_avg': round(K_avg, 3) 

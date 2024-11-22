@@ -17,15 +17,19 @@ struct model_results
   int iterations;
   double convergence;
   double log_convergence;
+  double av_convergence;
   double likelihood_ho;
   double likelihood_leader;
   double prior;
   double error;
   double log_error;
+  double av_error;
   double spearman;
   double kendall;
   double *scores;
   double *tmp_scores;
+  double **vector_error;
+  int cyclic;
 };
 
 
@@ -55,6 +59,9 @@ void print_results (struct model_results *R);
 
 void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter);
 void single_iteration_ho_model (struct hypergraph *G, struct model_results *R);
+
+void zermelo_iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter);
+void zermelo_single_iteration_ho_model (struct hypergraph *G, struct model_results *R);
 
 void single_iteration_leadership_model (struct hypergraph *G, struct model_results *R);
 void iterative_algorithm_leadership_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter);

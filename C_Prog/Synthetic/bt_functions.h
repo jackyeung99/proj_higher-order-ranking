@@ -17,18 +17,24 @@ struct model_results
   int iterations;
   double convergence;
   double log_convergence;
+  double av_convergence;
   double likelihood_ho;
   double likelihood_leader;
   double prior;
   double error;
   double log_error;
+  double av_error;
   double spearman;
   double kendall;
   double *scores;
   double *tmp_scores;
+  double **vector_error;
+  int cyclic;
 };
 
 
+void read_index_file (char *filename, struct hypergraph *G, char **names);
+void read_data_file (char *filename, struct hypergraph *G);
 
 void deallocate_memory (struct hypergraph *G);
 void print_hypergraph(struct hypergraph *G);

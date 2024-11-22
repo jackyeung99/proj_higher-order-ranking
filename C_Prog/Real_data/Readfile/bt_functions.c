@@ -13,12 +13,11 @@ void read_index_file (char *filename, struct hypergraph *G, char **names)
 {
   
   int i, q;
-  char name[256];
+  char name[100];
   FILE *f;
 
   G->N = 0;
   f = fopen(filename,"r");
-
   while(!feof(f))
     {
       q = fscanf(f,"%d %s",&i,name);
@@ -46,6 +45,8 @@ void read_index_file (char *filename, struct hypergraph *G, char **names)
 
   
 }
+
+
 
 
 void read_data_file (char *filename, struct hypergraph *G)
@@ -560,18 +561,21 @@ void evaluate_results (struct hypergraph *G, struct model_results *R)
 
 
   //error
-  R->error = R->log_error = 0.0;
+  R->error = R->log_error = R->av_error= 0.0;
   
   for(i=1;i<=G->N;i++)
     {
       R->error += (G->pi_values[i]-R->scores[i])*(G->pi_values[i]-R->scores[i]);
       R->log_error += (log(G->pi_values[i])-log(R->scores[i]))*(log(G->pi_values[i])-log(R->scores[i]));
+      R->av_error += (G->pi_values[i]/(1.0 + G->pi_values[i]) - R->scores[i]/(1.0 + R->scores[i]))*(G->pi_values[i]/(1.0 + G->pi_values[i]) - R->scores[i]/(1.0 + R->scores[i]));
     }
 
   R->error = R->error / (double)R->N;
   R->error = sqrt(R->error);
   R->log_error = R->log_error / (double)R->N;
   R->log_error = sqrt(R->log_error);
+  R->av_error = R->av_error / (double)R->N;
+  R->av_error = sqrt(R->av_error);
 
 
 
@@ -846,6 +850,10 @@ void deallocate_memory_results (struct model_results *R)
 {
   free(R->scores);
   free(R->tmp_scores);
+  free(R->vector_error[0]);
+  free(R->vector_error[1]);
+  free(R->vector_error[2]);
+  free(R->vector_error);
   free(R);
 }
 
@@ -885,15 +893,34 @@ void normalize_scores (struct model_results *R)
 void measure_convergence (struct model_results *R)
 {
   double tmp;
-  int i;
-  R->convergence = R->log_convergence = 0.0;
+  int i;  
+  R->convergence = R->log_convergence = R->av_convergence = 0.0;
+  /*
   for(i=1;i<=R->N;i++)
     {
       tmp = fabs(R->scores[i] - R->tmp_scores[i]);
       if (tmp > R->convergence) R->convergence = tmp;
       tmp = fabs(log(R->scores[i]) - log(R->tmp_scores[i]));
       if (tmp > R->log_convergence) R->log_convergence = tmp;
+      tmp = fabs(R->scores[i]/(1.0+R->scores[i]) - R->tmp_scores[i]/(1.0+R->tmp_scores[i]));
+      if (tmp > R->av_convergence) R->av_convergence = tmp;
     }
+  */
+    for(i=1;i<=R->N;i++)
+    {
+      tmp = R->scores[i] - R->tmp_scores[i];
+      R->convergence += tmp*tmp;
+      tmp = log(R->scores[i]) - log(R->tmp_scores[i]);
+      R->log_convergence += tmp*tmp;
+      tmp = R->scores[i]/(1.0+R->scores[i]) - R->tmp_scores[i]/(1.0+R->tmp_scores[i]);
+      R->av_convergence += tmp*tmp;
+    }
+    R->convergence /= (double)R->N;
+    R->convergence = sqrt(R->convergence);
+    R->log_convergence /= (double)R->N;
+    R->log_convergence = sqrt(R->log_convergence);
+    R->av_convergence /= (double)R->N;
+    R->av_convergence = sqrt(R->av_convergence);
 }
 
 
@@ -904,6 +931,8 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
   
   R->N = G->N;
   R->iterations = 0;
+
+  
   R->scores = (double *)malloc((R->N+1)*sizeof(double));
   R->tmp_scores = (double *)malloc((R->N+1)*sizeof(double));
   for(i=1;i<=R->N;i++)
@@ -911,33 +940,43 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
       R->scores[i] = random_number_from_logistic();
       R->tmp_scores[i] = random_number_from_logistic();
     }
-
-  // for(i=1;i<=R->N;i++)
-  //   {
-  //     R->scores[i] = 1.0;
-  //     R->tmp_scores[i] = 1.0;
-  //   }
-
   normalize_scores (R);
+  
 
-
+  R->vector_error = (double **)malloc(3*sizeof(double*));
+  R->vector_error[0] = (double *)malloc((max_iter+1)*sizeof(double));
+  R->vector_error[1] = (double *)malloc((max_iter+1)*sizeof(double));
+  R->vector_error[2] = (double *)malloc((max_iter+1)*sizeof(double));
+  for(i=0;i<=max_iter;i++) R->vector_error[0][i] = R->vector_error[1][i] = R->vector_error[2][i] = -1.0; 
+  
  
   single_iteration_ho_model (G, R);
   normalize_scores (R);
   measure_convergence (R);
 
+
+  R->vector_error[0][R->iterations] = R->log_convergence;
+  R->vector_error[1][R->iterations] = R->convergence;
+  R->vector_error[2][R->iterations] = R->av_convergence;
+
   //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
 
 
-  while (R->log_convergence>accuracy && R->iterations < max_iter)
+  while (R->av_convergence>accuracy && R->iterations < max_iter)
     {
       single_iteration_ho_model (G, R);
       normalize_scores (R);
       measure_convergence (R);
+
+      R->vector_error[0][R->iterations] = R->log_convergence;
+      R->vector_error[1][R->iterations] = R->convergence;
+      R->vector_error[2][R->iterations] = R->av_convergence;
       //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
     }
-
+  
+  return;
 }
+
 
 
 void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
@@ -953,7 +992,9 @@ void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
 
   for(i=1;i<=G->N;i++)
     {
-      num = den = 1.0 / (R->tmp_scores[i] + 1.0);
+      if (R->cyclic == 0) num = den = 1.0 / (R->tmp_scores[i] + 1.0);
+      if (R->cyclic == 1) num = den = 1.0 / (R->scores[i] + 1.0);
+
       
       for(j=1;j<=G->node_rank[0][i];j++)
 	{
@@ -965,13 +1006,22 @@ void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
 	  if (r < G->hyperedges[m][0])
 	    {
 	      tmp = 0.0;
-	      for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-	      num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+	      if (R->cyclic == 0)
+                {
+                  for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                  num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+                }
+              if (R->cyclic == 1)
+                {
+                  for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                  num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
+                }
 	    }
 
 	  for(t=1;t<=r-1;t++){
 	    tmp = 0.0;
-	    for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+	    if (R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+            if (R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
 	    den += 1.0 / tmp;
 	  }
 	  
@@ -984,6 +1034,11 @@ void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
   
 
 }
+
+
+
+
+
 
 
 
@@ -1005,20 +1060,37 @@ void iterative_algorithm_leadership_model (struct hypergraph *G, struct model_re
     }
   normalize_scores (R);
 
+  R->vector_error = (double **)malloc(3*sizeof(double*));
+  R->vector_error[0] = (double *)malloc((max_iter+1)*sizeof(double));
+  R->vector_error[1] = (double *)malloc((max_iter+1)*sizeof(double));
+  R->vector_error[2] = (double *)malloc((max_iter+1)*sizeof(double));
+  for(i=0;i<=max_iter;i++) R->vector_error[0][i] = R->vector_error[1][i] = R->vector_error[2][i] = -1.0;
+
+
 
  
   single_iteration_leadership_model (G, R);
   normalize_scores (R);
   measure_convergence (R);
 
+
+  R->vector_error[0][R->iterations] = R->log_convergence;
+  R->vector_error[1][R->iterations] = R->convergence;
+  R->vector_error[2][R->iterations] = R->av_convergence;
+
+  
   //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
 
 
-  while (R->log_convergence>accuracy && R->iterations < max_iter)
+  while (R->av_convergence>accuracy && R->iterations < max_iter)
     {
       single_iteration_leadership_model (G, R);
       normalize_scores (R);
       measure_convergence (R);
+
+      R->vector_error[0][R->iterations] = R->log_convergence;
+      R->vector_error[1][R->iterations] = R->convergence;
+      R->vector_error[2][R->iterations] = R->av_convergence;
       //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
     }
   
@@ -1039,7 +1111,9 @@ void single_iteration_leadership_model (struct hypergraph *G, struct model_resul
 
   for(i=1;i<=G->N;i++)
     {
-      num = den = 1.0 / (R->tmp_scores[i] + 1.0);
+      if (R->cyclic == 0) num = den = 1.0 / (R->tmp_scores[i] + 1.0);
+      if (R->cyclic == 1) num = den = 1.0 / (R->scores[i] + 1.0);
+
       
       for(j=1;j<=G->node_rank[0][i];j++)
 	{
@@ -1051,13 +1125,20 @@ void single_iteration_leadership_model (struct hypergraph *G, struct model_resul
 	  if (r == 1)
 	    {
 	      tmp = 0.0;
-	      for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-	      num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+	      if (R->cyclic == 0){
+                for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+              }
+              if (R->cyclic == 1){
+                for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
+              }
 	    }
 
 	  else{
 	    tmp = 0.0;
-	    for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+	    if (R->cyclic == 0) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+            if (R->cyclic == 1) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
 	    den += 1.0 / tmp;
 	  }
 	  
@@ -1155,3 +1236,105 @@ void create_train_test_sets (struct hypergraph *G, struct hypergraph *Gtrain, st
 
    free(control);
 }
+
+
+
+////////////////////////
+///////////////////////
+
+
+///
+void zermelo_iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R, double accuracy, int max_iter)
+{
+  int i;
+  
+  R->N = G->N;
+  R->iterations = 0;
+
+  
+  R->scores = (double *)malloc((R->N+1)*sizeof(double));
+  R->tmp_scores = (double *)malloc((R->N+1)*sizeof(double));
+  for(i=1;i<=R->N;i++)
+    {
+      R->scores[i] = random_number_from_logistic();
+      R->tmp_scores[i] = random_number_from_logistic();
+    }
+  normalize_scores (R);
+  
+
+  R->vector_error = (double **)malloc(3*sizeof(double*));
+  R->vector_error[0] = (double *)malloc((max_iter+1)*sizeof(double));
+  R->vector_error[1] = (double *)malloc((max_iter+1)*sizeof(double));
+  R->vector_error[2] = (double *)malloc((max_iter+1)*sizeof(double));
+  for(i=0;i<=max_iter;i++) R->vector_error[0][i] = R->vector_error[1][i] = R->vector_error[2][i] = -1.0; 
+  
+ 
+  zermelo_single_iteration_ho_model (G, R);
+  normalize_scores (R);
+  measure_convergence (R);
+
+
+  R->vector_error[0][R->iterations] = R->log_convergence;
+  R->vector_error[1][R->iterations] = R->convergence;
+  R->vector_error[2][R->iterations] = R->av_convergence;
+
+  //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
+
+
+  while (R->av_convergence>accuracy && R->iterations < max_iter)
+    {
+      zermelo_single_iteration_ho_model (G, R);
+      normalize_scores (R);
+      measure_convergence (R);
+
+      R->vector_error[0][R->iterations] = R->log_convergence;
+      R->vector_error[1][R->iterations] = R->convergence;
+      R->vector_error[2][R->iterations] = R->av_convergence;
+      //printf("#%d %g %g\n",R->iterations,R->log_convergence,R->convergence); fflush(stdout); 
+    }
+  
+  return;
+}
+
+
+void zermelo_single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
+{
+  int t, v, i, r, m, j;
+  double tmp, num, den;
+
+  R->iterations += 1;
+  
+  for(i=1;i<=R->N;i++) R->tmp_scores[i] = R->scores[i];
+
+
+  for(i=1;i<=G->N;i++)
+    {
+
+      num = 1.0;
+      if(R->cyclic == 0) den = 2.0 / (R->tmp_scores[i] + 1.0);
+      if(R->cyclic == 1) den = 2.0 / (R->scores[i] + 1.0);
+
+      
+      for(j=1;j<=G->node_rank[0][i];j++)
+	{
+	  r = G->node_rank[i][j];
+	  m = G->hyperbonds[i][j];
+
+	  num += 1.0;
+	  
+	  for(t=1;t<=r;t++){
+            tmp = 0.0;
+	    if(R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+            if(R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+            den += 1.0 / tmp;
+          }
+
+	}
+
+      R->scores[i] = num /den;
+
+    }
+  
+
+}
+

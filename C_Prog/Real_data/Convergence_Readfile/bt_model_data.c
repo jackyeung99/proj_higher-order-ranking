@@ -10,7 +10,7 @@
 
 #define eps 1e-6
 #define MAX_ITER 100000
-
+#define CYCLIC 1
 
 
 int main (int argc, char **argv)
@@ -63,9 +63,7 @@ int main (int argc, char **argv)
     {								  
       R->scores[i] = random_number_from_logistic();
       R->tmp_scores[i] = random_number_from_logistic();
-      // R->scores[i] = 1;
-      // R->tmp_scores[i] = 1;
-    }                                                                                                                   
+    }                                                                                                             R->cyclic = CYCLIC;
   normalize_scores (R);                                                                                                 
 
   RL->N = G->N;
@@ -75,7 +73,7 @@ int main (int argc, char **argv)
     {								  
       RL->scores[i] = R->scores[i];
       RL->tmp_scores[i] = R->tmp_scores[i];
-    }                                                                                                                   
+    }                                                                                                             RL->cyclic = CYCLIC;
   normalize_scores (RL);
 
 
@@ -86,7 +84,7 @@ int main (int argc, char **argv)
     {								  
       binR->scores[i] = R->scores[i];
       binR->tmp_scores[i] = R->tmp_scores[i];
-    }                                                                                                                   
+    }                                                                                                             binR->cyclic = CYCLIC;
   normalize_scores (binR);
 
   binRL->N = G->N;
@@ -96,7 +94,7 @@ int main (int argc, char **argv)
     {								  
       binRL->scores[i] = R->scores[i];
       binRL->tmp_scores[i] = R->tmp_scores[i];
-    }                                                                                                                   
+    }                                                                                                             binRL->cyclic = CYCLIC;   
   normalize_scores (binRL);                                                                                                
 
   ////////////////////////////////
@@ -122,10 +120,10 @@ int main (int argc, char **argv)
   printf(";;;");
 
     for(i=0;i<=MAX_ITER;i++) if(binRL->vector_error[0][i]>0) printf("%d %g %g %g\t",i,binRL->vector_error[0][i],binRL->vector_error[1][i],binRL->vector_error[2][i]);
-  printf(";;;");
+  printf("\n");
 
 
-  for(i=1;i<=G->N;i++) printf("%d %g %g\n",i,R->scores[i],RL->scores[i]);
+  //for(i=1;i<=G->N;i++) printf("%d %g %g\n",i,R->scores[i],RL->scores[i]);
 
   
   

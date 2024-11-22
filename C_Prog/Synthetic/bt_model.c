@@ -10,6 +10,8 @@
 
 #define eps 1e-6
 #define MAX_ITER 100000
+#define CYCLIC 1
+
 
 
 int main (int argc, char **argv)
@@ -37,17 +39,20 @@ int main (int argc, char **argv)
   struct hypergraph *G = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct hypergraph *Gtrain = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct hypergraph *Gtest = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
-
   struct model_results *R =  (struct model_results*)malloc(1 * sizeof(struct model_results));
-  struct model_results *RL =  (struct model_results*)malloc(1 * sizeof(struct model_results));
-
   struct hypergraph *binG = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct hypergraph *binGtrain = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct hypergraph *binGtest = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
-
   struct model_results *binR =  (struct model_results*)malloc(1 * sizeof(struct model_results));
   struct model_results *leader_R =  (struct model_results*)malloc(1 * sizeof(struct model_results));
 
+  //
+  R->cyclic = CYCLIC;
+  binR->cyclic = CYCLIC;
+  leader_R->cyclic = CYCLIC;
+  //
+
+  
   if (model == 1)  generate_ho_model (N, M, K1, K2, G);
   else generate_leadership_model (N, M, K1, K2, G);
   compute_probability_model (G);
@@ -59,10 +64,11 @@ int main (int argc, char **argv)
  
   //print_hypergraph(G);
 
-  iterative_algorithm_ho_model(Gtrain, R, eps, MAX_ITER);
-  // iterative_algorithm_ho_model (Gtrain, R, eps, MAX_ITER);
+
+  iterative_algorithm_ho_model (Gtrain, R, eps, MAX_ITER);
   evaluate_results (Gtest, R);
-  // print_results (R);
+  //print_results (R);
+
 
   
 
@@ -83,30 +89,27 @@ int main (int argc, char **argv)
   compute_probability_model (binGtest);
 
 
+
   iterative_algorithm_ho_model (binGtrain, binR, eps, MAX_ITER);
   evaluate_results (Gtest, binR);
-  // print_results (binR);
+  //print_results (binR);
 
 
   iterative_algorithm_leadership_model (Gtrain, leader_R, eps, MAX_ITER);
   evaluate_results (Gtest, leader_R);
 
 
-  zermelo_iterative_algorithm_ho_model (G, RL, eps, MAX_ITER);
-  evaluate_results(Gtest, RL);
-
-
   printf("%d %d %g %g %g %g", N, M, Gtest->prior, Gtest->likelihood_ho, Gtest->likelihood_leader, binGtest->likelihood_ho);
   printf("\t");
-  printf("%g %g %g %g %g %g", R->log_error, R->spearman,R->kendall, R->prior,R->likelihood_ho,R->likelihood_leader);
+  printf("%g %g %g %g %g %g", R->av_error, R->spearman,R->kendall, R->prior,R->likelihood_ho,R->likelihood_leader);
   printf("\t");
-  printf("%g %g %g %g %g %g", leader_R->log_error, leader_R->spearman,leader_R->kendall, leader_R->prior,leader_R->likelihood_ho,leader_R->likelihood_leader);
+  printf("%g %g %g %g %g %g", leader_R->av_error, leader_R->spearman,leader_R->kendall, leader_R->prior,leader_R->likelihood_ho,leader_R->likelihood_leader);
   printf("\t");
-  printf("%g %g %g %g %g %g", binR->log_error, binR->spearman,binR->kendall, binR->prior,binR->likelihood_ho,binR->likelihood_leader);
+  printf("%g %g %g %g %g %g", binR->av_error, binR->spearman,binR->kendall, binR->prior,binR->likelihood_ho,binR->likelihood_leader);
+
   printf("\t");
-  printf("%g %g %g %g %g %g", RL->log_error, RL->spearman,RL->kendall, RL->prior,RL->likelihood_ho,RL->likelihood_leader);
-  printf("\t");
-  printf("%d %d %d", R->iterations, leader_R->iterations, RL->iterations);
+  printf("%d %d %d\n",R->iterations, leader_R->iterations,binR->iterations);
+
   printf("\n");
   
   /*

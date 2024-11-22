@@ -54,9 +54,9 @@ if MAP: print("Calculating maximum a posteriori ranking...",file=stderr)
 else:   print("Calculating maximum-likelihood ranking...",file=stderr)
 
 # Main loop
-# pi = ones(n,float)
+pi = ones(n,float)
 # pi = np.array([random_number_from_logistic() for _ in range(n)])
-pi = np.array([np.random.rand() for _ in range(n)])
+# pi = np.array([np.random.rand() for _ in range(n)])
 print(pi)
 delta = 1.0
 r = 0
@@ -83,9 +83,9 @@ while delta>TARGET:
 
     # For maximum likelihood estimation, normalize the pi's.  This step is
     # not needed for MAP estimates.
-    if not MAP:
-        norm = prod(pi)**(1/n)
-        pi /= norm
+    # if not MAP:
+    norm = prod(pi)**(1/n)
+    pi /= norm
 
     # Find the largest change in pi/(pi+1) for any i
     newp = pi/(pi+1)

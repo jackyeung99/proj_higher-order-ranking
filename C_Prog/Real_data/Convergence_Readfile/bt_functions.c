@@ -561,18 +561,21 @@ void evaluate_results (struct hypergraph *G, struct model_results *R)
 
 
   //error
-  R->error = R->log_error = 0.0;
+  R->error = R->log_error = R->av_error= 0.0;
   
   for(i=1;i<=G->N;i++)
     {
       R->error += (G->pi_values[i]-R->scores[i])*(G->pi_values[i]-R->scores[i]);
       R->log_error += (log(G->pi_values[i])-log(R->scores[i]))*(log(G->pi_values[i])-log(R->scores[i]));
+      R->av_error += (G->pi_values[i]/(1.0 + G->pi_values[i]) - R->scores[i]/(1.0 + R->scores[i]))*(G->pi_values[i]/(1.0 + G->pi_values[i]) - R->scores[i]/(1.0 + R->scores[i]));
     }
 
   R->error = R->error / (double)R->N;
   R->error = sqrt(R->error);
   R->log_error = R->log_error / (double)R->N;
   R->log_error = sqrt(R->log_error);
+  R->av_error = R->av_error / (double)R->N;
+  R->av_error = sqrt(R->av_error);
 
 
 
@@ -975,6 +978,7 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
 }
 
 
+
 void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
 {
   int t, v, i, r, m, j;
@@ -988,7 +992,9 @@ void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
 
   for(i=1;i<=G->N;i++)
     {
-      num = den = 1.0 / (R->tmp_scores[i] + 1.0);
+      if (R->cyclic == 0) num = den = 1.0 / (R->tmp_scores[i] + 1.0);
+      if (R->cyclic == 1) num = den = 1.0 / (R->scores[i] + 1.0);
+
       
       for(j=1;j<=G->node_rank[0][i];j++)
 	{
@@ -1000,13 +1006,22 @@ void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
 	  if (r < G->hyperedges[m][0])
 	    {
 	      tmp = 0.0;
-	      for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-	      num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+	      if (R->cyclic == 0)
+                {
+                  for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                  num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+                }
+              if (R->cyclic == 1)
+                {
+                  for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                  num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
+                }
 	    }
 
 	  for(t=1;t<=r-1;t++){
 	    tmp = 0.0;
-	    for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+	    if (R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+            if (R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
 	    den += 1.0 / tmp;
 	  }
 	  
@@ -1079,7 +1094,9 @@ void single_iteration_leadership_model (struct hypergraph *G, struct model_resul
 
   for(i=1;i<=G->N;i++)
     {
-      num = den = 1.0 / (R->tmp_scores[i] + 1.0);
+      if (R->cyclic == 0) num = den = 1.0 / (R->tmp_scores[i] + 1.0);
+      if (R->cyclic == 1) num = den = 1.0 / (R->scores[i] + 1.0);
+
       
       for(j=1;j<=G->node_rank[0][i];j++)
 	{
@@ -1091,13 +1108,20 @@ void single_iteration_leadership_model (struct hypergraph *G, struct model_resul
 	  if (r == 1)
 	    {
 	      tmp = 0.0;
-	      for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-	      num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+	      if (R->cyclic == 0){
+                for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+              }
+              if (R->cyclic == 1){
+                for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
+              }
 	    }
 
 	  else{
 	    tmp = 0.0;
-	    for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+	    if (R->cyclic == 0) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+            if (R->cyclic == 1) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
 	    den += 1.0 / tmp;
 	  }
 	  
@@ -1270,7 +1294,9 @@ void zermelo_single_iteration_ho_model (struct hypergraph *G, struct model_resul
     {
 
       num = 1.0;
-      den = 2.0 / (R->tmp_scores[i] + 1.0);
+      if(R->cyclic == 0) den = 2.0 / (R->tmp_scores[i] + 1.0);
+      if(R->cyclic == 1) den = 2.0 / (R->scores[i] + 1.0);
+
       
       for(j=1;j<=G->node_rank[0][i];j++)
 	{
@@ -1281,7 +1307,8 @@ void zermelo_single_iteration_ho_model (struct hypergraph *G, struct model_resul
 	  
 	  for(t=1;t<=r;t++){
             tmp = 0.0;
-            for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+	    if(R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+            if(R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
             den += 1.0 / tmp;
           }
 

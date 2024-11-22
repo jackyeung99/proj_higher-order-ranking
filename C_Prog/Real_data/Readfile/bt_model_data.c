@@ -10,7 +10,7 @@
 
 #define eps 1e-6
 #define MAX_ITER 10000
-
+#define CYCLIC 1
 
 
 int main (int argc, char **argv)
@@ -52,8 +52,11 @@ int main (int argc, char **argv)
   struct model_results *binR =  (struct model_results*)malloc(1 * sizeof(struct model_results));
   struct model_results *leader_R =  (struct model_results*)malloc(1 * sizeof(struct model_results));
 
-
-
+  //
+  R->cyclic = CYCLIC;
+  binR->cyclic = CYCLIC;
+  leader_R->cyclic = CYCLIC;
+  //
 
   //////////////
   read_index_file (filename_idx, G, names);
@@ -70,6 +73,7 @@ int main (int argc, char **argv)
   compute_probability_model (Gtest);
  
   //print_hypergraph(G);
+
 
   iterative_algorithm_ho_model (Gtrain, R, eps, MAX_ITER);
   evaluate_results (Gtest, R);
@@ -107,13 +111,11 @@ int main (int argc, char **argv)
 
   printf("%s %s %g %g %g %g", filename_idx, filename_data, Gtest->prior, Gtest->likelihood_ho, Gtest->likelihood_leader, binGtest->likelihood_ho);
   printf("\t");
-  printf("%g %g %g %g %g %g", R->log_error, R->spearman,R->kendall, R->prior,R->likelihood_ho,R->likelihood_leader);
+  printf("%g %g %g %g %g %g", R->av_error, R->spearman,R->kendall, R->prior,R->likelihood_ho,R->likelihood_leader);
   printf("\t");
-  printf("%g %g %g %g %g %g", leader_R->log_error, leader_R->spearman,leader_R->kendall, leader_R->prior,leader_R->likelihood_ho,leader_R->likelihood_leader);
+  printf("%g %g %g %g %g %g", leader_R->av_error, leader_R->spearman,leader_R->kendall, leader_R->prior,leader_R->likelihood_ho,leader_R->likelihood_leader);
   printf("\t");
-  printf("%g %g %g %g %g %g", binR->log_error, binR->spearman,binR->kendall, binR->prior,binR->likelihood_ho,binR->likelihood_leader);
-  printf("\t");
-  printf("%d %d", R->iterations, leader_R->iterations);
+  printf("%g %g %g %g %g %g", binR->av_error, binR->spearman,binR->kendall, binR->prior,binR->likelihood_ho,binR->likelihood_leader);
   printf("\n");
   
   
@@ -141,6 +143,7 @@ int main (int argc, char **argv)
   deallocate_memory (binGtest);
   deallocate_memory_results (binR);
   deallocate_memory_results (leader_R);
+ 			
   
   return 0;
 
