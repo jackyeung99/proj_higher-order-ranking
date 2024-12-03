@@ -1,9 +1,0 @@
-1 Course_9
-2 Course_2
-3 Course_5
-4 Course_6
-5 Course_7
-6 Course_8
-7 Course_4
-8 Course_3
-9 Course_1

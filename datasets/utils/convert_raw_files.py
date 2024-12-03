@@ -27,36 +27,89 @@ def get_alternative_names(filename):
 
     return id_to_name
 
-def convert_names_to_id(games, name_to_id):
+def convert_names_to_id(games, name_to_id) -> dict:
     ''' Given a dictionary of combined players from each file create new alternative names'''
     return {tuple(name_to_id[name] for name in ordered_tuple): count for ordered_tuple, count in games.items()}
 
-def convert_id_to_name(games, id_to_name):
+def convert_id_to_name(games, id_to_name) -> dict:
     ''' For each file convert the games to the names of the alternative names'''
     return {tuple(id_to_name[id] for id in ordered_tuple): count for ordered_tuple, count in games.items()}
 
 def write_files(out_path, out_file, pi_values, games):
-    ''' convert combined names back into ids and write the files'''
+    ''' 
+    Function to call both edge and node write functions such that dataset is in a standard format 
+
+    '''
     alternative_names = list(pi_values.keys())
     name_to_id = {name: idx for idx, name in enumerate(alternative_names)}
     converted_games = convert_names_to_id(games, name_to_id)
 
     edge_file = os.path.join(out_path, f'{out_file}_edges.txt')
-    write_edges(edge_file, converted_games, len(alternative_names))
+    write_edges(converted_games, edge_file)
     node_file = os.path.join(out_path, f'{out_file}_nodes.txt')
-    write_nodes(node_file, name_to_id)
+    write_nodes(name_to_id, node_file)
 
-def write_edges(file, games, num_unique_players):
-    with open(file, 'w') as file:
-        file.write(f"# UNIQUE PLAYERS: {num_unique_players}\n")
-        for ordered_tuple, count in sorted(games.items(), key = lambda x:x[1], reverse=True):
-            votes_str = ','.join(map(str, ordered_tuple))
-            file.write(f"{count}: {votes_str}\n")
 
-def write_nodes(file, name_to_id):
-    with open(file, 'w') as file:
-        for name, id in name_to_id.items():
-            file.write(f"# ALTERNATIVE NAME {id}: {name}\n")
+def write_nodes(node_ids, out_file):
+    '''
+    Writes a dictionary of node IDs and names to a file in a standardized format.
+
+    Args:
+        node_ids (dict): A dictionary where keys are node names and values are node IDs.
+                         Example: {'Node Name': 1, 'Another Node': 2}.
+        out_file (str): The name of the output file where the nodes will be written.
+
+    Returns:
+        None: This function writes the nodes to the specified file and does not return a value.
+
+    Output:
+        A file where each line is structured as:
+        node_id node_name
+        Node names are transformed to replace spaces with underscores.
+
+    Example:
+        Given `node_ids = {'Node A': 1, 'Node B': 2}` and `out_file = 'nodes.txt'`,
+        the resulting file will contain:
+        1 Node_A
+        2 N
+    '''
+
+
+    with open(out_file, mode='w') as f:
+        for node_name, node_id in node_ids.items():
+            node_name = '_'.join(node_name.split())
+            f.write(f"{node_id} {node_name}" + '\n')
+
+def write_edges(games, out_file):
+    '''
+    Writes a list of games containing the interactions between nodes IDs in a standardized format.
+
+    Args:
+        games (list): A list of games in order of importance
+        out_file (str): The name of the output file where the edges will be written.
+
+    Returns:
+        None: This function writes the edges to the specified file and does not return a value.
+
+    Output:
+        A file where each line is structured as:
+        game length, interaction 
+
+
+    Example:
+
+        given games = [(1,2,3), (4,5,6)]
+        The file will be:
+        3 1 2 3 
+        3 4 5 6 
+
+
+    '''
+    with open(out_file, mode='w') as f:
+        for game in games:
+            k = len(tuple(game))
+            line = f'{k} '+ ' '.join(map(str, game))
+            f.write(line + '\n')
 
 def group_soi(file_directory):
     sub_files = {}
@@ -148,19 +201,18 @@ def convert_raw_files(file_path, read_function, title, outfile):
 
 if __name__ == '__main__':
     file_directory = os.path.join(repo_root, 'datasets', 'raw_data', 'preflib')
-    out_file_dir = os.path.join(repo_root, 'datasets', 'processed_data')
+    out_file_dir = os.path.join(repo_root, 'datasets', 'Real_Data')
     os.makedirs(out_file_dir, exist_ok=True)
 
 
-    # grouping = group_soi(file_directory)
+    grouping = group_soi(file_directory)
+    combine_soi(grouping, file_directory, out_file_dir)
 
-    # combine_soi(grouping, file_directory, out_file_dir)
-
-    # convert_raw_files('authorships.txt', read_data_authors, '00104', out_file_dir)
-    # convert_raw_files('cl_data.txt', read_data_ucl, '00102', out_file_dir)
-    # convert_raw_files('fifa_wc.txt', read_data_fifa, '00103', out_file_dir)
-    # convert_raw_files('olympic_swimming', read_data_swimming, '00100', out_file_dir)
-    # convert_raw_files('horse_racing', read_data_horse, '00101', out_file_dir)
+    convert_raw_files('authorships.txt', read_data_authors, '00104', out_file_dir)
+    convert_raw_files('cl_data.txt', read_data_ucl, '00102', out_file_dir)
+    convert_raw_files('fifa_wc.txt', read_data_fifa, '00103', out_file_dir)
+    convert_raw_files('olympic_swimming', read_data_swimming, '00100', out_file_dir)
+    convert_raw_files('horse_racing', read_data_horse, '00101', out_file_dir)
     convert_raw_files('wolf.csv', read_data_wolf, '00105', out_file_dir)
 
 
