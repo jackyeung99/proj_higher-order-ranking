@@ -11,17 +11,20 @@ from src.models import *
 from src.utils.metrics import measure_leadership_likelihood, measure_likelihood, measure_rho, measure_rms, measure_tau
 from src.utils.graph_tools import convert_games_to_dict
 
-MODEL_FUNCTIONS = {
+BASE_FUNCTIONS = {
     'BT': compute_predicted_ratings_BT,
     'BT_leadership': compute_predicted_ratings_BT_leadership,
     'HO_BT': compute_predicted_ratings_HO_BT,
     'HOL_BT': compute_predicted_ratings_HOL_BT,
+}
+
+COMPARISON_MODELS = {
     'Spring_Rank': compute_predicted_ratings_spring_rank,
-    'Spring_Rank_Leadership': compute_predicted_ratings_spring_rank_leadership,
     'Page_Rank': compute_predicted_ratings_page_rank,
-    'Page_Rank_Leadership': compute_predicted_ratings_page_rank_leadership,
     'Point_Wise': compute_point_wise_ratings
 }
+
+MODEL_FUNCTIONS = {**BASE_FUNCTIONS, **COMPARISON_MODELS}
 
 def get_predictions(model, training_set, pi_values):
     if model in MODEL_FUNCTIONS:
@@ -32,7 +35,7 @@ def get_predictions(model, training_set, pi_values):
 
 def run_models_synthetic(train_data, test_data, pi_values):
     model_performance = []
-    for model in MODEL_FUNCTIONS:
+    for model in BASE_FUNCTIONS:
         predicted_ratings = get_predictions(model, train_data, pi_values)
         
         log_likelihoods = measure_likelihood(predicted_ratings, test_data)
