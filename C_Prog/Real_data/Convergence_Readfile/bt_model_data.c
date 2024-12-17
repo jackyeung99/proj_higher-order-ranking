@@ -40,6 +40,10 @@ int main (int argc, char **argv)
 
   char **names;
   struct hypergraph *G = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
+  if (G == NULL) {
+        fprintf(stderr, "Memory allocation failed\n");
+        return 1;
+    }
   struct hypergraph *binG = (struct hypergraph*)malloc(1 * sizeof(struct hypergraph));
   struct model_results *R =  (struct model_results*)malloc(1 * sizeof(struct model_results));
   struct model_results *RL =  (struct model_results*)malloc(1 * sizeof(struct model_results));

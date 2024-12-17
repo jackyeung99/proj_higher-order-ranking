@@ -33,7 +33,7 @@ struct model_results
 };
 
 
-void read_index_file (char *filename, struct hypergraph *G, char **names);
+void read_index_file (char *filename, struct hypergraph *G);
 void read_data_file (char *filename, struct hypergraph *G);
 
 void deallocate_memory (struct hypergraph *G);

@@ -9,43 +9,91 @@
 
 
 
-void read_index_file (char *filename, struct hypergraph *G, char **names)
-{
+// void read_index_file (char *filename, struct hypergraph *G, char **names)
+// {
   
-  int i, q;
-  char name[100];
-  FILE *f;
+//   int i, q;
+//   float score;
+//   FILE *f;
 
-  G->N = 0;
-  f = fopen(filename,"r");
-  while(!feof(f))
-    {
-      q = fscanf(f,"%d %s",&i,name);
-      if (q<=0) goto exit_file_A;
-      if(i>G->N) G->N = i;
+//   G->N = 0;
+//   f = fopen(filename,"r");
+//   while(!feof(f))
+//     {
+//       q = fscanf(f,"%d %s",&i, score);
+//       if (q<=0) goto exit_file_A;
+//       if(i>G->N) G->N = i;
+//     }
+//  exit_file_A:
+//   fclose(f);
+
+  
+//   //names = (char **)malloc((G->N+1)*sizeof(char *));
+//   //for(i=1;i<=G->N;i++) names[i] = (char *)malloc(100*sizeof(char));
+
+
+//   f = fopen(filename,"r");
+//   while(!feof(f))
+//     {
+//       q = fscanf(f,"%d %s",&i,name);
+//       if (q<=0) goto exit_file_B;
+//       //sprintf(names[i], "%s", name);
+//     }
+//  exit_file_B:
+//   fclose(f);
+
+
+  
+// }
+
+void read_index_file(char *filename, struct hypergraph *G) {
+    int i, q;
+    double score;
+    FILE *f;
+
+    G->N = 0;
+
+    // Open the file for the first pass to determine the maximum index
+    f = fopen(filename, "r");
+    if (f == NULL) {
+        perror("Error opening file");
+        return;
     }
- exit_file_A:
-  fclose(f);
 
-  
-  //names = (char **)malloc((G->N+1)*sizeof(char *));
-  //for(i=1;i<=G->N;i++) names[i] = (char *)malloc(100*sizeof(char));
-
-
-  f = fopen(filename,"r");
-  while(!feof(f))
-    {
-      q = fscanf(f,"%d %s",&i,name);
-      if (q<=0) goto exit_file_B;
-      //sprintf(names[i], "%s", name);
+    // Determine the largest index
+    while (fscanf(f, "%d %lf", &i, &score) == 2) {
+        if (i > G->N) G->N = i;
     }
- exit_file_B:
-  fclose(f);
 
+    fclose(f);
 
-  
+    // Allocate memory for G->pi_values
+    G->pi_values = (double *)malloc((G->N+1)*sizeof(double));
+    if (G->pi_values == NULL) {
+        perror("Error allocating memory for G->pi_values");
+        return;
+    }
+
+    // Initialize pi_values to 0 (optional, for safety)
+    for (i = 0; i <= G->N; i++) {
+        G->pi_values[i] = 0.0l;
+    }
+
+    // Open the file for the second pass to populate pi_values
+    f = fopen(filename, "r");
+    if (f == NULL) {
+        perror("Error opening file for second pass");
+        free(G->pi_values); // Free the allocated memory on failure
+        return;
+    }
+
+    // Populate the pi_values array
+    while (fscanf(f, "%d %lf", &i, &score) == 2) {
+        G->pi_values[i] = score;
+    }
+
+    fclose(f);
 }
-
 
 
 
@@ -73,11 +121,10 @@ void read_data_file (char *filename, struct hypergraph *G)
 
 
   G->hyperedges = (int **)malloc((G->M+1)*sizeof(int *));
-  G->pi_values = (double *)malloc((G->N+1)*sizeof(double));
+  // G->pi_values = (double *)malloc((G->N+1)*sizeof(double));
   G->hyperbonds = (int **)malloc((G->N+1)*sizeof(int *));
   G->node_rank = (int **)malloc((G->N+1)*sizeof(int *));
 
-  
   m = 0;
   f = fopen(filename,"r");
   while(!feof(f))
@@ -87,7 +134,7 @@ void read_data_file (char *filename, struct hypergraph *G)
       m += 1;
       G->hyperedges[m] = (int *)malloc((k+1)*sizeof(int));
       G->hyperedges[m][0] = k;
-      for(j=1;j<=k;j++)
+      for(j=1;j<=k;j++) 
 	{
 	  q = fscanf(f,"%d",&i);
 	  if (q<=0) goto exit_file_B;
@@ -101,11 +148,10 @@ void read_data_file (char *filename, struct hypergraph *G)
   //printf("#M = %d\n",G->M); fflush(stdout);
 
   create_hyperbonds_from_hyperedges (G);
-  generate_pi_values(G);
+  // generate_pi_values(G);
 
 
 }
-
 
 
 

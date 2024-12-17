@@ -1,5 +1,5 @@
-0 Candidate_5
-1 Candidate_3
-2 Candidate_1
-3 Candidate_2
-4 Candidate_4
+1 Candidate_2
+2 Candidate_5
+3 Candidate_4
+4 Candidate_3
+5 Candidate_1

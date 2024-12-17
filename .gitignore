@@ -11,3 +11,4 @@ bin/*.txt
 exp/**/data/
 tensor_flow_ltr.py
 datasets/raw_data/preflib
+datasets/Synthetic_Data/

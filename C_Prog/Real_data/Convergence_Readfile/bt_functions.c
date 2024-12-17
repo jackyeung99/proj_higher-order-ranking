@@ -49,6 +49,7 @@ void read_index_file (char *filename, struct hypergraph *G, char **names)
 
 
 
+
 void read_data_file (char *filename, struct hypergraph *G)
 {
   
@@ -62,10 +63,10 @@ void read_data_file (char *filename, struct hypergraph *G)
       q = fscanf(f,"%d",&k);
       if (q<=0) goto exit_file_A;
       for(j=1;j<=k;j++)
-	{
-	  q = fscanf(f,"%d",&i);
-	  if (q<=0) goto exit_file_A;
-	}
+        {
+          q = fscanf(f,"%d",&i);
+          if (q<=0) goto exit_file_A;
+        }
       G->M += 1;
     }
  exit_file_A:
@@ -87,14 +88,16 @@ void read_data_file (char *filename, struct hypergraph *G)
       m += 1;
       G->hyperedges[m] = (int *)malloc((k+1)*sizeof(int));
       G->hyperedges[m][0] = k;
+      printf("%d", k);
+      
       for(j=1;j<=k;j++)
-	{
-	  q = fscanf(f,"%d",&i);
-	  if (q<=0) goto exit_file_B;
-	  G->hyperedges[m][j] = i;
-	}
-    }
- exit_file_B:
+          {
+            q = fscanf(f,"%d",&i);
+            if (q<=0) goto exit_file_B;
+            G->hyperedges[m][j] = i;
+          }
+      }
+  exit_file_B:
   fclose(f);
 
 
@@ -107,7 +110,67 @@ void read_data_file (char *filename, struct hypergraph *G)
 }
 
 
+// void read_data_file(char *filename, struct hypergraph *G) {
+//     int i, k, j, q, m = 0;
+//     FILE *f;
 
+//     // Open file and check
+//     f = fopen(filename, "r");
+//     if (!f) {
+//         perror("Error opening file");
+//         return;
+//     }
+
+//     // Initialize M (number of hyperedges)
+//     G->M = 0;
+
+//     // First pass: count hyperedges
+//     while ((q = fscanf(f, "%d", &k)) == 1) {
+//         for (j = 0; j < k; j++) {
+//             if (fscanf(f, "%d", &i) != 1) {
+//                 fprintf(stderr, "Error reading file\n");
+//                 fclose(f);
+//                 return;
+//             }
+//         }
+//         G->M++;
+//     }
+//     rewind(f);  // Rewind to read file again
+
+//     // Allocate memory
+//     G->hyperedges = (int **)malloc((G->M + 1) * sizeof(int *));
+//     if (!G->hyperedges) {
+//         perror("Memory allocation failed");
+//         fclose(f);
+//         return;
+//     }
+
+//     // Second pass: read data
+//     m = 0;
+//     while ((q = fscanf(f, "%d", &k)) == 1) {
+//         m++;
+//         G->hyperedges[m] = (int *)malloc((k + 1) * sizeof(int));
+//         if (!G->hyperedges[m]) {
+//             perror("Memory allocation failed");
+//             fclose(f);
+//             return;
+//         }
+        
+//         G->hyperedges[m][0] = k;
+
+//         for (j = 1; j <= k; j++) {
+//             if (fscanf(f, "%d", &i) != 1) {
+//                 fprintf(stderr, "Error reading file\n");
+//                 fclose(f);
+//                 return;
+//             }
+//             G->hyperedges[m][j] = i;
+//         }
+//     }
+
+//     // Clean up
+//     fclose(f);
+// }
 
 
 /////////////////////////////////////////////

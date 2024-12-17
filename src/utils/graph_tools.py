@@ -26,14 +26,14 @@ def generate_model_instance (N, M, K1, K2):
 
     ##random scores from logistic distribution
     pi_values = {}
-    for n in range(0, N):
+    for n in range(1, N+1):
         pi_values[n] = float(np.exp(logistic.rvs(size=1)[0]))
 
 
     normalize_scores (pi_values)
 
 
-    list_of_nodes = list(range(0, N))
+    list_of_nodes = list(range(1, N+1))
     ##
     data = []
     for m in range(0, M):
@@ -50,14 +50,14 @@ def generate_leadership_model_instance (N, M, K1, K2):
     
     ##random scores from logistic distribution
     pi_values = {}
-    for n in range(0, N):
+    for n in range(1, N+1):
         pi_values[n] = float(np.exp(logistic.rvs(size=1)[0]))
 
     
     normalize_scores (pi_values)
     
     
-    list_of_nodes = list(range(0, N))
+    list_of_nodes = list(range(1, N+1))
     ##
     data = []
     for m in range(0, M):
