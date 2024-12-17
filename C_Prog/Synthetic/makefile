@@ -27,10 +27,11 @@ LOP=-lm -o
 #LOP=-lm -lgsl -lgslcblas -o
 
 # For debugging with x86
-#CC=gcc
-#OT=-g -Wall -rdynamic
-#OP= $(OT)
-#LOP=-lm -o
+CC=gcc
+OT=-g -Wall -rdynamic
+OP= $(OT)
+LOP=-lm -o
+
 # For profiling with x86
 #CC=gcc
 #OT=-pg -Wall

@@ -590,14 +590,14 @@ void evaluate_results (struct hypergraph *G, struct model_results *R)
       R->likelihood_leader += log(R->scores[G->hyperedges[m][1]]) - log(tmp);       
 
       for(i=1;i<=G->hyperedges[m][0]-1;i++)
-      {
-	for(j=i+1;j<=G->hyperedges[m][0];j++)
-	  {
-	    R->likelihood_ho += log(R->scores[G->hyperedges[m][i]]) - log(tmp); 
-	  }
-	tmp -= R->scores[G->hyperedges[m][i]]; 
+        {
+        for(j=i+1;j<=G->hyperedges[m][0];j++)
+          {
+            R->likelihood_ho += log(R->scores[G->hyperedges[m][i]]) - log(tmp); 
+          }
+	      tmp -= R->scores[G->hyperedges[m][i]]; 
 	
-      }
+        }
   
     }
 

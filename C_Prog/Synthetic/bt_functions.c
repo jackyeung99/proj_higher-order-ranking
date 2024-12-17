@@ -97,63 +97,124 @@ void read_index_file(char *filename, struct hypergraph *G) {
 
 
 
-void read_data_file (char *filename, struct hypergraph *G)
-{
+// void read_data_file (char *filename, struct hypergraph *G)
+// {
   
-  int i, k, j, q, m;
-  FILE *f;
+//   int i, k, j, q, m;
+//   FILE *f;
 
-  G->M = 0;
-  f = fopen(filename,"r");
-  while(!feof(f))
-    {
-      q = fscanf(f,"%d",&k);
-      if (q<=0) goto exit_file_A;
-      for(j=1;j<=k;j++)
-	{
-	  q = fscanf(f,"%d",&i);
-	  if (q<=0) goto exit_file_A;
-	}
-      G->M += 1;
+//   G->M = 0;
+//   f = fopen(filename,"r");
+//   while(!feof(f))
+//     {
+//       q = fscanf(f,"%d",&k);
+//       if (q<=0) goto exit_file_A;
+//       for(j=1;j<=k;j++)
+//         {
+//           q = fscanf(f,"%d",&i);
+//           if (q<=0) goto exit_file_A;
+//         }
+//       G->M += 1;
+//     }
+//  exit_file_A:
+//   fclose(f);
+
+
+
+//   G->hyperedges = (int **)malloc((G->M+1)*sizeof(int *));
+//   // G->pi_values = (double *)malloc((G->N+1)*sizeof(double));
+//   G->hyperbonds = (int **)malloc((G->N+1)*sizeof(int *));
+//   G->node_rank = (int **)malloc((G->N+1)*sizeof(int *));
+
+
+//   m = 0;
+//   f = fopen(filename,"r");
+//   while(!feof(f))
+//     {
+//       q = fscanf(f,"%d",&k);
+//       if (q<=0) goto exit_file_B;
+//       m += 1;
+//       G->hyperedges[m] = (int *)malloc((k+1)*sizeof(int));
+//       G->hyperedges[m][0] = k;
+//       for(j=1;j<=k;j++) 
+//         {
+//           q = fscanf(f,"%d",&i);
+//           if (q<=0) goto exit_file_B;
+//           G->hyperedges[m][j] = i;
+//         }
+//     }
+
+//   printf("%d", G->M);
+
+//   exit_file_B:
+//   fclose(f);
+
+
+//   //printf("#M = %d\n",G->M); fflush(stdout);
+
+//   create_hyperbonds_from_hyperedges (G);
+//   // generate_pi_values(G);
+
+
+// }
+
+void read_data_file(char *filename, struct hypergraph *G)
+{
+    int i, k, j, q, m;
+    FILE *f;
+
+    G->M = 0;
+    f = fopen(filename, "r");
+    if (f == NULL) {
+        perror("Error opening file");
+        exit(EXIT_FAILURE);
     }
- exit_file_A:
-  fclose(f);
 
-
-  G->hyperedges = (int **)malloc((G->M+1)*sizeof(int *));
-  // G->pi_values = (double *)malloc((G->N+1)*sizeof(double));
-  G->hyperbonds = (int **)malloc((G->N+1)*sizeof(int *));
-  G->node_rank = (int **)malloc((G->N+1)*sizeof(int *));
-
-  m = 0;
-  f = fopen(filename,"r");
-  while(!feof(f))
-    {
-      q = fscanf(f,"%d",&k);
-      if (q<=0) goto exit_file_B;
-      m += 1;
-      G->hyperedges[m] = (int *)malloc((k+1)*sizeof(int));
-      G->hyperedges[m][0] = k;
-      for(j=1;j<=k;j++) 
-	{
-	  q = fscanf(f,"%d",&i);
-	  if (q<=0) goto exit_file_B;
-	  G->hyperedges[m][j] = i;
-	}
+    // First pass: Count the hyperedges (G->M)
+    while (fscanf(f, "%d", &k) == 1) {
+        for (j = 1; j <= k; j++) {
+            if (fscanf(f, "%d", &i) != 1) {
+                fprintf(stderr, "Unexpected file format\n");
+                fclose(f);
+                exit(EXIT_FAILURE);
+            }
+        }
+        G->M++;
     }
- exit_file_B:
-  fclose(f);
+    fclose(f);
 
+    // Allocate memory based on G->M
+    G->hyperedges = (int **)malloc((G->M + 1) * sizeof(int *));
+    G->hyperbonds = (int **)malloc((G->N + 1) * sizeof(int *));
+    G->node_rank = (int **)malloc((G->N + 1) * sizeof(int *));
 
-  //printf("#M = %d\n",G->M); fflush(stdout);
+    // Second pass: Read hyperedges into memory
+    f = fopen(filename, "r");
+    if (f == NULL) {
+        perror("Error opening file for second pass");
+        exit(EXIT_FAILURE);
+    }
 
-  create_hyperbonds_from_hyperedges (G);
-  // generate_pi_values(G);
+    m = 0;
+    while (fscanf(f, "%d", &k) == 1) {
+        m++;
+        G->hyperedges[m] = (int *)malloc((k + 1) * sizeof(int));
+        G->hyperedges[m][0] = k;
 
+        for (j = 1; j <= k; j++) {
+            if (fscanf(f, "%d", &i) != 1) {
+                fprintf(stderr, "Unexpected file format\n");
+                fclose(f);
+                exit(EXIT_FAILURE);
+            }
+            G->hyperedges[m][j] = i;
+        }
+    }
+    fclose(f);
 
+    // Additional setup
+    create_hyperbonds_from_hyperedges(G);
 }
-
-
 
 
 /////////////////////////////////////////////
@@ -229,11 +290,11 @@ void create_hyperbonds_from_hyperedges (struct hypergraph* G)
   for(i=1;i<=G->N;i++) G->node_rank[0][i] = 0;
   for(m=1;m<=G->M;m++)
     {
-    for(i=1;i<=G->hyperedges[m][0];i++)
-      {
-	j = G->hyperedges[m][i];
-	G->node_rank[0][j] += 1;
-      }
+      for(i=1;i<=G->hyperedges[m][0];i++)
+        {
+          j = G->hyperedges[m][i];
+          G->node_rank[0][j] += 1;
+        }
     }
   for(i=1;i<=G->N;i++)
     {
@@ -605,7 +666,6 @@ void evaluate_results (struct hypergraph *G, struct model_results *R)
   double tmp;
 
 
-
   //error
   R->error = R->log_error = R->av_error= 0.0;
   
@@ -623,6 +683,10 @@ void evaluate_results (struct hypergraph *G, struct model_results *R)
   R->av_error = R->av_error / (double)R->N;
   R->av_error = sqrt(R->av_error);
 
+  // for(i=1; i<=G->N; i++){
+  //   printf("%d %g\n",i,G->pi_values[i]);
+  //   printf("%d %g\n",i,R->scores[i]);
+  // }
 
 
   //likelihood
@@ -636,16 +700,15 @@ void evaluate_results (struct hypergraph *G, struct model_results *R)
       R->likelihood_leader += log(R->scores[G->hyperedges[m][1]]) - log(tmp);       
 
       for(i=1;i<=G->hyperedges[m][0]-1;i++)
-      {
-	for(j=i+1;j<=G->hyperedges[m][0];j++)
-	  {
-	    R->likelihood_ho += log(R->scores[G->hyperedges[m][i]]) - log(tmp); 
-	  }
-	tmp -= R->scores[G->hyperedges[m][i]]; 
-	
-      }
+        {
+          for(j=i+1;j<=G->hyperedges[m][0];j++)
+            {
+              R->likelihood_ho += log(R->scores[G->hyperedges[m][i]]) - log(tmp); 
+            }
+          tmp -= R->scores[G->hyperedges[m][i]]; 
+        }
   
-    }
+      }
 
   R->likelihood_leader /= (double)G->M;
   R->likelihood_ho /= (double)G->M;
@@ -1362,20 +1425,20 @@ void zermelo_single_iteration_ho_model (struct hypergraph *G, struct model_resul
 
       
       for(j=1;j<=G->node_rank[0][i];j++)
-	{
-	  r = G->node_rank[i][j];
-	  m = G->hyperbonds[i][j];
+          {
+          r = G->node_rank[i][j];
+          m = G->hyperbonds[i][j];
 
-	  num += 1.0;
-	  
-	  for(t=1;t<=r;t++){
-            tmp = 0.0;
-	    if(R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-            if(R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
-            den += 1.0 / tmp;
+          num += 1.0;
+          
+          for(t=1;t<=r;t++){
+                  tmp = 0.0;
+            if(R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                  if(R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                  den += 1.0 / tmp;
+                }
+
           }
-
-	}
 
       R->scores[i] = num /den;
 

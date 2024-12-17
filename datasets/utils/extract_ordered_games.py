@@ -26,7 +26,7 @@ def convert_games_to_dict(games):
 
 def read_data_horse(filename):
     df = pd.read_csv(filename)
-
+    
     df['horseName'] = df['horseName'].apply(lambda x: '_'.join(str(x).split()))
     
     data = []
@@ -37,6 +37,8 @@ def read_data_horse(filename):
         group = group.sort_values(by='position')
         data.append(group['horseName'].to_list()) 
 
+    
+    print(len(data))
     # data = convert_games_to_dict(data)
     return data, pi_values
 
