@@ -6,7 +6,9 @@ import numpy as np
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from tst.tst_weight_conversion.old_newman import *
+from src.utils.graph_tools import *
+from src.models.BradleyTerry import synch_solve_equations
+
 
 def iterate_equation_zermelo (s, scores, bond_matrix):
 
@@ -72,16 +74,8 @@ def iterate_equation_zermelo_new (s, scores, bond_matrix):
 
     if s in bond_matrix:
         for K in bond_matrix[s]:
-
-
-
             for r in bond_matrix[s][K]:
-
-
-
                 a += len(bond_matrix[s][K][r])
-
-
 
                 for t in range(0, len(bond_matrix[s][K][r])):
                     for v in range(0, r+1):
@@ -95,17 +89,24 @@ def iterate_equation_zermelo_new (s, scores, bond_matrix):
 
 
 
-def compute_predicted_ratings_BT_zermello(training_set, pi_values, max_iter=10000):
-    bin_data = binarize_data_old(training_set)
-    bin_bond_matrix = create_hypergraph_from_data_old(bin_data)
+def compute_predicted_ratings_BT_zermello(training_set, pi_values, verbose=False):
+    bin_data = binarize_data(training_set)
+    hyper_graph = create_hypergraph_from_data(bin_data)
+    predicted_scores, info = synch_solve_equations(hyper_graph, pi_values, iterate_equation_zermelo)
 
-    predicted_std_scores, info = synch_solve_equations_old(bin_bond_matrix, max_iter, pi_values, iterate_equation_zermelo, sens=1e-6)
-    return predicted_std_scores, info
+    if verbose:
+        return predicted_scores, info
+    else:
+        return predicted_scores
 
 
 
-def compute_predicted_ratings_plackett_luce(training_set, pi_values, max_iter=10000): 
-    bond_matrix = create_hypergraph_from_data_old(training_set)
-    predicted_ho_scores, info = synch_solve_equations_old(bond_matrix, max_iter, pi_values, iterate_equation_zermelo, sens=1e-6)
- 
-    return predicted_ho_scores, info
+
+def compute_predicted_ratings_plackett_luce(training_set, pi_values, verbose=False): 
+    hyper_graph = create_hypergraph_from_data(training_set)
+    predicted_scores, info = synch_solve_equations(hyper_graph, pi_values, iterate_equation_zermelo)
+    
+    if verbose:
+        return predicted_scores, info
+    else:
+        return predicted_scores

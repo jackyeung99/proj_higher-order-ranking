@@ -8,7 +8,58 @@ import numpy as np
 # repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 # sys.path.append(repo_root)
 
-''' Functions to test our ranking algorithm against a syntethic ground truth'''
+''' Functions to represent ordered games into hypergraph structure '''
+
+def create_hypergraph_from_data(data):
+
+    bond_matrix = {}
+
+
+    for i in range(0, len(data)):
+
+        K = len(data[i])
+        for r in range(0, len(data[i])):
+
+            s = data[i][r]
+
+            if s not in bond_matrix:
+                bond_matrix[s] = {}
+            if K not in bond_matrix[s]:
+                bond_matrix[s][K] = {}
+            if r not in bond_matrix[s][K]:
+                bond_matrix[s][K][r] = []
+            bond_matrix[s][K][r].append(data[i])
+
+
+    return bond_matrix
+
+def binarize_data(data):
+
+    bin_data = []
+
+    for i in range(0, len(data)):
+
+        K = len(data[i])
+        for r in range(0, K-1):
+            for s in range (r+1, K):
+                bin_data.append([data[i][r],data[i][s]])
+
+
+    return bin_data
+
+
+
+def binarize_data_leadership(data):
+    bin_data = []
+    
+    for arr in data:
+        arr = np.array(arr)
+        pairs = np.column_stack((np.repeat(arr[0], len(arr) - 1), arr[1:]))
+        bin_data.extend(pairs.tolist())
+        
+    return bin_data
+
+
 
 def normalize_scores(pi_values):
     norm = 0.0
@@ -76,118 +127,6 @@ def generate_leadership_model_instance (N, M, K1, K2):
         
     return data, pi_values
 
-def generate_weighted_model_instance(N, M, K1, K2):
-    # Random scores from logistic distribution
-    pi_values = {n: float(np.exp(logistic.rvs(size=1)[0])) for n in range(N)}
-    normalize_scores(pi_values)
-
-    list_of_nodes = list(range(N))
-    data = {}
-
-    for m in range(M):
-        K = random.randint(K1, K2)
-        tmp = random.sample(list_of_nodes, K)
-        order = tuple(establish_order(tmp, pi_values))
-        if order not in data:
-            data[order] = 0
-
-        data[order] += 1 
-
-    return data, pi_values
-
-def generate_weighted_leadership_model_instance(N, M, K1, K2):
-    # Random scores from logistic distribution
-    pi_values = {n: float(np.exp(logistic.rvs(size=1)[0])) for n in range(N)}
-    normalize_scores(pi_values)
-
-    list_of_nodes = list(range(N))
-    data = {}
-
-    for m in range(M):
-        K = random.randint(K1, K2)
-        tmp = random.sample(list_of_nodes, K)
-        order = establish_order(tmp, pi_values)
-        
-        f = order[0]
-        order = order[1:]
-        random.shuffle(order)
-        order.insert(0, f)
-        order = tuple(order)
-
-        if order not in data:
-            data[order] = 0
-            
-        data[order] += 1 
-       
-    return data, pi_values
- 
-def create_hypergraph_from_data_weight(data):
-    bond_matrix = {}
-    for game, weight in data.items():
-        K = len(game)
-        for position, player in enumerate(game):
-            if player not in bond_matrix:
-                bond_matrix[player] = []
-            bond_matrix[player].append((K, position, game, weight))
-
-    return bond_matrix
-
- 
-# def create_hypergraph_from_data_weight (data):
-
-#     bond_matrix = {}
-
-
-#     for order, weight in data.items():
-
-#         K = len(order)
-#         for player in order:
-            
-#             position = order.index(player)
-
-#             if player not in bond_matrix:
-#                 bond_matrix[player] = {}
-#             if K not in bond_matrix[player]:
-#                 bond_matrix[player][K] = {}
-#             if position not in bond_matrix[player][K]:
-#                 bond_matrix[player][K][position] = {}
-
-#             bond_matrix[player][K][position][order] = weight
-
-
-#     return bond_matrix
-
-def binarize_data_weighted(data):
-    bin_data = {}
-    
-    for game, weight in data.items():
-        if len(game) > 2:
-            arr = np.array(game)
-            idx = np.triu_indices(len(arr), k=1)
-            pairs = np.array([arr[idx[0]], arr[idx[1]]]).T
-            for pair in pairs:
-                pair_tuple = tuple(pair)
-                bin_data[pair_tuple] = bin_data.get(pair_tuple, 0) + weight
-        else:
-            bin_data[game] = bin_data.get(game, 0) + weight
-
-    return bin_data
-
-
-def binarize_data_weighted_leadership(data):
-    bin_data = {}
-    
-    for game, weight in data.items():
-        if len(game) > 2:
-            arr = np.array(game)
-            pairs = np.column_stack((np.repeat(arr[0], len(arr) - 1), arr[1:]))
-            for pair in pairs:
-                pair_tuple = tuple(pair)
-                bin_data[pair_tuple] = bin_data.get(pair_tuple, 0) + weight
-        else:
-            bin_data[game] = bin_data.get(game, 0) + weight
-
-    return bin_data
 
 
 
@@ -216,17 +155,6 @@ def establish_order (tmp, pi_values):
 
     return order
 
-def convert_games_to_dict(games):
-    # Count occurrences of each unique ordering
-    unique_orderings = {}
-    for game in games:
-        ordering = tuple(game)  
-        if ordering in unique_orderings:
-            unique_orderings[ordering] += 1
-        else: 
-            unique_orderings[ordering] = 1
-    
-    return dict(sorted(unique_orderings.items(), key = lambda x:x[1],  reverse=True))
 
 
 def convert_dict_to_games(weighted_games):

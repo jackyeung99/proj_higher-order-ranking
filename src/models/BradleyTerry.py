@@ -7,137 +7,184 @@ from scipy.stats import logistic
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.utils.graph_tools import create_hypergraph_from_data_weight, binarize_data_weighted, binarize_data_weighted_leadership
+from src.utils.graph_tools import normalize_scores, binarize_data, binarize_data_leadership, create_hypergraph_from_data
+
+MAX_ITER = 10000
+EPS = 1e-6
 
 
-def normalize_scores_numpy(scores):
-    scores_nonzero = scores[scores != 0]
-    if len(scores_nonzero) == 0:
-        return
-    norm = np.exp(np.sum(np.log(scores_nonzero)) / len(scores_nonzero))
-    for i in range(len(scores)):
-        scores[i] /= norm
+def rms_error(new_scores, old_scores):
+    # calculate the probablity that a player beats the average player for old and new iterated scores
+    beating_avg_new = [(pi / (pi + 1)) for pi in new_scores.values()]
+    beating_avg_old = [(pi / (pi + 1)) for pi in old_scores.values()]
 
-def rms_error_numpy(new_scores, old_scores):
-    # Calculate the probability of beating the average player for both new and old scores
-    beating_avg_new = new_scores / (new_scores + 1)
-    beating_avg_old = old_scores / (old_scores + 1)
-    
     # Compute the RMS error between the transformed scores
-    return np.sqrt(np.mean((beating_avg_new - beating_avg_old) ** 2))
+    return np.sqrt(np.mean([(new - old) ** 2 for new, old in zip(beating_avg_new, beating_avg_old)]))
 
 
-def synch_solve_equations(bond_matrix, max_iter, pi_values, method, sens=1e-6):
-    players = np.array(list(pi_values.keys()))
+def std_error(new_scores, old_scores):
+    err = 0
+    for s in old_scores:
+        cur_err = abs(np.log(new_scores[s])-np.log(old_scores[s]))
+        err = max(cur_err, err)
 
-    # scores = np.ones(len(pi_values))
-    # MAP prior
-    scores = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
+    return err
 
 
-    normalize_scores_numpy(scores)
+def random_number_from_logistic():
+    return 1.0 / np.random.rand() - 1.0
 
-    # err = 1.0
-    rms = 1.0
+
+
+# Modified Solver function  to Keep Track of iterations for Genralized Newman 
+def synch_solve_equations(hypergraph, pi_values, method, max_iter=MAX_ITER, sens=EPS, convergence_metric='rms'):
+    # logistic_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
+    scores = {n: random_number_from_logistic () for n in pi_values}
+    normalize_scores(scores)
+
+    err = 1.0
+
+    info = {}
     iteration = 0
-    
-    while iteration < max_iter and rms > sens:
-    
-        tmp_scores = np.ones(len(pi_values))
+    while iteration < max_iter and err > sens:
+        tmp_scores = {s: method(s, scores, hypergraph) for s in scores}
+                 
+        normalize_scores(tmp_scores)
 
-        for s in range(len(scores)):
-            if s in bond_matrix:
-                games_with_player = bond_matrix[s]
-                tmp_scores[s] = method(s, scores, games_with_player)
-        
-        normalize_scores_numpy(tmp_scores)
-       
-        # err = np.max(np.abs(np.log(tmp_scores) - np.log(scores)))
-        rms = rms_error_numpy(tmp_scores, scores)
+        if convergence_metric == 'rms':
+            err = rms_error(tmp_scores, scores)
+        else:
+            err = std_error(tmp_scores, scores)
 
         scores = tmp_scores.copy()
+
         iteration += 1
+        info[iteration] = err
 
-        
-    final_scores = {players[i]: scores[i] for i in range(len(players))}
-    return final_scores, iteration
+   
+    return scores, info
 
 
+def iterate_equation_newman(s, scores, hypergraph):
+    ##prior
+    a = b = 1.0 / (scores[s]+1.0)
+    if s in hypergraph:
 
-def iterate_equation_newman_weighted(player_idx, pi_values, games_with_players):
-    a = b = 1.0 / (pi_values[player_idx] + 1.0)
-    tolerance = 1e-10
+        for K in hypergraph[s]:
 
-    for K, position, game, weight in games_with_players:
-        score_sums = [pi_values[p] for p in game]
-        cumulative_sum = [0] * (K + 1)
+            for r in hypergraph[s][K]:
 
-        # Calculate cumulative sums
-        for j in range(1, K + 1):
-            cumulative_sum[j] = cumulative_sum[j - 1] + score_sums[j - 1]
+                if r < K-1:
 
-        if position < K - 1:
-            tmp1 = cumulative_sum[K] - cumulative_sum[position+1]
-            tmp2 = tmp1 + score_sums[position]
-            if tmp2 != 0:
-                a += weight * (tmp1 / tmp2)
+                    for t in range(0, len(hypergraph[s][K][r])):
+                        tmp1 = tmp2 =  0.0
+                        for q in range(r, K):
+                            if q > r:
+                                tmp1 += scores[hypergraph[s][K][r][t][q]]
+                            tmp2 += scores[hypergraph[s][K][r][t][q]]
 
-        for v in range(position):
-            tmp = cumulative_sum[K] - cumulative_sum[v]
-            if tmp != 0 :
-                b += weight * (1.0 / tmp)
+                        if tmp2 != 0:
+                            a += tmp1/tmp2
 
-    return a / b
 
-def iterate_equation_newman_leadership_weighted(player_idx, pi_values, games_with_players):
-    a = b = 1.0 / (pi_values[player_idx] + 1.0)
-    tolerance = 1e-10
+                for t in range(0, len(hypergraph[s][K][r])):
+                    for v in range(0, r):
+                        tmp = 0.0
+                        for q in range(v, K):
+                            tmp += scores[hypergraph[s][K][r][t][q]]
+                     
+                        if tmp != 0:
+                            b += 1.0 / tmp
+                      
 
-    for K, position, game, weight in games_with_players:
-        
-        score_sums = [pi_values[game[p]] for p in range(K)]
-        cumulative_sum = [0] * (K + 1)
-        for j in range(1, K + 1):
-            cumulative_sum[j] = cumulative_sum[j - 1] + score_sums[j - 1]
-
-        if position == 0:
-            tmp1 = cumulative_sum[K] - cumulative_sum[position + 1]
-            tmp2 = tmp1 + score_sums[position]
-            if tmp2 != 0 :
-                a += weight * (tmp1 / tmp2)
-        else:
-            tmp = cumulative_sum[K]
-            if tmp != 0:
-                b += weight * (1.0 / tmp)
-    
+  #             for t in range(0, len(hypergraph[s][K][r])):
+  #                 tmp = 0.0
+  #                 for q in range(0, K):
+  #                     tmp += scores[hypergraph[s][K][r][t][q]]
+  #                 b += 1.0 / tmp
+  #                 for q in range(0, r-1):
+  #                     tmp = tmp - scores[hypergraph[s][K][r][t][q]]
+  #                     b += 1.0 / tmp
 
     return a/b
 
 
 
+def iterate_equation_newman_leadership(s, scores, hypergraph):
 
-def compute_predicted_ratings_BT(training_set, pi_values):
-    bin_data = binarize_data_weighted(training_set)
-    bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
+    ##prior
+    a = b = 1.0 / (scores[s]+1.0)
+    if s in hypergraph:
 
-    predicted_std_scores, iter = synch_solve_equations(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
-    return predicted_std_scores
+        for K in hypergraph[s]:
+            
+    #         print (hypergraph[s][K])
+            
+            for r in hypergraph[s][K]:
 
-def compute_predicted_ratings_BT_leadership(training_set, pi_values): 
-    bin_data = binarize_data_weighted_leadership(training_set)
-    bin_bond_matrix = create_hypergraph_from_data_weight(bin_data)
+                if r == 0:
+                    
+    #                 print (hypergraph[s][K][r])
+                
+                    for t in range(0, len(hypergraph[s][K][r])):
+                        tmp1 = tmp2 =  0.0
+                        for q in range(0, K):
+                            if q>0:
+                                tmp1 += scores[hypergraph[s][K][r][t][q]]
+                            tmp2 += scores[hypergraph[s][K][r][t][q]]
 
-    predicted_std_scores, iter = synch_solve_equations(bin_bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-6)
-    return predicted_std_scores
+                        if tmp2 != 0:
+                            a += tmp1/tmp2
+                    
+                else:
+                    for t in range(0, len(hypergraph[s][K][r])):
+                        tmp = 0.0
+                        for q in range(0, K): 
+                            tmp += scores[hypergraph[s][K][r][t][q]]
 
-def compute_predicted_ratings_HO_BT(training_set, pi_values): 
-    bond_matrix = create_hypergraph_from_data_weight(training_set)
-    predicted_ho_scores, iter = synch_solve_equations(bond_matrix, 10000, pi_values, iterate_equation_newman_weighted, sens=1e-6)
-    return predicted_ho_scores
+                        if tmp != 0:
+                            b += 1.0 / tmp
+
+    return a/b
+
+def compute_predicted_ratings_BT_old(training_set, pi_values, verbose=False):
+    bin_data = binarize_data(training_set)
+    hyper_graph = create_hypergraph_from_data(bin_data)
+
+    predicted_scores, info = synch_solve_equations(hyper_graph, pi_values, iterate_equation_newman)
+
+    if verbose:
+        return predicted_scores, info
+    else:
+        return predicted_scores
+
+def compute_predicted_ratings_BT_leadership_old(training_set, pi_values, verbose=False): 
+    bin_data = binarize_data_leadership(training_set)
+    hyper_graph = create_hypergraph_from_data(bin_data)
+
+    predicted_scores, info = synch_solve_equations(hyper_graph, pi_values, iterate_equation_newman)
+
+    if verbose:
+        return predicted_scores, info
+    else:
+        return predicted_scores
+
+def compute_predicted_ratings_HO_BT(training_set, pi_values, verbose=False): 
+    
+    hyper_graph = create_hypergraph_from_data(training_set)
+    predicted_scores, info = synch_solve_equations(hyper_graph, pi_values, iterate_equation_newman)
+
+    if verbose:
+        return predicted_scores, info
+    else:
+        return predicted_scores
 
 
-def compute_predicted_ratings_HOL_BT(training_set, pi_values):
-    bond_matrix = create_hypergraph_from_data_weight(training_set)
-    predicted_hol_scores, iter = synch_solve_equations (bond_matrix, 10000, pi_values, iterate_equation_newman_leadership_weighted, sens=1e-6)
-    return predicted_hol_scores
+def compute_predicted_ratings_HOL_BT(training_set, pi_values, verbose=False):
+    hyper_graph = create_hypergraph_from_data(training_set)
+    predicted_scores, info = synch_solve_equations(hyper_graph, pi_values, iterate_equation_newman_leadership)
 
+    if verbose:
+        return predicted_scores, info
+    else:
+        return predicted_scores

@@ -5,43 +5,45 @@ import networkx as nx
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src.utils.graph_tools import binarize_data_weighted, binarize_data_weighted_leadership, normalize_scores
+from src.utils.graph_tools import binarize_data, binarize_data_leadership, normalize_scores
 
-def compute_predicted_ratings_page_rank(games, true_pi_values):
-    bin_data = binarize_data_weighted(games)
 
-    weighted_edges = [(i,j,weight) for (i,j), weight in bin_data.items()]
-    
+def compute_predicted_ratings_page_rank(games, pi_values):
+    edge_list = binarize_data(games)
+
     G = nx.DiGraph()
-    G.add_weighted_edges_from(weighted_edges)
+    G.add_edges_from(edge_list)
+    
+    # Initialize PageRank values with the provided pi_values
     personalization = {node: 1.0 for node in G.nodes}
     
     page_rank = nx.pagerank(G, personalization=personalization)
-
-    for player in true_pi_values:
-        if player not in page_rank:
-            page_rank[player] = 1.0
-
-    normalize_scores(page_rank)
+    for node in pi_values:
+        pi_values[node] = page_rank.get(node, 1.0)
         
-    return page_rank
-
-
-def compute_predicted_ratings_page_rank_leadership(games, true_pi_values):
-    bin_data = binarize_data_weighted_leadership(games)
-    weighted_edges = [(i,j,weight) for (i,j), weight in bin_data.items()]
+    
+    normalize_scores(pi_values)
         
+    return pi_values
+
+
+def compute_predicted_ratings_page_rank_leadership(games, pi_values):
+    edge_list = binarize_data_leadership (games)
+
     G = nx.DiGraph()
-    G.add_weighted_edges_from(weighted_edges)
+    G.add_edges_from(edge_list)
+    
+    # Initialize PageRank values with the provided pi_values
     personalization = {node: 1.0 for node in G.nodes}
     
     page_rank = nx.pagerank(G, personalization=personalization)
-
-    for player in true_pi_values:
-        if player not in page_rank:
-            page_rank[player] = 1.0
-
-    normalize_scores(page_rank)
+    for node in pi_values:
+        pi_values[node] = page_rank.get(node, 1.0)
+            
+    
+    normalize_scores(pi_values)
         
-    return page_rank
+    return pi_values
+
+
 
