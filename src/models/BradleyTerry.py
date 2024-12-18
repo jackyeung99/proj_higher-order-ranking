@@ -60,8 +60,7 @@ def synch_solve_equations(hypergraph, pi_values, method, max_iter=MAX_ITER, sens
 
         iteration += 1
         info[iteration] = err
-
-   
+ 
     return scores, info
 
 
@@ -147,7 +146,7 @@ def iterate_equation_newman_leadership(s, scores, hypergraph):
 
     return a/b
 
-def compute_predicted_ratings_BT_old(training_set, pi_values, verbose=False):
+def compute_predicted_ratings_BIN(training_set, pi_values, verbose=False):
     bin_data = binarize_data(training_set)
     hyper_graph = create_hypergraph_from_data(bin_data)
 
@@ -158,7 +157,7 @@ def compute_predicted_ratings_BT_old(training_set, pi_values, verbose=False):
     else:
         return predicted_scores
 
-def compute_predicted_ratings_BT_leadership_old(training_set, pi_values, verbose=False): 
+def compute_predicted_ratings_BINL(training_set, pi_values, verbose=False): 
     bin_data = binarize_data_leadership(training_set)
     hyper_graph = create_hypergraph_from_data(bin_data)
 

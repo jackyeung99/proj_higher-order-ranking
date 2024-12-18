@@ -1,6 +1,6 @@
 
 from .point_wise import  compute_point_wise_ratings
-from .BradleyTerry import compute_predicted_ratings_BT, compute_predicted_ratings_BT_leadership, compute_predicted_ratings_HO_BT, compute_predicted_ratings_HOL_BT
+from .BradleyTerry import compute_predicted_ratings_BIN, compute_predicted_ratings_BINL, compute_predicted_ratings_HO_BT, compute_predicted_ratings_HOL_BT
 # from .tensor_flow_ltr import *
 from .SpringRank import compute_predicted_ratings_spring_rank, compute_predicted_ratings_spring_rank_leadership
 from .page_rank import compute_predicted_ratings_page_rank, compute_predicted_ratings_page_rank_leadership

@@ -9,11 +9,10 @@ sys.path.append(repo_root)
 
 from src.models import *
 from src.utils.metrics import measure_leadership_likelihood, measure_likelihood, measure_rho, measure_rms, measure_tau
-from src.utils.graph_tools import convert_games_to_dict
 
 BASE_FUNCTIONS = {
-    'BT': compute_predicted_ratings_BT,
-    'BT_leadership': compute_predicted_ratings_BT_leadership,
+    'BIN': compute_predicted_ratings_BIN,
+    'BINL': compute_predicted_ratings_BINL,
     'HO_BT': compute_predicted_ratings_HO_BT,
     'HOL_BT': compute_predicted_ratings_HOL_BT,
 }
@@ -86,18 +85,6 @@ def split_games(games, train_size):
 
     return training_set, testing_set
 
-def split_weighted_dataset(dataset, train_ratio=0.8):
-    expanded_list = []
-    for key, weight in dataset.items():
-        expanded_list.extend([key] * weight)
-    
-    random.shuffle(expanded_list)
-    training_set, testing_set = train_test_split(expanded_list, train_size=train_ratio, random_state=None)
-
-    weighted_training_set = convert_games_to_dict(training_set)
-    weighted_testing_set = convert_games_to_dict(testing_set)
-    
-    return weighted_training_set, weighted_testing_set
 
 def calculate_percentages_against_base(df, compared_column, flipped=False):
     total_rows = len(df)
