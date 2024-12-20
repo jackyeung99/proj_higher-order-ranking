@@ -111,7 +111,7 @@ int main (int argc, char **argv)
 
   printf("%s %s %g %g %g %g", filename_idx, filename_data, Gtest->prior, Gtest->likelihood_ho, Gtest->likelihood_leader, binGtest->likelihood_ho);
   printf(";;;");
-  printf("%g %g %g %g %g %g", R->av_error, R->spearman,R->kendall, R->prior,R->likelihood_ho,R->likelihood_leader);
+  printf("%g %g %g %g %g %g", R->av_error, R->spearman, R->kendall, R->prior,R->likelihood_ho, R->likelihood_leader);
   printf(";;;");
   printf("%g %g %g %g %g %g", leader_R->av_error, leader_R->spearman,leader_R->kendall, leader_R->prior,leader_R->likelihood_ho,leader_R->likelihood_leader);
   printf(";;;");

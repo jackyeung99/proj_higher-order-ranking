@@ -88,11 +88,11 @@ void read_data_file (char *filename, struct hypergraph *G)
       G->hyperedges[m] = (int *)malloc((k+1)*sizeof(int));
       G->hyperedges[m][0] = k;
       for(j=1;j<=k;j++)
-	{
-	  q = fscanf(f,"%d",&i);
-	  if (q<=0) goto exit_file_B;
-	  G->hyperedges[m][j] = i;
-	}
+        {
+          q = fscanf(f,"%d",&i);
+          if (q<=0) goto exit_file_B;
+          G->hyperedges[m][j] = i;
+        }
     }
  exit_file_B:
   fclose(f);
@@ -179,16 +179,18 @@ void create_hyperbonds_from_hyperedges (struct hypergraph* G)
 
   //
   G->node_rank[0] = (int *)malloc((G->N+1)*sizeof(int));
-   G->hyperbonds[0] = (int *)malloc((G->N+1)*sizeof(int));
+  G->hyperbonds[0] = (int *)malloc((G->N+1)*sizeof(int));
   for(i=1;i<=G->N;i++) G->node_rank[0][i] = 0;
+
   for(m=1;m<=G->M;m++)
     {
     for(i=1;i<=G->hyperedges[m][0];i++)
       {
-	j = G->hyperedges[m][i];
-	G->node_rank[0][j] += 1;
+        j = G->hyperedges[m][i];
+        G->node_rank[0][j] += 1;
       }
     }
+
   for(i=1;i<=G->N;i++)
     {
       G->node_rank[i] = (int *)malloc((G->node_rank[0][i] +1)*sizeof(int));
@@ -198,15 +200,15 @@ void create_hyperbonds_from_hyperedges (struct hypergraph* G)
 
       
   for(i=1;i<=G->N;i++) G->node_rank[0][i] = 0;
-   for(m=1;m<=G->M;m++)
+  for(m=1;m<=G->M;m++)
      {
        for(i=1;i<=G->hyperedges[m][0];i++)
-	 {
-	   j = G->hyperedges[m][i];
-	   G->node_rank[0][j] += 1;
-	   G->node_rank[j][G->node_rank[0][j]] = i;
-	   G->hyperbonds[j][G->node_rank[0][j]] = m;
-	 }
+        {
+          j = G->hyperedges[m][i];
+          G->node_rank[0][j] += 1;
+          G->node_rank[j][G->node_rank[0][j]] = i;
+          G->hyperbonds[j][G->node_rank[0][j]] = m;
+        }
      }
    //
   
@@ -997,36 +999,36 @@ void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
 
       
       for(j=1;j<=G->node_rank[0][i];j++)
-	{
-	  r = G->node_rank[i][j];
-	  m = G->hyperbonds[i][j];
+        {
+          r = G->node_rank[i][j];
+          m = G->hyperbonds[i][j];
 
-	  //printf("%d %d %d\n",i,r,m); fflush(stdout);
+          //printf("%d %d %d\n",i,r,m); fflush(stdout);
 
-	  if (r < G->hyperedges[m][0])
-	    {
-	      tmp = 0.0;
-	      if (R->cyclic == 0)
-                {
-                  for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-                  num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
-                }
+          if (r < G->hyperedges[m][0])
+            {
+              tmp = 0.0;
+              if (R->cyclic == 0)
+                      {
+                        for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                        num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+                      }
               if (R->cyclic == 1)
-                {
-                  for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
-                  num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
-                }
-	    }
+                      {
+                        for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                        num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
+                      }
+            }
 
-	  for(t=1;t<=r-1;t++){
-	    tmp = 0.0;
-	    if (R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+          for(t=1;t<=r-1;t++){
+            tmp = 0.0;
+            if (R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
             if (R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
-	    den += 1.0 / tmp;
-	  }
-	  
-	  
-	}
+            den += 1.0 / tmp;
+          }
+          
+          
+        }
 
       R->scores[i] = num /den;
 
@@ -1138,7 +1140,7 @@ void single_iteration_leadership_model (struct hypergraph *G, struct model_resul
 	  else{
 	    tmp = 0.0;
 	    if (R->cyclic == 0) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-            if (R->cyclic == 1) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+      if (R->cyclic == 1) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
 	    den += 1.0 / tmp;
 	  }
 	  

@@ -149,9 +149,8 @@ def read_edge_list(file_path):
     data = []
     with open(file_path) as f: 
         for line in f.readlines():
-            game = list(map(lambda x: int(x), line.split()[1:]))
             # assuming first element is identifier of game size
-            
+            game = list(map(lambda x: int(x), line.split()[1:]))
             data.append(game)
 
 
