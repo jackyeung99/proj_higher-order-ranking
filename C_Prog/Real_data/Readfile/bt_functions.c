@@ -939,8 +939,10 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
   R->tmp_scores = (double *)malloc((R->N+1)*sizeof(double));
   for(i=1;i<=R->N;i++)
     {
-      R->scores[i] = random_number_from_logistic();
-      R->tmp_scores[i] = random_number_from_logistic();
+      // R->scores[i] = random_number_from_logistic();
+      // R->tmp_scores[i] = random_number_from_logistic();
+      R->scores[i] = 1.0;
+      R->tmp_scores[i] = 1.0;
     }
   normalize_scores (R);
   
@@ -1118,34 +1120,34 @@ void single_iteration_leadership_model (struct hypergraph *G, struct model_resul
 
       
       for(j=1;j<=G->node_rank[0][i];j++)
-	{
-	  r = G->node_rank[i][j];
-	  m = G->hyperbonds[i][j];
+        {
+          r = G->node_rank[i][j];
+          m = G->hyperbonds[i][j];
 
-	  //printf("%d %d %d\n",i,r,m); fflush(stdout);
+          //printf("%d %d %d\n",i,r,m); fflush(stdout);
 
-	  if (r == 1)
-	    {
-	      tmp = 0.0;
-	      if (R->cyclic == 0){
-                for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-                num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
-              }
-              if (R->cyclic == 1){
-                for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
-                num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
-              }
-	    }
+          if (r == 1)
+            {
+              tmp = 0.0;
+              if (R->cyclic == 0){
+                      for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                      num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+                    }
+                    if (R->cyclic == 1){
+                      for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                      num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
+                    }
+            }
 
-	  else{
-	    tmp = 0.0;
-	    if (R->cyclic == 0) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-      if (R->cyclic == 1) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
-	    den += 1.0 / tmp;
-	  }
-	  
-	  
-	}
+          else{
+            tmp = 0.0;
+            if (R->cyclic == 0) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+            if (R->cyclic == 1) for(v=1;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+            den += 1.0 / tmp;
+          }
+          
+          
+        }
 
       R->scores[i] = num /den;
 
@@ -1170,21 +1172,26 @@ void create_train_test_sets (struct hypergraph *G, struct hypergraph *Gtrain, st
   //////
   control[0] = 0;
   for(i=1;i<=G->M;i++) control[i] = 1;
-  while(control[0]<Mtest)
-    {
-      i = (int)(genrand64_real3() * (double) G->M ) + 1;
-      if (i >G->M) i=1;
-      m = -1;
-      if(control[i] == 2) m=1;
-      while(m == 1)
-	{
-	  i += 1;
-	  if (i >G->M) i=1;
-	  if(control[i] ==1) m = -1;
-	}
-       control[0] += 1;
-       control[i] = 2;
-    }
+  // while(control[0]<Mtest)
+  //   {
+  //     i = (int)(genrand64_real3() * (double) G->M ) + 1;
+  //     if (i >G->M) i=1;
+  //     m = -1;
+  //     if(control[i] == 2) m=1;
+  //     while(m == 1)
+  //       {
+  //         i += 1;
+  //         if (i >G->M) i=1;
+  //         if(control[i] ==1) m = -1;
+  //       }
+  //     control[0] += 1;
+  //     control[i] = 2;
+  //   }
+
+
+  for (i=1; i<=Mtest; i++){
+    control[i] = 2;
+  }
   //////
   //printf(">> %d\n",control[0]);
   //for(i=1;i<=G->M;i++) printf("%d %d\n",i,control[i]);
@@ -1213,21 +1220,21 @@ void create_train_test_sets (struct hypergraph *G, struct hypergraph *Gtrain, st
    for(m=1;m<=G->M;m++)
      {
        if(control[m] == 1)
-	 {
-	   Gtrain->M +=1;
-	   //printf("#train %d %d\n",m,Gtrain->M);
-	   Gtrain->hyperedges[Gtrain->M] = (int *)malloc((G->hyperedges[m][0]+1)*sizeof(int));
-	   Gtrain->hyperedges[Gtrain->M][0] = G->hyperedges[m][0];
-	   for(i=1;i<=G->hyperedges[m][0];i++) Gtrain->hyperedges[Gtrain->M][i] = G->hyperedges[m][i];
-	 }
+        {
+          Gtrain->M +=1;
+          //printf("#train %d %d\n",m,Gtrain->M);
+          Gtrain->hyperedges[Gtrain->M] = (int *)malloc((G->hyperedges[m][0]+1)*sizeof(int));
+          Gtrain->hyperedges[Gtrain->M][0] = G->hyperedges[m][0];
+          for(i=1;i<=G->hyperedges[m][0];i++) Gtrain->hyperedges[Gtrain->M][i] = G->hyperedges[m][i];
+        }
        if(control[m] == 2)
-	 {
-	   Gtest->M +=1;
-	   //printf("#test %d %d\n",m,Gtest->M);
-	   Gtest->hyperedges[Gtest->M] = (int *)malloc((G->hyperedges[m][0]+1)*sizeof(int));
-	   Gtest->hyperedges[Gtest->M][0] = G->hyperedges[m][0];
-	   for(i=1;i<=G->hyperedges[m][0];i++) Gtest->hyperedges[Gtest->M][i] = G->hyperedges[m][i];
-	 }
+        {
+          Gtest->M +=1;
+          //printf("#test %d %d\n",m,Gtest->M);
+          Gtest->hyperedges[Gtest->M] = (int *)malloc((G->hyperedges[m][0]+1)*sizeof(int));
+          Gtest->hyperedges[Gtest->M][0] = G->hyperedges[m][0];
+          for(i=1;i<=G->hyperedges[m][0];i++) Gtest->hyperedges[Gtest->M][i] = G->hyperedges[m][i];
+        }
      }
 
 

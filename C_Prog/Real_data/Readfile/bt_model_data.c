@@ -10,7 +10,7 @@
 
 #define eps 1e-6
 #define MAX_ITER 10000
-#define CYCLIC 1
+#define CYCLIC 0
 
 
 int main (int argc, char **argv)

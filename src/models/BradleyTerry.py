@@ -11,7 +11,7 @@ from src.utils.graph_tools import normalize_scores, binarize_data, binarize_data
 
 MAX_ITER = 10000
 EPS = 1e-6
-CYLIC = True
+CYCLIC = False
 CONVERGENCE_METRIC = 'rms'
 
 
@@ -56,8 +56,10 @@ def random_number_from_logistic():
 # =================== Solver ===================
 def synch_solve_equations(hypergraph, pi_values, method, max_iter=MAX_ITER, sens=EPS, convergence_metric=CONVERGENCE_METRIC):
     # logistic_distribution = np.sqrt(np.exp(logistic.rvs(size=len(pi_values))))
-    scores = {n: random_number_from_logistic() for n in pi_values}
-    tmp_scores = {n: random_number_from_logistic() for n in pi_values}
+    # scores = {n: random_number_from_logistic() for n in pi_values}
+    # tmp_scores = {n: random_number_from_logistic() for n in pi_values}
+    scores = {n: 1.0 for n in pi_values}
+    tmp_scores = {n: 1.0 for n in pi_values}
     normalize_scores(scores)
     normalize_scores(tmp_scores)
 
@@ -94,10 +96,10 @@ def iterate_equation_newman(tmp_scores, scores, hypergraph):
     tmp_scores.update({n: i for n, i in scores.items()})
     for s in scores:
         if s in hypergraph:
-            if CYLIC:
+            if CYCLIC:
                 num = den = 1.0 / (scores[s]+1.0)
             else: 
-                num = den = 1.0 / (scores[s]+1.0)
+                num = den = 1.0 / (tmp_scores[s]+1.0)
 
             for K in hypergraph[s]:
 
@@ -110,7 +112,7 @@ def iterate_equation_newman(tmp_scores, scores, hypergraph):
                         for t in range(0, len(hypergraph[s][K][r])):
                             for q in range(r, K):
 
-                                if CYLIC: 
+                                if CYCLIC: 
                                     if q > r:
                                         tmp1 += scores[hypergraph[s][K][r][t][q]]
                                     tmp2 += scores[hypergraph[s][K][r][t][q]]
@@ -121,7 +123,7 @@ def iterate_equation_newman(tmp_scores, scores, hypergraph):
 
                             if tmp2 != 0:
                                 num += tmp1/tmp2
-                    
+                     
 
 
 
@@ -129,7 +131,7 @@ def iterate_equation_newman(tmp_scores, scores, hypergraph):
                         for v in range(0, r):
                             tmp = 0.0
                             for q in range(v, K):
-                                if CYLIC:
+                                if CYCLIC:
                                     tmp += scores[hypergraph[s][K][r][t][q]]
                                 else: 
                                     tmp += tmp_scores[hypergraph[s][K][r][t][q]]
@@ -160,10 +162,10 @@ def iterate_equation_newman_leadership(tmp_scores, scores, hypergraph):
     for s in scores:
         if s in hypergraph:
 
-            if CYLIC:
+            if CYCLIC:
                 num = den = 1.0 / (scores[s]+1.0)
             else: 
-                num = den = 1.0 / (scores[s]+1.0)
+                num = den = 1.0 / (tmp_scores[s]+1.0)
 
             for K in hypergraph[s]:
                 
@@ -178,7 +180,7 @@ def iterate_equation_newman_leadership(tmp_scores, scores, hypergraph):
                         for t in range(0, len(hypergraph[s][K][r])):
                             tmp1 = tmp2 =  0.0
                             for q in range(0, K):
-                                if CYLIC:
+                                if CYCLIC:
                                     if q>0:
                                         tmp1 += scores[hypergraph[s][K][r][t][q]]
                                     tmp2 += scores[hypergraph[s][K][r][t][q]]
@@ -194,7 +196,7 @@ def iterate_equation_newman_leadership(tmp_scores, scores, hypergraph):
                         for t in range(0, len(hypergraph[s][K][r])):
                             tmp = 0.0
                             for q in range(0, K): 
-                                if CYLIC:
+                                if CYCLIC:
                                     tmp += scores[hypergraph[s][K][r][t][q]]
                                 else:
                                     tmp += tmp_scores[hypergraph[s][K][r][t][q]]
@@ -220,9 +222,9 @@ def iterate_equation_newman_leadership(tmp_scores, scores, hypergraph):
 #         normalize_scores(tmp_scores)
 
 #         if convergence_metric == 'rms':
-#             err = rms_error(tmp_scores, scores)
+#             err = rms_convergence(tmp_scores, scores)
 #         else:
-#             err = log_error(tmp_scores, scores)
+#             err = log_convergence(tmp_scores, scores)
 
 #         scores = tmp_scores.copy()
 
@@ -233,7 +235,7 @@ def iterate_equation_newman_leadership(tmp_scores, scores, hypergraph):
 
 
 
-# Iterative steps
+# # Iterative steps
 # def iterate_equation_newman(s, scores, hypergraph):
 #     ##prior
 #     a = b = 1.0 / (scores[s]+1.0)

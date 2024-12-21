@@ -15,7 +15,7 @@ def generate_synthetic_data(outfile_dir):
     N = 1000
     ratios = np.logspace(0, 2, num=20)
     K_values = range(5, 50, 5)
-    leadership_options = [True, False]
+    leadership_options = [False, True]
 
     for is_leadership in leadership_options:
         for ratio in ratios:
@@ -45,6 +45,6 @@ if __name__ == '__main__':
     os.makedirs(out_file_dir, exist_ok=True)
     # generate_synthetic_data(out_file_dir)
 
-    data, pi_values = generate_model_instance(1000, 10000, 5, 5)
-    outfile = f'N-1000_M-10000_K-5_L-1'
+    data, pi_values = generate_model_instance(1000, 1000, 5, 5)
+    outfile = f'N-1000_M-1000_K-5_L-0'
     write_files(out_file_dir, outfile, pi_values, data)
