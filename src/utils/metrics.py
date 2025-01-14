@@ -2,12 +2,7 @@
 import numpy as np 
 from scipy.stats import spearmanr, kendalltau
 
-# helpers
-def get_sorted_ratings(scores_dict):
-    # Sort the dictionary by keys (players) and return the values (scores) in the same order
-    sorted_players = sorted(scores_dict.keys())
-    sorted_scores = [scores_dict[player] for player in sorted_players]
-    return sorted_scores
+
 
 
 def measure_rms(predicted_scores, ground_truth_scores, epsilon=1e-10):
@@ -18,7 +13,6 @@ def measure_rms(predicted_scores, ground_truth_scores, epsilon=1e-10):
 
     predicted_scores = [score for player, score in sorted(predicted_scores.items(), key=lambda x: x[0])]
     true_scores = [score for player, score in sorted(ground_truth_scores.items(), key=lambda x: x[0])]
-
 
     predicted_scores = np.array(predicted_scores) + epsilon
     true_scores = np.array(true_scores) + epsilon
@@ -31,8 +25,9 @@ def measure_rms(predicted_scores, ground_truth_scores, epsilon=1e-10):
 
 def measure_rho(predicted_scores, ground_truth_scores):
     # measure predicted score of a player to it's true score
-    predicted_scores = get_sorted_ratings(predicted_scores)
-    true_scores = get_sorted_ratings(ground_truth_scores)
+
+    predicted_scores = [score for player, score in sorted(predicted_scores.items(), key=lambda x: x[0])]
+    true_scores = [score for player, score in sorted(ground_truth_scores.items(), key=lambda x: x[0])]
 
     correlation, p_val = spearmanr(predicted_scores, true_scores)
 
@@ -40,12 +35,11 @@ def measure_rho(predicted_scores, ground_truth_scores):
 
 
 def measure_tau(predicted_scores, ground_truth_scores):
-    # Sort both dictionaries by keys (players) to ensure alignment
-    sorted_predicted = get_sorted_ratings(predicted_scores)
-    sorted_true = get_sorted_ratings(ground_truth_scores)
+    predicted_scores = [score for player, score in sorted(predicted_scores.items(), key=lambda x: x[0])]
+    true_scores = [score for player, score in sorted(ground_truth_scores.items(), key=lambda x: x[0])]
 
     # Calculate Kendall's tau correlation coefficient
-    correlation, p_val = kendalltau(sorted_predicted, sorted_true)
+    correlation, p_val = kendalltau(predicted_scores, true_scores)
 
     return correlation
 

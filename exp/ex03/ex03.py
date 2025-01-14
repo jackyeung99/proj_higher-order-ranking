@@ -1,108 +1,48 @@
-import os 
+import os
 import sys
-
-import pandas as pd 
-import numpy as np
-
-import subprocess
-import shlex
-
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from concurrent.futures import ProcessPoolExecutor
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-C_PATH = os.path.join(repo_root, 'C_Prog')
-# sys.path.append(C_PATH)
-os.chdir(C_PATH)
+sys.path.append(repo_root)
+
+from src.utils.file_handlers import group_dataset_files, read_dataset_files
+from src.utils.operation_helpers import run_models
 
 
 
-def run_simulation (N, M, K1, K2, ratio, model):
-    
-    
-    
+def evaluate_model_for_epoch(data, pi_values, dataset_id, epoch, train_size):
+    """
+    Evaluate the model for a given dataset and epoch. This function will be run in parallel.
+    """
+    train, test = train_test_split(data, test_size=train_size)
+    results = run_models(train, test, pi_values)
+    file_name = f"dataset-{dataset_id}-epoch_{epoch}.csv"
+    results.to_csv(os.path.join(RESULTS_DIR, file_name))
 
-    command = 'Synthetic/bt_model.out ' + str(N) + ' ' + str(M) + ' ' + str(K1) + ' ' + str(K2) + ' ' + str(model) + ' ' + str(ratio) 
-#     print(shlex.split(command))
+def evaluate_models_fixed_train_size(epochs=50, train_size=0.8):
+    grouped = group_dataset_files(DATA_DIR)
 
-    process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-    
-    
-    ##parse output
-    output = process.communicate()[0].decode("utf-8")
-#     print (output)
-
-
-    G = {}
-    G['N'] = int(output.split()[0])
-    G['M'] = int(output.split()[1])
-    G['prior'] = float(output.split()[2])
-    G['like_ho'] = float(output.split()[3])
-    G['like_hol'] = float(output.split()[4])
-    G['like_bin'] = float(output.split()[5])
-
-    
-    HO = {}
-    HO['log_err'] = float(output.split()[6])
-    HO['spear'] = float(output.split()[7])
-    HO['kend'] = float(output.split()[8])
-    HO['prior'] = float(output.split()[9])
-    HO['like_ho'] = float(output.split()[10])
-    HO['like_hol'] = float(output.split()[11])
-    HO['Iteration'] = int(output.split()[30])
-    
-    HOL = {}
-    HOL['log_err'] = float(output.split()[12])
-    HOL['spear'] = float(output.split()[13])
-    HOL['kend'] = float(output.split()[14])
-    HOL['prior'] = float(output.split()[15])
-    HOL['like_ho'] = float(output.split()[16])
-    HOL['like_hol'] = float(output.split()[17])
-    HOL['Iteration'] = int(output.split()[31])
-    
-    BIN = {}
-    BIN['log_err'] = float(output.split()[18])
-    BIN['spear'] = float(output.split()[19])
-    BIN['kend'] = float(output.split()[20])
-    BIN['prior'] = float(output.split()[21])
-    BIN['like_ho'] = float(output.split()[22])
-    BIN['like_hol'] = float(output.split()[23])
-
-    Z = {}
-    Z['log_err'] = float(output.split()[24])
-    Z['spear'] = float(output.split()[25])
-    Z['kend'] = float(output.split()[26])
-    Z['prior'] = float(output.split()[27])
-    Z['like_ho'] = float(output.split()[28])
-    Z['like_hol'] = float(output.split()[29])
-    Z['Iteration'] = int(output.split()[32])
-    
-    return G, HO, HOL, BIN, Z
+    # Create a list of futures to process each dataset-epoch combination in parallel
+    with ProcessPoolExecutor() as executor:
+        futures = []
+        for dataset in grouped:
+            data, pi_values = read_dataset_files(grouped[dataset], DATA_DIR, is_synthetic=False)
+            for epoch in range(epochs):
+                futures.append(executor.submit(evaluate_model_for_epoch, data, pi_values, dataset, epoch, train_size))
 
 
-def hyper_edge_iteration(repetitions, out_file_dir, K_values):
-    os.makedirs(out_file_dir, exist_ok=True)
-    n = 10
-    values = []
-    for r in ratios:
-        print(r)
-        for rep in range(repetitions):
-            m = int(r * n)
-            _, HO, _, _, Z = run_simulation(n, m, 5, 5, 1.0, 1)
-            values.append({
-                "Ratio": r,
-                "Rep": rep,
-                "Ours": HO['Iteration'],
-                "Outs_Log_like": HO['log_err'],
-                "Zermello": Z['Iteration'],
-                "Zermello_log_like": Z['log_err']
-                }) 
-
-    df = pd.DataFrame(values)
-    path = os.path.join(out_file_dir, 'ratio_iteration_count.csv')
-    df.to_csv(path)
-
-
+        
 if __name__ == '__main__':
-    ratios = np.logspace(0, 2, num=20)
-    out_dir = os.path.join(os.path.dirname(__file__), 'data')
-    reps = 1000
-    hyper_edge_iteration(reps, out_dir, ratios)
+    DATA_DIR = os.path.join(repo_root, 'datasets', 'Real_Data')
+    RESULTS_DIR = os.path.join(os.path.dirname(__file__), 'data')
+
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+
+    evaluate_models_fixed_train_size()
+
+
+
+        
+

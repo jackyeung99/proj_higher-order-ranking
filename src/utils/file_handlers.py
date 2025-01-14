@@ -31,7 +31,7 @@ def read_file_parameters(file):
 
     return file_parameters
 
-def read_dataset(file):
+def read_dataset_info(file):
 
     file_split = file.split('_')
     dataset = file_split[0].replace('f', '')
@@ -164,7 +164,7 @@ def read_dataset_files(dataset_files: dict, file_directory, is_synthetic=False):
         node_path = os.path.join(file_directory, dataset_files['nodes'])
         pi_values = read_node_list(node_path, is_synthetic)
 
-    return data, pi_values
+        return data, pi_values
 
 
 

@@ -148,6 +148,25 @@ def read_data_wolf(filename):
     # data = convert_games_to_dict(data)
     return data, pi_values
 
+def read_data_letor(filename):
+    games = False
+    data = []
+    pi_values = {}
+    with open(filename, 'r') as file:
+        for line in file:
+            if 'begin data:' in line:
+                games = True
+                continue
+
+            if games:
+                game = line.strip().split(',')
+                data.append(game)
+            else: 
+                player = line.strip()
+                pi_values[player] = 1.0 
+
+    return data, pi_values
+
 # Read PREFLIB Data  
 def get_alternative_names(filename):
     id_to_name = {}
@@ -164,6 +183,9 @@ def get_alternative_names(filename):
                 id_to_name[id] = node_name
  
     return id_to_name
+
+
+
 
 
 def read_strict_ordered_dataset(filename):
