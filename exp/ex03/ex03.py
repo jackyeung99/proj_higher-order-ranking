@@ -16,7 +16,7 @@ def evaluate_model_for_epoch(data, pi_values, dataset_id, epoch, train_size):
     """
     Evaluate the model for a given dataset and epoch. This function will be run in parallel.
     """
-    train, test = train_test_split(data, test_size=train_size)
+    train, test = train_test_split(data, train_size=train_size)
     results = run_models(train, test, pi_values)
     file_name = f"dataset-{dataset_id}-epoch_{epoch}.csv"
     results.to_csv(os.path.join(RESULTS_DIR, file_name))

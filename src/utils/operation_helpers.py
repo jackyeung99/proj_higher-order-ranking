@@ -25,9 +25,13 @@ COMPARISON_MODELS = {
 
 MODEL_FUNCTIONS = {**BASE_FUNCTIONS, **COMPARISON_MODELS}
 
-def get_predictions(model, training_set, pi_values):
+def get_predictions(model, training_set, pi_values, verbose=False):
     if model in MODEL_FUNCTIONS:
-        return MODEL_FUNCTIONS[model](training_set, pi_values)
+        if verbose:
+            return MODEL_FUNCTIONS[model](training_set, pi_values, verbose=True)
+        else:
+            return MODEL_FUNCTIONS[model](training_set, pi_values)
+
     elif model == 'tensor_flow':
         # return compute_predicted_rankings_tensor_flow(training_set, pi_values)
         pass
@@ -35,7 +39,8 @@ def get_predictions(model, training_set, pi_values):
 def run_models_synthetic(train_data, test_data, pi_values):
     model_performance = []
     for model in BASE_FUNCTIONS:
-        predicted_ratings = get_predictions(model, train_data, pi_values)
+        predicted_ratings, iter = get_predictions(model, train_data, pi_values,verbose=True)
+       
         
         log_likelihoods = measure_likelihood(predicted_ratings, test_data)
         leadership_log_likelihoods = measure_leadership_likelihood(predicted_ratings, test_data)
@@ -49,7 +54,8 @@ def run_models_synthetic(train_data, test_data, pi_values):
             'leadership-log-likelihood': leadership_log_likelihoods,
             'rms': rms,
             'rho': rho,
-            'tau': tau
+            'tau': tau,
+            'iteration': len(iter)
             }
         
         model_performance.append(model_results)

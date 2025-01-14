@@ -10,41 +10,39 @@ from src.utils.graph_tools import *
 from src.models.BradleyTerry import synch_solve_equations
 
 
-def iterate_equation_zermelo (tmp_scores, scores, bond_matrix):
+
+def iterate_equation_zermelo (s, scores, bond_matrix):
 
 
-    tmp_scores.clear() 
-    tmp_scores.update({n: i for n, i in scores.items()})
+    a = 1.0
+    b = 2.0/(scores[s]+1.0)
+   
+    if s in bond_matrix:
 
-    for s in scores: 
-        if s in bond_matrix:
-
-            a = 1.0
-            b = 2.0/(scores[s]+1.0)
-            for K in bond_matrix[s]:
+        for K in bond_matrix[s]:
 
 
 
-                for r in bond_matrix[s][K]:
+            for r in bond_matrix[s][K]:
 
 
-                    if r < K-1:
-                        a += len(bond_matrix[s][K][r])
-
-                        for t in range(0, len(bond_matrix[s][K][r])):
-                            tmp = 0.0
-                            for q in range(r, K):
-                                tmp += scores[bond_matrix[s][K][r][t][q]]
-                            b += 1.0 / tmp
-
+                if r < K-1:
+                    a += len(bond_matrix[s][K][r])
 
                     for t in range(0, len(bond_matrix[s][K][r])):
-                        for v in range(0, r):
-                            tmp = 0.0
-                            for q in range(v, K):
-                                tmp += scores[bond_matrix[s][K][r][t][q]]
-                            b += 1.0 / tmp
-    #                     print ('> ', tmp)
+                        tmp = 0.0
+                        for q in range(r, K):
+                            tmp += scores[bond_matrix[s][K][r][t][q]]
+                        b += 1.0 / tmp
+
+
+                for t in range(0, len(bond_matrix[s][K][r])):
+                    for v in range(0, r):
+                        tmp = 0.0
+                        for q in range(v, K):
+                            tmp += scores[bond_matrix[s][K][r][t][q]]
+                        b += 1.0 / tmp
+#                     print ('> ', tmp)
 
 
 #             for t in range(0, len(bond_matrix[s][K][r])):
@@ -59,32 +57,30 @@ def iterate_equation_zermelo (tmp_scores, scores, bond_matrix):
 #                     b += 1.0 / tmp
 
 
-            scores[s] = a/b   
+    return a/b   
 
 
 
-def iterate_equation_zermelo_new (tmp_scores, scores, hypergraph):
+# LEADERSHIP variant 
+def iterate_equation_zermelo_new (s, scores, hypergraph):
 
-    tmp_scores.clear() 
-    tmp_scores.update({n: i for n, i in scores.items()})
+    
+    if s in hypergraph:
+        a = 1.0
+        b = 2.0/(scores[s]+1.0)
 
-    for s in scores:
-        if s in hypergraph:
-            a = 1.0
-            b = 2.0/(scores[s]+1.0)
+        for K in hypergraph[s]:
+            for r in hypergraph[s][K]:
+                a += len(hypergraph[s][K][r])
 
-            for K in hypergraph[s]:
-                for r in hypergraph[s][K]:
-                    a += len(hypergraph[s][K][r])
+                for t in range(0, len(hypergraph[s][K][r])):
+                    for v in range(0, r+1):
+                        tmp = 0.0
+                        for q in range(v, K):
+                            tmp += scores[hypergraph[s][K][r][t][q]]
+                        b += 1.0 / tmp
 
-                    for t in range(0, len(hypergraph[s][K][r])):
-                        for v in range(0, r+1):
-                            tmp = 0.0
-                            for q in range(v, K):
-                                tmp += scores[hypergraph[s][K][r][t][q]]
-                            b += 1.0 / tmp
-
-            scores[s] = a/b   
+        return a/b   
 
 
 

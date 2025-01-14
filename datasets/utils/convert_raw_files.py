@@ -230,7 +230,7 @@ if __name__ == '__main__':
     # convert_raw_files('fifa_wc.txt', read_data_fifa, '00103', out_file_dir)
     # convert_raw_files('authorships.txt', read_data_authors, '00104', out_file_dir)
     # convert_raw_files('wolf.csv', read_data_wolf, '00105', out_file_dir)
-    # convert_raw_files('letor/10002.soi', read_data_letor, '00106', out_file_dir)
+    convert_raw_files('letor', read_data_letor, '00106', out_file_dir)
 
 
 

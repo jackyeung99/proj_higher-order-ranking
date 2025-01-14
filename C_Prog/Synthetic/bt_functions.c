@@ -1106,41 +1106,41 @@ void single_iteration_ho_model (struct hypergraph *G, struct model_results *R)
 
       
       for(j=1;j<=G->node_rank[0][i];j++)
-	{
-	  r = G->node_rank[i][j];
-	  m = G->hyperbonds[i][j];
+        {
+          r = G->node_rank[i][j];
+          m = G->hyperbonds[i][j];
 
-	  //printf("%d %d %d\n",i,r,m); fflush(stdout);
+          //printf("%d %d %d\n",i,r,m); fflush(stdout);
 
-	  if (r < G->hyperedges[m][0])
-	    {
-	      tmp = 0.0;
-	      if (R->cyclic == 0)
-                {
-                  for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-                  num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
-                }
-              if (R->cyclic == 1)
-                {
-                  for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
-                  num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
-                }
-	    }
+          if (r < G->hyperedges[m][0])
+            {
+              tmp = 0.0;
+              if (R->cyclic == 0)
+                  {
+                    for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                    num += (tmp - R->tmp_scores[G->hyperedges[m][r]]) / tmp;
+                  }
+                if (R->cyclic == 1)
+                  {
+                    for(v=r;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                    num += (tmp - R->scores[G->hyperedges[m][r]]) / tmp;
+                  }
+            }
 
-	  for(t=1;t<=r-1;t++){
-	    tmp = 0.0;
-	    if (R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
-            if (R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
-	    den += 1.0 / tmp;
-	  }
-	  
-	  
-	}
+          for(t=1;t<=r-1;t++){
+                tmp = 0.0;
+                if (R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+                if (R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
+                den += 1.0 / tmp;
+              }
+          
+          
+          }
 
-      R->scores[i] = num /den;
+        R->scores[i] = num /den;
 
-    }
-  
+      }
+    
 
 }
 

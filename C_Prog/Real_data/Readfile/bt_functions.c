@@ -939,10 +939,10 @@ void iterative_algorithm_ho_model (struct hypergraph *G, struct model_results *R
   R->tmp_scores = (double *)malloc((R->N+1)*sizeof(double));
   for(i=1;i<=R->N;i++)
     {
-      // R->scores[i] = random_number_from_logistic();
-      // R->tmp_scores[i] = random_number_from_logistic();
-      R->scores[i] = 1.0;
-      R->tmp_scores[i] = 1.0;
+      R->scores[i] = random_number_from_logistic();
+      R->tmp_scores[i] = random_number_from_logistic();
+      // R->scores[i] = 1.0;
+      // R->tmp_scores[i] = 1.0;
     }
   normalize_scores (R);
   
@@ -1172,26 +1172,26 @@ void create_train_test_sets (struct hypergraph *G, struct hypergraph *Gtrain, st
   //////
   control[0] = 0;
   for(i=1;i<=G->M;i++) control[i] = 1;
-  // while(control[0]<Mtest)
-  //   {
-  //     i = (int)(genrand64_real3() * (double) G->M ) + 1;
-  //     if (i >G->M) i=1;
-  //     m = -1;
-  //     if(control[i] == 2) m=1;
-  //     while(m == 1)
-  //       {
-  //         i += 1;
-  //         if (i >G->M) i=1;
-  //         if(control[i] ==1) m = -1;
-  //       }
-  //     control[0] += 1;
-  //     control[i] = 2;
-  //   }
+  while(control[0]<Mtest)
+    {
+      i = (int)(genrand64_real3() * (double) G->M ) + 1;
+      if (i >G->M) i=1;
+      m = -1;
+      if(control[i] == 2) m=1;
+      while(m == 1)
+        {
+          i += 1;
+          if (i >G->M) i=1;
+          if(control[i] ==1) m = -1;
+        }
+      control[0] += 1;
+      control[i] = 2;
+    }
 
 
-  for (i=1; i<=Mtest; i++){
-    control[i] = 2;
-  }
+  // for (i=1; i<=Mtest; i++){
+  //   control[i] = 2;
+  // }
   //////
   //printf(">> %d\n",control[0]);
   //for(i=1;i<=G->M;i++) printf("%d %d\n",i,control[i]);
@@ -1333,7 +1333,7 @@ void zermelo_single_iteration_ho_model (struct hypergraph *G, struct model_resul
 	  
 	  for(t=1;t<=r;t++){
             tmp = 0.0;
-	    if(R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
+	          if(R->cyclic == 0) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->tmp_scores[G->hyperedges[m][v]];
             if(R->cyclic == 1) for(v=t;v<=G->hyperedges[m][0];v++) tmp += R->scores[G->hyperedges[m][v]];
             den += 1.0 / tmp;
           }

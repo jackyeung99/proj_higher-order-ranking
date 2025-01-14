@@ -21,7 +21,7 @@ def evaluate_models_fixed_train_size(epochs=1000, train_size=0.8):
         
         base_name = edge_file.replace('_edges.txt', '')
         for epoch in range(epochs):
-            results = run_simulation_synthetic(node_path, edge_path, 1, train_size)
+            results = run_simulation_synthetic(node_path, edge_path, train_size)
             file_name = f"{base_name}-epoch_{epoch}.csv"
             results.to_csv(os.path.join(RESULTS_DIR, file_name))
 
