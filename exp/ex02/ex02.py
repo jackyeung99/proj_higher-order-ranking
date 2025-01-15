@@ -6,10 +6,10 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 from src.utils.file_handlers import group_dataset_files
-from src.utils.c_operation_helpers import run_simulation_synthetic
+from src.utils.c_operation_helpers import run_simulation
 
 
-def evaluate_models_fixed_train_size(epochs=1000, train_size=0.8):
+def evaluate_models_fixed_train_size(epochs=50, train_size=0.8):
     grouped = group_dataset_files(DATA_DIR)
 
     for dataset in grouped:
@@ -21,7 +21,7 @@ def evaluate_models_fixed_train_size(epochs=1000, train_size=0.8):
         
         base_name = edge_file.replace('_edges.txt', '')
         for epoch in range(epochs):
-            results = run_simulation_synthetic(node_path, edge_path, train_size)
+            results = run_simulation(node_path, edge_path, train_size, is_synthetic=1)
             file_name = f"{base_name}-epoch_{epoch}.csv"
             results.to_csv(os.path.join(RESULTS_DIR, file_name))
 
