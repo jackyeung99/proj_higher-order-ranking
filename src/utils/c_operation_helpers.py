@@ -84,11 +84,11 @@ def split_output(convergence_result):
 
     return std_convergence_criteria, log_connvergence_criteria, rms_convergence_criteria
 
-def run_simulation_convergence(filein_idx, filein_data, model, ratio):
+def run_simulation_convergence(filein_idx, filein_data):
     
 
     
-    command = os.path.join(C_PATH, 'Real_data', 'Convergence_Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(model) + ' ' + str(ratio) 
+    command = os.path.join(C_PATH, 'Real_data', 'Convergence_Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data 
 #     print(shlex.split(command))
 
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
