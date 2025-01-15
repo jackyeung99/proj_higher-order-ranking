@@ -11,40 +11,10 @@ import sys
 C_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'C_Prog'))
 sys.path.append(C_PATH)
 
-def run_simulation(filein_idx, filein_data, ratio):
+def run_simulation(filein_idx, filein_data, ratio=.8, is_synthetic=0):
     
 
-    command = os.path.join(C_PATH,'Real_data', 'Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' +  str(ratio)
-#     print(shlex.split(command))
-
-    process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-    
-    ##parse output
-    output = process.communicate()[0].decode("utf-8")
-
-    _, HO, HOL, BIN, BINL = output.split(';;;') 
-
-    results = []
-    for label, category_output in zip(['HO', 'HOL', 'BIN', 'BINL'], [HO, HOL, BIN, BINL]):
-        category_output = category_output.split()
-        results.append({
-            'model': label,
-            'av_error': category_output[0],
-            'spearman': category_output[1],
-            'kendall': category_output[2],
-            'prior': category_output[3],
-            'HO_Like': category_output[4],
-            'HOL_Like': category_output[5],
-            'iterations': category_output[6]
-        })
-
-    return pd.DataFrame(results)
-
-
-def run_simulation_synthetic(filein_idx, filein_data, ratio):
-    
-
-    command = os.path.join(C_PATH, 'Synthetic', 'bt_model.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(ratio)
+    command = os.path.join(C_PATH, 'Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' +  str(ratio) + ' ' + str(is_synthetic)
     # print(shlex.split(command))
 
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
@@ -84,12 +54,10 @@ def split_output(convergence_result):
 
     return std_convergence_criteria, log_connvergence_criteria, rms_convergence_criteria
 
-def run_simulation_convergence(filein_idx, filein_data):
-    
+def run_simulation_convergence(filein_idx, filein_data, is_synthetic):
 
     
-    command = os.path.join(C_PATH, 'Real_data', 'Convergence_Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data 
-#     print(shlex.split(command))
+    command = os.path.join(C_PATH, 'Convergence_Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(is_synthetic)
 
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 

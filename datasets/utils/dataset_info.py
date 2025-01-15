@@ -10,47 +10,35 @@ from datasets.utils.rename_datasets import DATASET_NAMES
 
 
 def get_edge_size(data):
-
-    edges = [len(x) for x in data.keys()]
+    edges = [len(x) for x in data]
     
     return min(edges), max(edges), np.mean(edges)
 
 
 
-def create_info_table(dataset_file_directory, out_file): 
+def create_info_table(DATA_DIR, out_file): 
 
+    grouped = group_dataset_files(DATA_DIR)
 
     dataset_info = []
-    for file in os.listdir(dataset_file_directory):
+    for dataset in grouped:
 
-        print(file)
-        if file.endswith('_edges.txt'):
+        data, pi_values = read_dataset_files(grouped[dataset], DATA_DIR)
 
-            file_path = os.path.join(dataset_file_directory , file)
-            data, pi_values = read_edge_list(file_path)
-
-            file_split = file.split('_')
-            dataset_id = file_split[0]
-
-            dataset_name = DATASET_NAMES[str(int(dataset_id))]
-            N = len(pi_values)
-            M = np.sum(list(data.values()))
-            K1, K2, K_avg = get_edge_size(data)
-
-
-
-            info = {
-                    'dataset_id': dataset_id,
-                    'name': dataset_name,
-                    'N': N,
-                    'M': M,
-                    'Ratio': M/N,
-                    'K1': K1,
-                    'K2': K2,
-                    'K_avg': round(K_avg, 3) 
-                        }
-            
-            dataset_info.append(info)
+        dataset_name = DATASET_NAMES[str(int(dataset))]
+        edge_len = [len(x) for x in data]
+        info = {
+                'dataset_id': dataset,
+                'name': dataset_name,
+                'N': len(pi_values),
+                'M': len(data),
+                'R': np.round(len(data)/len(pi_values),3),
+                'K1': min(edge_len),
+                'K2': max(edge_len),
+                'K_avg': np.round(np.average(edge_len), 3) 
+                    }
+        
+        dataset_info.append(info)
 
     df = pd.DataFrame(dataset_info).sort_values(by=['dataset_id'])
     df.to_csv(out_file, index=False)
@@ -60,8 +48,8 @@ def create_info_table(dataset_file_directory, out_file):
 
 if __name__ == '__main__':
 
-    dataset_dir = os.path.join(repo_root, 'datasets', 'processed_data')
+    DATA_DIR = os.path.join(repo_root, 'datasets', 'Real_Data')
     out_file = os.path.join(repo_root, 'datasets', 'dataset_info.csv')
-    create_info_table(dataset_dir, out_file)
+    create_info_table(DATA_DIR, out_file)
 
             

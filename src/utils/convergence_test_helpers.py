@@ -21,7 +21,6 @@ def test_convergence(un_weighted_data, pi_values):
     ho_errors = np.zeros(MAX_ITER)
     pl_errors = np.zeros(MAX_ITER)
 
-    print(HO_info)
     for i in range(1, MAX_ITER+1):
         ho_errors[i-1] = HO_info.get(i, 0)
         pl_errors[i-1] = PL_info.get(i, 0)

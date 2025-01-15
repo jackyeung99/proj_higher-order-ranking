@@ -11,10 +11,10 @@ from src.models import *
 from src.utils.metrics import measure_leadership_likelihood, measure_likelihood, measure_rho, measure_rms, measure_tau
 
 BASE_FUNCTIONS = {
-    'BIN': compute_predicted_ratings_BIN,
-    'BINL': compute_predicted_ratings_BINL,
     'HO_BT': compute_predicted_ratings_HO_BT,
     'HOL_BT': compute_predicted_ratings_HOL_BT,
+    'BIN': compute_predicted_ratings_BIN,
+    'BINL': compute_predicted_ratings_BINL,
 }
 
 COMPARISON_MODELS = {
@@ -86,8 +86,13 @@ def split_games(games, train_size):
     
     sampled_games = int(train_size * len(games))
 
-    training_set = games[:sampled_games]
-    testing_set = games[sampled_games:]
+    # training_set = games[:sampled_games]
+    # testing_set = games[sampled_games:]
+
+
+    test = len(games) - sampled_games
+    testing_set = games[:test]
+    training_set = games[test:]
 
     return training_set, testing_set
 

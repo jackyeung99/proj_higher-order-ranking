@@ -12,5 +12,4 @@ exp/**/data/
 tensor_flow_ltr.py
 datasets/raw_data/preflib
 datasets/raw_data/letor/
-datasets/Synthetic_Data/
 settings.json
