@@ -74,21 +74,43 @@ def measure_log_likelihood (data, pi_values, model = 'ho_bt', epsilon=1e-10):
             log_like += tmp
 
     
-    return log_like, log_prior
+    return log_like/len(data), log_prior
     
 #measure in average log likelihood in accordance to a weighted test set
+# def measure_likelihood(pred_ranking, testing_set, epsilon=1e-10):
+#     total_log_likelihood = 0.0
+
+#     for game in testing_set:
+#         print(game)
+#         for j in range(len(game)-1):
+#             tmp = np.log(pred_ranking[game[j]] + epsilon)
+#             print(game[j])
+#             print(game[j:])
+#             total_ratings = sum(pred_ranking[k] for k in game[j:])
+#             tmp -= np.log(total_ratings)
+#             total_log_likelihood +=  tmp
+
+#         break
+
+#     total_games = len(testing_set)
+#     return total_log_likelihood / total_games   
+
 def measure_likelihood(pred_ranking, testing_set, epsilon=1e-10):
     total_log_likelihood = 0.0
 
     for game in testing_set:
-        for j in range(len(game)-1):
-            tmp = np.log(pred_ranking[game[j]] + epsilon)
-            total_ratings = sum(pred_ranking[k] for k in game[j:])
-            tmp -= np.log(total_ratings + epsilon)
-            total_log_likelihood +=  tmp
+
+        tmp = sum(pred_ranking[k] for k in game)
+        for i in range(len(game)-1):
+            
+            for j in range(i+1, len(game)):
+                total_log_likelihood += np.log(pred_ranking[game[i]]+epsilon) - np.log(tmp+epsilon) 
+            tmp -= pred_ranking[game[i]]
 
     total_games = len(testing_set)
     return total_log_likelihood / total_games   
+
+
 
 
 def measure_leadership_likelihood(pred_ranking, testing_set, epsilon=1e-10):
@@ -104,39 +126,4 @@ def measure_leadership_likelihood(pred_ranking, testing_set, epsilon=1e-10):
     total_games = len(testing_set)
     return total_log_likelihood/total_games
 
-
-
-
-# ALTERNATIVE LIKELIHOOD ESTIMATIONS
-
-# def  measure_likelihood(pred_ranking, testing_set):
-#     return [recursive_probability_estimation(pred_ranking, game, weight) for game, weight in testing_set.items()]
-
-# def measure_leadership_likelihood(pred_ranking, testing_set):
-#     return [leadership_probability_estimation(pred_ranking, game, weight) for game, weight in testing_set.items()]
-
-# def measure_likelihood_ratio(pred_ranking, pi_values, testing_set):
-#     likelihood_ratios = []
-#     for game in testing_set:
-#         pred_likelihood = recursive_probability_estimation(pred_ranking, game)
-#         ground_truth_likelihood = recursive_probability_estimation(pi_values, game)
-#         likelihood_ratios.append(pred_likelihood / ground_truth_likelihood)
-#     return likelihood_ratios
-
-# def leadership_probability_estimation(pred_rating, game, weight, epsilon=1e-10):
-#     player_rankings = [pred_rating[player] for player in game]
-#     highest_rank = player_rankings[0]
-#     total_ratings = sum(player_rankings)
-#     return weight * (np.log(highest_rank+epsilon) - np.log(total_ratings+epsilon))
-
-# def recursive_probability_estimation(pred_rating, game, weight, total_prob_estimation=0, episilon=1e-10):
-#     player_ratings = [pred_rating[player] for player in game]
-#     first_pos = player_ratings[0]
-#     total_ratings = sum(player_ratings)
-#     total_prob_estimation += np.log(first_pos+episilon) - np.log(total_ratings+episilon)
-
-#     if len(player_ratings) > 2:
-#         return recursive_probability_estimation(pred_rating, game[1:], weight, total_prob_estimation)
-#     else:
-#         return total_prob_estimation * weight
 

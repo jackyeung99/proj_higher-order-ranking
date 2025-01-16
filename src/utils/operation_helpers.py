@@ -89,7 +89,7 @@ def split_games(games, train_size):
     # training_set = games[:sampled_games]
     # testing_set = games[sampled_games:]
 
-
+    
     test = len(games) - sampled_games
     testing_set = games[:test]
     training_set = games[test:]

@@ -22,9 +22,9 @@ def generate_synthetic_data(outfile_dir):
             M = int(N * ratio)
             for K in K_values:
                 if is_leadership:
-                    data, pi_values = generate_model_instance(N, M, K, K)
-                else:
                     data, pi_values = generate_leadership_model_instance(N, M, K, K)
+                else:
+                    data, pi_values = generate_model_instance(N, M, K, K)
 
                 outfile = f'N-{N}_M-{M}_K-{K}_L-{int(is_leadership)}'
                 write_files(outfile_dir, outfile, pi_values, data)

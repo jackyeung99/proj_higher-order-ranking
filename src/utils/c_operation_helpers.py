@@ -12,7 +12,6 @@ C_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'C_
 sys.path.append(C_PATH)
 
 def run_simulation(filein_idx, filein_data, ratio=.8, is_synthetic=0):
-    
 
     command = os.path.join(C_PATH, 'Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' +  str(ratio) + ' ' + str(is_synthetic)
     # print(shlex.split(command))
@@ -54,7 +53,7 @@ def split_output(convergence_result):
 
     return std_convergence_criteria, log_connvergence_criteria, rms_convergence_criteria
 
-def run_simulation_convergence(filein_idx, filein_data, is_synthetic):
+def run_simulation_convergence(filein_idx, filein_data, is_synthetic=0):
 
     
     command = os.path.join(C_PATH, 'Convergence_Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' + str(is_synthetic)

@@ -26,7 +26,7 @@ def evaluate_convergence(epochs=50):
 
             data = []
             for epoch in range(epochs):
-                results = run_simulation_convergence(node_path, edge_path)
+                results = run_simulation_convergence(node_path, edge_path, is_synthetic=0)
 
                 data.append({
                     'Dataset': dataset,
