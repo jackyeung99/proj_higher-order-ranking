@@ -18,7 +18,7 @@ def evaluate_model_for_epoch(data, pi_values, dataset_id, epoch, train_size):
     """
     train, test = train_test_split(data, train_size=train_size)
     results = run_models(train, test, pi_values)
-    file_name = f"dataset-{dataset_id}-epoch_{epoch}.csv"
+    file_name = f"dataset-{dataset_id}_epoch-{epoch}.csv"
     results.to_csv(os.path.join(RESULTS_DIR, file_name))
 
 def evaluate_models_fixed_train_size(epochs=20, train_size=0.8):

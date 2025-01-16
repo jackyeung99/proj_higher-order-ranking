@@ -15,7 +15,7 @@ def evaluate_convergence(epochs=50):
     grouped = group_dataset_files(DATA_DIR)
 
     for dataset in grouped:
-        if int(dataset) not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
+        if int(dataset) not in [10, 11, 15, 41, 43, 44, 45, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
             print(dataset)
        
             edge_file = grouped[dataset]['edges']

@@ -109,6 +109,7 @@ def process_directory_real_data(base_path):
     for file in os.listdir(os.path.join(base_path, 'data')):
         if file.endswith('.csv'):
             file_path = os.path.join(base_path, 'data', file)
+            print(file)
             file_info = read_file_parameters(file)
 
             # Process each metric and store the results
