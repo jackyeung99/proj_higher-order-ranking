@@ -23,20 +23,20 @@ def evaluate_model_for_epoch(data, pi_values, dataset_id, epoch, train_size):
 
 def evaluate_models_fixed_train_size(epochs=20, train_size=0.8):
     grouped = group_dataset_files(DATA_DIR)
-    for dataset in grouped:
-        if int(dataset) not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
-            futures = []
-            with ProcessPoolExecutor() as executor:
-                data, pi_values = read_dataset_files(grouped[dataset], DATA_DIR, is_synthetic=False)
-                for epoch in range(epochs):
-                    futures.append(executor.submit(evaluate_model_for_epoch, data, pi_values, dataset, epoch, train_size))
-                
     # for dataset in grouped:
     #     if int(dataset) not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
-    #         print(dataset)
-    #         data, pi_values = read_dataset_files(grouped[dataset], DATA_DIR, is_synthetic=False)
-    #         for epoch in range(epochs):
-    #             evaluate_model_for_epoch(data, pi_values, dataset, epoch, train_size)
+    #         futures = []
+    #         with ProcessPoolExecutor() as executor:
+    #             data, pi_values = read_dataset_files(grouped[dataset], DATA_DIR, is_synthetic=False)
+    #             for epoch in range(epochs):
+    #                 futures.append(executor.submit(evaluate_model_for_epoch, data, pi_values, dataset, epoch, train_size))
+                
+    for dataset in grouped:
+        if int(dataset) not in [10, 11, 15, 41, 43, 44, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
+            print(dataset)
+            data, pi_values = read_dataset_files(grouped[dataset], DATA_DIR, is_synthetic=False)
+            for epoch in range(epochs):
+                evaluate_model_for_epoch(data, pi_values, dataset, epoch, train_size)
 
 
         

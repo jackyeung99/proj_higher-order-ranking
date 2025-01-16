@@ -81,16 +81,10 @@ def measure_log_likelihood (data, pi_values, model = 'ho_bt', epsilon=1e-10):
 #     total_log_likelihood = 0.0
 
 #     for game in testing_set:
-#         print(game)
 #         for j in range(len(game)-1):
-#             tmp = np.log(pred_ranking[game[j]] + epsilon)
-#             print(game[j])
-#             print(game[j:])
 #             total_ratings = sum(pred_ranking[k] for k in game[j:])
-#             tmp -= np.log(total_ratings)
-#             total_log_likelihood +=  tmp
+#             total_log_likelihood +=  np.log(pred_ranking[game[j]]) - np.log(total_ratings)
 
-#         break
 
 #     total_games = len(testing_set)
 #     return total_log_likelihood / total_games   

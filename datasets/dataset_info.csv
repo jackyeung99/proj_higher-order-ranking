@@ -1,4 +1,4 @@
-dataset_id,name,N,M,R,K1,K2,K_avg
+Dataset_ID,Name,N,M,R,K1,K2,K_avg
 00009,AGH_course_selection,9,299,33.222,7,9,7.977
 00014,sushi,102,10000,98.039,10,10,10.0
 00028,APA_election,5,203896,40779.2,1,5,3.637
@@ -12,4 +12,3 @@ dataset_id,name,N,M,R,K1,K2,K_avg
 00104,authorship,2176,738,0.339,2,25,3.873
 00105,wolf,15,9671,644.733,2,2,2.0
 00106,letor,118,15592,132.136,2,83,9.156
- 

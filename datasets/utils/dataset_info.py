@@ -28,8 +28,8 @@ def create_info_table(DATA_DIR, out_file):
         dataset_name = DATASET_NAMES[str(int(dataset))]
         edge_len = [len(x) for x in data]
         info = {
-                'dataset_id': dataset,
-                'name': dataset_name,
+                'Dataset_ID': dataset,
+                'Name': dataset_name,
                 'N': len(pi_values),
                 'M': len(data),
                 'R': np.round(len(data)/len(pi_values),3),
@@ -40,7 +40,7 @@ def create_info_table(DATA_DIR, out_file):
         
         dataset_info.append(info)
 
-    df = pd.DataFrame(dataset_info).sort_values(by=['dataset_id'])
+    df = pd.DataFrame(dataset_info).sort_values(by=['Dataset_ID'])
     df.to_csv(out_file, index=False)
 
 
