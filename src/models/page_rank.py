@@ -9,6 +9,8 @@ from src.utils.graph_tools import binarize_data, binarize_data_leadership, norma
 
 
 def compute_predicted_ratings_page_rank(games, pi_values):
+
+    
     edge_list = binarize_data(games)
 
     G = nx.DiGraph()
@@ -18,17 +20,18 @@ def compute_predicted_ratings_page_rank(games, pi_values):
     personalization = {node: 1.0 for node in G.nodes}
     
     page_rank = nx.pagerank(G, personalization=personalization)
+    pred_rankings = {}
     for node in pi_values:
-        pi_values[node] = page_rank.get(node, 1.0)
+        pred_rankings[node] = page_rank.get(node, 1.0)
         
-    
-    normalize_scores(pi_values)
         
-    return pi_values
+    return pred_rankings
 
 
 def compute_predicted_ratings_page_rank_leadership(games, pi_values):
-    edge_list = binarize_data_leadership (games)
+
+    
+    edge_list = binarize_data_leadership(games)
 
     G = nx.DiGraph()
     G.add_edges_from(edge_list)
@@ -37,13 +40,13 @@ def compute_predicted_ratings_page_rank_leadership(games, pi_values):
     personalization = {node: 1.0 for node in G.nodes}
     
     page_rank = nx.pagerank(G, personalization=personalization)
+    pred_rankings = {}
     for node in pi_values:
-        pi_values[node] = page_rank.get(node, 1.0)
-            
-    
-    normalize_scores(pi_values)
+        pred_rankings[node] = page_rank.get(node, 1.0)
+        
         
     return pi_values
+
 
 
 

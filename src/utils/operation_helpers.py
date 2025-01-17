@@ -38,8 +38,8 @@ def get_predictions(model, training_set, pi_values, verbose=False):
 
 def run_models_synthetic(train_data, test_data, pi_values):
     model_performance = []
-    for model in BASE_FUNCTIONS:
-        predicted_ratings, iter = get_predictions(model, train_data, pi_values,verbose=True)
+    for model in MODEL_FUNCTIONS:
+        predicted_ratings = get_predictions(model, train_data, pi_values)
        
         
         log_likelihoods = measure_likelihood(predicted_ratings, test_data)
@@ -55,7 +55,7 @@ def run_models_synthetic(train_data, test_data, pi_values):
             'rms': rms,
             'rho': rho,
             'tau': tau,
-            'iteration': len(iter)
+            # 'iteration': len(iter)
             }
         
         model_performance.append(model_results)
