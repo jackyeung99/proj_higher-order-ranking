@@ -15,28 +15,27 @@ def evaluate_convergence(epochs=50):
     grouped = group_dataset_files(DATA_DIR)
 
     for dataset in grouped:
-        if int(dataset) not in [10, 11, 15, 41, 43, 44, 45, 46, 47, 48, 49, 50, 51, 54, 55, 56, 58, 101]:
-            print(dataset)
-       
-            edge_file = grouped[dataset]['edges']
-            node_file = grouped[dataset]['nodes']
-             
-            edge_path = os.path.join(DATA_DIR, edge_file)
-            node_path = os.path.join(DATA_DIR, node_file)
+        print(dataset)
+    
+        edge_file = grouped[dataset]['edges']
+        node_file = grouped[dataset]['nodes']
+            
+        edge_path = os.path.join(DATA_DIR, edge_file)
+        node_path = os.path.join(DATA_DIR, node_file)
 
-            data = []
-            for epoch in range(epochs):
-                results = run_simulation_convergence(node_path, edge_path, is_synthetic=0)
+        data = []
+        for epoch in range(epochs):
+            results = run_simulation_convergence(node_path, edge_path, is_synthetic=0)
 
-                data.append({
-                    'Dataset': dataset,
-                    'Ours': len(results['HO']['rms_convergence_criteria']),
-                    'Zermello': len(results['Z']['rms_convergence_criteria']),
-                    'Ours_bin': len(results['BIN']['rms_convergence_criteria']),
-                    'Zermello_bin': len(results['BINZ']['rms_convergence_criteria']),
-                    'criterion': 'rms_difference',
-                    'epoch': epoch 
-                    })
+            data.append({
+                'Dataset': dataset,
+                'Ours': len(results['HO']['rms_convergence_criteria']),
+                'Zermello': len(results['Z']['rms_convergence_criteria']),
+                'Ours_bin': len(results['BIN']['rms_convergence_criteria']),
+                'Zermello_bin': len(results['BINZ']['rms_convergence_criteria']),
+                'criterion': 'rms_difference',
+                'epoch': epoch 
+                })
               
                 
 

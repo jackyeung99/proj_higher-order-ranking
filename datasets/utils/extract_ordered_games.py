@@ -188,7 +188,8 @@ def get_alternative_names(filename):
 
 
 
-def read_strict_ordered_dataset(filename):
+def read_data_so(filename):
+    # function to read soc and soi files
     id_to_name = get_alternative_names(filename)
 
     data = []

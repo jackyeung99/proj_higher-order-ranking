@@ -25,7 +25,7 @@ def create_info_table(DATA_DIR, out_file):
 
         data, pi_values = read_dataset_files(grouped[dataset], DATA_DIR)
 
-        dataset_name = DATASET_NAMES[str(int(dataset))]
+        dataset_name = DATASET_NAMES[dataset]
         edge_len = [len(x) for x in data]
         info = {
                 'Dataset_ID': dataset,
