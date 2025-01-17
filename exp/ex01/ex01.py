@@ -1,52 +1,41 @@
 import os
 import sys
-from concurrent.futures import ProcessPoolExecutor
 import pandas as pd
-import numpy as np
-import traceback
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from src import generate_weighted_leadership_model_instance, generate_weighted_model_instance, split_weighted_dataset, run_models_synthetic
-
-def process_rep(filein_idx, filein_data, file_dir):
-
-
-    
-    for train_size in np.logspace(-2, 0, endpoint=False, num=25):
-        training_set, testing_set = split_weighted_dataset(data, train_ratio=train_size)
-        model_performance = run_models_synthetic(training_set, testing_set, pi_values)
-
-        file_path = os.path.join(file_dir, f'train-{train_size}_rep-{rep+1}.csv')
-
-        # Ensure the directory exists
-        os.makedirs(file_dir, exist_ok=True)
-
-        try:
-            model_performance.to_csv(file_path)
-            print(f"Saved file to {file_path}")
-        except Exception as e:
-            print(f"Error saving file: {e}")
-
-   
-
-def evaluate_model_train_size(filein_idx, filein_data, file_dir):
-    os.makedirs(file_dir, exist_ok=True)
-    futures = []
-    with ProcessPoolExecutor(max_workers=32) as executor:
-        for rep in range(50):
-            futures.append(executor.submit(filein_idx, filein_data, ))
+from src.utils.file_handlers import group_dataset_files
+from src.utils.c_operation_helpers import run_simulation
 
 
+def evaluate_models_fixed_train_size(epochs=50, train_size=0.8):
+    grouped = group_dataset_files(DATA_DIR)
+
+    for dataset in grouped:
+        edge_file = grouped[dataset]['edges']
+        node_file = grouped[dataset]['nodes']
+        
+        edge_path = os.path.join(DATA_DIR, edge_file)
+        node_path = os.path.join(DATA_DIR, node_file)
+        
+        base_name = edge_file.replace('_edges.txt', '')
+        for epoch in range(epochs):
+            results = run_simulation(node_path, edge_path, train_size, is_synthetic=1)
+            file_name = f"{base_name}-epoch_{epoch}.csv"
+            results.to_csv(os.path.join(RESULTS_DIR, file_name))
+
+
+        
+if __name__ == '__main__':
+    DATA_DIR = os.path.join(repo_root, 'datasets', 'Synthetic_Data')
+    RESULTS_DIR = os.path.join(os.path.dirname(__file__), 'data')
+
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+
+    evaluate_models_fixed_train_size()
 
 
 
-if __name__ == "__main__":
+        
 
-    base_path = os.path.dirname(__file__)
-
-    # higher order 
-    evaluate_model_train_size(N, M, K1, K2, os.path.join(base_path, 'data','ex01.2'))
-
-    # Real Data

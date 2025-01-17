@@ -364,11 +364,8 @@ void compute_probability_model (struct hypergraph *G)
 
       for(i=1;i<=G->hyperedges[m][0]-1;i++)
       {
-	for(j=i+1;j<=G->hyperedges[m][0];j++)
-	  {
-	    G->likelihood_ho += log(G->pi_values[G->hyperedges[m][i]]) - log(tmp); 
-	  }
-	tmp -= G->pi_values[G->hyperedges[m][i]]; 
+        G->likelihood_ho += log(G->pi_values[G->hyperedges[m][i]]) - log(tmp); 
+        tmp -= G->pi_values[G->hyperedges[m][i]]; 
       }
   
     }
@@ -666,8 +663,6 @@ void evaluate_results (struct hypergraph *G, struct model_results *R)
   int m,i,j;
   double tmp;
 
-
-
   //error
   R->error = R->log_error = R->av_error= 0.0;
   
@@ -699,12 +694,8 @@ void evaluate_results (struct hypergraph *G, struct model_results *R)
 
       for(i=1;i<=G->hyperedges[m][0]-1;i++)
         {
-        for(j=i+1;j<=G->hyperedges[m][0];j++)
-          {
-            R->likelihood_ho += log(R->scores[G->hyperedges[m][i]]) - log(tmp); 
-          }
-	      tmp -= R->scores[G->hyperedges[m][i]]; 
-	
+          R->likelihood_ho += log(R->scores[G->hyperedges[m][i]]) - log(tmp); 
+          tmp -= R->scores[G->hyperedges[m][i]];
         }
   
     }

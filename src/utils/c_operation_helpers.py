@@ -20,9 +20,10 @@ def run_simulation(filein_idx, filein_data, ratio=.8, is_synthetic=0):
     
     ##parse output
     output = process.communicate()[0].decode("utf-8")
+    # print(output)
 
     _, HO, HOL, BIN, BINL = output.split(';;;') 
-
+    
     results = []
     for label, category_output in zip(['HO', 'HOL', 'BIN', 'BINL'], [HO, HOL, BIN, BINL]):
         category_output = category_output.split()

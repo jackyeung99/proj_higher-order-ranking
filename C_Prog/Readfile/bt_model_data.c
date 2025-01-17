@@ -65,7 +65,7 @@ int main (int argc, char **argv)
   RL->cyclic = CYCLIC;
   binRL->cyclic = CYCLIC;
   //
-  
+
   //////////////
   if (is_synthetic==1){
     read_index_file_synthetic(filename_idx, G);
@@ -79,12 +79,13 @@ int main (int argc, char **argv)
 
 
   
-  //print_hypergraph(G);
+  // print_hypergraph(G);
   
 
   create_train_test_sets (G, Gtrain, Gtest, ratio);
   compute_probability_model (Gtrain);
   compute_probability_model (Gtest);
+
  
 
 
@@ -120,7 +121,7 @@ int main (int argc, char **argv)
   compute_probability_model (binGLtrain);
   compute_probability_model (binGLtest);
 
-  iterative_algorithm_ho_model (binGLtrain, binRL, eps, MAX_ITER);
+  iterative_algorithm_leadership_model (binGLtrain, binRL, eps, MAX_ITER);
   evaluate_results (Gtest, binRL);
 
 
@@ -135,9 +136,8 @@ int main (int argc, char **argv)
   printf(";;;");
   printf("%g %g %g %g %g %g %d", binRL->av_error, binRL->spearman,binRL->kendall, binRL->prior,binRL->likelihood_ho,binRL->likelihood_leader, binRL->iterations);
   printf("\n");
-  
-  
-  //for(i=1;i<=G->N;i++)
+
+  // for(i=1;i<=G->N;i++)
   //  {
   //    printf("%d %g\n",i,R->scores[i]);
   //  }

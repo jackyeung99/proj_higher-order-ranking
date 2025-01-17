@@ -102,7 +102,6 @@ def asynch_solve_equations(hypergraph, pi_values, method, max_iter=MAX_ITER, sen
         for s in scores:
             scores[s] = method(s, scores, hypergraph)
 
-                 
         normalize_scores(scores)
 
         if convergence_metric == 'rms':
@@ -117,7 +116,6 @@ def asynch_solve_equations(hypergraph, pi_values, method, max_iter=MAX_ITER, sen
         iteration += 1
         info[iteration] = err
 
-
     return scores, info
 
 
@@ -126,15 +124,18 @@ def asynch_solve_equations(hypergraph, pi_values, method, max_iter=MAX_ITER, sen
 def iterate_equation_newman(s, scores, hypergraph):
     ##prior
     a = b = 1.0 / (scores[s]+1.0)
+    # for player
     if s in hypergraph:
-
+        
+        # for Game size
         for K in hypergraph[s]:
 
+            # for position
             for r in hypergraph[s][K]:
 
                 if r < K-1:
             
-                    
+                    # for each game
                     for t in range(0, len(hypergraph[s][K][r])):
                         tmp1 = tmp2 =  0.0
                         for q in range(r, K):

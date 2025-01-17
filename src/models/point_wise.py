@@ -1,7 +1,7 @@
 
 ''' Average position '''
 def compute_point_wise_ratings(training_set, pi_values):
-    scores = {k: 0 for k in pi_values.keys()}
+    scores = {k: 1.0 for k in pi_values.keys()}
     num_games = {k: 0 for k in pi_values.keys()}
 
     for game in training_set:

@@ -216,7 +216,7 @@ def convert_raw_files(file_path, read_function, title, outfile):
 
 
 if __name__ == '__main__':
-    file_directory = os.path.join(repo_root, 'datasets', 'raw_data', 'preflib')
+    file_directory = os.path.join(repo_root, 'datasets', 'Raw_Data', 'preflib')
     out_file_dir = os.path.join(repo_root, 'datasets', 'Real_Data')
     os.makedirs(out_file_dir, exist_ok=True)
 
@@ -230,7 +230,7 @@ if __name__ == '__main__':
     # convert_raw_files('fifa_wc.txt', read_data_fifa, '00103', out_file_dir)
     # convert_raw_files('authorships.txt', read_data_authors, '00104', out_file_dir)
     # convert_raw_files('wolf.csv', read_data_wolf, '00105', out_file_dir)
-    convert_raw_files('letor', read_data_letor, '00106', out_file_dir)
+    # convert_raw_files('letor', read_data_letor, '00106', out_file_dir)
 
 
 

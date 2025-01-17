@@ -77,34 +77,18 @@ def measure_log_likelihood (data, pi_values, model = 'ho_bt', epsilon=1e-10):
     return log_like/len(data), log_prior
     
 #measure in average log likelihood in accordance to a weighted test set
-# def measure_likelihood(pred_ranking, testing_set, epsilon=1e-10):
-#     total_log_likelihood = 0.0
-
-#     for game in testing_set:
-#         for j in range(len(game)-1):
-#             total_ratings = sum(pred_ranking[k] for k in game[j:])
-#             total_log_likelihood +=  np.log(pred_ranking[game[j]]) - np.log(total_ratings)
-
-
-#     total_games = len(testing_set)
-#     return total_log_likelihood / total_games   
-
 def measure_likelihood(pred_ranking, testing_set, epsilon=1e-10):
     total_log_likelihood = 0.0
 
     for game in testing_set:
-
-        tmp = sum(pred_ranking[k] for k in game)
+        total_ratings = sum(pred_ranking[k] for k in game)
         for i in range(len(game)-1):
-            
-            for j in range(i+1, len(game)):
-                total_log_likelihood += np.log(pred_ranking[game[i]]+epsilon) - np.log(tmp+epsilon) 
-            tmp -= pred_ranking[game[i]]
+            total_log_likelihood +=  np.log(pred_ranking[game[i]]+epsilon) - np.log(total_ratings+epsilon)
+            total_ratings -= pred_ranking[game[i]]
+
 
     total_games = len(testing_set)
     return total_log_likelihood / total_games   
-
-
 
 
 def measure_leadership_likelihood(pred_ranking, testing_set, epsilon=1e-10):
@@ -112,10 +96,8 @@ def measure_leadership_likelihood(pred_ranking, testing_set, epsilon=1e-10):
     total_log_likelihood = 0.0
 
     for game in testing_set:
-        tmp = np.log(pred_ranking[game[0]] + epsilon)
         total_ratings = sum(pred_ranking[k] for k in game)
-        tmp -= np.log(total_ratings + epsilon)
-        total_log_likelihood +=  tmp
+        total_log_likelihood +=  np.log(pred_ranking[game[0]] +epsilon) - np.log(total_ratings+epsilon)
 
     total_games = len(testing_set)
     return total_log_likelihood/total_games

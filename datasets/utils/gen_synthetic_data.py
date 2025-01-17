@@ -40,8 +40,8 @@ if __name__ == '__main__':
     file_directory = os.path.join(repo_root, 'datasets', 'raw_data', 'preflib')
     out_file_dir = os.path.join(repo_root, 'datasets', 'Synthetic_Data')
     os.makedirs(out_file_dir, exist_ok=True)
-    generate_synthetic_data(out_file_dir)
+    # generate_synthetic_data(out_file_dir)
 
-    # data, pi_values = generate_model_instance(1000, 1000, 5, 5)
-    # outfile = f'N-1000_M-1000_K-5_L-0'
-    # write_files(out_file_dir, outfile, pi_values, data)
+    data, pi_values = generate_model_instance(1000, 1000, 5, 5)
+    outfile = f'N-1000_M-1000_K-5_L-0'
+    write_files(out_file_dir, outfile, pi_values, data)
