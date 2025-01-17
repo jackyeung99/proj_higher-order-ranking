@@ -25,16 +25,16 @@ def run_simulation(filein_idx, filein_data, ratio=.8, is_synthetic=0):
     _, HO, HOL, BIN, BINL = output.split(';;;') 
     
     results = []
-    for label, category_output in zip(['HO', 'HOL', 'BIN', 'BINL'], [HO, HOL, BIN, BINL]):
+    for label, category_output in zip(['HO_BT', 'HOL_BT', 'BIN', 'BINL'], [HO, HOL, BIN, BINL]):
         category_output = category_output.split()
         results.append({
             'model': label,
             'av_error': category_output[0],
-            'spearman': category_output[1],
-            'kendall': category_output[2],
+            'rho': category_output[1],
+            'tau': category_output[2],
             'prior': category_output[3],
-            'HO_Like': category_output[4],
-            'HOL_Like': category_output[5],
+            'log-likelihood': category_output[4],
+            'leadership-log-likelihood': category_output[5],
             'iterations': category_output[6]
         })
 

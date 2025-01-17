@@ -72,7 +72,7 @@ def run_models(train_data, test_data, pi_values):
 
         model_results = { 
             'model': model,
-            'log-likelihoods': game_likelihoods,
+            'log-likelihood': game_likelihoods,
             'leadership-log-likelihood': leadership_likelihoods,
             }
         
