@@ -237,6 +237,5 @@ if __name__ == '__main__':
     # network science 6
     convert_raw_files('letor/10032.soi', read_data_letor, '00008', out_file_dir)
     convert_raw_files('wolf.csv', read_data_wolf, '00009', out_file_dir)
-    convert_raw_files('preflib/00054-00000002.soc', read_data_so, '00010', out_file_dir)
-    convert_raw_files('preflib/00047-00000001.soc', read_data_so, '00011', out_file_dir)
+    convert_raw_files('preflib/00047-00000001.soc', read_data_so, '00010', out_file_dir)
 

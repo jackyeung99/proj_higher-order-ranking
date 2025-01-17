@@ -112,7 +112,7 @@ def process_directory_real_data(base_path):
             file_info = read_file_parameters(file)
 
             # Process each metric and store the results
-            results = process_file(file_path, 'log-likelihoods')
+            results = process_file(file_path, 'log-likelihood')
             results.update(file_info)
             results_log.append(results)
 

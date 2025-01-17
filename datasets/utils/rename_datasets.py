@@ -93,8 +93,7 @@ DATASET_NAMES = {
 
     '00008': 'Letor',
     '00009': 'wolf',
-    '00010': 'weeks_power_ranking',
-    '00011': 'spotify_daily'
+    '00010': 'spotify_daily'
 }
 
 FLIPPED_DATASET_NAMES = {v:k for k,v in DATASET_NAMES.items()}
