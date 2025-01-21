@@ -10,7 +10,7 @@ experiments/scores*
 bin/*.txt
 exp/**/data/
 tensor_flow_ltr.py
-datasets/raw_data/preflib
-datasets/raw_data/letor/
-dataset/Synthetic_Data
+datasets/Raw_Data/preflib/
+datasets/Raw_Data/letor/
+datasets/Synthetic_Data/
 settings.json
