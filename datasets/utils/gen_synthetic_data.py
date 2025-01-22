@@ -11,9 +11,9 @@ from src.utils.graph_tools import generate_model_instance, generate_leadership_m
 
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
-def generate_synthetic_data(outfile_dir, epochs=50):
+def generate_synthetic_data(outfile_dir, epochs=4):
     N = 1000
-    ratios = np.logspace(0, 2, num=20)
+    ratios = np.logspace(0, 2, num=10)
     K_values = range(2, 12, 2)
     leadership_options = [False, True]
 

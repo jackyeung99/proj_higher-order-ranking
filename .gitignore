@@ -10,7 +10,10 @@ experiments/scores*
 bin/*.txt
 exp/**/data/
 tensor_flow_ltr.py
+
 datasets/Raw_Data/preflib/
+datasets/Raw_Data/olympic_swimming/
 datasets/Raw_Data/letor/
 datasets/Synthetic_Data/
+
 settings.json
