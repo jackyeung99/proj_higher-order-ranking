@@ -21,21 +21,28 @@ sys.path.append(ROOT)
 plt.style.reload_library()
 plt.style.use([ROOT+'/science.mplstyle', ROOT+'/ieee.mplstyle'])
 
+LABELS = {
+    "BIN": "Bradley-Terry",
+    "BINL": "Bradley-Terry\nwith 1-breaking",
+    "HO_BT": "Placket-Luce",
+    "HOL_BT": "Placket-Luce\nwith 1-breaking"
+}
+
 COLORS = {
-    "BT": "red",
-    "BT_leadership": "orange",
+    "BIN": "red",
+    "BINL": "orange",
     "HO_BT": "blue",
     "HOL_BT": "cyan"
 }
 STYLES = {
-    "BT": "-",
-    "BT_leadership": "--",
+    "BIN": "-",
+    "BINL": "--",
     "HO_BT": "-",
     "HOL_BT": "--"
 }
 MARKERS = {
-    "BT": "o",
-    "BT_leadership": "s",
+    "BIN": "o",
+    "BINL": "s",
     "HO_BT": "o",
     "HOL_BT": "s",
 }
@@ -79,3 +86,4 @@ default_rc = {
     # Font settings
     "font.size": 7,  # Size of text elements
 }
+

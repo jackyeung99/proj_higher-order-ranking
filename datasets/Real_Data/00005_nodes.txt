@@ -1,7 +1,7 @@
-1 Course_3
-2 Course_1
-3 Course_7
+1 Course_5
+2 Course_4
+3 Course_3
 4 Course_2
-5 Course_4
-6 Course_6
-7 Course_5
+5 Course_6
+6 Course_7
+7 Course_1

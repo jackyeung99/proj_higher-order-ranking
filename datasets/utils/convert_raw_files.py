@@ -5,8 +5,8 @@ import sys
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
-from datasets.utils.extract_ordered_games import read_data_authors, read_data_fifa, read_data_ucl, read_data_wolf, read_data_letor,  read_data_so
-# from src.utils.file_handlers import *
+from datasets.utils.extract_ordered_games import read_data_fifa, read_data_ucl, read_data_so
+from src.utils.graph_tools import generate_model_instance
 
 
 def convert_names_to_id(games, name_to_id) -> dict:
@@ -136,7 +136,7 @@ def process_files(file_paths, read_function=None):
         if read_function:
             data, pi_values = read_function(file_path)
         else:
-            data, pi_values = read_strict_ordered_dataset(file_path)
+            data, pi_values = read_data_so(file_path)
         
         # print(pi_values)
         dataset_games.extend(data)
@@ -225,17 +225,25 @@ if __name__ == '__main__':
     # combine_soi(grouping, file_directory, out_file_dir)
 
 
-    # convert_raw_files('authorships.txt', read_data_authors, '00104', out_file_dir)
-
-
-    convert_raw_files('fifa_wc.txt', read_data_fifa, '00001', out_file_dir)
-    convert_raw_files('ucl_data.txt', read_data_ucl, '00002', out_file_dir)
-    convert_raw_files('preflib/00014-00000001.soc', read_data_so, '00003', out_file_dir)
-    convert_raw_files('preflib/00014-00000002.soi', read_data_so, '00004', out_file_dir)
-    convert_raw_files('preflib/00009-00000002.soc', read_data_so, '00005', out_file_dir)
-    convert_raw_files('preflib/00028-00000002.soi', read_data_so, '00006', out_file_dir)
+    # convert_raw_files('fifa_wc.txt', read_data_fifa, '00001', out_file_dir)
+    # convert_raw_files('ucl_data.txt', read_data_ucl, '00002', out_file_dir)
+    # convert_raw_files('preflib/00014-00000001.soc', read_data_so, '00003', out_file_dir)
+    # convert_raw_files('preflib/00014-00000002.soi', read_data_so, '00004', out_file_dir)
+    # convert_raw_files('preflib/00009-00000002.soc', read_data_so, '00005', out_file_dir)
+    # convert_raw_files('preflib/00028-00000002.soi', read_data_so, '00006', out_file_dir)
     # network science 6
-    convert_raw_files('letor/10032.soi', read_data_letor, '00008', out_file_dir)
-    convert_raw_files('wolf.csv', read_data_wolf, '00009', out_file_dir)
-    convert_raw_files('preflib/00047-00000001.soc', read_data_so, '00010', out_file_dir)
+
+    # Synthetic Data
+    # data, pi_values = generate_model_instance(1000, 10000, 2, 10)
+    # outfile = f'00008'
+    # write_files(out_file_dir, outfile, pi_values, data)
+
+    # data, pi_values = generate_model_instance(1000, 100000, 2, 10)
+    # outfile = f'00009'
+    # write_files(out_file_dir, outfile, pi_values, data)
+
+
+    convert_raw_files('preflib/00058-00000245.soi', read_data_so, '00010', out_file_dir)
+
+
 

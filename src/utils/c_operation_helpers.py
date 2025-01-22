@@ -67,10 +67,10 @@ def run_simulation_convergence(filein_idx, filein_data, is_synthetic=0):
  
     HO, Z, BIN, BINZ = output.split(';;;')
 
-
     results = {}
     for label, category_output in zip(['HO', 'Z', 'BIN', 'BINZ'], [HO, Z, BIN, BINZ]):
         parsed_data = split_output(category_output.split('\t'))
+        
         results[label] = {
             "std_convergence_criteria": parsed_data[0],
             "log_convergence_criteria": parsed_data[1],
@@ -80,3 +80,4 @@ def run_simulation_convergence(filein_idx, filein_data, is_synthetic=0):
     
     
     return results 
+
