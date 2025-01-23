@@ -1,0 +1,50 @@
+# YAML 1.2
+cff-version: "1.2.0"
+authors:
+- email: 
+  family-names: 
+  given-names: 
+  orcid: "https://orcid.org/"
+- family-names: Kaiser
+  given-names: Daniel
+  orcid: "https://orcid.org/"
+- family-names: Iacopini
+  given-names: Iacopo
+  orcid: "https://orcid.org/0000-0001-8794-6410"
+- family-names: Radicchi
+  given-names: Filippo
+  orcid: "https://orcid.org/"
+contact:
+- email: filrad@iu.edu
+  family-names: Radicchi
+  given-names: Filippo
+  orcid: "https://orcid.org/"
+doi: 
+message: If you use this software, please cite our article in the
+  Journal of Machine Learning Research.
+preferred-citation:
+  authors:
+    - email: 
+      family-names: 
+      given-names: 
+      orcid: "https://orcid.org/"
+    - family-names: Kaiser
+      given-names: Daniel
+      orcid: "https://orcid.org/"
+    - family-names: Iacopini
+      given-names: Iacopo
+      orcid: "https://orcid.org/0000-0001-8794-6410"
+    - family-names: Radicchi
+      given-names: Filippo
+      orcid: "https://orcid.org/"
+  date-published: 2025-XX-YY
+  doi: XX
+  issn: XX
+  issue: XX
+  journal: Journal of Machine Learning Research
+  start: 
+  title: "Efficient inference of rankings from multi-body comparisons"
+  type: article
+  url: "URL"
+  volume: 
+title: "Efficient inference of rankings from multi-body comparisons"
