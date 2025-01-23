@@ -295,7 +295,7 @@ repository](https://github.com/kaiser-dan/proj_sable-spin-duplexes/tags).
 
 ## Authors
 
-All correspondence shoulld be directed to [Filipo Ra](mailto:filrad@iu.edu).
+All correspondence shoulld be directed to [Filippo Radicchi](mailto:filrad@iu.edu).
 
 - Jack Yeung
 - Daniel Kaiser
