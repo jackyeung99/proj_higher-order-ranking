@@ -3,7 +3,11 @@
 
 This project provides source code for the Efficient inference of rankings from multi-body comparisons. The repository also contains the original scientific analyses developed by the Authors (see below) for the paper
 
-- _In preparation_
+- **(Under review)** Yeung _et al_. 2025. [_Efficient inference of rankings from multi-body comparisons_](arxiv.org).
+
+If you use this codebase, please cite the following:
+- PAPER CITATION
+- REPO CITATION
 
 # Contents
 
@@ -38,7 +42,7 @@ your local machine for development, testing, and analysis purposes.
 
 A compatible Python install is needed to begin - the package management is handled by Conda as described below.
 - [Python \[3.10+\]](https://python.org/downloads/)
-- [GNU Make \[4.2+\]](https://www.gnu.org/software/make/) (only needed for our provided `makefile` - see [Reproducing Experiments](#reproducing-experiments))
+- [GNU Make \[4.2+\]](https://www.gnu.org/software/make/)
 
 A complete list of utilized packages is available in the `requirements.txt` file. There is, however, a package dependency hierarchy where some packages in the `requirements.txt` are not strictly necessary for the utilization of package infrastructure. The core requirements are listed as dependencies in the build instructions. Further instructions for creating a controlled environment from this manifest is available below, in the [Installing](#installing) section.
 
@@ -65,11 +69,21 @@ This will install all necessary packages for you to be able to run the scripts a
 ## Quick Start
 This guide provides simple instructions for running the simulation on a chosen dataset.
 
-1. Locate the Dataset
+1. Compile source code
+
+The core of the ranking calculations are written in an efficient C implementation. This must be compiled before the python scripts running the experiments will work. You can use the provided `makefile` in the `C_prog/` directory to compile this for UNIX-based machines out-of-the-box; Windows machines will need to edit some of the compiler flags within the `makefile`. The compilation can be accomplished by running the following from the root directory
+
+```bash
+cd C_prog
+make
+cd ..
+```
+
+2. Locate the Dataset
 
 Find the ID of the dataset you want to use by checking the datasets/dataset.info file. Each dataset is assigned a unique ID that must be formatted as a 5-digit number, with leading zeroes if necessary (e.g., 00001). Ensure that the selected dataset has a file for both its edges and nodes within dataset/Real_Data/
 
-2. Run the Model
+3. Run the Model
 
 if the dataset has the true scores set is_synthetic = 1 otherwise is_synthetic = 0
 
@@ -81,9 +95,6 @@ python3 src/test.py --dataset_number=00001 --is_synthetic=0
 
 
 # Usage
-[Usage guide]
-
-
 ## Reproducing experiments
 
 
@@ -291,7 +302,7 @@ of conduct, and the process for submitting pull requests to us.
 
 We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
 available, see the [tags on this
-repository](https://github.com/kaiser-dan/proj_sable-spin-duplexes/tags).
+repository](https://github.com/jackyeung99/higher_order_ranking/tags).
 
 ## Authors
 
