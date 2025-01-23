@@ -5,10 +5,7 @@ This project provides source code for the Efficient inference of rankings from m
 
 - **(Under review)** Yeung _et al_. 2025. [_Efficient inference of rankings from multi-body comparisons_](arxiv.org).
 
-If you use this codebase, please cite the following:
-- PAPER CITATION
-- REPO CITATION
-
+If you use this codebase, please cite our work according to the `CITATION.cff`.
 # Contents
 
 - [Efficient inference of rankings from multi-body comparisons](#Efficient-inference-of-rankings-from-multi-body-comparisons)
@@ -283,7 +280,7 @@ All unit tests are written with [pytest](docs.pytest.org).
 Tests can be run directly with the commands:
 ```bash
 pip install pytest
-pytest tests/
+pytest tst/
 ```
 
 
