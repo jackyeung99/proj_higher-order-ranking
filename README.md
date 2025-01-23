@@ -68,12 +68,14 @@ This guide provides simple instructions for running the simulation on a chosen d
 
 1. Compile source code
 
-The core of the ranking calculations are written in an efficient C implementation. This must be compiled before the python scripts running the experiments will work. You can use the provided `makefile` in the `C_prog/` directory to compile this for UNIX-based machines out-of-the-box; Windows machines will need to edit some of the compiler flags within the `makefile`. The compilation can be accomplished by running the following from the root directory
+The core of the ranking calculations are written in an efficient C implementation. These must be compiled before the python scripts running the experiments will work. You can use the provided `makefile`s in the `C_Prog/` subdirectories to compile this for UNIX-based machines out-of-the-box; Windows machines will need to edit some of the compiler flags within the `makefile`s. The compilation can be accomplished by running the following from the root directory
 
 ```bash
-cd C_prog
+cd C_Prog/Readfile
 make
-cd ..
+cd ../Convergence_Readfile
+make
+cd ../..
 ```
 
 2. Locate the Dataset
