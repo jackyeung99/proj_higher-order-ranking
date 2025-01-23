@@ -1,48 +1,19 @@
 
-EX01: Training Size (Synthetic Data)
-    Objective: Measure how the log-likelihood and leadership log-likelihood compare to a base model as the training size varies.
-    Procedure: Keep parameters N, 𝑀, K1,and K2  constant, while systematically altering the size of the training data.
-    Measurement: Compute and compare the log-likelihoods and leadership log-likelihood of each model configuration against the base model. The leadership log-likelihood focuses on how the model ranks top entities.
-    Analysis: Assess how the likelihoods scale with changes in training size and identify potential overfitting or underfitting as the dataset grows or shrinks.
+EX01: Accuracy Testing (Synthetic Data)
+    Objective: Measure the accuracy of models according to log likelihood,Leadership log likelihood, Spearman Rho, and Kendall Tau
+    Procedure: Measure the performance on synthetic datasets with different combinations of N, M, K1, K2
 
-EX02: Training Size Distributions (Synthetic Data)
-    Objective: Analyze how the distributions of likelihoods vary across different models compared to a base model, keeping key parameters and training size fixed.
-    Procedure: With N, 𝑀, K1,and K2  and training size held constant, generate the likelihood distributions for multiple models.
-    Measurement: Plot and visually compare the distributions of log-likelihoods from different models to the base model to observe any significant deviations or similarities.
-    Analysis: Understand the stability and variability of models when the training data is of fixed size, especially focusing on how the likelihood behaves across different conditions.
+EX02: Convergence Testing (Synthetic Data)
+    Objective: Analyze the improvement of convergence on different synthetic examples
+    Procedure: Measure the convergence of our iterative scheme and zermellos iterative scheme on synthetic datasets with different combinations of N, M, K1, K2
 
-EX03: Hyper-Parameter Testing (Synthetic Data)
-    Objective: Examine the impact of varying hyper-parameters, specifically hyperedge size and the ratio of games to players, on model performance.
-    Procedure: Hold all parameters constant except for one (either hyperedge size or the ratio of games to players), and observe how altering this parameter affects the model's likelihoods.
-    Measurement: Compare log-likelihoods between different configurations and identify optimal hyper-parameter settings for better model performance.
-    Analysis: Investigate whether certain hyper-parameter settings lead to consistent improvement in model fit or if some settings cause instability.
-
-EX04: Real Data Sets (Real Data)
+EX03: Accuracy Testing (Real Data)
     Objective: Apply the models to real-world datasets and evaluate the performance of likelihood functions.
     Procedure: Use multiple real datasets, and for each, compute the likelihood for the model under investigation.
-    Measurement: Calculate and compare likelihoods across datasets to evaluate model performance in practical scenarios.
-    Analysis: Analyze how well the synthetic models generalize to real data and if any systematic differences emerge in the likelihoods between real and synthetic datasets.
 
-EX05: Luce's Choice Axiom (Synthetic Data)
-    Objective: Test whether the ranking criteria handles both top and bottom players similarly by introducing inverted games for each original game.
-    Procedure: For every game in the dataset, add an inverted version (swapping winners and losers) and assess how the model ranks the best players versus the worst players.
-    Measurement: Analyze the distribution of ranks, expecting a Gaussian distribution centered around 0 if the model treats both ends of the ranking spectrum equally.
-    Analysis: Investigate whether the ranking criteria is symmetric and unbiased, or if there are deviations favoring high- or low-ranked players disproportionately.
+EX04: Convergence Testing (Real Data)
+    Objective: Apply the models to real-world datasets and evaluate the performance of convergence. 
+    Procedure: Use multiple real datasets, and for each, measure the convergence of our iteration scheme compared to zermellos 
 
-EX06: Different Prior Distributions (Synthetic Data)
-    Objective: Study how different synthetic rating distributions impact the model’s likelihood.
-    Procedure: Generate synthetic datasets using various prior distributions (e.g., Gaussian, uniform, or exponential) and assess the effect on likelihood values.
-    Measurement: Compare the log-likelihoods produced by each prior distribution, identifying how sensitive the model is to the choice of prior.
-    Analysis: Determine whether certain prior distributions lead to more accurate or stable models and explore the rationale behind those results.
 
-EX07: Convergence Results on Synthetic Data (Synthetic Data)
-    Objective: Measure the convergence speed between the Generalized Newman and Plackett-Luce models on synthetic datasets.
-    Procedure: Run experiments on synthetic data, using both the Generalized Newman and Plackett-Luce models, and track how quickly each model converges to an optimal solution.
-    Measurement: Record the number of iterations or time needed for each model to converge and compare the results.
-    Analysis: Identify which model converges faster and whether this varies depending on the characteristics of the synthetic data (e.g., size, complexity).
 
-EX08: Convergence Results on Real Data (Real Data)
-    Objective: Investigate how quickly the Generalized Newman and Plackett-Luce models converge when applied to real-world datasets.
-    Procedure: Apply both models to real datasets and track the speed of convergence for each.
-    Measurement: Measure the number of iterations or time required for convergence, similar to the synthetic data experiment.
-    Analysis: Compare the convergence behavior on real data with the synthetic data results, identifying any differences or patterns. Also, assess how the complexity of real-world data impacts model performance.
