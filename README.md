@@ -136,6 +136,7 @@ to visualize these results run all cells within the file notebook/ex04_real_conv
 
 ## Package Structure
 
+```text
 ├── C_Prog                         * Efficient C implementation 
 │   ├── Convergence_Readfile       * Measure convergence results
 │   │   ├── bt_functions.c
@@ -253,7 +254,7 @@ to visualize these results run all cells within the file notebook/ex04_real_conv
     ├── test_models.py
     ├── test_operation_helpers.py
     └── test_synthetic.py
-
+```
 
 
 # Documentation
