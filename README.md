@@ -271,7 +271,7 @@ to visualize these results run all cells within the file notebook/ex04_real_conv
 
 This repository does not maintain extensive independent documentation for its source code. We do, however, include documentation and notes on scientific experiments we've conducted throughout the project. If you are interested in seeing these notes, please email [Filippo Radicchi](mailto:filrad@iu.edu) with your inquiry.
 
-We have, however, kept all experimental protocols related to the final experimental designs of the published results in this public repository. These can be found in `docs/experiments/` with the appropriate names matching the results as presented in the manuscript.
+<!-- We have, however, kept all experimental protocols related to the final experimental designs of the published results in this public repository. These can be found in `docs/experiments/` with the appropriate names matching the results as presented in the manuscript. -->
 
 <!-- Additionally, a copy of individual derivations can be found in `docs/` that are highly suggestive of methodological choices and implications for our work. -->
 
