@@ -17,7 +17,7 @@ def evaluate_convergence(buffer_size=25):
     output_file = os.path.join(RESULTS_DIR, 'Convergence_Table.csv')
 
     # Check if file exists for header management
-    headers = ['N', 'M', 'K', 'L', 'epoch', 'Ours', 'Zermello', 'Ours_bin', 'Zermello_bin', 'criterion']
+    headers = ['N', 'M', 'K', 'L', 'epoch', 'Ours', 'Zermelo', 'Ours_bin', 'Zermelo_bin', 'criterion']
     pd.DataFrame(columns=headers).to_csv(output_file, index=False)
 
     buffer = []
@@ -34,9 +34,9 @@ def evaluate_convergence(buffer_size=25):
         epoch = read_file_parameters(edge_file.replace('_edges.txt', ''))
         epoch.update({
             'Ours': len(results['HO']['rms_convergence_criteria']),
-            'Zermello': len(results['Z']['rms_convergence_criteria']),
+            'Zermelo': len(results['Z']['rms_convergence_criteria']),
             'Ours_bin': len(results['BIN']['rms_convergence_criteria']),
-            'Zermello_bin': len(results['BINZ']['rms_convergence_criteria']),
+            'Zermelo_bin': len(results['BINZ']['rms_convergence_criteria']),
             'criterion': 'rms_difference',
         })
         print(read_file_parameters(edge_file.replace('_edges.txt', '')))

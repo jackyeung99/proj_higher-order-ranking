@@ -11,7 +11,7 @@ import sys
 C_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'C_Prog'))
 sys.path.append(C_PATH)
 
-def run_simulation(filein_idx, filein_data, ratio=.8, is_synthetic=0):
+def run_simulation(filein_idx, filein_data, ratio=1.0, is_synthetic=0):
 
     command = os.path.join(C_PATH, 'Readfile', 'bt_model_data.out') + ' ' + filein_idx + ' ' + filein_data + ' ' +  str(ratio) + ' ' + str(is_synthetic)
     # print(shlex.split(command))
@@ -64,7 +64,7 @@ def run_simulation_convergence(filein_idx, filein_data, is_synthetic=0):
     
     ##parse output
     output = process.communicate()[0].decode("utf-8")
- 
+    
     HO, Z, BIN, BINZ = output.split(';;;')
 
     results = {}

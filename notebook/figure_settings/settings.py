@@ -24,8 +24,8 @@ plt.style.use([ROOT+'/science.mplstyle', ROOT+'/ieee.mplstyle'])
 LABELS = {
     "BIN": "Bradley-Terry",
     "BINL": "Bradley-Terry\nwith 1-breaking",
-    "HO_BT": "Placket-Luce",
-    "HOL_BT": "Placket-Luce\nwith 1-breaking"
+    "HO_BT": "Plackett-Luce",
+    "HOL_BT": "Plackett-Luce\nwith 1-breaking"
 }
 
 COLORS = {

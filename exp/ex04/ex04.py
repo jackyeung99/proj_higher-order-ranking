@@ -31,9 +31,9 @@ def evaluate_convergence(epochs=50):
                 data.append({
                     'Dataset': dataset,
                     'Ours': len(results['HO']['rms_convergence_criteria']),
-                    'Zermello': len(results['Z']['rms_convergence_criteria']),
+                    'Zermelo': len(results['Z']['rms_convergence_criteria']),
                     'Ours_bin': len(results['BIN']['rms_convergence_criteria']),
-                    'Zermello_bin': len(results['BINZ']['rms_convergence_criteria']),
+                    'Zermelo_bin': len(results['BINZ']['rms_convergence_criteria']),
                     'criterion': 'rms_difference',
                     'epoch': epoch 
                     })

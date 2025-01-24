@@ -1,4 +1,4 @@
-N,M,K,L,epoch,Ours,Zermello,Ours_bin,Zermello_bin,criterion
+N,M,K,L,epoch,Ours,Zermelo,Ours_bin,Zermelo_bin,criterion
 1000,1000,2,0,0,9,81,9,81,rms_difference
 1000,1000,2,0,1,9,80,9,80,rms_difference
 1000,1000,2,0,2,9,90,9,90,rms_difference

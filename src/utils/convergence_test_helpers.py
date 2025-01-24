@@ -9,7 +9,7 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(repo_root)
 
 
-from src.models.zermello import compute_predicted_ratings_plackett_luce
+from src.models.zermelo import compute_predicted_ratings_plackett_luce
 from src.models.BradleyTerry import compute_predicted_ratings_HO_BT, MAX_ITER
 
 
@@ -34,7 +34,7 @@ def save_convergence_data(file_name, data, pi_values):
     data = {
         'Iteration': np.arange(MAX_ITER),
         'Avg_HO_Error': ho_errors,
-        'Avg_PL_Error': pl_errors,
+        'Avg_Z_Error': pl_errors,
     }
 
     df = pd.DataFrame(data)

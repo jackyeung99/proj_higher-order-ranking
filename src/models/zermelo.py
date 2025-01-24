@@ -86,7 +86,7 @@ def iterate_equation_zermelo_new (s, scores, hypergraph):
 
 
 
-def compute_predicted_ratings_BT_zermello(training_set, pi_values, verbose=False):
+def compute_predicted_ratings_BT_zermelo(training_set, pi_values, verbose=False):
     bin_data = binarize_data(training_set)
     hyper_graph = create_hypergraph_from_data(bin_data)
     predicted_scores, info = synch_solve_equations(hyper_graph, pi_values, iterate_equation_zermelo)

@@ -139,7 +139,7 @@ int main (int argc, char **argv)
 
   // for(i=1;i<=G->N;i++)
   //  {
-  //    printf("%d %g\n",i,R->scores[i]);
+  //    printf("%d %g\n",i,RL->scores[i]);
   //  }
   
   
