@@ -59,7 +59,7 @@
 1994|Ga|IFK Göteborg,Barcelona,Manchester United,Galatasaray
 1994|Gb|Paris Saint-Germain,Bayern Munich,Spartak Moscow,Dynamo Kyiv
 1994|Gc|Benfica,Hajduk Split,Steaua București,Anderlecht
-1994|Gd|Ajax,Milan,Casino Salzburg,AEK Athens
+1994|Gd|Ajax,Milan,Red Bull Salzburg,AEK Athens
 1994|QF|Bayern Munich,IFK Göteborg
 1994|QF|Ajax,Hajduk Split
 1994|QF|Paris Saint-Germain,Barcelona
@@ -681,3 +681,27 @@
 2022|SF|Internazionale,Milan
 2022|SF|Manchester City,Real Madrid
 2022|F|Manchester City,Internazionale
+----
+2023|Ga|Bayern Munich,Copenhagen,Galatasaray,Manchester United
+2023|Gb|Arsenal,PSV Eindhoven,Lens,Sevilla
+2023|Gc|Real Madrid,Napoli,Braga,Union Berlin
+2023|Gd|Real Sociedad,Internazionale,Benfica,Red Bull Salzburg
+2023|Ge|Atlético Madrid,Lazio,Feyenoord,Celtic
+2023|Gf|Borussia Dortmund,Paris Saint-Germain,Milan,Newcastle United
+2023|Gg|Manchester City,RB Leipzig,Young Boys,Red Star Belgrade
+2023|Gh|Barcelona,Porto,Shakhtar Donetsk,Antwerp
+2023|R16|Arsenal,Porto
+2023|R16|Barcelona,Napoli
+2023|R16|Paris Saint-Germain,Real Sociedad
+2023|R16|Atlético Madrid,Internazionale
+2023|R16|Borussia Dortmund,PSV Eindhoven
+2023|R16|Bayern Munich,Lazio
+2023|R16|Manchester City,Copenhagen
+2023|R16|Real Madrid,RB Leipzig
+2023|QF|Bayern Munich,Arsenal
+2023|QF|Borussia Dortmund,Atlético Madrid
+2023|QF|Real Madrid,Manchester City
+2023|QF|Paris Saint-Germain,Barcelona
+2023|SF|Borussia Dortmund,Paris Saint-Germain
+2023|SF|Real Madrid,Bayern Munich
+2023|F|Real Madrid,Borussia Dortmund

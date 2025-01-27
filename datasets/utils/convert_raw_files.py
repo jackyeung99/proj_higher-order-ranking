@@ -226,7 +226,7 @@ if __name__ == '__main__':
 
 
     # convert_raw_files('fifa_wc.txt', read_data_fifa, '00001', out_file_dir)
-    # convert_raw_files('ucl_data.txt', read_data_ucl, '00002', out_file_dir)
+    convert_raw_files('ucl_data.txt', read_data_ucl, '00002', out_file_dir)
     # convert_raw_files('preflib/00014-00000001.soc', read_data_so, '00003', out_file_dir)
     # convert_raw_files('preflib/00014-00000002.soi', read_data_so, '00004', out_file_dir)
     # convert_raw_files('preflib/00009-00000002.soc', read_data_so, '00005', out_file_dir)
@@ -243,7 +243,7 @@ if __name__ == '__main__':
     # write_files(out_file_dir, outfile, pi_values, data)
 
 
-    convert_raw_files('preflib/00058-00000245.soi', read_data_so, '00010', out_file_dir)
+
 
 
 
