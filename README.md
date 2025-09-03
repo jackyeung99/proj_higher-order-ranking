@@ -3,7 +3,7 @@
 
 This project provides source code for the Efficient inference of rankings from multi-body comparisons. The repository also contains the original scientific analyses developed by the Authors (see below) for the paper
 
-- **(Under review)** Yeung _et al_. 2025. [_Efficient inference of rankings from multi-body comparisons_](arxiv.org).
+- Yeung _et al_. 2025. [_Efficient inference of rankings from multi-body comparisons_](https://journals.aps.org/pre/abstract/10.1103/64h7-z39p).
 
 If you use this codebase, please cite our work according to the `CITATION.cff`.
 # Contents
